@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hace_cuanto_tiempo_tiene_diagnostico__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Hace cuánto tiempo tiene diagnóstico?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

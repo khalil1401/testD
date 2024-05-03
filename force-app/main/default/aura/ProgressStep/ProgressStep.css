@@ -1,0 +1,56 @@
+.THIS {
+    margin-top: 2%;
+}
+
+.THIS .slds-path__link{
+    z-index: 1;
+}
+
+.THIS .slds-is-active .slds-path__link{
+    background: #4a2a80!important;
+}
+
+.THIS .slds-is-complete .slds-path__link{
+    background: #4a2a80!important;
+}
+
+.THIS .slds-is-complete::before{
+    background: #4a2a80!important;
+}
+
+.THIS .slds-is-complete::after{
+    background: #4a2a80!important;
+}
+
+.THIS .slds-is-current{
+    background: #4a2a80!important;
+}
+
+.THIS .slds-is-complete{
+    background: #4a2a80!important;
+}
+
+.THIS .slds-is-current::before{
+    background: #4a2a80!important;
+}
+
+.THIS .slds-is-current::after{
+    background: #4a2a80!important;
+}
+
+.THIS .slds-progress-bar__value{
+    background: #4a2a80!important;
+}
+
+.THIS .slds-path__title{
+    font-family: MontserratSemiBold;
+    font-size: 0.9rem;
+}
+
+.THIS .slds-progress__list{
+    z-index: 1;
+}
+
+.THIS .slds-button__icon{
+    color: #4a2a80 !important;
+}

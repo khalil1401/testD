@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nuevo_Contacto_de_Paciente_Comunidad</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Nuevo Contacto de Paciente comunidad</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>{!URLFOR(&apos;/bestcare/apex/CreateContactAccount&apos;, null, [id = Account.Id])}</url>
+</WebLink>

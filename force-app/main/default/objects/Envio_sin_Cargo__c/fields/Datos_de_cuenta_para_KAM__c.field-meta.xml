@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Datos_de_cuenta_para_KAM__c</fullName>
+    <externalId>false</externalId>
+    <formula>&apos;• Nombre de la cuenta :&apos;+Paciente__r.FirstName+&apos;, &apos; +Paciente__r.LastName +BR()
++&apos;• ID de Paciente:&apos;+ Paciente__r.ID_de_paciente__c+BR()
++&apos;• Fecha de Creación de Cuenta:&apos;+  TEXT(Paciente__r.CreatedDate)+BR()
++&apos;• Área terapéutica:&apos;+ TEXT(Paciente__r.Area_terapeutica__c)+BR()
++&apos;• Obra Social:&apos;+  Paciente__r.Obra_social__c+BR() 
++&apos;• Patología del tratamiento activo:&apos;+ Paciente__r.Patologias__c+BR()
++&apos;• Alimentación:&apos;+ Paciente__r.Alimentacion__c+BR()
++&apos;• Formula:&apos;+ Formula_de_producto_de_envio__c+BR()
++&apos;• Profesional:&apos;+ Profesional_de_tratamiento_activo__c+BR()
++&apos;• Centro de tratamiento:&apos;+ Centro_de_tratamiento_activo__c+BR()
++&apos;• Provincia:&apos;+ Paciente__r.Provincia_localidad__c+BR() 
++&apos;• Teléfono:&apos;+ Paciente__r.Phone</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Datos de cuenta para KAM</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,86 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <div>
+        <br></br>
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-12 slds-large-size_1-of-12">
+                <div class="slds-m-top_medium slds-align_absolute-center">
+                    <img src="{!$Resource.IconoTildeBalanceOncologia}" alt="tilde"/>
+                </div>
+            </div>
+            <div class="slds-col slds-size_11-of-12 slds-large-size_10-of-12">
+                <p  class="slds-m-top_medium tituloContainerTextoBalanceOncologia">                 
+                    ¿Cómo aumentar el valor proteico y energético con la dieta habitual?
+                </p>
+                <p  class="slds-m-top_small textoContainerTextoBalanceOncologia">
+                    Es necesario ENRIQUECER LA DIETA, es decir, incluir alimentos ricos en proteínas y energía como primer paso. Buscaremos platos de pequeño volumen, pero altos en calorías y saludables. Debajo te compartimos algunos consejos para lograr aumentar el aporte en tu dieta habitual:
+                </p>
+                <br></br>
+                <div class="slds-grid slds-m-top_medium">
+                    <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                        <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-IconoFlechaBalanceOncologia%282022-05-20%29.png" alt="flecha"
+                                class="imagenContainerTextoBalanceOncologia"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                        <p  class="tituloContainerTextoBalanceOncologia">
+                            Leche en polvo
+                        </p>
+                        <p  class="slds-m-top_small textoContainerTextoBalanceOncologia">
+                            Se diluye fácilmente, se puede mezclar con muchos alimentos como
+                            puede ser la leche fluida, el yogur, un puré, entre otros. Concentra las calorías por no tener agua.
+                        </p>
+                    </div>
+                </div>
+                <br></br>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                        <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-IconoFlechaBalanceOncologia%282022-05-20%29.png" alt="flecha"
+                                class="imagenContainerTextoBalanceOncologia"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                        <p  class="tituloContainerTextoBalanceOncologia">
+                            Frutos secos
+                        </p>
+                        <p  class="slds-m-top_small textoContainerTextoBalanceOncologia">
+                            Son ricos en grasas buenas, vitamina E, fibra y antioxidantes. Se puede alternar con tostadas de pan o galletitas de cereales untadas con cremas naturales de frutos secos. Existen de distintos sabores: avellanas, almendras, maní.
+                        </p>
+                    </div>
+                </div>
+                <br></br>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                        <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-IconoFlechaBalanceOncologia%282022-05-20%29.png" alt="falecha"
+                                class="imagenContainerTextoBalanceOncologia"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                        <p  class="tituloContainerTextoBalanceOncologia">
+                            Semillas
+                        </p>
+                        <p  class="slds-m-top_small textoContainerTextoBalanceOncologia">
+                            Como lino, sésamo, semillas de calabaza, girasol, chía., no aportan mucho volumen pero sí son buenas fuentes de calcio y grasas vegetales que suman calorías casi sin percibirse en nuestros platos. Se pueden añadir al yogur, a las ensaladas, entre otros.
+                        </p>
+                    </div>
+                </div>
+                <br></br>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                        <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-IconoFlechaBalanceOncologia%282022-05-20%29.png" alt="flecha"
+                                class="imagenContainerTextoBalanceOncologia"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                        <p  class="tituloContainerTextoBalanceOncologia">
+                            Frutas deshidratadas o secas.
+                        </p>
+                        <p  class="slds-m-top_small textoContainerTextoBalanceOncologia">
+                            Pasas, ciruelas, dátiles.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_1-of-12">
+            </div>
+        </div>
+        <br></br>
+    </div>
+
+</aura:component>

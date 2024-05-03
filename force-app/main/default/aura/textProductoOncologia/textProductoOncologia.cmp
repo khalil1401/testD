@@ -1,0 +1,75 @@
+<aura:component implements="forceCommunity:layout,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="isDesktop" type="Boolean" default="true"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <div style="background: linear-gradient(90deg, rgba(152, 123, 217, 0.6) 0%,  rgba(110,131,229,0.6) 100%);">
+        <br></br>
+        <br></br>
+        <br></br>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-large-size_1-of-12">
+            </div>
+            <aura:if isTrue="{!v.isDesktop}">
+                <div class="slds-col slds-size_1-of-1 slds-large-size_5-of-12"
+                    style="text-align: left;">
+                    <p  class="textoFortisipOncologia">
+                        <lightning:icon class="iconMas" iconName="utility:add" alternativeText="Add" title="Add" />
+                        Previene y trata la pérdida de peso
+                    </p>
+                    <p  class="textoFortisipOncologia">
+                        <lightning:icon class="iconMas" iconName="utility:add" alternativeText="Add" title="Add" />
+                        Mejora la adherencia y cumplimiento al tratamiento
+                    </p>
+                </div>
+                <div    class="slds-col slds-size_1-of-1 slds-large-size_5-of-12 slds-text-align_center containerTextoFormularioFortisipOncologia">
+                    <p  class="slds-m-left_medium slds-m-right_medium textoFormularioFortisipOncologia">
+                        Formulado para proveer
+                    </p>
+                    <p  class="slds-m-left_medium slds-m-right_medium textoFormularioFortisipOncologia">
+                        <span class="textoFormularioFortisipOncologiaPacifico">
+                            cuidado
+                        </span>
+                        nutricional óptimo
+                    </p>
+                    <p  class="slds-m-left_medium slds-m-right_medium textoFormularioFortisipOncologia">
+                        durante su tratamiento
+                    </p>
+                </div>
+                <aura:set attribute="else">
+                    <div    class="slds-col slds-size_1-of-1 slds-large-size_5-of-12 slds-text-align_center">
+                        <p  class="slds-m-left_medium slds-m-right_medium textoFormularioFortisipOncologia">
+                            Formulado para proveer
+                        </p>
+                        <p  class="slds-m-left_medium slds-m-right_medium textoFormularioFortisipOncologia">
+                            <span class="textoFormularioFortisipOncologiaPacifico">
+                                cuidado
+                            </span>
+                            nutricional óptimo
+                        </p>
+                        <p  class="slds-m-left_medium slds-m-right_medium textoFormularioFortisipOncologia">
+                            durante su tratamiento
+                        </p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_5-of-12"
+                        style="text-align: left;margin-top: 5%;">
+                        <p  class="textoFortisipOncologia">
+                            <lightning:icon class="iconMas" iconName="utility:add" alternativeText="Add" title="Add" />
+                            Previene y trata la pérdida de peso
+                        </p>
+                        <p  class="textoFortisipOncologia">
+                            <lightning:icon class="iconMas" iconName="utility:add" alternativeText="Add" title="Add" />
+                            Mejora la adherencia y cumplimiento al tratamiento
+                        </p>
+                    </div>
+                </aura:set>
+            </aura:if>
+            <div class="slds-col slds-large-size_1-of-12">
+            </div>
+        </div>
+        <br></br>
+        <br></br>
+        <br></br>
+    </div>
+
+</aura:component>

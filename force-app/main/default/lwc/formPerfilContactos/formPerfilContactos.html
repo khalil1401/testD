@@ -1,0 +1,201 @@
+<template>
+    <div style="width: 100%;" class="slds-align_absolute-center fade-in-right-left">
+        <div class="form-datos">
+            <div class="show-mobile">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_1-of-12">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                            style="width: 22px; position: absolute; top: 100px; left: 10px;" onclick={goToPerfilManager}>
+                    </div>
+                    <div class="slds-col slds-size_4-of-12 slds-text-align_right">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/User_Perfil.png"
+                        style="width: 100px;">
+                    </div>
+                    <div class="slds-col slds-size_7-of-12">
+                        <template if:true={paciente}>
+                            <div>
+                                <p class="name-text slds-m-bottom_xxx-small">{paciente.FirstName} {paciente.LastName}</p>
+                                <p class="card-item-text"><span class="card-item-title">DNI: </span>
+                                    <lightning-formatted-number 
+                                        value={paciente.DNI__c}>
+                                    </lightning-formatted-number>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Fecha Nacimiento: </span>
+                                    <lightning-formatted-date-time
+                                        value={paciente.PersonBirthdate}
+                                        year="numeric"
+                                        month="numeric"
+                                        day="numeric">
+                                    </lightning-formatted-date-time>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Telefono: </span>
+                                    {paciente.Phone}
+                                </p>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <div class="show-tablet">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                    style="width: 22px; position: relative; top: 25px; left: -50px; cursor: pointer;" onclick={goToPerfilManager}>
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_2-of-12">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/User_Perfil.png"
+                            style="width: 100px;">
+                    </div>
+                    <div class="slds-col slds-size_10-of-12">
+                        <template if:true={paciente}>
+                            <div>
+                                <p class="name-text slds-m-bottom_xx-small">{paciente.FirstName} {paciente.LastName}</p>
+                                <p class="card-item-text"><span class="card-item-title">DNI: </span>
+                                    <lightning-formatted-number 
+                                        value={paciente.DNI__c}>
+                                    </lightning-formatted-number>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Fecha Nacimiento: </span>
+                                    <lightning-formatted-date-time
+                                        value={paciente.PersonBirthdate}
+                                        year="numeric"
+                                        month="numeric"
+                                        day="numeric">
+                                    </lightning-formatted-date-time>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Telefono: </span>
+                                    {paciente.Phone}
+                                </p>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_5-of-12">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/call.png"
+                                class="icon-title-form">
+                        </div>
+                        <div class="slds-col slds-size_7-of-12">
+                            <span class="text-title-form">Personas de contacto</span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-m-top_small slds-m-bottom_large slds-align_absolute-center">
+                            <div class="hr-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <template if:true={contacts}>
+                    <template for:each={contacts} for:item="contacto">
+                        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center" key={contacto.id}>
+                            <div class="card-contact slds-grid slds-wrap">
+                                <div class="slds-col slds-size_3-of-12 slds-align_absolute-center" 
+                                    style="background: linear-gradient(#C09AC2, #313183); height:100%; border-radius: 8px 0px 0px 8px;">
+                                    <div class="slds-text-align_center">
+                                        <lightning-icon 
+                                            icon-name="utility:contact" 
+                                            alternative-text="contact!"
+                                            variant="inverse"
+                                            size="small"
+                                            title="contact">
+                                        </lightning-icon>
+                                        <template if:true={contacto.Principal__c}>
+                                            <p class="icon-text-card-contact">Principal</p>
+                                        </template>
+                                        <template if:false={contacto.Principal__c}>
+                                            <p class="icon-text-card-contact">Secundario</p>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_9-of-12">
+                                    <div class="card-contacto-detalle slds-grid slds-wrap slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_1-of-1">
+                                            <div class="slds-clearfix">
+                                                <div class="slds-float_left">
+                                                    <span class="relacion-text">
+                                                        {contacto.Relacion__c}
+                                                    </span>
+                                                </div>
+                                                <div class="slds-float_right">
+                                                    <template if:false={contacto.Principal__c}>
+                                                        <lightning-icon 
+                                                            class="action-card"
+                                                            data-id={contacto.DNI__c} 
+                                                            onclick={deleteContact}
+                                                            icon-name="utility:delete"
+                                                            alternative-text="Delete"
+                                                            size="x-small"
+                                                            title="Delete">
+                                                        </lightning-icon>
+                                                    </template>
+                                                    <lightning-icon 
+                                                        class="action-card"
+                                                        data-id={contacto.DNI__c} 
+                                                        onclick={selectContact}
+                                                        icon-name="utility:edit"
+                                                        alternative-text="Edit" 
+                                                        size="x-small"
+                                                        title="Edit">
+                                                    </lightning-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1">
+                                            <span class="name-contact-text">
+                                                {contacto.FirstName} {contacto.LastName}
+                                            </span>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1">
+                                            <template if:true={contacto.showMobilePhoneField}>
+                                                <span class="info-contact-text">
+                                                    {contacto.MobilePhone}
+                                                </span>
+                                            </template>
+                                            <template if:false={contacto.showMobilePhoneField}>
+                                                <span class="info-contact-text">
+                                                    {contacto.Phone}
+                                                </span>
+                                            </template>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1">
+                                            <span class="info-contact-text">
+                                                {contacto.Tipo_de_Telefono_de_Contacto__c}
+                                            </span>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1">
+                                            <span class="info-contact-text">
+                                                {contacto.Email}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_large slds-align_absolute-center">
+                    <button
+                        class="add-button"
+                        onclick={addNewContact}
+                        disabled={addButtonDisabled}>
+                        Agregar nuevo contacto
+                    </button>
+                </div>
+            </div>
+            <template if:true={showModal}>
+                <c-modal-perfil-contactos
+                    onclosemodal={closeModal}
+                    contacto={selectedContact}
+                    dni-existente={dniExistente}>
+                </c-modal-perfil-contactos>
+            </template>
+            <template if:true={showModalEliminacion}>
+                <c-modal-eliminacion-registro
+                    record-id={selectedContact.Id}
+                    paciente-id={selectedContact.Paciente__c}
+                    object="Contact"
+                    onclosemodal={closeModal}>
+                </c-modal-eliminacion-registro>
+            </template>
+        </div>
+    </div>
+</template>

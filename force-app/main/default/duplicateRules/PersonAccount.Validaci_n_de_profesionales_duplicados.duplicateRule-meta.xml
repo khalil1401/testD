@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Allow</actionOnInsert>
+    <actionOnUpdate>Allow</actionOnUpdate>
+    <alertText>Ya existe algún profesional que coincide en DNI o Matrícula. ¿Desea cargarlo de todas maneras?</alertText>
+    <description xsi:nil="true"/>
+    <duplicateRuleFilter>
+        <booleanFilter xsi:nil="true"/>
+        <duplicateRuleFilterItems>
+            <field>RecordType</field>
+            <operation>equals</operation>
+            <value>Otro profesional, Profesional de la salud, Visitador médico</value>
+            <sortOrder>1</sortOrder>
+            <table>PersonAccount</table>
+        </duplicateRuleFilterItems>
+    </duplicateRuleFilter>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>PersonAccount</matchRuleSObjectType>
+        <matchingRule>Profesionales_duplicados_V4</matchingRule>
+        <objectMapping xsi:nil="true"/>
+    </duplicateRuleMatchRules>
+    <isActive>true</isActive>
+    <masterLabel>Validación de profesionales duplicados</masterLabel>
+    <operationsOnInsert>Alert</operationsOnInsert>
+    <operationsOnInsert>Report</operationsOnInsert>
+    <operationsOnUpdate>Alert</operationsOnUpdate>
+    <operationsOnUpdate>Report</operationsOnUpdate>
+    <securityOption>EnforceSharingRules</securityOption>
+    <sortOrder>2</sortOrder>
+</DuplicateRule>

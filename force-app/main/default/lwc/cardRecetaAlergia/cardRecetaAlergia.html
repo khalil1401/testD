@@ -1,0 +1,25 @@
+<template>
+    <article class="slds-card" data-id="cardReceta">
+        <div class="containerCardReceta">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <div class="containerImgReceta"
+                            data-id="idContainerImgReceta">
+                            <img src={imagenReceta} class="imgReceta" onclick={selectReceta}>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner" onclick={selectReceta}>
+                <p  class="textoTituloReceta"
+                    style="padding-left: 2%;padding-right: 2%;">
+                    {tituloReceta}
+                </p>
+                <p  style="padding-left: 2%;padding-right: 2%;font-size: 22px;color: #293896;font-family: MontserratRegular;">
+                    + Ver más
+                </p>
+            </div>
+        </div>
+    </article>
+</template>

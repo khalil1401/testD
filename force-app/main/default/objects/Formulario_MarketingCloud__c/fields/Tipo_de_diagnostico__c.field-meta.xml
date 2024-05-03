@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_diagnostico__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de diagnóstico</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tumor cerebral</fullName>
+                <default>false</default>
+                <label>Tumor cerebral</label>
+            </value>
+            <value>
+                <fullName>Tumor de cabeza y cuello</fullName>
+                <default>false</default>
+                <label>Tumor de cabeza y cuello</label>
+            </value>
+            <value>
+                <fullName>Tumor del aparato digestivo</fullName>
+                <default>false</default>
+                <label>Tumor del aparato digestivo</label>
+            </value>
+            <value>
+                <fullName>Tumor del aparato respiratorio</fullName>
+                <default>false</default>
+                <label>Tumor del aparato respiratorio</label>
+            </value>
+            <value>
+                <fullName>Tumor ginecológico</fullName>
+                <default>false</default>
+                <label>Tumor ginecológico</label>
+            </value>
+            <value>
+                <fullName>Tumor osteomuscular</fullName>
+                <default>false</default>
+                <label>Tumor osteomuscular</label>
+            </value>
+            <value>
+                <fullName>Tumor urológico</fullName>
+                <default>false</default>
+                <label>Tumor urológico</label>
+            </value>
+            <value>
+                <fullName>Tumor vías urinarias</fullName>
+                <default>false</default>
+                <label>Tumor vías urinarias</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

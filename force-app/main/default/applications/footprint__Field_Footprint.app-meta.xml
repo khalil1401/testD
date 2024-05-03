@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Field Footprint</label>
+    <tabs>footprint__Field_Footprint_Lex</tabs>
+    <tabs>Modulo_de_paciente__c</tabs>
+    <tabs>Profesional_por_Institucion__c</tabs>
+</CustomApplication>

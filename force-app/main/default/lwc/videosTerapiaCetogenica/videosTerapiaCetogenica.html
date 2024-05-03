@@ -1,0 +1,97 @@
+<template>
+    <template if:false={isMobile}>
+        <div class="slds-grid slds-wrap slds-align_absolute-center">
+            <div class="slds-col slds-size_2-of-12">
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12">
+                <div class="slds-grid slds-grid_vertical-align-center slds-wrap">
+                    <div class="slds-col slds-size_1-of-1">
+                        <div class="slds-align_absolute-center">
+                            <iframe width="100%"
+                                    height="600"
+                                    src={linkVideo}
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                    style="border-radius: 5px 5px 0px 0px;">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-top_large slds-m-bottom_large">
+            <div class="slds-col slds-large-size_1-of-12">
+            </div>
+            <div class="slds-col slds-large-size_1-of-12 slds-align_absolute-center">
+                <!--
+                <lightning-button-icon  icon-name="utility:chevronleft"
+                                        alternative-text="Back"
+                                        title="Back"
+                                        icon-class="dark"
+                                        size="large"
+                                        variant="bare"
+                                        onclick={videoAnterior}
+                                        disabled={iconoAnterior}>
+                </lightning-button-icon>
+                -->
+            </div>
+            <template for:each={videosAMostrar} for:item="video">
+                <div class="slds-col slds-size_10-of-12 slds-large-size_2-of-12 slds-p-around_small" key={video.dataId}>
+                    <div onclick={handleClick} data-id={video.dataId}>
+                        <iframe width="100%"
+                                height="150"
+                                src={video.url}
+                                frameborder="0"
+                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                style="pointer-events: none;cursor: pointer; border-radius: 10px 10px 10px 10px;">
+                        </iframe>
+                    </div>
+                    <div class="slds-text-align_center">
+                        <p class="titulo-video-recomendados">
+                            {video.Title}
+                        </p>
+                    </div>
+                </div>
+            </template>
+            <div class="slds-col slds-large-size_1-of-12 slds-align_absolute-center">
+                <!--
+                <lightning-button-icon  icon-name="utility:chevronright"
+                                        alternative-text="Next"
+                                        title="Next"
+                                        size="large"
+                                        variant="bare"
+                                        onclick={videoSiguiente}
+                                        disabled={iconoPosterior}>
+                </lightning-button-icon>
+                -->
+            </div>
+            <div class="slds-col slds-large-size_1-of-12">
+            </div>
+        </div>
+    </template>
+    <template if:true={isMobile}>
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-top_large slds-m-bottom_large">
+            <template for:each={recetas} for:item="video">
+                <div class="slds-col slds-size_1-of-1 slds-p-around_small" key={video.dataId}>
+                    <iframe width="100%"
+                            height="200"
+                            src={video.dataId}
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            style="border-radius: 0px 0px 0px 0px;">
+                    </iframe>
+                    <div class="slds-text-align_center">
+                        <p class="titulo-video-recomendados">
+                            {video.Title}
+                        </p>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </template>
+</template>

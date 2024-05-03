@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>alejandra.palazzo@danone.com</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>nicolas.feniger@danone.com</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>Gerentes_Comerciales</sharedTo>
+        <sharedToType>RoleAndSubordinatesInternal</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>Todos_los_APMs</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>APMPediatricoSocioUsuario</sharedTo>
+        <sharedToType>PortalRoleAndSubordinates</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>NegocioTotalSocioUsuario</sharedTo>
+        <sharedToType>PortalRoleAndSubordinates</sharedToType>
+    </folderShares>
+    <name>Comercial - Pediatricos</name>
+</ReportFolder>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rechazar_visita</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Rechazar visita</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/apex.js&quot;)} 
+var caseObj = new sforce.SObject(&quot;Case&quot;);
+caseObj.Acepto_visita__c = &quot;{!Case.Acepto_visita__c}&quot;;
+caseObj.Profesional__c = &quot;{!Case.Profesional_Best_Care__c}&quot;;
+caseObj.Id = &quot;{!Case.Id}&quot;;
+
+if(caseObj.Acepto_visita__c != &apos;No&apos;){
+    caseObj.Acepto_visita__c = &apos;No&apos;;
+    caseObj.Profesional_Best_Care__c = null;
+    alert(&apos;Visita rechazada&apos;);
+} else{
+    alert(&apos;Ya rechazó la visita&apos;);
+}
+var result = sforce.connection.update([caseObj]);
+if(result[0].getBoolean(&quot;success&quot;))
+{
+   window.location.reload();
+}
+else{
+  alert(&apos;Error : &apos;+result);
+}</url>
+</WebLink>

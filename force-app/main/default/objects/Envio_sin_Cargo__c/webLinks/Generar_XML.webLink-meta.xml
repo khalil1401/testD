@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generar_XML</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Generar XML</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/50.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/50.0/apex.js&quot;)}
+
+
+var envioResult = &quot;Error. Ya se genero el XML para el {!Envio_sin_Cargo__c.Name}&quot;;
+let xml = &quot;{!Envio_sin_Cargo__c.Xml_ya_generado__c}&quot;;
+
+if(!xml){
+ 
+envioResult = sforce.apex.execute(&quot;GeneradorDeEnvioSinCargoParaJitterbit&quot;,
+&quot;generarNuevosEnviosParaJiter&quot;,{envio:&quot;{!Envio_sin_Cargo__c.Id}&quot;});
+
+alert(envioResult); 
+
+}else{
+
+alert(envioResult);
+
+}
+
+location.reload();</url>
+</WebLink>

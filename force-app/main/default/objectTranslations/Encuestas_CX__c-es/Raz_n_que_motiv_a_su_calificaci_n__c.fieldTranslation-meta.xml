@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Raz_n_que_motiv_a_su_calificaci_n__c</name>
+    <picklistValues>
+        <masterLabel>Facilidad para comunicarse</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>La respuesta de su consulta o reclamo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Otra</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tiempo transcurrido para ser atendido por un representante</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trato del representante</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

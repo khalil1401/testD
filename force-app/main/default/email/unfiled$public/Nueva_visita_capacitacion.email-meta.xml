@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Best_Care</letterhead>
+    <name>Nueva visita/capacitación</name>
+    <style>freeForm</style>
+    <subject>Nueva {!Case.Reason}</subject>
+    <textOnly>Estimado,
+
+Le informamos que tiene una {!Case.Reason} para el paciente {!Case.Account} {!Account.Nombre_oculto__c}  {!Account.Apellido_oculto__c} el día {!Case.Fecha__c} en {!Case.Direccion_del_paciente__c}.
+
+Favor ingresar al siguiente enlace para aceptar o rechazar esta {!Case.Reason} y ver más detalles: {!Case.Link}
+
+Saludos!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

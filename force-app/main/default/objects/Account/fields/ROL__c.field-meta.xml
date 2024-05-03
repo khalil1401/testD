@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROL__c</fullName>
+    <externalId>false</externalId>
+    <label>ROL</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>INFLUENCIADOR</fullName>
+                <default>false</default>
+                <label>INFLUENCIADOR</label>
+            </value>
+            <value>
+                <fullName>INDICADOR - INFLUENCIADOR</fullName>
+                <default>false</default>
+                <label>INDICADOR - INFLUENCIADOR</label>
+            </value>
+            <value>
+                <fullName>INDICADOR</fullName>
+                <default>false</default>
+                <label>INDICADOR</label>
+            </value>
+            <value>
+                <fullName>PLANTEL</fullName>
+                <default>false</default>
+                <label>PLANTEL</label>
+            </value>
+            <value>
+                <fullName>PRESCRIPTOR</fullName>
+                <default>false</default>
+                <label>PRESCRIPTOR</label>
+            </value>
+            <value>
+                <fullName>REFERENTE NUTRICIA</fullName>
+                <default>false</default>
+                <label>REFERENTE NUTRICIA</label>
+            </value>
+            <value>
+                <fullName>KOL</fullName>
+                <default>false</default>
+                <label>KOL</label>
+            </value>
+            <value>
+                <fullName>INDICADOR – INFLUENCIADOR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>INDICADOR – INFLUENCIADOR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

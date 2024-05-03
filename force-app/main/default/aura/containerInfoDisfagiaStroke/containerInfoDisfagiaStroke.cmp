@@ -1,0 +1,22 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="titulo" type="String"/>
+    <aura:attribute name="containerTexto" type="String"/>
+    <aura:attribute name="rutaBullet" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-large-size_3-of-12">
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 slds-m-top_x-large slds-m-bottom_x-large">
+            <div class="slds-grid slds-wrap">
+                <aura:unescapedHtml value="{!v.titulo}"/>
+                <aura:unescapedHtml value="{!v.containerTexto}"/>
+            </div>
+        </div>
+        <div class="slds-col slds-large-size_3-of-12">
+        </div>
+    </div>
+
+</aura:component>

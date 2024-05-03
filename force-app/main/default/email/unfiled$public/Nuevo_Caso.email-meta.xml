@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Best_Care</letterhead>
+    <name>Nuevo Caso</name>
+    <style>freeForm</style>
+    <subject>Hemos recibido su caso y ya se está gestionando</subject>
+    <textOnly>Hola!
+
+Hemos recibido su caso nro. {!Case.CaseNumber}, relacionado al paciente {!Account.Nombre_oculto__c} {!Account.Apellido_oculto__c} y ya lo estamos gestionando, le informaremos según avancemos.
+
+Gracias!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

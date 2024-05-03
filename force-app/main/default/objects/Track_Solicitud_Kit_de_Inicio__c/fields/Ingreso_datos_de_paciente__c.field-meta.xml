@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ingreso_datos_de_paciente__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>El usuario completó el formulario de Datos del Paciente</description>
+    <externalId>false</externalId>
+    <label>1 - Ingresó datos de paciente</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

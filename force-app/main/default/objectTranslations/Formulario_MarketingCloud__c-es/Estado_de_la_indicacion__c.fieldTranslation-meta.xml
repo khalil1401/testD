@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Estado_de_la_indicacion__c</name>
+    <picklistValues>
+        <masterLabel>Cambia</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finaliza</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mantiene</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

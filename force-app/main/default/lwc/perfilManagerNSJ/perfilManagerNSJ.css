@@ -1,0 +1,428 @@
+.desktop-perfil{
+    display: none;
+}
+
+.show-tablet{
+    display: none
+}
+
+.div-perfil-manager{
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.container-perfil-manager{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.items-perfil-manager{
+    border-radius: 20px;
+    padding: 5px;
+    font-family: MontserratRegular;
+    font-weight: 700;
+    color: #606060;
+    background-color: #ECF1F4;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.32px;
+    width: 250px;
+    height: 38px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.items-perfil-manager:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #B59AC8;
+}
+
+.button{
+    background-color: #313183;
+    border-radius: 5px;
+    border: transparent;
+    font-family: MontserratSemiBold;
+    font-size: 0.9rem;
+    color: white;
+    padding: 4px 16px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.back-button{
+    background-color: white;
+    border-radius: 5px;
+    border: solid 1px #313183;
+    font-family: MontserratSemiBold;
+    font-size: 0.9rem;
+    color: #313183;
+    padding: 4px 16px;
+    margin-right: 10px;
+}
+
+.button:hover{
+    opacity: 0.7;
+}
+
+.back-button:hover{
+    opacity: 0.7;
+}
+
+.options-perfil-manager{
+    width: 337px;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 40px;
+}
+
+.items-options-perfil{
+    font-family: BariolBold;
+    font-size: 16px;
+    line-height: 17.63px;
+    color: #1C1B1F;
+    position: relative;
+    left: 15%;
+}
+
+.img-items-options-perfil{
+    position: relative;
+    left: 15%;
+}
+
+.icon-items-options-perfil{
+    position: relative;
+    right: 10%;
+}
+
+.carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    height: 125px;
+    padding-left: 3.5px;
+    padding-right: 3.5px;
+}
+
+.elemento{
+    flex: 1 0 auto;
+    margin: 0px 5px 0px 5px;
+    background-color: #313183;
+    width: 200px;
+    height: 150px;
+    border-radius: 25px;
+}
+
+.name-text{
+    font-family: BariolBold;
+    color: #313183;
+    font-size: 24px;
+    line-height: 26.45px;
+}
+
+.card-item-title{
+    font-family: BariolBold;
+    color: #1C1B1F;
+    font-size: 16px;
+    line-height: 17.63px;
+}
+
+.card-item-text{
+    font-family: BariolRegular;
+    color: #1C1B1F;
+    font-size: 16px;
+    line-height: 17.63px;
+}
+
+.slds-input-has-icon .slds-input__icon:not(button){
+    pointer-events: all;
+}
+
+.card-envio{
+    flex: 1 0 auto;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+    width: 278px;
+    height: 100px;
+    background-color: #FAFBFB;
+    box-shadow: 10px 10px 20px 0px rgb(0, 0, 0, .20);
+}
+
+.pedido-title{
+    font-family: BariolBold;
+    font-size: 16px;
+    line-height: 17.63px;
+    color: #313183;
+}
+
+.pedido-text{
+    font-family: BariolBold;
+    font-size: 14px;
+    line-height: 15.43px;
+}
+
+.pedido-link{
+    font-family: BariolBold;
+    font-size: 14px;
+    line-height: 15.43px;
+    color: #313183;
+    text-decoration: underline;
+}
+
+.hr-line::before {
+    content: '';
+    display: block;
+    width: 258px;
+    border-top: 1px solid #1C1B1F;
+    transform: scaleY(0.3);
+}
+
+.os-gestion-button {
+    width: 100%;
+    height: 40px;
+    background-color: #9D67A8;
+    color: white;
+    border-radius: 8px;
+    font-family: BariolBold;
+    font-size: 16px;
+    line-height: 17.63px;
+    border-color: transparent;   
+}
+
+.circle {
+    background: white;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.circle-selected {
+    background: #9D67A8;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media (min-width: 412px) {
+    .carrusel{
+        height: 135px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    
+    .card-envio{
+        width: 325px;
+        height: 115px;
+    }
+
+    .pedido-title{
+        font-size: 20px;
+        line-height: 22.04px;
+    }
+
+    .pedido-text{
+        font-size: 16px;
+        line-height: 17.63px;
+    }
+
+    .pedido-link{
+        font-size: 16px;
+        line-height: 17.63px;
+    }
+
+    .options-perfil-manager{
+        width: 380px;
+    }
+
+    .hr-line::before {
+        width: 325px;
+    }
+
+    .img-items-options-perfil{
+        left: -5%;
+    }
+    
+    .icon-items-options-perfil{
+        right: 0%;
+    }
+}
+
+@media (min-width: 768px) {
+    .div-perfil-manager{
+        width: 598px;
+    }
+    
+    .show-mobile {
+        display: none;
+    }
+
+    .show-tablet {
+        display: initial;
+    }
+
+    .carrusel {
+        height: 155px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .card-envio {
+        width: 295px;
+        height: 141.15px;
+        margin-left: 0px;
+        margin-right: 0px;
+        box-shadow: 1px 1px 2px 0px rgb(0, 0, 0, .20);
+    }
+
+    .card-envio-left {
+        margin-right: 4px;
+    }
+
+    .card-envio-right {
+        margin-left: 4px;
+    }
+
+    .indicators-cards {
+        display: none;
+    }
+
+    .options-perfil-manager {
+        width: 598px;
+    }
+
+    .hr-line::before {
+        width: 412px;
+    }
+
+    .img-items-options-perfil {
+        left: 25%;
+    }
+
+    .items-options-perfil {
+        left: 25%;
+    }
+
+    .icon-items-options-perfil {
+        right: 25%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .mobile-tablet-perfil {
+        display: none;
+    }
+
+    .desktop-perfil {
+        display: initial;
+    }
+
+    .body-perfil {
+        width: 1000px;
+    }
+
+    .grid-body-perfil {
+        height: 631px;
+        width: 100%;
+    }
+
+    .div-perfil-manager {
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        border-radius: 24px;
+        position: relative;
+    }
+
+    .div-info-paciente {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .container-items-options-perfil{
+        width: 85%;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .img-items-options-perfil{
+        left: 0;
+    }
+
+    .items-options-perfil{
+        left: 0%;
+    }
+
+    .hr-line::before {
+        width: 175px;
+    }
+
+    .card-envio{
+        flex: none;
+        width: 641px;
+        height: 130px;
+    }
+
+    .os-gestion-button {
+        width: 302px;
+    }
+
+    .paciente-name-text {
+        font-family: BariolBold;
+        font-size: 24px;
+        line-height: 26.45px;
+        color: #313183;
+    }
+}
+
+@media (min-width: 1366px) {
+    .body-perfil {
+        width: 1300px;
+    }
+
+    .grid-body-perfil {
+        height: 631px;
+        width: 100%;
+    }
+
+    .div-perfil-manager {
+        width: 313px;
+        margin-left: 0%;
+    }
+
+    .hr-line::before {
+        width: 205px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .body-perfil {
+        width: 1619px;
+    }
+
+    .grid-body-perfil {
+        height: 758px;
+    }
+
+    .div-perfil-manager {
+        width: 393px;
+        margin-left: 0%;
+    }
+
+    .container-items-options-perfil{
+        width: 60%;
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    .card-envio{
+        width: 802px;
+    }
+}

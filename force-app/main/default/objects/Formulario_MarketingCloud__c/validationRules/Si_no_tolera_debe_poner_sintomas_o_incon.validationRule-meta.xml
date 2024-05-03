@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_no_tolera_debe_poner_sintomas_o_incon</fullName>
+    <active>false</active>
+    <description>En caso de que el paciente no tolere la formula debe expresar cuales son sus síntomas o los inconvenientes generados.</description>
+    <errorConditionFormula>AND(ISPICKVAL( Adherencia_esta_relacionado_con__c , &quot;No tolera la formula (No tolera)&quot;) ,ISBLANK(TEXT( Si_no_tolera_bien_la_formula__c)))</errorConditionFormula>
+    <errorDisplayField>Si_no_tolera_bien_la_formula__c</errorDisplayField>
+    <errorMessage>Debe especificar los síntomas o inconvenientes generados</errorMessage>
+</ValidationRule>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Dieta Cetogénica</fullName>
+        <default>false</default>
+        <label>Dieta Cetogénica</label>
+    </customValue>
+    <customValue>
+        <fullName>Metabólicos</fullName>
+        <default>false</default>
+        <label>Metabólicos</label>
+    </customValue>
+    <customValue>
+        <fullName>Malnutrición</fullName>
+        <default>false</default>
+        <label>Malnutrición</label>
+    </customValue>
+    <customValue>
+        <fullName>Disfagia</fullName>
+        <default>false</default>
+        <label>Disfagia</label>
+    </customValue>
+    <customValue>
+        <fullName>Oncología</fullName>
+        <default>false</default>
+        <label>Oncología</label>
+    </customValue>
+    <customValue>
+        <fullName>Alergia</fullName>
+        <default>false</default>
+        <label>Alergia</label>
+    </customValue>
+    <customValue>
+        <fullName>Digestivos</fullName>
+        <default>false</default>
+        <label>Digestivos</label>
+    </customValue>
+    <customValue>
+        <fullName>Desafíos del crecimiento</fullName>
+        <default>false</default>
+        <label>Desafíos del crecimiento</label>
+    </customValue>
+    <customValue>
+        <fullName>Terapia Cetogénica</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Terapia Cetogénica</label>
+    </customValue>
+    <masterLabel>Áreas Terapéuticas</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

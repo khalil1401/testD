@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Texto_otros_vacio</fullName>
+    <active>false</active>
+    <description>En caso de que los síntomas o inconvenientes ocasionados sean otros se debe especificar cual es la razón por la cual no lo tolera.</description>
+    <errorConditionFormula>AND( ISPICKVAL( Si_no_tolera_bien_la_formula__c , &quot;Otros (pedir al paciente que explique&quot;), ISBLANK( Porque_selecciono_otros__c))</errorConditionFormula>
+    <errorDisplayField>Porque_selecciono_otros__c</errorDisplayField>
+    <errorMessage>Completar</errorMessage>
+</ValidationRule>

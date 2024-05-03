@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Mail_de_alerta_por_generaci_n_ajena_de_actividad_institucional</fullName>
+        <description>Mail de alerta por generación ajena de actividad institucional</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Generaci_n_de_actividad_institucional_por_otra_persona</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Chequear_visita_a_drogueria</fullName>
+        <field>Es_visita_a_drogueria__c</field>
+        <literalValue>1</literalValue>
+        <name>Chequear visita a droguería</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Colocar_fecha</fullName>
+        <field>Fecha__c</field>
+        <formula>CreatedDate</formula>
+        <name>Colocar fecha</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Es_APM_adulto_pasa_a_true</fullName>
+        <field>EsApmAdulto__c</field>
+        <literalValue>1</literalValue>
+        <name>Es APM adulto pasa a true</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Poner_visita_como_presecial</fullName>
+        <field>Tipo_de_visita__c</field>
+        <literalValue>Presencial</literalValue>
+        <name>Poner visita como presecial</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Enviar mail de interaccion ajena</fullName>
+        <actions>
+            <name>Mail_de_alerta_por_generaci_n_ajena_de_actividad_institucional</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Interaccion__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Actividad institucional</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Interaccion__c.Interaccion_generada_por_otra_persona__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Se envía un mail al APM notificandole que otro usuario ha generado una actividad institucional para uno de sus profesionales.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Fecha de visita automática</fullName>
+        <actions>
+            <name>Colocar_fecha</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>NOT(CONTAINS($User.Username, &apos;usuarioappmobile@danone.com&apos;))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Si el contacto del ciclo es APM adulto</fullName>
+        <actions>
+            <name>Es_APM_adulto_pasa_a_true</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Si el contacto del ciclo es APM adulto y  el profesional de la salud  de la interacción tiene como especialidad:
+* Jefe de Compras
+* Comprador
+* Farmaceutico
+* Adm de Farmacia
+* Gerente Comercial
+* Administración</description>
+        <formula>AND( LOWER(Ciclo__r.ContactId__r.Account.Name) ==&apos;apm adultos&apos;, OR( IF( OR( TEXT(Profesional_de_la_salud__r.Primera_especialidad__c) == &apos;Jefe de Compras&apos;, TEXT(Profesional_de_la_salud__r.Primera_especialidad__c) == &apos;Comprador&apos;, TEXT(Profesional_de_la_salud__r.Primera_especialidad__c) == &apos;Farmaceútico&apos;, TEXT(Profesional_de_la_salud__r.Primera_especialidad__c) == &apos;Administrativo de Farmacia &apos;, TEXT(Profesional_de_la_salud__r.Primera_especialidad__c) == &apos;Gerente Comercial&apos;, TEXT(Profesional_de_la_salud__r.Primera_especialidad__c) == &apos;Administración&apos; ), True, False ), IF( OR( TEXT(Profesional_de_la_salud__r.Segunda_Especialidad__c) == &apos;Jefe de Compras&apos;, TEXT(Profesional_de_la_salud__r.Segunda_Especialidad__c) == &apos;Comprador&apos;, TEXT(Profesional_de_la_salud__r.Segunda_Especialidad__c) == &apos;Farmaceútico&apos;, TEXT(Profesional_de_la_salud__r.Segunda_Especialidad__c) == &apos;Administrativo de Farmacia &apos;, TEXT(Profesional_de_la_salud__r.Segunda_Especialidad__c) == &apos;Gerente Comercial&apos;, TEXT(Profesional_de_la_salud__r.Segunda_Especialidad__c) == &apos;Administración&apos; ), True, False ) ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Visita a droguería</fullName>
+        <actions>
+            <name>Chequear_visita_a_drogueria</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( ISPICKVAL(Profesional_de_la_salud__r.Tipo_de_Profesional__c, &quot;Comprador de Droguería&quot;),  RecordType.Name = &quot;Visita médica&quot;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Visita presencial por defecto</fullName>
+        <actions>
+            <name>Poner_visita_como_presecial</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Interaccion__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Visita médica</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Interaccion__c.Tipo_de_visita__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

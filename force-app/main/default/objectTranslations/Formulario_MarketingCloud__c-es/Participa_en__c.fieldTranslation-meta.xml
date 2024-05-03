@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Participa_en__c</name>
+    <picklistValues>
+        <masterLabel>No, no participa y le interesaría</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No, no participa y no le interesa</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Si participa pero no le sirve el soporte que brindan</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Si participa y le brinda el soporte que necesita</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

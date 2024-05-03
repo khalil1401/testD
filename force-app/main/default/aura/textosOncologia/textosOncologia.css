@@ -1,0 +1,231 @@
+.THIS {
+}
+
+.THIS .mobile{
+    display: none;
+}
+
+.THIS .titulosOncologia{
+    font-family:MontserratSemiBold;
+    font-size: 22px;
+    color:#606060;
+    line-height: 30px;
+}
+
+.THIS .textosOncologia{
+    font-family:MontserratRegular;
+    font-size: 16px;
+    color:#606060;
+    line-height: 24px;
+}
+
+.THIS .linea{
+    border-top: 1px solid #606060;
+    width:100px;
+    margin-top:1.2%;
+}
+
+.THIS .textosAlergia{
+    font-family:MontserratRegular;
+    font-size: 22px;
+    color:#606060;
+    line-height: 30px;
+    padding-left: 5%;
+    padding-right: 30%;
+}
+
+.THIS .lineaAlergia{
+    width:5%;
+    border-bottom:1px solid #606060;
+    position:relative;
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.THIS .lineaCompletaAlergia{
+    width:100%;
+    border-bottom:1px solid #606060;
+    position:relative;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.THIS .texto-aviso-legal{
+    font-family: MontserratRegular;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.THIS .title-to-meta{
+    font-family: MontserratSemiBold;
+    color: #606060;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+}
+
+.THIS .text-to-meta{
+    font-family: MontserratRegular;
+    color: #606060;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+}
+
+.THIS .line-meta{
+    width:200px;
+    border-bottom:1px solid #606060;
+    position:relative;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.THIS .title-mb-producto-oncologia{
+    font-family: MontserratBlack;
+    background-color: transparent;
+    color: #52338B;
+    font-size: 3.438rem;
+    line-height: 5rem;
+}
+
+.THIS .title-msb-producto-oncologia{
+    font-family: MontserratSemiBold;
+    background-color: transparent;
+    color: #52338B;
+    font-size: 3.438rem;
+    line-height: 2.7rem;
+}
+
+.THIS .title-pr-producto-oncologia{
+    font-family: PacificoRegular;
+    font-size: 5rem;
+    line-height: 5rem;
+    background: linear-gradient(90deg, #987BD9, #6E83E5);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.THIS .regular-text-tc{
+    font-family: MontserratRegular;
+    font-size: 1.125rem;
+    line-height: 1.813rem;
+    color: #777777;
+}
+
+.THIS .text-indice-hpo{
+    font-family: MontserratRegular;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    color: #6E83E5
+}
+
+.THIS .div-container-aviso{
+    margin-left: 8.3%;
+    margin-right: 8.3%;
+}
+
+.THIS .text-fuentes-desafios{
+    font-family: MontserratRegular;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 30px;
+    color: #606060;
+    line-break: anywhere;
+}
+
+.THIS .text-bajada-fuentes-desafios{
+    font-family: MontserratRegular;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 25px;
+    color: #606060;
+}
+
+@media (max-width: 600px) {
+    .THIS {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .THIS .desktop{
+        display: none;
+    }
+    .THIS .mobile{
+        display: initial;
+    }    
+    .THIS .linea{
+        border-top: 1px solid #606060;
+        width:100px;
+        margin-top:3.5%;
+    }
+    .THIS .titulosOncologia{
+        font-family:MontserratSemiBold;
+        font-size: 18px;
+        color:#606060;
+        line-height: 24px;
+    }
+    .THIS .textosOncologia{
+        font-family:MontserratRegular;
+        font-size: 15px;
+        color:#606060;
+        line-height: 23px;
+    }
+    .THIS .textosAlergia{
+        font-size: 15pt !important;
+        line-height: 18pt !important;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .THIS .lineaAlergia{
+        width:100px;
+        margin-left: 0%;
+        margin-top: 5%;
+    }
+    .THIS .lineaCompletaAlergia{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .THIS .texto-aviso-legal{
+        font-size: 12pt;
+        line-height: 13pt;
+        text-align: center;
+    }
+    .THIS .line-meta{
+        width: 100px;
+        margin-top: 5%;
+    }
+
+    .THIS .title-mb-producto-oncologia{
+        font-size: 1.4rem;
+        line-height: 1.9rem !important;
+    }
+    
+    .THIS .title-pr-producto-oncologia{
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+    }
+    
+    .THIS .title-msb-producto-oncologia{
+        font-size: 1.4rem;
+        line-height: 1.9rem !important;
+    }
+
+    .THIS .text-indice-hpo {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .THIS .div-container-aviso {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .THIS .text-fuentes-desafios {
+        font-size: 15pt;
+        line-height: 20pt;
+    }
+
+    .THIS .text-bajada-fuentes-desafios{
+        font-size: 15pt;
+        line-height: 20pt;
+    }    
+}

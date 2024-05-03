@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="title" label="Título de párrafo en formato HTML"/>
+    <design:attribute name="text" label="Texto de párrafo en formato HTML"/>
+</design:component>

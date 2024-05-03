@@ -1,0 +1,292 @@
+<aura:component controller="FormularioRegistroController" implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="account" type="Account"/>
+    <aura:attribute name="areasTerapeuticas" type="String[]" default="['Dieta Cetogénica','Metabólicos','Oncología','Alergia','Digestivos', 'Desafíos del crecimiento']"/>
+    <aura:attribute name="optionsAreas" type="List" default="[]"/>
+    <aura:attribute name="area" type="String"/>
+    <aura:attribute name="checkPoliticaDePrivacidad" type="boolean" default="false"/>
+    <aura:attribute name="checkTerminosYCondiciones" type="boolean" default="false"/>
+    <aura:attribute name="checkConsetimiento" type="boolean" default="false"/>
+
+    <aura:attribute name="showSpinner" type="boolean" default="false"/>
+    <aura:attribute name="validacionDNI" type="boolean" default="true"/>
+    <aura:attribute name="aceptarCondiciones" type="boolean" default="false"/>
+    <aura:attribute name="existeDNI" type="boolean" default="false"/>
+    <aura:attribute name="alertaDNI" type="boolean" default="false"/>
+    <aura:attribute name="alertaValidaciones" type="boolean" default="false"/>
+    <aura:attribute name="isPaciente" type="Boolean"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <lightning:navigation aura:id="navService"/>
+    <aura:registerEvent name="changePageEvent" type="c:ChangePageAltaPaciente"/>
+
+    <aura:if isTrue="{!v.showSpinner}">
+        <div>
+            <lightning:spinner
+                alternativeText="Cargando"
+                variant="brand"
+                class="spinner"/>
+        </div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.validacionDNI}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-align_absolute-center" onkeypress="{!c.pressKeyEnterFormDNI}">
+            <div class="slds-modal__container modal-dni">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button
+                        class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close"
+                        onclick="{!c.likenClose}">
+                        <lightning:icon 
+                            class="icn"
+                            iconName="utility:close"
+                            size="small"
+                            variant="inverse"
+                            alternativeText="Indicates approval"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div class="slds-text-align_center" style="margin-top: 10%; margin-left: 10%;margin-right: 10%;">
+                        <p class="text-fvr">
+                            Usted está por comenzar el registro en la plataforma para pacientes,
+                            <br/>
+                            <span style="color: #C09AC2; font-family: MontserratSemiBold;">Nutricia Siempre Juntos.</span>
+                        </p>
+                        <p class="text-fvr slds-m-top_small">
+                            Si desea iniciar un tratamiento y cuenta con el cupón médico, por favor complete el proceso de <span style="color: #C09AC2; font-family: MontserratSemiBold;">solicitud de kit de inicio. </span>
+                        </p>
+                    </div>
+                    <div class="slds-m-top_small slds-align_absolute-center" style="margin-bottom: 5%;">
+                        <div>
+                            <lightning:input
+                                class="slds-m-top_small"
+                                aura:id="dni"
+                                name="dni"
+                                label="Ingrese su DNI"
+                                value="{!v.account.DNI__c}"
+                                autocomplete="off"
+                                type="number"
+                                min="1000000"
+                                maxlength="8"/>
+                            <lightning:combobox 
+                                class="slds-m-top_small"
+                                aura:id="dni" 
+                                name="areasTerapeuticas" 
+                                label="Seleccione su Área Terapéutica"
+                                value="{!v.area}"
+                                options="{!v.optionsAreas}"
+                                onchange="{!c.handleChangeArea}"
+                                dropdownAlignment="top-left"/>
+                            <aura:if isTrue="{!v.alertaDNI}">
+                                <div class="slds-m-top_x-small">
+                                    <label class="text-alert">
+                                        Debe completar todos los campos.
+                                    </label>
+                                </div>
+                            </aura:if>
+                        </div>
+                    </div>
+                    <div class="slds-align_absolute-center" style="margin-bottom: 10%;">
+                        <button
+                            id="id-btn-next-dni"
+                            class="button"
+                            onclick="{!c.validateDNI}">
+                            Siguiente
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>    
+    </aura:if>
+
+    <aura:if isTrue="{!v.aceptarCondiciones}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-align_absolute-center" onkeypress="{!c.pressKeyEnterFormValidaciones}">
+            <div class="slds-modal__container modal-condiciones">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button 
+                        class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close"
+                        onclick="{!c.likenClose}">
+                        <lightning:icon 
+                            class="icn"
+                            iconName="utility:close"
+                            size="small"
+                            variant="inverse"
+                            alternativeText="Indicates approval"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <div class="slds-m-around_small">
+                        <div class="slds-scrollable_y">
+                            <div class="slds-text-longform">
+                                <fieldset class="slds-form-element">
+                                    <div class="slds-form-element__control">
+                                        <div>
+                                            <li class="slds-form-element__label text-fvrv">
+                                                <input 
+                                                    class="check-box"
+                                                    type="checkbox"
+                                                    id="checkPoliticaDePrivacidad"/>
+                                                    He leído y acepto la Política de Privacidad y brindo expresamente mi consentimiento para la recolección, tratamiento y procesamiento de mis Datos Personales del modo allí descripto. <span class="text-link" data-id="custom_politicas_de_privacidad__c" onclick="{!c.redirectTo}">Ver Política de Privacidad</span>
+                                            </li>
+                                        </div>
+                                        <div class="slds-m-top_large">
+                                            <li class="slds-form-element__label text-fvrv">
+                                                <input 
+                                                    class="check-box"
+                                                    type="checkbox"
+                                                    id="checkTerminosYCondiciones"/>
+                                                He leído y acepto los Términos y Condiciones de la Plataforma. <span class="text-link" data-id="custom_terminos_de_uso__c" onclick="{!c.redirectTo}">Ver Términos y Condiciones</span>
+                                            </li>
+                                        </div>
+                                        <div class="slds-m-top_large">
+                                            <li class="slds-form-element__label text-fvrv">
+                                                <input 
+                                                    class="check-box"
+                                                    type="checkbox"
+                                                    id="checkConsetimiento"/>
+                                                Doy mi <span class="text-link">consentimiento</span> para que AMN Advanced Medical Nutrition S.A., Nutricia-Bagó S.A. y Best Care Nutrición Domiciliaria S.A., todas con domicilio legal en Moreno 877, piso 4 CABA y operadores logísticos (Victor Masson Transportes Cruz del Sur S.A. y otros) traten mis datos personales con la finalidad de gestionar la entrega del Kit de Inicio, brindarme sus productos y servicios y me envíen comunicaciones que contengan información sobre sus productos y/o servicios y áreas terapéuticas que sean de mi interés.
+                                            </li>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <br></br>
+                                <span class="text-fvrv" style="display: inline; vertical-align: middle;">
+                                    Puedes revocar el consentimiento prestado u oponerte a la recepción de comunicaciones comerciales dirigiéndote por correo electrónico a compliance.conosur@danone.com indicando en el asunto “Plataforma nutriciasiemprejuntos.com” y detallando su petición.*
+                                </span>
+                            </div>
+                        </div>
+                        <aura:if isTrue="{!v.alertaValidaciones}">
+                            <div class="slds-m-top_x-small">
+                                <label class="text-alert">
+                                    Debe aceptar las condiciones para solicitar el Kit de Inicio.
+                                </label>
+                            </div>
+                        </aura:if>
+                        <div class="slds-clearfix slds-m-top_large">
+                            <div class="slds-float_right">
+                                <button
+                                    id="id-btn-back-validaciones"
+                                    class="back-button"
+                                    onclick="{!c.backToSetDNI}">
+                                    Volver
+                                </button>
+                                <button
+                                    id="id-btn-next-validaciones"
+                                    class="button"
+                                    onclick="{!c.checkValidaciones}">
+                                    Siguiente
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.existeDNI}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-align_absolute-center">
+            <div class="slds-modal__container modal-dni">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button
+                        class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close"
+                        onclick="{!c.likenClose}">
+                        <lightning:icon 
+                            class="icn"
+                            iconName="utility:close"
+                            size="small"
+                            variant="inverse"
+                            alternativeText="Indicates approval"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div style="margin: 10%;">
+                        <div class="slds-align_absolute-center">
+                            <lightning:icon 
+                                class="icn-modal"
+                                iconName="utility:logout" 
+                                alternativeText="logout" 
+                                title="logout"
+                                size="small"/>
+                        </div>
+                        <p class="slds-text-align_center text-fvr slds-m-top_large">
+                            El DNI ingresado corresponde a un paciente ya enrolado en la plataforma para pacientes, <span style="color: #C09AC2; font-family: MontserratSemiBold;">Nutricia Siempre Juntos.</span>
+                        </p>
+                        <p class="slds-text-align_center text-fvr slds-m-top_medium">
+                            Por cualquier duda o consulta puede comunicarse con el <span style="color: #C09AC2; font-family: MontserratSemiBold;">Programa de Soporte al Paciente:</span>
+                        </p>
+                        <div class="container-contacto-fvr text-fvr slds-m-top_medium" style="font-family: MontserratSemiBold;">
+                            <a href="https://api.whatsapp.com/send?phone=5491159706647">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_HOME/PP-HOME-Logo%20whatsapp%20violeta.png" alt="img-wsp" 
+                                    style="width: 30px;"/>
+                                <span class="slds-m-left_x-small">
+                                    +54 911 5970-6647
+                                </span>
+                            </a>
+                        </div>
+                        <div class="container-contacto-fvr text-fvr slds-m-top_small" style="font-family: MontserratSemiBold;">
+                            <a href="tel:0800-122-5544">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_HOME/PP-HOME-Logo%20telefono%20violeta.png" alt="img-tel" 
+                                    style="width: 30px;"/>
+                                <span class="slds-m-left_small">0800-122-5544</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.isPaciente}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-align_absolute-center">
+            <div class="slds-modal__container modal-dni">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button
+                        class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close"
+                        onclick="{!c.likenClose}">
+                        <lightning:icon 
+                            class="icn"
+                            iconName="utility:close"
+                            size="small"
+                            variant="inverse"
+                            alternativeText="Indicates approval"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div style="margin: 10%;">
+                        <p class="slds-text-align_center text-fvr">
+                            Usted es un paciente ya enrolado en la plataforma para pacientes, <span style="color: #C09AC2; font-family: MontserratSemiBold;">Nutricia Siempre Juntos.</span>
+                        </p>
+                        <p class="slds-text-align_center text-fvr slds-m-top_medium">
+                            Por cualquier duda o consulta puede comunicarse con el <span style="color: #C09AC2; font-family: MontserratSemiBold;">Programa de Soporte al Paciente</span> al:
+                        </p>
+                        <div class="container-contacto-fvr text-fvr slds-m-top_medium" style="font-family: MontserratSemiBold;">
+                            <a href="https://api.whatsapp.com/send?phone=5491159706647">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_HOME/PP-HOME-Logo%20whatsapp%20violeta.png" alt="img-wsp" 
+                                    style="width: 30px;"/>
+                                <span class="slds-m-left_x-small">
+                                    +54 911 5970-6647
+                                </span>
+                            </a>
+                        </div>
+                        <div class="container-contacto-fvr text-fvr slds-m-top_small" style="font-family: MontserratSemiBold;">
+                            <a href="tel:0800-122-5544">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_HOME/PP-HOME-Logo%20telefono%20violeta.png" alt="img-tel" 
+                                    style="width: 30px;"/>
+                                <span class="slds-m-left_small">0800-122-5544</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+
+</aura:component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_de_visitas_realizadas_Al_100_y_50__c</fullName>
+    <description>Suma las visitas que son al 100 mas las que son al 50.</description>
+    <externalId>false</externalId>
+    <formula>Visitas_totales_realizadas__c + Visitas_APM_y_especialista__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total de visitas realizadas</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

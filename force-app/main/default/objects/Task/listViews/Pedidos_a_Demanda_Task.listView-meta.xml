@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pedidos_a_Demanda_Task</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Pedidos a Demanda</label>
+    <queue>Pedidos_a_Demanda</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

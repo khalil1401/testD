@@ -1,0 +1,64 @@
+.THIS {
+}
+
+.THIS .td-icon {
+    width: 10%;
+}
+
+.THIS .td-text {
+    width: 90%;
+    padding-left: 10px;
+}
+
+.THIS .title-textos-ddc{
+    font-family: MontserratBlack;
+    font-size: 20pt;
+    line-height: 22pt;
+    color: #502777;
+}
+
+.THIS .title-purple-textos-ddc{
+    font-family: MontserratSemiBold;
+    font-size: 18pt;
+    line-height: 22pt;
+    color: #502777;
+}
+
+.THIS .text-textos-ddc{
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: #606060;
+}
+
+@media (min-width: 768px) {
+    .THIS .div-title-ddc {
+        margin-top: 75px;
+        margin-bottom: 35px;
+    }
+
+    .THIS .td-icon {
+        width: 5%;
+    }
+    
+    .THIS .td-text {
+        width: 95%;
+        padding-left: 0px;
+    }
+    
+    .THIS .title-textos-ddc{
+        font-size: 60.59px;
+        line-height: 70.28px;
+    }
+    
+    .THIS .title-purple-textos-ddc{
+        font-size: 26px;
+        line-height: 30px;
+        margin-top: 50px;
+    }
+    
+    .THIS .text-textos-ddc{
+        font-size: 22px;
+        line-height: 30px;
+    }    
+}

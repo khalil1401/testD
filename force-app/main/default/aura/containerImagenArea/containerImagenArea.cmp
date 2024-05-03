@@ -1,0 +1,21 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+	<aura:attribute name="altoMaximo" type="String" default="200"/>
+	<aura:attribute name="altoMinimo" type="String" default="200"/>
+	<aura:attribute name="recursoEstatico" type="String" default="Oncologia_Landing_Home"/>
+	<aura:attribute name="rutaRecursoEstaticoMobile" type="String" default="bannerHomeOncologiaMobile"/>
+	<aura:attribute name="rutaImagen" type="String" default=""/>
+    <aura:attribute name="radioEsquinas" type="String"/>
+    <aura:attribute name="isDesktop" type="Boolean"/>
+    <aura:attribute name="claseCSSImagen" type="String"/>
+
+    <div>
+        <div class="desktop">
+            <img src="{!v.recursoEstatico}" alt="img-banner" style="width: 100%" class="{!v.claseCSSImagen}"/>
+        </div>
+        <div class="mobile">
+            <img src="{!v.rutaRecursoEstaticoMobile}" alt="img-banner" style="width: 100%" class="{!v.claseCSSImagen}"/>
+        </div>
+    </div>
+
+</aura:component>

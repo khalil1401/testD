@@ -1,0 +1,9 @@
+<design:component >
+
+    <design:attribute name="backgroundPrimerColorGradiente" label="Primer color de fondo para gradiente"/>
+    <design:attribute name="backgroundSegundoColorGradiente" label="Segundo color de fondo para gradiente"/>
+    <design:attribute name="titulo" label="Título de texto"/>
+    <design:attribute name="texto" label="Párrafos de texto"/>
+    <design:attribute name="textoDetalles" label="Párrafos detalles de texto"/>
+
+</design:component>

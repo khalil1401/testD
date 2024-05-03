@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_desde_menor_a_fecha_hasta</fullName>
+    <active>false</active>
+    <errorConditionFormula>Modulo_desde__c &gt;  Modulo_hasta__c</errorConditionFormula>
+    <errorDisplayField>Modulo_desde__c</errorDisplayField>
+    <errorMessage>La fecha de inicio de módulo no puede ser mayor a la fecha de fin</errorMessage>
+</ValidationRule>

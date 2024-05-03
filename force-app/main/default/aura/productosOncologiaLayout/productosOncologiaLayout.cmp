@@ -1,0 +1,113 @@
+<aura:component implements="forceCommunity:layout,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="container1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container2" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container3" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container4" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container5" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container6" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container7" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container8" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container9" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container10" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container11" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container12" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container13" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container14" type="Aura.Component[]" required="false"/>
+
+    <lightning:navigation aura:id="navService"/>
+
+    <div class="slds-col slds-size_1-of-1">
+        {!v.container1}
+    </div>
+
+    <div class="slds-col slds-size_1-of-1">
+        {!v.container14}
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+        {!v.container2}
+    </div>
+
+    <div class="slds-col slds-size_1-of-1">
+        <div class="container-pol-layout">
+            {!v.container3}
+        </div>
+    </div>
+    
+    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+        {!v.container4}
+    </div>
+
+    <div style="background:linear-gradient(to bottom, #FFFFFF 0%, #E0D7F380 50%, #987BD926 100%);">
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container5}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+            <div class="container-pol-in-layout">
+                {!v.container6}
+            </div>
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container7}
+        </div>
+        
+        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-m-bottom_xx-large">
+            <div class="container-pol-in-layout">
+                {!v.container8}
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large slds-align_absolute-center">
+            <c:botonProductoOncologia
+                text="CONSEGUILO EN ESTAS FARMACIAS"
+                buttonId="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/PP-ONCOLOGIA-Farmacias_Fortisip%20Compact%20Protein%2026-10.pdf"
+                typeRedirect="standard__webPage"
+                classTag="button-bpo-far-td"
+                onsenddata="{!c.clickButton}">
+            </c:botonProductoOncologia>
+        </div>
+        
+        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-m-bottom_xx-large">
+            <div class="container-pol-in-layout" style="padding-left: 5%; padding-right: 5%;">
+                {!v.container10}
+            </div>
+        </div>
+
+        <div class="container-pol-layout">
+            <div class="slds-grid slds-wrap slds-p-bottom_xx-large slds-align_absolute-center">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-m-top_x-large slds-align_absolute-center">
+                    <c:botonProductoOncologia
+                        text="RECOMENDACIONES DE USO"
+                        buttonId="Recomendacion_de_Uso__c"
+                        typeRedirect="comm__namedPage"        
+                        classTag="button-bpo-td"
+                        onsenddata="{!c.clickButton}">
+                    </c:botonProductoOncologia>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-m-top_x-large slds-align_absolute-center">
+                    <c:botonProductoOncologia
+                        text="PREGUNTAS FRECUENTES"
+                        buttonId="preguntas_frecuentes__c"
+                        typeRedirect="comm__namedPage"
+                        classTag="button-bpo-td"
+                        onsenddata="{!c.clickButton}">
+                    </c:botonProductoOncologia>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+        <div class="container-pol-in-layout">
+            {!v.container12}
+        </div>
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large slds-text-align_center">
+        {!v.container13}
+    </div>
+
+</aura:component>

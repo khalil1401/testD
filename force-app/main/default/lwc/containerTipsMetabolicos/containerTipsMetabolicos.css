@@ -1,0 +1,75 @@
+.div-container-tips-metabolicos{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.div-description-tip-meta{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #EBEBEB;    
+}
+
+.title-description-text-tip-meta{
+    font-family: PacificoRegular;
+    color: #907DD6;
+    font-size: 4.375rem;
+    line-height: 4.5rem;
+}
+
+.subtitle-description-text-tip-meta{
+    font-family: MontserratSemiBold;
+    color: #907DD6;
+    font-size: 1.625rem;
+    line-height: 1.875rem;
+}
+
+.description-text-tip-meta{
+    font-family: MontserratRegular;
+    color: #606060;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+}
+
+.text-fuentes-ctm-meta{
+    font-family: MontserratRegular;
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #606060;
+    line-break: anywhere;
+}
+
+.img-description-tip-meta{
+    width: 90%;
+}
+
+.check-meta{
+    padding-top: 30%;
+}
+
+@media (max-width: 600px) {
+    .div-container-tips-metabolicos{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .div-description-tip-meta{
+        padding-left: 5%;
+        padding-right: 5%;
+    }    
+
+    .img-description-tip-meta{
+        display: none;
+    }
+
+    .title-description-text-tip-meta{
+        font-size: 4rem;
+        line-height: 3.7rem;
+    }
+
+    .check-meta{
+        padding-top: 70%;
+    }
+}

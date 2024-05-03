@@ -1,0 +1,53 @@
+.THIS {
+}
+
+.THIS .desktop{
+    display: initial;
+}
+
+.THIS .texto-secciones{
+    font-family: MontserratSemiBold;
+    font-size: 13px;
+    color: #606060;
+}
+    
+.THIS .tabNavegacionAlergia{
+    font-family: MontserratSemiBold;
+    font-size: 13px;
+    color: #606060;
+    padding-left: 5%;
+}
+
+.THIS .tabNavegacionAlergia:hover{
+    cursor: pointer;
+    color: #293896;
+}
+
+.THIS .tabSeleccionadaAlergia{
+    font-family: MontserratSemiBold;
+    font-size: 13px;
+    color: #293896;
+}
+
+.THIS .iconos{
+    margin-left: 2%;
+    cursor: pointer;
+    width: 8%;
+}
+
+@media (max-width: 600px) {
+    .THIS .tabNavegacionAlergia{
+        display: none;
+    }
+    .THIS .tabSeleccionadaAlergia{
+        font-size: 12px;
+        display: initial;
+        padding-left: 0%;
+    }    
+    .THIS .texto-secciones{
+        font-size: 12px;
+    }    
+    .THIS .iconos{
+        width: 13%;
+    }    
+}

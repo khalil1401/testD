@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nro_de_factura_a_corregir__c</fullName>
+    <externalId>false</externalId>
+    <label>Nro. de factura a corregir</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

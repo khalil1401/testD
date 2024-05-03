@@ -1,0 +1,39 @@
+.THIS {
+    background-color: #ebebeb;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.THIS .tituloContainerTextoBalanceOncologia{
+    font-family: MontserratSemiBold;
+    color: #606060;
+    font-size: 22px;
+    line-height: 30px;
+    padding-top: 2%;
+}
+
+.THIS .textoContainerTextoBalanceOncologia{
+    font-family: MontserratRegular;
+    color: #606060;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+@media (max-width: 600px) {
+    .THIS {
+        border-radius: 0px 0px 0px 0px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .THIS .tituloContainerTextoBalanceOncologia{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .THIS .textoContainerTextoBalanceOncologia{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .THIS .imagenContainerTextoBalanceOncologia{
+        width: 75%;
+    }    
+}

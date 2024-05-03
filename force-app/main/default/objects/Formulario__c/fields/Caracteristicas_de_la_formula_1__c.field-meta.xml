@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caracteristicas_de_la_formula_1__c</fullName>
+    <externalId>false</externalId>
+    <label>Caracteristicas producto n°1</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Polimérica estándar</fullName>
+                <default>false</default>
+                <label>Polimérica estándar</label>
+            </value>
+            <value>
+                <fullName>Polimérica con fibra</fullName>
+                <default>false</default>
+                <label>Polimérica con fibra</label>
+            </value>
+            <value>
+                <fullName>Semielemental</fullName>
+                <default>false</default>
+                <label>Semielemental</label>
+            </value>
+            <value>
+                <fullName>Para diabetes</fullName>
+                <default>false</default>
+                <label>Para diabetes</label>
+            </value>
+            <value>
+                <fullName>De alta densidad calórica</fullName>
+                <default>false</default>
+                <label>De alta densidad calórica</label>
+            </value>
+            <value>
+                <fullName>Hiperproteica</fullName>
+                <default>false</default>
+                <label>Hiperproteica</label>
+            </value>
+            <value>
+                <fullName>Otras</fullName>
+                <default>false</default>
+                <label>Otras</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

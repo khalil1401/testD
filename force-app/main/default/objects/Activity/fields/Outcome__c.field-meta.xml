@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outcome__c</fullName>
+    <externalId>false</externalId>
+    <label>Outcome</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Llamada__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Internado</fullName>
+                <default>false</default>
+                <label>Internado</label>
+            </value>
+            <value>
+                <fullName>No desea/puede hablar</fullName>
+                <default>false</default>
+                <label>No desea/puede hablar</label>
+            </value>
+            <value>
+                <fullName>No continuará con el tratamiento</fullName>
+                <default>false</default>
+                <label>No continuará con el tratamiento</label>
+            </value>
+            <value>
+                <fullName>Imposibilidad de contacto</fullName>
+                <default>false</default>
+                <label>Imposibilidad de contacto</label>
+            </value>
+            <value>
+                <fullName>Fallecido</fullName>
+                <default>false</default>
+                <label>Fallecido</label>
+            </value>
+            <value>
+                <fullName>Satisfecho con la respuesta</fullName>
+                <default>false</default>
+                <label>Satisfecho con la respuesta</label>
+            </value>
+            <value>
+                <fullName>No satisfecho con la respuesta</fullName>
+                <default>false</default>
+                <label>No satisfecho con la respuesta</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Exitosa</controllingFieldValue>
+            <valueName>Satisfecho con la respuesta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Exitosa</controllingFieldValue>
+            <valueName>No satisfecho con la respuesta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No exitosa</controllingFieldValue>
+            <controllingFieldValue>No realizada</controllingFieldValue>
+            <valueName>Internado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No exitosa</controllingFieldValue>
+            <controllingFieldValue>No realizada</controllingFieldValue>
+            <valueName>No desea/puede hablar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No exitosa</controllingFieldValue>
+            <controllingFieldValue>No realizada</controllingFieldValue>
+            <valueName>No continuará con el tratamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No exitosa</controllingFieldValue>
+            <controllingFieldValue>No realizada</controllingFieldValue>
+            <valueName>Imposibilidad de contacto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No exitosa</controllingFieldValue>
+            <controllingFieldValue>No realizada</controllingFieldValue>
+            <valueName>Fallecido</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

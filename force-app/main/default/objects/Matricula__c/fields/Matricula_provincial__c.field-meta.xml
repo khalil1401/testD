@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Matricula_provincial__c</fullName>
+    <externalId>false</externalId>
+    <label>Matricula provincial</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Tipo__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Buenos Aires</fullName>
+                <default>false</default>
+                <label>Buenos Aires</label>
+            </value>
+            <value>
+                <fullName>CABA</fullName>
+                <default>false</default>
+                <label>CABA</label>
+            </value>
+            <value>
+                <fullName>Catamarca</fullName>
+                <default>false</default>
+                <label>Catamarca</label>
+            </value>
+            <value>
+                <fullName>Chaco</fullName>
+                <default>false</default>
+                <label>Chaco</label>
+            </value>
+            <value>
+                <fullName>Chubut</fullName>
+                <default>false</default>
+                <label>Chubut</label>
+            </value>
+            <value>
+                <fullName>Córdoba</fullName>
+                <default>false</default>
+                <label>Córdoba</label>
+            </value>
+            <value>
+                <fullName>Corrientes</fullName>
+                <default>false</default>
+                <label>Corrientes</label>
+            </value>
+            <value>
+                <fullName>Entre Ríos</fullName>
+                <default>false</default>
+                <label>Entre Ríos</label>
+            </value>
+            <value>
+                <fullName>Formosa</fullName>
+                <default>false</default>
+                <label>Formosa</label>
+            </value>
+            <value>
+                <fullName>Jujuy</fullName>
+                <default>false</default>
+                <label>Jujuy</label>
+            </value>
+            <value>
+                <fullName>La Pampa</fullName>
+                <default>false</default>
+                <label>La Pampa</label>
+            </value>
+            <value>
+                <fullName>La Rioja</fullName>
+                <default>false</default>
+                <label>La Rioja</label>
+            </value>
+            <value>
+                <fullName>Mendoza</fullName>
+                <default>false</default>
+                <label>Mendoza</label>
+            </value>
+            <value>
+                <fullName>Misiones</fullName>
+                <default>false</default>
+                <label>Misiones</label>
+            </value>
+            <value>
+                <fullName>Neuquén</fullName>
+                <default>false</default>
+                <label>Neuquén</label>
+            </value>
+            <value>
+                <fullName>Río Negro</fullName>
+                <default>false</default>
+                <label>Río Negro</label>
+            </value>
+            <value>
+                <fullName>Salta</fullName>
+                <default>false</default>
+                <label>Salta</label>
+            </value>
+            <value>
+                <fullName>San Juan</fullName>
+                <default>false</default>
+                <label>San Juan</label>
+            </value>
+            <value>
+                <fullName>San Luis</fullName>
+                <default>false</default>
+                <label>San Luis</label>
+            </value>
+            <value>
+                <fullName>Santa Cruz</fullName>
+                <default>false</default>
+                <label>Santa Cruz</label>
+            </value>
+            <value>
+                <fullName>Santa Fe</fullName>
+                <default>false</default>
+                <label>Santa Fe</label>
+            </value>
+            <value>
+                <fullName>Santiago del Estero</fullName>
+                <default>false</default>
+                <label>Santiago del Estero</label>
+            </value>
+            <value>
+                <fullName>Tierra del Fuego</fullName>
+                <default>false</default>
+                <label>Tierra del Fuego</label>
+            </value>
+            <value>
+                <fullName>Tucumán</fullName>
+                <default>false</default>
+                <label>Tucumán</label>
+            </value>
+            <value>
+                <fullName>Ninguna</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ninguna</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Buenos Aires</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>CABA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Catamarca</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Chaco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Chubut</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Córdoba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Corrientes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Entre Ríos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Formosa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Jujuy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>La Pampa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>La Rioja</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Mendoza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Misiones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Neuquén</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Río Negro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Salta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>San Juan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>San Luis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Santa Cruz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Santa Fe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Santiago del Estero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Tierra del Fuego</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Provincial</controllingFieldValue>
+            <valueName>Tucumán</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

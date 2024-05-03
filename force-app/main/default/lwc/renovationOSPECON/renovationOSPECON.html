@@ -1,0 +1,51 @@
+<template>
+    <template if:true={showLoadingSpinner}>
+        <div style="z-index: 10000 !important;">
+            <lightning-spinner alternative-text="Actualizando......" size="medium" style="z-index: 10000 !important;">
+            </lightning-spinner>
+        </div>
+    </template>
+
+    <lightning-card icon-name="standard:invocable_action" title="Renovación automática OSPECON">
+
+        <div style="margin-left:4%; margin:0px auto; width: 300px;">
+            <div>
+                <lightning-input label="" name="file uploader" onchange={handleFilesChange} type="file" multiple
+                    accept=".csv">
+                </lightning-input>
+            </div><br />
+            <div class="slds-text-body_small slds-text-color_error" style="font-size: 17px;">{fileName}
+
+            </div><br />
+            <template if:true={showButton}>
+                <div class="slds-align_absolute-center">
+                    <lightning-button class="slds-m-top--medium" label="Cargar CSV" onclick={handleSave} variant="brand"
+                        disabled={isTrue}></lightning-button>
+                    <button class="slds-button slds-button_neutral slds-m-top--medium" aria-label="Cancel and close"
+                        onclick={back}>Volver</button>
+                </div>
+            </template>
+        </div><br />
+
+        <template if:true={errorCSV}>
+            <div class="slds-box slds-theme_default">
+                <span> No se encontraron cuentas con la información proporcionada en el CSV o la cantidad de registros
+                    es
+                    mayor a 1.000</span>
+            </div>
+        </template>
+
+    </lightning-card>
+    <template if:true={showAccountTable}>
+        <lightning-card title={updatedListSize} icon-name="standard:account">
+            <div style="height: 300px">
+                <template if:true={data}>
+                    <lightning-datatable data={data} columns={columns} key-field="id" hide-checkbox-column="true"
+                        enable-infinite-loading="true">
+                    </lightning-datatable>
+                </template>
+            </div>
+        </lightning-card>
+    </template>
+
+</template>

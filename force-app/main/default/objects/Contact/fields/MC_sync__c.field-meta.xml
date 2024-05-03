@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MC_sync__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR(Account.RecordType.DeveloperName = &apos;Baby&apos;,
+Account.RecordType.DeveloperName = &apos;Paciente_Regular&apos;,
+Account.RecordType.DeveloperName = &apos;Paciente_Best_Care&apos; )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>MC sync</label>
+    <type>Checkbox</type>
+</CustomField>

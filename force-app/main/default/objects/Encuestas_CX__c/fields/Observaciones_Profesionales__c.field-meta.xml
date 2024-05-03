@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Observaciones_Profesionales__c</fullName>
+    <description>Breve detalle del servicio brindado en vista a la selección de puntos por el paciente</description>
+    <externalId>false</externalId>
+    <inlineHelpText>En función del valor seleccionado, por favor, brinde un detalle de la atención recibida por nuestros profesionales</inlineHelpText>
+    <label>Observaciones Profesionales</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

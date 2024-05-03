@@ -1,0 +1,31 @@
+.THIS {
+}
+
+.THIS .montserratBlack{
+    font-size: 60px;
+    color:  #293896;
+    font-family:MontserratBlack;
+    line-height: 70px;
+}
+
+.THIS .pacificoRegular{
+    font-family: PacificoRegular;
+    color: #C09AC2;
+    font-size: 85px;
+    line-height: 70px;
+}
+
+@media (max-width: 600px) {
+    .THIS {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .THIS .montserratBlack{
+        font-size: 8vw;
+        line-height: 4.5vh;
+    }
+    .THIS .pacificoRegular {
+        font-size: 11vw;
+        line-height: 4vh;
+    }
+}

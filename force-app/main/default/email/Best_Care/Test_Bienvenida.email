@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      ReadMsgBody{ width: 100%;}
+      .ExternalClass {width: 100%;}
+      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+      body {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;margin:0 !important;}
+      p { margin: 1em 0;}
+      table td { border-collapse: collapse;}
+      img {outline:0;}
+      a img {border:none;}
+      @-ms-viewport{ width: device-width;}
+    </style>
+    <style type="text/css">
+      @media only screen and (max-width: 480px) {
+        .container {width: 100% !important;}
+        .footer { width:auto !important; margin-left:0; }
+        .mobile-hidden { display:none !important; }
+        .logo { display:block !important; padding:0 !important; }
+        img { max-width:100% !important; height:auto !important; max-height:auto !important;}
+        .header img{max-width:100% !important;height:auto !important; max-height:auto !important;}
+        .photo img { width:100% !important; max-width:100% !important; height:auto !important;}
+        .drop { display:block !important; width: 100% !important; float:left; clear:both;}
+        .footerlogo { display:block !important; width: 100% !important; padding-top:15px; float:left; clear:both;}
+        .nav4, .nav5, .nav6 { display: none !important; }
+        .tableBlock {width:100% !important;}
+        .responsive-td {width:100% !important; display:block !important; padding:0 !important; }
+        .fluid, .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        /* MOBILE GLOBAL STYLES - DO NOT CHANGE */
+        body { padding: 0px !important; font-size: 16px !important; line-height: 150% !important;}
+        h1 { font-size: 22px !important; line-height: normal !important;}
+        h2 { font-size: 20px !important; line-height: normal !important;}
+        h3 { font-size: 18px !important; line-height: normal !important;}
+        .buttonstyles {
+          font-family:arial,helvetica,sans-serif !important;
+          font-size: 16px !important;
+          color: #FFFFFF !important;
+          padding: 10px !important;
+        }
+        /* END OF MOBILE GLOBAL STYLES - DO NOT CHANGE */
+      }
+      @media only screen and (max-width: 640px) {
+        .container { width:100% !important; }
+        .mobile-hidden { display:none !important; }
+        .logo { display:block !important; padding:0 !important; }
+        .photo img { width:100% !important; height:auto !important;}
+        .nav5, .nav6 { display: none !important;}
+        .fluid, .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+      }
+    </style>
+    <!--[if mso]>
+      <style type="text/css">
+          /* Begin Outlook Font Fix */
+          body, table, td {
+              font-family: Arial, Helvetica, sans-serif ;
+              font-size:16px;
+              color:#000000;
+              line-height:1;
+          }
+          /* End Outlook Font Fix */
+      </style>
+    <![endif]-->
+  </head>
+  <body bgcolor="#ffffff" text="#000000" style="background-color: #ffffff; color: #000000; padding: 0px; -webkit-text-size-adjust:none; font-size: 16px; font-family:arial,helvetica,sans-serif;">
+    <div style="font-size:0; line-height:0;"><custom name="opencounter" type="tracking"><custom name="usermatch" type="tracking" /></div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+      <tr>
+        <td align="center" valign="top">
+          <custom type="header"/>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <table cellspacing="0" cellpadding="0" border="0" width="600" class="container" align="center">
+            <tr>
+              <td>
+                <table class="tb_properties border_style" style="background-color:#FFFFFF;" cellspacing="0" cellpadding="0" bgcolor="#ffffff" width="100%">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <!-- added padding here -->
+                          <td class="content_padding" style="">
+                            <!-- end of comment -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr> <!-- top slot -->
+                                <td align="center" class="header" valign="top">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                          <td align="left" valign="top">
+                                            <table cellspacing="0" cellpadding="0" style="width:100%">
+                                              <tbody>
+                                              <tr>
+                                                <td class="responsive-td" valign="top" style="width: 100%;">
+                                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" class="stylingblock-content-wrapper" style="min-width: 100%; "><tr><td class="stylingblock-content-margin-cell" style="padding: 15px 15px 0px; "><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; border-top: 0px; border-right: 0px; border-bottom: 1px solid #4E2683; border-left: 0px; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 0px 16px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://www.bestcare.com.ar/" title="Website de Best Care" alias="" conversion="false" data-linkto="https://"><img src="http://image.nutricia-juntoavos.com.ar/lib/fe2e1570756406797c1c79/m/1/b7a2f579-d15a-4f55-814d-74e43f70af21.jpg" alt="Website Best Care" width="570" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%;"></a></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" class="stylingblock-content-wrapper" style="min-width: 100%; "><tr><td class="stylingblock-content-margin-cell" style="padding: 15px; "><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><div style="text-align: center; line-height: 150%;">
+ <span style="line-height:100%"><span style="font-family:tahoma,geneva,sans-serif"><span style="color: rgb(112, 111, 111); font-size: 14px;">Estimado %%Account:FirstName%%,</span></span></span><br>
+ <span style="font-size:18px;"><span style="color:#462a75;"><span style="line-height:150%"><span style="font-family:tahoma,geneva,sans-serif"><b>Todo el equipo de Best Care le da la bienvenida.</b></span></span></span></span><span style="line-height:100%"><span style="font-family:tahoma,geneva,sans-serif"><span style="color:#706f6f"><span style="font-size:14px"><span style="font-size:19px;">&nbsp;</span><br>
+ Somos una empresa especializada en brindar soporte nutricional en domicilio y comprometida en ofrecer el mejor servicio a todos nuestros pacientes.</span></span><br>
+ <br>
+ <span style="color:#706f6f"><span style="font-size:14px">Te confirmamos que fuiste dado de alta en nuestro sistema con los siguientes <span style="font-family:Tahoma,Geneva,sans-serif;">datos</span>:</span></span></span></span></div></td></tr></table></td></tr></table>
+                                                </td>
+                                              </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr> <!-- main slot -->
+                                <td align="center" class="header" valign="top">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                    <tr>
+                                      <td align="left" valign="top">
+                                        <table cellspacing="0" cellpadding="0" style="width:100%">
+                                          <tbody>
+                                          <tr>
+                                            <td class="responsive-td" valign="top" style="width: 100%;">
+                                              <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 11px 0px 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td valign="top" style="width: 30%; padding-right: 2px;"></td><td valign="top" style="width: 70%; padding-left: 2px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div style="line-height: 100%; text-align: justify;">
+ <img alt="" data-assetid="178112" height="22" src="http://image.nutricia-juntoavos.com.ar/lib/fe2e1570756406797c1c79/m/1/69812af3-e1c7-4415-bc03-6b040c5efdf5.png" style="padding: 0px; text-align: center; border: 0px solid transparent; height: 22px; width: 22px;" width="22">&nbsp;<span style="font-size:13px;"><span style="font-family:Tahoma,Geneva,sans-serif;">Nombre y Apellido:&nbsp;<b>%%Account:Name%%</b></span></span></div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div style="text-align: justify;">
+ <img alt="" data-assetid="178107" height="22" src="http://image.nutricia-juntoavos.com.ar/lib/fe2e1570756406797c1c79/m/1/0a381a1a-578b-4053-8e0c-51db1a1f75c8.png" style="padding: 0px; text-align: center; border: 0px solid transparent; height: 22px; width: 22px;" width="22">&nbsp;<span style="font-size:13px;"><span style="font-family:Tahoma,Geneva,sans-serif;">DNI:&nbsp;<b>%%Account:DNI__c%%</b></span></span></div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div>
+ <img alt="" data-assetid="178109" height="22" src="http://image.nutricia-juntoavos.com.ar/lib/fe2e1570756406797c1c79/m/1/9075326c-0e7b-4419-a5c3-276c86d3ea95.png" style="padding: 0px; text-align: center; border: 0px solid transparent; height: 22px; width: 22px;" width="22">&nbsp;<span style="font-size:13px;"><span style="font-family:Tahoma,Geneva,sans-serif;">Domicilio de env&iacute;o: </span></span>​​​<span style="font-size:13px;"><b><span style="font-family:Tahoma,Geneva,sans-serif;">&nbsp;%%Account:Direccion__c%%,&nbsp;%%Account:Localidad__c%%,&nbsp;%%Account:Codigo_postal__c%%, %%Account:Provincia__c%%</span></b></span></div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div style="text-align: justify;">
+ <span style="font-family:Tahoma,Geneva,sans-serif;"><img alt="" data-assetid="178108" height="22" src="http://image.nutricia-juntoavos.com.ar/lib/fe2e1570756406797c1c79/m/1/22c64347-522c-4cfb-a823-ca6da21be3ce.png" style="padding: 0px; text-align: center; border: 0px solid transparent; height: 22px; width: 22px;" width="22">&nbsp;<span style="font-size:13px;">Mail:&nbsp;</span><b><span style="font-size:13px;">%%Account:PersonContact:Email%%</span></b></span></div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div style="text-align: justify;">
+ <img alt="" data-assetid="178110" height="22" src="http://image.nutricia-juntoavos.com.ar/lib/fe2e1570756406797c1c79/m/1/80d8a747-1015-42aa-b182-c57fbb4c7061.png" style="padding: 0px; text-align: center; border: 0px solid transparent; height: 22px; width: 22px;" width="22">&nbsp;<span style="font-size:13px;"><span style="font-family:Tahoma,Geneva,sans-serif;">Tel&eacute;fono:&nbsp;<b>%%Account:Phone%%</b></span></span></div></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; border: 1px solid transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 10px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td valign="top" style="width: 100%; padding-bottom: 3px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; border-top: 1px solid #4E2683; border-right: 0px; border-bottom: 0px; border-left: 0px; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><div style="text-align: center;">
+ <br>
+ <span style="line-height:100%"><span style="color:#706f6f"><span style="font-size:14px"><span style="font-family:tahoma, geneva, sans-serif">Dado que a partir de este&nbsp;</span></span></span></span><span style="font-size:14px;"><span style="color:#462a75;"><span style="line-height:150%"><span style="font-family:tahoma,geneva,sans-serif"><b>momento todas las comunicaciones se har&aacute;n al tel&eacute;fono o mail registrado en la cuenta,&nbsp;</b></span></span></span></span><span style="line-height:100%"><span style="color:#706f6f"><span style="font-size:14px"><span style="font-family:tahoma, geneva, sans-serif">te pedimos que nos notifiques si alguno de los datos fue err&oacute;neamente cargado o si alguno de ellos cambia a lo largo del tiempo. Dicho aviso lo debes hacer cont&aacute;ctandote con el </span></span></span><span style="font-size:14px"><span style="font-family:tahoma, geneva, sans-serif"><u><a alias="WhatsApp®" conversion="false" data-linkto="https://" href="https://wa.me/+5491131673258" style="color:#808080; text-decoration:none" title="WhatsApp®"><span style="color:#3498db">WhatsApp</span></a></u></span></span><span style="font-size:11px;"><span style="font-family:tahoma, geneva, sans-serif"><u><a alias="WhatsApp®" conversion="false" data-linkto="https://" href="https://wa.me/+5491131673258" style="color:#808080; text-decoration:none" title="WhatsApp®"><span style="color:#3498db"><sup>&reg;</sup></span></a></u></span></span><span style="color:#706f6f"><span style="font-size:11px"><sup><font face="Tahoma, Geneva, sans-serif">&nbsp;</font></sup></span><span style="font-size:14px"><font face="Tahoma, Geneva, sans-serif">de Best Care</font></span><b><span style="font-size:11px"><font face="Tahoma, Geneva, sans-serif">.</font></span></b></span><br>
+ <br>
+ <span style="font-family:tahoma,geneva,sans-serif"><span style="color:#706f6f"><span style="font-size:14px">En breve, estar&aacute;s recibiendo una comunicaci&oacute;n con informaci&oacute;n sobre la autorizaci&oacute;n que recibimos de tu obra social o prepaga.<br>
+ Adem&aacute;s, te compartimos el canal disponible para comunicarte con nosotros:</span></span></span></span></div></td></tr></table></td></tr></table></td></tr><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td valign="top" style="width: 33%; padding-top: 3px; padding-bottom: 3px; padding-right: 4px;"></td><td valign="top" style="width: 33%; padding: 3px 2px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" class="stylingblock-content-wrapper" style="min-width: 100%; "><tr><td class="stylingblock-content-margin-cell" style="padding: 26px 0px 0px; "><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://wa.me/+5491131673258" title="" alias="" conversion="false" data-linkto="https://"><img data-assetid="178448" src="http://image.nutricia-juntoavos.com.ar/lib/fe2e1570756406797c1c79/m/1/eee81efb-eb2a-49f7-80a0-acd00073fec7.png" alt="" height="100" width="100" style="display: block; padding: 0px; text-align: center; height: 100px; width: 100px; border: 0px;"></a></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div style="text-align: center;">
+ <br>
+ <span style="line-height:100%"><span style="font-family:tahoma,geneva,sans-serif"><span style="color:#706f6f"><span style="font-size:14px">Lunes a Viernes de 9:00 a 18 hs</span></span></span></span></div></td></tr></table></td><td valign="top" style="width: 33%; padding-top: 3px; padding-bottom: 3px; padding-left: 4px;"></td></tr></table></td></tr><tr><td><table cellspacing="0" cellpadding="0" style="width: 100%;"><tr><td valign="top" style="width: 100%; padding-top: 3px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><br>
+<span style="line-height:100%"><span style="font-family:tahoma,geneva,sans-serif"><span style="color:#706f6f"><span style="font-size:14px">Nos encontramos a disposici&oacute;n.<br>
+Saludos,<br>
+Equipo de </span></span></span><span style="color:#706f6f"><b><span style="font-size:14px"><font face="Tahoma, Geneva, sans-serif">Best Care</font></span></b></span></span><br>
+&nbsp;<div>
+ <span style="font-size:12px;"><span style="color:#706f6f"><span style="font-family:tahoma, geneva, sans-serif">0800 122 BEST (2378) - Lunes a viernes de 9:00 a 18:00 hs.</span></span></span><br>
+ &nbsp;</div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://www.bestcare.com.ar/" title="" alias="" conversion="false" data-linkto="https://"><img data-assetid="171702" src="http://image.nutricia-juntoavos.com.ar/lib/fe2e1570756406797c1c79/m/1/1ee8f49d-89e3-462e-944e-ab7585b599d4.png" alt="" height="41" width="140" style="display: block; padding: 0px; text-align: center; height: 41px; width: 140px; border: 0px;"></a></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+                                            </td>
+                                          </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <custom type="footer" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

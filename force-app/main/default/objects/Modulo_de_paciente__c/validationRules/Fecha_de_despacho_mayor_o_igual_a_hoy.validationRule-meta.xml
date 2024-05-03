@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_de_despacho_mayor_o_igual_a_hoy</fullName>
+    <active>true</active>
+    <errorConditionFormula>Fecha_de_despacho__c &lt; TODAY()</errorConditionFormula>
+    <errorDisplayField>Fecha_de_despacho__c</errorDisplayField>
+    <errorMessage>La fecha de despacho tiene que ser mayor o igual a hoy.</errorMessage>
+</ValidationRule>

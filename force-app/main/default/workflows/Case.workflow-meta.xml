@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alerta_de_correo_caso_BEC</fullName>
+        <ccEmails>martin.janin@danone.com</ccEmails>
+        <description>Alerta de correo caso BEC</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Best_Care/Nuevo_caso_asignado_bec</template>
+    </alerts>
+    <alerts>
+        <fullName>Alerta_de_correo_electronico_Caso_N</fullName>
+        <ccEmails>Ezequiel.castagna@danone.com, Alexis.avalos@danone.com</ccEmails>
+        <description>Alerta de correo electronico Caso BEST CARE</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Aviso_de_tarea_nueva</template>
+    </alerts>
+    <alerts>
+        <fullName>Alerta_de_rechazo_de_visita</fullName>
+        <description>Alerta de rechazo de visita</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Profesional_rechazo_visita</template>
+    </alerts>
+    <alerts>
+        <fullName>Alerta_de_visita_aceptada</fullName>
+        <description>Alerta de visita aceptada</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Profesional_acepto_visita</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_de_caso_Gestion_a_PSP</fullName>
+        <description>Aviso de caso Gestion a PSP</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>carolina.beltran@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>julieta.cremona@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mariana.higa-kambara@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>vanina.liendro@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>veronica.ponce@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_caso_asignado</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_nuevo_caso_asignado_a_Planta</fullName>
+        <description>Aviso nuevo caso asignado a Planta</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>hector.abolsky@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Env_o_EYN_Noviembre_2020_1604668893751</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_nuevo_caso_asignado_a_Planta_Kasdorf</fullName>
+        <description>Aviso nuevo caso asignado a Planta Kasdorf</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>gina.vilchez-diaz@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>lhurtado@labsxd.com.uatcrm</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_caso_asignado_a_planta</template>
+    </alerts>
+    <alerts>
+        <fullName>Aviso_nuevo_caso_asignado_a_Planta_Milkaut</fullName>
+        <description>Aviso nuevo caso asignado a Planta Milkaut</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>gina.vilchez-diaz@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>lhurtado@labsxd.com.uatcrm</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_caso_asignado_a_planta</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Nuevo_llamado_sensible</fullName>
+        <description>Case Nuevo llamado sensible</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>gina.vilchez-diaz@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>lhurtado@labsxd.com.uatcrm</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>maria-del-pilar.poveda@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Case_Nuevo_Llamado_Sensible</template>
+    </alerts>
+    <alerts>
+        <fullName>Caso_de_comerciales</fullName>
+        <ccEmails>mariana.puglia@nutricia.com</ccEmails>
+        <ccEmails>juan-ignacio.cevasco@nutricia.com</ccEmails>
+        <ccEmails>ariel.bascarutti@danone.com</ccEmails>
+        <description>Caso de comerciales</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_caso_general</template>
+    </alerts>
+    <alerts>
+        <fullName>Caso_prioridad_alta</fullName>
+        <description>Caso prioridad alta</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Caso_prioridad_alta</template>
+    </alerts>
+    <alerts>
+        <fullName>Encuesta_de_capacitacion</fullName>
+        <description>Encuesta de capacitación</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Encuesta_Capacitacion</template>
+    </alerts>
+    <alerts>
+        <fullName>Envio_de_encuesta_Proximitas</fullName>
+        <description>Envío de encuesta Proximitas</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Encuesta_NPS</template>
+    </alerts>
+    <alerts>
+        <fullName>Envio_de_kit_de_alimento</fullName>
+        <ccEmails>Valeria.FAISAL@danone.com</ccEmails>
+        <ccEmails>Alejandra.PALAZZO@danone.com</ccEmails>
+        <ccEmails>Franco.PERETTI@danone.com</ccEmails>
+        <description>Envío de kit de alimento</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>maria-catalina.alonso@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Caso_de_envio_de_producto_kit_de_alimento</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_a_asuntos_regulatorios_por_reclamo_de_calidad</fullName>
+        <description>Mail a asuntos regulatorios por reclamo de calidad</description>
+        <protected>false</protected>
+        <recipients>
+            <type>partnerUser</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_caso_reclamo_de_calidad</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_nuevo_envio_de_producto_kit_de_inicio_alergia</fullName>
+        <ccEmails>javier.leal@xappia.com</ccEmails>
+        <description>Mail nuevo envio de  producto kit de inicio alergia</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_caso_de_envio_de_kit_de_inicio_alergia</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_por_envio_de_producto_s_c_excepcion</fullName>
+        <ccEmails>Jesica.ALBERTI@danone.com</ccEmails>
+        <ccEmails>Valeria.FAISAL@danone.com</ccEmails>
+        <ccEmails>Alejandra.PALAZZO@danone.com</ccEmails>
+        <description>Mail por envío de producto s/c excepecion</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Envio_de_producto_por_excepcion_para_paciente_alergia</template>
+    </alerts>
+    <alerts>
+        <fullName>NPS_TEST</fullName>
+        <description>NPS TEST</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Encuesta_NPS</template>
+    </alerts>
+    <alerts>
+        <fullName>Nueva_visita_capacitacion</fullName>
+        <description>Nueva visita/capacitación</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Correo_electronico_del_profesional__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nueva_visita_capacitacion</template>
+    </alerts>
+    <alerts>
+        <fullName>Nuevo_Caso</fullName>
+        <description>Nuevo Caso</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_Caso</template>
+    </alerts>
+    <alerts>
+        <fullName>Nuevo_caso_de_acceso</fullName>
+        <description>Nuevo caso de acceso</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>pablo.bocelo@danone.com</recipient>
+            <type>partnerUser</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Mail_a_acceso</template>
+    </alerts>
+    <alerts>
+        <fullName>Nuevo_reclamo_de_servicio</fullName>
+        <ccEmails>Fabian.GONZALEZ-AYBAR@danone.com</ccEmails>
+        <ccEmails>Maria-Catalina.ALONSO@danone.com</ccEmails>
+        <description>Nuevo reclamo de servicio</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_reclamo_de_servicio</template>
+    </alerts>
+    <alerts>
+        <fullName>Recordatorio_de_visita_capacitacion</fullName>
+        <description>Recordatorio de visita/capacitación</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Correo_electronico_del_profesional__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Recordatorio_de_visita_capacitacion</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Caso_cerrado</fullName>
+        <field>Status</field>
+        <literalValue>Cerrado</literalValue>
+        <name>Caso cerrado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Esperando_respuesta_de_visita</fullName>
+        <field>Acepto_visita__c</field>
+        <literalValue>Esperando respuesta</literalValue>
+        <name>Esperando respuesta de visita</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Hora_de_check_in</fullName>
+        <field>Hora_de_check_in__c</field>
+        <formula>NOW()</formula>
+        <name>Hora de check in</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Hora_de_check_out</fullName>
+        <field>Hora_de_check_out__c</field>
+        <formula>NOW()</formula>
+        <name>Hora de check out</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Mail_del_profesional_en_caso</fullName>
+        <field>Correo_electronico_del_profesional__c</field>
+        <formula>Profesional_Best_Care__r.Email</formula>
+        <name>Mail del profesional en caso</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Marcar_checkbox_de_caso_best_care</fullName>
+        <field>Caso_de_best_care__c</field>
+        <literalValue>1</literalValue>
+        <name>Marcar checkbox de caso best care</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Propiedad_del_caso_a_logistica</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Logistica</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Propiedad del caso a logística</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SLA_amarillo</fullName>
+        <field>SLA_numero__c</field>
+        <formula>2</formula>
+        <name>SLA amarillo</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SLA_rojo</fullName>
+        <field>SLA_numero__c</field>
+        <formula>3</formula>
+        <name>SLA rojo</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SLA_verde</fullName>
+        <field>SLA_numero__c</field>
+        <formula>1</formula>
+        <name>SLA verde</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Tipo_de_caso_Otro</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>General</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Tipo de caso General</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Tipo_de_caso_red_social</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Redes_sociales</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Tipo de caso red social</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Alerta por Email Caso N</fullName>
+        <actions>
+            <name>Alerta_de_correo_electronico_Caso_N</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Reclamo</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Aviso de caso de prioridad alta</fullName>
+        <actions>
+            <name>Caso_prioridad_alta</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( RecordType.DeveloperName == &apos;Reclamo&apos; ,
+ISPICKVAL(Subtipo__c, &apos;Calidad&apos;),
+ISCHANGED(Priority),
+ISPICKVAL(Priority, &apos;Alta&apos;),
+NOT(ISPICKVAL(Status, &apos;Cerrado&apos;))
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Cambio de producto rechazado</fullName>
+        <actions>
+            <name>Notificar_al_usuario_que_su_cambio_de_producto_fue_rechazado</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Autoriza_el_cambio_del_producto__c</field>
+            <operation>equals</operation>
+            <value>No</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Capacitación realizada</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4</booleanFilter>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Profesionales de la salud</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Check_out__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Check_out_manual__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Capacitación</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Encuesta_de_capacitacion</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Llamar_al_paciente_por_capacitaci_n</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>2</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Caso de Acceso</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Acceso</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Caso de Calidad</fullName>
+        <actions>
+            <name>Nuevo_caso_de_Calidad</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Calidad</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Caso de Comerciales</fullName>
+        <actions>
+            <name>Caso_de_comerciales</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Nuevo_caso_de_Comerciales</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Comerciales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Caso de Envío de producto</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Envío de producto</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Caso de Gestión</fullName>
+        <actions>
+            <name>Aviso_de_caso_Gestion_a_PSP</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Gestión</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subtipo__c</field>
+            <operation>equals</operation>
+            <value>Retiro de Activos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PSP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>Cerrado</value>
+        </criteriaItems>
+        <description>Caso de Gestión. Notificar a cola de PSP.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Caso de Insumos</fullName>
+        <actions>
+            <name>Nuevo_caso_de_Insumos</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>Nuevo_caso_de_Insumos_2</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Insumos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Caso de Nutricionales</fullName>
+        <actions>
+            <name>Nuevo_caso_de_Nutricionales</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Nutricionales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Casos de Best Care</fullName>
+        <actions>
+            <name>Marcar_checkbox_de_caso_best_care</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>General,Llamado de seguimiento,Nuevo paciente,Acceso,Psicológico,Profesionales de la salud,Otros,Calidad,Servicio,Insumos,Comerciales,Nutricionales,Redes sociales,Ventas,Envío de producto</value>
+        </criteriaItems>
+        <description>Al crear o modificar un caso cuyo tipo de registro pertenece a Best Care, se marca el checkbox Caso Best Care. 
+
+Esto para poder dar visibilidad a los casos con estos tipos de registro, y luego poder desactivarlos.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Enviar mail por envio de producto s%2Fc</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Envío de producto</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Envio de producto por excepcion para paciente alergia</fullName>
+        <actions>
+            <name>Mail_por_envio_de_producto_s_c_excepcion</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Envío de producto</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Excepciones</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Alergia</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Envío de encuesta NPS TEST</fullName>
+        <actions>
+            <name>NPS_TEST</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Cerrado</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Envío de encuesta por caso cerrado</fullName>
+        <actions>
+            <name>Envio_de_encuesta_Proximitas</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Cerrado</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Reclamo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Consulta</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Gestión de cambio de producto</fullName>
+        <actions>
+            <name>Gestionar_cambio_de_producto</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Autoriza_el_cambio_del_producto__c</field>
+            <operation>equals</operation>
+            <value>Sí</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Hora de check in de visita</fullName>
+        <actions>
+            <name>Hora_de_check_in</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Check_in__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Hora de check out de visita</fullName>
+        <actions>
+            <name>Hora_de_check_out</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Check_out__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Mail al crear caso de envio de producto kit de alimento</fullName>
+        <actions>
+            <name>Envio_de_kit_de_alimento</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Envío de producto s/c</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Reason</field>
+            <operation>equals</operation>
+            <value>Kit de alimento</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Metabólicos</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Mail al profesional</fullName>
+        <actions>
+            <name>Nueva_visita_capacitacion</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Esperando_respuesta_de_visita</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND( RecordType.Name = &apos;Profesionales de la salud&apos;, NOT(ISBLANK( Profesional_Best_Care__c )) )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Mail de nuevo caso</fullName>
+        <actions>
+            <name>Nuevo_Caso</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Subtipo__c</field>
+            <operation>equals</operation>
+            <value>Calidad,Servicios Profesionales,Comercial</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Consumidor Baby</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Mail del profesional en caso</fullName>
+        <actions>
+            <name>Mail_del_profesional_en_caso</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Profesionales de la salud</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Nuevo Caso BEC</fullName>
+        <actions>
+            <name>Alerta_de_correo_caso_BEC</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Retencion</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Nuevo caso de envio de producto por modulo</fullName>
+        <actions>
+            <name>Nuevo_envio_de_producto</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(
+    RecordType.Name = &apos;Envío de producto&apos;,
+    NOT(ISBLANK( Modulo_de_paciente__c ))
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Producto entregado cierra caso</fullName>
+        <actions>
+            <name>Caso_cerrado</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Entregado__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Profesional acepto visita%2Fcapacitacion</fullName>
+        <actions>
+            <name>Alerta_de_visita_aceptada</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Profesionales de la salud</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Acepto_visita__c</field>
+            <operation>equals</operation>
+            <value>Sí</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Recordatorio_de_visita_capacitacion</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Case.Fecha__c</offsetFromField>
+            <timeLength>-1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Profesional rechazó visita</fullName>
+        <actions>
+            <name>Alerta_de_rechazo_de_visita</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Profesionales de la salud</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Acepto_visita__c</field>
+            <operation>equals</operation>
+            <value>No</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo Calidad Normal Cerrado</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Consumidor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Reclamo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subtipo__c</field>
+            <operation>equals</operation>
+            <value>Calidad</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Cerrado</value>
+        </criteriaItems>
+        <description>Se activa cuando se cierra un &quot;Reclamo&quot; subtipo &quot;Calidad&quot; de criticidad &quot;normal&quot; de un tipo de registro &quot;Consumidor&quot;.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reclamo de servicio</fullName>
+        <actions>
+            <name>Nuevo_reclamo_de_servicio</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Servicio</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Reclamo</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Tipo de caso red social</fullName>
+        <actions>
+            <name>Tipo_de_caso_red_social</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Facebook</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Autorizar_cambio_de_producto</fullName>
+        <assignedToType>user</assignedToType>
+        <description>Favor autorizar el cambio del producto del caso relacionado a esta tarea
+
+Gracias!</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Autorizar cambio de producto</subject>
+    </tasks>
+    <tasks>
+        <fullName>Gestionar_cambio_de_producto</fullName>
+        <assignedTo>julieta.cremona@danone.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Asuntos regulatorios ha autorizado el cambio de un producto, favor gestionar el envío.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Gestionar cambio de producto</subject>
+    </tasks>
+    <tasks>
+        <fullName>Llamar_al_paciente_por_capacitaci_n</fullName>
+        <assignedToType>accountOwner</assignedToType>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Llamar al paciente por capacitación</subject>
+    </tasks>
+    <tasks>
+        <fullName>Notificar_al_usuario_que_su_cambio_de_producto_fue_rechazado</fullName>
+        <assignedTo>julieta.cremona@danone.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Hola! El pedido de cambio de producto fue rechazado por Asuntos regulatorios, favor notificar al consumidor.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Notificar al usuario que su cambio de producto fue rechazado</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nuevo_caso_de_Calidad</fullName>
+        <assignedToType>partnerUser</assignedToType>
+        <description>Se ha agregado un nuevo caso de calidad. Favor de tomar las acciones necesarias para la resolución del caso.</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Nuevo caso de Calidad</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nuevo_caso_de_Comerciales</fullName>
+        <assignedTo>Gerentes_Comerciales</assignedTo>
+        <assignedToType>role</assignedToType>
+        <description>Se ha agregado un nuevo caso de comerciales. Favor de tomar las acciones necesarias para la resolución del caso.</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Nuevo caso de Comerciales</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nuevo_caso_de_Insumos</fullName>
+        <assignedTo>Logistica</assignedTo>
+        <assignedToType>role</assignedToType>
+        <description>Se ha agregado un nuevo caso de insumos. Favor de tomar las acciones necesarias para la resolución del caso.</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Nuevo caso de Insumos</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nuevo_caso_de_Insumos_2</fullName>
+        <assignedTo>diego-gabriel.garcia@danone.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Se ha agregado un nuevo caso de insumos. Favor de tomar las acciones necesarias para la resolución del caso.</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Nuevo caso de Insumos</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nuevo_caso_de_Nutricionales</fullName>
+        <assignedToType>partnerUser</assignedToType>
+        <description>Se ha agregado un nuevo caso de nutricionales. Favor de tomar las acciones necesarias para la resolución del caso.</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Nuevo caso de Nutricionales</subject>
+    </tasks>
+    <tasks>
+        <fullName>Nuevo_envio_de_producto</fullName>
+        <assignedTo>diego-gabriel.garcia@danone.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Se ha creado un nuevo caso de envío de producto, favor cargarlo en Oracle.</description>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Nuevo envío de producto</subject>
+    </tasks>
+</Workflow>

@@ -1,0 +1,98 @@
+.THIS {
+}
+
+.THIS .header-nsj-small-desktop{
+    display: none;
+}
+
+.THIS .div-patologias{
+    display: none;
+}
+
+.THIS .component-header-nsj{
+    height: 56px;
+    background-color: #ECF1F4 !important;
+}
+
+.THIS .table-header-nsj{
+    height: 27px; 
+    position: relative; 
+    left: 187px;
+}
+
+.THIS .icon-header-nsj{
+    width: 77px;
+    position: relative;
+    left: 150px;
+}
+
+.THIS .icon-header-nsj:hover{
+    cursor: pointer;
+}
+
+.THIS .td-header-nsj{
+    line-height: 25px;
+    border-right:1px solid #BBBBBB;
+    text-align: center;
+}
+
+.THIS .text-td-header-nsj {
+    font-family: BariolRegular;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.32px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.THIS .text-td-header-nsj:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 1366px) {
+    .THIS .icon-header-nsj{
+        left: 32px;
+    }
+
+    .THIS .table-header-nsj{
+        left: 43px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .THIS .text-td-header-nsj {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .THIS .header-nsj-large-desktop{
+        display: none;
+    }
+
+    .THIS .header-nsj-small-desktop{
+        display: initial;
+    }
+}
+
+@media (max-width: 412px) {    
+    .THIS .row-icon-header-nsj {
+        width: 109px;
+    }
+
+    .THIS .table-header-nsj{
+        left: 70px;
+    }
+
+    .THIS .text-td-header-nsj {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 360px) {
+    .THIS .icon-header-nsj{
+        left: 16px;
+    }
+}

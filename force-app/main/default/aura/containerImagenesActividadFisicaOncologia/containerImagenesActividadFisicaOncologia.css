@@ -1,0 +1,29 @@
+.THIS {
+}
+
+.THIS .textoImagenesAFOncologia{
+    font-family:MontserratRegular;
+    font-size: 16px;
+    color:#606060;
+    line-height: 24px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+@media (max-width: 600px) {
+    .THIS {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .THIS .imagenImagenesAFOncologia{
+        width: 35%;
+    }
+    .THIS .containerImagenesAFOncologia{
+        padding-top: 8%;
+    }    
+    .THIS .textoImagenesAFOncologia{
+        font-family:MontserratRegular;
+        font-size: 14px;
+        line-height: 22px;
+    }    
+}

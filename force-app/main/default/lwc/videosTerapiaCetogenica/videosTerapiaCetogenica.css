@@ -1,0 +1,17 @@
+.container-titulo-video{
+    background-color: #58368C;
+}
+
+.titulo-video{
+    font-family: MontserratSemiBold;
+    font-size: 21px;
+    color: white;
+    padding: 1%;
+}
+
+.titulo-video-recomendados{
+    font-family: MontserratSemiBold;
+    font-size: 18px;
+    color: #58368C;
+    padding: 2%;
+}

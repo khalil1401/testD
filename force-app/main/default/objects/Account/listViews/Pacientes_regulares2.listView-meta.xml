@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pacientes_regulares2</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ID_de_paciente__c</columns>
+    <columns>Area_terapeutica__c</columns>
+    <columns>Estado_de_paciente__c</columns>
+    <columns>Dias_desde_el_ultimo_contacto__c</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PersonAccount.Paciente_Regular</value>
+    </filters>
+    <label>Pacientes regulares</label>
+    <sharedTo>
+        <group>Service</group>
+        <role>Operador_PSP</role>
+        <role>Supervisor_PSP</role>
+    </sharedTo>
+</ListView>

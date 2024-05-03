@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solo_el_propietario_de_la_cuenta</fullName>
+    <active>true</active>
+    <description>Solo el propietario de la cuenta puede cargar interacciones.</description>
+    <errorConditionFormula>AND(ISNEW(),
+$User.Id &lt;&gt;Profesional_de_la_salud__r.Owner.Id
+)</errorConditionFormula>
+    <errorDisplayField>Profesional_de_la_salud__c</errorDisplayField>
+    <errorMessage>Solo el propietario de la cuenta puede cargar interacciones.</errorMessage>
+</ValidationRule>

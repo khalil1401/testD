@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pacientes_San_Jose</fullName>
+    <active>true</active>
+    <label>Pacientes San Jose</label>
+    <picklistValues>
+        <picklist>Bomba__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Si</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Condici_n_de_IVA__c</picklist>
+        <values>
+            <fullName>Gravado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No gravado</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estado__c</picklist>
+        <values>
+            <fullName>Activo</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Inactivo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estado_de_modulo__c</picklist>
+        <values>
+            <fullName>Cancelado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ingresado</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Manual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Procesado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rechazado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reservado</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Modulo_lista__c</picklist>
+        <values>
+            <fullName>Alergia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dieta Cetogenica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enteral Advanced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enteral EstÁNdar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infusion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metabolicos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ng Pediatricos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Profesionales</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Motivo_de_no_renovacion__c</picklist>
+        <values>
+            <fullName>Ausente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dirección Errónea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error OC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fallecimiento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Faltante</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Pedido</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rotura</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origen_de_la_Urgencia__c</picklist>
+        <values>
+            <fullName>Aprobado por Obra Social con costo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error comercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error de carga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error logístico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicitado por Obra Social sin costo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicitado por Paciente con costo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicitado por Paciente sin costo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Procesamiento_jiterbit__c</picklist>
+        <values>
+            <fullName>Nuevo</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Procesado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sin procesar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Renovacion__c</picklist>
+        <values>
+            <fullName>Recupero</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renovacion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>alta</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo__c</picklist>
+        <values>
+            <fullName>AUTOCUIDADO%2E</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>CUIDADO BÁSICO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUIDADO COMPLETO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUIDADO PERSONALIZADO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REHABILITACION MOTORA - INTERMEDIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REHABILITACION MOTORA BASICO ENTERAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REHABILITACION MOTORA BASICO ORAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REHABILITACIÓN DEGLUTORIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>REHABILITACIÓN MOTORA PLUS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modulo_lista__c</fullName>
+    <externalId>false</externalId>
+    <label>Modulo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Enteral Advanced</fullName>
+                <default>false</default>
+                <label>Enteral Advanced</label>
+            </value>
+            <value>
+                <fullName>Enteral EstÁNdar</fullName>
+                <default>false</default>
+                <label>Enteral EstÁNdar</label>
+            </value>
+            <value>
+                <fullName>Dieta Cetogenica</fullName>
+                <default>false</default>
+                <label>Dieta Cetogenica</label>
+            </value>
+            <value>
+                <fullName>Alergia</fullName>
+                <default>false</default>
+                <label>Alergia</label>
+            </value>
+            <value>
+                <fullName>Metabolicos</fullName>
+                <default>false</default>
+                <label>Metabolicos</label>
+            </value>
+            <value>
+                <fullName>Ng Pediatricos</fullName>
+                <default>false</default>
+                <label>Ng Pediatricos</label>
+            </value>
+            <value>
+                <fullName>N General</fullName>
+                <default>false</default>
+                <label>N General</label>
+            </value>
+            <value>
+                <fullName>Infusion</fullName>
+                <default>false</default>
+                <label>Infusion</label>
+            </value>
+            <value>
+                <fullName>Profesionales</fullName>
+                <default>false</default>
+                <label>Profesionales</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

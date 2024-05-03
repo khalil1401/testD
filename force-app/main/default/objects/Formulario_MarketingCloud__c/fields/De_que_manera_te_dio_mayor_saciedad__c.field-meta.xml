@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>De_que_manera_te_dio_mayor_saciedad__c</fullName>
+    <externalId>false</externalId>
+    <label>¿De que manera te dio mayor saciedad?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cercano a otra fórmula</fullName>
+                <default>false</default>
+                <label>Cercano a otra fórmula</label>
+            </value>
+            <value>
+                <fullName>Cercano a otro medicamento</fullName>
+                <default>false</default>
+                <label>Cercano a otro medicamento</label>
+            </value>
+            <value>
+                <fullName>Cercano al consumo de otros alimentos</fullName>
+                <default>false</default>
+                <label>Cercano al consumo de otros alimentos</label>
+            </value>
+            <value>
+                <fullName>Combinado en preparaciones</fullName>
+                <default>false</default>
+                <label>Combinado en preparaciones</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

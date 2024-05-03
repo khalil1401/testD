@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Nutricia</letterhead>
+    <name>Nuevo profesional creado</name>
+    <style>freeForm</style>
+    <subject>Nuevo Profesional creado por un APM</subject>
+    <textOnly>Hola,
+
+El APM {!Account.CreatedBy} ha creado un nuevo Profesional desde la aplicación móvil. Para revisarlo, debe entrar en la plataforma y revisar el registro del mismo.
+
+El link del Profesional es la siguiente es el siguiente: {!Account.Link}
+
+Gracias.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

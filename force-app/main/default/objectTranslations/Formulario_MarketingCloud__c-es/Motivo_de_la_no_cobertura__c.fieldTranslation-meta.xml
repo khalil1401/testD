@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Motivo_de_la_no_cobertura__c</name>
+    <picklistValues>
+        <masterLabel>La marca no está dentro de vademecum</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No cubre Soporte Nutricional</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Objeción de los papeles presentados</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Otro</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

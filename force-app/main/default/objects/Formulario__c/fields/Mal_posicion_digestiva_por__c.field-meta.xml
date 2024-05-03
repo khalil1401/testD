@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mal_posicion_digestiva_por__c</fullName>
+    <externalId>false</externalId>
+    <label>Mal posicion digestiva por</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Incorrecta localización en el tubo digestivo</fullName>
+                <default>false</default>
+                <label>Incorrecta localización en el tubo digestivo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

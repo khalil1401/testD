@@ -1,0 +1,28 @@
+<apex:page Controller="FormularioController" id="thePage" >
+    <apex:form >
+        <apex:pageBlock title="Seleccionar tipo de registro Formularios Marketing Cloud" mode="edit">
+
+            <apex:pageMessages id="showmsg"></apex:pageMessages>
+            
+			<div style="padding-top:7px;">
+                <apex:outputLabel style="padding-left:10%;" value="Tipo de nuevo registro:" for="form"/>
+     
+                <apex:selectList value="{!recordTypeSelected}" title="Formulario_MarketingCloud__c" size="1" id="form" >
+                    <apex:selectOptions value="{!formList}" />
+                </apex:selectList>
+            </div>
+            
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="¿Desea continuar?" action="{!doSubmit}" onclick="redirect();" />   
+                <apex:commandButton value="Cancelar" oncomplete="doRedirect();"  /> 
+            </apex:pageBlockButtons>
+            
+            <script type="text/javascript">
+                function doRedirect(){
+                    window.history.back();
+                }
+            </script>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

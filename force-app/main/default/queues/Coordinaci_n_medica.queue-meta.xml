@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Coordinación medica</name>
+    <queueMembers>
+        <users>
+            <user>antonella.laino@danone.com</user>
+            <user>mvcintia@gmail.com</user>
+            <user>jazmin.fisquetti@danone.com</user>
+            <user>noemi.silva@danone.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

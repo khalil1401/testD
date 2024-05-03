@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tiene_toda_la_documentacion_solicitada__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Si la respuesta a &quot;La OS le cubre la formula?&quot; fue &quot;Aun no lo presente&quot;, contestar esta pregunta</inlineHelpText>
+    <label>Tiene toda la documentacion solicitada?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SI</fullName>
+                <default>false</default>
+                <label>SI</label>
+            </value>
+            <value>
+                <fullName>NO</fullName>
+                <default>false</default>
+                <label>NO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

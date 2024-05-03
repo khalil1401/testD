@@ -1,0 +1,14 @@
+<template>
+    <div class="div-container-cptc slds-p-top_x-large slds-p-bottom_x-large">
+        <div class="slds-grid slds-wrap">
+            <template for:each={products} for:item="product">
+                <div class="slds-col slds-medium-size_3-of-12" key={product.dataId}>
+                    <c-card-producto-terapia-cetogenica
+                        title={product.title}
+                        img={product.img}>
+                    </c-card-producto-terapia-cetogenica>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

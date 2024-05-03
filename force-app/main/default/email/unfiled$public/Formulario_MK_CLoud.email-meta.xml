@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Nutricia_Logo</letterhead>
+    <name>Formulario MK CLoud</name>
+    <style>freeForm</style>
+    <subject>Nuevo Paciente Regular  {!Account.LastName}  {!Account.FirstName}  - {!Account.Area_terapeutica__c}</subject>
+    <textOnly>Estimado  {!Account.Name} puede completar el formulario ingresando al siguiente link.{!Account.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

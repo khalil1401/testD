@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unidad__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(CONTAINS($User.Funcion__c, &quot;Adultos&quot;) &amp;&amp; (CASE(Profesional_de_la_salud__r.Primera_especialidad__c, &quot;Jefe de Compras&quot;, &quot;TRUE&quot;, &quot;Comprador&quot;, &quot;TRUE&quot;, &quot;Farmaceútico&quot;, &quot;TRUE&quot;, &quot;Administrativo de Farmacia&quot;, &quot;TRUE&quot;, &quot;Gerente Comercial&quot;, &quot;TRUE&quot;, &quot;Administración&quot;, &quot;TRUE&quot;, &quot;FALSE&quot;)= &quot;TRUE&quot;), 0.5, 1)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Unidad</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

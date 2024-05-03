@@ -1,0 +1,124 @@
+.title-pacifico-pedidos-manager{
+    font-family: PacificoRegular;
+    color:#C09AC2;
+    font-size: 85px;
+    line-height: 70px;
+}
+
+.title-montserrat-pedidos-manager{
+    font-size: 60px;
+    color:#313183;
+    font-family:MontserratBlack;
+    line-height: 70px;
+}
+
+.div-card-kit{
+    background-color: #9D67A8;
+    border: 2px solid #9D67A8;
+    border-radius: 15px;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    position: relative;
+}
+
+.card-header-kit{
+    background-color: #9D67A8;
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.card-body-kit{
+    background-color: white;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.card-header-title-kit{
+    font-family: MontserratSemiBold;
+    color: white;
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.card-body-title-kit{
+    font-family: MontserratSemiBold;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+.card-body-text-kit{
+    font-family: MontserratRegular;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    text-transform: capitalize;
+}
+
+.card-body-link-kit{
+    font-family: MontserratSemiBold;
+    font-size: 1rem;
+    color: #0070d2;
+    line-height: 1.5rem;
+}
+
+.rastreo-pedido-btn-nsj{
+    height: 32px;
+    width: 124px;
+    font-family: MontserratSemiBold;
+    font-size: 1rem;
+    line-height: 1rem;
+    border-radius: 8px;
+    background-color: #9D67A8;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container-rastreo-btn{
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+}
+
+.container-sin-pedidos{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -20%;
+    transform: translate(-50%, -50%);
+}
+
+.text-sin-pedidos{
+    font-family: MontserratRegular;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+}
+
+@media (max-width: 412px) {
+    .title-pacifico-pedidos-manager{
+        font-size: 40px;
+        line-height: 45px;
+    }
+    
+    .title-montserrat-pedidos-manager{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    
+    .div-card-kit{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .card-body-text-kit{
+        margin-left: 10px;
+    }   
+}

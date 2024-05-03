@@ -1,0 +1,16 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+	<aura:attribute name="titulo" type="String" default="titulo"/>
+	<aura:attribute name="texto" type="String" default="texto"/>
+
+    <div>
+        <aura:if isTrue="{!v.titulo != ''}">
+            <aura:unescapedHtml value="{!v.titulo}"/>
+            <hr class="linea"/>
+        </aura:if>
+        <aura:if isTrue="{!v.texto != ''}">
+            <aura:unescapedHtml value="{!v.texto}"/>
+        </aura:if>
+    </div>
+
+</aura:component>

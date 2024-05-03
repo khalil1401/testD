@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Licencia__c$Ciclo__c</field>
+    </columns>
+    <columns>
+        <field>Licencia__c$Name</field>
+    </columns>
+    <columns>
+        <field>Licencia__c$Cantidad_de_dias__c</field>
+    </columns>
+    <columns>
+        <field>Licencia__c$Cantidad_de_dias_de_la_licencia__c</field>
+    </columns>
+    <columns>
+        <field>Licencia__c$Cantidad_de_visitas_que_no_se_realizar_n__c</field>
+    </columns>
+    <columns>
+        <field>Licencia__c$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Licencia__c$Motivo__c</field>
+    </columns>
+    <columns>
+        <field>Licencia__c$Comentarios__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>INFORMACION LICENCIAS</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Licencias__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Licencia__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

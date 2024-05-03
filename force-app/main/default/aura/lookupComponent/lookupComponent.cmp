@@ -1,0 +1,68 @@
+<aura:component controller="LookupComponentController" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="objeto" type="String"/>
+    <aura:attribute name="itemSelected" type="String"/>
+    <aura:attribute name="value" type="String"/>
+    <aura:attribute name="options" type="List"/>
+    <aura:attribute name="optionsComponent" type="List" default="[]"/>
+    <aura:attribute name="label" type="String"/>
+    <aura:attribute name="existeSeleccionado" type="Boolean"/>
+    <aura:attribute name="loadSpinner" type="Boolean" default="false"/>
+    <aura:attribute name="spinnerCupon" type="Boolean"/>
+    <aura:attribute name="required" type="Boolean"/>
+    <aura:attribute name="disabled" type="Boolean"/>
+    <aura:attribute name="caracteresFiltro" type="Integer" default="4"/>
+    <aura:attribute name="area" type="String"/>
+
+    <!-- Atributo por si el lookup es de localidad -->
+    <aura:attribute name="idMunicipio" type="string"/>
+    <aura:handler name="change" value="{!v.idMunicipio}" action="{!c.handleIdMunicipioChange}"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="lookupFormEvent" type="c:lookupFormularioEvent"/>
+
+    <div class="slds-form-element">
+        <aura:if isTrue="{!v.loadSpinner}">
+            <lightning:spinner  
+                alternativeText="Cargando"
+                variant="brand"/>
+        </aura:if>
+        <div class="slds-form-element__control">
+            <div class="slds-combobox_container">
+                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open" aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                        <lightning:input
+                            name="value"
+                            label="{!v.label}"
+                            value="{!v.value}"
+                            onchange="{!c.changeInput}"
+                            autocomplete="false"
+                            placeholder="Buscar..."
+                            required="{!v.required}"
+                            disabled="{!v.disabled}"/>
+                    </div>
+                    <aura:if isTrue="{!and(v.value != '', !v.existeSeleccionado)}">
+                        <div id="listbox-id-11" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid" role="listbox">
+                            <ul class="slds-listbox slds-listbox_vertical" >
+                                <aura:iteration items="{!v.optionsComponent}" var="item">
+                                    <li role="presentation" class="slds-listbox__item"
+                                        onclick="{!c.seleccionarItem}" data-value="{!item.Id}"
+                                        data-nombre="{!item.Name}">
+                                        <div id="option1" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                            <span class="slds-media__body">
+                                                <span class="slds-truncate item-lookup-input">
+                                                    {!item.Name}
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </aura:iteration>
+                            </ul>
+                        </div>    
+                    </aura:if>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

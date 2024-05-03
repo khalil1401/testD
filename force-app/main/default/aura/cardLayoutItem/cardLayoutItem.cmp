@@ -1,0 +1,100 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="backgroundCardColor" type="String"/>
+	<aura:attribute name="radioEsquinas" type="Integer" default="10"/>
+	<aura:attribute name="textHeaderCard" type="String" default="Title"/>
+	<aura:attribute name="fontFamilyTitulosCard" type="String"/>
+    <aura:attribute name="textHeaderCardColor" type="String"/>
+    <aura:attribute name="backgroundButtonCardColor" type="String"/>
+    <aura:attribute name="textButtonCardColor" type="String"/>
+	<aura:attribute name="textTituloBodyCard" type="String" default="Title body"/>
+	<aura:attribute name="textBodyCard" type="String" default="Body"/>
+	<aura:attribute name="fontFamilyTextoCard" type="String"/>
+	<aura:attribute name="textSeccionColor" type="String"/>
+	<aura:attribute name="nombreRecursoEstatico" type="String" default="NutriciaHeader"/>
+	<aura:attribute name="rutaRecursoEstatico" type="String"/>
+	<aura:attribute name="textButtonCard" type="String"/>
+	<aura:attribute name="heightImg" type="String" default="100"/>
+	<aura:attribute name="widthImg" type="String" default="150"/>
+	<aura:attribute name="heightTituloBodyCard" type="String"/>
+	<aura:attribute name="heightTextBodyCard" type="String"/>
+	<aura:attribute name="urlPage" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:html tag="style">
+        .containerCardArticulo {
+            background-color: {!v.backgroundCardColor} !important;
+            border-radius: {!v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px'} !important;
+        }
+        .slds-card{
+            border-radius: {!v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px'} !important;
+        }
+        .slds-card__header-title{
+            font-size: 12px;
+            color: {!v.textHeaderCardColor};
+            font-family: {!v.fontFamilyTitulosCard};
+        }
+    </aura:html>
+
+    <article class="slds-card">
+        <div class="containerCardArticulo">
+            <div class="slds-card__header slds-grid slds-m-left_xx-small slds-m-right_xx-small">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h1 class="slds-card__header-title">
+                            {!v.textHeaderCard}
+                        </h1>
+                        <div    class="slds-align_absolute-center slds-m-bottom_medium slds-m-top_medium"
+                                style="{!'  background: url('+ v.rutaRecursoEstatico +');
+                                            background-position: center;
+                                            background-size: cover;
+                                            overflow:hidden;
+                                            position: relative;
+                                            background-repeat:no-repeat;
+                                            width: 100%;
+                                            height:' + v.heightImg + 'px;'}">
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div    class="slds-m-left_xx-small slds-m-right_xx-small slds-m-bottom_xxx-small"
+                    style="{!'height:' + v.heightTituloBodyCard + 'px;'}">
+                <div    class="slds-card__body slds-card__body_inner"
+                        style="{!'  font-family: ' + v.fontFamilyTitulosCard + ';
+                                    color: '+ v.textSeccionColor +';
+                                    font-size: 12px;
+                                    line-height: 15px;'}">
+                    {!v.textTituloBodyCard}
+                </div>
+            </div>
+            <!--
+            <div    class="slds-scrollable_y slds-m-left_xx-small slds-m-right_xx-small"
+                    style="{!'height:' + v.heightTextBodyCard + 'px;'}">
+            -->
+            <div    class="slds-m-left_xx-small slds-m-right_xx-small"
+                    style="{!'height:' + v.heightTextBodyCard + 'px;'}">
+                <div    class="slds-text-longform">
+                    <div    class="slds-card__body slds-card__body_inner"
+                            style="{!'  font-family: ' + v.fontFamilyTextoCard + ';
+                                        color: '+ v.textSeccionColor +';
+                                        font-size: 12px;
+                                        line-height: 15px;'}">
+                        {!v.textBodyCard}
+                    </div>
+                </div>
+            </div>
+            <footer class="slds-card__footer slds-m-left_xx-small slds-m-right_xx-small"            
+                    style="text-align: left;">
+                <span   class="link"
+                        style="{!'  color: ' + v.textButtonCardColor + ' !important;
+                                    font-family: ' + v.fontFamilyTitulosCard + ';
+                                    font-size: 12px;'}"
+                        onclick="{!c.redireccionar}">
+                    {!v.textButtonCard}
+                </span>
+            </footer>
+        </div>
+    </article>
+
+</aura:component>

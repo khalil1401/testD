@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campo_oblig_Motivo_Retencion_Seg_no_reno</fullName>
+    <active>true</active>
+    <description>Debe ser obligatorio el campo &quot;Motivo&quot; en los casos record type &quot;Retención&quot; y campo subtipo &quot;Seguimiento no renovación&quot;</description>
+    <errorConditionFormula>AND( ISBLANK( TEXT(Motivo__c) ), RecordType.DeveloperName = &quot;Retencion&quot;, ISPICKVAL(Subtipo__c , &quot;Seguimiento no renovacion&quot;))</errorConditionFormula>
+    <errorDisplayField>Motivo__c</errorDisplayField>
+    <errorMessage>Por favor, complete el campo</errorMessage>
+</ValidationRule>

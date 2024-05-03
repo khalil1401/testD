@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Eliminar archivos</label>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Document</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Documento__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <tabSettings>
+        <tab>standard-Document</tab>
+        <visibility>Available</visibility>
+    </tabSettings>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CreateCustomizeReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CreateReportFolders</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditMyReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RunReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewPublicReports</name>
+    </userPermissions>
+</PermissionSet>

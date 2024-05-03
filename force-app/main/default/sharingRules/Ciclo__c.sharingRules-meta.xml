@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Ciclos_para_Gerentes_Adultos</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Ciclos para Gerentes Adultos</label>
+        <sharedTo>
+            <group>Gerente_Stakeholders_Adultos</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Equipo_de_APM__c</field>
+            <operation>equals</operation>
+            <value>Adultos</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Ciclos_para_Gerentes_Pediatricos</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Ciclos para Gerentes Pediatricos</label>
+        <sharedTo>
+            <group>Gerente_Stakeholders_Pediatricos</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Equipo_de_APM__c</field>
+            <operation>equals</operation>
+            <value>Pediátrico</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Stakeholders</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Stakeholders</label>
+        <sharedTo>
+            <group>Stakeholders</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value>abc123</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Administracion_Compartida_Ciclo</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Administracion Compartida Ciclo</label>
+        <sharedTo>
+            <group>Supervisores_Stakeholders</group>
+        </sharedTo>
+        <sharedFrom>
+            <portalRoleAndSubordinates>NegocioTotalSocioUsuario</portalRoleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Ciclos_Adultos</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Ciclos Adultos</label>
+        <sharedTo>
+            <group>KAE_Adultos</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>APM_Adultos</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Ciclos_Pediatricos</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Ciclos Pediatricos</label>
+        <sharedTo>
+            <group>KAE_Pediatrico</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>APM_Pediatrico</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

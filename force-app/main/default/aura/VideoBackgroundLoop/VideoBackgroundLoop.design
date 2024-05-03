@@ -1,0 +1,9 @@
+<design:component label="VideoBackgroundLoop">
+    <design:attribute name="urlVideo" label="Url Video" description="Ingresar URL completa externa o de recurso estatico que referencie a un video mp4/ogg/webm"/>
+    <design:attribute name="urlImage" label="Url Imagen" description="Ingresar URL completa externa o de recurso estatico que referencie a una imagen para ser mostrada en mobile"/>
+    <design:attribute name="maxWidth" label="Ancho maximo" description="Setear ancho maximo que puede tener la imagen o el video" default="100%"/>
+    <design:attribute name="minWidth" label="Ancho minimo" description="Setear ancho minimo que puede tener la imagen o el video" default="100%"/>
+    <design:attribute name="maxHeight" label="Alto maximo" description="Setear altura maxima que puede tener el video" default="250px"/>
+    <design:attribute name="maxHeightMobile" label="Alto maximo - Mobile" description="Setear altura maxima que puede tener la imagen en un teléfono" default="100px"/>
+    <design:attribute name="moveVertically" label="Mover Verticalmente"/> 
+</design:component>

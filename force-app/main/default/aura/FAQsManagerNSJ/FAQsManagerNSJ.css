@@ -1,0 +1,33 @@
+.THIS {
+}
+
+.THIS .title-pacifico-faqs-manager{
+    font-family: PacificoRegular;
+    color:#C09AC2;
+    font-size: 85px;
+    line-height: 70px;
+}
+
+.THIS .title-montserrat-faqs-manager{
+    font-size: 60px;
+    color:#313183;
+    font-family:MontserratBlack;
+    line-height: 70px;
+}
+
+@media (max-width: 412px) {
+    .THIS {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .THIS .title-pacifico-faqs-manager{
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .THIS .title-montserrat-faqs-manager{
+        font-size: 30px;
+        line-height: 35px;
+    }
+}

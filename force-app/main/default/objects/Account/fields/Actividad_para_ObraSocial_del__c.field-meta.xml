@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actividad_para_ObraSocial_del__c</fullName>
+    <defaultValue>IF($RecordType.Name= &apos;Paciente Regular&apos;, &apos;M1&apos;,&apos;&apos;)</defaultValue>
+    <externalId>false</externalId>
+    <label>Actividad</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

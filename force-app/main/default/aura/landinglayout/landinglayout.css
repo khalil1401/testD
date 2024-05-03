@@ -1,0 +1,38 @@
+.THIS{
+}
+
+.THIS .container-hc-layout-nsj{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.THIS .card-home-nsj{
+    padding: 0.5%;
+}
+
+@media (max-width: 1600px) {
+    .THIS .container-hc-layout-nsj{
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+}
+
+@media (max-width: 1366px) {
+    .THIS .container-hc-layout-nsj{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .THIS .container-hc-layout-nsj{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    
+    .THIS .card-home-nsj{
+        padding: 0%;
+        margin-top: 5%;
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Porque_selecciono_otros2__c</fullName>
+    <description>En caso de haber respondido otros en la pregunta anterior, especifique porque.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>En caso de haber respondido otros, especifique.</inlineHelpText>
+    <label>¿Porque selecciono otros?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

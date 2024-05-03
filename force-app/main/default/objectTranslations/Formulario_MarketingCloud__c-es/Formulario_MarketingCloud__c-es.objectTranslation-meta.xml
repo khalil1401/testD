@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Formularios Marketing Cloud</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Formularios MarketingCloud</value>
+    </caseValues>
+    <fieldSets>
+        <label></label>
+        <name>EYN</name>
+    </fieldSets>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Acceso - Relevamiento Cobertura Tratamiento</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Acceso Relevamiento Adherencia</layout>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>En caso de distensión abdominal/diarrea o vómitos:</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>En caso de distensión abdominal/diarrea, vómitos, sabor o aroma:</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>En caso de no querer seguir con el tratamiento</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>DIA 7-10 - Tailored Nutrition</layout>
+        <sections>
+            <label></label>
+            <section>Información del tratamiento</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tailored Nutrition - DIA 7-10</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Digestivo-Seguimiento 10 dias</layout>
+        <sections>
+            <label></label>
+            <section>COBERTURA</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>NPS</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>PORTAL DE PACIENTES</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Si aún no presentó la fórmula</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Si la OS cubre la fórmula</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Si la OS no cubre la fórmula</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>TOLERANCIA</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>EYN</layout>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Form Dri</layout>
+        <sections>
+            <label></label>
+            <section>COBERTURA</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Si el motivo es &quot;Problemas de tolerancia&quot;</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Si el motivo es &quot;Se Rehúsa&quot;</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Formulario MarketingCloud</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formulario Inicio Alergia</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informacion</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formulario Mes 1 Alergia</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informacion</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>INICIO - Metabolicos</layout>
+        <sections>
+            <label></label>
+            <section>Información del tratamiento</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Metabólicos - INICIO</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>INICIO - Tailored Nutrition</layout>
+        <sections>
+            <label></label>
+            <section>Información del tratamiento</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tailored Nutrition - INICIO</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Inicio</layout>
+        <sections>
+            <label></label>
+            <section>Dieta Cetogénica - INICIO</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información del Tratamiento</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Paciente con Diagnostico</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Llamadas Sensibles</layout>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Detalle Producto</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Detalles Reclamo</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MES 1 y 1/2 - Tailored Nutrition</layout>
+        <sections>
+            <label></label>
+            <section>Información del tratamiento</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tailored Nutrition - MES 1 y 1/2</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MES 3 - Tailored Nutrition</layout>
+        <sections>
+            <label></label>
+            <section>Información del tratamiento</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tailored Nutrition - MES 3</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Mes 3</layout>
+        <sections>
+            <label></label>
+            <section>Dieta Cetogénica - MES 3</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información del Tratamiento</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Mes 6</layout>
+        <sections>
+            <label></label>
+            <section>Dieta Cetogénica - MES 6</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información del Tratamiento</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Mes 7</layout>
+        <sections>
+            <label></label>
+            <section>Dieta Cetogénica - MES 7</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información de Tratamiento</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Oncologia Fortisip compact protein-Mes 1</layout>
+        <sections>
+            <label></label>
+            <section>Adquisicion del producto</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Motivo &quot;acceso no lo cubre la OS&quot;</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Motivo &quot;cambio de producto&quot;</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Seguimiento de paciente</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Potenciales pacientes Best Care - layout</layout>
+        <sections>
+            <label></label>
+            <section>Información del paciente</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>No recibe formulas en domicilio</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Potenciales pacientes Best Care</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Si recibe formulas en domicilio</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Reclamo de Calidad</layout>
+        <sections>
+            <label></label>
+            <section>Informacion</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Reclamo de Calidad</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Relevamiento Ketoblend</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Relevamiento Productos Cetogenicos</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>San Jose</layout>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Detalle de estado paciente</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información Obra Social</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Seguimiento Mes 12 - Alergia</layout>
+        <sections>
+            <label></label>
+            <section>COBERTURA</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>NPS</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>TRATAMIENTO</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Seguimiento Mes 3 - Alergia</layout>
+        <sections>
+            <label></label>
+            <section>COBERTURA</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>NPS</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>TRATAMIENTO</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Seguimiento Mes 6 - Alergia</layout>
+        <sections>
+            <label></label>
+            <section>COBERTURA</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>NPS</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>TRATAMIENTO</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Seguimiento Mes 9 - Alergia</layout>
+        <sections>
+            <label></label>
+            <section>COBERTURA</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>NPS</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>TRATAMIENTO</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label></label>
+        <name>Acceso_Relevamiento_Adherencia</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Acceso_Relevamiento_Cobertura_Tratamiento</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Alergia_Metab_licos_Dieta_Cetog_nica_DIA_7_10</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Confirmacion_retiro_por_farmacia_Zetti</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>DIA_7_10</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Desafios_del_crecimiento_10_dias</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Desafios_del_crecimiento_INICIO</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Digestivos_Seguimiento_10_dias</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>EYN</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Evaluaci_n_Screening_BC</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Form_Dri</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Form_prueba</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Forms_Pacientes_San_Jose</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Formulario_1_Consejer_a_Nutricional_Onco</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Formulario_2_en_adelante_Consejeria</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Formulario_Inicio_Alergia</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Formulario_Mes_1_Alergia</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>INICIO_Metabolicos</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>INICIO_Tailored_Nutrition</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Inicio</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Inicio_GMPRO_Metab_licos</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Llamados_Sensibles</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>MES_1_y_1_2</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>MES_3_Tailored_Nutrition</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Mes_3</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Mes_6</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Mes_7</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Oncolog_a_Fortisip_Compact_Protein_Mes_1</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Oncolog_a_Fortisip_Compact_Protein_Mes_2</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Oncolog_a_Fortisip_Compact_Protein_Mes_3</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Oncolog_a_Mes_1</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Oncolog_a_Mes_2</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Oncolog_a_Mes_3</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Potenciales_pacientes_Best_Care</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Relevamiento</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Relevamiento_Ketoblend</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Relevamiento_Productos_Cetogenicos</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>San_Jose</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Seguimiento_GMPRO_10_d_as_Metab_licos</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Seguimiento_GMPRO_1er_Mes_Metab_licos</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Seguimiento_Mes_12_Alergia</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Seguimiento_Mes_3_Alergia</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Seguimiento_Mes_6_Alergia</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Seguimiento_Mes_9_Alergia</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>En_caso_de_no_querer_seguir_con_el_trat</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Especificar_medicamento</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Llamados_sensibles_ProdInvolucrado_Si</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Llamados_sensibles_llamadoatend_otros</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Llamados_sensibles_tipodellamado_Otro</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Llamadossensibles_Llamado_anonimo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Si_no_tolera_debe_poner_sintomas_o_incon</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Si_respondio_aroma_o_sabor</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Si_respondio_sintomas_a_o_b</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Texto_otros_vacio</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Validacion_para_motivo_de_alternar</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>llamadossensibles_tipollamado_periodista</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,5 @@
+<apex:page standardController="Modulo_de_paciente__c">
+    <flow:interview name="ScreenFlow_Generar_XML" finishLocation="{!URLFOR('/console?tsid={!Id}')}">
+        <apex:param name="recordId" value="{!Id}" ></apex:param>
+    </flow:interview>
+</apex:page>

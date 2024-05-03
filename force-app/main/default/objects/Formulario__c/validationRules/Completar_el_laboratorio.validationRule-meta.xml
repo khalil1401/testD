@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completar_el_laboratorio</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL( Laboratorio__c, &apos;Si&apos;),
+OR(
+ISBLANK( Fecha_Laboratorio__c ),
+ISBLANK( Leucocitos__c ),
+ISBLANK( Hemoglobina__c ),
+ISBLANK( Glucosa__c ),
+ISBLANK( Creatinina__c ),
+ISBLANK( Potasio__c ),
+ISBLANK( Calcio_Total__c ),
+ISBLANK( Magnesio__c ),
+ISBLANK( TGO__c ),
+ISBLANK( FAL__c ),
+ISBLANK( Albumina__c ),
+ISBLANK( Trigliceridos__c ),
+ISBLANK( TP__c ),
+ISBLANK( Hematocrito__c ),
+ISBLANK( Plaquetas__c ),
+ISBLANK( Urea__c ),
+ISBLANK( Sodio__c ),
+ISBLANK( Cloro__c ),
+ISBLANK( Fosforo__c ),
+ISBLANK( BT__c ),
+ISBLANK( TGP__c ),
+ISBLANK( Proteinas_Totales__c ),
+ISBLANK( Colesterol_total__c ),
+ISBLANK( Transferrina__c ),
+ISBLANK( KPTT__c )
+))</errorConditionFormula>
+    <errorMessage>Debe completar todos los detalles del laboratorio.</errorMessage>
+</ValidationRule>

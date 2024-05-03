@@ -1,0 +1,86 @@
+<aura:component implements="force:appHostable,forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="altoMaximo" type="String" default="200"/>
+	<aura:attribute name="altoMinimo" type="String" default="200"/>
+	<aura:attribute name="recursoEstatico" type="String" default="Oncologia_Landing_Home"/>
+	<aura:attribute name="rutaRecursoEstatico" type="String" default=""/>
+	<aura:attribute name="luminosidad" type="String" default="1"/>
+	<aura:attribute name="tituloHeader" type="String" default="JUNTOS, NUTRIENDO LA FUERZA QUE NECESITAS"/>
+	<aura:attribute name="cuerpoHeader" type="String" default="Acompañandote en la lucha contra el cáncer."/>
+    
+    <!--Redes Sociales-->
+    <aura:attribute name="isFacebook" type="Boolean"/>
+    <aura:attribute name="linkToFacebook" type="String"/>
+    <aura:attribute name="isTwitter" type="Boolean"/>
+    <aura:attribute name="linkToTwitter" type="String"/>
+    <aura:attribute name="isInstagram" type="Boolean"/>
+    <aura:attribute name="linkToInstagram" type="String"/>
+    <aura:attribute name="isYoutube" type="Boolean"/>
+    <aura:attribute name="linkToYoutube" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:html tag="style">
+        .containerImagenHeader {
+            max-height: {!v.altoMaximo + 'px'};
+            min-height: {!v.altoMinimo + 'px'};
+            background: {!'url(' + v.rutaRecursoEstatico + ')'};
+            filter: {!'brightness('+ v.luminosidad + ')'};
+        }
+    </aura:html>
+
+    <div    class="containerImagenHeader"
+            style="{!	' 
+                        background-position: center;
+                        background-size: cover; 
+                        width: 100%;
+                        overflow:hidden;
+                        position: relative;
+                        cursor: pointer;
+                        background-repeat:no-repeat;
+                        '}">
+
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_2-of-12">
+            </div>
+            <div class="slds-col slds-size_8-of-12">
+                <div class="slds-col slds-size_3-of-12 containerTextoHeader">
+                    <strong class="tituloHeaderArea">{!v.tituloHeader}</strong>
+                    <div class="slds-border_top slds-m-bottom_x-small"></div>
+                    <p class="cuerpoHeaderArea">{!v.cuerpoHeader}</p>
+                    <div class="slds-col slds-size_1-of-1 slds-grid">
+                        <aura:if isTrue="{! v.isFacebook }">
+                            <c:communityFooterSocialMediaLinks
+                                        linkTo="{!v.linkToFacebook}"
+                                        staticResourceName="{!$Resource.SocialMediaIcons}"
+                                        staticResourcePath="/facebook.svg"/>
+                        </aura:if>
+                        <aura:if isTrue="{! v.isYoutube }">                            
+                            <c:communityFooterSocialMediaLinks
+                                        linkTo="{!v.linkToYoutube}"
+                                        staticResourceName="{!$Resource.SocialMediaIcons}"
+                                        staticResourcePath="/youtube.svg"/>
+                        </aura:if>
+                        <aura:if isTrue="{! v.isInstagram }">                            
+                            <c:communityFooterSocialMediaLinks
+                                        linkTo="{!v.linkToInstagram}"
+                                        staticResourceName="{!$Resource.SocialMediaIcons}"
+                                        staticResourcePath="/instagram.svg"/>
+                        </aura:if>
+                        <aura:if isTrue="{! v.isTwitter }">                            
+                            <c:communityFooterSocialMediaLinks
+                                        linkTo="{!v.linkToTwitter}"
+                                        staticResourceName="{!$Resource.SocialMediaIcons}"
+                                        staticResourcePath="/twitter.svg"/>
+                        </aura:if>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_9-of-12">
+                </div>
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+            </div>
+        </div>
+    </div>
+
+</aura:component>

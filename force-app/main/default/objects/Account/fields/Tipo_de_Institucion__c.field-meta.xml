@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Institucion__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de Institución</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>INSTITUCION PUBLICA</fullName>
+                <default>false</default>
+                <label>INSTITUCION PUBLICA</label>
+            </value>
+            <value>
+                <fullName>HOME CARE</fullName>
+                <default>false</default>
+                <label>HOME CARE</label>
+            </value>
+            <value>
+                <fullName>INSTITUCION PRIVADA</fullName>
+                <default>false</default>
+                <label>INSTITUCION PRIVADA</label>
+            </value>
+            <value>
+                <fullName>CONSULTORIO</fullName>
+                <default>false</default>
+                <label>CONSULTORIO</label>
+            </value>
+            <value>
+                <fullName>FARMACIA</fullName>
+                <default>false</default>
+                <label>FARMACIA</label>
+            </value>
+            <value>
+                <fullName>DROGUERIA / DISTRIBUIDOR</fullName>
+                <default>false</default>
+                <label>DROGUERIA / DISTRIBUIDOR</label>
+            </value>
+            <value>
+                <fullName>SIN DEFINIR</fullName>
+                <default>false</default>
+                <label>SIN DEFINIR</label>
+            </value>
+            <value>
+                <fullName>CONCESIONARIO</fullName>
+                <default>false</default>
+                <label>CONCESIONARIO</label>
+            </value>
+            <value>
+                <fullName>GERIATRICO</fullName>
+                <default>false</default>
+                <label>GERIATRICO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Adherencia_esta_relacionado_con__c</name>
+    <picklistValues>
+        <masterLabel>No quiere seguir con el tratamiento (Se rehusa)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No tolera la formula (No tolera)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

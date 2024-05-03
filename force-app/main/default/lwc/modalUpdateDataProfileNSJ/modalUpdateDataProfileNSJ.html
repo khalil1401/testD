@@ -1,0 +1,129 @@
+<template>
+    <template if:true={_isNormalInput}>
+        <section role="dialog" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-align_absolute-center">
+            <div class="slds-modal__container slds-align_absolute-center">
+                <div class="slds-modal__content modal-spinner">
+                    <template if:true={showSpinner}>
+                        <lightning-spinner variant="brand" alternative-text="Loading" size="medium"></lightning-spinner>
+                    </template>
+                    <p class="title-modal slds-text-align_center">¿Desea actualizar este campo?</p>
+                    <div class="fields-box slds-align_absolute-center">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-1">
+                                <lightning-input 
+                                    type="text"
+                                    label="Antes"
+                                    value={oldValue}
+                                    disabled="true">
+                                </lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                                <lightning-input 
+                                    type="email"
+                                    class="inputValidation"
+                                    value={newValue}
+                                    label="Ahora"
+                                    onchange={handleChangePicklistValue}
+                                    required="true">
+                                </lightning-input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-clearfix slds-m-top_medium">
+                        <div class="slds-float_left">
+                            <button class="cancelar-button" onclick={closeModal} data-id="close">Cancelar</button>
+                        </div>
+                        <div class="slds-float_right" >
+                            <button class="confirmar-button" onclick={openConfirmarModal} data-id="save">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template if:true={_isSelectInput}>
+        <section role="dialog" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-align_absolute-center">
+            <div class="slds-modal__container slds-align_absolute-center">
+                <div class="slds-modal__content modal-spinner">
+                    <template if:true={showSpinner}>
+                        <lightning-spinner variant="brand" alternative-text="Loading" size="medium"></lightning-spinner>
+                    </template>
+                    <p class="title-modal slds-text-align_center">¿Desea actualizar este campo?</p>
+                    <div class="fields-box slds-align_absolute-center">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-1">
+                                <lightning-input 
+                                    type="text"
+                                    label="Antes"
+                                    value={oldValue}
+                                    disabled="true">
+                                </lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                                <lightning-combobox
+                                    class="inputValidation"
+                                    label="Ahora"
+                                    placeholder="Seleccionar opción..."
+                                    value={newValue}
+                                    onchange={handleChangePicklistValue}
+                                    options={picklistValue}
+                                    required="true">
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-clearfix slds-m-top_medium">
+                        <div class="slds-float_left">
+                            <button class="cancelar-button" onclick={closeModal} data-id="close">Cancelar</button>
+                        </div>
+                        <div class="slds-float_right">
+                            <button class="confirmar-button" onclick={saveObject} data-id="save">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template if:true={_isLookupInput}>
+        <section role="dialog" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-align_absolute-center">
+            <div class="slds-modal__container slds-align_absolute-center">
+                <div class="slds-modal__content modal-spinner">
+                    <template if:true={showSpinner}>
+                        <lightning-spinner variant="brand" alternative-text="Loading" size="medium"></lightning-spinner>
+                    </template>
+                    <p class="title-modal slds-text-align_center">¿Desea actualizar este campo?</p>
+                    <div class="fields-box slds-align_absolute-center">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-1">
+                                <lightning-input 
+                                    type="text"
+                                    label="Antes"
+                                    value={oldValue}
+                                    disabled="true">
+                                </lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                                <c-lookup-input
+                                    object={object}
+                                    label="Ahora"
+                                    field-api-name={fieldApiName}
+                                    onmydata={handleDataLookup}
+                                    required="true">
+                                </c-lookup-input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-clearfix slds-m-top_medium">
+                        <div class="slds-float_left">
+                            <button class="cancelar-button" onclick={closeModal} data-id="close">Cancelar</button>
+                        </div>
+                        <div class="slds-float_right">
+                            <button class="confirmar-button" onclick={saveObject} data-id="save">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>

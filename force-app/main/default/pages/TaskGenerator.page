@@ -1,0 +1,19 @@
+<apex:page standardController="Account" recordSetVar="accounts" tabStyle="Account" extensions="TaskGeneratorController" showHeader="true">
+    <apex:includeLightning />
+
+    <div id="lightningvf" />
+
+    <script>
+        $Lightning.use("c:TaskGeneratorApp", function () {
+            $Lightning.createComponent("c:TaskGenerator",
+                {
+                    accList: "{!accountList}"
+                },
+                "lightningvf",
+                function (cmp) {
+                    console.log('LWC Componenet added in VF page');
+                });
+        });
+    </script>
+
+</apex:page>

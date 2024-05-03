@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_de_desafio</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL(Desafio__c,&apos;Sí&apos;)),
+NOT(ISBLANK(Fecha_de_desafio__c))
+)</errorConditionFormula>
+    <errorDisplayField>Desafio__c</errorDisplayField>
+    <errorMessage>No puede seleccionar Fecha de desafío si no ha seleccionado la opción &apos;Sí&apos;</errorMessage>
+</ValidationRule>

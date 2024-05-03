@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trat_ambulatorio_o_intern_domiciliari__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>¿El tratamiento será ambulatorio o con internación domiciliaria?</inlineHelpText>
+    <label>¿Trat. ambulatorio o intern. domiciliari</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ambulatorio</fullName>
+                <default>false</default>
+                <label>Ambulatorio</label>
+            </value>
+            <value>
+                <fullName>Internación domiciliaria</fullName>
+                <default>false</default>
+                <label>Internación domiciliaria</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

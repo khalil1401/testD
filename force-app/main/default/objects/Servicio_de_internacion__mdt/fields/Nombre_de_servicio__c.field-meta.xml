@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nombre_de_servicio__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Nombre de servicio</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cuidado personalizado</fullName>
+                <default>true</default>
+                <label>Cuidado personalizado</label>
+            </value>
+            <value>
+                <fullName>Cuidado completo</fullName>
+                <default>false</default>
+                <label>Cuidado completo</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación deglutoria</fullName>
+                <default>false</default>
+                <label>Rehabilitación deglutoria</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación motora plus</fullName>
+                <default>false</default>
+                <label>Rehabilitación motora plus</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación motora básico enteral</fullName>
+                <default>false</default>
+                <label>Rehabilitación motora básico enteral</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación motora - intermedio</fullName>
+                <default>false</default>
+                <label>Rehabilitación motora - intermedio</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación motora básico oral</fullName>
+                <default>false</default>
+                <label>Rehabilitación motora básico oral</label>
+            </value>
+            <value>
+                <fullName>autocuidado</fullName>
+                <default>false</default>
+                <label>autocuidado</label>
+            </value>
+            <value>
+                <fullName>cuidado básico</fullName>
+                <default>false</default>
+                <label>cuidado básico</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

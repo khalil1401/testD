@@ -1,0 +1,16 @@
+<design:component >
+
+    <design:attribute name="derecha" label="Imagen a la derecha"/>
+    <design:attribute name="izquierda" label="Imagen a la izquierda"/>
+    <design:attribute name="debajoDeTitulo" label="Imagen por debajo del título"/>
+    <design:attribute name="sinImagen" label="Sin imagen"/>
+    <design:attribute name="height" label="Altura de componente en px"/>
+    <design:attribute name="heightMobile" label="Altura de componente en px Mobile"/>
+    <design:attribute name="recursoEstaticoBackground" label="URL de la imagen de fondo de componente"/>
+    <design:attribute name="recursoEstaticoImagen" label="URL de la imagen de componente"/>
+    <design:attribute name="recursoEstaticoImagenMobile" label="URL de la imagen de componente Mobile"/>
+    <design:attribute name="titulo" label="Título de componente"/>
+    <design:attribute name="textoPrimeraBajada" label="Texto de primera bajada de componente"/>
+    <design:attribute name="textoSegundaBajada" label="Texto de segunda bajada de componente"/>
+
+</design:component>

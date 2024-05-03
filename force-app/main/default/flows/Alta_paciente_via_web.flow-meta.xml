@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <description>Si la tarea &quot;Paciente en tratamiento Alergia&quot; se cierra como &quot;completa&quot; y el estado del paciente es &quot;En tratamiento&quot;, Subestado &quot;Fin de Journey&quot; y Estado del paciente &quot;Fin de tratamiento&quot; y &quot;No tratamiento&quot; --} No se generan mas tareas (Fin del flujo)
+Si la tarea &quot;Paciente en Tratamiento Alergia&quot; se cierra como&quot; completa y el estado del paciente es &quot;En Seguimiento&quot; se generara tarea:</description>
+        <name>Decision_final</name>
+        <label>Decision final</label>
+        <locationX>668</locationX>
+        <locationY>490</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Si_el_estado_del_paciente_es_En_Tratamiento</name>
+            <conditionLogic>1 AND  (2 OR 3) AND (4 AND 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completa</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Estado_de_paciente__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>No tratamiento</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Estado_de_paciente__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Fin de tratamiento</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Estado_de_paciente__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>En tratamiento</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Subestado_del_paciente__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Fin de Journey</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Si el estado del paciente es &quot;En Tratamiento&quot;</label>
+        </rules>
+        <rules>
+            <name>Si_el_estado_del_paciente_es_en_seguimient</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Completa</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Estado_de_paciente__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>En Seguimiento</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Paciente_en_seguimiento_Alergia</targetReference>
+            </connector>
+            <label>Si el estado del paciente es &quot;en seguimient&quot;</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>Cierremensual</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() + 30</expression>
+    </formulas>
+    <formulas>
+        <name>cierrequincenal</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() + 15</expression>
+    </formulas>
+    <interviewLabel>Alta paciente via web {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Seguimiento tratamiento2.0</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Paciente_en_seguimiento_Alergia</name>
+        <label>Paciente en seguimiento Alergia</label>
+        <locationX>966</locationX>
+        <locationY>550</locationY>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>cierrequincenal</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G1I00000247RQ</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>0121I000001BtZTQA0</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Paciente en seguimiento Alergia</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Paciente_en_tratamiento_Alergia</name>
+        <label>Paciente en tratamiento Alergia</label>
+        <locationX>471</locationX>
+        <locationY>403</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Decision_final</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Task</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Paciente_en_tratamiento_Alergia</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>344</locationX>
+        <locationY>54</locationY>
+        <connector>
+            <targetReference>Paciente_en_tratamiento_Alergia</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completa</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Area_Terapeutica__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Alergia</stringValue>
+            </value>
+        </filters>
+        <object>Task</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

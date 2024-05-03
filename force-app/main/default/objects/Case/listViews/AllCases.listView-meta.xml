@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllCases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.RECORDTYPE</columns>
+    <columns>Subtipo__c</columns>
+    <columns>Motivo__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.CASE_NUMBER</field>
+        <operation>equals</operation>
+        <value>00009714 00009762 00010149 00010182 00010183 00010261 00010262 00010274 00010276 00010277 00010280 00010285 00010302 00010305 00010307 00010323 00010325 00010326 00010327</value>
+    </filters>
+    <label>Todos los casos</label>
+</ListView>

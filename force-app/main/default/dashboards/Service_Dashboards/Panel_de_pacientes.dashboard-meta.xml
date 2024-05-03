@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <isGridLayout>false</isGridLayout>
+    <leftSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Donut</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingSortProperties/>
+            <legendPosition>Bottom</legendPosition>
+            <report>Informes_de_Supervisor_PSP/Pacientes_por_tipo</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>false</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Pacientes por tipo</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingSortProperties/>
+            <legendPosition>Bottom</legendPosition>
+            <report>Informes_de_Supervisor_PSP/Pacientes_por_area_terapeturica</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Pacientes por área terapéutica</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Pie</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <groupingSortProperties/>
+            <legendPosition>Bottom</legendPosition>
+            <report>Informes_de_Supervisor_PSP/Pacientes_por_estado</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Pacientes por estado</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </rightSection>
+    <runningUser>danone@xappia.com</runningUser>
+    <textColor>#000000</textColor>
+    <title>Panel de pacientes</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

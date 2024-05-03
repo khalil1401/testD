@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conoce_nuestras_redes_sociales__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Conoce nuestras redes sociales?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Si, conozco y sigo</fullName>
+                <default>false</default>
+                <label>Si, conozco y sigo</label>
+            </value>
+            <value>
+                <fullName>Si, conozco pero no sigo</fullName>
+                <default>false</default>
+                <label>Si, conozco pero no sigo</label>
+            </value>
+            <value>
+                <fullName>No conozco</fullName>
+                <default>false</default>
+                <label>No conozco</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

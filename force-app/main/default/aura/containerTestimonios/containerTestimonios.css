@@ -1,0 +1,33 @@
+.THIS {
+}
+
+.THIS .slds-carousel__panel-action {
+    border: none;
+}
+
+.THIS .slds-carousel__image {
+    max-height: 80px;
+    min-height: 80px;
+    max-width: 80px;
+    min-width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 50%;
+}
+
+.THIS .slds-carousel__content {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.THIS .slds-carousel__indicators {
+	display: none;
+}
+
+.THIS .slds-carousel__autoplay {
+	display: none;
+}

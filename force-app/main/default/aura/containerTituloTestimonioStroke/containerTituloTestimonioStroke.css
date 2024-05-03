@@ -1,0 +1,61 @@
+.THIS {
+}
+
+.THIS .tituloTestimonioS {
+    font-family: NunitoSemiBold;
+    font-size: 2.0911458542448003em;
+    line-height: 1.2em;
+    color: white;
+    text-align: center;
+}
+
+.THIS .textoTestimonioS {
+    font-family: NunitoSemiBold;
+    font-size: 1.840208351735424em;
+    line-height: 1.2em;
+    color: white;
+    text-align: center;
+}
+
+.THIS .flechaIzqTestimonioS {
+    padding-right: 6%;
+}
+
+.THIS .flechaDerTestimonioS {
+    padding-right: 6%;
+    transform: scaleX(-1) scaleY(-1);
+}
+
+.THIS .sinFlechaIzqTestimonioS {
+    padding-right: 6%;
+}
+
+.THIS .sinFlechaDerTestimonioS {
+    padding-right: 6%;
+    transform: scaleX(-1) scaleY(-1);
+}
+
+@media (max-width: 600px) {
+    .THIS .flechaIzqTestimonioS {
+        padding-left: 1%;
+        padding-right: 1%;
+        width: 15% !important;
+    }
+    
+    .THIS .flechaDerTestimonioS {
+        padding-left: 1%;
+        padding-right: 1%;
+        width: 15% !important;
+    }
+
+    .THIS .sinFlechaIzqTestimonioS, .THIS .sinFlechaDerTestimonioS{
+        display: none;
+    }
+
+    .THIS .textoTestimonioS {
+        font-size: 1.338333346716672em;
+        line-height: 1.338333346716672em;
+        padding-left: 7%;
+        padding-right: 7%;
+    }    
+}

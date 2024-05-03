@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Best_Care</letterhead>
+    <name>Nuevo caso general</name>
+    <style>freeForm</style>
+    <subject>Nuevo caso de {!Case.RecordType}</subject>
+    <textOnly>Estimado,
+
+Ha ingresado un nuevo caso de {!Case.RecordType} con los siguientes datos:
+
+Motivo: {!Case.Reason}
+
+Asunto: {!Case.Subject}
+
+Descripción: {!Case.Description}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

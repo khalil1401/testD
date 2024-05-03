@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Podr_a_indicar_porque_no_va_a_continuar__c</fullName>
+    <externalId>false</externalId>
+    <label>Podría indicar porque no va a continuar?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Va_a_continuar_el_apoyo_nutricional__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Problemas de tolerancia</fullName>
+                <default>false</default>
+                <label>Problemas de tolerancia</label>
+            </value>
+            <value>
+                <fullName>Problemas asociados al gusto</fullName>
+                <default>false</default>
+                <label>Problemas asociados al gusto</label>
+            </value>
+            <value>
+                <fullName>Se rehúsa</fullName>
+                <default>false</default>
+                <label>Se rehúsa</label>
+            </value>
+            <value>
+                <fullName>Problemas de acceso</fullName>
+                <default>false</default>
+                <label>Problemas de acceso</label>
+            </value>
+            <value>
+                <fullName>Cambios de Indicación médica</fullName>
+                <default>false</default>
+                <label>Cambios de Indicación médica</label>
+            </value>
+            <value>
+                <fullName>Continua con el tratamiento</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Continua con el tratamiento</label>
+            </value>
+            <value>
+                <fullName>No cuenta con indicación médica</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No cuenta con indicación médica</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Problemas de tolerancia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Problemas asociados al gusto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Se rehúsa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Problemas de acceso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>Cambios de Indicación médica</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

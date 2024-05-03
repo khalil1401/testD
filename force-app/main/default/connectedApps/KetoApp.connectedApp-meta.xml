@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>alejo.carpenzano@globant.com</contactEmail>
+    <label>KetoApp</label>
+    <oauthConfig>
+        <callbackUrl>https://www.google.com/</callbackUrl>
+        <consumerKey>3MVG9Gmy2zmPB01ovTqJVAdHhfxIr01HVaTdB3qgwKl2yUSbXTxJAiSd1ImcwAZQFIiFlKQVm_17H8A9uP6r_</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

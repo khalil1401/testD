@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perfil_de_Paciente_Regular__c</fullName>
+    <description>Perfiles para relacionar con el área terapéutica correspondiente de cada usuario.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Perfil de Paciente Regular</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Paciente Terapia Cetogénica</fullName>
+                <default>true</default>
+                <label>Paciente Terapia Cetogénica</label>
+            </value>
+            <value>
+                <fullName>Paciente Alergia</fullName>
+                <default>false</default>
+                <label>Paciente Alergia</label>
+            </value>
+            <value>
+                <fullName>Paciente Oncología</fullName>
+                <default>false</default>
+                <label>Paciente Oncología</label>
+            </value>
+            <value>
+                <fullName>Paciente Desafíos del crecimiento</fullName>
+                <default>false</default>
+                <label>Paciente Desafíos del crecimiento</label>
+            </value>
+            <value>
+                <fullName>Paciente Digestivos</fullName>
+                <default>false</default>
+                <label>Paciente Digestivos</label>
+            </value>
+            <value>
+                <fullName>Paciente Metabólicos</fullName>
+                <default>false</default>
+                <label>Paciente Metabólicos</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

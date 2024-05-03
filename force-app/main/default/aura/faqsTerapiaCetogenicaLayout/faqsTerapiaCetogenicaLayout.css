@@ -1,0 +1,29 @@
+.THIS {
+}
+
+.THIS .div-faq-tc-layout{
+    width: 100%;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+@media (max-width: 1600px){
+    .THIS .div-faq-tc-layout{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 1300px){
+    .THIS .div-faq-tc-layout{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 600px){
+    .THIS .div-faq-tc-layout{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}

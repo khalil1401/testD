@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Clasificaci_n_seg_n_CIE_10__c</name>
+    <picklistValues>
+        <masterLabel>Otros</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tumor cabeza y cuello</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tumor colon-recto</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tumor de  órganos genitales femeninos (útero, ovario, vagina)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tumor de mama</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tumor de pulmón</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tumor de vías urinarias (riñón, vejiga)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tumor de órganos genitales masculinos (testículo, próstata, pene)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tumor del tejido linfático y órganos hematopoyéticos (leucemias, linfomas, mieloma múltiple)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tumores del gastrointestinal superior y glándulas anexas</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

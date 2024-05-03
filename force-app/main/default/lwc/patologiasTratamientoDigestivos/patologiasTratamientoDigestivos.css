@@ -1,0 +1,163 @@
+.container-patologias-dig {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.title-patologias-dig {
+    font-family: MontserratSemiBold;
+    font-size: 26px;
+    line-height: 30px;
+    color: #606060;
+}
+
+.linea-patologias-dig {
+    border-top: 1px solid #606060;
+    width:100px;
+    margin-top: 26px;
+}
+
+.button-patologias-dig {
+    width: 95%;
+    height: 81px;
+    border-radius: 10px;
+    background-color: #EBEBEB;
+    color: #606060;
+    font-family: MontserratSemiBold;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.button-patologias-dig:hover {
+    background: transparent linear-gradient(180deg, #6552AC 0%, #7970CEF0 43%, #777BCF 81%, #7583D0 100%) 0% 0% no-repeat padding-box;
+    color: white;
+    cursor: pointer;
+}
+
+.container-details-patologias-dig {
+    background-color: #EBEBEB;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.left-arrow {
+    display: none;
+}
+
+.right-arrow {
+    display: none;
+}
+
+.title-montbold-patologias-dig {
+    font-family: MontserratBlack;
+    font-size: 20pt;
+    line-height: 30pt;
+    color: #3DC6F0;
+}
+
+.title-montsemibold-patologias-dig {
+    font-family: MontserratSemiBold;
+    font-size: 18pt;
+    line-height: 22pt;
+    color: #3DC6F0;
+}
+
+.text-patologias-dig {
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: #606060;
+}
+
+.top-container-details-patologias-dig {
+    background: transparent linear-gradient(180deg, #6552AC 0%, #7970CEF0 43%, #777BCF 81%, #7583D0 100%) 0% 0% no-repeat padding-box;
+    border-radius: 25px 50px 0px 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25%;
+    padding-right: 25%;
+    height: 70px;
+}
+
+.center-container-details-patologias-dig {
+    background: transparent linear-gradient(180deg, #6552AC 0%, #7970CEF0 43%, #777BCF 81%, #7583D0 100%) 0% 0% no-repeat padding-box;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.bottom-container-details-patologias-dig {
+    background: transparent linear-gradient(180deg, #6552AC 0%, #7970CEF0 43%, #777BCF 81%, #7583D0 100%) 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 50px 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.img-patologias-tratamiento {
+    position: absolute; 
+    width: 75px; 
+    top: -2.5px;
+    left: -15px;
+}
+
+@media (min-width: 768px) {
+    .container-patologias-dig {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .container-details-patologias-dig {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .left-arrow {
+        display: initial;
+        position: absolute;
+        left: 5%;
+        top: 300px;
+        cursor: pointer;
+    }
+    
+    .right-arrow {
+        display: initial;
+        position: absolute;
+        right: 5%; 
+        top: 300px;
+        cursor: pointer;
+    }
+
+    .title-montbold-patologias-dig {
+        font-size: 50px;
+        line-height: 70.28px;
+    }
+
+    .title-violet-patologias-ddc {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .text-patologias-dig {
+        color: white;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .top-container-details-patologias-dig {
+        border-radius: 0px 50px 0px 0px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 10%;
+        padding-right: 10%;
+        height: auto;
+    }
+
+    .img-patologias-tratamiento {
+        width: 150px; 
+        left: -75px;
+        top: -25px;    
+    }    
+}

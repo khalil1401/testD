@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consume_formula_en_formatos_para_llevar__c</fullName>
+    <externalId>false</externalId>
+    <label>Consume formula en formatos para llevar</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SI</fullName>
+                <default>false</default>
+                <label>SI</label>
+            </value>
+            <value>
+                <fullName>NO</fullName>
+                <default>false</default>
+                <label>NO</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

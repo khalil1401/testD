@@ -1,0 +1,6 @@
+<design:component >
+
+    <design:attribute name="titulo" label="Titulo de componente"/>
+    <design:attribute name="containerTexto" label="Componente de texto"/>
+
+</design:component>

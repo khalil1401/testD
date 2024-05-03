@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modulo_reservado</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(OR(ISPICKVAL(Estado_de_modulo__c, &apos;Procesado&apos;),
+ISPICKVAL(Estado_de_modulo__c, &apos;Reservado&apos;),
+ISPICKVAL(Estado_de_modulo__c, &apos;Rechazado&apos;),
+ISPICKVAL(Estado_de_modulo__c, &apos;Manual&apos;),
+ISPICKVAL(Estado_de_modulo__c, &apos;Cancelado&apos;))
+,
+AND (NOT (LastModifiedDate &lt;&gt; LastModifiedDate),
+OR (
+AND(NOT (ISCHANGED (Estado_de_modulo__c)),
+NOT (ISCHANGED (Numero_de_orden_SAP__c)),
+NOT(ISCHANGED (Estado__c)))
+)),null)</errorConditionFormula>
+    <errorMessage>No se puede modificar un modulo de paciente reservado</errorMessage>
+</ValidationRule>

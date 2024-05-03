@@ -1,0 +1,94 @@
+.containerDescripcionRecetaDesktop{
+    display: initial;
+}
+
+.containerDescripcionRecetaMobile{
+    display: none;
+}
+
+.container-titulo-receta{
+    width: 100%;
+    background-color: #3DC3D6;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.video-receta{
+    border-radius: 10px;
+}
+
+.titulo-receta{
+    font-family: MontserratSemiBold;
+    font-size: 24px;
+    color: white;
+}
+
+.titulos-ingredientes{
+    font-family: MontserratSemiBold;
+    font-size: 22px;
+    color:#58368C;
+}
+
+.container-ingredientes{
+    box-shadow: 0px 5px 5px #ebebeb;
+    padding: 1%;
+    border-radius: 10px 10px 10px 10px;
+    height: 350px;
+}
+
+.container-preparacion{
+    box-shadow: 0px 5px 5px #ebebeb;
+    padding: 1%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.div-aviso-importante{
+    background-color: #58368C;
+    border-radius: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.titulo-aviso-importante{
+    font-family: MontserratSemiBold;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.texto-aviso-importante{
+    font-family: MontserratSemiBold;
+    font-size: 1rem;
+    color: white;
+}
+
+.textos-ingredientes{
+    font-family: MontserratRegular;
+    font-size: 16px;
+    color:#606060;
+    line-height: 24px;
+}
+
+.slds-scrollable::-webkit-scrollbar{
+    display: none;
+}
+
+.img-receta-tc{
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    width: 95%;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .video-receta{
+        width: 100% !important;
+        height: 350px;
+    }
+
+    .container-ingredientes{
+        padding-top: 7.5%;
+        height: auto;
+    }    
+}

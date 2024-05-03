@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Instituto_donde_ejerce_1__c</name>
+    <picklistValues>
+        <masterLabel>Instituto 1</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Instituto 2</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Instituto 3</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

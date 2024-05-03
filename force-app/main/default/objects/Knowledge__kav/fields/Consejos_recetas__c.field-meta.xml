@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consejos_recetas__c</fullName>
+    <description>consejos de recetas oncologia portal pacientes</description>
+    <externalId>false</externalId>
+    <label>Consejos recetas</label>
+    <length>32768</length>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consum_a_otra_marca_etapa_anteriormente__c</fullName>
+    <externalId>false</externalId>
+    <label>Consumía otra marca/etapa anteriormente?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,48 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="patologias" type="Object[]"/>
+    <aura:attribute name="isRegular" type="Boolean"/>
+    <aura:attribute name="isPrivate" type="Boolean"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:navigation aura:id="navService"/>
+
+    <div class="desktop" style="display: none;" id="nav-patologias-nsj">
+        <div class="nav-patologias-nsj-desktop">
+            <div class="slds-grid slds-wrap slds-grid_vertical-align-center div-patologias">
+                <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1" style="background-color: transparent;">
+                    <table class="slds-align_absolute-center" onmouseleave="{!c.hideNav}">
+                        <tr>
+                            <aura:iteration items="{!v.patologias}" var="patologia">
+                                <td
+                                    class="{!patologia.class}"
+                                    data-id="{!patologia.dataId}" 
+                                    id="{!patologia.id}"
+                                    onclick="{!c.goTo}">
+                                    <span class="text-patologia">{!patologia.label}</span>
+                                </td>
+                            </aura:iteration>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="nav-patologias-nsj-tablet">
+            <div class="div-patologias">
+                <aura:iteration items="{!v.patologias}" var="patologia">
+                    <div 
+                        class="td-patologia slds-align_absolute-center"
+                        data-id="{!patologia.dataId}"
+                        id="{!patologia.idTablet}"
+                        onclick="{!c.goTo}">
+                        <span class="text-patologia">{!patologia.label}</span>
+                    </div>
+                </aura:iteration>
+            </div>
+        </div>
+    </div>
+    <!--Menu de botonera mobile-->
+    <c:menuBotoneraNSJ></c:menuBotoneraNSJ>
+    <!--Menu de Profile para Usuario mobile-->
+    <c:modalProfileMenuUserNSJ></c:modalProfileMenuUserNSJ>
+</aura:component>

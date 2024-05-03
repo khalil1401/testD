@@ -1,0 +1,20 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+	<aura:attribute name="recursoEstatico" type="String" default="Oncologia_Landing_Home"/>
+	<aura:attribute name="recursoEstaticoMobile" type="String" default="Oncologia_Landing_Home"/>
+	<aura:attribute name="apiName" type="String"/>
+	<aura:attribute name="altoMaximo" type="String"/>
+	<aura:attribute name="altoMinimo" type="String"/>
+
+    <lightning:navigation aura:id="navService"/>
+
+    <div class="desktop">
+        <img src="{!v.recursoEstatico}" alt="img-seccion"
+            style="width: 100%;" onclick="{!c.redirect}"/>
+    </div>
+    <div class="mobile">
+        <img src="{!v.recursoEstaticoMobile}" alt="img-seccion"
+            style="width: 100%;" onclick="{!c.redirect}"/>
+    </div>
+
+</aura:component>

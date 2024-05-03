@@ -1,0 +1,98 @@
+<aura:component implements="forceCommunity:layout">
+
+    <aura:attribute name="container1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container2" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container3" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container4" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container5" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container6" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container7" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container8" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container9" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container10" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container11" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container12" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container13" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container14" type="Aura.Component[]" required="false"/>
+
+    <aura:attribute name="privado" type="String" default="false"/>
+
+    <lightning:navigation aura:id="navService"/>
+
+    <div class="slds-col slds-size_1-of-1">
+        {!v.container1}
+    </div>
+
+    <div class="slds-col slds-size_1-of-1">
+        {!v.container14}
+    </div>
+
+    <div class="slds-col slds-size_1-of-1">
+        {!v.container2}
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+        <div class="disgeusia-on-layout">
+            {!v.container3}
+        </div>
+    </div>
+    
+    <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+        <div class="disgeusia-on-layout">
+            {!v.container4}
+        </div>
+    </div>
+    
+    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+        <div class="disgeusia-on-layout">
+            {!v.container5}
+        </div>
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+        {!v.container6}
+    </div>
+    
+    <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+        <div class="disgeusia-on-layout">
+            {!v.container7}
+        </div>
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-align_absolute-center">
+        <c:botonProductoOncologia
+            text="CONOCÉ DE QUÉ MANERA PODEMOS AYUDARTE"
+            buttonId="productos_oncologia__c"
+            typeRedirect="comm__namedPage"
+            classTag="button-bpo-lr"
+            onsenddata="{!c.clickButton}">
+        </c:botonProductoOncologia>
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+        <div class="disgeusia-on-layout">
+            {!v.container9}
+        </div>
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+        <div class="disgeusia-on-layout">
+            {!v.container10}
+        </div>
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+        <div class="disgeusia-on-layout">
+            {!v.container11}
+        </div>
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+        {!v.container12}
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large slds-text-align_center">
+        {!v.container13}
+    </div>
+
+</aura:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_mas_de_50_caracteres_en_campo_calle</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( OR(RecordType.Name =&apos;Paciente Regular&apos;,
+RecordType.Name =&apos;Paciente Best Care&apos;),
+
+LEN(Calle__c) &gt;50
+
+)</errorConditionFormula>
+    <errorDisplayField>Calle__c</errorDisplayField>
+    <errorMessage>Error. No puede ingresar mas de 50 caracteres.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_cargar_pedido_a_cliente_inactiva</fullName>
+    <active>false</active>
+    <description>Solo se le puede cargar un pedido a un cliente con status = &apos;A&apos;</description>
+    <errorConditionFormula>Account.Parent.Status__c &lt;&gt; &apos;A&apos;</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>El cliente al cual corresponde la sucursal seleccionada no está activado. No es posible cargarle un pedido.</errorMessage>
+</ValidationRule>

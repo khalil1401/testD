@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Consentimiento_digital</fullName>
+        <description>Consentimiento digital HC</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email_del_paciente__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Invitacion_para_consentimiento_digital</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Nombre_de_formulario_nuevo</fullName>
+        <field>Name</field>
+        <formula>IF(NOT(ISBLANK(Nombre_y_Apellido_del_Paciente__c)),  
+Nombre_y_Apellido_del_Paciente__r.FirstName + &apos; &apos; + Nombre_y_Apellido_del_Paciente__r.LastName,
+Caso__r.Account.FirstName + &apos; &apos; + Caso__r.Account.LastName
+)
+
+
+
++&quot; - &quot;+RecordType.Name  + &quot; - &quot;+ 
+CASE(
+MONTH(TODAY()), 
+1, &quot;Enero&quot;,
+2, &quot;Febrero&quot;,
+3, &quot;Marzo&quot;, 
+4, &quot;Abril&quot;, 
+5, &quot;Mayo&quot;, 
+6, &quot;Junio&quot;,
+7, &quot;Julio&quot;,
+8, &quot;Agosto&quot;,
+9, &quot;Septiembre&quot;,
+10, &quot;Octubre&quot;,
+11, &quot;Noviembre&quot;,
+12, &quot;Diciembre&quot;,
+&quot;None&quot;
+)+ &quot; &quot;+TEXT(YEAR(TODAY()))</formula>
+        <name>Nombre de formulario nuevo</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Nombre de Historia Clinica</fullName>
+        <actions>
+            <name>Nombre_de_formulario_nuevo</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>true</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>diego-gabriel.garcia@danone.com</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>maria-catalina.alonso@danone.com</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>nicolas.feniger@danone.com</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <name>Comercial Excellence</name>
+</ReportFolder>

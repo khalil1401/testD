@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nivel_de_instruccion__c</fullName>
+    <externalId>false</externalId>
+    <label>Nivel de instrucción</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Primaria completo</fullName>
+                <default>false</default>
+                <label>Primaria completo</label>
+            </value>
+            <value>
+                <fullName>Primaria incompleto</fullName>
+                <default>false</default>
+                <label>Primaria incompleto</label>
+            </value>
+            <value>
+                <fullName>Secundario completo</fullName>
+                <default>false</default>
+                <label>Secundario completo</label>
+            </value>
+            <value>
+                <fullName>Secundario incompleto</fullName>
+                <default>false</default>
+                <label>Secundario incompleto</label>
+            </value>
+            <value>
+                <fullName>Universitario/terciario completo</fullName>
+                <default>false</default>
+                <label>Universitario/terciario completo</label>
+            </value>
+            <value>
+                <fullName>Universitario/terciario incompleto</fullName>
+                <default>false</default>
+                <label>Universitario/terciario incompleto</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

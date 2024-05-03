@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tratamiento_Regular</fullName>
+    <active>true</active>
+    <label>Tratamiento Regular</label>
+    <picklistValues>
+        <picklist>Alimentacion__c</picklist>
+        <values>
+            <fullName>SNE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Area_terapeutica__c</picklist>
+        <values>
+            <fullName>Alergia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desafíos del crecimiento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dieta Cetogénica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digestivos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metabólicos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oncología</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Condicion_frente_al_IVA__c</picklist>
+        <values>
+            <fullName>Excento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inscripto %28gravado%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Consejeria_Nutricional__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Si</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Desafio__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sí</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Diagnostico__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Si</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Documentacion__c</picklist>
+        <values>
+            <fullName>Cupón kit de inicio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Historia clínica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receta</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estado__c</picklist>
+        <values>
+            <fullName>Ambulatorio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internación</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Herramienta_Screening_Nutricional__c</picklist>
+        <values>
+            <fullName>PNRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PYMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SGNA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STAMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STRONG</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Motivo_De_Kit__c</picklist>
+        <values>
+            <fullName>Prueba de diagnóstico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tolerancia</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Nivel_Secuelado__c</picklist>
+        <values>
+            <fullName>Alto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bajo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Patologia__c</picklist>
+        <values>
+            <fullName>ACV Hemorragíco %28Accidente cerebrovascular%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ACV Isquemico %28Accidente cerebrovascular%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Abetalipoproteinemia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Acidemia metilmalonica%2Fpropionica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aciduria Arginosucinica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aciduria Glutarica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adrenoleucodistrofia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alergia a la Proteina de leche de vaca %28APLV%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alzheirmer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anorexia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bajo peso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulimia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cirrosis Hepatica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cirugía Gastrointestinal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cirugía de cabeza y cuello</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complejos Mitocondriales tipo 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cáncer de origen primario desconocido</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DGG %28Deficiencia de Glucosa%2FGalactosa%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deficiencia de piruvato deshidrogenasa %28PDH%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deficiencia del transportador de Glucosa %28GLUT 1%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demencia otros tipos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Demencia senil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desnutrición</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Desnutrición Asociada a enfermedad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deterioro cognitivo crónico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diabetes %28DBT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encefalitis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Encefalopatía crónica no evolutiva %28ECNE%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enfermedad obstructiva Crónica %28EPOC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Epilepsia Refractaria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Esclerosis Tuberosa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Esclerosis lateral amiotrófica %28ELA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Esofagitis Eosinofílica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Espasmos Infantiles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fenilcetonuria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fibrosis Quistica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glut 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HCU %28Homocistinuria%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HiperFeninananemia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hiperamonemia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hiporexia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IVA %28Acidemia Isovalérica%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Infección febril relacionada con la epilepsia %28FIRES%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insuficiencia cardiaca</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insuficiencia renal Aguda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insuficiencia renal Crónica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jarabe de Arce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Linfagiectasia intestinal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meninguitis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neumonia Adquirida de la comunidad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neumonia Aspirativa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neumonia Intrahospitalaria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No puede amamantar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oncohematologicos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Otras enfermedades</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paralisis Cerebral %28PC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parkinson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prematuro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quilotórax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reflujo gastroesofágico %28ERGE%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retraso madurativo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEIPA %28Síndrome de enterocolítis inducida por proteinas alimentarias%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secuela neurológica quirúrgica%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sindrome de Down</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sindrome de intestino corto %28SIC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sindrome de mala absorción</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Status epiléptico super-refractario</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Síndrome de Angelman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Síndrome de Doose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Síndrome de Dravet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Síndrome de Lennox-Gastaut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Síndrome de Ohtahara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Síndrome de Smith</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Síndrome de West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Síndrome mal absortivo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tirosinemia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transplante hepático</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trastornos deglutorios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traumatismo de craneo secuelar  %28TEC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tumor Osteomuscular</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tumor cerebral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tumor de piel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tumor del Aparato Respiratorio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tumor del Aparato digestivo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UCD %28Trastorno Ciclo de la Urea%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>cirugía Aparato genitourinario</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>tumor Ginecologico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>tumor de cabeza y cuello</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>tumor urológico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>tumor vias urinarias</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Resultado_Screening_Nutricional__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>S_ntomas__c</picklist>
+        <values>
+            <fullName>Llanto persistente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Postura de Sandifer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pérdida de peso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regurgitación</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vómitos</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Screening_Nutricional__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Si</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_Obra_Social__c</picklist>
+        <values>
+            <fullName>Obra Social Nacional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Obra Social Provincial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prepaga</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_diagnostico__c</picklist>
+        <values>
+            <fullName>Agudo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crónico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paleativo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Ciclo__c$Name</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c.Interacciones__r$Name</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c.Interacciones__r$Profesional_de_la_salud__c</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c.Interacciones__r$Fecha__c</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c.Interacciones__r$Tipo_de_visita__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Ciclo__c$Total_de_visitas_realizadas__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Ciclo__c$Owner</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Cecilia Kramarczuk</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Visitas x ciclo - Cecilia Kramarczuk</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Ciclos_con_interacciones__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Ciclo__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

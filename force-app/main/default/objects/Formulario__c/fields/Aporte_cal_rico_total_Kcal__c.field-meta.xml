@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aporte_cal_rico_total_Kcal__c</fullName>
+    <externalId>false</externalId>
+    <formula>Aporte_cal_rico_enteral_Kcal_d_a__c + Aporte_v_a_oral_Kcal__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Aporte calórico total (Kcal/día)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

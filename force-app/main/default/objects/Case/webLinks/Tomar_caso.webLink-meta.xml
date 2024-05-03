@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tomar_caso</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Tomar caso</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/connection.js&quot;)} 
+var caseObj = new sforce.SObject(&quot;Case&quot;); 
+var previousOwner = &quot;{!Case.OwnerId}&quot;; 
+var currentOwner = &quot;{!$User.Id}&quot;; 
+caseObj.Id = &quot;{!Case.Id}&quot;; 
+caseObj.OwnerId = &quot;{!$User.Id}&quot;; 
+caseObj.Status = &apos;Nuevo&apos;;
+
+//if previousOwner is queue 
+var ownerRec = sforce.connection.query(&quot;SELECT owner.type, ownerid, Id from Case where owner.type= &apos;Queue&apos; AND OwnerId=&apos;&quot;+ previousOwner + &quot;&apos; AND Id=&apos;&quot; + caseObj.Id + &quot;&apos;&quot;); 
+var records1 = ownerRec.getArray(&apos;records&apos;);
+if(records1 !=null &amp;&amp; records1.length&gt;0)
+{   
+    //currentOwner is part of queue
+    var currentOwnerRec = sforce.connection.query(&quot;SELECT g.UserOrGroupId From GroupMember g WHERE groupId =&apos;&quot; + previousOwner + &quot;&apos; AND g.UserOrGroupId =&apos;&quot; + currentOwner + &quot;&apos;&quot;);
+    var records2 = currentOwnerRec.getArray(&apos;records&apos;);
+
+    if(records2 !=null &amp;&amp; records2.length&gt;0)
+    {
+        var result = sforce.connection.update([caseObj]);   
+        location.reload();  
+    }
+    else
+    {
+        alert(&quot;No puedes tomar este caso porque no eres parte de esta cola de trabajo&quot;);
+    }
+}
+if(previousOwner == currentOwner) 
+{   
+    alert(&quot;Ya eres el propietario del caso&quot;);   
+}</url>
+</WebLink>

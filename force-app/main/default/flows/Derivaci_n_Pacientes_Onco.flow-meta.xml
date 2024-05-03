@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Derivación Pacientes Onco {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Derivación Pacientes Onco</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Derivaci_n_Pacientes_Onco</name>
+        <label>Derivación Pacientes Onco</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>0058W00000DvmQ9QAJ</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Abierta</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Derivación Pacientes Onco</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Derivaci_n_Pacientes_Onco</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+</Flow>

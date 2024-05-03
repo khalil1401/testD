@@ -1,0 +1,19 @@
+<design:component >
+
+    <design:attribute name="altoMaximo" label="Alto máximo para Header en px"/>
+    <design:attribute name="altoMinimo" label="Alto máximo para Header en px"/>
+    <design:attribute name="recursoEstatico" label="Nombre de recurso estático para la imagen de fondo"/>
+    <design:attribute name="luminosidad" label="Luminosidad de imagen de fondo (de 0.1 a 1)"/>
+    <design:attribute name="tituloHeader" label="Título de Header"/>
+    <design:attribute name="cuerpoHeader" label="Cuerpo de Header"/>
+
+    <design:attribute name="isFacebook" label="Activar Facebook"/>
+    <design:attribute name="linkToFacebook" label="Link a Facebook"/>
+    <design:attribute name="isYoutube" label="Activar Youtube"/>
+    <design:attribute name="linkToYoutube" label="Link a Youtube"/>
+    <design:attribute name="isInstagram" label="Activar Instagram"/>
+    <design:attribute name="linkToInstagram" label="Link a Instagram"/>
+    <design:attribute name="isTwitter" label="Activar Twitter"/>
+    <design:attribute name="linkToTwitter" label="Link a Twitter"/>
+
+</design:component>

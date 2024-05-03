@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internacion_blockeada</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+				 AND($Profile.Name &lt;&gt; &quot;Administrador del sistema&quot;,
+					$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+				 LastModifiedDate ==LastModifiedDate,
+			  NOT(ISNULL(Fecha_de_Fin_Internaci_n__c)),
+					Closed_by_VF__c ==false )
+				,									 
+				AND($Profile.Name &lt;&gt; &quot;Administrador del sistema&quot;,
+				$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+				PRIORVALUE(Closed_by_VF__c)== true, 
+				Closed_by_VF__c ==true,
+				LastModifiedDate ==LastModifiedDate,
+				NOT(ISNULL(Fecha_de_Fin_Internaci_n__c)))
+)</errorConditionFormula>
+    <errorMessage>No se puede modificar una internación cerrada.</errorMessage>
+</ValidationRule>

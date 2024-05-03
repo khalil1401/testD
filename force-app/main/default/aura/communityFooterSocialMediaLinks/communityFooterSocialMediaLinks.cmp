@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+	<aura:attribute name="linkTo" type="String"/>
+    <aura:attribute name="staticResourceName" type="String"/>
+    <aura:attribute name="staticResourcePath" type="String"/>
+
+	<div class="slds-p-around_xx-small">
+        <a href="www.google.com" target="_blank">
+            <img src="{! v.staticResourceName + v.staticResourcePath }"
+                    style="width:20px; height:20px; "/>
+        </a>
+    </div>
+</aura:component>

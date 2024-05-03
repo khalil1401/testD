@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cargo_dentro_de_la_institucion__c</fullName>
+    <externalId>false</externalId>
+    <label>Cargo dentro de la institución</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Gerente</fullName>
+                <default>false</default>
+                <label>Gerente</label>
+            </value>
+            <value>
+                <fullName>Jefe</fullName>
+                <default>false</default>
+                <label>Jefe</label>
+            </value>
+            <value>
+                <fullName>Personal Administrativo</fullName>
+                <default>false</default>
+                <label>Personal Administrativo</label>
+            </value>
+            <value>
+                <fullName>Referente</fullName>
+                <default>false</default>
+                <label>Referente</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

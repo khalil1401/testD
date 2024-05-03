@@ -1,0 +1,9 @@
+<design:component >
+
+    <design:attribute name="texto" label="Texto de información del contenedor"/>
+    <design:attribute name="backgroundColor" label="Color de fondo del contenedor"/>
+    <design:attribute name="padding" label="Padding del contenedor"/>
+    <design:attribute name="borderRadius" label="Radio de borde en px"/>
+    <design:attribute name="textColor" label="Colo de texto"/>
+
+</design:component>

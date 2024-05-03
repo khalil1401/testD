@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Objeto_Fallido__c</fullName>
+    <description>Objeto donde ocurrió el error</description>
+    <externalId>false</externalId>
+    <label>Objeto Fallido</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

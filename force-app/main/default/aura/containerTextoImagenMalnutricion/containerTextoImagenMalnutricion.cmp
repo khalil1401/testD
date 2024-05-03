@@ -1,0 +1,60 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="rutaImagen" type="String"/>
+    <aura:attribute name="rutaImagenFondo" type="String"/>
+    <aura:attribute name="textoHTML" type="String"/>
+    <aura:attribute name="claseImagenInterna" type="String" default="imagen-interna"/>
+    <aura:attribute name="apiName" type="String"/>
+
+    <lightning:navigation aura:id="navService"/>
+
+    <div>
+        <div class="desktop">
+            <div class="slds-grid slds-wrap slds-grid_vertical-align-center border-radius"
+                style="{!'background-image: url('+ v.rutaImagenFondo +');
+                        background-position: center;
+                        background-repeat: repeat-y;
+                        position: relative;
+                        height: 450px;'}">
+                <div class="slds-col slds-medium-size_6-of-12">
+                    <div class="div-izq-fondo">
+                        <aura:unescapedHtml value="{!v.textoHTML}"/>
+                        <div class="slds-m-top_medium">
+                            <span class="container-boton-malnutricion boton-malnutricion" onclick="{!c.redireccionar}">
+                                VIDA SALUDABLE
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_6-of-12 div-der-fondo">
+                    <div class="div-der-fondo">
+                        <img src="{!v.rutaImagen}" class="{!v.claseImagenInterna}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="slds-grid slds-wrap slds-grid_vertical-align-center border-radius container-moobile"
+                style="{!'background-image: url('+ v.rutaImagenFondo +');
+                        background-position: center;
+                        background-repeat: repeat-y;'}">
+                <div class="div-der-fondo">
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                        <aura:unescapedHtml value="{!v.textoHTML}"/>
+                        <div class="slds-m-top_large">
+                            <span class="container-boton-malnutricion boton-malnutricion" onclick="{!c.redireccionar}">
+                                VIDA SALUDABLE
+                            </span>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                        <div class="slds-align_absolute-center">
+                            <img src="{!v.rutaImagen}" class="imagen-abajo-derecha-mobile"/>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+</aura:component>

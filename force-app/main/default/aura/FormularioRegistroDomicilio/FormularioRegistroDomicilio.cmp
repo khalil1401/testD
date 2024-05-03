@@ -1,0 +1,152 @@
+<aura:component controller="FormularioRegistroController" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="account" type="Account"/>
+    <aura:attribute name="trackForm" type="Track_Solicitud_Kit_de_Inicio__c"/>
+    <aura:attribute name="area" type="String"/>
+
+    <aura:attribute name="calle" type="String"/>
+    <aura:attribute name="altura" type="String"/>
+    <aura:attribute name="piso" type="String"/>
+    <aura:attribute name="dpto" type="String"/>
+    <!-- Atributos para Phone -->
+    <aura:attribute name="municipioSeleccionado" type="Boolean"/>
+    <aura:attribute name="provincia" type="String"/>
+    <aura:attribute name="provincias" type="Municipio__c"/>
+    <aura:attribute name="optionsProvincias" type="List" default="[]"/>
+    <aura:attribute name="municipio" type="String"/>
+    <aura:attribute name="municipios" type="List"/>
+    <aura:attribute name="optionsMunicipios" type="List" default="[]"/>
+    <aura:attribute name="valorLocalidad" type="String"/>
+    <aura:attribute name="existeLocalidadSeleccionada" type="Boolean"/>
+    <aura:attribute name="requiredTrue" type="Boolean" default="true"/>
+    <!-- Atributos generales -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="changePageEvent" type="c:ChangePageAltaPaciente"/>
+    <aura:attribute name="paginaActual" type="string"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="true" />
+    <aura:attribute name="isDesktop" type="Boolean"/>
+
+    <c:ProgressStep current="{!v.paginaActual}"/>
+
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner  
+            alternativeText="Cargando"
+            variant="brand"/>
+    </aura:if>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+            <h2 class="slds-text-align_center slds-m-top_x-large slds-m-bottom_medium">
+                Datos de dirección de envío
+            </h2>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input
+                aura:id="formPaciente"
+                label="Calle"
+                name="calle"
+                value="{!v.calle}"
+                maxlength="20"
+                required="true"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input
+                aura:id="formPaciente"
+                label="Altura"
+                name="altura"
+                value="{!v.altura}"
+                pattern="[0-9]*"
+                messageWhenPatternMismatch="Solo números"
+                maxlength="6"
+                required="true"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input
+                label="Piso"
+                name="piso"
+                maxlength="2"
+                value="{!v.piso}"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input    
+                label="Departamento"
+                name="dpto"
+                maxlength="4"
+                value="{!v.dpto}"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:textarea 
+                label="Referencia"
+                name="referencia"
+                placeholder="Entre calles, color de casa, etc..."
+                maxlength="99"
+                value="{!v.account.Referencia__c}"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input
+                aura:id="formPaciente"
+                label="Código Postal"
+                name="cp"
+                value="{!v.account.Codigo_postal__c}"
+                required="true"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:combobox 
+                aura:id="formPaciente"
+                class="combobox-provincias"
+                name="provincia"
+                label="Provincia"
+                value="{!v.provincia}"
+                options="{!v.optionsProvincias}"
+                onchange="{!c.handleOptionProvinciaSelected}"
+                required="true"
+                dropdownAlignment="top-left"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:combobox 
+                aura:id="formPaciente"
+                class="combobox-municipios"
+                name="municipio"
+                label="Municipio"
+                value="{!v.municipio}"
+                options="{!v.optionsMunicipios}"
+                onchange="{!c.handleOptionMunicipioSelected}"
+                required="true"
+                disabled="{!v.provincia == ''}"
+                dropdownAlignment="top-left"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <c:lookupComponent  
+                itemSelected="{!v.account.Localidad_look__c}"
+                objeto="Localidad"
+                idMunicipio="{!v.municipio}"
+                label="Localidad"
+                value="{!v.valorLocalidad}"
+                existeSeleccionado="{!v.existeLocalidadSeleccionada}"
+                required="{!v.requiredTrue}"
+                disabled="{!v.municipio == ''}"
+                caracteresFiltro="1"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+        </div>
+        <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+            <div class="slds-clearfix slds-m-top_xx-large">
+                <div class="slds-float_right slds-p-right_small">
+                    <button
+                        id="id-btn-back-form-direccion"
+                        class="back-button"
+                        onclick="{!c.anterior}">
+                        Volver
+                    </button>
+                    <button
+                        id="id-btn-next-form-direccion"
+                        class="button"
+                        onclick="{!c.siguiente}">
+                        Siguiente
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

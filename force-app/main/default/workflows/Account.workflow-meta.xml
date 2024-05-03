@@ -1,0 +1,1437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alerta_de_Formulario_Marketing_Cloud</fullName>
+        <description>Alerta de Formulario Marketing Cloud - VForce</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email_para_consentimiento__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>unfiled$public/EYN</template>
+    </alerts>
+    <alerts>
+        <fullName>Cambio_de_estado_de_paciente</fullName>
+        <ccEmails>salesforce.alerts@xappia.com</ccEmails>
+        <description>Cambio de estado de paciente</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Cambio_de_estado_de_paciente</template>
+    </alerts>
+    <alerts>
+        <fullName>Consentimiento_digital_para_cuenta</fullName>
+        <description>Consentimiento digital para cuenta</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email_para_consentimiento__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Invitacion_para_consentimiento_digital_enCuenta</template>
+    </alerts>
+    <alerts>
+        <fullName>Correos_por_paciente_confirmado</fullName>
+        <ccEmails>angel.bedetti@xappia.com</ccEmails>
+        <description>Correos por paciente confirmado</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Aviso_de_tarea_nueva</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_de_cumplea_os</fullName>
+        <description>Email de cumpleaños</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Alerta_cumplea_os_de_profesional_con_membrete_Nutricia</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_a_Gerente_Adultos_por_nuevo_profesional</fullName>
+        <description>Mail a Gerente Adultos por nuevo profesional</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>APM_Adultos</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_profesional_creado</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_a_Gerente_Negocio_Total_por_nuevo_profesional</fullName>
+        <description>Mail a Gerente Negocio Total por nuevo profesional</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Gerente_Stakeholders_Negocio_Total</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_profesional_creado</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_a_Gerente_Obras_Sociales_por_nuevo_profesional</fullName>
+        <description>Mail a Gerente Obras Sociales por nuevo profesional</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Gerente_Stakeholders_Obras_Sociales</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_profesional_creado</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_cambio_de_formula_alergia</fullName>
+        <ccEmails>Jesica.ALBERTI@danone.com</ccEmails>
+        <ccEmails>Valeria.FAISAL@danone.com</ccEmails>
+        <ccEmails>Andrea.GENTILI@danone.com</ccEmails>
+        <ccEmails>Alejandra.PALAZZO@danone.com</ccEmails>
+        <description>Mail cambio de formula alergia</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>maria-catalina.alonso@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Cambio_de_estado_de_paciente</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_cambio_de_indicacion_alergia</fullName>
+        <ccEmails>Jesica.ALBERTI@danone.com</ccEmails>
+        <ccEmails>Valeria.FAISAL@danone.com</ccEmails>
+        <ccEmails>Alejandra.PALAZZO@danone.com</ccEmails>
+        <description>Mail cambio de indicación alergia</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>maria-catalina.alonso@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Cambio_de_estado_de_paciente</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_negativa_de_la_os_alergia</fullName>
+        <ccEmails>javier.leal@xappia.com</ccEmails>
+        <ccEmails>Jesica.ALBERTI@danone.com</ccEmails>
+        <ccEmails>Valeria.FAISAL@danone.com</ccEmails>
+        <ccEmails>Alejandra.PALAZZO@danone.com</ccEmails>
+        <description>Mail negativa de la os alergia</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Cambio_de_estado_de_paciente</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_sin_distrib_asignado_alergia</fullName>
+        <ccEmails>Jesica.ALBERTI@danone.com</ccEmails>
+        <ccEmails>Valeria.FAISAL@danone.com</ccEmails>
+        <ccEmails>Alejandra.PALAZZO@danone.com</ccEmails>
+        <ccEmails>mariana.puglia@nutricia.com</ccEmails>
+        <description>Mail sin distrib asignado alergia</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>maria-catalina.alonso@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Cambio_de_estado_de_paciente</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_sin_documentacion_alergia</fullName>
+        <ccEmails>javier.leal@xappia.com</ccEmails>
+        <ccEmails>Jesica.ALBERTI@danone.com</ccEmails>
+        <ccEmails>Valeria.FAISAL@danone.com</ccEmails>
+        <ccEmails>Alejandra.PALAZZO@danone.com</ccEmails>
+        <description>Mail sin documentacion alergia</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Cambio_de_estado_de_paciente</template>
+    </alerts>
+    <alerts>
+        <fullName>Nueva_Evaluaci_n_de_Inicio_a_realizar</fullName>
+        <ccEmails>brian.slavkin@danone.com</ccEmails>
+        <description>Nueva Evaluación de Inicio a realizar</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email_para_Workflow__c</field>
+            <type>email</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Aviso_nueva_tarea_evaluacion_de_inicio</template>
+    </alerts>
+    <alerts>
+        <fullName>Nuevo_paciente_Best_Care</fullName>
+        <ccEmails>agustina-denise.yarbuh@danone.com</ccEmails>
+        <description>Nuevo paciente Best Care</description>
+        <protected>false</protected>
+        <recipients>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <recipient>maria-victoria.famoso@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_paciente_ER</template>
+    </alerts>
+    <alerts>
+        <fullName>Nuevo_paciente_ER</fullName>
+        <ccEmails>martin.calderon@danone.com</ccEmails>
+        <ccEmails>Sofia.CHAPIRO@danone.com</ccEmails>
+        <description>Nuevo paciente ER</description>
+        <protected>false</protected>
+        <recipients>
+            <type>partnerUser</type>
+        </recipients>
+        <recipients>
+            <recipient>maria-catalina.alonso@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_paciente_ER</template>
+    </alerts>
+    <alerts>
+        <fullName>Nuevo_paciente_metabolico_mail</fullName>
+        <ccEmails>Valeria.FAISAL@danone.com</ccEmails>
+        <ccEmails>Franco.PERETTI@danone.com</ccEmails>
+        <description>Nuevo paciente metabólico mail</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>maria-catalina.alonso@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_paciente_metabolico</template>
+    </alerts>
+    <alerts>
+        <fullName>Nuevo_profesional_pediatrico</fullName>
+        <description>Mail a Gerente Pediátrico por nuevo profesional</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Gerente_Stakeholders_Pediatricos</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nuevo_profesional_creado</template>
+    </alerts>
+    <alerts>
+        <fullName>Paciente_cumple_6_meses</fullName>
+        <ccEmails>Franco.PERETTI@danone.com</ccEmails>
+        <description>Paciente cumple 6 meses</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Paciente_cumple_6_meses</template>
+    </alerts>
+    <alerts>
+        <fullName>Paciente_cumple_6_meses1_anio</fullName>
+        <ccEmails>Franco.PERETTI@danone.com</ccEmails>
+        <description>Paciente cumple 6 meses1 año</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Paciente_cumple_1_anio</template>
+    </alerts>
+    <alerts>
+        <fullName>alerta_de_cumpleanios_de_paciente</fullName>
+        <ccEmails>Franco.PERETTI@danone.com</ccEmails>
+        <description>alerta de cumpleaños de paciente</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Paciente_cumple_1_anio</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Actualiza_bandera_para_consentimiento</fullName>
+        <field>Activar_flow_para_email__c</field>
+        <literalValue>0</literalValue>
+        <name>Actualiza bandera para consentimiento</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualiza_email</fullName>
+        <field>Email_para_consentimiento__c</field>
+        <formula>PersonEmail</formula>
+        <name>Actualiza email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Actualizar_nombre</fullName>
+        <field>Name</field>
+        <formula>Parent.Name &amp; Id_sucursal_oracle__c</formula>
+        <name>Actualizar nombre</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Apellido_oculto</fullName>
+        <field>Apellido_oculto__c</field>
+        <formula>LastName</formula>
+        <name>Apellido oculto</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Apellido_oculto_a_estandar</fullName>
+        <field>LastName</field>
+        <formula>Apellido_oculto__c</formula>
+        <name>Apellido oculto a estandar</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Check_en_resetear_el_email_de_cumpleanos</fullName>
+        <field>Resetear_aviso_de_email_cumplea_os__c</field>
+        <literalValue>1</literalValue>
+        <name>Check en resetear el email de cumpleaños</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Chequear_restear_cumplea_os_email</fullName>
+        <field>Resetear_aviso_de_email_cumplea_os__c</field>
+        <literalValue>1</literalValue>
+        <name>Chequear restear cumpleaños email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Copiar_ID_Externo_Marco</fullName>
+        <field>idExternoUpsert__c</field>
+        <formula>SUBSTITUTE( 
+SUBSTITUTE( 
+SUBSTITUTE( 
+SUBSTITUTE(FirstName, &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot;), &quot; &quot;, &quot;&quot;), &quot;-&quot;, &quot;&quot;)+ SUBSTITUTE( 
+SUBSTITUTE( 
+SUBSTITUTE( 
+SUBSTITUTE(LastName, &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot;), &quot; &quot;, &quot;&quot;), &quot;-&quot;, &quot;&quot;)</formula>
+        <name>Copiar ID Externo Marco</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fecha_de_cambio_de_estado</fullName>
+        <field>Fecha_de_cambio_de_estado__c</field>
+        <formula>TODAY()</formula>
+        <name>Fecha de cambio de estado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fecha_de_confirmacion</fullName>
+        <field>Fecha_de_confirmacion__c</field>
+        <formula>TODAY()</formula>
+        <name>Fecha de confirmación</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Id_en_el_apellido</fullName>
+        <field>LastName</field>
+        <formula>ID_de_paciente__c</formula>
+        <name>Id en el apellido</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Marcar_dar_de_alta</fullName>
+        <field>Dado_de_alta__c</field>
+        <literalValue>1</literalValue>
+        <name>Marcar dar de alta</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>No_posee_activos</fullName>
+        <description>El campo ¿Posee activos? pasa a No</description>
+        <field>Posee_activos__c</field>
+        <literalValue>No</literalValue>
+        <name>No posee activos</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Nombre_en_blanco</fullName>
+        <field>FirstName</field>
+        <formula>&apos;&apos;</formula>
+        <name>Nombre en blanco</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Nombre_oculto</fullName>
+        <field>Nombre_oculto__c</field>
+        <formula>FirstName</formula>
+        <name>Nombre oculto</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Nombre_oculto_a_estandar</fullName>
+        <field>FirstName</field>
+        <formula>Nombre_oculto__c</formula>
+        <name>Nombre oculto a estandar</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pasar_a_Mayuscula_Direccion</fullName>
+        <field>Direccion__c</field>
+        <formula>UPPER(Direccion__c)</formula>
+        <name>Pasar a Mayuscula Direccion</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pasar_a_may_sculas_Actividad</fullName>
+        <description>Para obra social</description>
+        <field>Actividad_para_ObraSocial_del__c</field>
+        <formula>IF(RecordType.Name = &apos;Obra social&apos;,
+UPPER( Actividad_para_ObraSocial_del__c ),&apos;&apos;)</formula>
+        <name>Pasar a mayúsculas Actividad</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pasar_a_may_sculas_SalesDISTRICT</fullName>
+        <field>SalesDISTRICT__c</field>
+        <formula>IF(RecordType.Name = &apos;Obra social&apos;, UPPER(SalesDISTRICT__c ),SalesDISTRICT__c)</formula>
+        <name>Pasar a mayúsculas SalesDISTRICT</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pasar_a_may_sculas_SalesGroup</fullName>
+        <description>Para obra social</description>
+        <field>SalesGroup__c</field>
+        <formula>IF(RecordType.Name = &apos;Obra social&apos;,
+UPPER(SalesGroup__c),&apos;&apos;)</formula>
+        <name>Pasar a mayúsculas SalesGroup</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pasar_a_may_sculas_SalesOffice</fullName>
+        <description>Para obra social</description>
+        <field>SalesOffice_ObraSocial__c</field>
+        <formula>IF(RecordType.Name = &apos;Obra social&apos;,
+UPPER(SalesOffice_ObraSocial__c),&apos;&apos;)</formula>
+        <name>Pasar a mayúsculas SalesOffice</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pasar_a_may_sculas_n_ship_to</fullName>
+        <field>N_SHIP_TO__c</field>
+        <formula>UPPER(N_SHIP_TO__c)</formula>
+        <name>Pasar a mayúsculas n ship to</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pasar_a_mayuscula_Referencia</fullName>
+        <field>Referencia__c</field>
+        <formula>UPPER(Referencia__c)</formula>
+        <name>Pasar a mayuscula Referencia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Posee_activos</fullName>
+        <description>El campo ¿Posee activos? Pasa a Sí</description>
+        <field>Posee_activos__c</field>
+        <literalValue>Sí</literalValue>
+        <name>Posee activos</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Resetear_proximo_cumpleanios_paciente</fullName>
+        <field>Siguiente_cumplea_os__c</field>
+        <formula>IF(DATE(YEAR(TODAY()),MONTH(PersonBirthdate),DAY(PersonBirthdate)) &lt;= TODAY(), DATE(YEAR(TODAY())+1,MONTH(PersonBirthdate),DAY(PersonBirthdate)), DATE(YEAR(TODAY()),MONTH(PersonBirthdate),DAY(PersonBirthdate)))</formula>
+        <name>Resetear proximo cumpleaños paciente</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Resetear_siguiente_cumplea_os</fullName>
+        <field>Siguiente_cumplea_os__c</field>
+        <formula>IF(DATE(YEAR(TODAY()),MONTH(PersonBirthdate),DAY(PersonBirthdate)) &lt;= TODAY(), DATE(YEAR(TODAY())+1,MONTH(PersonBirthdate),DAY(PersonBirthdate)), DATE(YEAR(TODAY()),MONTH(PersonBirthdate),DAY(PersonBirthdate)))</formula>
+        <name>Resetear siguiente cumpleaños</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Resetear_siguiente_cumplea_os_1</fullName>
+        <description>Pone el campo resetear en Falso.</description>
+        <field>Resetear_aviso_de_email_cumplea_os__c</field>
+        <literalValue>0</literalValue>
+        <name>Resetear siguiente cumpleaños 1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Resetear_sistema_de_mail_de_cumpleanios</fullName>
+        <field>Resetear_aviso_de_email_cumplea_os__c</field>
+        <literalValue>0</literalValue>
+        <name>Resetear sistema de mail de cumpleaños</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Setear_equipo</fullName>
+        <field>Equipo_de_Profesional__c</field>
+        <formula>IF(Owner.Contact.Account.Name = &quot;APM Adultos&quot;, &quot;Adultos&quot;,  IF(Owner.Contact.Account.Name = &quot;APM Pediatrico&quot;, &quot;Pediátrico&quot;,  IF(Owner.Contact.Account.Name = &quot;APM Obras Sociales&quot;, &quot;Obras Sociales&quot;,  IF(Owner.Contact.Account.Name = &quot;Negocio Total&quot;, &quot;Negocio Total&quot;, &quot;&quot;) ) ) )</formula>
+        <name>Setear equipo</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Setear_valor_de_SoldTo_en_shipTo</fullName>
+        <field>N_SHIP_TO__c</field>
+        <formula>IF(Obra_social__pc&lt;&gt;null,
+			Obra_social__pr.N_SOLD_TO__c,
+			null
+		)</formula>
+        <name>Setear valor de SoldTo en shipTo</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Actualizo email de cuenta</fullName>
+        <actions>
+            <name>Actualiza_email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 2) AND 3 AND (4 OR 5) AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Account.Estado_de_paciente__c</field>
+            <operation>equals</operation>
+            <value>En Seguimiento</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Estado_de_paciente__c</field>
+            <operation>equals</operation>
+            <value>En tratamiento</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.PersonEmail</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Best Care</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Regular</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Metabólicos</value>
+        </criteriaItems>
+        <description>Actualizo el email de consentimiento para poder utilizarlo en las alertas de EYN</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Al crear una cuenta Prospect</fullName>
+        <actions>
+            <name>Nueva_Evaluaci_n_de_Inicio_a_realizar</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Prospect</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Motivo__c</field>
+            <operation>equals</operation>
+            <value>Evaluación de inicio</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Cambiar cumpleaños</fullName>
+        <actions>
+            <name>Chequear_restear_cumplea_os_email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>(MONTH( PersonBirthdate ) &lt;&gt; MONTH( Siguiente_cumplea_os__c ) || DAY(PersonBirthdate) &lt;&gt; DAY(Siguiente_cumplea_os__c ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Cambiar nombre sucursal</fullName>
+        <actions>
+            <name>Actualizar_nombre</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR(RecordType.Name = &apos;Sucursal de envío&apos;,      RecordType.Name = &apos;Sucursal de facturación&apos;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Copiar ID Externo %28Marco%29</fullName>
+        <actions>
+            <name>Copiar_ID_Externo_Marco</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>TRUE</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Email cumpleaños Opt-Out</fullName>
+        <actions>
+            <name>Chequear_restear_cumplea_os_email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Recibir_alertas_de_cumplea_os_por_correo__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Enviar consentimiento en cuenta</fullName>
+        <actions>
+            <name>Consentimiento_digital_para_cuenta</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Actualiza_bandera_para_consentimiento</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(  				   ISCHANGED( Activar_flow_para_email__c), 				   Activar_flow_para_email__c ==true, 				   Email_para_consentimiento__c &lt;&gt; null, 				   Id_de_historia_clinica_Nutricion__c &lt;&gt; null 				)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Enviar email de cumpleaños</fullName>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND (3 OR 4) AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Account.Recibir_alertas_de_cumplea_os_por_correo__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Resetear_aviso_de_email_cumplea_os__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Profesional de la salud</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Otro profesional</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.PersonBirthdate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Alerta de mail al Visitador Médico (Usuario con perfil Visitador Médico) cuando alguno de sus Profesionales cumpla años</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Email_de_cumplea_os</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Account.Siguiente_cumplea_os__c</offsetFromField>
+            <timeLength>8</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Chequear_restear_cumplea_os_email</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Account.Siguiente_cumplea_os__c</offsetFromField>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Enviar email de cumpleaños de pacientes</fullName>
+        <active>false</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Account.Resetear_aviso_de_email_cumplea_os__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Best Care</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Regular</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.PersonBirthdate</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Metabólicos</value>
+        </criteriaItems>
+        <description>Alerta de mail cuando el paciente cumple años</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Check_en_resetear_el_email_de_cumpleanos</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Account.PersonBirthdate</offsetFromField>
+            <timeLength>31</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>alerta_de_cumpleanios_de_paciente</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Account.Siguiente_cumplea_os__c</offsetFromField>
+            <timeLength>-30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Enviar mail cuando el paciente cambia de subestado a cambio de formula alergia</fullName>
+        <actions>
+            <name>Mail_cambio_de_formula_alergia</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Subestado_del_paciente__c</field>
+            <operation>equals</operation>
+            <value>Cambio de fórmula</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Alergia</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Enviar mail cuando el paciente cambia de subestado a cambio de formula metabs</fullName>
+        <actions>
+            <name>Cambio_de_estado_de_paciente</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Subestado_del_paciente__c</field>
+            <operation>equals</operation>
+            <value>Cambio de fórmula</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Metabólicos</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Enviar mail cuando el paciente cambia de subestado a cambio de indicacion alergia</fullName>
+        <actions>
+            <name>Mail_cambio_de_indicacion_alergia</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Subestado_del_paciente__c</field>
+            <operation>equals</operation>
+            <value>Cambio de indicación</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Alergia</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Enviar mail cuando el paciente cambia de subestado a cambio de indicacion metabs</fullName>
+        <actions>
+            <name>Cambio_de_estado_de_paciente</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Subestado_del_paciente__c</field>
+            <operation>equals</operation>
+            <value>Cambio de indicación</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Metabólicos</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Enviar mail cuando el paciente cambia de subestado a negativa de la os alergia</fullName>
+        <actions>
+            <name>Mail_negativa_de_la_os_alergia</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Subestado_del_paciente__c</field>
+            <operation>equals</operation>
+            <value>Negativa de la OS con Consumo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Alergia</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Enviar mail cuando el paciente cambia de subestado a sin distrib alergia</fullName>
+        <actions>
+            <name>Mail_sin_distrib_asignado_alergia</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Subestado_del_paciente__c</field>
+            <operation>equals</operation>
+            <value>Sin distribuidor asignado</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Alergia</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Enviar mail cuando el paciente cambia de subestado a sin documentacion alergia</fullName>
+        <actions>
+            <name>Mail_sin_documentacion_alergia</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Subestado_del_paciente__c</field>
+            <operation>equals</operation>
+            <value>Sin documentación</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Alergia</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Fecha de cambio de estado</fullName>
+        <actions>
+            <name>Fecha_de_cambio_de_estado</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR(ISNEW(), ISCHANGED( Estado_de_paciente__c ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Formulario MK Cloud</fullName>
+        <actions>
+            <name>Alerta_de_Formulario_Marketing_Cloud</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( ISCHANGED(EYN__c ),  				 EYN__c= true, 				 ISPICKVAL(Area_terapeutica__c, &apos;Metabólicos&apos;), 				 OR(  									RecordType.DeveloperName== &apos;Paciente_Regular&apos; , 								 RecordType.DeveloperName== &apos;Paciente_Best_Care&apos;), 				or( 				    ISPICKVAL(Estado_de_paciente__c, &apos;En tratamiento&apos;), 								ISPICKVAL(Estado_de_paciente__c, &apos;En Seguimiento&apos;) 								) 				)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Mail a finanzas para que valide al paciente</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Paciente_confirmado_por_PSP__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Nombre y apellido oculto al nombre de la cuenta</fullName>
+        <actions>
+            <name>Apellido_oculto_a_estandar</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Nombre_oculto_a_estandar</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Trae el nombre y apellido oculto a los campos estandar de nombre y apellido de la cuenta personal</description>
+        <formula>AND(     OR(          RecordType.Name = &quot;Paciente Best Care&quot;,          RecordType.Name = &quot;Paciente Regular&quot;     ),     NOT(ISBLANK( Apellido_oculto__c )) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Nuevo paciente Best Care</fullName>
+        <actions>
+            <name>Confirmar_datos_del_paciente</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Best Care</value>
+        </criteriaItems>
+        <description>Al generar un nuevo paciente de tipo Best Care se dispara una tarea al PSP para confirmar sus datos. 
+
+Si se cambia el Asunto, modificarlo en los criterios del Process Builder &apos;Recordatorio de tarea de confirmación de paciente&apos;</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Nuevo paciente ER</fullName>
+        <actions>
+            <name>Nuevo_paciente_ER</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Dieta Cetogénica</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Best Care,Paciente Regular</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Nuevo paciente metabólico</fullName>
+        <actions>
+            <name>Nuevo_paciente_metabolico_mail</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Metabólicos</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Nuevo profesional creado Adultos</fullName>
+        <actions>
+            <name>Mail_a_Gerente_Adultos_por_nuevo_profesional</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( OR(RecordType.Name = &quot;Otro profesional&quot;, RecordType.Name = &quot;Profesional de la salud&quot;), CreatedBy.Contact.Account.Name = &quot;APM Adultos&quot;)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Nuevo profesional creado Negocio Total</fullName>
+        <actions>
+            <name>Mail_a_Gerente_Negocio_Total_por_nuevo_profesional</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( OR(RecordType.Name = &quot;Otro profesional&quot;, RecordType.Name = &quot;Profesional de la salud&quot;), CreatedBy.Contact.Account.Name = &quot;Negocio Total&quot;)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Nuevo profesional creado Obra Social</fullName>
+        <actions>
+            <name>Mail_a_Gerente_Obras_Sociales_por_nuevo_profesional</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( OR(RecordType.Name = &quot;Otro profesional&quot;, RecordType.Name = &quot;Profesional de la salud&quot;), CreatedBy.Contact.Account.Name = &quot;APM Obras Sociales&quot;)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Nuevo profesional creado Pediátricos</fullName>
+        <actions>
+            <name>Nuevo_profesional_pediatrico</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( OR(RecordType.Name = &quot;Otro profesional&quot;, RecordType.Name = &quot;Profesional de la salud&quot;), CreatedBy.Contact.Account.Name = &quot;APM Pediatrico&quot;)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Ocultar Nombre y apellido de paciente</fullName>
+        <actions>
+            <name>Apellido_oculto</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Nombre_oculto</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Best Care</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Regular</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Paciente confirmado</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Paciente_confirmado_por_PSP__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Paciente Prospect</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Paciente confirmado con bomba</fullName>
+        <actions>
+            <name>Gestionar_capacitacion</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <formula>AND( Paciente_confirmado_por_PSP__c = true, Productos_activos_compania__c &gt; 0 )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Paciente cumple 6 meses y un anio</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Metabólicos</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Paciente_cumple_6_meses</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Account.PersonBirthdate</offsetFromField>
+            <timeLength>150</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <offsetFromField>Account.PersonBirthdate</offsetFromField>
+            <timeLength>330</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Paciente no posee producto activo compañía</fullName>
+        <actions>
+            <name>No_posee_activos</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Al quitar todos los productos activos del módulo, se cambia el campo ¿Posee activos? a No</description>
+        <formula>Productos_activos_compania__c &lt; 1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Paciente posee producto activo compañía</fullName>
+        <actions>
+            <name>Posee_activos</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Al agregar el producto activo al módulo, se cambia el campo ¿Posee activos? a Sí</description>
+        <formula>Productos_activos_compania__c &gt;= 1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Pasar a mayúsculas</fullName>
+        <actions>
+            <name>Pasar_a_Mayuscula_Direccion</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Pasar_a_may_sculas_Actividad</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Pasar_a_may_sculas_SalesDISTRICT</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Pasar_a_may_sculas_SalesGroup</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Pasar_a_may_sculas_SalesOffice</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Pasar_a_may_sculas_n_ship_to</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Pasar_a_mayuscula_Referencia</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Best Care</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Regular</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Obra social</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Resetear mail de cumpleaños para pacientes</fullName>
+        <actions>
+            <name>Resetear_proximo_cumpleanios_paciente</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Resetear_aviso_de_email_cumplea_os__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Best Care,Paciente Regular</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Area_terapeutica__c</field>
+            <operation>equals</operation>
+            <value>Metabólicos</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Resetear_sistema_de_mail_de_cumpleanios</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Resetear siguiente cumpleaños</fullName>
+        <actions>
+            <name>Resetear_siguiente_cumplea_os</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Recibir_alertas_de_cumplea_os_por_correo__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Resetear_aviso_de_email_cumplea_os__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Resetear_siguiente_cumplea_os_1</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Setear equipo de profesional</fullName>
+        <actions>
+            <name>Setear_equipo</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Profesional de la salud</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Otro profesional</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Si cambia la obra social</fullName>
+        <actions>
+            <name>Setear_valor_de_SoldTo_en_shipTo</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(RecordType.DeveloperName ==&apos;Paciente_Mendoza&apos;, 				OR(ISCHANGED(Obra_social__pc), ISNEW()) 				)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Si se genera csv para cuenta</fullName>
+        <actions>
+            <name>Csv_generado_para_cuenta</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>Derivacion_pacientes_Onco</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <description>Si se genera csv para Paciente</description>
+        <formula>AND(OR(RecordType.Name = &apos;Paciente Best Care&apos;,         RecordType.Name =&apos;Paciente Regular&apos;),         ISCHANGED(Listo_para_Jitterbit__c), 				    Listo_para_Jitterbit__c =true )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Si se genera csv para cuenta partner</fullName>
+        <actions>
+            <name>Crear_Paciente_Partner_en_SAP</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <description>Si se genera csv para Paciente de mendoza</description>
+        <formula>AND(RecordType.DeveloperName =&apos;Paciente_Partner&apos;,
+ISCHANGED(Listo_para_Jitterbit__c),
+Listo_para_Jitterbit__c =true
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Tarea a logística</fullName>
+        <actions>
+            <name>Gestionar_envio_de_productos</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Cargado_en_Oracle__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Traer el ID al apellido</fullName>
+        <actions>
+            <name>Id_en_el_apellido</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Nombre_en_blanco</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>OR( NOT(ISBLANK(Apellido_oculto__c )), ISCHANGED(Apellido_oculto__c ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Confirmar_datos_del_paciente</fullName>
+        <assignedTo>Operador_PSP</assignedTo>
+        <assignedToType>role</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completa</status>
+        <subject>Confirmar datos del paciente</subject>
+    </tasks>
+    <tasks>
+        <fullName>Crear_Paciente_Partner_en_SAP</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Solicitamos completar la actualización en el Maestro de Clientes para esta Cuenta de Paciente. Una vez actualizado le pedimos completar el campo N° ShipTo que se encuentra en el detalle de la cuenta con el Customer ID generado en SAP. Muchas gracias.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Crear Paciente Partner en SAP</subject>
+    </tasks>
+    <tasks>
+        <fullName>Csv_generado_para_cuenta</fullName>
+        <assignedTo>danone@xappia.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Solicitamos completar la actualización en el Maestro de Clientes para esta Cuenta de Paciente. Una vez actualizado le pedimos completar el campo N° ShipTo que se encuentra en el detalle de la cuenta con el Customer ID generado en SAP. Muchas gracias.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Cargar Paciente Regular / Best Care en SAP</subject>
+    </tasks>
+    <tasks>
+        <fullName>Derivacion_pacientes_Onco</fullName>
+        <assignedTo>gonzalo.kosovsky@danone.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Se le ha derivado un nuevo paciente oncológico.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Derivación pacientes Onco</subject>
+    </tasks>
+    <tasks>
+        <fullName>Gestionar_capacitacion</fullName>
+        <assignedTo>noemi.silva@danone.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Crear caso con las siguientes características, según corresponda:
+• Tipo: Gestión
+• Subtipo: Profesionales de la salud
+• Motivo: Capacitación presencial / Capacitación telefónica</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Gestionar capacitación</subject>
+    </tasks>
+    <tasks>
+        <fullName>Gestionar_envio_de_productos</fullName>
+        <assignedToType>partnerUser</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Gestionar envío de productos</subject>
+    </tasks>
+    <tasks>
+        <fullName>Modulo</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Account.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Modulo</subject>
+    </tasks>
+    <tasks>
+        <fullName>Seguimiento_D_a_10_Alergia</fullName>
+        <assignedTo>leslie.auza@danone.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Seguimiento Día 10 Alergia</subject>
+    </tasks>
+</Workflow>

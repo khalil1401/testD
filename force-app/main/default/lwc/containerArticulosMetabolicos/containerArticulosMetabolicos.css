@@ -1,0 +1,91 @@
+.div{
+    font-size: 2px;
+}
+
+.div-p-articles-meta{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.div-description-article-meta{
+    background-color: #EBEBEB;
+}
+
+.img-description-text-article-meta{
+    width: 40%;
+    margin: 2%;
+    float: right;
+}
+
+.text-fuentes-cam-meta{
+    font-family: MontserratRegular;
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #606060;
+    line-break: anywhere;
+}
+
+.title-description-text-article-meta{
+    font-family: PacificoRegular;
+    color: #907DD6;
+    font-size: 4.375rem;
+    line-height: 4.5rem;
+}
+
+.subtitle-description-text-article-meta{
+    font-family: MontserratSemiBold;
+    color: #907DD6;
+    font-size: 1.625rem;
+    line-height: 1.875rem;
+}
+
+.description-text-article-meta{
+    font-family: MontserratRegular;
+    color: #606060;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+}
+
+.check-meta{
+    padding-top: 30%;
+}
+
+@media (max-width: 1600px){
+    .div-p-articles-meta{
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+}
+
+@media (max-width: 1300px){
+    .div-p-articles-meta{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 1024px){
+    .div-p-articles-meta{
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .div-p-articles-meta{ 
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .img-description-text-article-meta{
+        display: none;
+    }
+    .title-description-text-article-meta{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    .check-meta{
+        padding-top: 70%;
+    }
+}

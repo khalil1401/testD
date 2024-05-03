@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-align_absolute-center">
+        <button
+            class="button-scroll-meta"
+            onclick={goTo}>
+            <template if:true={icon}>
+                <lightning-icon 
+                    icon-name="utility:chevronup"
+                    alternative-text="chevronup" 
+                    title="chevronup"
+                    size="small"
+                    variant="inverse">
+                </lightning-icon>
+            </template>
+            {label}
+        </button>
+    </div>
+</template>

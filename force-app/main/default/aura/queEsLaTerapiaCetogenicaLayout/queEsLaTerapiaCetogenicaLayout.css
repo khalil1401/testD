@@ -1,0 +1,25 @@
+.THIS {
+}
+
+.THIS .div-center-tc{
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.THIS .container-qeltc-layout{
+    width: 100%;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+@media (max-width: 600px) {
+    .THIS .div-center-tc{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .THIS .container-qeltc-layout{
+        padding-left: 0%;
+        padding-right: 0%;
+    }    
+}

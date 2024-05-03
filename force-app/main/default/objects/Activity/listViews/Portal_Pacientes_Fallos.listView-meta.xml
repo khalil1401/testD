@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portal_Pacientes_Fallos</fullName>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.DUE_DATE</columns>
+    <columns>TASK.STATUS</columns>
+    <columns>TASK.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>TASK.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TASK.SUBJECT</field>
+        <operation>equals</operation>
+        <value>Error Formulario Kit de Inicio</value>
+    </filters>
+    <label>Portal Pacientes Registros Fallidos</label>
+    <sharedTo>
+        <group>PSP</group>
+    </sharedTo>
+</ListView>

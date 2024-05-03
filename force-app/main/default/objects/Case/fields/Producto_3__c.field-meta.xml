@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Producto_3__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Producto presentado 3</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Producto presentado 3</inlineHelpText>
+    <label>Producto 3</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <filterItems>
+            <field>Product2.Producto_SAP__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>Product2.ProductCode</field>
+            <operation>equals</operation>
+            <value>COMP</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Product2</referenceTo>
+    <relationshipLabel>Cases (Producto 3)</relationshipLabel>
+    <relationshipName>Cases5</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

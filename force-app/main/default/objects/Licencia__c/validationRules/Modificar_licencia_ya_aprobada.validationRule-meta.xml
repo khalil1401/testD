@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modificar_licencia_ya_aprobada</fullName>
+    <active>true</active>
+    <description>No se podrá modificar una licencia ya aprobada. Se tendría que eliminar y volver a crearla.</description>
+    <errorConditionFormula>AND($Profile.Name = &quot;Visitador médico&quot;, Aprobado__c  = true,
+ OR( 
+  ISCHANGED(Fecha_de_inicio__c), 
+  ISCHANGED(Fecha_de_fin__c),
+  ISCHANGED(Duracion_de_licencia__c)))</errorConditionFormula>
+    <errorMessage>No puede cambiar las fechas de una licencia si esta ya fue aprobada. Si desea cambiar las fechas debe ponerse en contacto con su jefe o crear otra licencia para los días adicionales.</errorMessage>
+</ValidationRule>

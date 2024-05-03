@@ -1,0 +1,40 @@
+.THIS h2{
+    font-family: MontserratSemiBold;
+    font-size: 1.7em;
+}
+
+.THIS h3{
+    font-family: MontserratSemiBold;
+    font-size: 1.2em;
+}
+
+.THIS label{
+    font-family: MontserratSemiBold;
+}
+
+.THIS input{
+    font-family: MontserratSemiBold;
+}
+
+.THIS button{
+    font-family: MontserratSemiBold;
+}
+
+.THIS .contactoObligatorio {
+    font-size: 1.2em;
+    color: red;
+}
+
+.THIS .slds-form-element__label{
+    font-size: 0.68rem !important;
+}
+
+.THIS .botonEliminarContacto{
+    border-radius: 5px;
+    border: transparent;
+    font-family: MontserratSemiBold;
+    font-size: 0.9rem;
+    background-color: red;
+    border-bottom: red;
+    color: white;
+}

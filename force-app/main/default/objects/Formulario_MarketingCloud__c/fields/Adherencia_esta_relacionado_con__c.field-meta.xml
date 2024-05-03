@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adherencia_esta_relacionado_con__c</fullName>
+    <description>Su inconveniente con la adherencia está relacionado con que:</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Su inconveniente con la adherencia está relacionado con que:</inlineHelpText>
+    <label>Adherencia esta relacionado con</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No tolera la formula (No tolera)</fullName>
+                <default>false</default>
+                <label>No tolera la formula (No tolera)</label>
+            </value>
+            <value>
+                <fullName>No quiere seguir con el tratamiento (Se rehusa)</fullName>
+                <default>false</default>
+                <label>No quiere seguir con el tratamiento (Se rehusa)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

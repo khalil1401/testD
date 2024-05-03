@@ -1,0 +1,6 @@
+<design:component >
+
+    <design:attribute name="isRegular" label="¿Es paciente regular?"/>
+    <design:attribute name="isPrivate" label="¿El paciente puede ver contenido privado?"/>
+
+</design:component>

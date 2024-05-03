@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portal_Pacientes</fullName>
+    <columns>Area_Terapeutica__c</columns>
+    <columns>Id_de_Paciente__c</columns>
+    <columns>TASK.WHO_NAME</columns>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.STATUS</columns>
+    <columns>TASK.CREATED_DATE</columns>
+    <columns>TASK.DUE_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TASK.SUBJECT</field>
+        <operation>equals</operation>
+        <value>Alta Paciente Via Web</value>
+    </filters>
+    <label>Portal Pacientes</label>
+    <sharedTo>
+        <group>PSP</group>
+    </sharedTo>
+</ListView>

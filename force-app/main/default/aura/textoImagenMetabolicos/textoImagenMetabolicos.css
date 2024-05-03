@@ -1,0 +1,82 @@
+.THIS {
+}
+
+.THIS .div-banner-tim-meta{
+    background-color: #E7E3E3;
+    border-radius: 50px;
+}
+
+.THIS .div-img-banner-tim-meta{
+    background: url('https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos-Megafono.png'); 
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px 0px 0px 10px;
+    height: 350px;
+}
+
+.THIS .title-pacifico-tim-meta{
+    font-family: PacificoRegular;
+    color: #947DD5;
+    font-size: 4rem;
+    line-height: 4.5rem;
+}
+
+.THIS .title-black-tim-meta{
+    font-family: MontserratBlack;
+    color: #4C2F92;
+    font-size: 3.2rem;
+    line-height: 4rem;
+}
+
+.THIS .text-mr-tim-meta{
+    font-family: MontserratRegular;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    color: #606060;
+}
+
+.THIS .line{
+    width:100px;
+    border-bottom:1px solid #606060;
+    position:relative;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.THIS .title-pacifico-banner-tim-meta{
+    font-family: PacificoRegular;
+    color: #947DD5;
+    font-size: 3em;
+    line-height: 4.393rem;
+}
+
+.THIS .title-black-banner-tim-meta{
+    font-family: MontserratBlack;
+    color: #4C2F92;
+    font-size: 2.5em;
+    line-height: 4.393rem;
+}
+
+@media (max-width: 600px) {
+    .THIS{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .THIS .title-pacifico-tim-meta{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }    
+    .THIS .title-black-tim-meta{
+        font-size: 2rem;
+        line-height: 3rem;
+    } 
+    .THIS .title-pacifico-banner-tim-meta{
+        line-height: 3rem;
+    }
+    .THIS .title-black-banner-tim-meta{
+        line-height: 2.5rem;
+    }
+    .THIS .div-title-banner-tim-meta{
+        margin: 6%;
+    }    
+}

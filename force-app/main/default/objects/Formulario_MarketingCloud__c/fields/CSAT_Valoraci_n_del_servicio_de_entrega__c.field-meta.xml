@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSAT_Valoraci_n_del_servicio_de_entrega__c</fullName>
+    <externalId>false</externalId>
+    <label>CSAT: Valoración del servicio de entrega</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Totalmente satisfecho</fullName>
+                <default>false</default>
+                <label>Totalmente satisfecho</label>
+            </value>
+            <value>
+                <fullName>Muy satisfecho</fullName>
+                <default>false</default>
+                <label>Muy satisfecho</label>
+            </value>
+            <value>
+                <fullName>Satisfecho</fullName>
+                <default>false</default>
+                <label>Satisfecho</label>
+            </value>
+            <value>
+                <fullName>Nada Satisfecho</fullName>
+                <default>false</default>
+                <label>Nada Satisfecho</label>
+            </value>
+            <value>
+                <fullName>Muy Insatisfecho</fullName>
+                <default>false</default>
+                <label>Muy Insatisfecho</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

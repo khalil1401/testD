@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_a_de_Alimentaci_n__c</fullName>
+    <externalId>false</externalId>
+    <label>Vía de Alimentación</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SON</fullName>
+                <default>false</default>
+                <label>SON</label>
+            </value>
+            <value>
+                <fullName>SNE</fullName>
+                <default>false</default>
+                <label>SNE</label>
+            </value>
+            <value>
+                <fullName>Mixto</fullName>
+                <default>false</default>
+                <label>Mixto</label>
+            </value>
+            <value>
+                <fullName>Gastronomía/Yeyunostomía</fullName>
+                <default>false</default>
+                <label>Gastronomía/Yeyunostomía</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

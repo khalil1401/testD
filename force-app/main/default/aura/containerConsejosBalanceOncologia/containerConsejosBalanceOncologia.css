@@ -1,0 +1,46 @@
+.THIS {
+}
+
+.THIS .containerCardConsejosBalanceOncologia{
+    border-radius: 10px 10px 10px 10px;
+    background-color: #ebebeb;
+    margin: 10%;
+    height: 350px;
+}
+
+.THIS .textoCardConsejosBalanceOncologia{
+    font-family: MontserratRegular;
+    color: #606060;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.THIS .containerImgCardConsejosBalanceOncologia{
+    height: 175px;
+}
+
+.THIS .containerTextoCardConsejosBalanceOncologia{
+    height: 175px;
+}
+
+@media (max-width: 600px) {
+    .THIS .containerCardConsejosBalanceOncologia{
+        margin: 5%;
+        height: 225px;
+    }
+    .THIS .textoCardConsejosBalanceOncologia{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .THIS .imgCardConsejosBalanceOncologia{
+        width: 20%;
+    }
+    .THIS .containerImgCardConsejosBalanceOncologia{
+        height: 100px;
+    }
+    .THIS .containerTextoCardConsejosBalanceOncologia{
+        height: 125px;
+    }    
+}

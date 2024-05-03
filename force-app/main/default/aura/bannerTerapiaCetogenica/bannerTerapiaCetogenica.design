@@ -1,0 +1,7 @@
+<design:component >
+
+    <design:attribute name="recursoEstaticoDesktop" label="URL de la imagen de fondo Desktop"/>
+    <design:attribute name="recursoEstaticoMobile" label="URL de la imagen de fondo Mobile"/>
+    <design:attribute name="contenido" label="Texto del banner"/>
+
+</design:component>

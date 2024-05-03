@@ -1,0 +1,21 @@
+.THIS {
+}
+
+.THIS .div-pstc-layout{
+    width: 100%;
+    padding-left: 17%;    padding-right: 17%;
+}
+
+@media (max-width: 1600px){
+    .THIS .div-pstc-layout{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 600px){
+    .THIS .div-pstc-layout{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}

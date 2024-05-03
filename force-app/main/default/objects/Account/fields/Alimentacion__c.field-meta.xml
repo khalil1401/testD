@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alimentacion__c</fullName>
+    <description>Es un campo que trae la información del tipo de  Alimentación del último tratamiento</description>
+    <externalId>false</externalId>
+    <label>Alimentación</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

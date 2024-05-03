@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Best_Care</letterhead>
+    <name>Envio de producto por excepcion para paciente alergia</name>
+    <style>freeForm</style>
+    <subject>Nuevo envío de producto por excepción</subject>
+    <textOnly>Estimado,
+
+Le informamos que se ha creado un nuevo caso de envío de producto por excepción con los siguientes datos:
+
+Paciente: {!Account.ID_de_paciente__c}
+Obra social: {!Account.Obra_social__c}
+Profesionales: {!Account.Profesionales__c}
+Motivo: {!Case.Reason}
+
+Para más detalles ingrese a {!Case.Link}
+
+Saludos.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

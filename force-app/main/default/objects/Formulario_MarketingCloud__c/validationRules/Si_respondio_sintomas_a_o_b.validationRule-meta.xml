@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_respondio_sintomas_a_o_b</fullName>
+    <active>false</active>
+    <description>Si respondió que sus síntomas fueron distención abdominal/diarrea o vómitos debe responder de que manera, en que momento, en que cantidad consume y si lo ingiere cercano a otro medicamento.</description>
+    <errorConditionFormula>AND( OR( ISPICKVAL(Si_no_tolera_bien_la_formula__c, &quot;Distención abdominal / diarrea&quot;), ISPICKVAL(Si_no_tolera_bien_la_formula__c, &quot;Vómitos&quot;)), OR(ISBLANK(TEXT(Solo_o_combinado__c)) ,ISBLANK(Cuando_consume_el_producto__c ) ,ISBLANK(Cuanto_consume_x_dia__c ) ,ISBLANK(TEXT(De_qu_manera_lo_consume__c)),ISBLANK(TEXT(Lo_ingienere_cercano_a_otro_medicamento__c))))</errorConditionFormula>
+    <errorDisplayField>Si_no_tolera_bien_la_formula__c</errorDisplayField>
+    <errorMessage>Si usted ingreso que los sintomas del paciente son distencion abdominal/ diarrea o Vómitos debe completar las preguntas correspondientes en las dos secciones:
+-En caso de distensión abdominal/diarrea...
+-En caso de distensión abdominal/diarrea...</errorMessage>
+</ValidationRule>

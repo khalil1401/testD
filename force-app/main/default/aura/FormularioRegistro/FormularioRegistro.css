@@ -1,0 +1,20 @@
+.THIS h2 {
+    font-family: MontserratSemiBold;
+    font-size: 1.7em;
+}
+
+.THIS label{
+    font-family: MontserratSemiBold;
+}
+
+.THIS input{
+    font-family: MontserratSemiBold;
+}
+
+.THIS button{
+    font-family: MontserratSemiBold;
+}
+
+.THIS .text-product-select .slds-listbox{
+    font-size: 0.65rem;
+}

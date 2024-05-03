@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <mappings>
+        <sourceField>FK_NAME</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Snapshot_producto_de_modulo__c.Name</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>FK_NAME</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Snapshot_producto_de_modulo__c.Modulo__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>Producto_de_modulo__c.Formula__c</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Snapshot_producto_de_modulo__c.Formula__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>Producto_de_modulo__c.Laboratorio__c</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Snapshot_producto_de_modulo__c.Laboratorio__c</targetField>
+    </mappings>
+    <name>Snapshot Productos de Módulo</name>
+    <runningUser>nicolas.feniger@danone.com</runningUser>
+    <sourceReport>Service_Dashboards_Reports/Productos_de_modulos_activos</sourceReport>
+    <targetObject>Snapshot_producto_de_modulo__c</targetObject>
+</AnalyticSnapshot>

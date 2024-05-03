@@ -1,0 +1,118 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+	
+	<lightning:overlayLibrary aura:id="overlayLib"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+	<aura:attribute name="validationExecuted" type="Boolean" default="false"/>
+	<aura:attribute name="available" type="Boolean" default="true"/>
+	<aura:attribute name="unAvailableMessage" type="String" default=""/> 
+	<aura:attribute name="titleForModal" type="String" default="A Title"/>
+
+	<aura:attribute name="altoMaximo" type="Integer" default="150"/>
+	<aura:attribute name="anchoMaximo" type="Integer" default="200"/>
+	<aura:attribute name="altoMinimo" type="Integer" default="100"/>
+	<aura:attribute name="anchoMinimo" type="Integer" default="100"/>
+	<aura:attribute name="radioEsquinas" type="Integer" default="0"/>
+	<aura:attribute name="comunidadOrigen" type="String" default=""/>
+	<aura:attribute name="formComponentName" type="String" default="c:FormularioKitInicioAlergia"/> 
+	<aura:attribute name="linkString" type="String" default=""/>
+	<aura:attribute name="apiNamePage" type="String" default=""/>
+    <aura:attribute name="linkTarget" type="String" default="_blank"/>
+	<aura:attribute name="openLink" type="Boolean" default="false"/> 
+
+	<aura:attribute name="altoMaximoFooter" type="Integer" default="50"/>
+	<aura:attribute name="altoMinimoFooter" type="Integer" default="20"/>
+	<aura:attribute name="textoDerechaFooter" type="String" default=""/>
+	<aura:attribute name="footerColor" type="String" default="#bb3075"/>
+	<aura:attribute name="textoIzquierdaFooter" type="String" default=""/>
+	<aura:attribute name="textoCentroFooter" type="String" default=""/>
+	<aura:attribute name="textoFooterColor" type="String" default="#ffffff"/> 
+	<aura:attribute name="margenTextoFooter" type="Integer" default="10"/>
+
+	<aura:attribute name="textoHoverFooter" type="String" default="TextoHover"/>
+	<aura:attribute name="textoHoverFooterColor" type="String" default="#ffffff"/> 
+
+	<aura:attribute name="hoverColorTransparency" type="String" default=".5"/>
+	<aura:attribute name="colorHover" type="String" default="#bb7fa5"/>
+	<aura:attribute name="imagenFondo" type="String" default=""/> 
+	<aura:attribute name="staticResourceName" type="String" default=""/>  
+	<aura:attribute name="imageName" type="String" default=""/> 
+
+	<aura:attribute name="textoHover" type="String" default="unTexto"/> 
+	<aura:attribute name="textoHoverColor" type="String" default="#ffffff"/> 
+	
+	<aura:attribute name="imFullyLoad" type="Boolean" default="false"/> 
+	<aura:attribute name="disabledForGuestUsers" type="Boolean" default="true"/>
+	<aura:attribute name="showRequestLoginMessage" type="Boolean" default="true"/>
+	<aura:attribute name="isLoading" type="Boolean" default="true"/>
+
+	<aura:attribute name="textoHoverTamanio" type="String"/>
+	<aura:attribute name="textoHoverFooterTamanio" type="String"/>
+	<aura:attribute name="textoFooterTamanio"  type="String"/>
+
+	<aura:attribute name="onhover" type="Boolean" default="true"/>
+
+	<aura:attribute name="url" type="String"/>
+
+	<lightning:navigation aura:id="navService"/>
+
+	<div class="slds-is-relative">
+		<aura:if isTrue="{!v.isLoading}">
+			<lightning:spinner size="small"/>
+			<aura:set attribute="else">
+				<a href="{!v.url}">
+					<div aura:id="container"
+						onmouseover="{!c.onMouseOver}" 
+						onmouseout="{!c.onMouseOut}" 
+						style="{!	'background: url('+ v.staticResourceName +'); 
+									background-position: center;
+									background-size: cover; 
+									max-height:'+ v.altoMaximo +'px;
+									min-height:'+ v.altoMinimo +'px;
+									width: 100%;
+									overflow:hidden;
+									position: relative;
+									cursor: pointer;
+									border-radius: '+v.radioEsquinas+'px '+v.radioEsquinas+'px '+v.radioEsquinas+'px '+v.radioEsquinas+'px;
+									background-repeat:no-repeat;'}" > 
+						<div aura:id="label" 
+							class="slds-text-heading_large label"
+							Style="{! 'visibility:hidden; 
+									display: inline-block; 
+									color: '+v.textoHoverColor+';
+									position: absolute;
+									top: 50%; left: 50%;
+									transform: translate(-50%,-50%);'}" >
+							<p class="slds-m-bottom_small">{!v.textoHover}</p>
+							<p style="font-size: 1.1rem !important;">{!v.textoHoverFooter}</p>						
+						</div>
+						<div class="slds-align_absolute-center" 
+							aura:id="footer"  
+							onmouseover="{!c.onMouseOver}"
+							onmouseout="{!c.onMouseOut}"
+							style="{!	'max-height:'+ v.altoMaximoFooter +'px;
+										min-height:'+ v.altoMinimoFooter +'px;
+										width: 100%;
+										background: '+v.footerColor+';
+										overflow:hidden;
+										position: absolute;
+										bottom: 0px;
+										left: 0px;
+										align-items: center;
+										flex-direction: row;
+										color: '+v.textoFooterColor+';
+										cursor: pointer;
+										border-radius: 0px 0px '+v.radioEsquinas+'px '+v.radioEsquinas+'px;'}">
+							<div class="slds-text-heading_small slds-align_absolute-center"
+								aura:id="footCentro"
+								style="{! 'text-align: center;
+											margin: '+v.margenTextoFooter+'px;'}">
+								<aura:unescapedHtml value="{!v.textoCentroFooter}" />
+							</div>
+						</div>
+					</div>
+				</a>
+			</aura:set>
+		</aura:if>
+	</div>
+</aura:component>

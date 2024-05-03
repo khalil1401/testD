@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Sabor_de_la_f_rmula__c</name>
+    <picklistValues>
+        <masterLabel>Le resulta rico</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Le resulta rico pero prefiere otro</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No le gusta pero lo tolera</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No le gusta y la rechaza</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

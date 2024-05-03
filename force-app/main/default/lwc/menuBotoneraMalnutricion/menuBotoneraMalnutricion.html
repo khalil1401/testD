@@ -1,0 +1,44 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="div-center-botonera-malnutricon">
+            <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+                <div class="slds-grid slds-wrap">
+                    <template if:false={malnutriconMayores}>
+                        <div class="slds-col slds-medium-size_4-of-12 slds-size_6-of-12 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_MALNUTRICION/MALNUTRICION-AJUSTES/MALNUTRICION-ICONOS/PP-12.7-Malnutrici%C3%B3n.png" class="boton-malnutricion" data-id="malnutricion_adulto_mayor__c" onclick={redireccionar}>
+                        </div>
+                        <div class="slds-col slds-medium-size_4-of-12 slds-size_6-of-12 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_MALNUTRICION/MALNUTRICION-AJUSTES/MALNUTRICION-ICONOS/PP-18.7-Trastornos_Deglutorios.png" class="boton-malnutricion" data-id="trastornos_deglutorios_malnutricion__c" onclick={redireccionar}>
+                        </div>
+                        <div class="slds-col slds-medium-size_4-of-12 slds-size_6-of-12 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_MALNUTRICION/MALNUTRICION-AJUSTES/MALNUTRICION-ICONOS/PP-12.7-Sarcopenia.png" class="boton-malnutricion" data-id="sarcopenia_fragilidad__c" onclick={redireccionar}>
+                        </div>
+                        <div class="slds-col slds-medium-size_4-of-12 slds-size_6-of-12 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_MALNUTRICION/MALNUTRICION-AJUSTES/MALNUTRICION-ICONOS/PP-12.7-Apetito.png" class="boton-malnutricion" data-id="falta_apetito__c" onclick={redireccionar}>
+                        </div>
+                        <div class="slds-col slds-medium-size_4-of-12 slds-size_6-of-12 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_MALNUTRICION/MALNUTRICION-AJUSTES/MALNUTRICION-ICONOS/PP-12.7-Vida.png" class="boton-malnutricion" data-id="vida_saludable__c" onclick={redireccionar}>
+                        </div>
+                        <div class="slds-col slds-medium-size_4-of-12 slds-size_6-of-12 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_MALNUTRICION/MALNUTRICION-AJUSTES/MALNUTRICION-ICONOS/PP-12.7-Suplemento.png" class="boton-malnutricion" data-id="recomendaciones_nutricionales__c" onclick={redireccionar}>
+                        </div>
+                    </template>
+                    <template if:true={malnutriconMayores}>
+                        <div class="slds-col slds-large-size_3-of-12 slds-size_6-of-12 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_MALNUTRICION/MALNUTRICION-AJUSTES/MALNUTRICION-ICONOS/PP-12.7-Infecciones.png">
+                        </div>
+                        <div class="slds-col slds-large-size_3-of-12 slds-size_6-of-12 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_MALNUTRICION/MALNUTRICION-AJUSTES/MALNUTRICION-ICONOS/PP-12.7-Ulceras.png">
+                        </div>
+                        <div class="slds-col slds-large-size_3-of-12 slds-size_6-of-12 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_MALNUTRICION/MALNUTRICION-AJUSTES/MALNUTRICION-ICONOS/PP-12.7-Hospitalizacion.png">
+                        </div>
+                        <div class="slds-col slds-large-size_3-of-12 slds-size_6-of-12 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_MALNUTRICION/MALNUTRICION-AJUSTES/MALNUTRICION-ICONOS/PP-12.7-Mortalidad.png">
+                        </div>
+                    </template>
+                </div>
+            </div>    
+        </div>
+    </div>
+</template>

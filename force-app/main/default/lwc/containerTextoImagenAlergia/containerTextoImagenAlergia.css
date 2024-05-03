@@ -1,0 +1,49 @@
+.tituloPacifico{
+    font-family: PacificoRegular;
+    color:#B294BE;
+    font-size: 90px;
+    line-height: 70px;
+}
+
+.tituloMontserratBlack{
+    font-family:MontserratBlack;
+    font-size: 60px;
+    color:#293896;
+    line-height: 70px;
+}
+
+.textoAlergia{
+    font-family:MontserratRegular;
+    color:#606060;
+    font-size: 22px;
+    line-height: 30px;
+    padding-top: 3%;
+}
+
+.imagen-aplv{
+    width: 80%;
+}
+
+@media (max-width: 600px) {
+    .container-texto-imagen-alergia{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .tituloPacifico{
+        font-size: 31pt;
+        line-height: 23pt;
+    }    
+    .tituloMontserratBlack{
+        font-size: 22pt;
+        line-height: 23pt;
+    }
+    .textoAlergia{
+        font-size: 15pt;
+        line-height: 18pt;
+        padding-top: 0%;
+    }
+    .imagen-aplv{
+        width: 100%;
+        padding-top: 5%;
+    }
+}

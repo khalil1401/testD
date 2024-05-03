@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Nutricia</letterhead>
+    <name>Generación de actividad institucional por otra persona</name>
+    <style>freeForm</style>
+    <subject>Se ha generado una actividad institucional para uno de sus profesionales</subject>
+    <textOnly>Hola
+
+Le informamos que se ha registrado una Actividad Institucional para el profesional {!Interaccion__c.Profesional_de_la_salud__c}. Si desea revisarla, debe ingresar a la aplicación móvil e ir a la sección de relacionados del profesional antes mencionado.
+
+Para cualquier duda, comunicarse con su jefe de equipo.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

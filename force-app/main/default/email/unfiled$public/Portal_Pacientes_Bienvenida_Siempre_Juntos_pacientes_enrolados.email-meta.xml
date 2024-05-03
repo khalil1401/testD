@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Correro de bienvenida a pacientes ya enrolados en Nutricia Siempre Juntos</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Portal Pacientes: Bienvenida Siempre Juntos pacientes enrolados</name>
+    <style>none</style>
+    <subject>📣 ¡Novedades en Nutricia Siempre Juntos!</subject>
+    <textOnly>¡Nuevo Lanzamiento!
+
+Hola  {!Receiving_User.FirstName}, queremos contarte novedades.
+
+El nuevo lanzamiento del Portal de Pacientes “Nutricia Siempre Juntos” ha llegado y queremos que sigamos acompañándonos. Tenemos mucha información sobre nuestra comunidad que te resultará interesante; para acceder a ella te invitamos a generar tu contraseña haciendo click en el link debajo.
+
+{!Community_Url}
+
+Material exclusivo para pacientes enrolados en el Portal de Pacientes
+
+www.nutriciasiemprejuntos.com.ar</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,99 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes"
+                controller="ArticulosPortalPacientesController">
+
+    <aura:attribute name="articulos" type="Object"/>
+    <aura:attribute name="articuloSeleccionado" type="Knowledge__kav"/>
+    <aura:attribute name="rutaImg" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div>
+        <div class="slds-grid">
+            <div class="slds-col slds-large-size_3-of-12">
+            </div>
+            <div class="slds-col slds-large-size_6-of-12">
+                <div class="slds-grid slds-wrap">
+                    <aura:iteration items="{!v.articulos}" var="articulo">
+                        <div    class="slds-col slds-size_6-of-12 slds-large-size_4-of-12 slds-align_absolute-center">
+                            <div    style=" background-color: #EBEBEB;
+                                            width: 90%;
+                                            border-radius: 10px 10px 10px 10px;
+                                            margin-top: 5%;
+                                            margin-bottom: 5%;">
+                                <div    class="slds-align_absolute-center"
+                                        onclick="{!c.showInformacionArticulo}"
+                                        onmouseover="{!c.onMouseOver}"
+                                        onmouseout="{!c.onMouseOut}"
+                                        data-id="{!articulo.Title}"
+                                        style="{!'  background:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                                                        url('+ articulo.Imagen__c +');
+                                                    border-radius: 10px 10px 10px 10px;
+                                                    height: 150px;
+                                                    background-position: center;
+                                                    background-repeat: no-repeat;
+                                                    background-size: auto 150px;
+                                                    overflow: hidden;
+                                                    position: relative;
+                                                    cursor: pointer;'}">
+                                    <div    class="slds-text-align_center"
+                                            style="pointer-events: none;">
+                                        <p class="tituloCardTecnicasBelleza">
+                                            {!articulo.Title}
+                                        </p>
+                                        <p class="textoCardTecnicasBelleza">
+                                            + Ver más
+                                        </p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aura:iteration>
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12">
+            </div>
+        </div>
+        
+        <div id="descripcion"></div>
+
+        <div class="slds-grid slds-m-top_large" style="background-color: #ebebeb;">
+            <div class="slds-col slds-large-size_3-of-12">
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                <div class="slds-m-bottom_large slds-m-top_medium padding">
+                    <lightning:button   variant="brand" 
+                                        label="{!v.articuloSeleccionado.Title}"
+                                        class="botonKitDeInicio"/>
+                </div>
+                <div class="slds-m-bottom_medium">
+                    <p class="textoDetalleTecnicasBelleza">
+                        <aura:unescapedHtml value="{!v.articuloSeleccionado.Historia_tecnica_peinado__c}" />
+                    </p>
+                </div>
+                <p  class="slds-m-bottom_medium padding"
+                    style=" font-family:MontserratSemiBold;
+                            font-size: 16px;
+                            color: #293896;">
+                    ¿Cómo atar?
+                </p>
+                <div class="slds-align_absolute-center">
+                    <div    class="imagenDetalleTecnicaBelleza"
+                            style="{!'  background: url('+ v.rutaImg +');
+                                        background-position: center;
+                                        background-size: cover;
+                                        overflow:hidden;
+                                        position: relative;
+                                        background-repeat:no-repeat;
+                                        width: 100%;'}">
+                    </div>
+                </div>
+                <p  class="slds-m-top_large slds-m-bottom_large textoDetalleTecnicasBelleza">
+                    <aura:unescapedHtml value="{!v.articuloSeleccionado.Descripcion__c}" />
+                </p>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12">
+            </div>
+        </div>
+    </div>
+
+</aura:component>

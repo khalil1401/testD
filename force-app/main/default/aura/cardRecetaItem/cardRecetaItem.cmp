@@ -1,0 +1,64 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="backgroundCardColor" type="String"/>
+	<aura:attribute name="radioEsquinas" type="Integer" default="10"/>
+    <aura:attribute name="textHeaderCard" type="String" default="Title"/>
+    <aura:attribute name="textHeaderCardColor" type="String"/>
+    <aura:attribute name="textHeaderCardSize" type="String" default="1"/>
+	<aura:attribute name="fontFamilyTitulosCard" type="String"/>
+	<aura:attribute name="textTituloBodyCard" type="String" default="Title body"/>
+	<aura:attribute name="textTituloBodyCardColor" type="String"/>
+	<aura:attribute name="textTituloBodyCardSize" type="String" default="2"/>
+	<aura:attribute name="textButtonCard" type="String"/>
+    <aura:attribute name="textButtonCardColor" type="String"/>
+	<aura:attribute name="heightTituloBodyCard" type="String"/>
+
+	<aura:attribute name="nombreRecursoEstatico" type="String" default="NutriciaHeader"/>
+	<aura:attribute name="rutaRecursoEstatico" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:html tag="style">
+        .slds-card{
+            border-radius: {!v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px'} !important;
+        }
+    </aura:html>
+
+    <article class="slds-card">
+        <div    class="containerCardReceta"
+                style="{!'background-color: '+ v.backgroundCardColor +' ;'}">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h1 class="slds-card__header-title slds-m-bottom_small"
+                            style="{!'color: '+ v.textHeaderCardColor +';
+                                    font-family: '+ v.fontFamilyTitulosCard +';
+                                    font-size: ' + v.textHeaderCardSize + 'em;'}">
+                            {!v.textHeaderCard}
+                        </h1>
+                        <div class="slds-align_absolute-center">
+                            <img src="{!v.rutaRecursoEstatico}"
+                                style="border-radius: 10px 10px 10px 10px;"/>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div    style="{!'height:' + v.heightTituloBodyCard + 'px;'}">
+                <div    class="slds-card__body slds-card__body_inner"
+                        style="{!'  font-family: ' + v.fontFamilyTitulosCard + ';
+                                    color: '+ v.textTituloBodyCardColor +';
+                                    font-size: '+ v.textTituloBodyCardSize +'em'}">
+                    {!v.textTituloBodyCard}
+                </div>
+            </div>
+            <footer class="slds-card__footer"            
+                    style="text-align: left;">
+                <span  style="{!'color: ' + v.textButtonCardColor + ' !important;
+                                font-family: ' + v.fontFamilyTitulosCard + '; '}">
+                    {!v.textButtonCard}
+                </span>
+            </footer>
+        </div>
+    </article>
+
+</aura:component>

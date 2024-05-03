@@ -1,0 +1,140 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+	<aura:attribute name="recursoEstatico" type="String"/>
+	<aura:attribute name="recursoEstaticoMobile" type="String"/>
+	<aura:attribute name="rutaImg" type="String"/>
+    <aura:attribute name="titulo" type="String"/>
+	<aura:attribute name="primeraBajada" type="String"/>
+	<aura:attribute name="segundaBajada" type="String"/>
+	<aura:attribute name="recursoEstaticoBoton" type="String"/>
+	<aura:attribute name="rutaRecursoEstaticoBoton" type="String"/>
+	<aura:attribute name="altura" type="String" default="600px"/>
+	<aura:attribute name="linea" type="String"/>
+    <aura:attribute name="backgroundPosition" type="String" default="center"/>
+
+	<aura:attribute name="isDesktop" type="Boolean"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<lightning:navigation aura:id="navService"/>
+
+    <aura:if isTrue="{!v.isDesktop}">
+        <!--Si es Desktop--> 
+        <div class="slds-grid slds-grid_vertical-align-center slds-wrap" 
+            style="{!'background-image: url('+ v.rutaImg +');
+                        background-position: '+ v.backgroundPosition +';
+                        height: 375px;
+                        background-repeat: no-repeat;'}">
+            <!--Primer linea-->
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+                <aura:unescapedHtml value="{!v.titulo}" />
+            </div>
+            <div class="slds-col slds-large-size_5-of-12"></div>
+            <!--Segunda linea-->
+            <div class="slds-col slds-size_1-of-1">
+                <aura:unescapedHtml value="{!v.linea}" />
+            </div>
+            <!--Tercer linea-->
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+                <aura:unescapedHtml value="{!v.primeraBajada}" />
+            </div>
+            <div class="slds-col slds-large-size_5-of-12"></div>
+            <!--Cuarta linea-->
+            <div class="slds-col slds-large-size_3-of-12"></div>        
+            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+                <aura:unescapedHtml value="{!v.segundaBajada}" />
+            </div>
+            <div class="slds-col slds-large-size_5-of-12"></div>
+        </div>
+        <!--Si NO es Desktop--> 
+        <aura:set attribute="else">
+            <div class="slds-grid slds-grid_vertical-align-center slds-wrap">
+                <!--Imagen-->
+                <div class="slds-col slds-size_1-of-1">
+                    <img src="{!v.rutaImg}" alt="imgBackground"
+                        style="width: 100%;"/>
+                </div>
+                <!--Primer linea-->
+                <div class="slds-col slds-size_1-of-1" style="padding-top: 5%;">
+                    <aura:unescapedHtml value="{!v.titulo}" />
+                </div>
+                <!--Segunda linea-->
+                <div class="slds-col slds-size_1-of-1">
+                    <aura:unescapedHtml value="{!v.linea}" />
+                </div>
+                <!--Tercer linea-->
+                <div class="slds-col slds-size_1-of-1">
+                    <aura:unescapedHtml value="{!v.primeraBajada}" />
+                </div>
+                <!--Cuarta linea-->
+                <div class="slds-col slds-size_1-of-1">
+                    <aura:unescapedHtml value="{!v.segundaBajada}" />
+                </div>
+            </div>
+            <!--Botonera-->
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-2 slds-m-top_x-large">
+                    <div class="slds-align_absolute-center">
+                        <div class="slds-align_absolute-center" 
+                            data-id="custom_que_es_la_disfagia__c"
+                            onclick="{!c.goTo}"
+                            style="background: linear-gradient(90deg, #513386 0%, #3FA8C1 100%);
+                                    border-radius: 0px 15px 0px 15px;
+                                    width: 100%;height: 50px;
+                                    margin-left: 7%;margin-right: 3%;">
+                            <span style="color: white !important; font-family: NunitoSemiBold; font-size: 1.3em;margin-top: 5%;margin-bottom: 5%;text-align: center;">
+                                ¿Qué es la disfagia?
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-top_x-large">
+                    <div class="slds-align_absolute-center">
+                        <div class="slds-align_absolute-center"
+                            data-id="Recetas_Disfagia__c"
+                            onclick="{!c.goTo}"
+                            style="background: linear-gradient(90deg, #513386 0%, #5d6bac 100%);
+                                    border-radius: 0px 15px 0px 15px;
+                                    width: 100%;height: 50px;
+                                    margin-left: 3%;margin-right: 7%;">
+                            <span style="color: white !important; font-family: NunitoSemiBold; font-size: 1.3em;margin-top: 5%;margin-bottom: 5%;text-align: center;">
+                                Recetas y tips
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-top_small slds-m-bottom_x-large">
+                    <div class="slds-align_absolute-center">
+                        <div class="slds-align_absolute-center"
+                            data-id="Tratamientos_Disfagia__c"
+                            onclick="{!c.goTo}"
+                            style="background: linear-gradient(90deg, #513386 0%, #33708b 100%);
+                                    border-radius: 0px 15px 0px 15px;
+                                    width: 100%;height: 50px;
+                                    margin-left: 7%;margin-right: 3%;">
+                            <span style="color: white !important; font-family: NunitoSemiBold; font-size: 1.3em;margin-top: 5%;margin-bottom: 5%;text-align: center;">
+                                Tratamientos
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-m-top_small slds-m-bottom_x-large">
+                    <div class="slds-align_absolute-center">
+                        <div class="slds-align_absolute-center"
+                            data-id="custom_dimension_psicologica_de_la_disfa__c"
+                            onclick="{!c.goTo}"
+                            style="background: linear-gradient(90deg, #513386 0%, #2B3C8B 100%);
+                                    border-radius: 0px 15px 0px 15px;
+                                    width: 100%;height: 50px;
+                                    margin-left: 3%;margin-right: 7%;">
+                            <span style="color: white !important; font-family: NunitoSemiBold; font-size: 1.3em;margin-top: 5%;margin-bottom: 5%;text-align: center;">
+                                Dimensión psicológica
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aura:set>
+    </aura:if>
+
+</aura:component>

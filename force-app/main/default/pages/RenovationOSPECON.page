@@ -1,0 +1,14 @@
+<apex:page standardController="Account" recordSetVar="accounts" tabStyle="Account" showHeader="true">
+    <apex:includeLightning />
+    <div id="lightningvf" />
+    <script>
+        $Lightning.use("c:RenovationOSPECON_APP", function () {
+            $Lightning.createComponent("c:renovationOSPECON",
+                {},
+                "lightningvf",
+                function (cmp) {
+                    console.log('LWC Componenet added in VF page');
+                });
+        });
+    </script>
+</apex:page>

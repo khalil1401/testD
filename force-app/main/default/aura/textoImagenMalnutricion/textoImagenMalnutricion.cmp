@@ -1,0 +1,258 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="imagenALaIzquierda" type="Boolean"/>
+    <aura:attribute name="rutaImagen" type="String"/>
+    <aura:attribute name="rutaImagenFondo" type="String"/>
+    <aura:attribute name="rutaImagenBoton" type="String"/>
+    <aura:attribute name="textoHTML" type="String"/>
+    <aura:attribute name="claseImagenInterna" type="String" default="imagen-interna"/>
+    <aura:attribute name="claseImagenBotonInterna" type="String" default="container-boton-malnutricion boton-malnutricion"/>
+    <aura:attribute name="apiName" type="String"/>
+    <aura:attribute name="margen" type="String" default="5%"/>
+    <aura:attribute name="botonDoble" type="Boolean"/>
+
+    <lightning:navigation aura:id="navService"/>
+
+    <!--Componente sin imagen de fondo-->
+    <aura:if isTrue="{!!v.rutaImagenFondo}">
+        <aura:if isTrue="{!AND(v.rutaImagen, v.imagenALaIzquierda)}">
+            <aura:if isTrue="{!!v.botonDoble}">
+                <div class="slds-grid slds-wrap">
+                    <!--Desktop y mobile-->
+                    <div class="div-img-izq">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                            <div class="slds-col slds-medium-size_7-of-12 slds-size_1-of-1">
+                                <img src="{!v.rutaImagen}" class="{!v.claseImagenInterna}"/>
+                            </div>
+                            <div class="slds-col slds-medium-size_5-of-12 slds-size_1-of-1">
+                                <aura:unescapedHtml value="{!v.textoHTML}"/>
+                                <aura:if isTrue="{!v.rutaImagenBoton}">
+                                    <div class="slds-m-top_large">
+                                        <span onclick="{!c.redireccionar}">
+                                            <aura:unescapedHtml value="{!v.rutaImagenBoton}"/>
+                                        </span>
+                                    </div>
+                                </aura:if>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.botonDoble}">
+                <div class="slds-grid slds-wrap">
+                    <div class="div-img-izq">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                            <div class="slds-col slds-medium-size_7-of-12 slds-size_1-of-1">
+                                <img src="{!v.rutaImagen}" class="{!v.claseImagenInterna}"/>
+                            </div>
+                            <div class="slds-col slds-medium-size_5-of-12 slds-size_1-of-1">
+                                <div class="slds-grid slds-wrap">
+                                    <!--
+                                    <div class="slds-col slds-large-size_2-of-12" style="text-align: center;">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_MALNUTRICION/MALNUTRICION-AJUSTES/MALNUTRICION-ICONOS/PP-18.7-Malnutricion_Lata.png"/>
+                                    </div>
+                                    <div class="slds-col slds-large-size_10-of-12 slds-size_1-of-1 slds-p-left_small">
+                                        <p class="texto-gris-malnutricion">
+                                            También podés agregar suplementos nutricionales de sabor neutro que no afectan el gusto de las comidas, volviéndolas más nutritivas.
+                                        </p>		
+                                        <p class="titulo-negro-malnutricion slds-m-top_medium">
+                                            Para ver más, haga clic en el botón debajo
+                                        </p>
+                                        <div class="desktop">
+                                            <div class="slds-m-top_large">
+                                                <span class="container-boton-malnutricion boton-rosa-malnutricion" onclick="{!c.redireccionarRecetasEnriquecidas}">
+                                                    RECETAS ENRIQUECIDAS
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="mobile">
+                                            <div class="slds-m-top_large">
+                                                <div class="container-boton-malnutricion slds-align_absolute-center" onclick="{!c.redireccionarRecetasEnriquecidas}">
+                                                    <span class="boton-rosa-malnutricion">
+                                                        RECETAS ENRIQUECIDAS
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    -->
+                                    <div class="slds-col slds-large-size_2-of-12 slds-m-top_x-large" style="text-align: center;">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_MALNUTRICION/MALNUTRICION-AJUSTES/MALNUTRICION-ICONOS/PP-18.7-Malnutricion_Botella.png"/>
+                                    </div>
+                                    <div class="slds-col slds-large-size_10-of-12 slds-size_1-of-1 slds-m-top_x-large slds-p-left_small">
+                                        <p class="texto-gris-malnutricion">
+                                            También podés consumir suplementos orales listos para beber, que aportan energía, proteínas, vitaminas y minerales.
+                                        </p>
+                                        <p class="titulo-negro-malnutricion slds-m-top_medium">
+                                            Si quiere saber más, haga clic en el botón debajo
+                                        </p>
+                                        <!--Botones desktop y mobile-->
+                                        <div class="desktop">
+                                            <div class="container-boton-malnutricion slds-align_absolute-center slds-m-top_large" onclick="{!c.redireccionarSuplementosNutricionales}">
+                                                <span class="boton-rosa-malnutricion" style="padding-top: 0;padding-bottom: 0;">
+                                                    SUPLEMENTOS NUTRICIONALES
+                                                </span>	
+                                            </div>
+                                        </div>
+                                        <div class="mobile">
+                                            <div class="container-boton-malnutricion slds-align_absolute-center slds-m-top_large" onclick="{!c.redireccionarSuplementosNutricionales}">
+                                                <span class="boton-rosa-malnutricion">
+                                                    SUPLEMENTOS NUTRICIONALES
+                                                </span>	
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aura:if>
+        </aura:if>
+        <aura:if isTrue="{!AND(v.rutaImagen, !v.imagenALaIzquierda)}">
+            <div class="slds-grid slds-wrap">
+                <!--Desktop-->
+                <div class="div-img-der desktop">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-medium-size_5-of-12 slds-size_1-of-1">
+                            <aura:unescapedHtml value="{!v.textoHTML}"/>
+                            <aura:if isTrue="{!v.rutaImagenBoton}">
+                                <div class="slds-m-top_large">
+                                    <span onclick="{!c.redireccionar}">
+                                        <aura:unescapedHtml value="{!v.rutaImagenBoton}"/>
+                                    </span>
+                                </div>
+                            </aura:if>
+                        </div>
+                        <div class="slds-col slds-medium-size_7-of-12 slds-size_1-of-1">
+                            <img src="{!v.rutaImagen}" class="{!v.claseImagenInterna}"/>
+                        </div>
+                    </div>
+                </div>
+                <!--Mobile-->
+                <div class="div-img-der mobile">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1">
+                            <img src="{!v.rutaImagen}" class="{!v.claseImagenInterna}"/>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <aura:unescapedHtml value="{!v.textoHTML}"/>
+                            <aura:if isTrue="{!v.rutaImagenBoton}">
+                                <div class="slds-m-top_large">
+                                    <span onclick="{!c.redireccionar}">
+                                        <aura:unescapedHtml value="{!v.rutaImagenBoton}"/>
+                                    </span>
+                                </div>
+                            </aura:if>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+        <!--Componente solo de texto-->
+        <aura:if isTrue="{!!v.rutaImagen}">
+            <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                <!--Desktop y mobile-->
+                <div class="div-center">
+                    <div class="slds-col slds-size_1-of-1">
+                        <aura:unescapedHtml value="{!v.textoHTML}"/>
+                        <aura:if isTrue="{!v.rutaImagenBoton}">
+                            <span onclick="{!c.redireccionar}">
+                                <aura:unescapedHtml value="{!v.rutaImagenBoton}"/>
+                            </span>
+                        </aura:if>
+                    </div>    
+                </div>
+            </div>
+        </aura:if>
+    </aura:if>
+    <!--Componente con imagen fondo-->
+    <aura:if isTrue="{!v.rutaImagenFondo}">
+        <aura:if isTrue="{!v.imagenALaIzquierda}">
+            <div class="slds-grid slds-wrap">
+                <!--Desktop-->
+                <div class="div-center desktop">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center border-radius"
+                        style="{!'background-image: url('+ v.rutaImagenFondo +');
+                            background-position: center;
+                            background-repeat: repeat-y;
+                            position: relative;
+                            height: 400px;'}">
+                        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1">
+                            <img src="{!v.rutaImagen}" class="{!v.claseImagenInterna}"/>
+                        </div>
+                        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1">
+                            <aura:unescapedHtml value="{!v.textoHTML}"/>
+                        </div>
+                    </div>
+                </div>
+                <!--Mobile-->
+                <div class="mobile">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center div-center border-radius"
+                        style="{!'background-image: url('+ v.rutaImagenFondo +');
+                            background-position: center;
+                            background-repeat: repeat-y;
+                            border-radius: 100px 0px 100px 0px;'}">
+                        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                            <aura:unescapedHtml value="{!v.textoHTML}"/>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <img src="{!v.rutaImagen}" class="slds-m-top_x-small"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!!v.imagenALaIzquierda}">
+            <div>
+                <!--Desktop-->
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center div-center-fondo border-radius desktop"
+                    style="{!'background-image: url('+ v.rutaImagenFondo +');
+                            background-position: center;
+                            background-repeat: repeat-y;
+                            position: relative;
+                            height: 400px;'}">
+                    <div class="slds-col slds-medium-size_6-of-12">
+                        <aura:unescapedHtml value="{!v.textoHTML}"/>
+                        <aura:if isTrue="{!v.rutaImagenBoton}">
+                            <div class="slds-m-top_large">
+                                <span onclick="{!c.redireccionar}">
+                                    <aura:unescapedHtml value="{!v.rutaImagenBoton}"/>
+                                </span>
+                            </div>
+                        </aura:if>
+                    </div>
+                    <div class="slds-col slds-medium-size_6-of-12">
+                        <div class="slds-m-top_medium">
+                            <img src="{!v.rutaImagen}" class="{!v.claseImagenInterna}"/>
+                        </div>
+                    </div>
+                </div>
+                <!--Mobile-->
+                <div class="mobile">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center div-center-fondo border-radius"
+                        style="{!'background-image: url('+ v.rutaImagenFondo +');
+                                background-position: center;
+                                background-repeat: repeat-y;'}">
+                        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-m-bottom_x-small">
+                            <aura:unescapedHtml value="{!v.textoHTML}"/>
+                            <aura:if isTrue="{!v.rutaImagenBoton}">
+                                <div class="slds-m-top_large">
+                                    <span onclick="{!c.redireccionar}">
+                                        <aura:unescapedHtml value="{!v.rutaImagenBoton}"/>
+                                    </span>
+                                </div>
+                            </aura:if>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <div class="slds-align_absolute-center slds-m-top_x-small">
+                                <img src="{!v.rutaImagen}" class="image-fondo-mobile"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+    </aura:if>
+
+</aura:component>

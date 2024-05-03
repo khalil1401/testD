@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Nuevo_llamado_sensible</name>
+        <label>Nuevo llamado sensible</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <actionName>Formulario_MarketingCloud__c.Nuevo_llamado_sensible</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Verificar_el_recordType</name>
+        <label>Verificar el recordType</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Es_Llamado_sensible</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Llamado_Sensible</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Nuevo_llamado_sensible</targetReference>
+            </connector>
+            <label>Es Llamado sensible</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Nuevo formulario mkt cloud {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Nuevo llamado sensible</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Verificar_el_recordType</targetReference>
+        </connector>
+        <object>Formulario_MarketingCloud__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

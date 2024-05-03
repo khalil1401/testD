@@ -1,0 +1,29 @@
+<aura:component implements="forceCommunity:layout,forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="tituloTexto" type="String"/>
+    <aura:attribute name="cuerpoTexto" type="String"/>
+    <aura:attribute name="recursoEstatico" type="String"/>
+    <aura:attribute name="rutaRecursoEstatico" type="String"/>
+
+    <div style="background: linear-gradient(90deg, rgba(152, 123, 217, 0.6) 0%,  rgba(110,131,229,0.6) 100%);">
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center containerImagenNutricionOncologia">
+            <div class="slds-col slds-large-size_2-of-12">
+            </div>
+            <div class="slds-col slds-large-size_1-of-1 slds-large-size_3-of-12 slds-align_absolute-center">
+                <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-MALNUTRICION/PP-evaluacionNutricionalOncologia%282022-05-20%29.png"
+                        alt="img"
+                        class="imagenNutricionOncologia"/>
+            </div>
+            <div class="slds-col slds-large-size_1-of-1 slds-large-size_5-of-12">
+                <br></br>
+                <p  class="slds-m-top_small textoImagenNutricionOncologia">
+                    <aura:unescapedHtml value="{!v.cuerpoTexto}"/>
+                </p>
+                <br></br>        
+            </div>
+            <div class="slds-col slds-large-size_2-of-12">
+            </div>
+        </div>
+    </div>
+
+</aura:component>

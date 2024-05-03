@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cuenta_con_stock_actualmente__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Cuenta con stock actualmente?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>+ de 14 días</fullName>
+                <default>false</default>
+                <label>+ de 14 días</label>
+            </value>
+            <value>
+                <fullName>Si</fullName>
+                <default>false</default>
+                <label>Si</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>10 días</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>10 días</label>
+            </value>
+            <value>
+                <fullName>14 días</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>14 días</label>
+            </value>
+            <value>
+                <fullName>5 días</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>5 días</label>
+            </value>
+            <value>
+                <fullName>7 días</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>7 días</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

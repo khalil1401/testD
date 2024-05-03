@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WhatsappDanone__Fecha_de_Ultimo_Mensaje_Whatsapp__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Fecha de Ultimo Mensaje Whatsapp</label>
+    <summarizedField>WhatsappDanone__Whatsapp_Message__c.CreatedDate</summarizedField>
+    <summaryForeignKey>WhatsappDanone__Whatsapp_Message__c.WhatsappDanone__Case__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

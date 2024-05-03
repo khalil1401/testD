@@ -1,0 +1,80 @@
+<template>
+    <div class="container-titulo-receta slds-align_absolute-center">
+        <p class="titulo-receta slds-p-around_small slds-text-align_center">
+            {nombreReceta}
+        </p>
+    </div>
+    <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-top_large">
+        <div class="slds-col slds-size_1-of-1">
+            <div class="containerDescripcionRecetaDesktop">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                        <template if:true={recetaUrlVideo}>
+                            <iframe width="95%"
+                                    height="350"
+                                    src={recetaUrlVideo}
+                                    class="video-receta"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </template>
+                        <template if:false={recetaUrlVideo}>
+                            <div data-id="imagen-receta" class="img-receta-tc"></div>
+                        </template>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                        <template if:false={isMobile}>
+                            <div class="container-ingredientes slds-scrollable">
+                                <p class="titulos-ingredientes slds-text-align_center">
+                                    INGREDIENTES
+                                </p>
+                                <p class="textos-ingredientes slds-m-top_medium">
+                                    <lightning-formatted-rich-text value={ingredientesReceta}></lightning-formatted-rich-text>
+                                </p>
+                            </div>    
+                        </template>
+                        <template if:true={isMobile}>
+                            <div class="container-ingredientes">
+                                <p class="titulos-ingredientes slds-text-align_center">
+                                    INGREDIENTES
+                                </p>
+                                <p class="textos-ingredientes slds-m-top_medium">
+                                    <lightning-formatted-rich-text value={ingredientesReceta}></lightning-formatted-rich-text>
+                                </p>
+                            </div>    
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slds-grid slds-grid_vertical-align-center">
+        <div class="slds-col slds-size_1-of-1">
+            <div class="slds-grid slds-wrap slds-m-top_large">
+                <div class="slds-col slds-size_1-of-1 container-preparacion">
+                    <p class="titulos-ingredientes slds-text-align_center">
+                        PREPARACIÓN
+                    </p>
+                    <p class="textos-ingredientes slds-m-top_medium">
+                        <lightning-formatted-rich-text value={preparacionReceta}></lightning-formatted-rich-text>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-12">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_10-of-12 slds-m-top_x-large slds-text-align_center">
+                    <div class="div-aviso-importante">
+                        <p class="titulo-aviso-importante">
+                            IMPORTANTE
+                        </p>
+                        <p class="texto-aviso-importante">
+                            Consultá el ratio y la cantidad de cada ingrediente con tu profesional de la salud especializado en terapia cetogénica para adecuarlo a tu tratamiento.
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-12">
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

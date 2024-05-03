@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campo_Cambio_a_producto_obligatorio</fullName>
+    <active>true</active>
+    <description>El campo &quot;Cambio a producto&quot; debe estar completo siempre que el caso sea de tipo &quot;Retención&quot; subtipo &quot;Seguimiento no renovación&quot; y cuando el tipo sea &quot;Gestión&quot; subtipo seguimiento ONG&quot;.</description>
+    <errorConditionFormula>OR(AND(ISBLANK(Cambio_a_producto__c), RecordType.DeveloperName = &quot;Retencion&quot;,ISPICKVAL(Subtipo__c , &quot;Seguimiento no renovación&quot;),OR(ISPICKVAL(Motivo__c,&quot;Cambio de indicación&quot;),ISPICKVAL(Motivo__c,&quot;En evaluación médica&quot;),ISPICKVAL(Motivo__c,&quot;Fin cobertura Plan Materno Infantil&quot;))),
+AND(ISBLANK(Cambio_a_producto__c), RecordType.DeveloperName = &quot;Gestion&quot;,ISPICKVAL(Subtipo__c , &quot;Seguimiento ONG&quot;)))</errorConditionFormula>
+    <errorDisplayField>Cambio_a_producto__c</errorDisplayField>
+    <errorMessage>Debe completar el campo</errorMessage>
+</ValidationRule>

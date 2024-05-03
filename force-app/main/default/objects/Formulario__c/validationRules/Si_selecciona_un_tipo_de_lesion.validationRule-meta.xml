@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_selecciona_un_tipo_de_lesion</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(AND( NOT(ISBLANK( Lesiones_de_la_Piel__c )), Lesiones__c = false),TRUE,FALSE)</errorConditionFormula>
+    <errorDisplayField>Lesiones__c</errorDisplayField>
+    <errorMessage>Si tiene un tipo de lesión debe estar seleccionado lesión en la piel</errorMessage>
+</ValidationRule>

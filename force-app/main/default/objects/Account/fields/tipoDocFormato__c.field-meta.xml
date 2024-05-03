@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>tipoDocFormato__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+OR(
+RecordType.DeveloperName == &apos;Paciente_Best_Care&apos;,
+RecordType.DeveloperName == &apos;Paciente_Regular&apos;
+),
+&apos;96&apos;,
+TipoDocumento__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>TipoDocumento</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

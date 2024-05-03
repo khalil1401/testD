@@ -1,0 +1,59 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="derecha" type="Boolean" default="false"/>
+	<aura:attribute name="izquierda" type="Boolean" default="true"/>
+	<aura:attribute name="recursoEstatico" type="String"/>
+	<aura:attribute name="rutaImg" type="String"/>
+	<aura:attribute name="primerTexto" type="String"/>
+	<aura:attribute name="segundoTexto" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:if isTrue="{!v.izquierda}">
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-p-top_x-large slds-p-bottom_x-large">
+            <!--Primera linea-->
+            <div class="slds-col slds-large-size_2-of-12"></div>
+            <div class="slds-col slds-large-size_3-of-12">
+                <div class="containerImgDerTestimonio">
+                    <img src="{!v.rutaImg}" alt="img1" class="imgTestimonio"/>
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_4-of-12">
+                <div class="containerTextoDerTestimonioS">
+                    <aura:unescapedHtml value="{!v.primerTexto}" />
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <!--Segunda linea-->
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <div class="slds-col slds-large-size_6-of-12">
+                <aura:unescapedHtml value="{!v.segundoTexto}" />
+            </div>
+            <div class="slds-col slds-large-size_3-of-12"></div>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.derecha}">
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-p-top_x-large slds-p-bottom_x-large">
+            <!--Primera linea-->
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+                <div class="containerTextoIzqTestimonioS">
+                    <aura:unescapedHtml value="{!v.primerTexto}" />
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12">
+                <div class="containerImgIzqTestimonio">
+                    <img src="{!v.rutaImg}" alt="img1" class="imgTestimonio"/>
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_2-of-12"></div>
+            <!--Segunda linea-->
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <div class="slds-col slds-large-size_6-of-12">
+                <aura:unescapedHtml value="{!v.segundoTexto}" />
+            </div>
+            <div class="slds-col slds-large-size_3-of-12"></div>
+        </div>
+    </aura:if>
+
+</aura:component>

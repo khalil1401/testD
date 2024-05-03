@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reservar</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Reservar</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/apex.js&quot;)}
+
+var moduloRec = new sforce.SObject(&quot;Modulo_de_paciente__c&quot;);
+moduloRec.Id = &apos;{!Modulo_de_paciente__c.Id}&apos;;
+
+
+moduloRec.Estado_de_modulo__c= &quot;Reservado&quot;
+
+var result = sforce.connection.update([moduloRec]);
+if(result[0].getBoolean(&quot;success&quot;))
+{
+window.location.reload();
+}
+else{
+alert(&apos;Error : &apos;+result);
+}</url>
+</WebLink>

@@ -1,0 +1,22 @@
+.THIS {
+}
+
+.THIS .disgeusia-on-layout{
+    width: 100%;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+@media (max-width: 1324px) {
+    .THIS .disgeusia-on-layout{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 600px) {
+    .THIS .disgeusia-on-layout{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}

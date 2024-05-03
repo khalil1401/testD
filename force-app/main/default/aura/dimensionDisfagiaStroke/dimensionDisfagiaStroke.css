@@ -1,0 +1,143 @@
+.THIS {
+}
+
+.THIS .containerTituloDimensionDisfagia{
+    background: linear-gradient(90deg, #513386 0%, #2B3C8B 100%);
+    border-radius: 0px 100px 0px 100px;
+    margin-top: 5%;
+}
+
+.THIS .tituloDimension{
+    font-family: NunitoBold;
+    color: white;
+    font-size: 2.0911458542448003em;
+    line-height: 1.2em;
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.THIS .textoItemsDimension{
+    font-family: NunitoRegular;
+    font-size: 1.338333346716672em;
+    line-height: 1.338333346716672em;
+    color: #606060;
+}
+
+.THIS .itemsDimension{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.THIS .backgroundApoyandote{
+    border-radius: 100px 0px 100px 0px;
+    background-color: #2B3C8B;
+    color: white;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.15);
+}
+
+.THIS .containerCardsTestimonios{
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.15);
+    height: 27rem;
+}
+
+.THIS .containerTextoCardsTestimonios{
+    height: 17rem;
+}
+
+.THIS .textoCardsTestimonios{
+    font-family: NunitoRegular;
+    font-size: 1.25468751254688em;
+    line-height:  1.25468751254688em;
+    color: white;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.THIS .textoAutorCardsTestimonios{
+    font-family: NunitoRegular;
+    font-size: 1.25468751254688em;
+    line-height:  1.25468751254688em;
+    color: white;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-right: 10%;
+}
+
+.THIS .containerImgDimensionDisfagia{
+    padding-right: 20%;
+}
+
+.THIS .imgDimensionDisfagia{
+    border-radius: 0px 100px 0px 100px;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.15);
+}
+
+.THIS .containerCardTestimonioIzq{
+    padding-right: 2%;
+}
+
+.THIS .containerCardTestimonioDer{
+    padding-left: 2%;
+}
+
+@media (max-width: 600px) {
+    .THIS{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .THIS .textoItemsDimension{
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: left;
+    }
+    
+    .THIS .containerTituloDimensionDisfagia{
+        border-radius: 0px 50px 0px 50px;
+    }
+
+    .THIS .tituloDimension{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .THIS .containerImgDimensionDisfagia{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .THIS .containerCardTestimonioIzq{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .THIS .containerCardTestimonioDer{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .THIS .imgFlechaApoyandote{
+        display: none;
+    }
+    
+    .THIS .containerApoyante{
+        padding-top: 8%;
+        padding-bottom: 5%;
+    }
+
+    .THIS .backgroundApoyandote{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .THIS .containerCardsTestimonios{
+        height: 30rem;
+    }
+    
+    .THIS .containerTextoCardsTestimonios{
+        height: 20rem;
+    }
+}

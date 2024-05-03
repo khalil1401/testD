@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cuando_noto_el_defecto__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Apenas abrió /en la preparación / pasado X tiempo</inlineHelpText>
+    <label>¿Cuando noto el defecto?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

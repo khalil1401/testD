@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Best_Care</letterhead>
+    <name>Nuevo paciente ER</name>
+    <style>freeForm</style>
+    <subject>Nuevo paciente ER</subject>
+    <textOnly>Estimado,
+
+Le escribimos para avisarle que hay un nuevo paciente ER {!Account.Nombre_oculto__c} {!Account.Apellido_oculto__c} con el ID: {!Account.ID_de_paciente__c}
+
+Para ver los datos de este paciente ingresar a {!Account.Link}
+
+Saludos.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

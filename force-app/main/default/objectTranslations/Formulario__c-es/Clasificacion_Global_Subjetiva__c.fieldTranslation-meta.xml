@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Clasificacion_Global_Subjetiva__c</name>
+    <picklistValues>
+        <masterLabel>A - Bien Nutrido</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B - Moderadamente Desnutrido</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>C - Severamente Desnutrido</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No se puede Realizar</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

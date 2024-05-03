@@ -1,0 +1,47 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes"  access="global" >
+    
+    <aura:attribute name="height" type="Integer" default="64"/>
+    <aura:attribute name="width" type="Integer" default="64"/>
+    
+    <aura:attribute name="mobileHeight" type="Integer" default="40"/>
+    <aura:attribute name="mobileWidth" type="Integer" default="40"/>
+    
+    <aura:attribute name="verticalAlign" type="String" default=""/>
+    <aura:attribute name="align" type="String" default=""/>
+    <aura:attribute name="verticalPX" type="Integer" default="10"/>
+    <aura:attribute name="horizontalPX" type="Integer" default="10"/>
+    <aura:attribute name="backgroundColor" type="String" default=""/>
+    <aura:attribute name="backgroundSize" type="Integer" default="90"/>
+    
+    <aura:attribute name="borderRadius" type="Integer" default="5"/>
+    
+    <aura:attribute name="imagenFondo" type="String" default=""/> 
+    <aura:attribute name="staticResourceName" type="String" default=""/> 
+    <aura:attribute name="imageName" type="String" default=""/> 
+    
+    <aura:attribute name="URL" type="String" default="www.google.com"/>  
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />  
+    <aura:html tag="style">
+        @media (max-width: 600px) {
+            .container {
+                max-width: {!v.mobileWidth + 'px;'}
+                max-height: {!v.mobileHeight + 'px;'}
+            }
+        }
+    </aura:html>
+    <div aura:id="container" class="container"
+         style="{! 
+                'width:' + v.width + 'px;
+                height:' + v.height + 'px;
+                border-radius:' + v.borderRadius + 'px;' +
+                v.verticalAlign + ':' + v.verticalPX + 'px;'+
+                v.align + ':' + v.horizontalPX + 'px;
+                background-color:' + v.backgroundColor + ';
+                background-image: url('+ v.imagenFondo +');
+                background-size:' + v.backgroundSize + '%;'
+                }">
+        <a href="{!v.URL}" target="_blank"/>
+    </div>
+    
+</aura:component>

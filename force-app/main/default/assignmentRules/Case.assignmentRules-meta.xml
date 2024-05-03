@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Asignación retención</fullName>
+        <active>false</active>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>BestCareAssignment</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>Backoffice</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND (ISNEW(), RecordType.Name = &quot;Nuevo paciente&quot;)</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PSP</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(TEXT(Origin) = &apos;Whatsapp&apos; , ISNEW())</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <formula>true</formula>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Reclamos NUBA</fullName>
+        <active>false</active>
+    </assignmentRule>
+</AssignmentRules>

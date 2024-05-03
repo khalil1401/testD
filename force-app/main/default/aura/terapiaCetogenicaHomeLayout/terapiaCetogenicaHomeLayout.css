@@ -1,0 +1,37 @@
+.THIS {
+}
+
+.THIS .container-cards-tc{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.THIS .card-home-tc-nsj{
+    padding: 1%;
+}
+
+@media (max-width: 1600px) {
+    .THIS .container-cards-tc{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .THIS .container-cards-tc{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .THIS .container-cards-tc{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    
+    .THIS .card-home-tc-nsj{
+        padding: 0%;
+        margin-top: 7%;
+    }    
+}

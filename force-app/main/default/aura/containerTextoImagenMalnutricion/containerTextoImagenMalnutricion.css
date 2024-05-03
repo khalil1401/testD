@@ -1,0 +1,121 @@
+.THIS {
+}
+
+.THIS .mobile{
+    display: none;
+}
+
+.THIS .imagen-abajo-derecha{
+    width: 28%;
+    position: absolute;
+    bottom: 0px;
+    padding-left: 15px;
+}
+
+.THIS .titulo-malnutricion{
+    font-family: NunitoBold;
+    font-size: 1.875rem;
+    line-height: 2.063rem;
+    color: white;
+}
+
+.THIS .texto-malnutricion{
+    font-family: NunitoRegular;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: white;
+}
+
+.THIS .container-boton-malnutricion{
+    background-color: white;
+    box-shadow: 0px 4px 33px rgba(0, 134, 124, 0.2);
+    border-radius: 58px;
+}
+
+.THIS .boton-malnutricion{
+    font-family: NunitoBold;
+    color: #008FCF;
+    font-size: 1rem;
+    line-height: 3rem;
+    letter-spacing: 0.2em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.THIS .border-radius{
+    border-radius: 75px 0px 75px 0px;
+}
+
+.THIS .div-izq-fondo{
+    padding-left: 50%;
+}
+.THIS .div-der-fondo{
+    padding-right: 50%;
+}
+
+@media (max-width: 1600px){
+    .THIS .div-izq-fondo{
+        padding-left: 40%;
+    }
+    .THIS .div-der-fondo{
+        padding-right: 40%;
+    }
+    .THIS .imagen-abajo-derecha{
+        width: 35%;
+    }
+}
+
+@media (max-width: 1300px){
+    .THIS .div-izq-fondo{
+        padding-left: 20%;
+    }
+    .THIS .div-der-fondo{
+        padding-right: 20%;
+    }
+    .THIS .imagen-abajo-derecha{
+        width: 45%;
+    }
+}
+
+@media (max-width: 1024px){
+    .THIS .div-izq-fondo{
+        padding-left: 10%;
+    }
+    .THIS .div-der-fondo{
+        padding-right: 10%;
+    }
+    .THIS .imagen-abajo-derecha{
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px){
+    .THIS .desktop{
+        display: none;
+    }
+    .THIS .mobile{
+        display: initial;
+    }
+    .THIS .div-izq-fondo{
+        padding-left: 7%;
+    }
+    .THIS .div-der-fondo{
+        padding-left: 7%;
+        padding-right: 7%;
+        padding-top: 5%;
+    }
+    .THIS .boton-malnutricion{
+        line-height: 1.5rem;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+    .THIS .imagen-abajo-derecha-mobile{
+        width: 85%;
+    }
+    .THIS .border-radius{
+        border-radius: 90px 0px 90px 0px;
+    }    
+}

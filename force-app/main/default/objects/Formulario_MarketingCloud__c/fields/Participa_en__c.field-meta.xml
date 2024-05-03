@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Participa_en__c</fullName>
+    <externalId>false</externalId>
+    <label>Participa en alguna asociación de pxs</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No, no participa y le interesaría</fullName>
+                <default>false</default>
+                <label>No, no participa y le interesaría</label>
+            </value>
+            <value>
+                <fullName>No, no participa y no le interesa</fullName>
+                <default>false</default>
+                <label>No, no participa y no le interesa</label>
+            </value>
+            <value>
+                <fullName>Si participa y le brinda el soporte que necesita</fullName>
+                <default>false</default>
+                <label>Si participa y le brinda el soporte que necesita</label>
+            </value>
+            <value>
+                <fullName>Si participa pero no le sirve el soporte que brindan</fullName>
+                <default>false</default>
+                <label>Si participa pero no le sirve el soporte que brindan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

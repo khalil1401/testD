@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submotivo__c</fullName>
+    <externalId>false</externalId>
+    <label>Submotivo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Motivo__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alergia</fullName>
+                <default>false</default>
+                <label>Alergia</label>
+            </value>
+            <value>
+                <fullName>Color anormal</fullName>
+                <default>false</default>
+                <label>Color anormal</label>
+            </value>
+            <value>
+                <fullName>Diarrea</fullName>
+                <default>false</default>
+                <label>Diarrea</label>
+            </value>
+            <value>
+                <fullName>Envase abollado</fullName>
+                <default>false</default>
+                <label>Envase abollado</label>
+            </value>
+            <value>
+                <fullName>Grumos / separación de fases</fullName>
+                <default>false</default>
+                <label>Grumos / separación de fases</label>
+            </value>
+            <value>
+                <fullName>Mal olor</fullName>
+                <default>false</default>
+                <label>Mal olor</label>
+            </value>
+            <value>
+                <fullName>Mal sabor</fullName>
+                <default>false</default>
+                <label>Mal sabor</label>
+            </value>
+            <value>
+                <fullName>Metal</fullName>
+                <default>false</default>
+                <label>Metal</label>
+            </value>
+            <value>
+                <fullName>Partículas blancas</fullName>
+                <default>false</default>
+                <label>Partículas blancas</label>
+            </value>
+            <value>
+                <fullName>Partículas oscuras</fullName>
+                <default>false</default>
+                <label>Partículas oscuras</label>
+            </value>
+            <value>
+                <fullName>Pelo</fullName>
+                <default>false</default>
+                <label>Pelo</label>
+            </value>
+            <value>
+                <fullName>Plagas e insectos</fullName>
+                <default>false</default>
+                <label>Plagas e insectos</label>
+            </value>
+            <value>
+                <fullName>Plástico</fullName>
+                <default>false</default>
+                <label>Plástico</label>
+            </value>
+            <value>
+                <fullName>Producto cortado</fullName>
+                <default>false</default>
+                <label>Producto cortado</label>
+            </value>
+            <value>
+                <fullName>Sedimentos blancos</fullName>
+                <default>false</default>
+                <label>Sedimentos blancos</label>
+            </value>
+            <value>
+                <fullName>Sedimentos oscuros</fullName>
+                <default>false</default>
+                <label>Sedimentos oscuros</label>
+            </value>
+            <value>
+                <fullName>Textura distinta</fullName>
+                <default>false</default>
+                <label>Textura distinta</label>
+            </value>
+            <value>
+                <fullName>Vidrio</fullName>
+                <default>false</default>
+                <label>Vidrio</label>
+            </value>
+            <value>
+                <fullName>Vómitos</fullName>
+                <default>false</default>
+                <label>Vómitos</label>
+            </value>
+            <value>
+                <fullName>Menor cantidad de tiras</fullName>
+                <default>false</default>
+                <label>Menor cantidad de tiras</label>
+            </value>
+            <value>
+                <fullName>Envase abierto / pinchado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Envase abierto / pinchado</label>
+            </value>
+            <value>
+                <fullName>Envase hinchado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Envase hinchado</label>
+            </value>
+            <value>
+                <fullName>Envase sucio / oxidado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Envase sucio / oxidado</label>
+            </value>
+            <value>
+                <fullName>Etiqueta errónea</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Etiqueta errónea</label>
+            </value>
+            <value>
+                <fullName>Etiqueta ilegible</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Etiqueta ilegible</label>
+            </value>
+            <value>
+                <fullName>Falta cuchara</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Falta cuchara</label>
+            </value>
+            <value>
+                <fullName>Falta sorbete</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Falta sorbete</label>
+            </value>
+            <value>
+                <fullName>Lote y Vencimiento ilegible</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lote y Vencimiento ilegible</label>
+            </value>
+            <value>
+                <fullName>Menor contenido</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Menor contenido</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Otros</label>
+            </value>
+            <value>
+                <fullName>Peal off hinchado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Peal off hinchado</label>
+            </value>
+            <value>
+                <fullName>Peal off roto</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Peal off roto</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Cuerpo extraño</controllingFieldValue>
+            <valueName>Metal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cuerpo extraño</controllingFieldValue>
+            <valueName>Partículas blancas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cuerpo extraño</controllingFieldValue>
+            <valueName>Partículas oscuras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cuerpo extraño</controllingFieldValue>
+            <valueName>Pelo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cuerpo extraño</controllingFieldValue>
+            <valueName>Plagas e insectos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cuerpo extraño</controllingFieldValue>
+            <valueName>Plástico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cuerpo extraño</controllingFieldValue>
+            <valueName>Vidrio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sensorial</controllingFieldValue>
+            <valueName>Color anormal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sensorial</controllingFieldValue>
+            <valueName>Mal olor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sensorial</controllingFieldValue>
+            <valueName>Mal sabor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sensorial</controllingFieldValue>
+            <valueName>Producto cortado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sensorial</controllingFieldValue>
+            <valueName>Textura distinta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Síntomas</controllingFieldValue>
+            <valueName>Alergia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Síntomas</controllingFieldValue>
+            <valueName>Diarrea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Síntomas</controllingFieldValue>
+            <valueName>Vómitos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insumos</controllingFieldValue>
+            <valueName>Menor cantidad de tiras</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

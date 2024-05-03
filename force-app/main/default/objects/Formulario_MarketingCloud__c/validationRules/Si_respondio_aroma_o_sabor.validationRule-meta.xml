@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_respondio_aroma_o_sabor</fullName>
+    <active>false</active>
+    <description>En caso de haber respondido que no le agrada el aroma o sabor del producto debe responder si consume el producto cercano a un medicamento, en que momento del dia y de que manera (Frio, caliente, temperatura ambiente)</description>
+    <errorConditionFormula>AND( ISPICKVAL(Si_no_tolera_bien_la_formula__c,&quot;No le agrada su aroma o sabor&quot;)
+,OR(ISBLANK(Cuando_consume_el_producto__c ) ,ISBLANK(TEXT(De_qu_manera_lo_consume__c))
+,ISBLANK(TEXT(Lo_ingienere_cercano_a_otro_medicamento__c))))</errorConditionFormula>
+    <errorDisplayField>Si_no_tolera_bien_la_formula__c</errorDisplayField>
+    <errorMessage>Si respondio que &quot;No le agrada su aroma o sabor&quot; debe completar las preguntas de la seccion:
+-En caso de distensión abdominal/diarrea, vómitos, sabor o aroma</errorMessage>
+</ValidationRule>

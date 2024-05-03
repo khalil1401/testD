@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_respondi_Otro_c_mo_lo_adquiere__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Si respondió &quot;Otro&quot;, cómo adquiere el apoyo nutricional?</inlineHelpText>
+    <label>Si respondió &quot;Otro&quot;, cómo lo adquiere?</label>
+    <length>100</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

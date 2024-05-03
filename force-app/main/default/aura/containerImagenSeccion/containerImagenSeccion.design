@@ -1,0 +1,9 @@
+<design:component >
+
+    <design:attribute name="recursoEstatico" label="URL de la imagen desktop"/>
+    <design:attribute name="recursoEstaticoMobile" label="URL de la imagen mobile"/>
+    <design:attribute name="apiName" label="API Name de página a redireccionar"/>
+    <design:attribute name="altoMaximo" label="No utilizar"/>
+    <design:attribute name="altoMinimo" label="No utilizar"/>
+
+</design:component>

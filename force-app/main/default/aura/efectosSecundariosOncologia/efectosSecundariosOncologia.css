@@ -1,0 +1,134 @@
+.THIS {
+}
+
+.THIS .tituloItemSeleccinado {
+    background: linear-gradient(90deg, rgba(152, 123, 217, 1) 0%,  rgba(110,131,229,1) 100%);
+    border-color: #EBEBEB;
+    border-radius: 10px 10px 10px 10px;
+    font-family:MontserratSemiBold;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.THIS .tituloItemCard {
+    color: #606060;
+    font-family: MontserratSemiBold;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.THIS .tituloInfo {
+    font-size: 16px; 
+    font-family: MontserratSemiBold;
+    line-height: 24px;
+    color:#293896;
+}
+
+.THIS .textoInfo {
+    font-size: 16px; 
+    font-family: MontserratRegular;
+    line-height: 24px;
+    color:#606060;
+}
+
+.THIS .horaComida {
+    font-size: 16px; 
+    font-family: MontserratSemiBold;
+    line-height: 24px;
+    color:#C09AC2;
+    width: 20%;
+}
+
+.THIS .comida {
+    font-size: 16px; 
+    font-family: MontserratRegular;
+    line-height: 24px;
+    color:#606060;
+    width: 80%;
+}
+
+.THIS .tabla {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    border-collapse: separate;
+    border-spacing: 5vh;
+}
+
+.THIS .slds-grid{
+    margin-top: 2% !important;
+}
+
+.THIS .cardEfectosSecundariosOncologia{
+    border-radius: 10px 10px 10px 10px;
+    background-color: #ebebeb;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 250px;
+    cursor: pointer;
+}
+
+.THIS .containerImgCardEfectosSecundariosOncologia{
+    height: 175px;
+}
+
+.THIS .containerTextoCardEfectosSecundariosOncologia{
+    height: 75px;
+}
+
+.THIS .containerItemsEfectosSecundariosOncologia{
+    margin-left: 12%;
+    line-height: 30px !important;
+}
+
+@media (max-width: 600px) {
+    .THIS .cardEfectosSecundariosOncologia{
+        height: 125px;
+    }    
+    .THIS .containerImgCardEfectosSecundariosOncologia{
+        height: 75px;
+    }
+    .THIS .containerTextoCardEfectosSecundariosOncologia{
+        height: 50px;
+    }
+    .THIS .imgCardEfectosSecundariosOncologia{
+        width: 40%;
+    }
+    .THIS .tituloItemCard {
+        font-size: 15px;
+        line-height: 20px;
+        padding-top: 1%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 2%;
+    }
+    .THIS .containerDetallesEfectosSecundariosOncologia{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .THIS .tituloItemSeleccinado {
+        font-size: 18px;
+        line-height: 24px;
+    }.THIS .tituloInfo {
+        font-size: 15px; 
+        line-height: 23px;
+    }    
+    .THIS .textoInfo {
+        font-size: 15px; 
+        line-height: 23px;
+    }
+    .THIS .containerItemsEfectosSecundariosOncologia{
+        line-height: 24px !important;
+        padding-left: 12%;
+    }
+    .THIS .horaComida {
+        font-size: 15px; 
+        line-height: 23px;
+    }    
+    .THIS .comida {
+        font-size: 15px; 
+        line-height: 23px;
+    }    
+}

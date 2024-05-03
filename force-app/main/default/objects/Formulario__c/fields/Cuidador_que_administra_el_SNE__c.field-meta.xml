@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cuidador_que_administra_el_SNE__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>&apos;SNE: Soporte Nutricional Enteral&apos;</inlineHelpText>
+    <label>Cuidador que administra el SNE</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,37 @@
+.div-center-botonera-malnutricon{
+    width: 100%;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.boton-malnutricion:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 1600px){ 
+    .div-center-botonera-malnutricon{
+        padding-left: 20%;
+        padding-right: 20%;
+    }    
+}
+
+@media (max-width: 1300px){ 
+    .div-center-botonera-malnutricon{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media (max-width: 1024px){ 
+    .div-center-botonera-malnutricon{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 600px){ 
+    .div-center-botonera-malnutricon{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}

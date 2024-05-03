@@ -1,0 +1,23 @@
+.button-scroll-meta{
+    background: linear-gradient(180deg, rgba(147,126,213,1) 0%, rgba(114,132,222,1) 100%);
+    border-style: none;
+    border-color: white;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    font-family:MontserratSemiBold;
+    font-size: 1.375rem; 
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+}
+
+.icn-button-meta svg{
+    fill: white;
+}
+
+@media (max-width: 600px) {
+    .button-scroll-meta{
+        width: 275px;
+    }    
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivos_para_discont_sop_nutricional__c</fullName>
+    <description>Motivos para discontinuar el soporte nutricional</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Motivos para discontinuar el soporte nutricional</inlineHelpText>
+    <label>Motivos para discont. sop. nutricional</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No lo puede deglutir</fullName>
+                <default>false</default>
+                <label>No lo puede deglutir</label>
+            </value>
+            <value>
+                <fullName>No tolera el gusto</fullName>
+                <default>false</default>
+                <label>No tolera el gusto</label>
+            </value>
+            <value>
+                <fullName>No lo cubre la OS</fullName>
+                <default>false</default>
+                <label>No lo cubre la OS</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

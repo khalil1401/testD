@@ -1,0 +1,8 @@
+<aura:component implements="forceCommunity:layout,forceCommunity:availableForAllPageTypes" access="global">
+	<div align="center" class="slds-grid slds-grid--vertical slds-grid--align-center" style="height:60px; width: 100%; background-color: #614695; color:white; border-radius: 50px;">
+		<div class="slds-grid slds-grid--horizantal slds-grid--align-center" style="font-size:1.1em; width: 70%; font-family: opensans;">
+			<p>LOS PRODUCTOS DE NUTRICIA ESTÁN DISEÑADOS PARA EL MANEJO NUTRICIONAL DE ENFERMADADES
+			Y AFECCIONES MÉDICAS Y, POR LO TANTO, DEBEN UTILIZARSE BAJO SUPERVISIÓN MÉDICA.</p>
+		</div>
+	</div>
+</aura:component>

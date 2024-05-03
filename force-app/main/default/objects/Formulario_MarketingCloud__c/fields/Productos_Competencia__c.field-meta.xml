@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Productos_Competencia__c</fullName>
+    <externalId>false</externalId>
+    <label>Productos Competencia</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MSUD MED A</fullName>
+                <default>false</default>
+                <label>MSUD MED A</label>
+            </value>
+            <value>
+                <fullName>MSUD MED B</fullName>
+                <default>false</default>
+                <label>MSUD MED B</label>
+            </value>
+            <value>
+                <fullName>OAC MED A</fullName>
+                <default>false</default>
+                <label>OAC MED A</label>
+            </value>
+            <value>
+                <fullName>OAC MED B</fullName>
+                <default>false</default>
+                <label>OAC MED B</label>
+            </value>
+            <value>
+                <fullName>URC MED A</fullName>
+                <default>false</default>
+                <label>URC MED A</label>
+            </value>
+            <value>
+                <fullName>URC MED B</fullName>
+                <default>false</default>
+                <label>URC MED B</label>
+            </value>
+            <value>
+                <fullName>GAC MED A</fullName>
+                <default>false</default>
+                <label>GAC MED A</label>
+            </value>
+            <value>
+                <fullName>GAC MED B</fullName>
+                <default>false</default>
+                <label>GAC MED B</label>
+            </value>
+            <value>
+                <fullName>TYRo MED A</fullName>
+                <default>false</default>
+                <label>TYRo MED A</label>
+            </value>
+            <value>
+                <fullName>TYRo MED B</fullName>
+                <default>false</default>
+                <label>TYRo MED B</label>
+            </value>
+            <value>
+                <fullName>LEU MED A</fullName>
+                <default>false</default>
+                <label>LEU MED A</label>
+            </value>
+            <value>
+                <fullName>LEU MED B</fullName>
+                <default>false</default>
+                <label>LEU MED B</label>
+            </value>
+            <value>
+                <fullName>HCys MED A</fullName>
+                <default>false</default>
+                <label>HCys MED A</label>
+            </value>
+            <value>
+                <fullName>HCys MED B</fullName>
+                <default>false</default>
+                <label>HCys MED B</label>
+            </value>
+            <value>
+                <fullName>KANSO LIPANO</fullName>
+                <default>false</default>
+                <label>KANSO LIPANO</label>
+            </value>
+            <value>
+                <fullName>MSUD GEL</fullName>
+                <default>false</default>
+                <label>MSUD GEL</label>
+            </value>
+            <value>
+                <fullName>MSUD EXPRESS 15</fullName>
+                <default>false</default>
+                <label>MSUD EXPRESS 15</label>
+            </value>
+            <value>
+                <fullName>MMA/PA GEL</fullName>
+                <default>false</default>
+                <label>MMA/PA GEL</label>
+            </value>
+            <value>
+                <fullName>MMA/PA EXPRESS 15</fullName>
+                <default>false</default>
+                <label>MMA/PA EXPRESS 15</label>
+            </value>
+            <value>
+                <fullName>HCU GEL</fullName>
+                <default>false</default>
+                <label>HCU GEL</label>
+            </value>
+            <value>
+                <fullName>HCU EXPRESS 15</fullName>
+                <default>false</default>
+                <label>HCU EXPRESS 15</label>
+            </value>
+            <value>
+                <fullName>TYR GEL</fullName>
+                <default>false</default>
+                <label>TYR GEL</label>
+            </value>
+            <value>
+                <fullName>TYR EXPRESS 15</fullName>
+                <default>false</default>
+                <label>TYR EXPRESS 15</label>
+            </value>
+            <value>
+                <fullName>GA GEL</fullName>
+                <default>false</default>
+                <label>GA GEL</label>
+            </value>
+            <value>
+                <fullName>GA EXPRESS 15</fullName>
+                <default>false</default>
+                <label>GA EXPRESS 15</label>
+            </value>
+            <value>
+                <fullName>UCD TRIO</fullName>
+                <default>false</default>
+                <label>UCD TRIO</label>
+            </value>
+            <value>
+                <fullName>LIPISTART</fullName>
+                <default>false</default>
+                <label>LIPISTART</label>
+            </value>
+            <value>
+                <fullName>MCT PROCAL</fullName>
+                <default>false</default>
+                <label>MCT PROCAL</label>
+            </value>
+            <value>
+                <fullName>PKU START</fullName>
+                <default>false</default>
+                <label>PKU START</label>
+            </value>
+            <value>
+                <fullName>PKU TRIO</fullName>
+                <default>false</default>
+                <label>PKU TRIO</label>
+            </value>
+            <value>
+                <fullName>PKU GEL</fullName>
+                <default>false</default>
+                <label>PKU GEL</label>
+            </value>
+            <value>
+                <fullName>PKU EXPRESS 15</fullName>
+                <default>false</default>
+                <label>PKU EXPRESS 15</label>
+            </value>
+            <value>
+                <fullName>PKU COOLER 10</fullName>
+                <default>false</default>
+                <label>PKU COOLER 10</label>
+            </value>
+            <value>
+                <fullName>PKU COOLER 15</fullName>
+                <default>false</default>
+                <label>PKU COOLER 15</label>
+            </value>
+            <value>
+                <fullName>PKU COOLER 20</fullName>
+                <default>false</default>
+                <label>PKU COOLER 20</label>
+            </value>
+            <value>
+                <fullName>PKU AIR 20</fullName>
+                <default>false</default>
+                <label>PKU AIR 20</label>
+            </value>
+            <value>
+                <fullName>PKU SPHERE</fullName>
+                <default>false</default>
+                <label>PKU SPHERE</label>
+            </value>
+            <value>
+                <fullName>XPHE INFANT</fullName>
+                <default>false</default>
+                <label>XPHE INFANT</label>
+            </value>
+            <value>
+                <fullName>XPHE KID / XPHE K</fullName>
+                <default>false</default>
+                <label>XPHE KID / XPHE K</label>
+            </value>
+            <value>
+                <fullName>XPHE JUNIOR / XPHE J</fullName>
+                <default>false</default>
+                <label>XPHE JUNIOR / XPHE J</label>
+            </value>
+            <value>
+                <fullName>XPHE JUMP</fullName>
+                <default>false</default>
+                <label>XPHE JUMP</label>
+            </value>
+            <value>
+                <fullName>PKU MED A</fullName>
+                <default>false</default>
+                <label>PKU MED A</label>
+            </value>
+            <value>
+                <fullName>PKU MED B</fullName>
+                <default>false</default>
+                <label>PKU MED B</label>
+            </value>
+            <value>
+                <fullName>PKU MED C</fullName>
+                <default>false</default>
+                <label>PKU MED C</label>
+            </value>
+            <value>
+                <fullName>GLYTACTIN RTD 10</fullName>
+                <default>false</default>
+                <label>GLYTACTIN RTD 10</label>
+            </value>
+            <value>
+                <fullName>GLYTACTIN RTD 15</fullName>
+                <default>false</default>
+                <label>GLYTACTIN RTD 15</label>
+            </value>
+            <value>
+                <fullName>GLYTACTIN COMPLETE 10</fullName>
+                <default>false</default>
+                <label>GLYTACTIN COMPLETE 10</label>
+            </value>
+            <value>
+                <fullName>GLYTACTIN COMPLETE 15</fullName>
+                <default>false</default>
+                <label>GLYTACTIN COMPLETE 15</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

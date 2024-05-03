@@ -1,0 +1,63 @@
+<aura:component implements="forceCommunity:layout">
+
+    <aura:attribute name="container1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container2" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container3" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container4" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container5" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container6" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container7" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container8" type="Aura.Component[]" required="false"/>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container1}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1" id="top-tnddc-page">
+            {!v.container2}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container3}
+        </div>
+        
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container4}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="div-texts-tn-layout-ddc">
+                {!v.container5}
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="div-texts-tn-layout-ddc">
+                {!v.container6}
+            </div>
+        </div>
+        
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-m-top_x-large slds-m-bottom_x-large">
+            <button 
+                data-seccion="top-tnddc-page"
+                class="back-button-kdi-desafios"
+                onclick="{!c.goToDiv}">
+                <lightning:icon 
+                    iconName="utility:chevronup"
+                    size="small"
+                    alternativeText="up"
+                    variant="inverse"/>
+                VOLVER ARRIBA
+            </button>
+        </div>
+        
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container7}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+            {!v.container8}
+        </div>
+    </div>
+</aura:component>

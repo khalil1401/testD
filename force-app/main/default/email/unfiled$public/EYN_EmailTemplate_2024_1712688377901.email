@@ -1,0 +1,8 @@
+<html>
+ <head>
+  <title></title>
+ </head>
+ <body style="height: auto; min-height: auto;">
+  &lt;div style="text-align:center"&gt;<br /> <br /> &nbsp;&lt;a href = "https://uat-danoneencuestas.cs7.force.com/VForce?pcid={{{Account.Id_formula__c}}}"&gt;<br /> <br /> <img alt="ENRICH YOUR NUTRITION(3)" src="{[devName:ENRICH_YOUR_NUTRITION3]}" style="max-width: 1070.65px; width: 683.297px; height: 966.469px;" title="ENRICH YOUR NUTRITION(3)" /><br /> &lt;/a&gt;<br /> &lt;/div&gt;
+ </body>
+</html>

@@ -1,0 +1,177 @@
+.THIS {
+}
+
+.THIS .container-accordion-ddc{
+    background-color: white;
+}
+
+.THIS .slds-accordion__list-item{
+    border: none;
+}
+
+.THIS .slds-accordion__summary-content{
+    white-space: normal;
+    font-size: 15pt;
+    line-height: 18pt;
+}
+
+.THIS .slds-accordion__summary-action{
+    border-radius: 10px;
+    background-color: #EBEBEB;
+    color: #606060;
+    margin-top: 20px;
+    font-family: MontserratSemiBold;
+    font-size: 15pt;
+    line-height: 18pt;
+}
+
+.THIS .slds-accordion__summary button[aria-expanded="true"]{
+    background: #B32F88;
+    color: white;
+    text-decoration: none;
+}
+
+.THIS .slds-accordion__summary-heading{
+    height: 77px;
+}
+
+.THIS .slds-accordion__summary-heading .slds-button:focus{
+    text-decoration: none;
+}
+
+.THIS .slds-accordion__content {
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: #606060;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.THIS .title-acordeon-tratamiento-ddc {
+    font-family: MontserratSemiBold;
+    font-size: 18pt;
+    line-height: 22pt;
+    color: #502777;
+}
+
+.THIS .text-acordeon-tratamiento-ddc {
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: #606060;
+}
+
+.THIS .container-suplementos-orales-ddc {
+    background-color: #EBEBEB;
+    border-radius: 18px;
+}
+
+.THIS .card-tratamientos-ddc {
+    background-color: #B32F88;
+    border-radius: 75px 25px 75px 25px;
+    height: auto;
+}
+
+.THIS .text-card-tratamientos-ddc {
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: white;
+}
+
+.THIS .text-saber-card-tratamientos-ddc {
+    font-family: MontserratRegular;
+    font-size: 18pt;
+    line-height: 22pt;
+    color: white;
+}
+
+.THIS .text-fuente-tratamientos-ddc { 
+    font-family: MontserratRegular;
+    font-size: 18px;
+    line-height: 30px;
+    color: #606060;
+} 
+
+.THIS .box-grastrotomia {
+    border: #502777 2px solid; 
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.THIS .img-contamos-mas {
+    margin-right: 5px;
+    width: 28px;
+    pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    .THIS .slds-accordion__summary-content{
+        font-size: 22px;
+        line-height: 30px;
+    }
+    
+    .THIS .slds-accordion__summary-action{
+        margin-top: 20px;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .THIS .slds-accordion__content{
+        font-size: 22px;
+        line-height: 30px;
+        margin-left: 25px;
+        margin-right: 25px;    
+    }
+
+    .THIS .title-acordeon-tratamiento-ddc {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .THIS .text-acordeon-tratamiento-ddc {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .THIS .text-card-tratamientos-ddc {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .THIS .box-grastrotomia {
+        border: #502777 2px solid; 
+        padding-left: 75px;
+        padding-right: 75px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .THIS .text-saber-card-tratamientos-ddc {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .THIS .img-contamos-mas {
+        width: auto;
+    }
+
+    .THIS .container-suplementos-orales-ddc {
+        margin-top: 50px;
+    }
+    
+    .THIS .img-titulo-acordeon {
+        position: relative;
+        top: -100px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .THIS .img-titulo-acordeon {
+        position: relative;
+        top: -50px;
+    }
+}

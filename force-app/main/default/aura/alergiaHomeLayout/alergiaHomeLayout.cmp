@@ -1,0 +1,86 @@
+<aura:component implements="forceCommunity:layout">
+
+    <aura:attribute name="container1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container2" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container3" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container4" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container5" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container6" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container7" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container8" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container9" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container10" type="Aura.Component[]" required="false"/>
+
+    <aura:attribute name="isDesktop" type="Boolean"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container1}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container10}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container2}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container3}
+        </div>
+    
+        <div class="container-ah-layout">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-12"></div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_10-of-12">
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                        {!v.container4}
+                    </div>
+                    <aura:if isTrue="{!v.isDesktop}">
+                        <!--Desktop-->
+                        <div class="slds-grid slds-wrap slds-grid_align-center slds-m-top_xx-large slds-m-bottom_xx-large">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-text-align_center"
+                                style="padding-right: 4%;">
+                                {!v.container5}
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-text-align_center"
+                                style="padding-right: 2%;padding-left: 2%;">
+                                {!v.container6}
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-text-align_center"
+                                style="padding-left: 4%;">
+                                {!v.container7}
+                            </div>
+                        </div>
+                        <!--Mobile-->
+                        <aura:set attribute="else">
+                            <div class="slds-grid slds-wrap slds-grid_align-center">
+                                <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-p-around_large">
+                                    {!v.container5}
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-p-around_large">
+                                    {!v.container6}
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-p-around_large">
+                                    {!v.container7}
+                                </div>
+                            </div>   
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <div class="slds-col slds-size_1-of-12"></div>
+            </div>
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large" id="bki">
+            {!v.container8}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+            {!v.container9}
+        </div>
+    </div>
+
+</aura:component>

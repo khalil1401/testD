@@ -1,0 +1,137 @@
+.container-banner-hnsj{
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat-y;
+    border-radius: 0px 0px 0px 150px;
+    height: 350px;
+}
+
+.container-text-banner-hnsj{
+    width: 100%;
+    padding-left: 11%;
+    padding-right: 11%;
+}
+
+.title-banner-hnsj{
+    font-family: MontserratBold;
+    font-size: 2rem;
+    color: white;
+    margin-left: 11%;
+    margin-right: 50%;
+}
+
+.text-banner-hnsj{
+    font-family: MontserratRegular;
+    font-size: 1.25rem;
+    color: white;
+    margin-left: 11%;
+    margin-right: 55%;
+}
+
+.title-purple-banner-hnsj{
+    font-family: MontserratBold;
+    font-size:2rem;
+    color:#313183;
+}
+
+.text-purple-banner-hnsj{
+    font-family: MontserratRegular;
+    font-size:1.25rem;
+    color:#313183;
+}
+
+.text-pacifico-banner-hnsj{
+    font-family: PacificoRegular;
+    font-size:3rem;
+    color:#C09AC2;
+}
+
+.linea-header{
+    width:42.5%;
+    height: 3px;
+    background-color: white;
+    position: relative;
+}
+
+.circle-header{
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: solid 3px white;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    left: calc(100% - 1px);
+}
+
+@media (max-width: 1366px){
+    .container-banner-hnsj{
+        border-radius: 0px 0px 0px 50px;
+        height: 400px;
+    }
+
+    .container-text-banner-hnsj{
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+    
+    .title-banner-hnsj{
+        margin-left: 45px;
+        margin-right: 50%;
+    }
+
+    .text-banner-hnsj{
+        margin-left: 45px;
+        margin-right: 55%;
+    }
+}
+
+@media (max-width: 1024px){    
+    .title-banner-hnsj{
+        margin-right: 40%;
+    }
+
+    .text-banner-hnsj{
+        margin-right: 45%;
+    }
+}
+
+@media (max-width: 768px){
+    .title-banner-hnsj{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .text-banner-hnsj{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 412px){
+    .container-banner-hnsj{
+        height: 280px;
+    }
+
+    .title-banner-hnsj{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .text-banner-hnsj{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .linea-header{
+        width:70%;
+    }
+    
+    .container-text-banner-hnsj{
+        padding-left: 5%;
+        padding-right: 5%;
+    }    
+}

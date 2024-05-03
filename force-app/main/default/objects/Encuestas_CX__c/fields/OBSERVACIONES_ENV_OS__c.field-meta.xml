@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OBSERVACIONES_ENV_OS__c</fullName>
+    <description>Observaciones sobre la puntuación de satisfacción de envíos</description>
+    <externalId>false</externalId>
+    <inlineHelpText>PREGUNTA: ¿Porque ha asignado dicho puntaje?</inlineHelpText>
+    <label>OBSERVACIONES ENVÍOS</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

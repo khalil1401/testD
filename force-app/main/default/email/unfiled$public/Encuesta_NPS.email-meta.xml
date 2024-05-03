@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Best_Care</letterhead>
+    <name>Encuesta NPS</name>
+    <style>freeForm</style>
+    <subject>Hemos cerrado su caso</subject>
+    <textOnly>Hola!
+
+Hemos cerrado su caso y nos gustaría que respondiera algunas preguntas ingresando al siguiente enlace:
+
+http://danoneencuestas.force.com/TakeSurvey?id=a051I000005BgKJQA0&amp;cId={!Account.Contact_Id__c}&amp;caId={!Case.Id}
+
+Gracias!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

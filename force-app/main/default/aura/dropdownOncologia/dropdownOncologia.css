@@ -1,0 +1,30 @@
+.THIS {
+}
+
+.THIS .textoDropdownOncologia{
+    font-family:MontserratSemiBold;
+    font-size: 22px;
+    color:#293896;
+    line-height: 24px;
+}
+
+.THIS .textoVerMasDropdownOncologia{
+    font-family:MontserratRegular;
+    font-size: 16px;
+    color:#293896;
+    line-height: 24px;
+    float: right;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .THIS .textoDropdownOncologia{
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .THIS .textoVerMasDropdownOncologia{
+        font-size: 14px;
+    }    
+}

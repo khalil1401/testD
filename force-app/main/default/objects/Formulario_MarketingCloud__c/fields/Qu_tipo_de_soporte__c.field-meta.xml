@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qu_tipo_de_soporte__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Qué tipo de soporte?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Recetario de comidas</fullName>
+                <default>false</default>
+                <label>Recetario de comidas</label>
+            </value>
+            <value>
+                <fullName>Videos</fullName>
+                <default>false</default>
+                <label>Videos</label>
+            </value>
+            <value>
+                <fullName>Asesoramiento médico o de nutricionista</fullName>
+                <default>false</default>
+                <label>Asesoramiento médico o de nutricionista</label>
+            </value>
+            <value>
+                <fullName>Otras</fullName>
+                <default>false</default>
+                <label>Otras</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

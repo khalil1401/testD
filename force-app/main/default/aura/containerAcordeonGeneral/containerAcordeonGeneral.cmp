@@ -1,0 +1,79 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="titulo" type="String" default="LEA MÁS ACERCA DE"/>
+    <aura:attribute name="tituloColor" type="String"/>
+    <aura:attribute name="backgroundContainerColor" type="String"/>
+
+    <!--Atributos del acordeon-->
+    <aura:attribute name="backgroundColor" type="String"/>
+    <aura:attribute name="backgroundColorHeader" type="String"/>
+    <aura:attribute name="backgroundColorText" type="String"/>
+    <aura:attribute name="backgroundColorHeaderActive" type="String"/>
+    <aura:attribute name="textHeaderColor" type="String"/>
+    <aura:attribute name="textHeaderActiveColor" type="String"/>
+    <aura:attribute name="textBodyColor" type="String"/>
+	<aura:attribute name="radioEsquinas" type="Integer" default="0"/>
+    <aura:attribute name="isSeccion1" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion1" type="String"/>
+    <aura:attribute name="textBodySeccion1" type="String"/>
+    <aura:attribute name="isSeccion2" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion2" type="String"/>
+    <aura:attribute name="textBodySeccion2" type="String"/>
+    <aura:attribute name="isSeccion3" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion3" type="String"/>
+    <aura:attribute name="textBodySeccion3" type="String"/>
+
+    <aura:html tag="style">
+        .textTituloAcordeon{
+            color: {!v.tituloColor};
+            font-weight: 900;
+        }
+    </aura:html>
+
+    <div style="{!'background-color: '+ v.backgroundContainerColor +';'}">
+        <div class="slds-grid">
+            <div class="slds-col slds-size_2-of-12">
+            </div>
+            <div class="slds-col slds-size_8-of-12">
+                <div class="slds-col slds-size_1-of-1 slds-m-top_small slds-align_absolute-center">
+                    <h1 class="textTituloAcordeon slds-text-heading_medium slds-m-top_xx-large">
+                        {!v.titulo}
+                    </h1>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_5-of-12">
+                    </div>
+                    <div class="slds-col slds-size_2-of-12">
+                        <div    class="slds-border_top  slds-m-top_x-small slds-m-bottom_medium"
+                                style="{!'border-color: '+ v.tituloColor +';
+                                    border-width: 0.2em;'}"></div>
+                    </div>
+                    <div class="slds-col slds-size_5-of-12">
+                    </div>
+                </div>
+                <div class="slds-m-bottom_xx-large">
+                    <c:containerAcordeon    backgroundColor="{!v.backgroundColor}"
+                                            backgroundColorHeader="{!v.backgroundColorHeader}"
+                                            backgroundColorText="{!v.backgroundColorText}"
+                                            backgroundColorHeaderActive="{!v.backgroundColorHeaderActive}"
+                                            textHeaderColor="{!v.textHeaderColor}"
+                                            textHeaderActiveColor="{!v.textHeaderActiveColor}"
+                                            textBodyColor="{!v.textBodyColor}"
+                                            radioEsquinas="{!v.radioEsquinas}"
+                                            isSeccion1="{!v.isSeccion1}"
+                                            textTitleSeccion1="{!v.textTitleSeccion1}"
+                                            textBodySeccion1="{!v.textBodySeccion1}"
+                                            isSeccion2="{!v.isSeccion2}"
+                                            textTitleSeccion2="{!v.textTitleSeccion2}"
+                                            textBodySeccion2="{!v.textBodySeccion2}"
+                                            isSeccion3="{!v.isSeccion3}"
+                                            textTitleSeccion3="{!v.textTitleSeccion3}"
+                                            textBodySeccion3="{!v.textBodySeccion3}"/>
+                </div>
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+            </div>
+        </div>    
+    </div>
+
+</aura:component>

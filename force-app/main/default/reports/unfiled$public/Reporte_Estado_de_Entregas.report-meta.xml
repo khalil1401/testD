@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Tipo_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$ID_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Localidad__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Type</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Subtipo__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Motivo__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$ClosedDate</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Owner</field>
+    </columns>
+    <columns>
+        <field>Account$Area_terapeutica__c</field>
+    </columns>
+    <description>Efectividad de  entregas en primer intento</description>
+    <format>Tabular</format>
+    <name>Reporte-Estado de Entregas</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cuentas_con_casos__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <endDate>2019-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2019-01-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Motivo_De_Kit__c</name>
+    <picklistValues>
+        <masterLabel>Prueba de diagnóstico</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tolerancia</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

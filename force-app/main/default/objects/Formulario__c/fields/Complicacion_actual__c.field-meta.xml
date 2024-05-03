@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complicacion_actual__c</fullName>
+    <externalId>false</externalId>
+    <label>Complicaciones del acceso</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ninguna</fullName>
+                <default>false</default>
+                <label>Ninguna</label>
+            </value>
+            <value>
+                <fullName>Desplazamiento / salida accidental</fullName>
+                <default>false</default>
+                <label>Desplazamiento / salida accidental</label>
+            </value>
+            <value>
+                <fullName>Fuga periostoma</fullName>
+                <default>false</default>
+                <label>Fuga periostoma</label>
+            </value>
+            <value>
+                <fullName>Incorrecta localización en tubo digestivo</fullName>
+                <default>false</default>
+                <label>Incorrecta localización en tubo digestivo</label>
+            </value>
+            <value>
+                <fullName>Incorrecta localización en pulmón</fullName>
+                <default>false</default>
+                <label>Incorrecta localización en pulmón</label>
+            </value>
+            <value>
+                <fullName>Infección periostoma</fullName>
+                <default>false</default>
+                <label>Infección periostoma</label>
+            </value>
+            <value>
+                <fullName>Lesión periostoma</fullName>
+                <default>false</default>
+                <label>Lesión periostoma</label>
+            </value>
+            <value>
+                <fullName>Lesión por decúbito</fullName>
+                <default>false</default>
+                <label>Lesión por decúbito</label>
+            </value>
+            <value>
+                <fullName>Obstruccion</fullName>
+                <default>false</default>
+                <label>Obstrucción</label>
+            </value>
+            <value>
+                <fullName>Perdida periostoma</fullName>
+                <default>false</default>
+                <label>Pérdida periostoma</label>
+            </value>
+            <value>
+                <fullName>Ruptura</fullName>
+                <default>false</default>
+                <label>Ruptura</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

@@ -1,0 +1,79 @@
+<aura:component  implements="forceCommunity:themeLayout,forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:handler name="init" value="{!this}" action="{! c.doInit }"/>
+
+    <aura:attribute name="search" type="Aura.Component[]"/>
+
+    <aura:attribute name="icono1" type="String" default="NutriciaHeader"/>
+    <aura:attribute name="rutaIcono1" type="String"/>
+    <aura:attribute name="linkToIcono1" type="String"/>
+    <aura:attribute name="icono2" type="String" default=""/>
+    <aura:attribute name="rutaIcono2" type="String"/>
+    <aura:attribute name="linkToIcono2" type="String"/>
+    <aura:attribute name="multipleIcons" type="Boolean"/>
+
+    <aura:attribute name="alturaDesktopIcono2" type="String"/>
+    <aura:attribute name="alturaMobileIcono2" type="String"/>
+    <aura:attribute name="alturaDesktopIcono1" type="String"/>
+    <aura:attribute name="alturaMobileIcono1" type="String"/>
+    
+    <lightning:navigation aura:id="navService"/>
+    <div class="desktop">
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 110px;">
+            <div class="slds-col slds-medium-size_1-of-1">
+                <aura:if isTrue="{!v.icono1}">
+                    <img 
+                        src="{!v.icono1}" 
+                        onclick="{!c.backToLinkPrimerIcono}" 
+                        class="first-logo-hnsj"
+                        alt="First Logo"/>
+                </aura:if>
+                <aura:if isTrue="{!v.icono2}">
+                    <img 
+                        src="{!v.icono2}" 
+                        onclick="{!c.backToLinkSegundoIcono}" 
+                        class="second-logo-hnsj"
+                        alt="Second Logo"/>
+                </aura:if>
+            </div>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="slds-grid slds-grid_vertical-align-center" style="height: 85px;">
+            <aura:if isTrue="{!!v.multipleIcons}">
+                <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                    <aura:if isTrue="{!v.icono1}">
+                        <img 
+                            alt="Logo"
+                            src="{!v.icono1}" 
+                            style="height: 50px;"
+                            class="slds-align_absolute-center" 
+                            onclick="{!c.backToLinkPrimerIcono}"/>
+                    </aura:if>
+                </div>
+                <aura:set attribute="else">
+                    <div class="slds-col slds-size_6-of-12 slds-align_absolute-center">
+                        <aura:if isTrue="{!v.icono1}">
+                            <img 
+                                alt="First Logo"
+                                src="{!v.icono1}" 
+                                style="height: 50px;"
+                                class="slds-align_absolute-center" 
+                                onclick="{!c.backToLinkPrimerIcono}"/>
+                        </aura:if>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-align_absolute-center">
+                        <aura:if isTrue="{!v.icono2}">
+                            <img 
+                                alt="Second Logo"
+                                src="{!v.icono2}" 
+                                style="height: 60px;"
+                                class="slds-align_absolute-center" 
+                                onclick="{!c.backToLinkSegundoIcono}"/>
+                        </aura:if>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

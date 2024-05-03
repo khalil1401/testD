@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Editar_nombre_de_Modulo</fullName>
+    <active>true</active>
+    <description>Para perfil operador partner</description>
+    <errorConditionFormula>AND( $Profile.Name == &apos;Operador Partner&apos;, 
+					 NOT(ISNEW()),
+				 ISCHANGED(Name) 
+				)</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>No es posible editar el nombre del Modulo.</errorMessage>
+</ValidationRule>

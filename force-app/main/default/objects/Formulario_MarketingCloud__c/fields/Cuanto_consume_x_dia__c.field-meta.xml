@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cuanto_consume_x_dia__c</fullName>
+    <description>¿En qué cantidades consume el producto cada vez?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>¿En qué cantidades consume el producto cada vez? Registrar volumen de ingesta por vez</inlineHelpText>
+    <label>¿Cuanto consume x dia?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Casos_de_seguimiento</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Casos de seguimiento</shortDescription>
+        <value>Es necesario validar con el paciente:
+- Estado del tratamiento
+- Documentación disponible
+- Fecha de ultima presentación en Obra Social
+- Estado de cobertura / Problemas OOSS
+- Motivos del cambio de tratamiento
+- Modulo de paciente: Debe completar el ultimo MDP activo</value>
+    </labels>
+    <labels>
+        <fullName>Cobertura_Medica_Aprobada_Parcialmente</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cobertura Médica Aprobada Parcialmente</shortDescription>
+        <value>El paciente indicó en Nutricia Siempre Juntos que su obra social o prepaga aprobó parcialmente su cobertura médica. Sugerencia: Gestionar el caso según corresponda.</value>
+    </labels>
+    <labels>
+        <fullName>Cobertura_Medica_Rechazada</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cobertura Médica Rechazada NSJ</shortDescription>
+        <value>El paciente indicó en Nutricia Siempre Juntos que su obra social o prepaga rechazó su cobertura médica. Sugerencia: Gestionar el caso según corresponda.</value>
+    </labels>
+    <labels>
+        <fullName>Cobertura_Medica_Sin_Respuesta</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Cobertura Médica Sin Respuesta</shortDescription>
+        <value>El paciente indicó en Nutricia Siempre Juntos que su obra social o prepaga no dio aún respuesta relativa a la cobertura médica, habiéndose iniciado el trámite hace 10 días o más. Sugerencia: Gestionar el caso según corresponda.</value>
+    </labels>
+    <labels>
+        <fullName>Default_username_motora</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Default username motora</shortDescription>
+        <value>noemi.silva@danone.com</value>
+    </labels>
+    <labels>
+        <fullName>Descripcion_EYN</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Descripción EYN</shortDescription>
+        <value>A continuación le solicitamos que complete la siguiente información. Una vez recibida esta confirmación, gestionaremos el envío de los alimentos a su domicilio.
+El plazo de entrega será de hasta 15 días hábiles.</value>
+    </labels>
+    <labels>
+        <fullName>EYN_asunto</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>EYN asunto</shortDescription>
+        <value>Enrich your nutrition Q2 - 2024</value>
+    </labels>
+    <labels>
+        <fullName>EYN_descripcion</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>EYN descripción</shortDescription>
+        <value>Confirmar que el domicilio informado por el paciente coincida con el registrado en su cuenta. Proceder a actualizar la información provista en la cuenta del paciente. Una vez validada la información proceder a completar la tarea.</value>
+    </labels>
+    <labels>
+        <fullName>Error_Motora</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error_Motora</shortDescription>
+        <value>Error. No se pueden ingresar servicios duplicados ni mas de un servicio de motora.</value>
+    </labels>
+    <labels>
+        <fullName>Error_en_formulario_de_calidad</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error en formulario de calidad</shortDescription>
+        <value>Para transferir o cambiar el status de los casos de calidad, debe tener su formulario correspondiente.</value>
+    </labels>
+    <labels>
+        <fullName>Error_en_interaccion</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error en interaccion</shortDescription>
+        <value>Error. No se puede cargar la interaccion, el profesional ya fue registrado en ese ciclo</value>
+    </labels>
+    <labels>
+        <fullName>Error_en_usuario_operador_partner</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error en usuario operador partner</shortDescription>
+        <value>El operador partner solo puede cargar obras sociales e Instituciones de Mendoza.</value>
+    </labels>
+    <labels>
+        <fullName>Error_para_cuenta</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error para cuenta</shortDescription>
+        <value>Los campos Teléfono, Dirección y Referencia no pueden contener: tildes, comillas, mas de un espacio seguido ni la letra &apos;ñ&apos;.</value>
+    </labels>
+    <labels>
+        <fullName>Error_para_cuenta_obra_social</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error para cuenta-obra social</shortDescription>
+        <value>Revise que el paciente tenga asociada una obra social y sus campos correspondientes.</value>
+    </labels>
+    <labels>
+        <fullName>Error_registro_Kit_de_Inicio_completo</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Descripción para tarea de Error Formulario Kit de Inicio</shortDescription>
+        <value>Realizar una llamada al paciente para guiarlo en la solicitud del Kit de Inicio DESDE LA PLATAFORMA. Si el pedido de Kit se confirma, el operador de PSP deberá cambiar las tareas “Error formulario Kit de Inicio” y “Alta paciente vía web” de estado “Abierta” a “Completa”.
+
+Si por algún motivo se produjera un error en la Solicitud del Kit de Inicio, el operador de PSP deberá levantar el caso con Soporte. 
+
+Si no se puede comunicar con el paciente y finalizar la gestión, la tarea “Error formulario Kit de Inicio” deberá cambiarse a estado “Trabajando” y se intentarán nuevos contactos hasta bien se pueda localizar al paciente y se complete el proceso.</value>
+    </labels>
+    <labels>
+        <fullName>Error_registro_Kit_de_Inicio_parcial</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Descripción para tarea de Alta de Paciente Via Web cuando ocurren errores</shortDescription>
+        <value>Realizar una llamada al paciente para completar los datos faltantes del registro. Si se logra completar la Solicitud del Kit de Inicio, el operador del PSP deberá cambiar la tarea “Alta paciente vía web” de estado “Abierta” a “Completa”. Si no se puede comunicar con el paciente y finalizar la gestión, la tarea “Alta paciente vía web” deberá cambiarse a estado “Trabajando” y se intentarán nuevos contactos hasta bien se pueda localizar al paciente y se complete el proceso.
+
+Si el operador del PSP, previo a realizar el llamado, deseara obtener información sobre los errores ocurridos, podrá hacerlo desde el registro “Errores de Registro”.</value>
+    </labels>
+    <labels>
+        <fullName>FaltaCampoNombreEnTarea</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>FaltaCampoNombreEnTarea</shortDescription>
+        <value>La tarea debe tener completo el campo Nombre para poder generar el formulario</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_AddQuestion</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Add Question</shortDescription>
+        <value>Add Question</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Anonymous</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Anonymous</shortDescription>
+        <value>Anonymous</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Answer_as</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Answer as</shortDescription>
+        <value>Answer as</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Cancel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Chatter</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Chatter</shortDescription>
+        <value>Chatter</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Chatter_Link</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Chatter Link</shortDescription>
+        <value>Chatter Link</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Community</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Community</shortDescription>
+        <value>Community</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Edit</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Edit</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Email_Link_Anonymous</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email Link, Anonymous</shortDescription>
+        <value>Email Link, Anonymous</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Email_Link_w_Contact_Case_Merge</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email Link w/ Contact &amp; Case Merge</shortDescription>
+        <value>Email Link w/ Contact &amp; Case Merge</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Email_Link_w_Contact_Merge</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Email Link w/ Contact Merge</shortDescription>
+        <value>Email Link w/ Contact Merge</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_External_Please_Create_Site</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>For external facing surveys, please create a site first.  You may still create i</shortDescription>
+        <value>For external facing surveys, please create a site first.  You may still create internal surveys without creating a site.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_For_community_assistance_with_Survey_Force</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>For community assistance with Survey Force</shortDescription>
+        <value>For community assistance with Survey Force</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Getting_Help</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Getting Help</shortDescription>
+        <value>Getting Help</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_HeaderAndThankYou</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Header and Thank You</shortDescription>
+        <value>Header, Thank You &amp; CSS</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Installation_Guide</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Installation Guide</shortDescription>
+        <value>Installation Guide</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Learn_More</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Learn More</shortDescription>
+        <value>Learn More</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_MakeANewSurvey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Make A New Survey</shortDescription>
+        <value>Make A New Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_MakeNewSurvey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Make New Survey</shortDescription>
+        <value>Make New Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Make_a_Sample_Survey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Make a Sample Survey</shortDescription>
+        <value>Make a Sample Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Next_Steps</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Next Steps</shortDescription>
+        <value>Next Steps</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_PleaseEnterTheList</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Please enter the list</shortDescription>
+        <value>Please enter the list of answers/responses in the field below. Each value should be separated by a new line.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Question</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Question</shortDescription>
+        <value>Question</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Required</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required</shortDescription>
+        <value>required</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_RequiredQuestion</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Required Question</shortDescription>
+        <value>Required Question</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Resources</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Resources</shortDescription>
+        <value>Resources</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Results</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Results</shortDescription>
+        <value>Results</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SELECTTYPE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>--SELECT--</shortDescription>
+        <value>--SELECT--</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Salesforce_Answers</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Salesforce Answers</shortDescription>
+        <value>Salesforce Answers</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Save</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SaveOrder</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save Order</shortDescription>
+        <value>Save Order</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SelectQuestionType</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Select Question Type</shortDescription>
+        <value>Select Question Type</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Share</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Share</shortDescription>
+        <value>Share</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Share_My_Survey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Share My Survey</shortDescription>
+        <value>Share My Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Sharing_Options</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Sharing Options</shortDescription>
+        <value>Sharing Options</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SubmitSurvey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submit Survey</shortDescription>
+        <value>Enviar</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_SurveyForceIsOpenSource</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SurveyForceIsOpenSource</shortDescription>
+        <value>Survey Force is Open Source software.  We welcome your issue reports, ideas, documentation, code tweaks and all other participation.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Survey_Force_is_unsupported</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Survey Force is unsupported</shortDescription>
+        <value>Survey Force is unsupported.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Survey_Force_on_Github</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Survey Force on Github</shortDescription>
+        <value>Survey Force on Github</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Survey_Submitted_Thank_you</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Your survey has been submitted. Thank you for taking our survey.</shortDescription>
+        <value>Your survey has been submitted. Thank you for taking our survey.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_To_submit_ideas_or_issues</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>To submit ideas or issues</shortDescription>
+        <value>To submit ideas or issues</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_User_Guide</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>User Guide</shortDescription>
+        <value>User Guide</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_View_Results_In_New_Window</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View Results In New Window</shortDescription>
+        <value>View Results In New Window</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_View_Sample_Survey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View Sample Survey</shortDescription>
+        <value>View Sample Survey</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Welcome_to_Survey_Force</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Welcome to Survey Force</shortDescription>
+        <value>Welcome to Survey Force</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_X1_Create_a_sample_survey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>1. Create a sample survey by clicking the button below.</shortDescription>
+        <value>1. Create a sample survey by clicking the button below.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_X2_External_Setup_Site</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>2. Set up a site if you would like to have external-facing surveys.</shortDescription>
+        <value>2. Set up a site if you would like to have external-facing surveys.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_X3_Start_creating_your_first_survey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>3. Start creating your first survey.</shortDescription>
+        <value>3. Start creating your first survey.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_You_have_already_taken_this_survey</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>You have already taken this survey!</shortDescription>
+        <value>You have already taken this survey!</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_Your_next_few_steps_are_easy</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Your next few steps are easy.</shortDescription>
+        <value>Your next few steps are easy.</value>
+    </labels>
+    <labels>
+        <fullName>LABS_SF_please_visit</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>please visit</shortDescription>
+        <value>please visit</value>
+    </labels>
+    <labels>
+        <fullName>Registro_Kit_de_Inicio_exitoso</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Descripción para tarea de Alta de Paciente Via Web con registro existoso</shortDescription>
+        <value>Realizar una llamada al paciente para confirmar los datos ingresados y confirmar el pedido del Kit de Inicio. Si el pedido de Kit está confirmado, el operador de PSP, deberá cambiar la tarea de estado de “Abierta” a “Completa”. Si por algún motivo no se puede confirmar la gestión, la tarea se cambiará a estado “Trabajando” y se intentarán nuevos contactos hasta bien se pueda localizar al paciente y se complete el proceso.</value>
+    </labels>
+    <labels>
+        <fullName>Respuesta_EYN</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Respuesta EYN</shortDescription>
+        <value>Muchas gracias por sus respuestas. En los próximos días, le compartiremos a través de WhatsApp información para poder hacer el seguimiento del envío del kit de alimentos.</value>
+    </labels>
+    <labels>
+        <fullName>testmsgListHaveElements</fullName>
+        <categories>test list</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>La lista tiene elementos</shortDescription>
+        <value>La lista tiene elementos cuando esta debería estar vacía.</value>
+    </labels>
+    <labels>
+        <fullName>testmsgNotMach</fullName>
+        <categories>test</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>No coinciden los campos</shortDescription>
+        <value>Los campos no coinciden.</value>
+    </labels>
+    <labels>
+        <fullName>testmsgValidNull</fullName>
+        <categories>test</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Campos Nulos</shortDescription>
+        <value>Los campos tiene que ser nulos.</value>
+    </labels>
+    <labels>
+        <fullName>testsmgInvalidNull</fullName>
+        <categories>test</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Campos No Nulos</shortDescription>
+        <value>Los campos no tiene que ser nulos.</value>
+    </labels>
+</CustomLabels>

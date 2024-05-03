@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cantidad_de_casos_de_retiro_de_activos__c</fullName>
+    <description>Funciona como rollup para casos con: 
+Type = &apos;Gestión&apos;
+Subtipo__c = &apos;Retiro de Activos&apos;
+Motivo__c = &apos;Alta/Fin de tratamiento&apos; o &apos;Fallecimiento&apos; o &apos;No renueva servicios&apos;
+Isclosed = true</description>
+    <externalId>false</externalId>
+    <label>Cantidad de casos de retiro de activos</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

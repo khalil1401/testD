@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Survey__c$Id</field>
+    </columns>
+    <columns>
+        <field>Survey__c.SurveyQuestions__r.Survey_Question_Answers__r$CasoCerradoPor__c</field>
+    </columns>
+    <columns>
+        <field>Survey__c.SurveyQuestions__r$Question__c</field>
+    </columns>
+    <columns>
+        <field>Survey__c.SurveyQuestions__r.Survey_Question_Answers__r$Name</field>
+    </columns>
+    <columns>
+        <field>Survey__c.SurveyQuestions__r.Survey_Question_Answers__r$Response__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Survey__c$Id</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>a051I000005CYee</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Survey__c.SurveyQuestions__r.Survey_Question_Answers__r$SurveyTaker__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Encuestas NPS Best Care</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Survey_w_Questions_and_Answers__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Survey__c.SurveyQuestions__r.Survey_Question_Answers__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,10 @@
+.THIS .buttonClose button{
+
+	background-color:#D0D0D0;
+}
+
+@media only screen and (max-width: 768px){
+.THIS .termsCondsContent p{
+      font-size: 0.8rem;
+    }
+}

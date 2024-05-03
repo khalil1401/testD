@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Puntuacion_total__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Bano_Katz__c , &quot;Dependiente&quot;) , 1, 0) +  IF( ISPICKVAL(  Vestido__c  , &quot;Dependiente&quot;) , 1, 0) + IF( ISPICKVAL(  Uso_del_ba_o__c  , &quot;Dependiente&quot;) , 1, 0) +  IF( ISPICKVAL(  Movilidad__c , &quot;Dependiente&quot;) , 1, 0) + IF( ISPICKVAL(  Continencia__c  , &quot;Dependiente&quot;) , 1, 0) +  IF( ISPICKVAL(  Alimentacion__c  , &quot;Dependiente&quot;) , 1, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Puntuación total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

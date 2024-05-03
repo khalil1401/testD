@@ -1,0 +1,1561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo__c</fullName>
+    <description>Se crea un campo Motivo personalizado porque el estándar no puede ser dependiente de otro campo.</description>
+    <externalId>false</externalId>
+    <label>Motivo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Subtipo__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abandono de persona</fullName>
+                <default>false</default>
+                <label>Abandono de persona</label>
+            </value>
+            <value>
+                <fullName>Abuso/ acoso/ violencia</fullName>
+                <default>false</default>
+                <label>Abuso/ acoso/ violencia</label>
+            </value>
+            <value>
+                <fullName>Acceso a recursos varios</fullName>
+                <default>false</default>
+                <label>Acceso a recursos varios</label>
+            </value>
+            <value>
+                <fullName>Actualización estado del pedido</fullName>
+                <default>false</default>
+                <label>Actualización estado del pedido</label>
+            </value>
+            <value>
+                <fullName>Adicionales a autorizado por OOSS</fullName>
+                <default>false</default>
+                <label>Adicionales a autorizado por OOSS</label>
+            </value>
+            <value>
+                <fullName>Administración y preparación de fórmula</fullName>
+                <default>false</default>
+                <label>Administración y preparación de fórmula</label>
+            </value>
+            <value>
+                <fullName>Almacenamiento de productos</fullName>
+                <default>false</default>
+                <label>Almacenamiento de productos</label>
+            </value>
+            <value>
+                <fullName>ALTA</fullName>
+                <default>false</default>
+                <label>ALTA</label>
+            </value>
+            <value>
+                <fullName>Alta/Fin de tratamiento</fullName>
+                <default>false</default>
+                <label>Alta/Fin de tratamiento</label>
+            </value>
+            <value>
+                <fullName>Alta de Tratamiento</fullName>
+                <default>false</default>
+                <label>Alta de Tratamiento</label>
+            </value>
+            <value>
+                <fullName>Alta Paciente BC</fullName>
+                <default>false</default>
+                <label>Alta Paciente BC</label>
+            </value>
+            <value>
+                <fullName>Amenaza de denuncia/ publicacion en redes</fullName>
+                <default>false</default>
+                <label>Amenaza de denuncia/ publicacion en redes</label>
+            </value>
+            <value>
+                <fullName>Ampliación HC</fullName>
+                <default>false</default>
+                <label>Ampliación HC</label>
+            </value>
+            <value>
+                <fullName>Asegurar entrega</fullName>
+                <default>false</default>
+                <label>Asegurar entrega</label>
+            </value>
+            <value>
+                <fullName>Asesoramiento sobre Organismos</fullName>
+                <default>false</default>
+                <label>Asesoramiento sobre Organismos</label>
+            </value>
+            <value>
+                <fullName>Autoridades/ Personas publicas/ Bromatologia/ ONG</fullName>
+                <default>false</default>
+                <label>Autoridades/ Personas publicas/ Bromatologia/ ONG</label>
+            </value>
+            <value>
+                <fullName>Baja del servicio sin módulo</fullName>
+                <default>false</default>
+                <label>Baja del servicio sin módulo</label>
+            </value>
+            <value>
+                <fullName>Becas</fullName>
+                <default>false</default>
+                <label>Becas</label>
+            </value>
+            <value>
+                <fullName>Cambio de dirección</fullName>
+                <default>false</default>
+                <label>Cambio de dirección</label>
+            </value>
+            <value>
+                <fullName>Cambio de indicación</fullName>
+                <default>false</default>
+                <label>Cambio de indicación</label>
+            </value>
+            <value>
+                <fullName>Cambio de OOSS</fullName>
+                <default>false</default>
+                <label>Cambio de OOSS</label>
+            </value>
+            <value>
+                <fullName>Cambios de fórmula</fullName>
+                <default>false</default>
+                <label>Cambios de fórmula</label>
+            </value>
+            <value>
+                <fullName>Cantidad</fullName>
+                <default>false</default>
+                <label>Cantidad</label>
+            </value>
+            <value>
+                <fullName>Capacitaciones</fullName>
+                <default>false</default>
+                <label>Capacitaciones</label>
+            </value>
+            <value>
+                <fullName>Capacitación Presencial</fullName>
+                <default>false</default>
+                <label>Capacitación Presencial</label>
+            </value>
+            <value>
+                <fullName>Capacitación Telefónica</fullName>
+                <default>false</default>
+                <label>Capacitación Telefónica</label>
+            </value>
+            <value>
+                <fullName>Centro de Dietas</fullName>
+                <default>false</default>
+                <label>Centro de Dietas</label>
+            </value>
+            <value>
+                <fullName>Coagulación de los produtos</fullName>
+                <default>false</default>
+                <label>Coagulación de los produtos</label>
+            </value>
+            <value>
+                <fullName>Cobranza</fullName>
+                <default>false</default>
+                <label>Cobranza</label>
+            </value>
+            <value>
+                <fullName>Cobranzas</fullName>
+                <default>false</default>
+                <label>Cobranzas</label>
+            </value>
+            <value>
+                <fullName>Comodato</fullName>
+                <default>false</default>
+                <label>Comodato</label>
+            </value>
+            <value>
+                <fullName>Comodatos, encuestas, varios</fullName>
+                <default>false</default>
+                <label>Comodatos, encuestas, varios</label>
+            </value>
+            <value>
+                <fullName>Complicaciones enterales</fullName>
+                <default>false</default>
+                <label>Complicaciones enterales</label>
+            </value>
+            <value>
+                <fullName>Condición de salud del pcte</fullName>
+                <default>false</default>
+                <label>Condición de salud del pcte</label>
+            </value>
+            <value>
+                <fullName>Conexión de guías/adaptadores</fullName>
+                <default>false</default>
+                <label>Conexión de guías/adaptadores</label>
+            </value>
+            <value>
+                <fullName>Confirmar estado</fullName>
+                <default>false</default>
+                <label>Confirmar estado</label>
+            </value>
+            <value>
+                <fullName>Consulta Medica para paciente</fullName>
+                <default>false</default>
+                <label>Consulta Medica para paciente</label>
+            </value>
+            <value>
+                <fullName>Consulta por reventa de productos</fullName>
+                <default>false</default>
+                <label>Consulta por reventa de productos</label>
+            </value>
+            <value>
+                <fullName>Consulta stock distribuidores</fullName>
+                <default>false</default>
+                <label>Consulta stock distribuidores</label>
+            </value>
+            <value>
+                <fullName>Contactos</fullName>
+                <default>false</default>
+                <label>Contactos</label>
+            </value>
+            <value>
+                <fullName>Cuenta con stock</fullName>
+                <default>false</default>
+                <label>Cuenta con stock</label>
+            </value>
+            <value>
+                <fullName>Cuenta inactiva/ OOSS con deuda</fullName>
+                <default>false</default>
+                <label>Cuenta inactiva/ OOSS con deuda</label>
+            </value>
+            <value>
+                <fullName>Cuerpo extraño</fullName>
+                <default>false</default>
+                <label>Cuerpo extraño</label>
+            </value>
+            <value>
+                <fullName>Cuidado de accesos</fullName>
+                <default>false</default>
+                <label>Cuidado de accesos</label>
+            </value>
+            <value>
+                <fullName>Cupon Kit de Inicio</fullName>
+                <default>false</default>
+                <label>Cupon Kit de Inicio</label>
+            </value>
+            <value>
+                <fullName>Datos de contacto</fullName>
+                <default>false</default>
+                <label>Datos de contacto</label>
+            </value>
+            <value>
+                <fullName>Datos de envio</fullName>
+                <default>false</default>
+                <label>Datos de envio</label>
+            </value>
+            <value>
+                <fullName>Destinatario Ausente</fullName>
+                <default>false</default>
+                <label>Destinatario Ausente</label>
+            </value>
+            <value>
+                <fullName>Día/Horario de entrega</fullName>
+                <default>false</default>
+                <label>Día/Horario de entrega</label>
+            </value>
+            <value>
+                <fullName>Difiere cantidad de producto</fullName>
+                <default>false</default>
+                <label>Difiere cantidad de producto</label>
+            </value>
+            <value>
+                <fullName>Dirección erronea</fullName>
+                <default>false</default>
+                <label>Dirección erronea</label>
+            </value>
+            <value>
+                <fullName>Donaciones</fullName>
+                <default>false</default>
+                <label>Donaciones</label>
+            </value>
+            <value>
+                <fullName>El paquete llegó incompleto</fullName>
+                <default>false</default>
+                <label>El paquete llegó incompleto</label>
+            </value>
+            <value>
+                <fullName>En evaluación médica</fullName>
+                <default>false</default>
+                <label>En evaluación médica</label>
+            </value>
+            <value>
+                <fullName>Envase dañado</fullName>
+                <default>false</default>
+                <label>Envase dañado</label>
+            </value>
+            <value>
+                <fullName>Envio de Kit</fullName>
+                <default>false</default>
+                <label>Envio de Kit</label>
+            </value>
+            <value>
+                <fullName>Envio_de_muestra_medica</fullName>
+                <default>false</default>
+                <label>Envio de muestra medica</label>
+            </value>
+            <value>
+                <fullName>Envíos parciales por forecast</fullName>
+                <default>false</default>
+                <label>Envíos parciales por forecast</label>
+            </value>
+            <value>
+                <fullName>Error en facturación</fullName>
+                <default>false</default>
+                <label>Error en facturación</label>
+            </value>
+            <value>
+                <fullName>Error en la web</fullName>
+                <default>false</default>
+                <label>Error en la web</label>
+            </value>
+            <value>
+                <fullName>Es diferente de lo que pedí</fullName>
+                <default>false</default>
+                <label>Es diferente de lo que pedí</label>
+            </value>
+            <value>
+                <fullName>Es lo que compré pero no me sirve</fullName>
+                <default>false</default>
+                <label>Es lo que compré pero no me sirve</label>
+            </value>
+            <value>
+                <fullName>Estado de envio</fullName>
+                <default>false</default>
+                <label>Estado de envio</label>
+            </value>
+            <value>
+                <fullName>Estado de HC</fullName>
+                <default>false</default>
+                <label>Estado de HC</label>
+            </value>
+            <value>
+                <fullName>Estado de la entrega envíos sin cargo</fullName>
+                <default>false</default>
+                <label>Estado de la entrega envíos sin cargo</label>
+            </value>
+            <value>
+                <fullName>Estado de la entrega productos</fullName>
+                <default>false</default>
+                <label>Estado de la entrega productos</label>
+            </value>
+            <value>
+                <fullName>Estado del envio</fullName>
+                <default>false</default>
+                <label>Estado del envio</label>
+            </value>
+            <value>
+                <fullName>Etiqueta erronea</fullName>
+                <default>false</default>
+                <label>Etiqueta erronea</label>
+            </value>
+            <value>
+                <fullName>Expediente no presentado</fullName>
+                <default>false</default>
+                <label>Expediente no presentado</label>
+            </value>
+            <value>
+                <fullName>Expediente presentado</fullName>
+                <default>false</default>
+                <label>Expediente presentado</label>
+            </value>
+            <value>
+                <fullName>Explosión de la tapa al abrir la lata</fullName>
+                <default>false</default>
+                <label>Explosión De La Tapa Al Abrir La Lata</label>
+            </value>
+            <value>
+                <fullName>Facturación</fullName>
+                <default>false</default>
+                <label>Facturación</label>
+            </value>
+            <value>
+                <fullName>Fallecido</fullName>
+                <default>false</default>
+                <label>Fallecido</label>
+            </value>
+            <value>
+                <fullName>Fallecimiento</fullName>
+                <default>false</default>
+                <label>Fallecimiento</label>
+            </value>
+            <value>
+                <fullName>Falleció</fullName>
+                <default>false</default>
+                <label>Falleció</label>
+            </value>
+            <value>
+                <fullName>Falta cuchara</fullName>
+                <default>false</default>
+                <label>Falta cuchara</label>
+            </value>
+            <value>
+                <fullName>Falta de stock</fullName>
+                <default>false</default>
+                <label>Falta de stock</label>
+            </value>
+            <value>
+                <fullName>Faltan datos de contacto</fullName>
+                <default>false</default>
+                <label>Faltan datos de contacto</label>
+            </value>
+            <value>
+                <fullName>Faltantes en envio</fullName>
+                <default>false</default>
+                <label>Faltantes en envio</label>
+            </value>
+            <value>
+                <fullName>Fin cobertura Plan Materno Infantil</fullName>
+                <default>false</default>
+                <label>Fin cobertura Plan Materno Infantil</label>
+            </value>
+            <value>
+                <fullName>Gestión comercial</fullName>
+                <default>false</default>
+                <label>Gestión comercial</label>
+            </value>
+            <value>
+                <fullName>Hay fallas en el producto</fullName>
+                <default>false</default>
+                <label>Hay fallas en el producto</label>
+            </value>
+            <value>
+                <fullName>Información del producto</fullName>
+                <default>false</default>
+                <label>Información del producto</label>
+            </value>
+            <value>
+                <fullName>Insumos</fullName>
+                <default>false</default>
+                <label>Insumos</label>
+            </value>
+            <value>
+                <fullName>Insumos (guías, adaptadores, contenedores, jeringas)</fullName>
+                <default>false</default>
+                <label>Insumos (guías, adaptadores, contenedores, jeringas)</label>
+            </value>
+            <value>
+                <fullName>Insumos faltantes (guias, contenedores, jeringas)</fullName>
+                <default>false</default>
+                <label>Insumos faltantes (guias, contenedores, jeringas)</label>
+            </value>
+            <value>
+                <fullName>Internado</fullName>
+                <default>false</default>
+                <label>Internado</label>
+            </value>
+            <value>
+                <fullName>Lata abollada</fullName>
+                <default>false</default>
+                <label>Lata Abollada</label>
+            </value>
+            <value>
+                <fullName>Mal estado</fullName>
+                <default>false</default>
+                <label>Mal estado</label>
+            </value>
+            <value>
+                <fullName>Mal Etiquetado</fullName>
+                <default>false</default>
+                <label>Mal Etiquetado</label>
+            </value>
+            <value>
+                <fullName>Mal olor</fullName>
+                <default>false</default>
+                <label>Mal olor</label>
+            </value>
+            <value>
+                <fullName>Mal sabor</fullName>
+                <default>false</default>
+                <label>Mal sabor</label>
+            </value>
+            <value>
+                <fullName>Me arrepentí de comprarlo</fullName>
+                <default>false</default>
+                <label>Me arrepentí de comprarlo</label>
+            </value>
+            <value>
+                <fullName>Menor contenido en el producto</fullName>
+                <default>false</default>
+                <label>Menor contenido en el producto</label>
+            </value>
+            <value>
+                <fullName>Menor contenido en prod en polvo</fullName>
+                <default>false</default>
+                <label>Menor contenido en prod en polvo</label>
+            </value>
+            <value>
+                <fullName>Modificación de presentación</fullName>
+                <default>false</default>
+                <label>Modificación de presentación</label>
+            </value>
+            <value>
+                <fullName>Navegación de web</fullName>
+                <default>false</default>
+                <label>Navegación de web</label>
+            </value>
+            <value>
+                <fullName>Navegacion Web</fullName>
+                <default>false</default>
+                <label>Navegacion Web</label>
+            </value>
+            <value>
+                <fullName>Negativo de la OOSS</fullName>
+                <default>false</default>
+                <label>Negativo de la OOSS</label>
+            </value>
+            <value>
+                <fullName>No contactable</fullName>
+                <default>false</default>
+                <label>No contactable</label>
+            </value>
+            <value>
+                <fullName>NO PAGA - Demora de Gestion BackOffice</fullName>
+                <default>false</default>
+                <label>NO PAGA - Demora de Gestion BackOffice</label>
+            </value>
+            <value>
+                <fullName>NO PAGA - Demora de Gestion Logistica</fullName>
+                <default>false</default>
+                <label>NO PAGA - Demora de Gestion Logistica</label>
+            </value>
+            <value>
+                <fullName>NO PAGA - Demora de Stock</fullName>
+                <default>false</default>
+                <label>NO PAGA - Demora de Stock</label>
+            </value>
+            <value>
+                <fullName>NO PAGA - Extravio de Mercaderia</fullName>
+                <default>false</default>
+                <label>NO PAGA - Extravio de Mercaderia</label>
+            </value>
+            <value>
+                <fullName>NO PAGA - Por pedido de comercial</fullName>
+                <default>false</default>
+                <label>NO PAGA - Por pedido de comercial</label>
+            </value>
+            <value>
+                <fullName>NO PAGA - Por problemas en envio</fullName>
+                <default>false</default>
+                <label>NO PAGA - Por problemas en envio</label>
+            </value>
+            <value>
+                <fullName>NO PAGA - Por situacion de Paciente</fullName>
+                <default>false</default>
+                <label>NO PAGA - Por situacion de Paciente</label>
+            </value>
+            <value>
+                <fullName>No presentó orden</fullName>
+                <default>false</default>
+                <label>No presentó orden</label>
+            </value>
+            <value>
+                <fullName>No renueva servicios</fullName>
+                <default>false</default>
+                <label>No renueva servicios</label>
+            </value>
+            <value>
+                <fullName>OOSS cambió de proveedor</fullName>
+                <default>false</default>
+                <label>OOSS cambió de proveedor</label>
+            </value>
+            <value>
+                <fullName>OOSS cobertura con otra formula</fullName>
+                <default>false</default>
+                <label>OOSS cobertura con otra formula</label>
+            </value>
+            <value>
+                <fullName>OOSS cobertura negativa</fullName>
+                <default>false</default>
+                <label>OOSS cobertura negativa</label>
+            </value>
+            <value>
+                <fullName>OOSS cobertura parcial</fullName>
+                <default>false</default>
+                <label>OOSS cobertura parcial</label>
+            </value>
+            <value>
+                <fullName>OOSS rechaza</fullName>
+                <default>false</default>
+                <label>OOSS rechaza</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+            <value>
+                <fullName>Otros Servicios Profesionales</fullName>
+                <default>false</default>
+                <label>Otros Servicios Profesionales</label>
+            </value>
+            <value>
+                <fullName>Paciente con OOSS sin acceso a BC</fullName>
+                <default>false</default>
+                <label>Paciente con OOSS sin acceso a BC</label>
+            </value>
+            <value>
+                <fullName>Paciente con OOSS sin acceso a la cobertura</fullName>
+                <default>false</default>
+                <label>Paciente con OOSS sin acceso a la cobertura</label>
+            </value>
+            <value>
+                <fullName>Paciente no confirma la orden</fullName>
+                <default>false</default>
+                <label>Paciente no confirma la orden</label>
+            </value>
+            <value>
+                <fullName>Paciente no satisfecho con la visita</fullName>
+                <default>false</default>
+                <label>Paciente no satisfecho con la visita</label>
+            </value>
+            <value>
+                <fullName>Paciente Particular para Best Care</fullName>
+                <default>false</default>
+                <label>Paciente Particular para Best Care</label>
+            </value>
+            <value>
+                <fullName>PAGA - A Cargo de Obra Social</fullName>
+                <default>false</default>
+                <label>PAGA - A Cargo de Obra Social</label>
+            </value>
+            <value>
+                <fullName>Partículas de color</fullName>
+                <default>false</default>
+                <label>Partículas de color</label>
+            </value>
+            <value>
+                <fullName>Partículas oscuras</fullName>
+                <default>false</default>
+                <label>Partículas oscuras</label>
+            </value>
+            <value>
+                <fullName>Peal off</fullName>
+                <default>false</default>
+                <label>Peal off</label>
+            </value>
+            <value>
+                <fullName>Periodistas</fullName>
+                <default>false</default>
+                <label>Periodistas</label>
+            </value>
+            <value>
+                <fullName>Persentó Orden pero sin autorización</fullName>
+                <default>false</default>
+                <label>Persentó Orden pero sin autorización</label>
+            </value>
+            <value>
+                <fullName>Plagas e insectos</fullName>
+                <default>false</default>
+                <label>Plagas E Insectos</label>
+            </value>
+            <value>
+                <fullName>Posibles efectos adversos</fullName>
+                <default>false</default>
+                <label>Posibles efectos adversos</label>
+            </value>
+            <value>
+                <fullName>Precios Mayoristas</fullName>
+                <default>false</default>
+                <label>Precios Mayoristas</label>
+            </value>
+            <value>
+                <fullName>Prescripción errónea</fullName>
+                <default>false</default>
+                <label>Prescripción errónea</label>
+            </value>
+            <value>
+                <fullName>Prestacion promocional</fullName>
+                <default>false</default>
+                <label>Prestacion promocional</label>
+            </value>
+            <value>
+                <fullName>Primer envío</fullName>
+                <default>false</default>
+                <label>Primer envío</label>
+            </value>
+            <value>
+                <fullName>Prioridad en la entrega</fullName>
+                <default>false</default>
+                <label>Prioridad en la entrega</label>
+            </value>
+            <value>
+                <fullName>Prob de salud relacionadas con producto</fullName>
+                <default>false</default>
+                <label>Prob de salud relacionadas con producto</label>
+            </value>
+            <value>
+                <fullName>Problemas con la tapa</fullName>
+                <default>false</default>
+                <label>Problemas con la tapa</label>
+            </value>
+            <value>
+                <fullName>Problemas en el embalaje</fullName>
+                <default>false</default>
+                <label>Problemas en el embalaje</label>
+            </value>
+            <value>
+                <fullName>Problemas en el envase</fullName>
+                <default>false</default>
+                <label>Problemas en el envase</label>
+            </value>
+            <value>
+                <fullName>Prod sin lote ni fecha de vencimiento</fullName>
+                <default>false</default>
+                <label>Prod sin lote ni fecha de vencimiento</label>
+            </value>
+            <value>
+                <fullName>Producto con color anormal</fullName>
+                <default>false</default>
+                <label>Producto con color anormal</label>
+            </value>
+            <value>
+                <fullName>Producto cortado</fullName>
+                <default>false</default>
+                <label>Producto cortado</label>
+            </value>
+            <value>
+                <fullName>Producto en Back Order</fullName>
+                <default>false</default>
+                <label>Producto en Back Order</label>
+            </value>
+            <value>
+                <fullName>Producto faltante</fullName>
+                <default>false</default>
+                <label>Producto faltante</label>
+            </value>
+            <value>
+                <fullName>Producto mal estado</fullName>
+                <default>false</default>
+                <label>Producto mal estado</label>
+            </value>
+            <value>
+                <fullName>Producto no recibido</fullName>
+                <default>false</default>
+                <label>Producto no recibido</label>
+            </value>
+            <value>
+                <fullName>Productos</fullName>
+                <default>false</default>
+                <label>Productos</label>
+            </value>
+            <value>
+                <fullName>Productos erroneos</fullName>
+                <default>false</default>
+                <label>Productos erroneos</label>
+            </value>
+            <value>
+                <fullName>Productos Erróneos</fullName>
+                <default>false</default>
+                <label>Productos Erróneos</label>
+            </value>
+            <value>
+                <fullName>Producto Vencido</fullName>
+                <default>false</default>
+                <label>Producto Vencido</label>
+            </value>
+            <value>
+                <fullName>Promociones</fullName>
+                <default>false</default>
+                <label>Promociones</label>
+            </value>
+            <value>
+                <fullName>Rechazado por paciente</fullName>
+                <default>false</default>
+                <label>Rechazado por paciente</label>
+            </value>
+            <value>
+                <fullName>Recurso de Amparo</fullName>
+                <default>false</default>
+                <label>Recurso de Amparo</label>
+            </value>
+            <value>
+                <fullName>Rehabilitó</fullName>
+                <default>false</default>
+                <label>Rehabilitó</label>
+            </value>
+            <value>
+                <fullName>Remitos</fullName>
+                <default>false</default>
+                <label>Remitos</label>
+            </value>
+            <value>
+                <fullName>Renovación de Modulo</fullName>
+                <default>false</default>
+                <label>Renovación de Modulo</label>
+            </value>
+            <value>
+                <fullName>Renovación módulo</fullName>
+                <default>false</default>
+                <label>Renovación módulo</label>
+            </value>
+            <value>
+                <fullName>Renovó módulo</fullName>
+                <default>false</default>
+                <label>Renovó módulo</label>
+            </value>
+            <value>
+                <fullName>Reposicion por mal funcionamiento</fullName>
+                <default>false</default>
+                <label>Reposicion por mal funcionamiento</label>
+            </value>
+            <value>
+                <fullName>Reposición por mal funcionamiento</fullName>
+                <default>false</default>
+                <label>Reposición por mal funcionamiento</label>
+            </value>
+            <value>
+                <fullName>Respuestas WhatsApp</fullName>
+                <default>false</default>
+                <label>Respuestas WhatsApp</label>
+            </value>
+            <value>
+                <fullName>Retiro de mercadería</fullName>
+                <default>false</default>
+                <label>Retiro de mercadería</label>
+            </value>
+            <value>
+                <fullName>Seguimiento  Adicional Enfermería</fullName>
+                <default>false</default>
+                <label>Seguimiento  Adicional Enfermería</label>
+            </value>
+            <value>
+                <fullName>Seguimiento  Adicional Medico</fullName>
+                <default>false</default>
+                <label>Seguimiento  Adicional Medico</label>
+            </value>
+            <value>
+                <fullName>Seguimiento  Adicional Nutricional</fullName>
+                <default>false</default>
+                <label>Seguimiento  Adicional Nutricional</label>
+            </value>
+            <value>
+                <fullName>Seguimiento Efectivo</fullName>
+                <default>false</default>
+                <label>Seguimiento Efectivo</label>
+            </value>
+            <value>
+                <fullName>Seguimiento no efectivo</fullName>
+                <default>false</default>
+                <label>Seguimiento no efectivo</label>
+            </value>
+            <value>
+                <fullName>Sensorial</fullName>
+                <default>false</default>
+                <label>Sensorial</label>
+            </value>
+            <value>
+                <fullName>Servicio Full</fullName>
+                <default>false</default>
+                <label>Servicio Full</label>
+            </value>
+            <value>
+                <fullName>Servicio prestado por profesional</fullName>
+                <default>false</default>
+                <label>Servicio prestado por profesional</label>
+            </value>
+            <value>
+                <fullName>Síntomas</fullName>
+                <default>false</default>
+                <label>Síntomas</label>
+            </value>
+            <value>
+                <fullName>Solicitud de APM</fullName>
+                <default>false</default>
+                <label>Solicitud de APM</label>
+            </value>
+            <value>
+                <fullName>Solicitud de Factura</fullName>
+                <default>false</default>
+                <label>Solicitud de Factura</label>
+            </value>
+            <value>
+                <fullName>Solicitud de vencimiento</fullName>
+                <default>false</default>
+                <label>Solicitud de vencimiento</label>
+            </value>
+            <value>
+                <fullName>Soporte OOSS</fullName>
+                <default>false</default>
+                <label>Soporte OOSS</label>
+            </value>
+            <value>
+                <fullName>Soporte Psicologo</fullName>
+                <default>false</default>
+                <label>Soporte Psicologo</label>
+            </value>
+            <value>
+                <fullName>Soporte Trabajadora Social</fullName>
+                <default>false</default>
+                <label>Soporte Trabajadora Social</label>
+            </value>
+            <value>
+                <fullName>Stock</fullName>
+                <default>false</default>
+                <label>Stock</label>
+            </value>
+            <value>
+                <fullName>Stock en distribuidores</fullName>
+                <default>false</default>
+                <label>Stock en distribuidores</label>
+            </value>
+            <value>
+                <fullName>Textura distinta</fullName>
+                <default>false</default>
+                <label>Textura distinta</label>
+            </value>
+            <value>
+                <fullName>Trámite CUD</fullName>
+                <default>false</default>
+                <label>Trámite CUD</label>
+            </value>
+            <value>
+                <fullName>Uso de la bomba</fullName>
+                <default>false</default>
+                <label>Uso de la bomba</label>
+            </value>
+            <value>
+                <fullName>Utilización de adaptadores</fullName>
+                <default>false</default>
+                <label>Utilización de adaptadores</label>
+            </value>
+            <value>
+                <fullName>Vademecum</fullName>
+                <default>false</default>
+                <label>Vademecum</label>
+            </value>
+            <value>
+                <fullName>Vidrio en el producto</fullName>
+                <default>false</default>
+                <label>Vidrio en el producto</label>
+            </value>
+            <value>
+                <fullName>Visita</fullName>
+                <default>false</default>
+                <label>Visita</label>
+            </value>
+            <value>
+                <fullName>Visita no realizada</fullName>
+                <default>false</default>
+                <label>Visita no realizada</label>
+            </value>
+            <value>
+                <fullName>Yo no hice esta compra</fullName>
+                <default>false</default>
+                <label>Yo no hice esta compra</label>
+            </value>
+            <value>
+                <fullName>Zona Peligrosa</fullName>
+                <default>false</default>
+                <label>Zona Peligrosa</label>
+            </value>
+            <value>
+                <fullName>Prioridad</fullName>
+                <default>false</default>
+                <label>Prioridad</label>
+            </value>
+            <value>
+                <fullName>Demora en servicio de entrega</fullName>
+                <default>false</default>
+                <label>Demora en servicio de entrega</label>
+            </value>
+            <value>
+                <fullName>Pedido de traslado</fullName>
+                <default>false</default>
+                <label>Pedido de traslado</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Calidad</controllingFieldValue>
+            <valueName>Cuerpo extraño</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Calidad</controllingFieldValue>
+            <valueName>Insumos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Calidad</controllingFieldValue>
+            <valueName>Sensorial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Calidad</controllingFieldValue>
+            <valueName>Síntomas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicios Profesionales</controllingFieldValue>
+            <valueName>Estado de HC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicios Profesionales</controllingFieldValue>
+            <valueName>Paciente no satisfecho con la visita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Servicios Profesionales</controllingFieldValue>
+            <valueName>Visita no realizada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Respuestas WhatsApp</controllingFieldValue>
+            <valueName>Respuestas WhatsApp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Baja del servicio sin módulo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <controllingFieldValue>Retiro de Activos</controllingFieldValue>
+            <valueName>Cambio de indicación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Cambio de OOSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Confirmar estado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Cuenta con stock</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Cuenta inactiva/ OOSS con deuda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>En evaluación médica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Falleció</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Fin cobertura Plan Materno Infantil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Internado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Negativo de la OOSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>No contactable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>No presentó orden</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>OOSS cambió de proveedor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Paciente con OOSS sin acceso a BC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <controllingFieldValue>Seguimiento</controllingFieldValue>
+            <valueName>Paciente con OOSS sin acceso a la cobertura</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Persentó Orden pero sin autorización</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Rehabilitó</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento no renovación</controllingFieldValue>
+            <valueName>Renovó módulo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Modulo BC</controllingFieldValue>
+            <valueName>Renovación módulo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ecommerce</controllingFieldValue>
+            <controllingFieldValue>Compras en NEC</controllingFieldValue>
+            <valueName>Error en facturación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ecommerce</controllingFieldValue>
+            <controllingFieldValue>Compras en NEC</controllingFieldValue>
+            <valueName>Error en la web</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ecommerce</controllingFieldValue>
+            <controllingFieldValue>Compras en NEC</controllingFieldValue>
+            <valueName>Estado del envio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ecommerce</controllingFieldValue>
+            <valueName>Mal estado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ecommerce</controllingFieldValue>
+            <valueName>Navegación de web</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ecommerce</controllingFieldValue>
+            <valueName>Producto faltante</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ecommerce</controllingFieldValue>
+            <valueName>Producto mal estado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ecommerce</controllingFieldValue>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Producto no recibido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ecommerce</controllingFieldValue>
+            <valueName>Productos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ecommerce</controllingFieldValue>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Productos erroneos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ecommerce</controllingFieldValue>
+            <valueName>Promociones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ecommerce</controllingFieldValue>
+            <valueName>Stock</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Urgencia</controllingFieldValue>
+            <valueName>NO PAGA - Demora de Gestion BackOffice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Urgencia</controllingFieldValue>
+            <valueName>NO PAGA - Demora de Gestion Logistica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Urgencia</controllingFieldValue>
+            <valueName>NO PAGA - Demora de Stock</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Urgencia</controllingFieldValue>
+            <valueName>NO PAGA - Extravio de Mercaderia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Urgencia</controllingFieldValue>
+            <valueName>NO PAGA - Por pedido de comercial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Urgencia</controllingFieldValue>
+            <valueName>NO PAGA - Por problemas en envio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Urgencia</controllingFieldValue>
+            <valueName>NO PAGA - Por situacion de Paciente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Urgencia</controllingFieldValue>
+            <valueName>PAGA - A Cargo de Obra Social</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ONG Acceso</controllingFieldValue>
+            <valueName>Ampliación HC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ONG Acceso</controllingFieldValue>
+            <valueName>Expediente no presentado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ONG Acceso</controllingFieldValue>
+            <valueName>Expediente presentado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ONG Acceso</controllingFieldValue>
+            <valueName>OOSS cobertura con otra formula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ONG Acceso</controllingFieldValue>
+            <valueName>OOSS cobertura negativa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ONG Acceso</controllingFieldValue>
+            <valueName>OOSS cobertura parcial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ONG Acceso</controllingFieldValue>
+            <valueName>Recurso de Amparo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ONG Acceso</controllingFieldValue>
+            <valueName>Pedido de traslado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Actualización de datos</controllingFieldValue>
+            <valueName>Centro de Dietas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Actualización de datos</controllingFieldValue>
+            <valueName>Contactos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Actualización de datos</controllingFieldValue>
+            <valueName>Datos de envio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <controllingFieldValue>Envio de Insumos</controllingFieldValue>
+            <valueName>Adicionales a autorizado por OOSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Cantidad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Cupon Kit de Inicio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Destinatario Ausente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Difiere cantidad de producto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Dirección erronea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <controllingFieldValue>Productos</controllingFieldValue>
+            <valueName>Donaciones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Envase dañado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Envio de Kit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Envio_de_muestra_medica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Insumos faltantes (guias, contenedores, jeringas)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Primer envío</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Problemas en el embalaje</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Producto en Back Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Rechazado por paciente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Remitos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Productos</controllingFieldValue>
+            <valueName>Zona Peligrosa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelacion de Envio</controllingFieldValue>
+            <valueName>Alta de Tratamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelacion de Envio</controllingFieldValue>
+            <valueName>El paquete llegó incompleto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelacion de Envio</controllingFieldValue>
+            <valueName>Es diferente de lo que pedí</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelacion de Envio</controllingFieldValue>
+            <valueName>Es lo que compré pero no me sirve</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelacion de Envio</controllingFieldValue>
+            <valueName>Fallecido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelacion de Envio</controllingFieldValue>
+            <valueName>Hay fallas en el producto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelacion de Envio</controllingFieldValue>
+            <valueName>Me arrepentí de comprarlo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelacion de Envio</controllingFieldValue>
+            <valueName>OOSS rechaza</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelacion de Envio</controllingFieldValue>
+            <valueName>Yo no hice esta compra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelacion de Envio</controllingFieldValue>
+            <valueName>Demora en servicio de entrega</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Insumos</controllingFieldValue>
+            <valueName>Modificación de presentación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nuevo Paciente</controllingFieldValue>
+            <valueName>ALTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporte de Incidencia</controllingFieldValue>
+            <valueName>Condición de salud del pcte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporte de Incidencia</controllingFieldValue>
+            <controllingFieldValue>Activos</controllingFieldValue>
+            <controllingFieldValue>Profesionales BC</controllingFieldValue>
+            <controllingFieldValue>Estado de Envíos</controllingFieldValue>
+            <valueName>Otros</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporte de Incidencia</controllingFieldValue>
+            <valueName>Servicio prestado por profesional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporte de Crisis</controllingFieldValue>
+            <valueName>Abandono de persona</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporte de Crisis</controllingFieldValue>
+            <valueName>Abuso/ acoso/ violencia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporte de Crisis</controllingFieldValue>
+            <valueName>Amenaza de denuncia/ publicacion en redes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporte de Crisis</controllingFieldValue>
+            <valueName>Autoridades/ Personas publicas/ Bromatologia/ ONG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporte de Crisis</controllingFieldValue>
+            <valueName>Periodistas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporte de Crisis</controllingFieldValue>
+            <valueName>Prob de salud relacionadas con producto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retiro de Activos</controllingFieldValue>
+            <valueName>Alta/Fin de tratamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retiro de Activos</controllingFieldValue>
+            <valueName>Fallecimiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retiro de Activos</controllingFieldValue>
+            <valueName>No renueva servicios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retiro de Activos</controllingFieldValue>
+            <valueName>Reposición por mal funcionamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Activos</controllingFieldValue>
+            <valueName>Conexión de guías/adaptadores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Activos</controllingFieldValue>
+            <valueName>Uso de la bomba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Activos</controllingFieldValue>
+            <valueName>Utilización de adaptadores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales BC</controllingFieldValue>
+            <valueName>Capacitaciones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales BC</controllingFieldValue>
+            <valueName>Complicaciones enterales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales BC</controllingFieldValue>
+            <valueName>Cuidado de accesos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Estado de Envíos</controllingFieldValue>
+            <valueName>Alta Paciente BC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Estado de Envíos</controllingFieldValue>
+            <valueName>Estado de la entrega envíos sin cargo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Estado de Envíos</controllingFieldValue>
+            <valueName>Estado de la entrega productos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Estado de Envíos</controllingFieldValue>
+            <valueName>Renovación de Modulo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compras en NEC</controllingFieldValue>
+            <valueName>Falta de stock</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Productos</controllingFieldValue>
+            <valueName>Administración y preparación de fórmula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Productos</controllingFieldValue>
+            <valueName>Almacenamiento de productos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Productos</controllingFieldValue>
+            <valueName>Consulta por reventa de productos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Productos</controllingFieldValue>
+            <valueName>Consulta stock distribuidores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Productos</controllingFieldValue>
+            <valueName>Información del producto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Productos</controllingFieldValue>
+            <valueName>Insumos (guías, adaptadores, contenedores, jeringas)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Productos</controllingFieldValue>
+            <valueName>Precios Mayoristas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Productos</controllingFieldValue>
+            <valueName>Prescripción errónea</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Productos</controllingFieldValue>
+            <valueName>Stock en distribuidores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Becas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Capacitación Presencial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Capacitación Telefónica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Otros Servicios Profesionales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Prestacion promocional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Seguimiento  Adicional Enfermería</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Seguimiento  Adicional Medico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Seguimiento  Adicional Nutricional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Servicio Full</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Solicitud de APM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Soporte Psicologo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Soporte Trabajadora Social</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Vademecum</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Profesionales de la salud</controllingFieldValue>
+            <valueName>Visita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documentacion</controllingFieldValue>
+            <valueName>Comodato</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Actualización de Módulo</controllingFieldValue>
+            <valueName>Cambios de fórmula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento</controllingFieldValue>
+            <valueName>Acceso a recursos varios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento</controllingFieldValue>
+            <valueName>Asesoramiento sobre Organismos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento</controllingFieldValue>
+            <valueName>Seguimiento Efectivo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento</controllingFieldValue>
+            <valueName>Seguimiento no efectivo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seguimiento</controllingFieldValue>
+            <valueName>Trámite CUD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Activos</controllingFieldValue>
+            <valueName>Faltantes en envio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envio de Activos</controllingFieldValue>
+            <valueName>Reposicion por mal funcionamiento</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

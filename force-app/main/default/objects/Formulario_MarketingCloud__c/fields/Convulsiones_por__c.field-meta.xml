@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Convulsiones_por__c</fullName>
+    <externalId>false</externalId>
+    <label>Convulsiones por</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Día</fullName>
+                <default>false</default>
+                <label>Día</label>
+            </value>
+            <value>
+                <fullName>Semana</fullName>
+                <default>false</default>
+                <label>Semana</label>
+            </value>
+            <value>
+                <fullName>Mes</fullName>
+                <default>false</default>
+                <label>Mes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

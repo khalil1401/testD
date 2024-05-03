@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Qu_tipo_de_soporte__c</name>
+    <picklistValues>
+        <masterLabel>Asesoramiento médico o de nutricionista</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Otras</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recetario de comidas</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Videos</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

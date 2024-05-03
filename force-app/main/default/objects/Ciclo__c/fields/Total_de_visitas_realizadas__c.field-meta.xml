@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_de_visitas_realizadas__c</fullName>
+    <externalId>false</externalId>
+    <formula>(Visitas_virtuales_realizadas__c * 1) +
+(Visitas_presenciales_realizadas__c * 1)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>La puntuación de visitas se realiza de la siguiente manera:
+Presenciales: 2 para compradores de droguería y 1 para los demás profesionales.
+Virtuales, telefónicas u otros: 0.5 para compradores de droguería y 0.25 para el resto de profesionales.</inlineHelpText>
+    <label>Total de visitas realizadas</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

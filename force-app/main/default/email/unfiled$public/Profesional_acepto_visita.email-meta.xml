@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Best_Care</letterhead>
+    <name>Profesional aceptó visita</name>
+    <style>freeForm</style>
+    <subject>Profesional Aceptó {!Case.Reason}</subject>
+    <textOnly>Estimado,
+
+Le informamos que el profesional asignado a la {!Case.Reason} número {!Case.CaseNumber} ha aceptado la solicitud.
+
+Para ver más detalles ingrese al siguiente enlace: {!Case.Link}
+
+Saludos.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

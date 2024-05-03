@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estado_del_an_lisis__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Al finalizar la carga de información del Análisis de Planta, marcar como completo para cerrar la actividad asociada.</inlineHelpText>
+    <label>Estado del análisis</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pendiente</fullName>
+                <default>true</default>
+                <label>Pendiente</label>
+            </value>
+            <value>
+                <fullName>Completo</fullName>
+                <default>false</default>
+                <label>Completo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

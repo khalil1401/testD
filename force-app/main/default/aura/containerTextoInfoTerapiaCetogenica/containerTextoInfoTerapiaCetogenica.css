@@ -1,0 +1,92 @@
+.THIS {
+}
+
+.THIS .div-aviso-importante{
+    background-color: #58368C;
+    border-radius: 10px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.THIS .titulo-aviso-importante{
+    font-family: MontserratSemiBold;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.THIS .texto-aviso-importante{
+    font-family: MontserratSemiBold;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: white;
+}
+
+.THIS .container-texto-videos{
+    background-color: #58368C;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.THIS .texto-titulo-violeta{
+    font-family: MontserratSemiBold;
+    font-size: 2.5rem;
+    color: #58368C;
+}
+
+.THIS .texto-titulo-blanco{
+    font-family: MontserratSemiBold;
+    font-size: 2.5rem;
+    color: white;
+    background-color: #3DC3D6;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.THIS .texto-blanco-video{
+    font-family: MontserratSemiBold;
+    font-size: 2.5rem;
+    color: white;
+    line-height: 3.75rem;
+}
+
+.THIS .texto-celeste-video{
+    font-family: LeavesAndGround;
+    font-size: 5rem;
+    color: #3DC3D6;
+    line-height: 2.5rem;
+}
+
+@media (max-width: 600px) {
+    .THIS .div-aviso-importante{
+        border-radius: 0px;
+        padding: 5%;    
+    }    
+    .THIS .texto-titulo-violeta{
+        font-size: 1.5rem;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    
+    .THIS .texto-titulo-blanco{
+        font-size: 1.5rem;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .THIS .container-texto-videos{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .THIS .texto-blanco-video{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    
+    .THIS .texto-celeste-video{
+        font-size: 3.125rem;
+        line-height: 1.875rem;
+    }    
+}

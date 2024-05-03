@@ -1,0 +1,46 @@
+.THIS {
+}
+
+.THIS .iconMas svg{
+    fill: #4C2F92;
+}
+
+.THIS .textoFortisipOncologia{
+    color: #293896;
+    font-family: MontserratRegular;
+    font-size: 30px;
+}
+
+.THIS .textoFormularioFortisipOncologia{
+    color: #293896;
+    font-family: MontserratBlack;
+    font-size: 35px;
+    line-height: 40px;
+}
+
+.THIS .textoFormularioFortisipOncologiaPacifico{
+    font-family: PacificoRegular;
+    font-size: 60px;
+    color: #4C2F92;
+    line-height: 40px;
+}
+
+@media (max-width: 600px) {
+    .THIS .textoFortisipOncologia{
+        font-size: 15px;
+        line-height: 21px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .THIS .textoFormularioFortisipOncologia{
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .THIS .textoFormularioFortisipOncologiaPacifico{
+        font-size: 28px;
+        line-height: 21px;
+    }
+    .THIS .iconMas svg{
+        width: 75%;
+    }
+}

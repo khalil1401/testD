@@ -1,0 +1,54 @@
+.THIS {
+}
+
+.THIS .tituloDropdownBalanceOncologia{
+    font-family: MontserratSemiBold;
+    color: #293896;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.THIS .textoDropdownBalanceOncologia{
+    color: #293896;
+    font-family: MontserratRegular;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.THIS .lineaDropdownBalanceOncologia{
+    border-top: 1px solid #293896;
+    width:100px;
+    margin-top:1.2%;
+}
+
+.THIS .textoVerMasDropdownBalanceOncologia{
+    font-family:MontserratRegular;
+    font-size: 16px;
+    color:#293896;
+    line-height: 24px;
+    float: right;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-right: 5%;
+}
+
+@media (max-width: 600px) {
+    .THIS {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .THIS .tituloDropdownBalanceOncologia{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .THIS .textoDropdownBalanceOncologia{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .THIS .lineaDropdownBalanceOncologia{
+        margin-top:3.5%;
+    }
+    .THIS .textoVerMasDropdownBalanceOncologia{
+        font-size: 14px;
+    }    
+}

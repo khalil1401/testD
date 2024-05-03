@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Puede_mantener__c</fullName>
+    <externalId>false</externalId>
+    <label>Tratamiento en ámbitos sociales</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lleva el tratamiento correctamente pero le cuesta</fullName>
+                <default>false</default>
+                <label>Lleva el tratamiento correctamente pero le cuesta</label>
+            </value>
+            <value>
+                <fullName>Lleva el tratamiento correctamente y no le resulta dificil</fullName>
+                <default>false</default>
+                <label>Lleva el tratamiento correctamente y no le resulta dificil</label>
+            </value>
+            <value>
+                <fullName>No puede llevar el tratamiento correctamente aunque lo intente</fullName>
+                <default>false</default>
+                <label>No puede llevar el tratamiento correctamente aunque lo intente</label>
+            </value>
+            <value>
+                <fullName>Disminuyó los ámbitos sociales por el tratamiento</fullName>
+                <default>false</default>
+                <label>Disminuyó los ámbitos sociales por el tratamiento</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

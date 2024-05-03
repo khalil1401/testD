@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caracteres_no_permitidos</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR(
+    OR(
+			CONTAINS(LOWER(Direccion__c), &quot;ñ&quot;),
+			CONTAINS(Direccion__c, &apos;&quot;&apos;),
+   CONTAINS(Direccion__c, &quot;  &quot;), 
+			CONTAINS(Direccion__c, &quot;á&quot;),
+   CONTAINS(Direccion__c, &quot;é&quot;),
+			CONTAINS(Direccion__c, &quot;í&quot;),
+			CONTAINS(Direccion__c, &quot;ó&quot;),
+			CONTAINS(Direccion__c, &quot;ú&quot;)
+    ),
+				OR(
+			CONTAINS(LOWER(Referencia__c), &quot;ñ&quot;),
+			CONTAINS(Referencia__c, &apos;&quot;&apos;),
+   CONTAINS(Referencia__c, &quot;  &quot;), 
+			CONTAINS(Referencia__c, &quot;á&quot;),
+   CONTAINS(Referencia__c, &quot;é&quot;),
+			CONTAINS(Referencia__c, &quot;í&quot;),
+			CONTAINS(Referencia__c, &quot;ó&quot;),
+			CONTAINS(Referencia__c, &quot;ú&quot;)
+				),
+								OR(
+			CONTAINS(LOWER(Phone), &quot;ñ&quot;),
+			CONTAINS(Phone, &apos;&quot;&apos;),
+   CONTAINS(Phone, &quot;  &quot;), 
+			CONTAINS(Phone, &quot;á&quot;),
+   CONTAINS(Phone, &quot;é&quot;),
+			CONTAINS(Phone, &quot;í&quot;),
+			CONTAINS(Phone, &quot;ó&quot;),
+			CONTAINS(Phone, &quot;ú&quot;)
+				)
+)
+				
+				
+
+
+
+/*Phone Direccion__c referencia__c*/</errorConditionFormula>
+    <errorMessage>Los campos Teléfono, Dirección y Referencia no pueden contener: tildes, comillas, mas de un espacio seguido ni la letra &apos;ñ&apos;.</errorMessage>
+</ValidationRule>

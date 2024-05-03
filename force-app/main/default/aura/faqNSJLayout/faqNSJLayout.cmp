@@ -1,0 +1,61 @@
+<aura:component implements="forceCommunity:layout">
+
+    <aura:attribute name="container1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container2" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container3" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container4" type="Aura.Component[]" required="false"/>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container1}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="container-faq-nsj-layout">
+                {!v.container2}
+            </div>
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="container-faq-nsj-layout container-faq-large-device">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_7-of-12">
+                        <div class="container-faq-nsj">
+                            {!v.container3}
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_5-of-12">
+                        <div class="slds-align_absolute-center slds-m-top_x-large">
+                            <video style="width: 90%;" autoplay="autoplay" muted="muted" controls="controls">
+                                <source src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_FAQS/Video_Instructivo_Kit.mp4" type="video/mp4"/>
+                                Your browser does not support the video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1 slds-m-top_large">
+            <div class="container-faq-nsj-layout container-faq-small-device">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_1-of-1">
+                        <div class="slds-align_absolute-center">
+                            <video style="width: 90%;" autoplay="autoplay" muted="muted" controls="controls">
+                                <source src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_FAQS/Video_Instructivo_Kit.mp4" type="video/mp4"/>
+                                Your browser does not support the video.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_large">
+                        <div class="container-faq-nsj">
+                            {!v.container4}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</aura:component>

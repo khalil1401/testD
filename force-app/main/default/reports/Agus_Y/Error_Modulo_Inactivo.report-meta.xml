@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT_ID</field>
+    </columns>
+    <columns>
+        <field>RECORDTYPE</field>
+    </columns>
+    <columns>
+        <field>Account.ID_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Area_terapeutica__c</field>
+    </columns>
+    <columns>
+        <field>Account.Modulo_activo__c</field>
+    </columns>
+    <columns>
+        <field>Account.ultimo_modulo_hasta__c</field>
+    </columns>
+    <columns>
+        <field>Account.Estado_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account.Subestado_del_paciente__c</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <description>Pacientes con mouulo activo pero estado y subestado &apos;modulo inactivo&apos;</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Subestado_del_paciente__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Modulo Inactivo</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Error &apos;Modulo Inactivo&apos;</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Modulo_de_paciente__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.ultimo_modulo_hasta__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account.Fecha_de_cambio_de_estado__c</dateColumn>
+        <endDate>2020-02-29</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

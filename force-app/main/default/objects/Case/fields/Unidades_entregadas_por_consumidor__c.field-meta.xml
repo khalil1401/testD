@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unidades_entregadas_por_consumidor__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Cantidad de unidades del reclamo que el consumidor va a entregar al operador logístico.</inlineHelpText>
+    <label>Unidades entregadas por consumidor</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

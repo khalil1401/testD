@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Puede_mantener__c</name>
+    <picklistValues>
+        <masterLabel>Disminuyó los ámbitos sociales por el tratamiento</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lleva el tratamiento correctamente pero le cuesta</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lleva el tratamiento correctamente y no le resulta dificil</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No puede llevar el tratamiento correctamente aunque lo intente</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

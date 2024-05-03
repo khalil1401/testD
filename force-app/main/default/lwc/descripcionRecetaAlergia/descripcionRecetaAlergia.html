@@ -1,0 +1,89 @@
+<template>
+    <template if:true={receta}>
+    <div class="container-descripcion-receta">
+        <span class="volver slds-m-top_x-large"
+            onclick={volverARecetas}>
+            Volver
+        </span>
+        <div class="slds-grid slds-wrap slds-m-top_medium">
+            <div class="slds-col slds-size_1-of-1 slds-large-size_5-of-12">
+                <div>
+                    <img src={receta.Imagen__c} class="imgReceta">
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_7-of-12">
+                <div class="container-ingredientes">
+                    <p class="tituloRecetaAlergia">
+                        {receta.Title}
+                    </p>
+                    <template if:true={isMobile}>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                            <img src={receta.Imagen_alergenos__c} class="slds-align_absolute-center imagen-producto-alergeno">
+                        </div>
+                    </template>
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                            <p class="titulo-gris">
+                                INGREDIENTES
+                            </p>
+                            <div class="lineaAlergia"></div>
+                            <p class="texto-gris slds-m-top_medium">
+                                <lightning-formatted-rich-text value={receta.Ingredientes_de_recetas__c}></lightning-formatted-rich-text>
+                            </p>
+                        </div>
+                        <template if:false={isMobile}>
+                            <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                                <img src={receta.Imagen_alergenos__c} class="slds-align_absolute-center imagen-producto-alergeno">
+                            </div>
+                        </template>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                            <p class="titulo-gris slds-m-top_large">
+                                PREPARÁ ESTA RECETA CON:
+                            </p>
+                            <div class="lineaAlergia"></div>
+                            <p class="texto-gris slds-m-top_medium">
+                                <lightning-formatted-rich-text value={receta.Consejos_recetas__c}></lightning-formatted-rich-text>
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                            <img src={receta.Imagen_producto__c} class="slds-align_absolute-center imagen-producto-alergeno">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-1">
+                <p class="titulo-gris slds-m-top_large">
+                    PREPARACIÓN
+                </p>
+                <div class="lineaAlergia"></div>
+                <p class="texto-gris slds-m-top_medium">
+                    <lightning-formatted-rich-text value={receta.Preparacion_receta__c}></lightning-formatted-rich-text>
+                </p>
+            </div>
+        </div>
+        <div class="slds-grid slds-m-top_xx-large">
+            <div class="slds-col slds-size_1-of-1">
+                <div class="container-aviso-legal">
+                    <div class="lineaCompletaAlergia"></div>
+                    <p class="texto-aviso-legal">
+                        - Neocate Syneo: Alimento para propósitos médicos específicos en polvo para lactantes. Libre de gluten.
+                        <br>
+                        - Neocate Gold: Alimento para propósitos médicos específicos en polvo a base de carbohidratos, aceites vegetales, aminoácidos, vitaminas y minerales, para lactantes. Libre de gluten
+                        <br>
+                        - Neocate junior sin sabor: Alimento para propósitos médicos específicos con proteína de suero hidrolizada, con ácidos grasos poliinsaturados de cadena larga, para lactantes. Libre de gluten.
+                        <br>
+                        - Nutrilon Pepti Syneo: Alimento para propósitos médicos específicos con proteína de suero hidrolizado, con ácidos grasos polinsaturados de cadena larga, para lactantes. Libre de gluten.
+                        <br>
+                        - Nutrilon Pepti Jr HE: Alimento para propósitos médicos específicos en polvo para lactantes. Libre de gluten. En caso de usar Nutrilon Pepti Junior o Nutrilon Pepti Syneo, tener en cuenta que contienen derivados de leche (proteínas del suero extensamente hidrolizadas) y de pescado (aceite de pescado).
+                        <br></br>
+                        Material exclusivo para profesionales de la salud. Prohibida su difusión al público en general. Cada profesional de la salud puede entregar este material a sus pacientes en tratamiento con Alergia a la Proteína de Leche de Vaca (APLV). Esta información no sustituye la recomendación de un médico. Consultar siempre al médico o nutricionista.
+                    </p>
+                    <div class="lineaCompletaAlergia"></div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    </template>
+</template>

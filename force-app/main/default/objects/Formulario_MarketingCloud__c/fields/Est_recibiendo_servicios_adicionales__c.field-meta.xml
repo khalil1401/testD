@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Est_recibiendo_servicios_adicionales__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Está recibiendo servicios adicionales?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ninguno</fullName>
+                <default>false</default>
+                <label>Ninguno</label>
+            </value>
+            <value>
+                <fullName>Kinesiología</fullName>
+                <default>false</default>
+                <label>Kinesiología</label>
+            </value>
+            <value>
+                <fullName>Terapia ocupacional</fullName>
+                <default>false</default>
+                <label>Terapia ocupacional</label>
+            </value>
+            <value>
+                <fullName>Enfemería a domicilio</fullName>
+                <default>false</default>
+                <label>Enfemería a domicilio</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

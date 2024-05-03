@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.ID_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>RECORDTYPE</field>
+    </columns>
+    <columns>
+        <field>Account.Estado_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account.Subestado_del_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account.Area_terapeutica__c</field>
+    </columns>
+    <columns>
+        <field>PC_EMAIL</field>
+    </columns>
+    <columns>
+        <field>PHONE1</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Reporte Dieta</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

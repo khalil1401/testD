@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowApiName>Automatizacion_de_tareas</flowApiName>
+    <label>pruebatest</label>
+    <testPoints>
+        <elementApiName>Start</elementApiName>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordInitial</type>
+            <value>
+                <sobjectValue>{&quot;attributes&quot;:{&quot;type&quot;:&quot;Task&quot;},&quot;WhatId&quot;:&quot;001DD00001RMsbVYAT&quot;,&quot;Description&quot;:&quot;Realizar una llamada al paciente para confirmar los datos ingresados y confirmar el pedido del Kit de Inicio. Si el pedido de Kit está confirmado, el operador de PSP, deberá cambiar la tarea de estado de “Abierta” a “Completa”. Si por algún motivo no se puede confirmar la gestión, la tarea se cambiará a estado “Trabajando” y se intentarán nuevos contactos hasta bien se pueda localizar al paciente y se complete el proceso.&quot;,&quot;OwnerId&quot;:&quot;00G1I00000247RQUAY&quot;,&quot;RecordTypeId&quot;:&quot;0121I000001BtZUQA0&quot;,&quot;IsReminderSet&quot;:false,&quot;Status&quot;:&quot;Completa&quot;,&quot;WhoId&quot;:&quot;003DD00001RnR4hYAF&quot;,&quot;ActivityDate&quot;:&quot;2023-03-13&quot;,&quot;IsVisibleInSelfService&quot;:true,&quot;Priority&quot;:&quot;Normal&quot;,&quot;Paciente__c&quot;:&quot;001DD00001RMsbVYAT&quot;,&quot;Contador_de_llamada_no_exitosa__c&quot;:0,&quot;IsRecurrence&quot;:false,&quot;Subject&quot;:&quot;Alta Paciente Via Web&quot;,&quot;Type&quot;:&quot;Alta paciente via web&quot;,&quot;TaskSubtype&quot;:&quot;Task&quot;,&quot;Llamada_efectiva__c&quot;:false,&quot;Confirmacion_de_paciente__c&quot;:false,&quot;Dias_abierto__c&quot;:266}</sobjectValue>
+            </value>
+        </parameters>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordUpdated</type>
+            <value>
+                <sobjectValue>{&quot;attributes&quot;:{&quot;type&quot;:&quot;Task&quot;},&quot;WhatId&quot;:&quot;001DD00001RMsbVYAT&quot;,&quot;Description&quot;:&quot;Realizar una llamada al paciente para confirmar los datos ingresados y confirmar el pedido del Kit de Inicio. Si el pedido de Kit está confirmado, el operador de PSP, deberá cambiar la tarea de estado de “Abierta” a “Completa”. Si por algún motivo no se puede confirmar la gestión, la tarea se cambiará a estado “Trabajando” y se intentarán nuevos contactos hasta bien se pueda localizar al paciente y se complete el proceso.&quot;,&quot;OwnerId&quot;:&quot;00G1I00000247RQUAY&quot;,&quot;RecordTypeId&quot;:&quot;0121I000001BtZUQA0&quot;,&quot;IsReminderSet&quot;:false,&quot;Status&quot;:&quot;Completa&quot;,&quot;WhoId&quot;:&quot;003DD00001RnR4hYAF&quot;,&quot;ActivityDate&quot;:&quot;2023-03-13&quot;,&quot;IsVisibleInSelfService&quot;:true,&quot;Priority&quot;:&quot;Normal&quot;,&quot;Paciente__c&quot;:&quot;001DD00001RMsbVYAT&quot;,&quot;Contador_de_llamada_no_exitosa__c&quot;:0,&quot;IsRecurrence&quot;:false,&quot;Subject&quot;:&quot;Alta Paciente Via Web&quot;,&quot;Type&quot;:&quot;Alta paciente via web&quot;,&quot;TaskSubtype&quot;:&quot;Task&quot;,&quot;Llamada_efectiva__c&quot;:false,&quot;Confirmacion_de_paciente__c&quot;:false,&quot;Dias_abierto__c&quot;:266}</sobjectValue>
+            </value>
+        </parameters>
+    </testPoints>
+    <testPoints>
+        <assertions>
+            <conditions>
+                <leftValueReference>Seguimiento_dia_10_Alergia</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <elementApiName>Finish</elementApiName>
+    </testPoints>
+</FlowTest>

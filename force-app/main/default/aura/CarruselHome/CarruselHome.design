@@ -1,0 +1,22 @@
+<design:component >
+
+    <design:attribute name="altoMaximo" label="Alto maximo de la imagen en PX Desktop"/>
+    <design:attribute name="altoMinimo" label="Alto minimo de la imagen en PX Desktop"/>
+
+    <design:attribute name="altoMaximoPhone" label="Alto maximo de la imagen en PX Phone"/>
+    <design:attribute name="altoMinimoPhone" label="Alto minimo de la imagen en PX Phone"/>
+
+    <design:attribute name="image1StaticResourceName" label="URL de la primer imagen"/>
+    <design:attribute name="image1MobileStaticResourceName" label="URL de la primer imagen (Mobile)"/>
+	<design:attribute name="image2StaticResourceName" label="URL de la segunda imagen"/>
+	<design:attribute name="image2MobileStaticResourceName" label="URL de la segunda imagen (Mobile)"/>
+	<design:attribute name="image3StaticResourceName" label="URL de la tercer imagen"/>
+	<design:attribute name="image3MobileStaticResourceName" label="URL de la tercer imagen(Mobile)"/>
+	<design:attribute name="image4StaticResourceName" label="URL de la cuarta imagen"/>
+	<design:attribute name="image4MobileStaticResourceName" label="URL de la cuarta imagen (Mobile)"/>
+	<design:attribute name="image5StaticResourceName" label="URL de la quinta imagen"/>
+	<design:attribute name="image5MobileStaticResourceName" label="URL de la quinta imagen (Mobile)"/>
+
+    <design:attribute name="duracion" label="Duración del scroll de las imagenes"/>
+
+</design:component>

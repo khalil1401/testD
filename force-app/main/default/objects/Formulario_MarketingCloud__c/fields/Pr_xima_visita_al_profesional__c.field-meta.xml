@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pr_xima_visita_al_profesional__c</fullName>
+    <description>En caso de continuar con el apoyo nutricional, especificar próxima visita al profesional</description>
+    <externalId>false</externalId>
+    <inlineHelpText>En caso de continuar con el apoyo nutricional, especificar próxima visita al profesional</inlineHelpText>
+    <label>Próxima visita al profesional</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

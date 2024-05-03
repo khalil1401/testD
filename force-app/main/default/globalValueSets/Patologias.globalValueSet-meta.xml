@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Acidemia metilmalonica/propionica</fullName>
+        <default>false</default>
+        <label>Acidemia metilmalonica/propionica</label>
+    </customValue>
+    <customValue>
+        <fullName>Aciduria Arginosucinica</fullName>
+        <default>false</default>
+        <label>Aciduria Arginosucinica</label>
+    </customValue>
+    <customValue>
+        <fullName>Aciduria Glutarica</fullName>
+        <default>false</default>
+        <label>Aciduria Glutarica</label>
+    </customValue>
+    <customValue>
+        <fullName>ACV Hemorragíco (Accidente cerebrovascular)</fullName>
+        <default>false</default>
+        <label>ACV Hemorragíco (Accidente cerebrovascular)</label>
+    </customValue>
+    <customValue>
+        <fullName>ACV Isquemico (Accidente cerebrovascular)</fullName>
+        <default>false</default>
+        <label>ACV Isquemico (Accidente cerebrovascular)</label>
+    </customValue>
+    <customValue>
+        <fullName>Adrenoleucodistrofia</fullName>
+        <default>false</default>
+        <label>Adrenoleucodistrofia</label>
+    </customValue>
+    <customValue>
+        <fullName>Alergia a la Proteina de leche de vaca (APLV)</fullName>
+        <default>false</default>
+        <label>Alergia a la Proteina de leche de vaca (APLV)</label>
+    </customValue>
+    <customValue>
+        <fullName>Alzheirmer</fullName>
+        <default>false</default>
+        <label>Alzheirmer</label>
+    </customValue>
+    <customValue>
+        <fullName>Anorexia</fullName>
+        <default>false</default>
+        <label>Anorexia</label>
+    </customValue>
+    <customValue>
+        <fullName>Asma</fullName>
+        <default>false</default>
+        <label>Asma</label>
+    </customValue>
+    <customValue>
+        <fullName>Bulimia</fullName>
+        <default>false</default>
+        <label>Bulimia</label>
+    </customValue>
+    <customValue>
+        <fullName>Cirrosis Hepatica</fullName>
+        <default>false</default>
+        <label>Cirrosis Hepatica</label>
+    </customValue>
+    <customValue>
+        <fullName>cirugía Aparato genitourinario</fullName>
+        <default>false</default>
+        <label>cirugía Aparato genitourinario</label>
+    </customValue>
+    <customValue>
+        <fullName>Cirugía de cabeza y cuello</fullName>
+        <default>false</default>
+        <label>Cirugía de cabeza y cuello</label>
+    </customValue>
+    <customValue>
+        <fullName>Cirugía Gastrointestinal</fullName>
+        <default>false</default>
+        <label>Cirugía Gastrointestinal</label>
+    </customValue>
+    <customValue>
+        <fullName>Demencia otros tipos</fullName>
+        <default>false</default>
+        <label>Demencia otros tipos</label>
+    </customValue>
+    <customValue>
+        <fullName>Demencia senil</fullName>
+        <default>false</default>
+        <label>Demencia senil</label>
+    </customValue>
+    <customValue>
+        <fullName>Desnutrición</fullName>
+        <default>false</default>
+        <label>Desnutrición</label>
+    </customValue>
+    <customValue>
+        <fullName>Desnutrición Asociada a enfermedad</fullName>
+        <default>false</default>
+        <label>Desnutrición Asociada a enfermedad</label>
+    </customValue>
+    <customValue>
+        <fullName>Deterioro cognitivo crónico</fullName>
+        <default>false</default>
+        <label>Deterioro cognitivo crónico</label>
+    </customValue>
+    <customValue>
+        <fullName>DGG (Deficiencia de Glucosa/Galactosa)</fullName>
+        <default>false</default>
+        <label>DGG (Deficiencia de Glucosa/Galactosa)</label>
+    </customValue>
+    <customValue>
+        <fullName>Diabetes (DBT)</fullName>
+        <default>false</default>
+        <label>Diabetes (DBT)</label>
+    </customValue>
+    <customValue>
+        <fullName>Encefalitis</fullName>
+        <default>false</default>
+        <label>Encefalitis</label>
+    </customValue>
+    <customValue>
+        <fullName>Encefalopatía crónica no evolutiva (ECNE)</fullName>
+        <default>false</default>
+        <label>Encefalopatía crónica no evolutiva (ECNE)</label>
+    </customValue>
+    <customValue>
+        <fullName>Enfermedad obstructiva Crónica (EPOC)</fullName>
+        <default>false</default>
+        <label>Enfermedad obstructiva Crónica (EPOC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Epilepsia Refractaria</fullName>
+        <default>false</default>
+        <label>Epilepsia Refractaria</label>
+    </customValue>
+    <customValue>
+        <fullName>Esclerosis lateral amiotrófica (ELA)</fullName>
+        <default>false</default>
+        <label>Esclerosis lateral amiotrófica (ELA)</label>
+    </customValue>
+    <customValue>
+        <fullName>Esofagitis Eosinofílica</fullName>
+        <default>false</default>
+        <label>Esofagitis Eosinofílica</label>
+    </customValue>
+    <customValue>
+        <fullName>Fenilcetonuria</fullName>
+        <default>false</default>
+        <label>Fenilcetonuria</label>
+    </customValue>
+    <customValue>
+        <fullName>Fibrosis Quistica</fullName>
+        <default>false</default>
+        <label>Fibrosis Quistica</label>
+    </customValue>
+    <customValue>
+        <fullName>Glut 1</fullName>
+        <default>false</default>
+        <label>Glut 1</label>
+    </customValue>
+    <customValue>
+        <fullName>HCU (Homocistinuria)</fullName>
+        <default>false</default>
+        <label>HCU (Homocistinuria)</label>
+    </customValue>
+    <customValue>
+        <fullName>Hiperamonemia</fullName>
+        <default>false</default>
+        <label>Hiperamonemia</label>
+    </customValue>
+    <customValue>
+        <fullName>HiperFeninananemia</fullName>
+        <default>false</default>
+        <label>HiperFeninananemia</label>
+    </customValue>
+    <customValue>
+        <fullName>Hiporexia</fullName>
+        <default>false</default>
+        <label>Hiporexia</label>
+    </customValue>
+    <customValue>
+        <fullName>Insuficiencia cardiaca</fullName>
+        <default>false</default>
+        <label>Insuficiencia cardiaca</label>
+    </customValue>
+    <customValue>
+        <fullName>Insuficiencia renal Aguda</fullName>
+        <default>false</default>
+        <label>Insuficiencia renal Aguda</label>
+    </customValue>
+    <customValue>
+        <fullName>Insuficiencia renal Crónica</fullName>
+        <default>false</default>
+        <label>Insuficiencia renal Crónica</label>
+    </customValue>
+    <customValue>
+        <fullName>IVA (Acidemia Isovalérica)</fullName>
+        <default>false</default>
+        <label>IVA (Acidemia Isovalérica)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jarabe de Arce</fullName>
+        <default>false</default>
+        <label>Jarabe de Arce</label>
+    </customValue>
+    <customValue>
+        <fullName>Meninguitis</fullName>
+        <default>false</default>
+        <label>Meninguitis</label>
+    </customValue>
+    <customValue>
+        <fullName>Neumonia Adquirida de la comunidad</fullName>
+        <default>false</default>
+        <label>Neumonia Adquirida de la comunidad</label>
+    </customValue>
+    <customValue>
+        <fullName>Neumonia Aspirativa</fullName>
+        <default>false</default>
+        <label>Neumonia Aspirativa</label>
+    </customValue>
+    <customValue>
+        <fullName>Neumonia Intrahospitalaria</fullName>
+        <default>false</default>
+        <label>Neumonia Intrahospitalaria</label>
+    </customValue>
+    <customValue>
+        <fullName>Otras enfermedades</fullName>
+        <default>false</default>
+        <label>Otras enfermedades</label>
+    </customValue>
+    <customValue>
+        <fullName>Paralisis Cerebral (PC)</fullName>
+        <default>false</default>
+        <label>Paralisis Cerebral (PC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Parkinson</fullName>
+        <default>false</default>
+        <label>Parkinson</label>
+    </customValue>
+    <customValue>
+        <fullName>Quilotórax</fullName>
+        <default>false</default>
+        <label>Quilotórax</label>
+    </customValue>
+    <customValue>
+        <fullName>Retraso madurativo</fullName>
+        <default>false</default>
+        <label>Retraso madurativo</label>
+    </customValue>
+    <customValue>
+        <fullName>Secuela neurológica quirúrgica.</fullName>
+        <default>false</default>
+        <label>Secuela neurológica quirúrgica.</label>
+    </customValue>
+    <customValue>
+        <fullName>SEIPA (Síndrome de enterocolítis inducida por proteinas alimentarias)</fullName>
+        <default>false</default>
+        <label>SEIPA (Síndrome de enterocolítis inducida por proteinas alimentarias)</label>
+    </customValue>
+    <customValue>
+        <fullName>Síndrome de Angelman</fullName>
+        <default>false</default>
+        <label>Síndrome de Angelman</label>
+    </customValue>
+    <customValue>
+        <fullName>Sindrome de Down</fullName>
+        <default>false</default>
+        <label>Sindrome de Down</label>
+    </customValue>
+    <customValue>
+        <fullName>Sindrome de intestino corto (SIC)</fullName>
+        <default>false</default>
+        <label>Síndrome de intestino corto (SIC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Sindrome de mala absorción</fullName>
+        <default>false</default>
+        <label>Sindrome de mala absorción</label>
+    </customValue>
+    <customValue>
+        <fullName>Síndrome de Smith</fullName>
+        <default>false</default>
+        <label>Síndrome de Smith</label>
+    </customValue>
+    <customValue>
+        <fullName>Síndrome mal absortivo</fullName>
+        <default>false</default>
+        <label>Síndrome mal absortivo</label>
+    </customValue>
+    <customValue>
+        <fullName>Tirosinemia</fullName>
+        <default>false</default>
+        <label>Tirosinemia</label>
+    </customValue>
+    <customValue>
+        <fullName>Trastornos deglutorios</fullName>
+        <default>false</default>
+        <label>Trastornos deglutorios</label>
+    </customValue>
+    <customValue>
+        <fullName>Traumatismo de craneo secuelar  (TEC)</fullName>
+        <default>false</default>
+        <label>Traumatismo de craneo secuelar  (TEC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tumor cerebral</fullName>
+        <default>false</default>
+        <label>Tumor cerebral</label>
+    </customValue>
+    <customValue>
+        <fullName>tumor de cabeza y cuello</fullName>
+        <default>false</default>
+        <label>tumor de cabeza y cuello</label>
+    </customValue>
+    <customValue>
+        <fullName>Tumor del Aparato digestivo</fullName>
+        <default>false</default>
+        <label>Tumor del Aparato digestivo</label>
+    </customValue>
+    <customValue>
+        <fullName>Tumor del Aparato Respiratorio</fullName>
+        <default>false</default>
+        <label>Tumor del Aparato Respiratorio</label>
+    </customValue>
+    <customValue>
+        <fullName>tumor Ginecologico</fullName>
+        <default>false</default>
+        <label>tumor Ginecologico</label>
+    </customValue>
+    <customValue>
+        <fullName>Tumor Osteomuscular</fullName>
+        <default>false</default>
+        <label>Tumor Osteomuscular</label>
+    </customValue>
+    <customValue>
+        <fullName>tumor urológico</fullName>
+        <default>false</default>
+        <label>tumor urológico</label>
+    </customValue>
+    <customValue>
+        <fullName>tumor vias urinarias</fullName>
+        <default>false</default>
+        <label>tumor vias urinarias</label>
+    </customValue>
+    <customValue>
+        <fullName>UCD (Trastorno Ciclo de la Urea)</fullName>
+        <default>false</default>
+        <label>UCD (Trastorno Ciclo de la Urea)</label>
+    </customValue>
+    <customValue>
+        <fullName>Falla de Crecimiento</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Falla de Crecimiento</label>
+    </customValue>
+    <customValue>
+        <fullName>Déficit de piruvato deshidrogenasa</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Déficit de piruvato deshidrogenasa</label>
+    </customValue>
+    <customValue>
+        <fullName>TEA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>TEA</label>
+    </customValue>
+    <customValue>
+        <fullName>Esofagitis Eosinofilica</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Esofagitis Eosinofilica</label>
+    </customValue>
+    <customValue>
+        <fullName>Hiperanomemia</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Hiperanomemia</label>
+    </customValue>
+    <customValue>
+        <fullName>Demencia</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Demencia</label>
+    </customValue>
+    <customValue>
+        <fullName>ACV</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ACV</label>
+    </customValue>
+    <customValue>
+        <fullName>Estado Vegetativo permanente</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Estado Vegetativo permanente</label>
+    </customValue>
+    <customValue>
+        <fullName>Oncología</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Oncología</label>
+    </customValue>
+    <customValue>
+        <fullName>DNT</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>DNT</label>
+    </customValue>
+    <customValue>
+        <fullName>Adulto mayor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adulto mayor</label>
+    </customValue>
+    <customValue>
+        <fullName>UPP</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>UPP</label>
+    </customValue>
+    <customValue>
+        <fullName>Post Quirúrgico</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Post Quirúrgico</label>
+    </customValue>
+    <customValue>
+        <fullName>Síndrome de intestino corto</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Síndrome de intestino corto</label>
+    </customValue>
+    <customValue>
+        <fullName>APLV</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>APLV</label>
+    </customValue>
+    <customValue>
+        <fullName>TMPA (Trastorno del metabolismo de Proteínas y Aminoácidos)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>TMPA (Trastorno del metabolismo de Proteínas y Aminoácidos)</label>
+    </customValue>
+    <masterLabel>Patologías</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalyticSnapshot xmlns="http://soap.sforce.com/2006/04/metadata">
+    <mappings>
+        <sourceField>CUST_NAME</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Snapshot_Tratamientos__c.Name</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>ACCOUNT.NAME</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Snapshot_Tratamientos__c.Paciente__c</targetField>
+    </mappings>
+    <mappings>
+        <sourceField>Tratamiento__c.Patologia__c</sourceField>
+        <sourceType>tabular</sourceType>
+        <targetField>Snapshot_Tratamientos__c.Patologia__c</targetField>
+    </mappings>
+    <name>Snapshot Tratamientos</name>
+    <runningUser>nicolas.feniger@danone.com</runningUser>
+    <sourceReport>Service_Dashboards_Reports/Cuentas_con_tratamientos_activos</sourceReport>
+    <targetObject>Snapshot_Tratamientos__c</targetObject>
+</AnalyticSnapshot>

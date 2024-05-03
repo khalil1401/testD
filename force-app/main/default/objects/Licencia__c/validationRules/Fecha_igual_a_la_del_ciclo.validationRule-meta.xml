@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_igual_a_la_del_ciclo</fullName>
+    <active>true</active>
+    <description>No se puede crear una licencia si el mes de la Fecha de Inicio y el mes de la Fecha de Fin (de la Licencia) no coincide con el mes de la fecha de inicio y fecha de fin del Ciclo asociado.</description>
+    <errorConditionFormula>AND(ISNEW(),
+			OR( 
+   MONTH(Fecha_de_inicio__c)&lt;&gt; MONTH(Ciclo__r.Fecha_de_inicio__c), 
+   MONTH(Fecha_de_fin__c)&lt;&gt; MONTH(Ciclo__r.Fecha_de_fin__c)
+   )
+		)</errorConditionFormula>
+    <errorMessage>El mes de la licencia debe coincidir con el mes del ciclo</errorMessage>
+</ValidationRule>

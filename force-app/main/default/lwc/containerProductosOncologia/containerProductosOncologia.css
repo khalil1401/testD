@@ -1,0 +1,167 @@
+.title-cpo-red{
+    font-family: MontserratSemiBold;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    color: #D15365;
+}
+
+.text-cpo-red{
+    font-family: MontserratRegular;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+    color: #D15365;
+}
+
+.title-cpo-green{
+    font-family: MontserratSemiBold;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    color: #3897BF;
+}
+
+.text-cpo-green{
+    font-family: MontserratRegular;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+    color: #3897BF;
+}
+
+.title-cpo-orange{
+    font-family: MontserratSemiBold;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    color: #D68029;
+}
+
+.text-cpo-orange{
+    font-family: MontserratRegular;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+    color: #D68029;
+}
+
+.text-cpo-blue{
+    font-family: MontserratRegular;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+    color: #293895;
+}
+
+.icon-img{
+    width: 65%;
+}
+
+.nt-img{
+    width: 85%;
+}
+
+.product-img{
+    width: 90%;
+}
+
+.frutas-l-img{
+    width: 65%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    float: left;
+}
+
+.frutas-r-img{
+    width: 65%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    float: right;
+}
+
+@media (max-width: 1390px) {
+    .nt-img{
+        width: 100%;
+    }    
+}
+
+@media (max-width: 600px) {
+    .icon-img{
+        width: 30%;
+        margin-top: 0px;
+    }    
+
+    .text-cpo-blue{
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    .nt-img{
+        margin-top: 5px;
+        width: 75%;
+    }
+
+    .title-cpo-red{
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    
+    .text-cpo-red{
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    
+    .title-cpo-green{
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    
+    .text-cpo-green{
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    
+    .title-cpo-orange{
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    
+    .text-cpo-orange{
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    
+    .product-img{
+        width: 90%;
+    } 
+
+    .texts-cpo{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .frutas-l-img{
+        display: none;
+    }
+
+    .frutas-r-img{
+        display: none;
+    }
+}

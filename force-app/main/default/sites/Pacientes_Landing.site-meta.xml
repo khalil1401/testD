@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowGuestPaymentsApi>false</allowGuestPaymentsApi>
+    <allowHomePage>false</allowHomePage>
+    <allowStandardAnswersPages>false</allowStandardAnswersPages>
+    <allowStandardIdeasPages>false</allowStandardIdeasPages>
+    <allowStandardLookups>false</allowStandardLookups>
+    <allowStandardPortalPages>true</allowStandardPortalPages>
+    <allowStandardSearch>false</allowStandardSearch>
+    <authorizationRequiredPage>CommunitiesLogin</authorizationRequiredPage>
+    <bandwidthExceededPage>BandwidthExceeded</bandwidthExceededPage>
+    <browserXssProtection>true</browserXssProtection>
+    <cachePublicVisualforcePagesInProxyServers>true</cachePublicVisualforcePagesInProxyServers>
+    <changePasswordPage>ChangePasswordPortalPacientes</changePasswordPage>
+    <clickjackProtectionLevel>SameOriginOnly</clickjackProtectionLevel>
+    <contentSniffingProtection>true</contentSniffingProtection>
+    <enableAuraRequests>true</enableAuraRequests>
+    <favoriteIcon>faviconNutriciaSiempreJuntos</favoriteIcon>
+    <fileNotFoundPage>FileNotFound</fileNotFoundPage>
+    <genericErrorPage>Exception</genericErrorPage>
+    <inMaintenancePage>InMaintenance</inMaintenancePage>
+    <indexPage>CommunitiesLanding</indexPage>
+    <masterLabel>Pacientes Landing</masterLabel>
+    <redirectToCustomDomain>false</redirectToCustomDomain>
+    <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
+    <selfRegPage>CommunitiesSelfReg</selfRegPage>
+    <serverIsDown>SNA_Pacientes_Landing_C_sf_default_cdn_Zm1Bj</serverIsDown>
+    <siteAdmin>danone@xappia.com</siteAdmin>
+    <siteGuestRecordDefaultOwner>danone@xappia.com</siteGuestRecordDefaultOwner>
+    <siteType>ChatterNetwork</siteType>
+    <subdomain>danone</subdomain>
+    <urlPathPrefix>pacienteslanding</urlPathPrefix>
+</CustomSite>

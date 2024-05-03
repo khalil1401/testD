@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>En_casos_de_s_ntomas_not_el_s_ntoma_d__c</fullName>
+    <externalId>false</externalId>
+    <label>En casos de síntomas, ¿notó el síntoma d</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

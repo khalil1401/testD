@@ -1,0 +1,430 @@
+<template>
+    <div class="slds-align_absolute-center div-form-perfil-aviso-cobertura" style="position: relative;">
+        <div class="form-datos">
+            <template if:true={consentimiento}>
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                    class="icon-back" data-step="seleccionarfechaback" onclick={back}>
+                <div class="card-aviso-cobertura">
+                    <div class="slds-grid slds-wrap card-header">
+                        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/ALERTA_NO_COBERTURA/Paso1.png"
+                                class="img-step">
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap card-body slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-1">
+                            <div class="slds-p-around_medium">
+                                <div class="slds-align_absolute-center"> 
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/ALERTA_NO_COBERTURA/Calendar.png">
+                                </div>
+                                <div class="slds-m-left_large slds-m-right_large">
+                                    <p class="card-item-text slds-text-align_center">
+                                        Indicá la fecha en que presentaste los documentos para tu cobertura médica
+                                    </p>
+                                    <div class="slds-m-top_medium">
+                                        <lightning-input
+                                            class="validate" 
+                                            type="date" 
+                                            placeholder="Seleccionar fecha..."
+                                            onchange={getDate}
+                                            value={fechastring}
+                                            max={today}>
+                                        </lightning-input>
+                                    </div>
+                                </div>
+                                <div class="hr-line slds-m-top_large slds-align_absolute-center"></div>
+                                <div class="slds-grid slds-wrap slds-m-top_large">
+                                    <div class="slds-col slds-size_6-of-12 slds-p-right_xx-small">
+                                        <button 
+                                            class="back-button"
+                                            style="width: 100%;"
+                                            data-id="consejos"
+                                            onclick={next}>
+                                            Aún no lo hice
+                                        </button>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12 slds-p-left_xx-small">
+                                        <button 
+                                            class="next-button"
+                                            data-id="validarFecha"
+                                            onclick={next}>
+                                            Siguiente
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section role="dialog" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-align_absolute-center">
+                    <div class="slds-modal__container slds-align_absolute-center">
+                        <div class="slds-modal__content slds-p-around_small">
+                            <div class="slds-m-top_large slds-m-bottom_large slds-text-align_center">
+                                <p class="card-item-text slds-m-left_small slds-m-right_small"> 
+                                    Para ofrecerte la mejor asistencia posible, vamos a hacerte algunas preguntas.
+                                </p>
+                                <div class="hr-line slds-m-top_large slds-align_absolute-center"></div>
+                                <button 
+                                    class="next-button slds-m-top_large"
+                                    data-id="consentimiento"
+                                    onclick={next}>
+                                    Entendido
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+            </template>
+            <template if:true={seleccionarFecha}>
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                    class="icon-back" data-step="seleccionarfechaback" onclick={back}>
+                <div class="card-aviso-cobertura">
+                    <div class="slds-grid slds-wrap card-header">
+                        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/ALERTA_NO_COBERTURA/Paso1.png"
+                                class="img-step">
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap card-body slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-1">
+                            <div class="slds-p-around_medium">
+                                <div class="slds-align_absolute-center"> 
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/ALERTA_NO_COBERTURA/Calendar.png">
+                                </div>
+                                <div class="slds-m-left_large slds-m-right_large">
+                                    <p class="card-item-text slds-text-align_center">
+                                        Indicá la fecha en que presentaste los documentos para tu cobertura médica
+                                    </p>
+                                    <div class="slds-m-top_medium">
+                                        <lightning-input
+                                            class="validate" 
+                                            type="date" 
+                                            placeholder="Seleccionar fecha..."
+                                            onchange={getDate}
+                                            value={fechastring}
+                                            max={today}>
+                                        </lightning-input>
+                                    </div>
+                                </div>
+                                <div class="hr-line slds-m-top_large slds-align_absolute-center"></div>
+                                <div class="slds-grid slds-wrap slds-m-top_large">
+                                    <div class="slds-col slds-size_6-of-12 slds-p-right_xx-small">
+                                        <button 
+                                            class="back-button"
+                                            style="width: 100%;"
+                                            data-id="consejos"
+                                            onclick={next}>
+                                            Aún no lo hice
+                                        </button>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12 slds-p-left_xx-small">
+                                        <button 
+                                            class="next-button"
+                                            data-id="validarFecha"
+                                            onclick={next}>
+                                            Siguiente
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <template if:true={primerTramite}>
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                    class="icon-back" data-step="primertramiteback" onclick={back}>
+                <div class="card-aviso-cobertura modal-spinner">
+                    <div class="slds-grid slds-wrap card-header">
+                        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/ALERTA_NO_COBERTURA/Paso2.png"
+                                class="img-step">
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap card-body slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-1">
+                            <div class="slds-p-around_medium slds-m-top_medium slds-m-bottom_small">
+                                <template if:true={showSpinner}>
+                                    <lightning-spinner variant="brand" alternative-text="Loading" size="medium"></lightning-spinner>
+                                </template>
+                                <div class="slds-align_absolute-center"> 
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/ALERTA_NO_COBERTURA/Calendar.png">
+                                </div>
+                                <div class="slds-text-align_center slds-m-left_x-large slds-m-right_x-large">
+                                    <p class="card-item-text">
+                                        ¿Es la primera vez que inicias el trámite de cobertura médica para este tratamiento?
+                                    </p>
+                                </div>
+                                <div class="hr-line slds-m-top_large slds-align_absolute-center"></div>
+                                <div class="slds-grid slds-wrap slds-m-top_large slds-m-bottom_small">
+                                    <div class="slds-col slds-size_6-of-12 slds-p-right_xx-small">
+                                        <button 
+                                            class="back-button"
+                                            data-id="true"
+                                            onclick={setPrimerTramite}>
+                                            Sí
+                                        </button>
+                                    </div>
+                                    <div class="slds-col slds-size_6-of-12 slds-p-left_xx-small">
+                                        <button 
+                                            class="next-button"
+                                            data-id="false"
+                                            onclick={setPrimerTramite}>
+                                            No
+                                        </button>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <template if:true={consejos}>
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                    class="icon-back" data-step="consejosback" onclick={back}>
+                <div class="card-aviso-cobertura card-without-header modal-spinner slds-p-around_medium slds-align_absolute-center">
+                    <div class="slds-m-top_medium slds-m-bottom_small">
+                        <template if:true={showSpinner}>
+                            <lightning-spinner variant="brand" alternative-text="Loading" size="medium"></lightning-spinner>
+                        </template>
+                        <p class="card-item-title slds-text-align_center">
+                            Consejos útiles para iniciar tu trámite
+                        </p>
+                        <div class="hr-line slds-m-top_small slds-align_absolute-center"></div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-12 slds-m-top_medium slds-p-around_xx-small">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Tilde-Fondo.png">
+                            </div>
+                            <div class="slds-col slds-size_11-of-12 slds-m-top_medium slds-p-around_xx-small">
+                                <p class="card-item-text"> 
+                                    Validá el método de presentación, dependiendo del prestador puede ser online o presencial.
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-12 slds-m-top_medium slds-p-around_xx-small">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Tilde-Fondo.png">
+                            </div>
+                            <div class="slds-col slds-size_11-of-12 slds-m-top_medium slds-p-around_xx-small">
+                                <p class="card-item-text"> 
+                                    Consultá con tu cobertura médica el tiempo de revisión del trámite. 
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-12 slds-m-top_medium slds-p-around_xx-small">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Tilde-Fondo.png">
+                            </div>
+                            <div class="slds-col slds-size_11-of-12 slds-m-top_medium slds-p-around_xx-small">
+                                <p class="card-item-text"> 
+                                    Asegurate de tener toda la documentación que requiera el trámite.
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-12 slds-m-top_medium slds-p-around_xx-small">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Tilde-Fondo.png">
+                            </div>
+                            <div class="slds-col slds-size_11-of-12 slds-m-top_medium slds-p-around_xx-small">
+                                <p class="card-item-text"> 
+                                    Guardá una copia de  la documentación presentada y del número de trámite.
+                                </p>
+                            </div>
+                        </div>
+                        <button 
+                            class="next-button slds-m-top_large"
+                            onclick={setSinFecha}>
+                            Entendido
+                        </button>
+                    </div>
+                </div>
+            </template>
+            <template if:true={estados}>
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                    class="icon-back" data-step="estadosback" onclick={back}>
+                <div class="card-aviso-cobertura" style="position: relative;">
+                    <div class="slds-grid slds-wrap card-header">
+                        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/ALERTA_NO_COBERTURA/Paso3.png"
+                                class="img-step">
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap card-body slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-1">                            
+                            <div class="slds-m-top_medium slds-m-bottom_medium">
+                                <p class="card-item-text slds-text-align_center slds-m-top_large slds-m-left_medium slds-m-right_medium"> 
+                                    ¿En qué estado se encuentra tu trámite de cobertura médica?
+                                </p>
+                                <div class="hr-line slds-m-top_large slds-align_absolute-center"></div>
+                                <div class="slds-text-align_center">
+                                    <button 
+                                        class="estado-button slds-m-top_large"
+                                        data-estado="parcialmenteaprobado"
+                                        data-title="Parcialmente aprobado"
+                                        onclick={openModal}>
+                                        Parcialmente aprobado
+                                    </button>
+                                    <button 
+                                        class="estado-button slds-m-top_small"
+                                        data-estado="rechazado"
+                                        data-title="Rechazado"
+                                        onclick={openModal}>
+                                        Rechazado
+                                    </button>
+                                    <button 
+                                        class="estado-button slds-m-top_small"
+                                        data-estado="sinrespuesta"
+                                        data-title="Sin respuesta"
+                                        onclick={checkSinRespuesta}>
+                                        Sin respuesta
+                                    </button>
+                                </div>
+                                <div class="mobile-aviso-cobertura">
+                                    <template if:true={spanHelp}>
+                                        <div class="container-span-icon-help slds-p-around_medium">
+                                            <p class="span-icon-help">
+                                                Parcialmente aprobado: Tu cobertura médica aprobó una parte del tratamiento, pero no el total.
+                                            </p>
+                                        </div>
+                                        <div class="triangulo-2"></div>
+                                    </template>
+                                    <div class="slds-clearfix">
+                                        <div class="slds-float_right">
+                                            <img 
+                                                class="icon-faq slds-m-top_large"
+                                                onclick={showSpanHelp}
+                                                src={iconFAQ}/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desktop-aviso-cobertura">
+                                    <div class="slds-grid slds-wrap slds-m-top_x-large">
+                                        <div class="slds-col slds-size_2-of-12 slds-align_absolute-center">
+                                            <img src={iconFAQ} style="width: 40px;"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12">
+                                            <p class="card-item-text">
+                                                <span style="font-family: BariolBold;">Parcialmente aprobado:</span> Tu cobertura médica aprobó una parte del tratamiento, pero no el total.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <template if:true={modal}>
+                <section role="dialog" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-align_absolute-center">
+                    <div class="slds-modal__container slds-align_absolute-center">
+                        <div class="slds-modal__content modal-spinner slds-p-around_small">
+                            <template if:true={showSpinner}>
+                                <lightning-spinner variant="brand" alternative-text="Loading" size="medium"></lightning-spinner>
+                            </template>
+                            <div class="slds-m-top_medium slds-text-align_center">
+                                <p class="card-item-text">
+                                    Has seleccionado
+                                </p>
+                                <p class="card-item-text" style="font-family: BariolBold;">
+                                    {textModal}
+                                </p>
+                                <p class="card-item-text">
+                                    ¿Deseas continuar?
+                                </p>
+                            </div>
+                            <div class="slds-grid slds-wrap slds-m-top_large slds-m-bottom_small">
+                                <div class="slds-col slds-size_6-of-12 slds-p-right_xx-small">
+                                    <button 
+                                        class="back-button"
+                                        onclick={backModal}>
+                                        Volver
+                                    </button>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12 slds-p-left_xx-small">
+                                    <button 
+                                        class="next-button"
+                                        onclick={changeStatus}>
+                                        Continuar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+            </template>
+            <template if:true={sinrespuesta}>
+                <div class="card-aviso-cobertura card-without-header slds-p-around_medium slds-m-top_large">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                        <div class="slds-col slds-size_1-of-1">
+                            <div class="slds-m-top_small slds-m-bottom_small">
+                                <div class="slds-align_absolute-center">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/ALERTA_NO_COBERTURA/Calendar.png">
+                                </div>
+                                <p class="card-item-text slds-text-align_center slds-m-left_large slds-m-right_large" style="font-family: BariolBold;">
+                                    El tiempo de aprobación de la cobertura puede variar según cada obra social, te sugerimos consultarlo con tu prestador. 
+                                </p>
+                                <p class="card-item-text slds-text-align_center slds-m-top_medium slds-m-left_large slds-m-right_large">
+                                    Si aún necesitas ayuda, podés contactar a nuestro Programa de Soporte al Paciente.
+                                </p>
+                                <div class="slds-align_absolute-center">
+                                    <div class="slds-grid slds-wrap slds-m-top_large" style="width: 185px;">
+                                        <div class="slds-col slds-size_2-of-12">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/ALERTA_NO_COBERTURA/Telefono.png">
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-text-align_center">
+                                            <a href="tel:0800-122-5544">
+                                                <span class="card-item-text slds-m-left_x-small">
+                                                    0800-122-5544
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="slds-col slds-size_2-of-12">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/ALERTA_NO_COBERTURA/Whatsapp.png">
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-text-align_center">
+                                            <a href="https://api.whatsapp.com/send?phone=5491159706647">
+                                                <span class="card-item-text slds-m-left_x-small">
+                                                    (+54)9 115970-6647
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button 
+                                    class="next-button slds-m-top_large"
+                                    onclick={goToPerfilManager}>
+                                    Entendido
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <template if:true={gestionIniciada}>
+                <div class="card-aviso-cobertura card-without-header slds-p-around_medium slds-m-top_large" style="height: auto;">
+                    <div class="slds-grid slds-wrap card-header">
+                        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/ALERTA_NO_COBERTURA/Paso4.png"
+                                class="img-step">
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-p-around_large">
+                            <p class="card-item-title slds-text-align_center slds-m-top_x-small">
+                                Hemos iniciado tu gestión
+                            </p>
+                            <p class="card-item-text slds-text-align_center slds-m-top_large"> 
+                                Nuestro Programa de Soporte al Paciente te contactará dentro de las próximas 24 hs hábiles.
+                            </p>
+                            <p class="card-item-text slds-text-align_center slds-m-top_x-small"> 
+                                Te pedimos tener a mano el número de trámite de tu cobertura médica para simplificar la gestión.
+                            </p>
+                            <div class="hr-line slds-m-top_large slds-align_absolute-center"></div>
+                            <button 
+                                class="next-button slds-m-top_large"
+                                onclick={goToPerfilManager}>
+                                Entendido
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

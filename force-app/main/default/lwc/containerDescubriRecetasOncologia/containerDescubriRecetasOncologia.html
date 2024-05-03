@@ -1,0 +1,61 @@
+<template>
+    <div class="slds-grid">
+        <div class="slds-col slds-large-size_2-of-12">
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12">
+            <p class="titulosOncologia">
+                Encontrá la receta que buscabas
+            </p>
+            <hr class="linea">
+        </div>
+        <div class="slds-col slds-large-size_2-of-12">
+        </div>
+    </div>
+    <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="background-color: #ebebeb;">
+        <div class="slds-col slds-large-size_2-of-12">
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12 containerDescubriRecetas">
+            <div class="containerCardsRecetasDesktop">
+                <div class="slds-grid slds-wrap slds-align_absolute-center">
+                    <template if:true={recetas}>
+                        <template for:each={recetas} for:item="receta">
+                            <div key={receta.Title} class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                                <c-card-receta tipo-receta={receta.Tipo_de_receta__c}
+                                                titulo-receta={receta.Title}
+                                                imagen-receta={receta.Imagen__c}
+                                                descubri-receta=true></c-card-receta>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+            </div>
+            <div class="containerCardsRecetasMobile">
+                <div class="slds-grid slds-wrap slds-align_absolute-center">
+                    <template if:true={recetasMobile}>
+                        <template for:each={recetasMobile} for:item="receta">
+                            <div key={receta.Title} class="slds-col slds-size_6-of-12">
+                                <c-card-receta tipo-receta={receta.Tipo_de_receta__c}
+                                                titulo-receta={receta.Title}
+                                                imagen-receta={receta.Imagen__c}
+                                                descubri-receta=true></c-card-receta>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-large-size_2-of-12">
+        </div>
+    </div>
+    <div class="slds-grid" style="background-color: #ebebeb;">
+        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-1 slds-align_absolute-center"
+            style="margin-top: 4%;">
+            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-m-left_xx-large slds-m-right_xx-large slds-m-bottom_x-large slds-text-align_center">
+                <span class="botonVerTodasLasRecetas"
+                    onclick={redireccionarRecetas}>
+                    VER TODAS LAS RECETAS
+                </span>
+            </div>
+        </div>
+    </div>
+</template>

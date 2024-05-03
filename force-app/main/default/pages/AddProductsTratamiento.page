@@ -1,0 +1,82 @@
+<apex:page docType="html-5.0" standardController="Tratamiento__c" extensions="AddProductsTratamientoController">
+	<apex:includeScript value="{!$Resource.jQuery1123}"/>
+
+	<script type="text/javascript">
+		$j = jQuery.noConflict();
+		$j(document).ready(function() {
+			$j("[id$='inputCriteria']").on("keydown", noenter);
+		});
+		function noenter(e) {
+			if(window.event) {
+				key = window.event.keyCode;
+			} else{
+				key = e.which;
+			}
+			if(key == 13) {
+				$j("[id$='searchbtn']").click();
+				return false;
+			} else{
+				return true;
+			}
+		}
+	</script>
+	<apex:form id="searchForm">
+		<apex:pageBlock id="block" title="Agregar productos">
+			<apex:pageMessages id="error"></apex:pageMessages>
+			<apex:pageBlockButtons id="buttons">
+				<apex:commandButton action="{!addProducts}" value="Agregar productos" reRender="error"/>
+				<apex:commandButton action="{!nexPage}" value="Atrás"/>
+			</apex:pageBlockButtons>
+			<apex:inputText value="{!criteria}" id="inputCriteria"/>
+			<apex:commandButton action="{!findProducts}" value="Buscar" id="searchbtn" reRender="blockSection, error"/>
+			<br/>
+			<br/>
+			<apex:pageBlockSection columns="1" id="blockSection">
+				<span style="font-weight: bold; align-content: center; margin-top: 10px; margin-left: 10px;">
+						{!total} registros encontrados.
+				</span>
+				<span style="font-weight: bold; align-content: center; margin-top: 10px; margin-left: 30px;">
+						{!selected} registros seleccionados.
+				</span>
+				<apex:pageBlockTable rendered="{!thereAreRecords}" value="{!actualPage}" var="product" id="tableProducts">
+					<apex:column >
+						<apex:facet name="header">
+							<apex:inputcheckbox value="{!selectAll}">
+								<apex:actionsupport event="onchange" action="{!doSelectAll}" onsubmit="this.disabled = true;"
+													oncomplete="this.disabled = false;" rerender="blockSection" />
+							</apex:inputcheckbox>
+						</apex:facet>
+						<apex:inputCheckbox value="{!product.isSelected}" id="inputId">
+							<apex:actionsupport event="onchange" action="{!countSelected}" onsubmit="this.disabled = true;"
+													oncomplete="this.disabled = false;" rerender="blockSection" />
+						</apex:inputCheckbox>
+					</apex:column>
+					<apex:column value="{!product.product.name}"/>
+					<apex:column value="{!product.product.description}"/>
+					<apex:column width="10px" headerValue="Cantidad">
+						<apex:input type="number" value="{!product.quantity}" html-min="0" html-max="9000"/>
+					</apex:column>
+				</apex:pageBlockTable>
+				<br/>
+				<apex:panelGrid rendered="{!thereAreRecords}" columns="8" id="buttons">
+					<apex:commandButton reRender="tableProducts, error, buttons" disabled="{!!hasPrevious}" action="{!firstPage}" value="<<"/>
+					<apex:commandButton reRender="tableProducts, error, buttons" disabled="{!!hasPrevious}" action="{!previous}" value="<"/>
+					<apex:commandButton reRender="tableProducts, error, buttons" disabled="{!!hasNext}" action="{!next}" value=">"/>
+					<apex:commandButton reRender="tableProducts, error, buttons" disabled="{!!hasNext}" action="{!lastPage}" value=">>"/>
+
+					<span style="font-weight: bold; align-content: center; margin-top: 10px; margin-left: 10px; margin-right: 150px; ">
+						Página {!actualPageNumber} de {!numPages}
+					</span>
+
+					<span style="font-weight: bold; align-content: center; margin-top: 10px; margin-left: 50px;">
+						Cantidad de registros mostrados
+						<apex:selectList value="{!pageSizeStr}" size="1">
+							<apex:actionSupport event="onchange" action="{!changePageSize}" reRender="blockSection, error"/>
+							<apex:selectOptions value="{!items}"/>
+						</apex:selectList>
+					</span>
+				</apex:panelGrid>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+   </apex:form>
+</apex:page>

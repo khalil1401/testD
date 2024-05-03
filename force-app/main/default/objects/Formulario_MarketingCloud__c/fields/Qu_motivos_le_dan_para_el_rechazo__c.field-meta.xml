@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qu_motivos_le_dan_para_el_rechazo__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Si la respuesta a &quot;La OS le cubre la formula?&quot; fue &quot;NO&quot;, contestar esta pregunta</inlineHelpText>
+    <label>¿Qué motivos le dan para el rechazo?</label>
+    <length>40</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

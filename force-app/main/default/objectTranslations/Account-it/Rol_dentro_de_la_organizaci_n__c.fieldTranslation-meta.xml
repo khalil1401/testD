@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Rol_dentro_de_la_organizaci_n__c</name>
+    <picklistValues>
+        <masterLabel>Administrativo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Auditor</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Compras</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dias_de_tratamiento_cubiertos_con_la_MM__c</fullName>
+    <externalId>false</externalId>
+    <label>Dias de tratamiento cubiertos con la MM</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 Dia</fullName>
+                <default>false</default>
+                <label>1 Dia</label>
+            </value>
+            <value>
+                <fullName>2 Dias</fullName>
+                <default>false</default>
+                <label>2 Dias</label>
+            </value>
+            <value>
+                <fullName>3 Dias</fullName>
+                <default>false</default>
+                <label>3 Dias</label>
+            </value>
+            <value>
+                <fullName>4 Dias</fullName>
+                <default>false</default>
+                <label>4 Dias</label>
+            </value>
+            <value>
+                <fullName>5 Dias</fullName>
+                <default>false</default>
+                <label>5 Dias</label>
+            </value>
+            <value>
+                <fullName>7 Dias</fullName>
+                <default>false</default>
+                <label>7 Dias</label>
+            </value>
+            <value>
+                <fullName>10 Dias</fullName>
+                <default>false</default>
+                <label>10 Dias</label>
+            </value>
+            <value>
+                <fullName>14 Dias</fullName>
+                <default>false</default>
+                <label>14 Dias</label>
+            </value>
+            <value>
+                <fullName>+ 14 Dias</fullName>
+                <default>false</default>
+                <label>+ 14 Dias</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

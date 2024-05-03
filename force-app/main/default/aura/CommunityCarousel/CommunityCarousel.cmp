@@ -1,0 +1,48 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+	<aura:attribute name="scrollDuration" type="Integer"/>	
+    <aura:attribute name="images" type="List"/>
+    
+	<aura:attribute name="imageName1" type="String"/>
+	<aura:attribute name="imagePath1" type="String" default=""/>
+	<aura:attribute name="imageSrc1" type="String"/>	
+
+	<aura:attribute name="imageName2" type="String"/>
+	<aura:attribute name="imagePath2" type="String" default=""/>
+	<aura:attribute name="redirectPath2" type="String"/>
+	<aura:attribute name="imageSrc2" type="String"/>
+
+	<aura:attribute name="imageName3" type="String"/>
+	<aura:attribute name="imagePath3" type="String" default=""/>
+	<aura:attribute name="redirectPath3" type="String"/>
+	<aura:attribute name="imageSrc3" type="String"/>
+    
+    <aura:attribute name="imageName4" type="String"/>
+	<aura:attribute name="imagePath4" type="String" default=""/>
+	<aura:attribute name="redirectPath4" type="String"/>
+	<aura:attribute name="imageSrc4" type="String"/>
+    
+    <aura:attribute name="imageName5" type="String"/>
+	<aura:attribute name="imagePath5" type="String" default=""/>
+	<aura:attribute name="redirectPath5" type="String"/>
+	<aura:attribute name="imageSrc5" type="String"/>
+	
+	<aura:attribute name="componentHeight" type="String"/>
+	<aura:attribute name="componentMobileHeight" type="String"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div class="slds-col slds-size_1-of-1" 
+         style="{!join(';',
+         	'height: ' + if($Browser.isPhone, v.componentMobileHeight, v.componentHeight),
+            'min-height: ' + if($Browser.isPhone, v.componentMobileHeight, v.componentHeight)
+  	)}">
+        <lightning:carousel scrollDuration="{!v.scrollDuration}"
+                            disableAutoRefresh="false" 
+                            disableAutoScroll="false">
+            <aura:iteration items="{!v.images}" var="image">
+                <lightning:carouselImage src="{!image.src}" href ="{!image.redirectPath}"/>
+            </aura:iteration>
+        </lightning:carousel>
+    </div>
+
+</aura:component>

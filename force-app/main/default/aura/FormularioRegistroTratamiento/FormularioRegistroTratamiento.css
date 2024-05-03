@@ -1,0 +1,58 @@
+.THIS h2{
+    font-family: MontserratSemiBold;
+    font-size: 1.7em;
+}
+
+.THIS label{
+    font-family: MontserratSemiBold;
+}
+
+.THIS input{
+    font-family: MontserratSemiBold;
+}
+
+.THIS .labelEditForm {
+    font-size: 0.95em;
+    color: #BABABA;
+}
+
+.THIS .labelFaltaImagen {
+    font-size: 0.95em;
+    margin-top: 2px;
+    color: #EA001E;
+}
+
+.THIS .slds-file-selector__dropzone .slds-file-selector__button{
+    font-size: 0;
+}
+
+.THIS .slds-file-selector__dropzone .slds-file-selector__button:after{
+    border: none;
+    content: 'Cargar cupón';
+    font-size: .8125rem;
+    color: white;
+}
+
+.THIS .slds-file-selector__dropzone{
+    border: none;
+}
+
+.THIS .slds-file-selector__button{
+    background-color: #243D91;
+}
+
+.THIS .slds-file-selector__button:hover{
+    cursor: pointer;
+}
+
+.THIS .slds-button__icon{
+    color: white;
+}
+
+.THIS .slds-file-selector__text{
+    display: none;
+}
+
+.THIS .combobox-patologias .slds-listbox{
+    max-height: 30vh;
+}

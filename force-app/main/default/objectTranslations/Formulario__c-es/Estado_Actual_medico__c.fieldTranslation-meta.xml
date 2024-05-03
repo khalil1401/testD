@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Estado_Actual_medico__c</name>
+    <picklistValues>
+        <masterLabel>Buen estado general</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mal estado general</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regular estado general</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,4 @@
+<apex:page renderAs="pdf" showHeader="false" sidebar="false" applyBodyTag="false" applyHtmlTag="false">
+    <c:ReportPageNutricion />
+    <c:ReportPagePediatricos />
+</apex:page>

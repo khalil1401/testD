@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Indicaciones_del_m_dico__c</name>
+    <picklistValues>
+        <masterLabel>Antiácido</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fraccionar las tomas</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mantener posición semisentada luego de cada toma</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Otra</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

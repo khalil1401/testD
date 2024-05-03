@@ -1,0 +1,19 @@
+<apex:page lightningStylesheets="true" standardController="Modulo_de_paciente__c" extensions="GenerateXmlModuloController" action="{!insertXml}" showHeader="true" sidebar="true" cache="false">
+    
+    <apex:slds />
+    <div class="slds-scope">       
+        <apex:pagemessages rendered="{! yaGenerado || mdpSinProductos || mdpSinModulo || mdpSinSoldTo || 
+                                     mdpSinShipTo || mdpSinNroDeAutoriz || mdpValorTotalMax || mdpFechaIncorrecta}"/>
+        
+        <apex:form rendered="{!yaGenerado || mdpSinProductos || mdpSinModulo || mdpSinSoldTo || 
+                             mdpSinShipTo || mdpSinNroDeAutoriz || mdpValorTotalMax || mdpFechaIncorrecta}"> 
+            
+            <apex:commandButton action="{!back}" value="Volver"/>
+        </apex:form>      
+        <apex:form rendered="{!flagXMl}"> 
+            <apex:pagemessages rendered="{!flagXMl}"/>
+            <apex:commandButton action="{!back}" value="Volver"/>
+        </apex:form>
+        
+    </div>
+</apex:page>

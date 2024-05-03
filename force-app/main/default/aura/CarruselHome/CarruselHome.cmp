@@ -1,0 +1,111 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    
+	<aura:attribute name="altoMaximo" type="String" default="350"/>
+	<aura:attribute name="altoMinimo" type="String" default="350"/>
+	<aura:attribute name="altoMaximoPhone" type="String" default="150"/>
+	<aura:attribute name="altoMinimoPhone" type="String" default="150"/>
+
+    <aura:attribute name="image1StaticResourceName" type="String" default=""/>
+    <aura:attribute name="image1MobileStaticResourceName" type="String" default=""/>
+	<aura:attribute name="image2StaticResourceName" type="String" default=""/>
+	<aura:attribute name="image2MobileStaticResourceName" type="String" default=""/>
+	<aura:attribute name="image3StaticResourceName" type="String" default=""/>
+	<aura:attribute name="image3MobileStaticResourceName" type="String" default=""/>
+	<aura:attribute name="image4StaticResourceName" type="String" default=""/>
+	<aura:attribute name="image4MobileStaticResourceName" type="String" default=""/>
+	<aura:attribute name="image5StaticResourceName" type="String" default=""/>
+	<aura:attribute name="image5MobileStaticResourceName" type="String" default=""/>
+
+    <aura:attribute name="duracion" type="String" default="10"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <div class="desktop">
+        <lightning:carousel scrollDuration="{!v.duracion}">
+            <aura:if isTrue="{!v.image1StaticResourceName != ''}">
+                <lightning:carouselImage
+                    src="{!v.image1StaticResourceName}"
+                    header="img"
+                    description="static resource"
+                    alternativeText="img1">
+                </lightning:carouselImage>
+            </aura:if>
+            <aura:if isTrue="{!v.image2StaticResourceName != ''}">
+                <lightning:carouselImage
+                    src="{!v.image2StaticResourceName}"
+                    header="img"
+                    description="static resource"
+                    alternativeText="img2">
+                </lightning:carouselImage>
+            </aura:if>
+            <aura:if isTrue="{!v.image3StaticResourceName != ''}">
+                <lightning:carouselImage
+                    src="{!v.image3StaticResourceName}"
+                    header="img"
+                    description="static resource"
+                    alternativeText="img3">
+                </lightning:carouselImage>
+            </aura:if>
+            <aura:if isTrue="{!v.image4StaticResourceName != ''}">
+                <lightning:carouselImage
+                    src="{!v.image4StaticResourceName}"
+                    header="img"
+                    description="static resource"
+                    alternativeText="img4">
+                </lightning:carouselImage>
+            </aura:if>
+            <aura:if isTrue="{!v.image5StaticResourceName != ''}">
+                <lightning:carouselImage
+                    src="{!v.image5StaticResourceName}"
+                    header="img"
+                    description="static resource"
+                    alternativeText="img5">
+                </lightning:carouselImage>
+            </aura:if>
+        </lightning:carousel>
+    </div>
+    <div class="mobile">
+        <lightning:carousel scrollDuration="{!v.duracion}">
+            <aura:if isTrue="{!v.image1MobileStaticResourceName != ''}">
+                <lightning:carouselImage
+                    src="{!v.image1MobileStaticResourceName}"
+                    header="img"
+                    description="static resource"
+                    alternativeText="img1">
+                </lightning:carouselImage>
+            </aura:if>
+            <aura:if isTrue="{!v.image2MobileStaticResourceName != ''}">
+                <lightning:carouselImage
+                    src="{!v.image2MobileStaticResourceName}"
+                    header="img"
+                    description="static resource"
+                    alternativeText="img2">
+                </lightning:carouselImage>
+            </aura:if>
+            <aura:if isTrue="{!v.image3MobileStaticResourceName != ''}">
+                <lightning:carouselImage
+                    src="{!v.image3MobileStaticResourceName}"
+                    header="img"
+                    description="static resource"
+                    alternativeText="img3">
+                </lightning:carouselImage>
+            </aura:if>
+            <aura:if isTrue="{!v.image4MobileStaticResourceName != ''}">
+                <lightning:carouselImage
+                    src="{!v.image4MobileStaticResourceName}"
+                    header="img"
+                    description="static resource"
+                    alternativeText="img4">
+                </lightning:carouselImage>
+            </aura:if>
+            <aura:if isTrue="{!v.image5MobileStaticResourceName != ''}">
+                <lightning:carouselImage
+                    src="{!v.image5MobileStaticResourceName}"
+                    header="img"
+                    description="static resource"
+                    alternativeText="img5">
+                </lightning:carouselImage>
+            </aura:if>
+        </lightning:carousel>
+    </div>
+</aura:component>

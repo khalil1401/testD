@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Endocrino_Metabolico_Hematologico__c</fullName>
+    <externalId>false</externalId>
+    <label>Endócrino / Metabólico / Hematológico</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Diabetes 1</fullName>
+                <default>false</default>
+                <label>Diabetes 1</label>
+            </value>
+            <value>
+                <fullName>Diabetes 2</fullName>
+                <default>false</default>
+                <label>Diabetes 2</label>
+            </value>
+            <value>
+                <fullName>Insulina</fullName>
+                <default>false</default>
+                <label>Insulina</label>
+            </value>
+            <value>
+                <fullName>Hipotiroidismo</fullName>
+                <default>false</default>
+                <label>Hipotiroidismo</label>
+            </value>
+            <value>
+                <fullName>Hipertiroidismo</fullName>
+                <default>false</default>
+                <label>Hipertiroidismo</label>
+            </value>
+            <value>
+                <fullName>Enfermedad Celíaca</fullName>
+                <default>false</default>
+                <label>Enfermedad Celíaca</label>
+            </value>
+            <value>
+                <fullName>Anticoagulación</fullName>
+                <default>false</default>
+                <label>Anticoagulación</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

@@ -1,0 +1,47 @@
+@page {
+    margin-top: 70px;
+    size: 8.27in 11.69in; /* A4 width and height */
+  @top-center {
+    content: element(header);
+  }
+  @bottom-left {
+    content: element(footer);
+  }
+}
+div.header {
+  padding: 10px;
+  position: running(header);
+}
+div.footer {
+  display: block;
+  padding: 5px;
+  position: running(footer);
+}
+div.content{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+.pagenumber:before {
+  content: counter(page);
+}
+.pagecount:before {
+  content: counter(pages);
+}
+h3 { 
+    background-color: #9d74be;
+    font-weight: 500;
+    text-align: left;
+    font-size: 18px;
+    padding-left: 5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.colTitle{
+    color: white;
+}
+.col {
+  padding-left: 8%;
+  margin: 1% 0;
+  width: 40%;
+  display: inline-block;
+}

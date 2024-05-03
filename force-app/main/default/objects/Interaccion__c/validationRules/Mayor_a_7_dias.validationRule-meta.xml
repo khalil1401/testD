@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mayor_a_7_dias</fullName>
+    <active>true</active>
+    <errorConditionFormula>Fecha__c &lt; TODAY() - 7</errorConditionFormula>
+    <errorMessage>No se permite cargar interacción con una antigüedad mayor a 7 días.</errorMessage>
+</ValidationRule>

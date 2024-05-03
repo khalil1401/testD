@@ -1,0 +1,125 @@
+<template>
+    <div class="slds-grid slds-wrap" style="background: linear-gradient(90deg, rgba(181, 181, 181, 0.4), #ffffff 100%);">
+        <div class="slds-col slds-large-size_3-of-12"></div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 containerPorcentajes">
+            <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                <template if:true={mostrarPorcentajes}>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-1 slds-m-top_x-large">
+                        <p class="tituloPorcentajesDisfagiaStroke">
+                            ¿Qué situaciones pueden causar disfagia y cual es su prevalencia?
+                        </p>
+                        <div class="lineaPorcentajesStroke slds-align_absolute-center"></div>
+                    </div>
+                    <!--Primera linea-->
+                    <div class="slds-col slds-size_3-of-12 slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_x-large">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenHead1DisfagiaStroke%282022-05-24%29.png">
+                    </div>
+                    <div class="slds-col slds-size_9-of-12 slds-large-size_3-of-12 slds-m-top_x-large">
+                        <div class="containerSubtituloPorcentajes">
+                            <span class="subtituloPorcentajesDisfagiaStroke">
+                                PACIENTES NEUROLÓGICOS
+                            </span>    
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_7-of-12 slds-m-top_x-large">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5 slds-large-size_1-of-5 slds-text-align_center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenPorcentaje55Stroke%282022-05-24%29.png" class="imgPorcentaje">
+                                <p class="textoBajadaPorcentajeStroke">ACV<sup>1</sup></p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5 slds-large-size_1-of-5 slds-text-align_center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenPorcentaje80Stroke%282022-05-24%29.png" class="imgPorcentaje">
+                                <p class="textoBajadaPorcentajeStroke">ELA<sup>2</sup></p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5 slds-large-size_1-of-5 slds-text-align_center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenPorcentaje80Stroke%282022-05-24%29.png" class="imgPorcentaje">
+                                <p class="textoBajadaPorcentajeStroke">Demencia<sup>2</sup></p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5 slds-large-size_1-of-5 slds-text-align_center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenPorcentaje82Stroke%282022-05-24%29.png" class="imgPorcentaje">
+                                <p class="textoBajadaPorcentajeStroke">Enfermedad de Parkinson<sup>1</sup></p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5 slds-large-size_1-of-5 slds-text-align_center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenPorcentaje38Stroke%282022-05-24%29.png" class="imgPorcentaje">
+                                <p class="textoBajadaPorcentajeStroke">Esclerosis múltiple<sup>3</sup></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-large-size_5-of-12">
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_7-of-12">
+                        <div class="lineaPorcentajesStroke slds-align_absolute-center"></div>
+                    </div>
+                    <!--Segunda linea-->
+                    <div class="slds-col slds-size_3-of-12 slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_x-large">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenHead2DisfagiaStroke%282022-05-24%29.png">
+                    </div>
+                    <div class="slds-col slds-size_9-of-12 slds-large-size_3-of-12 slds-m-top_x-large">
+                        <div class="containerSubtituloPorcentajes">
+                            <span class="subtituloPorcentajesDisfagiaStroke">
+                                PACIENTES ONCOLÓGICOS CABEZA-CUELLO
+                            </span>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_7-of-12 slds-m-top_x-large">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_2-of-5 slds-large-size_1-of-5">
+                            </div>
+                            <div class="slds-col slds-size_1-of-5 slds-large-size_1-of-5 slds-text-align_center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenPorcentaje73Stroke%282022-05-24%29.png" class="imgPorcentaje">
+                                <p class="textoBajadaPorcentajeStroke">Tras tratamiento<sup>4</sup></p>
+                            </div>
+                            <div class="slds-col slds-size_2-of-5 slds-large-size_3-of-5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-large-size_5-of-12">
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_7-of-12">
+                        <div class="lineaPorcentajesStroke slds-align_absolute-center"></div>
+                    </div>
+                    <!--Tercer linea-->
+                    <div class="slds-col slds-size_3-of-12 slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_x-large">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenPersonasMayoresDisfagiaStroke%282022-05-24%29.png">
+                    </div>
+                    <div class="slds-col slds-size_9-of-12 slds-large-size_3-of-12 slds-m-top_x-large">
+                        <div class="containerSubtituloPorcentajes">
+                            <span class="subtituloPorcentajesDisfagiaStroke">
+                                PERSONAS MAYORES
+                            </span>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_7-of-12 slds-m-top_x-large">
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_2-of-4 slds-large-size_2-of-4 slds-text-align_center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenPorcentaje30Stroke%282022-05-24%29.png" class="imgPorcentaje"> <span style="color: #3FA8C1;font-size: 22px;"> - </span>
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenPorcentaje40Stroke%282022-05-24%29.png" class="imgPorcentaje">
+                                <p class="textoBajadaPorcentajeStroke">Tras tratamiento<sup>4</sup></p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4 slds-large-size_1-of-4 slds-text-align_center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenPorcentaje44Stroke%282022-05-24%29.png" class="imgPorcentaje">
+                                <p class="textoBajadaPorcentajeStroke">Mayores hospitalizados<sup>1</sup></p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-4 slds-large-size_1-of-4 slds-text-align_center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-QUE_ES_LA_DISFAGIA/PP-imagenPorcentaje60Stroke%282022-05-24%29.png" class="imgPorcentaje">
+                                <p class="textoBajadaPorcentajeStroke">Mayores Institucionalizados<sup>1</sup></p>
+                            </div>
+                        </div>
+                    </div>    
+                </template>
+                <!--Referencias-->
+                <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-1 slds-m-top_x-large slds-m-bottom_x-large">
+                    <p class="textoReferenciaPorcentajeStroke">
+                        <lightning-formatted-rich-text value={referencias}></lightning-formatted-rich-text>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-1 slds-m-top_medium slds-m-bottom_medium slds-text-align_center">
+                    <span class="textoAvisoLegalPorcentajes">
+                        "Esta información no sustituye el consejo médico. Consultá siempre a tu equipo médico tratante"
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-large-size_3-of-12"></div>
+    </div>
+</template>

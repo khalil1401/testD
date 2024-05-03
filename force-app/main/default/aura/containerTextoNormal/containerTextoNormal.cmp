@@ -1,0 +1,29 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="mensaje" type="String"/>
+    <aura:attribute name="mensajeParrafo1" type="String" default="text"/>
+    <aura:attribute name="mensajeParrafo2" type="String" default="text"/>
+    <aura:attribute name="mensajeParrafo3" type="String" default="text"/>
+    <aura:attribute name="fontSize" type="String" default="1.3em"/>
+    <aura:attribute name="backgroundColor" type="String"/>
+    <aura:attribute name="fontColor" type="String"/>
+    <aura:attribute name="fontFamily" type="String"/>
+
+    <aura:html tag="style">
+        .containerTextoNormal {
+            background-color: {!v.backgroundColor};
+        }
+        .parrafoTextoNormal {
+            color: {!v.fontColor};
+            font-size: {!v.fontSize};
+            font-family: {!v.fontFamily};
+        }
+    </aura:html>
+
+    <div class="containerTextoNormal">
+        <p class="slds-text-align_center parrafoTextoNormal">{!v.mensajeParrafo1}</p>
+        <p class="slds-text-align_center parrafoTextoNormal">{!v.mensajeParrafo2}</p>
+        <p class="slds-text-align_center parrafoTextoNormal">{!v.mensajeParrafo3}</p>
+    </div>
+
+</aura:component>

@@ -1,0 +1,15 @@
+.THIS {
+}
+
+.THIS .container-rdu-onco-layout{
+    width: 100%;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+@media (max-width: 600px) {
+    .THIS .container-rdu-onco-layout{
+        padding-left: 0%;
+        padding-right: 0%;
+    }    
+}

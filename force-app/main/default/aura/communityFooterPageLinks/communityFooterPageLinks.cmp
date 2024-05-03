@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+	<aura:attribute name="linkToSite1" type="String"/>
+	<aura:attribute name="siteImage1HaveIcon" type="String"/>
+	<aura:attribute name="siteImageIconSrc1" type="String"/>
+	<aura:attribute name="siteImageIcon1Width" type="String"/>
+	<aura:attribute name="siteName1" type="String"/>
+
+	<a href="{!v.linkToSite1}" style="color:white; font-weight: bold; text-decoration: underline;" target="_blank">
+		<aura:if isTrue="{!v.siteImage1HaveIcon}">
+			<img src="{!v.siteImageIconSrc1}"
+					style="{!'width:' + v.siteImageIcon1Width + 'px; height:auto;color:#595959;'}"/>
+			<aura:set attribute="else">
+				{!v.siteName1}
+			</aura:set>
+		</aura:if> 	
+	</a> 
+</aura:component>

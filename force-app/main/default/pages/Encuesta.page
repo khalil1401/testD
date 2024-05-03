@@ -1,0 +1,32 @@
+<apex:page showheader="false" lightningStylesheets="true">
+<html>
+      <head>
+         <apex:includeLightning /> 
+          <!--Use apex:includeLightning to add the Lightning Components for Visualforce JavaScript library to your Visualforce page-->
+      </head>
+      <body class="slds-scope">
+         <div id="flowContainer" />
+         <script>
+
+            var statusChange = function (event) {
+               if(event.getParam("status") === "FINISHED") {
+                  var outputVariables = event.getParam("outputVariables");
+                  var key;
+                  for(key in outputVariables) {
+                     if(outputVariables[key].name === "myOutput") {
+                     }
+                  }
+               }
+            };
+            $Lightning.use("c:VFPageToLC", function() {
+               $Lightning.createComponent("lightning:flow", {"onstatuschange":statusChange},
+                  "flowContainer",
+                  function (component) {
+                     component.startFlow("EncuestaEmail", );
+                  }
+               );
+            });
+         </script>
+      </body>
+   </html>
+</apex:page>

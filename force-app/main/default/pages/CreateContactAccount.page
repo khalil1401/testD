@@ -1,0 +1,72 @@
+<apex:page docType="html-5.0" Controller="CreateContactAccountController">
+	
+    <apex:includescript value="{!$Resource.jQuery1123}" />
+    <apex:includescript value="{!$Resource.integration42}" />
+    <script type="text/javascript">
+
+    	jQuery(function (){
+            if (sforce.console.isInConsole()) {
+                sforce.console.setTabTitle('Crear contacto de paciente');
+            }
+		});
+
+    	function nuevoContacto () {
+            if (sforce.console.isInConsole()) {
+                sforce.console.getEnclosingPrimaryTabId(openSubtab);
+            } else {
+
+            	window.open('{!URLFOR($Action.Contact.NewContact, null, null, true)}');
+            }
+		}
+
+        var openSubtab = function openSubtab(result) {
+            var primaryTabId = result.id;
+            sforce.console.openSubtab(
+                primaryTabId ,
+                '{!URLFOR($Action.Contact.NewContact, null, null, true)}',
+                true,
+                'Crear Contacto',
+                null,
+                null
+            );
+        };
+
+        function cerrarTab() {
+            if (sforce.console.isInConsole()) {
+                sforce.console.getEnclosingTabId(closeSubtab);
+            } else {
+                window.parent.location.href = '{!URLFOR($Action.Account.view, IdAccount, null, true)}';
+            }
+        }
+        var closeSubtab = function closeSubtab(result) {
+            var tabId = result.id;
+            sforce.console.closeTab(tabId);
+        };
+
+    </script>    
+
+    <apex:sectionHeader subtitle="Nuevo Contacto de paciente" title="Edición de Contacto de paciente"/>
+    <apex:form >
+
+        <apex:pageblock title="Modificar Contacto de paciente">
+            <apex:pagemessages > </apex:pagemessages>
+            <apex:pageblocksection columns="1">
+                <apex:inputfield value="{!contactoDePaciente.Paciente__c}" />
+                <apex:inputfield value="{!contactoDePaciente.Contacto__c}"/>
+                <apex:inputfield value="{!contactoDePaciente.Principal__c}" />
+                <apex:inputfield value="{!contactoDePaciente.Relacion__c}" />
+                <apex:inputfield value="{!contactoDePaciente.Otro__c}" />
+            </apex:pageblocksection>
+            <apex:pageblockbuttons location="top">
+                <apex:commandbutton value="Guardar" action="{!guardar}" />
+                <input type="button" value="Crear Contacto" class="btn" onclick="nuevoContacto();" />
+                <input type="button" value="Cancelar" class="btn" onclick="cerrarTab();" />
+            </apex:pageblockbuttons>
+            <apex:pageblockbuttons location="bottom">
+                <apex:commandbutton value="Guardar" action="{!guardar}" />
+                <input type="button" value="Crear Contacto" class="btn" onclick="nuevoContacto();" />
+                <input type="button" value="Cancelar" class="btn" onclick="cerrarTab();" />
+            </apex:pageblockbuttons>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

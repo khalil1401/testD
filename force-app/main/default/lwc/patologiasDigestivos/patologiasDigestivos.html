@@ -1,0 +1,255 @@
+<template>
+    <div class="slds-grid slds-wrap container-patologias-dig">
+        <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-m-bottom_x-large">
+            <p class="title-patologias-dig" data-id="main-menu">
+                Elegí cuál explorar:
+            </p>
+            <hr class="linea-patologias-dig slds-align_absolute-center"/>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-dig slds-align_absolute-center"
+                data-patologia="colicos"
+                onclick={showDetails}>
+                Cólicos
+            </span>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-dig slds-align_absolute-center"
+                data-patologia="constipacion"
+                onclick={showDetails}>
+                Constipación
+            </span>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-dig slds-align_absolute-center"
+                data-patologia="disquecia"
+                onclick={showDetails}>
+                Disquecia
+            </span>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-dig slds-align_absolute-center"
+                data-patologia="reflujo-gastroesofagico"
+                onclick={showDetails}>
+                Reflujo gastroesofágico
+            </span>
+        </div>
+    </div>
+    <div class="slds-grid slds-wrap slds-m-top_x-large container-details-patologias-dig"
+        data-id="container-info" style="position: relative;">
+        <template if:true={showArrows}>
+            <lightning-button-icon
+                icon-name="utility:chevronleft"
+                alternative-text="Back"
+                title="Back"
+                size="large"
+                variant="bare"
+                onclick={back}
+                disabled={disabledBack}
+                class="left-arrow">
+            </lightning-button-icon>
+        </template>
+        <template if:true={showArrows}>
+            <lightning-button-icon
+                icon-name="utility:chevronright"
+                alternative-text="Next"
+                title="Next"
+                size="large"
+                variant="bare"
+                onclick={next}
+                disabled={disabledNext}
+                class="right-arrow">
+            </lightning-button-icon>
+        </template>
+        <div class="slds-col slds-size_1-of-1">
+            <div class="slds-grid slds-wrap" data-id="container-colicos" style="display: none;">
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <p class="title-montbold-patologias-dig">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/COLICOS/PP-Digestivos-Inicio-Colicos-Icono%402x.png"
+                            class="icon-patologia-dig"/>
+                        Cólicos
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/COLICOS/PP-Digestivos-Inicio-Colicos-Imagen%402x.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-bottom_x-large mobile">
+                    <p class="title-montsemibold-patologias-dig slds-m-top_x-large">
+                        El término "cólico del lactante" se utiliza para describir un cuadro en el que el bebé llora intensamente sin consuelo aparente.
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_medium">
+                        Este llanto suele tener episodios que comienzan y terminan sin una causa clara. Según la regla de 3 de Wessel, estos episodios pueden durar alrededor de 3 horas, 3 días a la semana, durante 3 semanas, o incluso 3 horas al día durante una semana.
+                    </p>
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/COLICOS/PP-Digestivos-Colicos-Infografia%403x-Mobile.png"
+                        class="slds-m-top_x-large"/>
+                </div>
+                <div class="slds-col slds-size_7-of-12 slds-p-top_xx-large slds-p-bottom_xx-large desktop">
+                    <p class="title-montbold-patologias-dig">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/COLICOS/PP-Digestivos-Inicio-Colicos-Icono%402x.png"
+                            class="icon-patologia-dig"/>
+                        Cólicos
+                    </p>
+                    <p class="title-montsemibold-patologias-dig slds-m-top_x-large">
+                        El término "cólico del lactante" se utiliza para describir un cuadro en el que el bebé llora intensamente sin consuelo aparente.
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_xx-large">
+                        Este llanto suele tener episodios que comienzan y terminan sin una causa clara. Según la regla de 3 de Wessel, estos episodios pueden durar alrededor de 3 horas, 3 días a la semana, durante 3 semanas, o incluso 3 horas al día durante una semana.
+                    </p>
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/COLICOS/PP-Digestivos-Colicos-Infografia%402x.png"
+                        class="slds-m-top_xx-large"/>
+                </div>
+                <div class="slds-col slds-size_5-of-12 slds-p-top_medium slds-p-bottom_xx-large slds-align_absolute-center desktop">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/COLICOS/PP-Digestivos-Inicio-Colicos-Imagen%402x.jpg"
+                        style="border-radius: 18px; width: 85%;">
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap" data-id="container-constipacion" style="display: none;">
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <p class="title-montbold-patologias-dig">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/CONSTIPACION/PP-Digestivos-Inicio-Constipacion-Icono%402x.png"
+                            class="icon-patologia-dig"/>
+                        Constipación
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/CONSTIPACION/PP-Digestivos-Inicio-Constipacion-Imagen%402x.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-bottom_x-large mobile">
+                    <p class="title-montsemibold-patologias-dig slds-m-top_x-large">
+                        Se denomina constipación a la presencia de síntomas de defecación dificultosa, infrecuente o incompleta.
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_medium">
+                        Se manifiesta con la eliminación de heces duras y poco frecuentes. En el 95% de los casos, la causa es funcional o no tiene una causa específica identificable. Casi el 40% de los casos comienza alrededor del primer año de vida.
+                    </p>
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/5_FALTANTES/PP-Digestivos-Inicio-Constipacion%403x.png"
+                        class="slds-m-top_x-large">
+                </div>
+                <div class="slds-col slds-size_7-of-12 slds-p-top_xx-large slds-p-bottom_xx-large desktop">
+                    <p class="title-montbold-patologias-dig">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/CONSTIPACION/PP-Digestivos-Inicio-Constipacion-Icono%402x.png"
+                            class="icon-patologia-dig"/>
+                        Constipación
+                    </p>
+                    <p class="title-montsemibold-patologias-dig slds-m-top_x-large">
+                        Se denomina constipación a la presencia de síntomas de defecación dificultosa, infrecuente o incompleta.
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_xx-large">
+                        Se manifiesta con la eliminación de heces duras y poco frecuentes. En el 95% de los casos, la causa es funcional o no tiene una causa específica identificable. Casi el 40% de los casos comienza alrededor del primer año de vida.
+                    </p>
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/CONSTIPACION/PP-Digestivos-Constipacion-Infografia%402x.png"
+                        class="slds-m-top_xx-large"/>
+                </div>
+                <div class="slds-col slds-size_5-of-12 slds-p-top_xx-large slds-p-bottom_xx-large slds-align_absolute-center desktop">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/CONSTIPACION/PP-Digestivos-Inicio-Constipacion-Imagen%402x.jpg"
+                        style="border-radius: 18px; width: 85%;">
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap" data-id="container-disquecia" style="display: none;">
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <p class="title-montbold-patologias-dig">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/DISQUECIA/PP-Digestivos-Inicio-Disquecia-Icono%402x.png"
+                            class="icon-patologia-dig"/>
+                        Disquecia
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/DISQUECIA/PP-Digestivos-Inicio-Disquecia-Imagen%402x.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-bottom_x-large mobile">
+                    <p class="title-montsemibold-patologias-dig slds-m-top_x-large">
+                        Se trata de un trastorno evacuatorio funcional que ocurre en los bebés menores de 6 meses, que son saludables y se alimentan principalmente a base de lactancia materna.
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_medium">
+                        Se presenta con un retraso en la evacuación de heces de 3 días o más. Durante este tiempo, es posible que el bebé haga esfuerzos, se enrojezca y no logre evacuar durante unos minutos. Esto puede ir acompañado de un llanto intenso, que finalmente se alivia cuando el bebé logra expulsar heces blandas o semilíquidas. Es importante destacar que este trastorno es transitorio y benigno.
+                    </p>
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/5_FALTANTES/PP-Digestivos-Inicio-Disquecia%403x.png"
+                        class="slds-m-top_x-large"/>
+                </div>
+                <div class="slds-col slds-size_7-of-12 slds-p-top_xx-large slds-p-bottom_xx-large desktop">
+                    <p class="title-montbold-patologias-dig">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/DISQUECIA/PP-Digestivos-Inicio-Disquecia-Icono%402x.png"
+                            class="icon-patologia-dig"/>
+                        Disquecia
+                    </p>
+                    <p class="title-montsemibold-patologias-dig slds-m-top_x-large">
+                        Se trata de un trastorno evacuatorio funcional que ocurre en los bebés menores de 6 meses, que son saludables y se alimentan principalmente a base de lactancia materna.
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_xx-large">
+                        Se presenta con un retraso en la evacuación de heces de 3 días o más. Durante este tiempo, es posible que el bebé haga esfuerzos, se enrojezca y no logre evacuar durante unos minutos. Esto puede ir acompañado de un llanto intenso, que finalmente se alivia cuando el bebé logra expulsar heces blandas o semilíquidas. Es importante destacar que este trastorno es transitorio y benigno.
+                    </p>
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/DISQUECIA/PP-Digestivos-Infografia-Disquecia%402x.png"
+                        class="slds-m-top_xx-large"/>
+                </div>
+                <div class="slds-col slds-size_5-of-12 slds-p-top_xx-large slds-p-bottom_xx-large slds-align_absolute-center desktop">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/DISQUECIA/PP-Digestivos-Inicio-Disquecia-Imagen%402x.jpg"
+                        style="border-radius: 18px; width: 85%;">
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap" data-id="container-reflujo-gastroesofagico" style="display: none;">
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/5_FALTANTES/PP-Digestivos-Inicio-Reflujo-Icono%402x.png"
+                                    class="icon-patologia-dig"/>
+                            </td>
+                            <td>
+                                <p class="title-montbold-patologias-dig" style="margin-left: 10px;">
+                                    Reflujo gastroesofágico
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/REFLUJO/PP-Digestivos-Imagen---Cardiopatia-congenita%402x.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-bottom_x-large mobile">
+                    <p class="title-montsemibold-patologias-dig slds-m-top_x-large">
+                        El reflujo se refiere al movimiento involuntario de contenido gástrico hacia el esófago.
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_medium">
+                        Si este reflujo llega lo suficientemente alto como para ser notado, se llama regurgitación, que es el trastorno digestivo funcional más común en el primer año de vida. Sin embargo, cuando el reflujo gastroesofágico provoca complicaciones, daño en los tejidos o inflamación, se le llama enfermedad por reflujo gastroesofágico (ERGE).
+                    </p>
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/5_FALTANTES/PP-Digestivos-Inicio-Reflujo%403x.png"
+                        class="slds-m-top_x-large"/>
+                </div>
+                <div class="slds-col slds-size_7-of-12 slds-p-top_xx-large slds-p-bottom_xx-large desktop">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/5_FALTANTES/PP-Digestivos-Inicio-Reflujo-Icono%402x.png"
+                                    class="icon-patologia-dig"/>
+                            </td>
+                            <td>
+                                <p class="title-montbold-patologias-dig">
+                                    Reflujo gastroesofágico
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p class="title-montsemibold-patologias-dig slds-m-top_x-large">
+                        El reflujo se refiere al movimiento involuntario de contenido gástrico hacia el esófago.
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_xx-large">
+                        Si este reflujo llega lo suficientemente alto como para ser notado, se llama regurgitación, que es el trastorno digestivo funcional más común en el primer año de vida. Sin embargo, cuando el reflujo gastroesofágico provoca complicaciones, daño en los tejidos o inflamación, se le llama enfermedad por reflujo gastroesofágico (ERGE).
+                    </p>
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/REFLUJO/PP-Digestivos-Cita-Reflujo%402x.png"
+                        class="slds-m-top_xx-large"/>
+                </div>
+                <div class="slds-col slds-size_5-of-12 slds-p-top_xx-large slds-p-bottom_xx-large slds-align_absolute-center desktop">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/REFLUJO/PP-Digestivos-Imagen---Cardiopatia-congenita%402x.jpg"
+                        style="border-radius: 18px; width: 85%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

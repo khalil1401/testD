@@ -1,0 +1,9 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <div class="slds-text-align_center slds-m-top_x-large">
+        <p class="title-montserrat-faqs-manager">
+            <span class="title-pacifico-faqs-manager">Preguntas</span> frecuentes
+        </p>
+    </div>
+
+</aura:component>

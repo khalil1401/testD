@@ -1,0 +1,224 @@
+<apex:page title="" controller="TecnovozCommunicatorCtrl" showheader="false" sidebar="false">
+    <apex:includescript value="{! $Resource.CCAgentWS }" />
+    <apex:includescript value="{! $Resource.jQuery1123}" />
+    <apex:includescript value="/support/console/41.0/integration.js" />
+    <script src="/support/api/25.0/interaction.js" />
+    <script src="/soap/ajax/32.0/apex.js" type="text/javascript" />
+    <script src="/sforce/one/30.0/api.js" type="text/javascript" />
+    <script type="text/javascript">
+        var CCAgentWS;
+        var Connected = false;
+        var Log = '';
+
+        function SetStatus(msg) {
+            $('#status').html(msg);
+        }
+
+        function SetInfo(msg) {
+            $('#info').html(msg);
+        }
+
+        function ShowCallMenu() {
+            if (Connected) {
+            	$("[id$=CallPanel]").show();
+            }
+        }
+
+        function callOpennedUser() {
+            HideCallMenu();
+            CCAgentWS.makeCall(OpennedClientPhone);
+        }
+
+        function HideCallMenu() {
+            $("[id$=CallPanel]").hide();
+        }
+
+        function showCreateRecordMenu() {
+            $('[id$="contactName"]').val('');
+            $('[id$="ContactNotFounded"]').show();
+        }
+
+        function hideCreateRecordMenu() {
+            $('[id$="ContactNotFounded"]').hide();
+        }
+
+        var oldState = -1;
+        var state = -1;
+        function setState(newState) {
+            if (state != newState) {                
+                oldState = state;
+                state = newState;
+                if (state == 2) {
+                    $('[class^="state"]').hide();
+                    $('.state1').show();
+                } else if (state == 8) {
+                    $('[class^="state"]').hide();
+                    $('.state3').show();
+                } else {
+                    $('[class^="state"]').hide();
+                    $('.state2').show();
+                }
+            }
+        }
+
+        var inCall = false;
+
+        function Connect() {
+            console.log(Connected);
+            if (Connected) {
+                return;
+            }
+            SetStatus("Conectando..");
+            // se crea una instancia del websocket que se conecta con la CCToolbar
+            CCAgentWS = new TCCAgentWS(8890);
+            // se activa el debug a la consola del navegador
+            CCAgentWS.debug = true;
+            // evento que se dispara cuando se conecta con la CCToolbar
+            CCAgentWS.onToolbarConnect = function(msg) {
+                CCAgentWS.getState();
+                SetStatus("Conectado");
+                Connected = true;
+                $("[id$=DisconnectPanel]").hide();
+                $("[id$=LoginPanel]").show();
+            };
+            console.log(CCAgentWS);
+            // evento que se dispara cuando se cierra o se pierde conexión con la CCToolbar
+            CCAgentWS.onToolbarClose = function(msg) {
+                Connected = false;
+                SetStatus("Disconectado");
+                $("[id$=ConnectedPanel]").hide();
+                $("[id$=LoginPanel]").hide();
+                $("[id$=DisconnectPanel]").show();
+            };
+            // evento que se dispara cuando la toolbar notifica algo
+            CCAgentWS.onToolbarNotify = function(msg) {
+                if (typeof msg.data !== "object") {
+                    msg.data = JSON.parse(msg.data);
+                };
+
+                console.log(msg);
+                console.log(msg.data);
+                console.log(msg.data.state);
+                setState(msg.data.state);
+                if (msg.code == CCAgentWS.consts.tbEvents.logout) {
+                    location.reload();
+                }
+                if (msg.code == CCAgentWS.consts.tbEvents.callprogress) {
+                    SetStatus("Llamando...");
+                }
+
+                if (msg.code == CCAgentWS.consts.tbEvents.statechange) {
+                    //evento al empezar llamar
+                    //evento que se dispara al conectarse en la llamada
+                    if (msg.data.state == CCAgentWS.consts.states.Connect) {
+                        Log = "";
+                        $("[id$=ContactNotFounded]").hide();
+                        SetStatus("Registrando llamada..");
+                        SetInfo("Numero: " + msg.data.data_phone);
+                        CallBegin(msg.data.data_phone, msg.data.data_did, msg.data.data_refid, msg.data.data_direction);
+                        inCall = true;
+                        console.log('calling action function');
+                    };
+                    Log += JSON.stringify(msg, undefined, 2);
+
+                    //evento que se dispara cuando llamada se ha finalizada
+                    console.log(state);
+                    console.log(inCall);
+                    if (inCall && (state == 2 || state == 8)) {
+                        CallEnd(Log);
+                        alert('registrada');
+                        inCall = false;
+                        SetStatus("Llamada registrada");
+                        SetInfo("");
+                    };
+                };
+            };
+            CCAgentWS.init();
+        }
+        window.setInterval(function() {
+            Connect();
+        }, 5000);
+
+
+        $(function() {
+            Connect();
+            var listener = function(result) {
+                TabOpenned(result.objectId);
+            };
+        	sforce.console.onFocusedPrimaryTab(listener);
+            sforce.console.onFocusedSubtab(listener);
+        });
+    </script>
+    <apex:form >
+        <apex:actionfunction name="TabOpenned" action="{!TabOpenned}" status="status" rerender="showname, callOffert">
+            <apex:param name="objectId" value="" />
+        </apex:actionfunction>
+        <apex:actionfunction name="CallBegin" action="{!CallBegin}" status="status" rerender="showname">
+            <apex:param name="phoneNumber" value="" />
+            <apex:param name="dde" value="" />
+            <apex:param name="callId" value="" />
+            <apex:param name="direction" value="" />
+        </apex:actionfunction>
+        <apex:actionfunction name="CallEnd" action="{!CallEnd}" status="status" rerender="showname">
+            <apex:param name="LogData" value="" />
+        </apex:actionfunction>
+        <apex:pageblock >
+            <br />
+            <strong id="status">  </strong>
+            <p id="info"> </p>
+            <apex:outputpanel id="DisconnectPanel">
+                <input id="connection" type="button" value="Connect" onclick="Connect();" />
+            </apex:outputpanel>
+
+            <apex:outputpanel id="ControllPanel">
+                <apex:pageblock >                    
+                    <input type="text" id="phoneToCall" class="state1" />
+                    <input type="button" value="Call"  class="state1" onclick="CCAgentWS.makeCall($('#phoneToCall').val());" />
+                    <input type="button" value="AnswerCall" class="state1" onclick="CCAgentWS.answerCall();" />
+                    <input type="button" value="AlternateCall" class="state1" onclick="CCAgentWS.alternateCall();" />
+                    <!--falta callBack-->
+                    <input type="button" value="Dnd" class="state1" onclick="CCAgentWS.dnd(0); alert('dnd');" />
+                    <input type="button" value="EndCall" class="state2" onclick="CCAgentWS.endCall();" />
+                    <input type="button" value="HangupCall" class="state2" onclick="CCAgentWS.hangupCall();" />
+                    <input type="button" value="HoldCall" class="state2" onclick="CCAgentWS.holdCall();" />
+                    <input type="button" value="RetrieveCall" class="state2" onclick="CCAgentWS.retrieveCall();" />
+                    <input type="button" value="RecordCall" class="state2" onclick="CCAgentWS.recordCall();" />
+                    <input type="button" value="ReturnToIVR" class="state2" onclick="CCAgentWS.returnToIVR();" />
+                    <input type="button" value="SupervisorHelp" class="state2" onclick="CCAgentWS.supervisorHelp();" />
+                    <input type="button" value="ConferenceCall" class="state2" onclick="CCAgentWS.conferenceCall();" />
+                    <input type="button" value="WaitCall" class="state3" onclick="CCAgentWS.waitCall();" />
+                </apex:pageblock>
+            </apex:outputpanel>
+
+            <apex:outputpanel id="CallPanel" styleclass="hidden">
+                <br />
+                <br />
+                <apex:outputtext id="callOffert" value="Abriste usuario {!opennedClientName}. Deseas llamar a su telefono {!opennedTabPhoneNumber}?" />
+                <br />
+                <input id="llamar" type="button" value="Llamar" onclick="callOpennedUser();" />
+            </apex:outputpanel>
+            <apex:outputpanel id="ContactNotFounded" styleclass="hidden">
+                <apex:pageblock >
+                    <p />
+                    <apex:outputtext value="No encontramos cliente con este numero. Deseas crear nuevo contacto?" />
+                    <p />
+                    <apex:selectlist value="{!newContactType}" size="1">
+                        <apex:selectoptions value="{!recordTypes}" />
+                    </apex:selectlist>
+                    <p />
+                    Apellido:
+                    <p />
+                    <apex:inputtext value="{!newContactlastName}" id="contactName" />
+                    <p />
+                    <apex:commandbutton value="Cancelar" onclick="hideCreateRecordMenu();" rerender="showname" />
+                    <apex:commandbutton action="{!CreateContact}" value="Crear" onclick="" rerender="showname" />
+                </apex:pageblock>
+            </apex:outputpanel>
+            <apex:outputpanel id="ConnectedPanel" styleclass="hidden">
+                <apex:outputtext value="Bienvenido, {!$User.FirstName}!" />
+            </apex:outputpanel>
+        </apex:pageblock>
+        <apex:outputpanel id="showname">
+        <script> {!callfunc}</script> </apex:outputpanel>
+    </apex:form>
+</apex:page>

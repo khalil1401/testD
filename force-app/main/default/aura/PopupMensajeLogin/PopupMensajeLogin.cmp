@@ -1,0 +1,39 @@
+<aura:component>
+
+    <aura:attribute name="isOpen" type="boolean" default="true"/>
+    <aura:attribute name="cuerpoMensaje" type="String"/>
+    <aura:attribute name="icon" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:if isTrue="{!v.isOpen}">
+        <!--###### MODAL BOX Start######--> 
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" aura:id="modalMensaje">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                            title="Close"
+                            onclick="{! c.likenClose }">
+                        <lightning:icon class="icn"
+                                        iconName="utility:close"
+                                        size="small"
+                                        alternativeText="Indicates approval"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <div class="slds-align_absolute-center">
+                        <lightning:icon class="icnModal"
+                                        iconName="{!'utility:' + v.icon}"
+                                        size="large"
+                                        alternativeText="Indicates approval"/>
+                    </div>
+                    <p class="slds-text-align_center" style="margin-top: 10%;">
+                        {!v.cuerpoMensaje}
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+
+</aura:component>

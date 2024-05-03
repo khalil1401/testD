@@ -1,0 +1,17 @@
+<template>
+    <div>
+        <template if:true={spanFAQs}>
+            <div class="desktop container-span-icon-faq">
+                <span class="span-icon-faq">Preguntas Frecuentes</span>
+            </div>            
+        </template>
+        <a data-id="faq-button" class="float-icon-faq">
+            <img 
+                src={iconFAQ}
+                data-id="faqs__c"
+                onmouseover={showSpanFAQs}
+                onmouseleave={hideSpanFAQs}
+                onclick={navigateTo}/>
+        </a>
+    </div>
+</template>

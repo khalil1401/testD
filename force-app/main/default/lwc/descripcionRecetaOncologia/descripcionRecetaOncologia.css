@@ -1,0 +1,128 @@
+.containerDescripcionRecetaDesktop{
+    display: initial;
+}
+
+.containerDescripcionRecetaMobile{
+    display: none;
+}
+
+.tituloReceta{
+    font-family:MontserratSemiBold;
+    font-size: 45px;
+    color:#606060;
+    line-height: 60px;
+}
+
+.titulosGris{
+    font-family:MontserratSemiBold;
+    font-size: 22px;
+    color:#606060;
+    line-height: 30px;
+}
+
+.titulosRosado{
+    font-family:MontserratSemiBold;
+    font-size: 16px;
+    color:#C09AC2;
+    line-height: 24px;
+}
+
+.textosGris{
+    font-family:MontserratRegular;
+    font-size: 16px;
+    color:#606060;
+    line-height: 24px;
+}
+
+.lineaReceta{
+    border-top: 1px solid #606060;
+    width:100px;
+    margin-top:10px;
+}
+
+.containerConsejosRecetas{
+    background-color: #ebebeb;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 5%;
+}
+
+.containerIngredentiesPreparacionReceta{
+    margin-top: 5%;
+}
+
+.containerImgReceta{
+    padding-top: 2%;
+}
+
+.imgReceta{
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+}
+
+.slds-button_brand {
+    background: linear-gradient(90deg, rgba(152, 123, 217, 1) 0%,  rgba(110,131,229,1) 100%);
+    border-color: #EBEBEB;
+    border-radius: 10px 10px 10px 10px;
+    font-family:MontserratSemiBold;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.botonVerTodasLasRecetas{
+    background: linear-gradient(90deg, rgba(152, 123, 217, 1) 0%,  rgba(110,131,229,1) 100%);
+    border-color: #EBEBEB;
+    border-radius: 10px 10px 10px 10px;
+    font-family:MontserratSemiBold;
+    font-size: 22px;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .containerDescripcionReceta{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .containerDescripcionRecetaDesktop{
+        display: none;
+    }
+    .containerDescripcionRecetaMobile{
+        display: initial;
+    }
+    .containerConsejosRecetas{
+        border-radius: 0px 0px 0px 0px;
+        margin-top: 10%;
+    }
+    .containerImgReceta{
+        padding-top: 4%;
+    }
+    .tituloReceta{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .titulosGris{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .textosGris{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .slds-button_brand{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .botonVerTodasLasRecetas{
+        font-size: 18px;
+    }
+    .titulosRosado{
+        font-size: 14px;
+    }
+    .preparacionYCantidad{
+        font-size: 13px;
+    }
+}

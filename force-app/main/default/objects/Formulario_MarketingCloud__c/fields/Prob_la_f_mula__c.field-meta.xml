@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prob_la_f_mula__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Probó la fómula?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Si, ya la probaron</fullName>
+                <default>false</default>
+                <label>Si, ya la probaron</label>
+            </value>
+            <value>
+                <fullName>No, aún no la probaron</fullName>
+                <default>false</default>
+                <label>No, aún no la probaron</label>
+            </value>
+            <value>
+                <fullName>No la van a probar</fullName>
+                <default>false</default>
+                <label>No la van a probar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

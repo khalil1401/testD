@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MesDelCiclo</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISNEW(),
+OR(
+MONTH(Fecha__c)&lt;&gt; MONTH(Ciclo__r.Fecha_de_inicio__c),  
+MONTH(Fecha__c)&lt;&gt; MONTH(Ciclo__r.Fecha_de_fin__c)
+) 
+)</errorConditionFormula>
+    <errorMessage>El mes de la interacción debe coincidir con el mes del ciclo</errorMessage>
+</ValidationRule>

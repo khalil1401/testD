@@ -1,0 +1,85 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+  <aura:attribute name="backgroundColor" type="String" default="white"/>
+  <aura:attribute name="urlFAQ" type="String" default="/oncologia/productos-oncologia/preguntas-frecuentes"/>
+  <aura:attribute name="urlRecomendaciones" type="String" default="/oncologia/productos-oncologia/recomendacion-de-uso"/>
+
+  <aura:attribute name="isDesktop" type="Boolean" default="true"/>
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+  <div style="{!'background-color: '+ v.backgroundColor +';'}">
+      <br></br>
+      <br></br>
+      <div class="slds-grid slds-wrap slds-gutters">
+        <aura:if isTrue="{!v.isDesktop}">
+          <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12"
+                style="text-align: right;">
+            <button class="slds-button slds-button_brand"
+                    data-id="RdU"
+                    onclick="{!c.goTo}"
+                    style=" color: white;
+                            border-radius: 15px 15px 15px 15px;
+                            background-color: #293896;
+                            width: 70%;
+                            font-family: MontserratSemiBold;
+                            font-size: 22px;">
+              <img  class="slds-m-top_small slds-m-bottom_small slds-m-right_large"
+                    src="{!$Resource.botonFlecha}" alt="img"
+                    style="width: 15%;pointer-events: none;"/>
+              RECOMENDACIONES DE USO
+            </button>
+          </div>
+          <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12"
+                style="text-align: left;">
+            <button class="slds-button slds-button_brand"
+                    data-id="FAQs"
+                    onclick="{!c.goTo}"
+                    style=" color: white;
+                            border-radius: 15px 15px 15px 15px;
+                            background-color: #293896;
+                            width: 70%;
+                            font-family: MontserratSemiBold;
+                            font-size: 22px;">
+              <img  class="slds-m-top_small slds-m-bottom_small slds-m-right_large"
+                src="{!$Resource.botonFlecha}" alt="img"
+                style=" width: 15%;"/>
+              PREGUNTAS FRECUENTES
+            </button>
+          </div>
+          <aura:set attribute="else">
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+              <button class="slds-button slds-button_brand botonRecomendacionesYFAQMobile"
+                      data-id="RdU"
+                      onclick="{!c.goTo}">
+                <div class="slds-grid" style="pointer-events: none;">
+                  <div class="slds-col slds-size_2-of-12">
+                    <img  src="{!$Resource.botonFlecha}" alt="img"
+                      style="pointer-events: none;"/>
+                  </div>
+                  <div class="slds-col slds-size_10-of-12" style="padding-left: 0px !important;padding-right: 0px !important;text-align: left;">
+                    RECOMENDACIONES DE USO
+                  </div>
+                </div>
+              </button>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-m-top_large">
+              <button class="slds-button slds-button_brand botonRecomendacionesYFAQMobile"
+                      data-id="FAQs"
+                      onclick="{!c.goTo}">
+                <div class="slds-grid" style="pointer-events: none;">
+                  <div class="slds-col slds-size_2-of-12">
+                    <img  src="{!$Resource.botonFlecha}" alt="img"
+                      style="pointer-events: none;"/>
+                  </div>
+                  <div class="slds-col slds-size_10-of-12" style="padding-left: 0px !important;padding-right: 0px !important;text-align: left;">
+                    PREGUNTAS FRECUENTES                  
+                  </div>
+                </div>
+              </button>
+            </div>
+          </aura:set>
+        </aura:if>
+      </div>
+  </div>
+
+</aura:component>

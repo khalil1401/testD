@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Modulo_de_paciente__c.Estado__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>PersonAccount.Paciente_Best_Care</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Area_terapeutica__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Dieta Cetogénica</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Cantidad_de_modulos_de_paciente__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>CD Módulos</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Modulo_de_paciente__c@Modulo_de_paciente__c.Modulo__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

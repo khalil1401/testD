@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Cerrar internación" icon-name="standard:answer_public">
+        <template if:false={yaCerrada}>
+            <span style="font-size: 14px;">Una vez cerrada la internación no se podra
+                modificar la misma, ni sus
+                productos
+                relacionados.
+            </span>
+            <div class="slds-size_1-of-5">
+                <lightning-layout-item>
+                    <span>
+                        <lightning-input required="true" type="date" name="input1" label="Fecha de cierre"
+                            onchange={handleDateChange}>
+                        </lightning-input>
+
+                    </span>
+                </lightning-layout-item>
+                <lightning-combobox required="true" name="Estado de fin internación " label="Estado de Fin Internación"
+                    value={value} placeholder="Seleccione estado" options={options} onchange={handleChange}>
+                </lightning-combobox>
+            </div>
+
+            <template if:true={showSpinner}>
+                <div class="spinner">
+                    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <br /><br />
+            <lightning-button-group>
+                <lightning-button label="Volver" onclick={back}></lightning-button>
+                <lightning-button label="Cerrar internación" onclick={cerrarInternacion}></lightning-button>
+            </lightning-button-group>
+
+        </template>
+        <template if:true={yaCerrada}> <span style="font-size: 14px;">{errorMessg}</span>
+            <br />
+            <button class="slds-button slds-button_neutral" onclick={back}>Volver</button>
+        </template>
+
+    </lightning-card>
+
+</template>

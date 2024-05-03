@@ -1,0 +1,264 @@
+<template>
+    <div class="slds-grid slds-wrap" style="background-color: #58368C;">
+        <div class="div-center_6-of-12">
+            <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+                <div class="slds-text-align_center slds-m-top_x-large slds-m-bottom_x-large">
+                    <div class="desktop">
+                        <p class="tituloTabsTC">
+                            ¿QUÉ ES LA <span class="texto-celeste-tc">TERAPIA CETOGÉNICA?</span>
+                        </p>
+                    </div>
+                    <div class="mobile">
+                        <p class="tituloTabsTC">
+                            ¿Qué es la
+                        </p>
+                        <p class="texto-celeste-tc">
+                            TERAPIA CETOGÉNICA?
+                        </p>
+                    </div>
+                    <p class="textoTabsTC slds-m-top_medium">
+                        La <span style="font-style: italic;">Terapia Cetogénica</span> es un tratamiento <span style="font-family: MontserratSemiBold;">no farmacológico y efectivo</span> utilizado como una alternativa de tratamiento en el manejo de la epilepsia refractaria desde 1921.</p>
+                    <p class="textoTabsTC slds-m-top_medium">
+                        La <span style="font-style: italic;">Terapia Cetogénica</span> incluye 4 tipos de dietas que consisten en la selección de alimentos que aportan un alto contenido en grasas, un bajo contenido en hidratos de carbono y un aporte de proteínas recomendado para la edad del paciente. Es importante tener en cuenta que es una dieta rígida, matemáticamente calculada, individual y médicamente controlada.
+                    </p>
+                    <div class="desktop">
+                        <p class="tituloTabsTC slds-m-top_x-large">
+                            ¿Qué es la <span class="texto-celeste-tc">epilepsia </span>
+                        </p>
+                        <p class="texto-celeste-tc">
+                            refractaria o fármacorresistente?
+                        </p>
+                    </div>
+                    <div class="mobile">
+                        <p class="tituloTabsTC slds-m-top_x-large">
+                            ¿Qué es la <span class="texto-celeste-tc">epilepsia refractaria o fármacorresistente?</span>
+                        </p>
+                    </div>
+                    <p class="textoTabsTC slds-m-top_medium">
+                        Se llama epilepsia refractaria o fármacorresistente a la epilepsia en la cual los pacientes no logran controlar sus convulsiones de forma sostenida luego de probar con dos drogas antiepilépticas, solas o combinadas, correctamente indicadas.  Esto ocurre aproximadamente en 3 de cada 10 personas con epilepsia.
+                    </p>
+                    <p class="textoTabsTC slds-m-top_medium">
+                        De acuerdo a los últimos consensos internacionales, se propone evaluar otras alternativas terapéuticas luego de probar con 2 fármacos y no obtener respuesta al tratamiento. Dentro de los tratamientos propuestos, se encuentra la dieta cetogénica.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--Tabs desktop-->
+        <div class="div-center_10-of-12 slds-m-top_x-large">
+            <div class="desktop">
+                <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1 slds-m-bottom_xx-large">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-medium-size_1-of-5">
+                            <div class="container-item-selected slds-align_absolute-center"
+                                data-id="dieta-cetogenica-clasica" onclick={showDetail}>
+                                <span class="slds-text-align_center" data-id="dieta-cetogenica-clasica">
+                                    Dieta Cetogénica Clásica
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-medium-size_1-of-5">
+                            <div class="container-item slds-align_absolute-center"
+                                data-id="dieta-atkins-modificada" onclick={showDetail}>
+                                <span class="slds-text-align_center" data-id="dieta-atkins-modificada">
+                                    Dieta de Atkins modificada (DAM)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-medium-size_1-of-5">
+                            <div class="container-item slds-align_absolute-center"
+                                data-id="dieta-modificada" onclick={showDetail}>
+                                <span class="slds-text-align_center" data-id="dieta-modificada">
+                                    La dieta modificada
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-medium-size_1-of-5">
+                            <div class="container-item slds-align_absolute-center"
+                                data-id="dieta-trigliceridos" onclick={showDetail}>
+                                <span class="slds-text-align_center" data-id="dieta-trigliceridos">
+                                    Dieta de triglicéridos de cadena media (TCM)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-medium-size_1-of-5">
+                            <div class="container-item slds-align_absolute-center"
+                                data-id="dieta-bajo-indice" onclick={showDetail}>
+                                <span class="slds-text-align_center" data-id="dieta-bajo-indice">
+                                    Dieta de bajo índice glucémico (DBIG)
+                                </span>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-medium-size_1-of-1">
+                            <div class="container-details-item">
+                                <div class="show-container-details" data-id="dieta-cetogenica-clasica-details">
+                                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                                            <div style="background-image: url(https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_TERAPIA_CETOGENICA/CETOGENICA-QUE_ES_LA_EPILEPSIA/PP-CETOGENICA-Imagen%205.png);"
+                                                class="imagen-tab slds-align_absolute-center">
+                                            </div>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                                            <p class="texto-tab">
+                                                La dieta cetogenica clásica, es la dieta originalmente diseñada por el Dr. Russell Wilder en la Clínica Mayo en 1921.
+                                                En este tipo de dieta, el 90% de la energía proviene de grasas, y el 10% de la energía el aportada por proteínas (6%) e hidratos de carbono (4%)
+                                                Las grasas son principalmente aportadas por distintos tipos de aceites, crema y manteca. Las proteínas se encuentran principalmente en carnes, huevos y quesos, y los hidratos de carbono predominan en las verduras, las frutas, las harinas y en los distintos tipos de cereales.
+                                                La dieta clásica se considera cuando el ratio cetogénico es de 4:1. Esto significa que por cada 1gr de proteínas e hidratos de carbono se utilizan 4 g de grasa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide-container-details" data-id="dieta-atkins-modificada-details">
+                                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                                            <div style="background-image: url(https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_TERAPIA_CETOGENICA/CETOGENICA-QUE_ES_LA_EPILEPSIA/PP-CETOGENICA-Imagen%206.png);"
+                                                class="imagen-tab slds-align_absolute-center">
+                                            </div>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                                            <p class="texto-tab">
+                                                Es una dieta que permite una mayor incorporación de hidratos de carbono a la misma. Dicha dieta surgió como alternativa terapéutica al ver que algunos pacientes consumían un porcentaje mayor de proteínas y de hidratos de carbono a los establecidos, y que las crisis epilépticas no volvían. En este caso, el 68% de la energía proviene de las grasas, el 26% de la energía proviene de proteínas y el 4% proviene de hidratos de carbono. El ratio cetogénico de la DAM es de 1:1, lo que quiere decir que se compone de 1 gramo de grasa cada 1 g de proteínas + hidratos de carbono
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide-container-details" data-id="dieta-modificada-details">
+                                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                                            <div style="background-image: url(https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_TERAPIA_CETOGENICA/CETOGENICA-QUE_ES_LA_EPILEPSIA/PP-CETOGENICA-Imagen%207.png);"
+                                                class="imagen-tab slds-align_absolute-center">
+                                            </div>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                                            <p class="texto-tab">
+                                                Puede ser útil para iniciar la dieta cetogénica clásica o cuando se pasa a un programa sostenible a largo plazo. En este caso, el 60% de la energía proviene de las grasas, el 30% de la energía proviene de proteínas y el 10% proviene de hidratos de carbono.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide-container-details" data-id="dieta-trigliceridos-details">
+                                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                                            <div style="background-image: url(https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_TERAPIA_CETOGENICA/CETOGENICA-QUE_ES_LA_EPILEPSIA/PP-CETOGENICA-Imagen%208.png);"
+                                                class="imagen-tab slds-align_absolute-center">
+                                            </div>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                                            <p class="texto-tab">
+                                                Este tipo de dieta cetogénica es rica en ácidos grasos de cadena media. El 72 – 75% de la energía proviene de las grasas, de las cuales entre el 30 y el 60% son Triglicéridos de cadena media. El resto de la energía diaria es cubierta en un 15 – 18% por carbohidratos y un 10% de la energía proviene de proteínas. El ratio cetogénico en la DTCM es de 2 gramos de grasas por cada 1 gramo de hidratos de carbono y proteínas. Se ha estudiado que los triglicéridos de cadena media generan niveles de cetonas más altos por kilocaloría por lo que ayudaría en el control de crisis epilépticas.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hide-container-details" data-id="dieta-bajo-indice-details">
+                                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                                            <div style="background-image: url(https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_TERAPIA_CETOGENICA/CETOGENICA-QUE_ES_LA_EPILEPSIA/PP-CETOGENICA-Imagen%209.png);"
+                                                class="imagen-tab slds-align_absolute-center">
+                                            </div>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 slds-align_absolute-center">
+                                            <div class="slds-scrollable_y">
+                                                <div class="slds-text-longform">
+                                                    <p class="texto-tab">
+                                                        Esta dieta la conforma un alto contenido de grasas, y un contenido de hidratos de carbono mayor al resto de las dietas cetogénicas. En la dieta BIG, se busca que los hidratos de carbono que se consumen tengan una respuesta glucemica baja, es decir que como consecuencia de su ingesta no generen valores de glucosa en sangre elevados. Esto se logra controlando la cantidad de hidratos de carbono que se consumen, seleccionando alimentos cuyo índice glucemico es bajo (menor a 50) y combinando dichos alimentos con otros ricos en grasas y fibra para lograr retrasar su respuesta glucemica. Para esta dieta, el 38% de la energía proviene de las grasas, el 17% de la energía proviene de proteínas y el 45% proviene de hidratos de carbono de bajo índice glucémico. Entre los alimentos con predominio de hidratos de carbono de bajo índice glucémico (menor a 50) se encuentran los cereales integrales, las legumbres, los frutos rojos entre otros.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Tabs desktop-->
+    <div class="mobile">
+        <div class="slds-grid slds-wrap">
+            <div class="div-center-mobile_10-of-12">
+                <!--Primer-->
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                    <div class="img-mobile" style="background-image: url(https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_TERAPIA_CETOGENICA/CETOGENICA-QUE_ES_LA_EPILEPSIA/PP-CETOGENICA-Imagen%205.png);">
+                    </div>
+                    <div class="div-texto-mobile-g">
+                        <div class="slds-p-around_large">
+                            <p class="titulo-mobile-v">
+                                Dieta Cetogénica Clásica
+                            </p>
+                            <p class="texto-mobile-v slds-m-top_small">
+                                La dieta cetogenica clásica, es la dieta originalmente diseñada por el Dr. Russell Wilder en la Clínica Mayo en 1921.
+                                En este tipo de dieta, el 90% de la energía proviene de grasas, y el 10% de la energía el aportada por proteínas (6%) e hidratos de carbono (4%)
+                                Las grasas son principalmente aportadas por distintos tipos de aceites, crema y manteca. Las proteínas se encuentran principalmente en carnes, huevos y quesos, y los hidratos de carbono predominan en las verduras, las frutas, las harinas y en los distintos tipos de cereales.
+                                La dieta clásica se considera cuando el ratio cetogénico es de 4:1. Esto significa que por cada 1gr de proteínas e hidratos de carbono se utilizan 4 g de grasa.
+                            </p>    
+                        </div>
+                    </div>
+                </div>
+                <!--Segundo-->
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                    <div class="img-mobile" style="background-image: url(https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_TERAPIA_CETOGENICA/CETOGENICA-QUE_ES_LA_EPILEPSIA/PP-CETOGENICA-Imagen%206.png);">
+                    </div>
+                    <div class="div-texto-mobile-v">
+                        <div class="slds-p-around_large">
+                            <p class="titulo-mobile-c">
+                                Dieta de Atkins modificada (DAM)
+                            </p>        
+                            <p class="texto-mobile-w slds-m-top_small">
+                                Es una dieta que permite una mayor incorporación de hidratos de carbono a la misma. Dicha dieta surgió como alternativa terapéutica al ver que algunos pacientes consumían un porcentaje mayor de proteínas y de hidratos de carbono a los establecidos, y que las crisis epilépticas no volvían. En este caso, el 68% de la energía proviene de las grasas, el 26% de la energía proviene de proteínas y el 4% proviene de hidratos de carbono. El ratio cetogénico de la DAM es de 1:1, lo que quiere decir que se compone de 1 gramo de grasa cada 1 g de proteínas + hidratos de carbono
+                            </p>    
+                        </div>
+                    </div>
+                </div>
+                <!--Tercer-->
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                    <div class="img-mobile" style="background-image: url(https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_TERAPIA_CETOGENICA/CETOGENICA-QUE_ES_LA_EPILEPSIA/PP-CETOGENICA-Imagen%207.png);">
+                    </div>
+                    <div class="div-texto-mobile-g">
+                        <div class="slds-p-around_large">
+                            <p class="titulo-mobile-v">
+                                La dieta modificada
+                            </p>        
+                            <p class="texto-mobile-v slds-m-top_small">
+                                Puede ser útil para iniciar la dieta cetogénica clásica o cuando se pasa a un programa sostenible a largo plazo. En este caso, el 60% de la energía proviene de las grasas, el 30% de la energía proviene de proteínas y el 10% proviene de hidratos de carbono.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Cuarto-->
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                    <div class="img-mobile" style="background-image: url(https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_TERAPIA_CETOGENICA/CETOGENICA-QUE_ES_LA_EPILEPSIA/PP-CETOGENICA-Imagen%208.png);">
+                    </div>
+                    <div class="div-texto-mobile-v">
+                        <div class="slds-p-around_large">
+                            <p class="titulo-mobile-c">
+                                Dieta de triglicéridos de cadena media (TCM)
+                            </p>        
+                            <p class="texto-mobile-w slds-m-top_small">
+                                Este tipo de dieta cetogénica es rica en ácidos grasos de cadena media. El 72 – 75% de la energía proviene de las grasas, de las cuales entre el 30 y el 60% son Triglicéridos de cadena media. El resto de la energía diaria es cubierta en un 15 – 18% por carbohidratos y un 10% de la energía proviene de proteínas. El ratio cetogénico en la DTCM es de 2 gramos de grasas por cada 1 gramo de hidratos de carbono y proteínas. Se ha estudiado que los triglicéridos de cadena media generan niveles de cetonas más altos por kilocaloría por lo que ayudaría en el control de crisis epilépticas.
+                            </p>    
+                        </div>
+                    </div>
+                </div>
+                <!--Quinto-->
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                    <div class="img-mobile" style="background-image: url(https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_TERAPIA_CETOGENICA/CETOGENICA-QUE_ES_LA_EPILEPSIA/PP-CETOGENICA-Imagen%209.png); height: 175px;">
+                    </div>
+                    <div class="div-texto-mobile-g">
+                        <div class="slds-p-around_large">
+                            <p class="titulo-mobile-v">
+                                Dieta de bajo índice glucémico (DBIG)
+                            </p>        
+                            <p class="texto-mobile-v slds-m-top_small">
+                                Esta dieta la conforma un alto contenido de grasas, y un contenido de hidratos de carbono mayor al resto de las dietas cetogénicas. En la dieta BIG, se busca que los hidratos de carbono que se consumen tengan una respuesta glucemica baja, es decir que como consecuencia de su ingesta no generen valores de glucosa en sangre elevados. Esto se logra controlando la cantidad de hidratos de carbono que se consumen, seleccionando alimentos cuyo índice glucemico es bajo (menor a 50) y combinando dichos alimentos con otros ricos en grasas y fibra para lograr retrasar su respuesta glucemica. Para esta dieta, el 38% de la energía proviene de las grasas, el 17% de la energía proviene de proteínas y el 45% proviene de hidratos de carbono de bajo índice glucémico. Entre los alimentos con predominio de hidratos de carbono de bajo índice glucémico (menor a 50) se encuentran los cereales integrales, las legumbres, los frutos rojos entre otros.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+</template>

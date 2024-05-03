@@ -1,0 +1,664 @@
+<apex:page Controller="WhatsappDanone.WhatsAppChatsController" action="{!reassingChatsAndLoadList}" 
+           standardStylesheets="false"
+           lightningStyleSheets="true"
+           applyBodyTag="false"
+           applyHtmlTag="false"
+           showChat="false"
+           showHeader="false">
+    <head>
+        <apex:includeScript value="/support/console/45.0/integration.js"/>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+       
+        
+        
+        <script type="text/javascript" src="{!URLFOR($Resource.cometD4, 'NewCometDWhatsapp/dojo/dojo.js')}" data-dojo-config="async: 1"></script>
+        <apex:includeScript value="{!$Resource.WhatsappDanone__json2_js}"/>
+        
+        
+        
+        <script>
+            function notifyMe() {
+                //console.log("HELLO!!!");
+                //console.log(Notification.permission);
+                // Let's check if the browser supports notifications
+                if (!("Notification" in window)) {
+                    //console.log("This browser does not support system notifications");
+                }
+                
+                // Let's check whether notification permissions have already been granted
+                else if (Notification.permission === "granted") {
+                    //console.log('Notification already granted!!');
+                    // If it's okay let's create a notification
+                    //showNotification('Notifications', 'Notification already granted');
+                }
+                
+                // Otherwise, we need to ask the user for permission
+                    else if (Notification.permission !== 'denied') {
+                        //console.log('denied!!');
+                        Notification.requestPermission(function (permission) {
+                            // If the user accepts, let's create a notification
+                            if (permission === "granted") {
+                                //console.log('You allow notofications');
+                                //showNotification('New Message', 'You allow notofications');
+                            }
+                        });
+                    }    
+                // Finally, if the user has denied notifications and you 
+                // want to be respectful there is no need to bother them any more.
+            }   
+            
+            notifyMe();
+            
+            function showNotification(titleText, bodyText) {
+                var img = 'https://cdn.pixabay.com/photo/2015/08/03/13/58/soon-873316_960_720.png';
+                var notification = new Notification(titleText, { body: bodyText, icon: img });
+            }            
+        </script>
+        <script type="text/javascript">
+            function openCase() {
+                //Open a new primary tab with the salesforce.com home page in it
+                var caseId = document.getElementById('caseElem').innerHTML;
+                sforce.console.openPrimaryTab(null, '/' + caseId, true);
+            }
+        
+        	function showCreate(){
+                var msgs = document.getElementById('msgs');
+                var sends = document.getElementById('sends');
+                var nr = document.getElementById('newRecord');
+                
+                msgs.style.display = "none"; 
+                sends.style.display = "none"; 
+                nr.style.display = "block";
+            }
+            
+        	function hideCreate(){
+                var msgs = document.getElementById('msgs');
+                var sends = document.getElementById('sends');
+                var nr = document.getElementById('newRecord');
+                
+                msgs.style.display = "block"; 
+                sends.style.display = "block"; 
+                nr.style.display = "none";
+            }
+        
+            var openSuccess = function openSuccess(result) {
+            };
+        </script>
+        <script type="text/javascript">
+             var token = '{!$Api.Session_ID}';
+             var channel = null;
+             var connected = false;
+             var topicsubscriptionNewMessages = false;    
+             var topicsubscriptionCaseChangeOwner = false;    
+             var cometd;
+        
+             var clickHandler = function (result) {
+                 sforce.console.blinkCustomConsoleComponentButtonText('Whatsapp Chat', 500, null);
+	        };
+        
+    	    sforce.console.onCustomConsoleComponentButtonClicked(clickHandler);	            
+        
+	        var checkWindowVisibility = function checkWindowVisibility(result) {
+            	if(result.hidden){
+                	sforce.console.blinkCustomConsoleComponentButtonText('Nuevo Mensaje', 500, null);
+                }
+            }
+                
+            require(['dojo/ready', 'dojox/cometd', 'dojo/dom', 'dojo', 'dojo/query'], function(ready){
+                 ready(function(){
+                     cometd = dojox.cometd;
+                    
+                    
+                     //--------------------- DEBUG FUNCTIONS ---------------------
+                     function metaConnectListener(message) {
+                         var wasConnected = connected;
+                         connected = message.successful;
+                         if (!wasConnected && connected) {                
+                             display('DEBUG: Connection Successful : '+JSON.stringify(message)+'<br>');                                    
+                         } else if (wasConnected && !connected) {
+                             display('DEBUG: Disconnected from the server'+JSON.stringify(message)+'<br>');
+                         }
+                     }
+                    
+                     function metaHandshakeListener(message) {
+                         if (message.successful) {
+                             display('<br> DEBUG: Handshake Successful: '+JSON.stringify(message)+' <br>');
+                         } else {
+                             display('DEBUG: Handshake Unsuccessful: '+JSON.stringify(message)+' <br>');
+                         }
+                     }
+                    
+                     function metaDisconnectListener(message) {
+                         display('DEBUG: /meta/disconnect message: '+JSON.stringify(message)+' <br>');
+
+                     }
+                    
+                     function metaSubscribeListener(message) {  
+                         if (message.successful) {
+                             display('DEBUG: Subscribe Successful '+channel+': '+JSON.stringify(message)+' <br>');
+                         } else {
+                             display('DEBUG: Subscribe Unsuccessful '+channel+': '+JSON.stringify(message)+' <br>');                
+                         }    
+                     };
+                    
+                     function metaUnSubscribeListener(message) {  
+                         if (message.successful) {
+                             display('DEBUG: Unsubscribe Successful '+JSON.stringify(message)+' <br>');
+                         } else {
+                             display('DEBUG: Unsubscribe Unsuccessful '+JSON.stringify(message)+' <br>');                
+                         }
+                     };
+                    
+                     function metaUnSucessfulListener(message) {  
+                         display('DEBUG:  /meta/unsuccessful Error: '+JSON.stringify(message)+' <br>');
+                        
+                     };
+                    
+                     function display(text) {
+                         //console.log(text);
+                     }
+                     // -------------------------------------------------------------------------------------
+                    
+                    
+                     function receive(message) {
+                         //console.log(message.data);
+                     }
+                     function receiveNewMessage(message) {
+
+                         //console.log(document.getElementById('{!$Component.chats.selectedCaseId}'));
+                         //
+                         /*Esto es null siempre, a menos que se abra un caso en el chat de utilidades.*/
+                                     var caseId = document.getElementById('{!$Component.chats.selectedCaseId}').innerHTML;
+                         /*      console.log('caseID: ' + caseId);
+                                     console.log('Message.data.sobject.case__C: ' + message.data.sobject.Case__c);
+                                     if(message.data.sobject.Case__c == caseId){
+                                         showNotification('Whatsapp', 'Nuevo mensaje recibido');
+                                         loadChatJS(caseId);
+                                     }*/
+                         var queueId = '{!caseQueue.Id}';
+                         //Truncate id to get the first 15 characters
+                         queueId = queueId.substring(0, 15);
+                         var userId = '{!$User.Id}';
+                         //Truncate id to get the first 15 characters
+                         userId = userId.substring(0, 15);
+                         //console.log('queueId: ' + queueId);
+                         //console.log('userId: ' + userId);
+                         //console.log('message.data.sobject.OwnerId: ' + message.data.sobject.Case_Owner__c);
+                         //console.log('message.data.sobject.OwnerId: ' + message.data.sobject.WhatsappDanone__Case_Owner__c); 
+                         //if(message.data.sobject.Case_Owner__c  == queueId || message.data.sobject.Case_Owner__c == userId){
+                         if(message.data.sobject.WhatsappDanone__Case_Owner__c == queueId || message.data.sobject.WhatsappDanone__Case_Owner__c == userId){
+                             showNotification('Whatsapp', 'Nuevo mensaje recibido');
+                             if(caseId !== null){
+                                loadChatJS(caseId);
+                             }
+                             loadChatsListJS();
+                             sforce.console.isCustomConsoleComponentHidden(checkWindowVisibility);
+                         }
+                     }                    
+                        
+                     function receiveCaseChangeOwnership(message) {
+                         var queueId = '{!caseQueue.Id}';
+                         var userId = '{!$User.Id}';
+                         if(message.data.sobject.OwnerId == queueId || message.data.sobject.OwnerId == userId){
+                             showNotification('Whatsapp', 'Nuevo chat recibido');
+                             loadChatsListJS();
+                             //sforce.console.blinkCustomConsoleComponentButtonText('Nuevo Mensaje', 500, null);
+                             sforce.console.isCustomConsoleComponentHidden(checkWindowVisibility);
+                         }
+                     }
+                        
+                     cometd.websocketEnabled = false;
+                     var auth = 'OAuth ' + token;
+                     var cometdURL = window.location.protocol+'//'+window.location.hostname+ (null != window.location.port ? (':'+window.location.port) : '') +'/cometd/40.0/';
+                    
+                     cometd.configure({
+                         url: cometdURL,
+                         appendMessageTypeToURL : false, //SF Doesn't support appendMessageTypeToURL,
+                         logLevel: 'debug',
+                         requestHeaders: { Authorization: auth}
+                     });
+                        
+                        
+                     //--------------------- DEBUG FUNCTIONS ---------------------
+                     cometd.addListener('/meta/connect', metaConnectListener);
+                     cometd.addListener('/meta/handshake', metaHandshakeListener);
+                     cometd.addListener('/meta/disconnect', metaDisconnectListener);
+                     cometd.addListener('/meta/subscribe', metaSubscribeListener);
+                     cometd.addListener('/meta/unsubscribe', metaUnSubscribeListener);
+                     cometd.addListener('/meta/unsuccessful', metaUnSucessfulListener);
+                    
+                    
+
+                     //cometd.handshake(); 
+                     //We wait for the handshakeReply 
+                    
+                     cometd.handshake(function(handshakeReply){
+                         if (handshakeReply.successful) {    
+
+                             topic = '/topic/NewWhatsppMessage';                    
+                             topicsubscriptionNewMessages = cometd.subscribe('/topic/NewWhatsppMessage', receiveNewMessage); 
+
+                             topic = '/topic/CaseChangeOwnership';
+                             topicsubscriptionCaseChangeOwner = cometd.subscribe('/topic/CaseChangeOwnership', receiveCaseChangeOwnership);  
+
+                         }else{
+                             //console.log('Something went wrong on handshakeReply');
+                             //console.log(handshakeReply);
+                         } 
+                     });
+                   
+                });
+             });
+      
+//window.onbeforeunload = disconnect;
+        </script>
+        <script>
+            function clearValue(){
+                document.getElementById('{!$Component.chats:newMessage}').value = '';
+            }
+        </script>
+        <style>
+            body {
+               margin: 0 auto;
+            }
+               
+            body a { 
+               font-weight: bold;
+               color: #8e8e8e;
+            }
+               
+            body a:hover {
+               text-decoration: none;
+               color: #a9a5a5;
+               font-weight: normal;
+            }
+               
+            body a:visited {
+               color: #a9a5a5;
+               font-weight: normal;
+               text-decoration: none;
+            }
+               
+            a {
+               color: #000;
+               padding-top: 10px !important;
+               text-decoration: none;
+               line-height: 1.5em;
+            }
+               
+            h1, h2, h3, h4, h5, h6 {
+               font-weight: bold;
+               font-size: 1.3em;
+            }
+               
+            .widget-header {
+               width: 100%;
+               height: 12%;
+               background: #f2fafc;
+               opacity: .91;
+            }
+               
+            form {
+               margin: 0;
+               padding: 0;
+               width: 100%;
+               /*overflow: auto;*/
+            }
+               
+               
+            .container {
+               border: 2px solid #dedede;
+               background-color: #DCF8C6;
+               border-radius: 5px;
+               padding: 0.2% 1%;
+               margin: 0.5% 0 auto;
+               width: auto;
+               min-width: 15%;
+               max-width: 80%;
+               display: flow-root;
+               overflow-wrap: break-word;
+               word-wrap: break-word;
+               float: right; 
+            }
+               
+            .container p {
+               margin: 1% auto;
+            }
+               
+               
+            .darker {
+               border-color: #ccc;
+               background-color: #fff;
+               float: left;
+            }
+               
+            /*            
+            .container::after {
+               content: "";
+               clear: both;
+               display: table;
+            }
+            */
+               
+            .Message {
+               background-color: #ECE5DD;
+               padding: 3% 2% 1% 2%;
+               margin: 0;
+               overflow: auto;
+               height: 60vh;
+            }
+               
+            .Message h2 {
+               color:#CCC;
+            }
+               
+            .Send{
+               width: 100%;
+               float: right;
+               background: #f7f7f7;
+               margin-top: 1%;
+            }
+               
+            .BlockChat {
+            	background: #f7f7f7;
+            	height: 100%;
+            	display: flex;
+            	flex-direction: column;
+            	flex-wrap: nowrap;
+            	justify-content: flex-start;
+            	padding-top: 5px;
+            }
+               
+            .MyChats-container {
+            	border-bottom: 1px solid #e0e0e0;
+            	padding: 2%;
+            	height: 100px;
+            	flex-grow: 1;
+            }
+            
+            .MyChats {
+            	overflow: auto;
+            	height: 100%;
+            }
+            
+            .OtherChats-container {
+            	padding: 2%;
+            	flex-grow: 1;
+            	height: 100px;
+            }
+            
+            .OtherChats {
+            	overflow: auto;
+            	height: 100%;
+            }
+               
+            .time-right {
+               float: right;
+               color: #aaa;
+            }
+               
+            .time-left {
+               float: left;
+               color: #999;
+            }
+               
+            .Mychats::-webkit-scrollbar-track{
+               -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+               background-color: #F5F5F5;
+            }
+               
+            .Mychats::-webkit-scrollbar{
+               width: 6px;
+               background-color: #F5F5F5;
+            }
+               
+            .Mychats::-webkit-scrollbar-thumb{
+               background-color: #000000;
+            }
+                  
+            .Mychats::-webkit-scrollbar-track{
+               -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+               background-color: #F5F5F5;
+            }
+               
+            .Mychats::-webkit-scrollbar{
+               width: 6px;
+               background-color: #F5F5F5;
+            }
+               
+            .Mychats::-webkit-scrollbar-thumb{
+               background-color: #000000;
+            }
+               
+            .BlockChat::-webkit-scrollbar-track{
+               -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+               background-color: #F5F5F5;
+            }
+               
+            .BlockChat::-webkit-scrollbar{
+               width: 6px;
+               background-color: #F5F5F5;
+            }
+               
+            .BlockChat::-webkit-scrollbar-thumb{
+               background-color: #000000;
+            }
+                  
+            .BlockChat::-webkit-scrollbar-track{
+               -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+               background-color: #F5F5F5;
+            }
+               
+            .BlockChat::-webkit-scrollbar{
+               width: 6px;
+               background-color: #F5F5F5;
+            }
+               
+            .BlockChat::-webkit-scrollbar-thumb{
+               background-color: #000000;
+            }
+               
+            .BlockMessage{
+               heigth: 400px;
+               overflow: auto;
+            }
+               
+            input {
+               padding-top: 0;
+               width: 99.5%;
+               height: 3em;
+               margin-bottom: 1px;
+               margin-right: 1%;
+               margin-left: 1px;
+               margin-top: 3px;
+            }
+               
+            body input.btn, body input.btnDisabled, body input.btnCancel {
+               padding: 4px 3px;
+               margin-top: 2%;
+               width: 100%;
+               margin: auto;
+            }
+               
+            .btn, .button, .formulaButton, .btnWhatsNew {
+               font-family: 'Verdana','Geneva',sans-serif;
+               background-repeat: repeat-x;
+               background-position: left top;
+               border-top: none;
+               border-left: none;
+               font-size: 80%;
+               padding: 1px 3px;
+               cursor: pointer;
+               font-weight: bold;
+               display: inline;
+            }
+               
+            body button, body .x-btn, body .btn, body .btnDisabled, body .btnCancel, body .menuButton .menuButtonButton {
+               color: #333;
+               margin: 1px;
+               padding: 2px 3px;
+               border: 1px solid #b5b5b5;
+               border-bottom-color: #7f7f7f;
+               background: #e8e8e9 url(/img/alohaSkin/btn_sprite.png) repeat-x right top;
+               font-weight: bold;
+               font-size: 1em;
+            }
+               
+            .titleChats {
+               color:#34B7F1;
+            }
+               
+            .MsgText {
+               background-color: #f5f5f5;
+               padding: 3% 2% 1% 2%;
+               overflow: auto;
+               margin-top: 2%;
+               color: #b1b1b1;
+            }
+               
+            .BlockRigth {
+               /*width: 60%;*/
+               height: 100%;
+               /*float: right;*/
+            }
+               
+            .slds-scope .slds-truncate {
+               max-width: 100%;
+               overflow: auto;
+               /* text-overflow: clip; */
+               white-space: nowrap;
+            }
+            
+            #urlMessage a:hover{
+               font-weight: bold;
+            }
+            
+            .containerdivNewLine {
+               clear: both; 
+               display: block;
+            }
+        </style>
+    </head>
+    <apex:slds />
+    <body class="slds-scope slds-col slds-size_6-of-6">
+        <apex:form id="chats" style="width: 100%;height: 380px;" >
+            <div class="slds-grid">
+                <apex:outputPanel layout="block" styleClass="slds-col slds-size_2-of-6" id="chatsList">
+                    <div class="BlockChat" >
+                        <div class="MyChats-container">
+                        	<div class="MyChats">
+                                <h3 class="titleChats">Mis chats</h3>
+                                <br/>
+                                <apex:repeat value="{!myCases}" var="c">
+                                    <apex:commandLink value="{! If(c.Contact.Name != '',c.Contact.Name,If(c.Account.Name != '',c.Account.Name,c.Telefono__c)) }" onclick="loadChatJS('{!c.Id}')" reRender="none"/> 
+                                    <br/>
+                                </apex:repeat>
+                            </div>    
+                        </div>
+                        
+                        <div class="OtherChats-container">   
+                            <div class="OtherChats">
+                                <h3 class="titleChats" >Otros chats</h3>
+                                <br/>
+                                <apex:repeat value="{!queueCases}" var="c">
+                                    <apex:commandLink value="{! If(c.Contact.Name != '',c.Contact.Name,If(c.Account.Name != '',c.Account.Name,c.Telefono__c)) }" onclick="assignChatJS('{!c.Id}')" reRender="none"/>
+                                    <br />
+                                </apex:repeat>
+                            </div>
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                <apex:outputPanel layout="block" styleClass="slds-col slds-size_4-of-6" id="chatPanel">
+                    <div class="BlockRigth">
+                        <apex:outputPanel id="caseTitle" layout="block" styleclass="MsgText">
+                            <h2>Mensajes del caso:</h2>
+                            <h2><apex:outputText id="chatName" value="{!IF(ISBLANK(caseContactOrPhone), '-', caseContactOrPhone)}"/></h2>
+                            <a href="#" onClick="openCase();return false" style="{! If(selectedCaseId == null ,'display: none;','display: inline')}">Abrir Caso</a>
+                            <a href="#" onClick="showCreate();return false" style="{! If(selectedCaseId == null ,'display: none;','display: inline')}">Crear Nuevo Registro</a>
+                        </apex:outputPanel>
+                        <div class="Message" id='msgs'>    
+                            <apex:outputPanel id="theChat">
+                                <div id="caseElem" style="display: none;">{!selectedCaseId}</div>
+                                <div class="BlockMessage" id="msgList">   
+                                    <apex:outputText value="{!selectedCaseId}" id="selectedCaseId" style="display: none;" />                
+                                    <apex:repeat value="{!chatMessages}" var="m">
+                                        <div class="{! If(m.Type__c =='Enviado por el cliente' ,'container darker','container') }">
+                                            <p class="slds-has-flexi-truncate" align="{! If(m.Type__c =='Enviado por el cliente' ,'left','right')}">
+                                                <apex:outputText value="{!m.WhatsappDanone__Message__c}" escape="false"/>
+                                            </p>
+                                            <span class="{! If(m.Type__c =='Enviado por el cliente' ,'time-left','time-right') }" >
+                                                <!-- <apex:outputText value="{0,date,dd/MM/yy HH:mm:ss} ">
+                                                    <apex:param value="{!m.CreatedDate + 7/24}" />
+                                                </apex:outputText> -->
+                                                <apex:outputField value="{!m.CreatedDate}"/>
+                                            </span>
+                                        </div>
+                                        <div class="containerdivNewLine"></div>
+                                    </apex:repeat>
+                                    <div class="containerdivNewLine" id="lastElem"></div>
+                                </div>
+                            </apex:outputPanel>
+                        </div> 
+                        <div class="Send" id="sends">
+                            <apex:outputPanel id="newMessageBlock">  
+                                <apex:inputText id="newMessage" value="{!newMessage}" html-autocomplete="off" disabled="{! If(selectedCaseId == null ,'true','false')}" onkeypress="doit_onkeypress(event);"/>
+                                <apex:commandButton id="sendbtn" action="{!sendMessage}" value="Enviar" oncomplete="loadChatJS('{!selectedCaseId}')" reRender="none" disabled="{! If(selectedCaseId == null,'true','false')}"/>
+                            </apex:outputPanel>
+                        </div>
+                        <div class="Send" id="newRecord" style="display:none;">
+                            <apex:outputPanel id="newRecordBlock">  
+                                <h3 class="titleChats" >Nombre</h3>
+                                <apex:inputText id="newRecordName" value="{!newRecordName}" html-autocomplete="off" onkeypress="doit_onkeypress(event);"/>
+                                <h3 class="titleChats" >Apellido</h3>
+                                <apex:inputText id="newRecordLastname" value="{!newRecordLastname}" html-autocomplete="off" onkeypress="doit_onkeypress(event);"/>
+                                <apex:commandButton id="createAcc" onclick="createAccountJS('{!selectedCaseId}')" value="Crear Cuenta" reRender="chatsList,theChat,chatName,newMessageBlock,caseTitle,newRecordBlock" />
+                                <br/>
+                                <apex:commandButton id="createCnt" onclick="createContactJS('{!selectedCaseId}')" value="Crear Contacto" reRender="chatsList,theChat,chatName,newMessageBlock,caseTitle,newRecordBlock" />
+                                <br/>
+                                <apex:commandButton id="cancelCreate" action="{!cancelCreate}" value="Cancelar" oncomplete="hideCreate()"/>
+                            </apex:outputPanel>
+                        </div>
+                    </div>   
+                </apex:outputPanel>
+            </div>
+            <!------------------------------------------------->
+            <apex:actionFunction name="loadChatJS" action="{!loadChat}" oncomplete="clearValue();scrollToBottom();" reRender="theChat,chatName,newMessageBlock,caseTitle,newRecordBlock">
+                <apex:param name="caseId" value=""/>
+            </apex:actionFunction>
+            <apex:actionFunction name="assignChatJS" action="{!assignChat}" oncomplete="clearValue();scrollToBottom();" reRender="chatsList,theChat,chatName,newMessageBlock,caseTitle,newRecordBlock">
+                <apex:param name="caseId" value=""/>
+            </apex:actionFunction>
+            <apex:actionFunction name="createAccountJS" action="{!createAccount}" oncomplete="hideCreate()" reRender="chatsList,theChat,chatName,newMessageBlock,caseTitle,newRecordBlock">
+                <apex:param name="caseId" value=""/>
+            </apex:actionFunction>
+            <apex:actionFunction name="createContactJS" action="{!createContact}" oncomplete="hideCreate()" reRender="theChat,chatName,newMessageBlock,caseTitle,newRecordBlock">
+                <apex:param name="caseId" value=""/>
+            </apex:actionFunction>
+            <apex:actionFunction name="loadChatsListJS" action="{!loadChatsList}" oncomplete="clearValue();scrollToBottom();" reRender="chatsList"/>
+            </apex:form>    
+        <script type='text/javascript'> 
+        /*
+            var timer = window.setInterval(recursivecall,5000);
+            function recursivecall() {
+                lookForNewMessagesJS();
+                loadChatJS();
+            }
+        */  
+            function scrollToBottom(){
+                document.getElementById("lastElem").scrollIntoView();
+            }
+            
+            function doit_onkeypress(event){
+                console.log('{!newMessage}');
+                if (event.keyCode == 13 || event.which == 13){
+                    var ele = document.getElementById('{!$Component.chats.sendbtn}');      
+                    ele.click();
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+            }    
+        
+        </script> 
+    </body>
+</apex:page>

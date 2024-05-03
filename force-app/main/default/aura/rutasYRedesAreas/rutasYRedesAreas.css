@@ -1,0 +1,44 @@
+.THIS {
+}
+
+.THIS .rutas{
+    font-family:MontserratSemiBold;
+    color:#606060;
+    font-size: 10px;
+}
+
+.THIS .redes{
+    font-family:MontserratSemiBold;
+    color:#606060;
+    font-size: 10px;
+    text-align: right;
+}
+
+.THIS .iconos{
+    margin-left: 2%;
+    cursor: pointer;
+    width: 5%;
+}
+
+@media (max-width: 600px) {
+    .THIS{
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    .THIS .redes{
+        font-family:MontserratSemiBold;
+        color:#606060;
+        font-size: 2.2vw;
+        text-align: right;
+    }
+    .THIS .rutas{
+        font-family:MontserratSemiBold;
+        color:#606060;
+        font-size: 2.2vw;
+    }
+    .THIS .iconos{
+        margin-left: 2%;
+        cursor: pointer;
+        width: 15%;
+    }
+}

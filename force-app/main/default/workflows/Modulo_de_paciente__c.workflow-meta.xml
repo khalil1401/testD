@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Renovacion_al_KAM</fullName>
+        <description>Renovación al KAM</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Renovacion_al_KAM</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Fecha_de_carga_de_pedido_en_Oracle_hoy</fullName>
+        <field>Fecha_de_carga__c</field>
+        <formula>TODAY()</formula>
+        <name>Fecha de carga de pedido en Oracle hoy</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Modulo_activo</fullName>
+        <field>Estado__c</field>
+        <literalValue>Activo</literalValue>
+        <name>Módulo activo</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Modulo_hasta</fullName>
+        <field>Modulo_hasta__c</field>
+        <formula>Modulo_desde__c + Duracion_modulo__c - 1</formula>
+        <name>Modulo hasta</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Modulo_inactivo</fullName>
+        <field>Estado__c</field>
+        <literalValue>Inactivo</literalValue>
+        <name>Módulo inactivo</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Fecha de carga de pedido en Oracle</fullName>
+        <actions>
+            <name>Fecha_de_carga_de_pedido_en_Oracle_hoy</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Al tildar el campo Pedido cargado en Oracle, se agrega la fecha de hoy al campo Fecha de carga</description>
+        <formula>Pedido_cargado_en_Oracle__c</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Fecha de fin de módulo</fullName>
+        <actions>
+            <name>Modulo_hasta</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Calcula la fecha de fin de módulo sumando la fecha de inicio y la cantidad de días</description>
+        <formula>OR(   ISCHANGED(Duracion_modulo__c),   AND(     ISNEW(),     NOT(ISBLANK(Duracion_modulo__c))   ),   ISCHANGED( Modulo_desde__c ) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Fin de vigencia de módulo</fullName>
+        <active>false</active>
+        <description>Cuando llega la fecha de fin de la vigencia del módulo, su estado pasa a inactivo</description>
+        <formula>NOT(ISBLANK( Modulo_hasta__c ))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Modulo_inactivo</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Modulo_de_paciente__c.Modulo_hasta__c</offsetFromField>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Gestionar capacitacion</fullName>
+        <actions>
+            <name>Gestionar_capacitaci_n_modulo</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Modulo_de_paciente__c.Cont_Productos_Activos_Compania__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Modulo vigente a futuro</fullName>
+        <active>false</active>
+        <description>Cambia el estado del módulo a Activo cuando la fecha de inicio llega</description>
+        <formula>Modulo_desde__c &gt;= TODAY()</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Modulo_activo</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Modulo_de_paciente__c.Modulo_desde__c</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Motivo de no renovacion Ausente</fullName>
+        <actions>
+            <name>No_renovacion_por_faltante_error_rotura_ausente</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Modulo_de_paciente__c.Motivo_de_no_renovacion__c</field>
+            <operation>equals</operation>
+            <value>Ausente</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Motivo de no renovacion Error OC</fullName>
+        <actions>
+            <name>Modulo_no_renovado_por_error_OC_BC</name>
+            <type>Task</type>
+        </actions>
+        <actions>
+            <name>No_renovacion_por_faltante_error_rotura_ausente</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Modulo_de_paciente__c.Motivo_de_no_renovacion__c</field>
+            <operation>equals</operation>
+            <value>Error OC</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Motivo de no renovacion Fallecimiento con activos</fullName>
+        <actions>
+            <name>Modulo_rechazado_por_fallecimiento_a_PSP</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <formula>AND( ISPICKVAL( Motivo_de_no_renovacion__c, &apos;Fallecimiento&apos;), Cuenta__r.Productos_activos_compania__c &gt; 0 )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Motivo de no renovacion Faltante</fullName>
+        <actions>
+            <name>No_renovacion_por_faltante_error_rotura_ausente</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Modulo_de_paciente__c.Motivo_de_no_renovacion__c</field>
+            <operation>equals</operation>
+            <value>Faltante</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Motivo de no renovacion No pedido</fullName>
+        <actions>
+            <name>No_renovacion_por_no_pedido_a_psp</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Modulo_de_paciente__c.Motivo_de_no_renovacion__c</field>
+            <operation>equals</operation>
+            <value>No Pedido</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Motivo de no renovacion Rotura</fullName>
+        <actions>
+            <name>No_renovacion_por_faltante_error_rotura_ausente</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Modulo_de_paciente__c.Motivo_de_no_renovacion__c</field>
+            <operation>equals</operation>
+            <value>Rotura</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Motivo de no renovacion direccion erronea</fullName>
+        <actions>
+            <name>Rechazo_por_direccion_erronea</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Modulo_de_paciente__c.Motivo_de_no_renovacion__c</field>
+            <operation>equals</operation>
+            <value>Dirección Errónea</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Módulo no vigente</fullName>
+        <actions>
+            <name>Modulo_inactivo</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>Modulo_hasta__c &lt;= TODAY()</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Módulo vigente</fullName>
+        <actions>
+            <name>Modulo_activo</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>Modulo_hasta__c &gt;= TODAY()</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notificación de vencimiento de módulo</fullName>
+        <active>false</active>
+        <formula>AND(   NOT(ISBLANK( Modulo_hasta__c )),   TEXT(Estado__c)= &apos;Activo&apos; )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>El_modulo_est_por_vencer</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Modulo_de_paciente__c.Modulo_hasta__c</offsetFromField>
+            <timeLength>-10</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Recordatorio mensual de renovación de módulo</fullName>
+        <active>false</active>
+        <formula>Modulo_hasta__c &gt; TODAY()</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Recordatorio_mensual_de_renovacion_de_modulo</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Modulo_de_paciente__c.Modulo_desde__c</offsetFromField>
+            <timeLength>83</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Recordatorio_mensual_de_renovacion_de_modulo</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Modulo_de_paciente__c.Modulo_desde__c</offsetFromField>
+            <timeLength>53</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Recordatorio_mensual_de_renovacion_de_modulo</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Modulo_de_paciente__c.Modulo_desde__c</offsetFromField>
+            <timeLength>113</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Recordatorio_mensual_de_renovacion_de_modulo</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Modulo_de_paciente__c.Modulo_desde__c</offsetFromField>
+            <timeLength>23</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Renovación de módulo</fullName>
+        <actions>
+            <name>Verificar_datos_para_entrega_Renovaci_n</name>
+            <type>Task</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Account.Cantidad_de_modulos_de_paciente__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Modulo_de_paciente__c.Renovacion__c</field>
+            <operation>equals</operation>
+            <value>Sí</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Vigencia de módulo</fullName>
+        <active>false</active>
+        <description>Cuando llega la fecha de fin de la vigencia del módulo, su estado pasa a inactivo</description>
+        <formula>NOT(ISBLANK( Modulo_hasta__c ))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Modulo_inactivo</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Modulo_de_paciente__c.Modulo_hasta__c</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <tasks>
+        <fullName>El_modulo_est_por_vencer</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>-1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Modulo_de_paciente__c.Modulo_hasta__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>El módulo está por vencer</subject>
+    </tasks>
+    <tasks>
+        <fullName>Gestionar_capacitaci_n_modulo</fullName>
+        <assignedTo>noemi.silva@danone.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Crear caso con las siguientes características, según corresponda:
+• Tipo: Gestión
+• Subtipo: Profesionales de la salud
+• Motivo: Capacitación presencial / Capacitación telefónica</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Gestionar capacitación</subject>
+    </tasks>
+    <tasks>
+        <fullName>Llamado_de_seguimiento</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>30</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Modulo_de_paciente__c.Modulo_desde__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Llamado de seguimiento</subject>
+    </tasks>
+    <tasks>
+        <fullName>Modulo_no_renovado_por_error_OC_BC</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Cargar el pedido en sistema, tiene 2 hs para realizar esta acción.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Módulo no renovado por error OC</subject>
+    </tasks>
+    <tasks>
+        <fullName>Modulo_rechazado_por_fallecimiento_a_PSP</fullName>
+        <assignedTo>julieta.cremona@danone.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Operaciones cargó el rechazo para este paciente. Motivo: Fallecimiento. Por favor, coordinar el retiro de activos, a partir de las 48hs de recibir el aviso.</description>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Módulo rechazado por fallecimiento</subject>
+    </tasks>
+    <tasks>
+        <fullName>No_renovacion_por_faltante_error_rotura_ausente</fullName>
+        <assignedTo>julieta.cremona@danone.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Operaciones cargó el rechazo este paciente. Por favor, Avisar al paciente que se entregará el pedido completo dentro de las próximas hs. Tiene 2hs para realizar esta acción.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>No renovación de módulo</subject>
+    </tasks>
+    <tasks>
+        <fullName>No_renovacion_por_no_pedido_a_psp</fullName>
+        <assignedTo>julieta.cremona@danone.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Operaciones cargó el rechazo para este paciente. Motivo: No pedido. Por favor, consultar con el familiar el motivo de no pedido y avisar a @EquipoBestCare. Tiene 24hs para llevar a cabo esta acción.</description>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>No renovación por no pedido</subject>
+    </tasks>
+    <tasks>
+        <fullName>Paciente_en_Seguimiento_Alergia</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>15</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Modulo_de_paciente__c.Modulo_desde__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Paciente en Seguimiento Alergia</subject>
+    </tasks>
+    <tasks>
+        <fullName>Paciente_en_tratamiento_Alergia</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>30</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Modulo_de_paciente__c.Modulo_desde__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Paciente en tratamiento Alergia</subject>
+    </tasks>
+    <tasks>
+        <fullName>Rechazo_por_direccion_erronea</fullName>
+        <assignedTo>julieta.cremona@danone.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Operaciones cargó el rechazo para este paciente. Motivo:Dirección errónea. Por favor,Confirmar con el paciente su dirección y avisar que volveran a enviar el pedido completo dentro de las próximas hs. Tiene 2hs para realizar esta acción.</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Rechazo por dirección errónea</subject>
+    </tasks>
+    <tasks>
+        <fullName>Recordatorio_mensual_de_renovacion_de_modulo</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>En 7 días vence el Tratamiento del paciente. Por favor, cargar nueva autorización en CRM, caso contrario darlo de baja en el mismo sistema. Tiene 48hs para completar esta acción.</description>
+        <dueDateOffset>2</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Recordatorio mensual de renovación de módulo</subject>
+    </tasks>
+    <tasks>
+        <fullName>Verificar_datos_para_entrega_Renovaci_n</fullName>
+        <assignedTo>Operador_PSP</assignedTo>
+        <assignedToType>role</assignedToType>
+        <dueDateOffset>1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Abierta</status>
+        <subject>Verificar datos para entrega- Renovación</subject>
+    </tasks>
+</Workflow>

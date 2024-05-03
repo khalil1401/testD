@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cuando_noto_los_sintomas__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Despues de cuantas tomas ocurrieron los sitomas?</inlineHelpText>
+    <label>¿Cuando se presetaron los sintomas?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

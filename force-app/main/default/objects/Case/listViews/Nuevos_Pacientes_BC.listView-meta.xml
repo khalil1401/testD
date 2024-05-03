@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nuevos_Pacientes_BC</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>CASES.CLOSED</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Nuevo_paciente</value>
+    </filters>
+    <label>Nuevos Pacientes BC</label>
+</ListView>

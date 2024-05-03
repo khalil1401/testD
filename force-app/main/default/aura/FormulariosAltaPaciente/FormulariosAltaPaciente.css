@@ -1,0 +1,55 @@
+.THIS {
+}
+
+.THIS .button{
+    background-color: #313183;
+    border-radius: 5px;
+    border: transparent;
+    font-family: MontserratSemiBold;
+    font-size: 0.9rem;
+    color: white;
+    padding: 4px 16px;
+}
+
+.THIS .back-button{
+    background-color: white;
+    border-radius: 5px;
+    border: solid 1px #313183;
+    font-family: MontserratSemiBold;
+    font-size: 0.9rem;
+    color: #313183;
+    padding: 4px 16px;
+    margin-right: 10px;
+}
+
+.THIS .button:hover{
+    opacity: 0.7;
+}
+
+.THIS .back-button:hover{
+    opacity: 0.7;
+}
+
+.THIS .spins::after {
+    position: absolute;
+    font-family: MontserratSemiBold;
+    font-size: 1rem;
+    color: #313183;
+    content: 'Aguarde un instante hasta que finalice el proceso';
+    width: 100%;
+    text-align: center;
+    top: calc(50% + 3em);
+    padding-left: 42%;
+    padding-right: 42%;
+}
+
+@media (max-width: 600px) {
+    .THIS .button{
+        max-width: 150px;
+    }
+    
+    .THIS .spins::after {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}

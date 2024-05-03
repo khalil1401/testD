@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_de_baja_Requerida</fullName>
+    <active>true</active>
+    <description>Debe ser obligatorio cuando se cambia al estado y todos los subestado de &apos;&apos;No tratamiento&apos;&apos; o &apos;&apos;Fin de tratamiento&apos;&apos; menos con el subestado &apos;&apos;Fallecido&apos;&apos;.</description>
+    <errorConditionFormula>IF(
+AND(
+ISBLANK(Fecha_de_obito__c),
+ISCHANGED(Estado_de_paciente__c),
+OR (RecordType.DeveloperName = &apos;Paciente_Best_Care&apos;, RecordType.DeveloperName = &apos;Paciente_Regular&apos;),
+OR(
+ISPICKVAL(Estado_de_paciente__c, &apos;No tratamiento&apos;),
+ISPICKVAL(Estado_de_paciente__c, &apos;Fin de tratamiento&apos;)
+),
+NOT(ISPICKVAL( Subestado_del_paciente__c, &apos;Fallecido&apos;))
+),
+True,
+false
+)</errorConditionFormula>
+    <errorDisplayField>Fecha_de_obito__c</errorDisplayField>
+    <errorMessage>La fecha de baja es requerida en subestado &apos;&apos;No tratamiento&apos;&apos; y &apos;&apos;Fin de tratamiento&apos;&apos;</errorMessage>
+</ValidationRule>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subtipo_de_tumor__c</fullName>
+    <externalId>false</externalId>
+    <label>Subtipo de tumor</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Clasificaci_n_seg_n_CIE_10__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tumor de esófago</fullName>
+                <default>false</default>
+                <label>Tumor de esófago</label>
+            </value>
+            <value>
+                <fullName>Tumor de estómago</fullName>
+                <default>false</default>
+                <label>Tumor de estómago</label>
+            </value>
+            <value>
+                <fullName>Tumor de intestino delgado</fullName>
+                <default>false</default>
+                <label>Tumor de intestino delgado</label>
+            </value>
+            <value>
+                <fullName>Tumor de hígado y vías biliares</fullName>
+                <default>false</default>
+                <label>Tumor de hígado y vías biliares</label>
+            </value>
+            <value>
+                <fullName>Tumor de páncreas</fullName>
+                <default>false</default>
+                <label>Tumor de páncreas</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Tumores del gastrointestinal superior y glándulas anexas</controllingFieldValue>
+            <valueName>Tumor de esófago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tumores del gastrointestinal superior y glándulas anexas</controllingFieldValue>
+            <valueName>Tumor de estómago</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tumores del gastrointestinal superior y glándulas anexas</controllingFieldValue>
+            <valueName>Tumor de intestino delgado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tumores del gastrointestinal superior y glándulas anexas</controllingFieldValue>
+            <valueName>Tumor de hígado y vías biliares</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tumores del gastrointestinal superior y glándulas anexas</controllingFieldValue>
+            <valueName>Tumor de páncreas</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

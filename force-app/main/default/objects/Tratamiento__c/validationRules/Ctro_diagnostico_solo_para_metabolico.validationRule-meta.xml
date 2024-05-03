@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ctro_diagnostico_solo_para_metabolico</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL(Area_terapeutica__c , &apos;Metabólicos&apos;)),
+NOT(ISBLANK(Centro_de_Diagnostico__c))
+)</errorConditionFormula>
+    <errorDisplayField>Centro_de_Diagnostico__c</errorDisplayField>
+    <errorMessage>Solo puede elegir un centro de diagnóstico si el área terapéutica es Metabólicos</errorMessage>
+</ValidationRule>

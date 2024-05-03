@@ -1,0 +1,48 @@
+.titulosFooterAlergia{
+    font-family: MontserratSemiBold;
+    font-size: 16px;
+    color: #8c8c8c;
+    margin-right: 7%;
+}
+
+.textoFooterAlergia{
+    font-family: MontserratRegular;
+    font-size: 16px;
+    color: #8c8c8c;
+    margin-right: 7%;
+}
+
+.iconosRSFooter{
+    width: 8%;
+    cursor: pointer;
+    margin-right: 2%;
+}
+
+@media (max-width: 768px) {
+    .container-footer{
+        padding-left: 10%;
+    }
+
+    .iconosRSFooter{
+        width: 5%;
+    }
+}
+
+@media (max-width: 412px) {
+    .container-footer{
+        padding-left: 5%;
+    }
+    .titulosFooterAlergia{
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-size: 12pt;
+        line-height: 16pt;
+    }
+    .textoFooterAlergia{
+        font-size: 12pt;
+        line-height: 16pt;
+    }
+    .iconosRSFooter{
+        width: 6%;
+    }
+}

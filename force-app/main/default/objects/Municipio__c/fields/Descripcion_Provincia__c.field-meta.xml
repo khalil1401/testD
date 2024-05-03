@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Descripcion_Provincia__c</fullName>
+    <externalId>false</externalId>
+    <label>Provincia</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MISIONES</fullName>
+                <default>false</default>
+                <label>MISIONES</label>
+            </value>
+            <value>
+                <fullName>ENTRE RIOS</fullName>
+                <default>false</default>
+                <label>ENTRE RIOS</label>
+            </value>
+            <value>
+                <fullName>BUENOS AIRES</fullName>
+                <default>false</default>
+                <label>BUENOS AIRES</label>
+            </value>
+            <value>
+                <fullName>MENDOZA</fullName>
+                <default>false</default>
+                <label>MENDOZA</label>
+            </value>
+            <value>
+                <fullName>FORMOSA</fullName>
+                <default>false</default>
+                <label>FORMOSA</label>
+            </value>
+            <value>
+                <fullName>CORRIENTES</fullName>
+                <default>false</default>
+                <label>CORRIENTES</label>
+            </value>
+            <value>
+                <fullName>CHACO</fullName>
+                <default>false</default>
+                <label>CHACO</label>
+            </value>
+            <value>
+                <fullName>SAN LUIS</fullName>
+                <default>false</default>
+                <label>SAN LUIS</label>
+            </value>
+            <value>
+                <fullName>SALTA</fullName>
+                <default>false</default>
+                <label>SALTA</label>
+            </value>
+            <value>
+                <fullName>SANTA FÉ</fullName>
+                <default>false</default>
+                <label>SANTA FÉ</label>
+            </value>
+            <value>
+                <fullName>JUJUY</fullName>
+                <default>false</default>
+                <label>JUJUY</label>
+            </value>
+            <value>
+                <fullName>SANTIAGO DEL ESTERO</fullName>
+                <default>false</default>
+                <label>SANTIAGO DEL ESTERO</label>
+            </value>
+            <value>
+                <fullName>TUCUMÁN</fullName>
+                <default>false</default>
+                <label>TUCUMÁN</label>
+            </value>
+            <value>
+                <fullName>LA PAMPA</fullName>
+                <default>false</default>
+                <label>LA PAMPA</label>
+            </value>
+            <value>
+                <fullName>CHUBUT</fullName>
+                <default>false</default>
+                <label>CHUBUT</label>
+            </value>
+            <value>
+                <fullName>SANTA CRUZ</fullName>
+                <default>false</default>
+                <label>SANTA CRUZ</label>
+            </value>
+            <value>
+                <fullName>RIO NEGRO</fullName>
+                <default>false</default>
+                <label>RIO NEGRO</label>
+            </value>
+            <value>
+                <fullName>SAN JUAN</fullName>
+                <default>false</default>
+                <label>SAN JUAN</label>
+            </value>
+            <value>
+                <fullName>CÓRDOBA</fullName>
+                <default>false</default>
+                <label>CÓRDOBA</label>
+            </value>
+            <value>
+                <fullName>LA RIOJA</fullName>
+                <default>false</default>
+                <label>LA RIOJA</label>
+            </value>
+            <value>
+                <fullName>CATAMARCA</fullName>
+                <default>false</default>
+                <label>CATAMARCA</label>
+            </value>
+            <value>
+                <fullName>NEUQUEN</fullName>
+                <default>false</default>
+                <label>NEUQUEN</label>
+            </value>
+            <value>
+                <fullName>TIERRA DEL FUEGO</fullName>
+                <default>false</default>
+                <label>TIERRA DEL FUEGO</label>
+            </value>
+            <value>
+                <fullName>CAPITAL FEDERAL</fullName>
+                <default>false</default>
+                <label>CAPITAL FEDERAL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

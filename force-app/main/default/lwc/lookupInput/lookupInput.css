@@ -1,0 +1,27 @@
+.item-lookup-input{
+        text-transform: uppercase;
+}
+
+.div-list-lookup{
+        background: white;
+        position: fixed;
+        z-index: 10000;
+        height: auto;
+        max-height: 250px;
+        width: 244px;
+        margin-top: 60px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+@media (min-width: 412px) {
+        .div-list-lookup{
+                width: 262.26px;
+        }
+}
+
+@media (min-width: 768px) {
+        .div-list-lookup{
+                width: 262.26px;
+        }
+}

@@ -1,0 +1,192 @@
+.THIS .fixed-header-nsj {
+    position: fixed !important;
+    width: 100% !important;
+    top: 0 !important;
+    z-index: 3;
+}
+
+.THIS .body-nsj {
+    min-height: calc(100vh - 165px); 
+    background-color: white;
+}
+
+.THIS .footerStyle {
+    position: relative;
+}
+
+.THIS .slds-col .ui-widget {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.THIS .slds-col.content {
+    width: 100%;
+}
+
+.THIS .slds-list__item {
+    width: 16%;
+    background-color: white;
+}
+
+.THIS .selfServiceProfileMenuTrigger a {
+    text-align: right;
+    color: white;
+}
+
+.THIS .selfServiceProfileMenuTrigger:hover a {
+    text-align: right;
+    color: #E7E7E7;
+}
+
+.THIS .forceCommunityGlobalNavigation {
+    padding:30px;
+}
+
+.THIS li a{
+    color: #808080;
+}
+
+/*------Nuevas modificaciones------*/
+
+.THIS .forceCommunityGlobalNavigation li:first-child{
+    display: none !important;
+}
+
+.THIS .forceCommunityGlobalNavigation li:last-child{
+    display: none !important;
+}
+
+.THIS div.comm-navigation.forceCommunityGlobalNavigation {
+    padding: 0;
+    color: #808080;
+}
+
+.THIS .forceCommunityGlobalNavigation a:hover {
+    color: #000000 !important;
+    border-bottom: 2px solid t(colorBorder) !important;
+    background-color: white !important;
+    padding-bottom: 6px;
+}
+
+.THIS .forceCommunityGlobalNavigation a{
+    background-color: white !important;
+    font-size: 1.2rem !important;
+}
+
+.THIS .forceCommunityGlobalNavigation button.slds-container_fluid.slds-button.slds-button--reset.slds-truncate:hover{
+    color: #000000;
+    border-top: 2px solid t(colorBorder);
+    background-color: white;
+}
+
+/* El tipo de elemento de menu TEMA DE NAVEGACION por defecto al hacer clic muestra un box-shadow */
+
+.THIS .comm-navigation.forceCommunityGlobalNavigation{
+    background-color: white;
+}
+
+.THIS .forceCommunityGlobalNavigation ul{
+    overflow-y: hidden !important;
+    text-align: center !important;
+    height: fit-content !important;
+    width: fit-content !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .THIS .forceCommunityGlobalNavigation ul{ 
+        width: 100% !important;
+    }
+}
+
+.THIS .forceCommunityGlobalNavigation li{
+    width: 100% !important;
+}
+
+/*Esconde la barra de navegacion horizontal de la lista desplegable del usuario*/
+.THIS .selfServiceUserProfileMenu .menuList ul{
+    overflow-x:hidden !important;
+}
+/*----------------------------------end----------------------------------------*/
+
+/*--------------Modifica propiedades del usuario cuando esta logeado-----------*/
+
+.THIS .selfServiceUserProfileMenu .profileName{
+    font-size: 0.8rem !important;
+    color:white;
+    text-transform: capitalize !important;
+}
+
+.THIS .selfServiceUserProfileMenu:hover .profileName{
+    font-size: 0.8rem !important;
+    color:#E7E7E7;
+    text-transform: capitalize !important;
+}
+
+.THIS .selfServiceUserProfileMenu li.uiMenuItem a{
+        width: 100% !important;
+        font-size: 0.7rem !important;
+}
+
+.THIS .selfServiceUserProfileMenu .userSettings{
+    display:none !important; 
+}
+
+.THIS .selfServiceUserProfileMenu .profileIcon{
+    display:none !important; 
+}
+
+.THIS .selfServiceUserProfileMenu .myAccount{
+    display:none !important; 
+}
+
+.THIS .selfServiceUserProfileMenu .profile{
+    display:none !important; 
+}
+
+@media only screen and (max-width: 768px) {
+.THIS .selfServiceUserProfileMenu .selfServiceProfileMenuTrigger{
+        text-align:right !important;
+    }
+}
+.THIS .selfServiceUserProfileMenu .selfServiceProfileMenuTrigger{
+    text-align:center;
+}
+/*---------------------------------end-----------------------------------------*/
+
+/*--Cambia propiedades de la palabra LOGIN cuando el usuario no esta logueago--*/
+.THIS .selfServiceUserProfileMenu .login .linkLabel{
+    font-size: 0.8rem !important;
+    color: white;
+    text-align:right !important;
+    text-transform: capitalize !important;
+}
+/*---------------------------------end----------------------------------------*/
+
+.THIS .slds-form-element__label .slds-truncate{
+    color: black !important;
+}
+
+.THIS .icon svg{
+    fill: white;
+}
+
+/*-----Mobile-----*/
+/*
+.THIS .selfServiceProfileMenuTrigger .trigger-link {
+    padding: 14px 45px;
+}
+*/
+
+.THIS .selfServiceUserProfileMenu .profileName {
+    display: contents;
+}
+
+.THIS .selfServiceUserProfileMenu .down-arrow {
+    display: contents;
+}
+
+@media (max-width: 614px) {
+    .THIS .fixed-header-nsj {
+        min-height: auto;
+    }
+}

@@ -1,0 +1,50 @@
+<body>
+    <div style="margin-left: 5%; margin-right: 5%;">
+        <div style="text-align: center">
+			<a href="https://www.nutriciasiemprejuntos.com.ar" style="text-decoration: none !important;">
+				<img alt="siempreJuntos" style="max-height: 80px;" src="https://danonearg--devx--c.documentforce.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=0682F000001Nasi&operationContext=DELIVERY&contentId=05T2F000004h3Xe&page=0&d=/a/2F00000096xj/CUNvcSo4xKs_QKnv1iXBkz3WTEUkqDbIR5cIiYGz2b8&oid=00D2F0000001dFy&dpt=null&viewId=">
+            </a>
+            </br>
+            <hr style="border-top: 1px solid #6E6E6E;">
+        </div>
+        <div style="margin-left: 5%; margin-right: 5%;">
+            <p style="font-family: system-ui; text-align: center; font-weight: bolder; font-size: 2rem; color: #6E6E6E !important;">
+                ¡Nuevo Lanzamiento!
+            </p>
+            <p style="font-family: system-ui; font-size:1.313rem; color: #6E6E6E !important; text-align: center;">
+				Hola {!Receiving_User.FirstName}, queremos contarte novedades.
+            </p>
+            <p style="font-family: system-ui; font-size:1.313rem; color: #6E6E6E !important; text-align: center;margin-top:2%;">
+				El nuevo lanzamiento del Portal de Pacientes “Nutricia Siempre Juntos” ha llegado y queremos que sigamos acompañándonos. Tenemos mucha información sobre nuestra comunidad que te resultará interesante; para acceder a ella te invitamos a generar tu contraseña haciendo click en el botón debajo.
+            </p>
+        </div>
+        <div style="text-align: center;">
+            <br></br>
+            <a href={!Community_Url} style="text-decoration: none !important;">
+                <span style="font-family: system-ui; font-size: 1.313rem; padding: 1%; background-color: #4A2A80; color:white; border-radius: 5px 5px 5px 5px;">
+					GENERAR CONTRASEÑA
+                </span>
+            </a>
+        </div>
+        <div style="text-align: center; margin-top: 5%;">
+			<a href="https://www.nutriciasiemprejuntos.com.ar" style="text-decoration: none !important;">
+				<img alt="banner" style="width:100%" src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_HOME/HOME-CARRUSEL/PP-img4CarruselPortalPacientes%282022-05-19%29.png">
+            </a>
+            <p style="font-family: system-ui; font-size:1.313rem; color: #6E6E6E !important; text-align: center;">
+                Material exclusivo para pacientes enrolados en el Portal de Pacientes
+            </p>
+            <a href="https://www.nutriciasiemprejuntos.com.ar" style="text-decoration: none !important;font-family: system-ui; font-size:1.313rem; color: #6E6E6E !important; text-align: center;">
+                www.nutriciasiemprejuntos.com.ar
+            </a>
+        </div>
+		<div style="text-align: center; margin-top: 2%;">
+            <a href="https://www.nutriciasiemprejuntos.com.ar/s/terminos-de-uso" style="font-family: system-ui; font-size:0.7rem; color: #6E6E6E !important;">
+				Términos de Uso
+			</a>
+			<span style="font-family: system-ui; font-size:0.7rem; color: #6E6E6E !important;">-</span>
+            <a href="https://www.nutriciasiemprejuntos.com.ar/s/politicas-de-privacidad" style="font-family: system-ui; font-size:0.7rem; color: #6E6E6E !important;">
+				Políticas de Privacidad
+			</a>
+		</div>
+    </div>
+</body>

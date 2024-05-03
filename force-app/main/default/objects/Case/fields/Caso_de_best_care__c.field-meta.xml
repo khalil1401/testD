@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caso_de_best_care__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Se usa esta casilla escondida para marcarla automáticamente cuando un caso pertenece a best care (fase 1)</description>
+    <externalId>false</externalId>
+    <label>Caso de best care</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

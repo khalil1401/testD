@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Razones_que_motivaron_esa_decisi_n__c</fullName>
+    <description>Razones por las cuales el bebé / niño no continúa consumiendo productos de la compañía después del reclamo</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Responder solamente en caso de que el bebé / niño no continúe consumiendo productos de la compañía después del reclamo</inlineHelpText>
+    <label>Razones que motivaron esa decisión?</label>
+    <length>200</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

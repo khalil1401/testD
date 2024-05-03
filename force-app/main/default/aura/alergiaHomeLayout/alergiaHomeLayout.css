@@ -1,0 +1,16 @@
+.THIS {
+}
+
+@media (max-width: 768px){
+    .THIS .container-ah-layout{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 412px){
+    .THIS .container-ah-layout{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}

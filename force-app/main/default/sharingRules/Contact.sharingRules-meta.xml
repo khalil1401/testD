@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Contactos_para_psp</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Contactos para psp</label>
+        <sharedTo>
+            <group>Service</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Contacto de paciente</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Contacto community</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Contacto de Obra Social</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Encuestas</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>El usuario de encuestas ve todos los contactos.</description>
+        <label>Encuestas</label>
+        <sharedTo>
+            <group>Survey</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>FirstName</field>
+            <operation>notEqual</operation>
+            <value>abc123</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingGuestRules>
+        <fullName>Acceso_a_Contacto</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Acceso a Contacto</label>
+        <sharedTo>
+            <guestUser>Pacientes_Landing</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>LastName</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+    <sharingOwnerRules>
+        <fullName>Administracion_Compartida</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Para ciclos de contactos neutros</description>
+        <label>Administracion Compartida</label>
+        <sharedTo>
+            <group>Supervisores_Stakeholders</group>
+        </sharedTo>
+        <sharedFrom>
+            <portalRole>NegocioTotalSocioUsuario</portalRole>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

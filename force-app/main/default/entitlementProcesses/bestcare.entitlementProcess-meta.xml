@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <businessHours>Default</businessHours>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFormula>IsClosed = true</exitCriteriaFormula>
+    <milestones>
+        <businessHours>Default</businessHours>
+        <milestoneCriteriaFilterItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Otros, Acceso, Calidad, Comerciales, Envío de producto, Insumos, Nuevo paciente, Nutricionales, Servicio, Ventas</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>SLA</milestoneName>
+        <minutesToComplete>1440</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>

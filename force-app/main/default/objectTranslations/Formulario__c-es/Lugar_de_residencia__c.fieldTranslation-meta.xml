@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Lugar_de_residencia__c</name>
+    <picklistValues>
+        <masterLabel>Casa</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Establecimiento de salud</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Geriátrico</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

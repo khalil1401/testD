@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Numero_de_CP__c</fullName>
+    <externalId>false</externalId>
+    <formula>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Name,&apos;A&apos;,&apos;&apos;),&apos;B&apos;,&apos;&apos;),&apos;C&apos;,&apos;&apos;),&apos;D&apos;,&apos;&apos;),&apos;E&apos;,&apos;&apos;),&apos;F&apos;,&apos;&apos;),&apos;G&apos;,&apos;&apos;),&apos;H&apos;,&apos;&apos;),&apos;I&apos;,&apos;&apos;),&apos;J&apos;,&apos;&apos;),&apos;K&apos;,&apos;&apos;),&apos;L&apos;,&apos;&apos;),&apos;M&apos;,&apos;&apos;),&apos;N&apos;,&apos;&apos;),&apos;O&apos;,&apos;&apos;),&apos;P&apos;,&apos;&apos;),&apos;Q&apos;,&apos;&apos;),&apos;R&apos;,&apos;&apos;),&apos;S&apos;,&apos;&apos;),&apos;T&apos;,&apos;&apos;),&apos;U&apos;,&apos;&apos;),&apos;V&apos;,&apos;&apos;),&apos;W&apos;,&apos;&apos;),&apos;X&apos;,&apos;&apos;),&apos;Y&apos;,&apos;&apos;),&apos;Z&apos;,&apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Número de CP</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

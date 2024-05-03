@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <field>User$Email</field>
+    </columns>
+    <columns>
+        <field>User$LastLoginDate</field>
+    </columns>
+    <description>¿Cuál es el historial de inicios de sesión de cada uno de mis sitios de socio el mes pasado?</description>
+    <filter>
+        <criteriaItems>
+            <column>User$UserType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>P</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Inicios de sesión de socio por sitio</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>prm_unique_portal_crt__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>User$LastLoginDate</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>User$LastLoginDate</dateColumn>
+        <interval>INTERVAL_LASTMONTH</interval>
+    </timeFrameFilter>
+</Report>

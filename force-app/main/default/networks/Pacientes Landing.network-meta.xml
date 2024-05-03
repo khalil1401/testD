@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>true</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <changePasswordTemplate>unfiled$public/Portal_Pacientes_Cambio_de_contrase_a_de_miembro</changePasswordTemplate>
+    <chgEmailVerNewTemplate>unfiled$public/Portal_Pacientes_Correo_electr_nico_nuevo</chgEmailVerNewTemplate>
+    <chgEmailVerOldTemplate>unfiled$public/Portal_Pacientes_Correo_electr_nico_viejo</chgEmailVerOldTemplate>
+    <communityRoles/>
+    <disableReputationRecordConversations>false</disableReputationRecordConversations>
+    <emailSenderAddress>contacto@nutriciasiemprejuntos.com.ar</emailSenderAddress>
+    <emailSenderName>Nutricia Siempre Juntos</emailSenderName>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>true</enableDirectMessages>
+    <enableExperienceBundleBasedSnaOverrideEnabled>true</enableExperienceBundleBasedSnaOverrideEnabled>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableGuestFileAccess>true</enableGuestFileAccess>
+    <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableMemberVisibility>true</enableMemberVisibility>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableShowAllNetworkSettings>true</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <enableTalkingAboutStats>true</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
+    <enableTopicSuggestions>false</enableTopicSuggestions>
+    <enableUpDownVote>false</enableUpDownVote>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <networkMemberGroups>
+        <profile>Admin</profile>
+        <profile>Paciente Alergia</profile>
+        <profile>paciente oncología</profile>
+        <profile>paciente terapia cetogénica</profile>
+        <profile>paciente metabólicos</profile>
+        <profile>paciente desafíos del crecimiento</profile>
+        <profile>Paciente Digestivos</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>VisualForce</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Designer</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>Designer</homePageOverrideSetting>
+        <loginPageOverrideSetting>Designer</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Designer</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>Pacientes_Landing_C</picassoSite>
+    <selfRegistration>true</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Pacientes_Landing</site>
+    <siteArchiveStatus>NotArchived</siteArchiveStatus>
+    <status>Live</status>
+    <tabs>
+        <customTab>Tratamiento__c</customTab>
+        <defaultTab>Chatter</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>pacienteslanding</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/Portal_Pacientes_Bienvenida_a_nuevo_miembro_a_la_comunidad</welcomeTemplate>
+</Network>

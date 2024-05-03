@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Encuestas CX</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Encuestas CX</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Encuesta Bomba</layout>
+        <sections>
+            <label></label>
+            <section>Información general</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Preguntas</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Encuestas Clientes</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Encuestas CX</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Seguimiento del reclamo</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label></label>
+        <name>Encuesta_BC</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Encuesta_Bomba</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Encuesta_de_satisfacci_n_transaccional</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Encuestas_Clientes</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Seguimiento_de_reclamo</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Seguimiento_de_satisfacci_n</name>
+    </recordTypes>
+</CustomObjectTranslation>

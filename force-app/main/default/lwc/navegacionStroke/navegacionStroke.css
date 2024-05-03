@@ -1,0 +1,120 @@
+.nav-dis-mal-nsj{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.textoNavegacionStroke{
+    font-size: 0.875rem;
+    font-family: NunitoBold;
+    color: white;
+    cursor: pointer;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+.text-item-nav-int-nsj{
+    font-family: MontserratRegular;
+    font-size: 0.813rem;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.text-selected-item-nav-int-nsj{
+    font-family: MontserratSemiBold;
+    font-size: 0.9rem;
+    color: #313183;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.text-item-nav-int-nsj:hover{
+    cursor: pointer;
+    color: #313183;
+}
+
+.textoNavegacionMobileDisfagia{
+    font-size: 1.338333346716672em;
+    font-family: NunitoBold;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.display-none{
+    display: none;
+}
+
+.display-initial{
+    display: initial;
+}
+
+.containerNavStroke{
+    background: linear-gradient(90deg, #513386 0%, #2B3C8B 100%);
+}
+
+.footerNavStroke{
+    background: linear-gradient(90deg, #513386 0%, #2B3C8B 100%);
+}
+
+.container-nav-malnutricion{
+    background: linear-gradient(90deg, #008FCF 0%, #2B3C87 100%);
+}
+
+.footer-nav-malnutricion{
+    background: linear-gradient(90deg, #008FCF 0%, #2B3C87 100%);
+}
+
+table{
+    width: auto;
+}
+
+td{
+    border-top: none;
+    border-bottom: none;
+    width: auto;
+    text-align: center;
+}
+
+.vl{
+    border-right:1px solid white;
+}
+
+.lineaDivision{
+    width:95%;
+    border-bottom: 1px solid white;
+    position:relative;
+}
+
+@media (max-width: 1600px){ 
+    .nav-dis-mal-nsj{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .nav-dis-mal-nsj{
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+    .textoNavegacionStroke{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .textoNavegacionStroke{
+        padding-right: 5px;
+        padding-left: 5px;
+    }    
+}
+
+@media (max-width: 600px) {
+    .iconoNutriciaBago{
+        width: 60%;
+    }
+}

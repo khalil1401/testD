@@ -1,0 +1,239 @@
+.show-tablet{
+    display: none;
+}
+
+.icon-title-form{
+    width: 18px; 
+    position: relative; 
+    left: 85px;
+}
+
+.text-title-form {
+    font-family: BariolBold;    
+    font-size: 18px;
+    line-height: 17.63px;
+    color: #1C1B1F;
+}
+
+.hr-line::before {
+    content: '';
+    display: block;
+    width: 282px;
+    border-top: 1px solid #1C1B1F;
+    transform: scaleY(0.5);
+}
+
+.form-datos{
+    width: 328px;
+}
+
+.card-contact{
+    margin-top: 9px;
+    border-radius: 8px;
+    height: 106px;
+    background-color: #FAFBFB;
+    width: 328px;
+}
+
+.card-contacto-detalle {
+    padding-right: 15px;
+    padding-left: 10px;
+    position: relative;
+    top: 3px;
+}
+
+.card-contacto-data {
+    margin-top: 2.5px;
+}
+
+.icon-text-card-contact{
+    font-family: BariolBold;
+    font-size: 14px;
+    line-height: 15.43px;
+    color: white;
+    margin-top: 3px;
+}
+
+.action-card{
+    margin-left: 10px;
+}
+
+.action-card:hover{
+    cursor: pointer;
+}
+
+.name-text{
+    font-family: BariolBold;
+    color: #313183;
+    font-size: 24px;
+    line-height: 26.45px;
+}
+
+.card-item-title{
+    font-family: BariolBold;
+    color: #1C1B1F;
+    font-size: 16px;
+    line-height: 17.63px;
+}
+
+.card-item-text{
+    font-family: BariolRegular;
+    color: #1C1B1F;
+    font-size: 16px;
+    line-height: 17.63px;
+}
+
+.name-contact-text{
+    font-family: BariolBold;
+    font-size: 16px;
+    line-height: 17.63px;
+    color: #313183;
+    margin-top: 3px;
+}
+
+.relacion-text{
+    font-family: BariolBold;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.info-contact-text{
+    font-family: BariolRegular;
+    font-size: 14px;
+    line-height: 15.43px;
+    color: #313183;
+}
+
+.add-button{
+    width: 329px;
+    height: 40px;
+    background-color: #9D67A8;
+    color: white;
+    border-radius: 8px;
+    font-family: BariolBold;
+    font-size: 16px;
+    line-height: 17.63px;
+    border-color: transparent;
+}
+
+button:disabled,
+.add-button[disabled]{
+  background-color: #cccccc;
+  color: #606060;
+}
+
+.fade-in-right-left{
+    animation: fadeInRightLeft 0.25s;
+}
+
+@keyframes fadeInRightLeft {
+    0% { 
+        opacity: 1;
+        transform: translateX(412px);
+    }
+
+    100% { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 412px) {
+    .form-datos{
+        width: 380px;
+    }
+
+    .card-contact{
+        width: 380px;
+        height: 115px;
+    }
+
+    .card-contacto-detalle {
+        padding-right: 25px;
+        position: relative;
+        top: 10px;
+    }
+
+    .text-title-form{
+        font-size: 20px;
+        line-height: 22.04px;
+    }
+}
+
+@media (min-width: 768px) {
+    .show-mobile{
+        display: none;
+    }
+
+    .show-tablet{
+        display: initial;
+    }
+    
+    .form-datos{
+        width: 596px;
+    }
+
+    .card-contact{
+        width: 478px;
+        height: 134px;
+    }
+
+    .card-contacto-detalle {
+        padding-left: 12.5px;
+        padding-right: 100px;
+        position: relative;
+        top: 20px;
+    }
+
+    .icon-title-form{
+        left: auto;
+        right: -185px;
+    }
+
+    .add-button{
+        width: 356px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .show-mobile{
+        display: none;
+    }
+
+    .show-tablet{
+        display: none;
+    }
+}
+
+@media (min-width: 1366px) {
+    .form-datos{
+        margin-right: 0%;
+    }
+
+    .add-button{
+        width: 314px;
+        height: 40px;
+    }
+
+    .card-contact{
+        width: 535px;
+        height: 134px;
+    }
+
+    .card-contacto-detalle {
+        padding-left: 30px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .card-contact{
+        width: 666px;
+        height: 166px;
+    }
+
+    .add-button{
+        width: 391px;
+        height: 50px;
+    }
+}

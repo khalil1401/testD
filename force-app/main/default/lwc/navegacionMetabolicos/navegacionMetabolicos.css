@@ -1,0 +1,44 @@
+.nav-meta{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.text-item-nav-meta{
+    font-family: MontserratRegular;
+    font-size: 0.813rem;
+    color: #606060;
+    cursor: pointer;
+    margin-left: 5%;
+}
+
+.text-selected-item-nav-meta{
+    font-family: MontserratSemiBold;
+    font-size: 0.813rem;
+    color: #4c2f92;
+    cursor: pointer;
+    margin-left: 5%;
+}
+
+.text-rs-nav-meta{
+    font-family: MontserratRegular;
+    font-size: 0.813rem;
+    color: #606060;
+}
+
+.img-rs-nav-meta{
+    margin-left: 2%;
+    cursor: pointer;
+    width: 25px;
+}
+
+@media (max-width: 600px){ 
+    .nav-meta{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .img-rs-nav-meta{
+        width: 30px;
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_respondi_S_nombre_del_producto__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Si responde SI (Utilizó anteriormente algún suplemento nutricional) preguntar &quot;Nombre del Producto&quot;</inlineHelpText>
+    <label>Si respondió &quot;Sí&quot;, nombre del producto?</label>
+    <length>100</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

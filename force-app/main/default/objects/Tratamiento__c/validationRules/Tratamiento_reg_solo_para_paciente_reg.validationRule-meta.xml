@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tratamiento_reg_solo_para_paciente_reg</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( RecordType.Name = &apos;Tratamiento Regular&apos;, Cuenta__r.RecordType.Name = &apos;Paciente Best Care&apos;)</errorConditionFormula>
+    <errorDisplayField>Cuenta__c</errorDisplayField>
+    <errorMessage>Un paciente Best Care no puede tener un tratamiento regular</errorMessage>
+</ValidationRule>

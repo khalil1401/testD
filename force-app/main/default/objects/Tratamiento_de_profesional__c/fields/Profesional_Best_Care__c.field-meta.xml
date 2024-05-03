@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Profesional_Best_Care__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Profesional Best Care</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>User.Profile.Name</field>
+            <operation>equals</operation>
+            <value>&apos;Profesional Best Care&apos;</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Tratamientos_de_profesional</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

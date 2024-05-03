@@ -1,0 +1,133 @@
+.container-header-malnutricion{
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat-y;
+    border-radius: 0px 0px 0px 100px;
+}
+
+.img-header-malnutricion{
+    width: 100%;
+}
+
+.container-texto-header{
+    padding-right: 10%;
+}
+
+.volanta-header{
+    font-family: NunitoSemiBold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: white;
+}
+
+.titulo-header{
+    font-family: NunitoBold;
+    font-size: 2.766rem;
+    line-height: 3.313rem;
+    color: white;
+}
+
+.linea-header{
+    width:100%;
+    border-bottom:3px solid white;
+    position:relative;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.texto-bajada{
+    font-family: NunitoSemiBold;
+    font-size: 1.375rem;
+    line-height: 1.719rem;
+    color: white;
+}
+
+.div-contenido-izq{
+    width: 100%;
+    padding-left: 50%;
+}
+.div-contenido-der{
+    width: 100%;
+    padding-right: 50%;
+}
+
+.linea-header{
+    width:100%;
+    height: 4px;
+    background-color: white;
+    position: relative;
+}
+
+.circle-header{
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: solid 3px white;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    left: calc(100% - 1px);
+}
+
+.mobile{
+    display: none;
+}
+
+@media (max-width: 1600px){
+    .div-contenido-izq{
+        padding-left: 40%;
+    }
+    .div-contenido-der{
+        padding-right: 40%;
+    }
+}
+
+@media (max-width: 1300px){
+    .div-contenido-izq{
+        padding-left: 30%;
+    }
+    .div-contenido-der{
+        padding-right: 30%;
+    }
+}
+
+@media (max-width: 1024px){
+    .div-contenido-izq{
+        padding-left: 20%;
+    }
+    .div-contenido-der{
+        padding-right: 20%;
+    }
+}
+
+
+@media (max-width: 600px){
+    .div-contenido-izq{
+        padding-left: 0%;
+    }
+    .div-contenido-der{
+        padding-right: 0%;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: initial;
+    }
+    .container-texto-header{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    .container-header-malnutricion{
+        border-radius: 0px;
+    }
+    .titulo-header{
+        line-height: 3rem;
+    }
+    .linea-header{
+        width:95%;
+    }    
+}

@@ -1,0 +1,5 @@
+<design:component>
+	
+	<design:attribute name="icono1" label="Nombre del primer logo del header (recurso estático)"/>
+
+</design:component>

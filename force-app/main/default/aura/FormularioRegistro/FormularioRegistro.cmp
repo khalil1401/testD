@@ -1,0 +1,199 @@
+<aura:component controller="FormularioRegistroController" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+    
+    <aura:attribute name="account" type="Account"/>
+    <aura:attribute name="producto" type="Producto_de_paciente__c"/>
+    <aura:attribute name="trackForm" type="Track_Solicitud_Kit_de_Inicio__c"/>
+    
+    <aura:attribute name="sexos" type="List"/>
+    <aura:attribute name="optionsSexos" type="List" default="[]"/>
+    <aura:attribute name="tiposDeTelefono" type="List"/>
+    <aura:attribute name="optionsTelefonos" type="List" default="[]"/>
+    <aura:attribute name="products" type="List"/>
+    <aura:attribute name="optionsProduct" type="List" default="[]"/>
+    <aura:attribute name="noTengoDNI" type="Boolean"/>
+    <aura:attribute name="edad" type="String"/>
+    <aura:attribute name="hoy" type="Date"/>
+    <aura:attribute name="esMenorA3Meses" type="Boolean"/>
+    <aura:attribute name="esMenorA18Anios" type="Boolean"/>
+    <aura:attribute name="codAreaPaciente" type="String"/>
+    <aura:attribute name="numTelefonoPaciente" type="String"/>
+    <aura:attribute name="requiredTrue" type="Boolean" default="true"/>
+    <aura:attribute name="campoProductoPhone" type="Boolean" default="false" />
+    <aura:attribute name="showSpinner" type="Boolean" default="False" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="changePageEvent" type="c:ChangePageAltaPaciente"/>
+    <aura:handler name="lookupFormEvent" event="c:lookupFormularioEvent" action="{!c.hideSpinner}"/>
+    <aura:attribute name="paginaActual" type="string"/>
+    <aura:attribute name="isDesktop" type="Boolean"/>
+    <aura:attribute name="area" type="String"/>
+	<lightning:navigation aura:id="navService"/>
+
+    <c:ProgressStep current="{!v.paginaActual}"/>
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner  
+            alternativeText="Cargando"
+            variant="brand"/>
+    </aura:if>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1 slds-text-align_center">
+            <h2 class="slds-text-align_center slds-m-top_x-large slds-m-bottom_medium">
+                Datos del paciente
+            </h2>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input
+                aura:id="formPaciente"
+                label="Nombres"
+                name="accountFirstName"
+                value="{!v.account.FirstName}"
+                pattern="[a-zA-Z áéíóúÁÉÍÓÚ]*"
+                messageWhenPatternMismatch="Sólo se aceptan letras"
+                required="true"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input
+                aura:id="formPaciente"
+                label="Apellidos"
+                name="accountLastName"
+                pattern="[a-zA-Z áéíóúÁÉÍÓÚ]*"
+                messageWhenPatternMismatch="Sólo se aceptan letras"
+                value="{!v.account.LastName}"
+                required="true"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input
+                aura:id="formPaciente"
+                type="date"
+                name="fechaNac"
+                label="Fecha de Nacimiento"
+                value="{!v.account.PersonBirthdate}"
+                onchange="{!c.validarEdad}"
+                max="{!v.hoy}"
+                required="true"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input
+                type="Integer"
+                name="accEdad"
+                label="Edad"
+                value="{!v.edad}"
+                disabled="true"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input
+                aura:id="formPaciente"
+                label="DNI"
+                name="accountDNI"
+                value="{!v.account.DNI__c}"
+                autocomplete="off"
+                type="number"
+                min="1000000"
+                maxlength="8"
+                required="{!!v.esMenorA3Meses}"
+                disabled="true"/>
+            <aura:if isTrue="{!v.esMenorA3Meses}">
+                <lightning:input
+                    type="checkbox"
+                    aura:id="formPaciente"
+                    label="No tengo DNI"
+                    name="dniCheck"
+                    checked="{!v.noTengoDNI}"
+                    onchange="{!c.changeNoTengoDNI}"
+                    required="{!and(v.esMenorA3Meses, v.account.DNI__c == '')}"/>
+            </aura:if>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:combobox 
+                aura:id="formPaciente"
+                name="sexo" 
+                label="Sexo"
+                value="{!v.account.Sexo__c}"
+                options="{!v.optionsSexos}"
+                onchange="{!c.handleOptionSexoSelected}"
+                required="true"
+                dropdownAlignment="top-left"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:combobox 
+                aura:id="formPaciente" 
+                name="tiposDeTel" 
+                label="Tipo de Teléfono"
+                value="{!v.account.Tipo_de_telefono__c}"
+                options="{!v.optionsTelefonos}"
+                onchange="{!c.handleOptionTipoTelSelected}"
+                required="true"
+                dropdownAlignment="top-left"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input
+                aura:id="formPaciente"
+                type="email"
+                label="Correo electrónico"
+                placeholder="ejemplo@ejemplo.com"
+                name="accountPersonEmail"
+                value="{!v.account.PersonEmail}"
+                pattern="[a-zA-Z\-0-9\.-_]+@+[a-zA-Z]+\.(com|org|com.ar|org.ar|COM|ORG|COM.AR|ORG.AR)"
+                required="true"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                <div class="slds-col slds-medium-size_4-of-12 slds-size_4-of-12 slds-p-right_x-small">
+                    <lightning:input
+                        aura:id="formPaciente"
+                        label="Cod. Área sin 0"
+                        name="accountCodAreaPaciente"
+                        value="{!v.codAreaPaciente}"
+                        pattern="[1-9][0-9]*"
+                        messageWhenPatternMismatch="Sólo se aceptan números"
+                        required="true"/>
+                </div>
+                <div class="slds-col slds-medium-size_8-of-12 slds-size_8-of-12 slds-p-left_x-small">
+                    <lightning:input
+                        aura:id="formPaciente"
+                        label="Teléfono (del paciente) sin el 15"
+                        name="accountNumTelefonoPaciente"
+                        value="{!v.numTelefonoPaciente}"
+                        pattern="[0-9]*"
+                        messageWhenPatternMismatch="Sólo se aceptan números"
+                        required="true"/>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:combobox
+                class="text-product-select"
+                aura:id="formPaciente" 
+                name="products" 
+                label="Producto"
+                value="{!v.producto.Formula__c}"
+                options="{!v.optionsProduct}"
+                onchange="{!c.handleOptionProduct}"
+                required="true"
+                dropdownAlignment="top-left"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+        </div>
+        <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+            <div class="slds-clearfix slds-m-top_xx-large">
+                <div class="slds-float_right slds-p-right_small">
+                    <button
+                        id="id-btn-back-form-paciente"
+                        class="back-button"
+                        onclick="{!c.anterior}">
+                        Volver
+                    </button>
+                    <button
+                        id="id-btn-next-form-paciente"
+                        class="button"
+                        onclick="{!c.siguiente}">
+                        Siguiente
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

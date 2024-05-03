@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Cuanto_tiempo_demoro_la_aprobacion_OS__c</name>
+    <picklistValues>
+        <masterLabel>1 semana o menos</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entre 1 semana y 2 semanas</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entre 3 y 4 semanas</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Más de 1 mes</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

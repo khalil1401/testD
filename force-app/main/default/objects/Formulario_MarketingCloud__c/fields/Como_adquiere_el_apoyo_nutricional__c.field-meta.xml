@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Como_adquiere_el_apoyo_nutricional__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Sólo para las respuestas &quot;SI&quot; de &quot;Va a continuar con el apoyo nutricional&quot;</inlineHelpText>
+    <label>Como adquiere el apoyo nutricional?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Va_a_continuar_el_apoyo_nutricional__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Compra Particular</fullName>
+                <default>false</default>
+                <label>Compra Particular</label>
+            </value>
+            <value>
+                <fullName>Le autoriza obra social</fullName>
+                <default>false</default>
+                <label>Le autoriza obra social</label>
+            </value>
+            <value>
+                <fullName>Aún no compro</fullName>
+                <default>false</default>
+                <label>Aún no compro</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Si</controllingFieldValue>
+            <valueName>Compra Particular</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Si</controllingFieldValue>
+            <valueName>Le autoriza obra social</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Si</controllingFieldValue>
+            <valueName>Aún no compro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Si</controllingFieldValue>
+            <valueName>Otro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No</controllingFieldValue>
+            <valueName>N/A</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

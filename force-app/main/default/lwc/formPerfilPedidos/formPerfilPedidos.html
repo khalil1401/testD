@@ -1,0 +1,36 @@
+<template>
+    <div style="width: 100%;" class="slds-align_absolute-center fade-in-right-left">
+        <template if:true={envio}>
+            <div class="form-datos">
+                <div class="slds-grid slds-wrap slds-m-top_x-large">
+                    <div class="slds-col slds-size_5-of-12">
+                        <img src={iconEnvio}
+                            class="icon-title-form">
+                    </div>
+                    <div class="slds-col slds-size_7-of-12">
+                        <span class="text-title-form">Seguimiento de Pedido</span>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_small slds-m-bottom_large slds-align_absolute-center">
+                        <div class="hr-line"></div>
+                    </div>
+                </div>
+                <div class="slds-align_absolute-center">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center card-envio">
+                        <div class="slds-col slds-size_3-of-12 slds-align_absolute-center"
+                            style="background: linear-gradient(#C09AC2, #313183); height:100%; border-radius: 8px 0px 0px 8px;">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Camion.png"
+                                style="width: 16px;">
+                        </div>
+                        <div class="slds-col slds-size_9-of-12">
+                            <div class="slds-p-around_small">
+                                <p class="pedido-title">Pedido N° {envio.NIC__c}</p>
+                                <p class="pedido-text slds-p-top_x-small" style="font-family: BariolRegular; text-transform: capitalize;">Dirección: {envio.direccion}</p>
+                                <p class="pedido-text slds-p-top_x-small"><a href={envio.Link_Seguimiento_completo__c} class="pedido-link" target="_blank">Seguí tu pedido acá</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

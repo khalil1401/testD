@@ -1,0 +1,23 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="url" type="String"/>
+    <aura:attribute name="staticResourceName" type="String"/>
+    <aura:attribute name="staticResourcePath" type="String"/>
+    <aura:attribute name="backgroundColor" type="String"/>
+    
+    <div class="slds-col slds-size_2.5-of-12 slds-medium-size_1.5-of-12 slds-m-around_xx-small" 
+         onclick="{!c.shareDocument}"
+		 style="{!join(';', 
+         	'background-color: ' + v.backgroundColor, 
+            'cursor: pointer', 'height: 34px !important'
+ 			)}">
+        <img class="slds-m-around_x-small" 
+             src="{!v.staticResourceName + v.staticResourcePath}" 
+             style="width:20px; height:20px;"/>    
+        
+        <!-- Hidden when mobile -->
+        <span class="slds-show_medium slds-m-right_x-small">
+            Compartir
+        </span>
+        <!-- -->
+    </div>
+</aura:component>

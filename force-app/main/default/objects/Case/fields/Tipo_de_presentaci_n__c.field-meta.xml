@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_presentaci_n__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de presentación</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>D_nde_present__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Casa central</fullName>
+                <default>false</default>
+                <label>Casa central</label>
+            </value>
+            <value>
+                <fullName>Delegación</fullName>
+                <default>false</default>
+                <label>Delegación</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Website</fullName>
+                <default>false</default>
+                <label>Website</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Online</controllingFieldValue>
+            <valueName>Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online</controllingFieldValue>
+            <valueName>Website</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Presencial</controllingFieldValue>
+            <valueName>Casa central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Presencial</controllingFieldValue>
+            <valueName>Delegación</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Que_herramientas_servir_an_para_cont__c</fullName>
+    <description>¿Qué herramientas le servirían para continuar el soporte nutricional?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>¿Qué herramientas le servirían para continuar el soporte nutricional?</inlineHelpText>
+    <label>Que herramientas servirían para cont.</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Descuento</fullName>
+                <default>false</default>
+                <label>Descuento</label>
+            </value>
+            <value>
+                <fullName>Apoyo de un profesional</fullName>
+                <default>false</default>
+                <label>Apoyo de un profesional</label>
+            </value>
+            <value>
+                <fullName>Herramientas de adherencia</fullName>
+                <default>false</default>
+                <label>Herramientas de adherencia</label>
+            </value>
+            <value>
+                <fullName>Otra</fullName>
+                <default>false</default>
+                <label>Otra</label>
+            </value>
+            <value>
+                <fullName>Recetario de producto</fullName>
+                <default>false</default>
+                <label>Recetario de producto</label>
+            </value>
+            <value>
+                <fullName>Tips de uso</fullName>
+                <default>false</default>
+                <label>Tips de uso</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

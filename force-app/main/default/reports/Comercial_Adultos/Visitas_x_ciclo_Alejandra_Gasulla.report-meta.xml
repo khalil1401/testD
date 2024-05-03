@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Ciclo__c$Name</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c.Interacciones__r$Name</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c.Interacciones__r$Profesional_de_la_salud__c</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c.Interacciones__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c.Interacciones__r$Tipo_de_visita__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Ciclo__c$Owner</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Alejandra Gasulla</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Visitas x ciclo - Alejandra Gasulla</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Ciclos_con_interacciones__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Ciclo__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

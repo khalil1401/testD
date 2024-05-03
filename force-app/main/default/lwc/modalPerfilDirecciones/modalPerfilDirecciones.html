@@ -1,0 +1,151 @@
+<template>
+    <section role="dialog" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-align_absolute-center">
+        <div class="slds-modal__container slds-align_absolute-center">
+            <div class="slds-modal__content modal-spinner">
+                <template if:true={showSpinner}>
+                    <lightning-spinner variant="brand" alternative-text="Loading" size="medium"></lightning-spinner>
+                </template>
+                <template if:true={showTitle}>
+                    <p class="title-modal slds-text-align_center">¿Desea actualizar esta dirección?</p>
+                </template>
+                <template if:false={showTitle}>
+                    <p class="title-modal slds-text-align_center">¿Desea agregar una nueva dirección?</p>
+                </template>
+                <div class="fields-box slds-align_absolute-center">                    
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_8-of-12 slds-p-right_x-small">
+                            <lightning-input 
+                                class="inputValidation"
+                                type="text"
+                                data-id="calle"
+                                label="Calle"
+                                maxlength="20"
+                                required>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_4-of-12">
+                            <lightning-input 
+                                class="inputValidation"
+                                type="text"
+                                name="altura"
+                                data-id="altura"
+                                label="Altura"
+                                pattern="[0-9]*"
+                                message-when-pattern-mismatch="Solo números"
+                                maxlength="6"
+                                required>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12 slds-p-right_x-small">
+                            <lightning-input 
+                                type="text"
+                                name="piso"
+                                data-id="piso"
+                                maxlength="6"
+                                label="Piso">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12">
+                            <lightning-input 
+                                type="text"
+                                name="dpto"
+                                data-id="dpto"
+                                maxlength="4"
+                                label="Departamento">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning-input 
+                                class="inputValidation"
+                                type="text"
+                                name="cp"
+                                data-id="cp"
+                                label="Código Postal"
+                                required>
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning-combobox
+                                class="inputValidation"
+                                name="provincia"
+                                label="Provincia"
+                                value={selectedProvincia}
+                                placeholder="Seleccionar Provincia"
+                                options={optionsProvincias}
+                                onchange={selectProvincia}
+                                required>
+                            </lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning-combobox
+                                class="inputValidation"
+                                name="municipio"
+                                label="Municipio"
+                                value={selectedMunicipio}
+                                placeholder="Seleccionar Municipio"
+                                options={optionsMunicipios}
+                                onchange={selectMunicipio}
+                                disabled={disabledMunicipio}
+                                required
+                            ></lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <c-lookup-input
+                                object="Localidad"
+                                label="Localidad"
+                                id-municipio={selectedMunicipio}
+                                required="true"
+                                disabled={disabledLocalidad}
+                                onmydata={handleDataLookup}>
+                            </c-lookup-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning-textarea 
+                                type="text"
+                                data-id="referencia"
+                                label="Referencia"
+                                maxlength="99">
+                            </lightning-textarea>
+                        </div>
+                        <div class="slds-col slds-size_10-of-12">
+                            <label class="slds-form-element__label">¿Es tu direccón principal?</label>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-align_absolute-center">
+                            <template if:true={direccion.principal}>
+                                <lightning-input 
+                                    type="checkbox" 
+                                    name="principal"
+                                    data-id="direccion-principal"
+                                    disabled="true"
+                                    checked="true">
+                                </lightning-input>
+                            </template>
+                            <template if:false={direccion.principal}>
+                                <lightning-input 
+                                    type="checkbox" 
+                                    name="principal"
+                                    data-id="direccion-principal"
+                                    onchange={handleChangeCheckbox}>
+                                </lightning-input>
+                            </template>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <template if:true={isPrincipal}>
+                                <span class="text-aviso-principal">Tus próximos pedidos serán enviados a esta dirección</span>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-clearfix slds-m-top_medium">
+                    <div class="slds-float_left">
+                        <button class="cancelar-button" onclick={closeModal} data-id="close">Cancelar</button>
+                    </div>
+                    <div class="slds-float_right" >
+                        <button class="confirmar-button" onclick={confirmar} data-id="save">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Cuentas_Service</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Cuentas Service</label>
+        <sharedTo>
+            <group>Service</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3 OR 4 OR 5 OR 6</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Best Care</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Regular</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Profesional de la salud</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Visitador médico</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Institución</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Obra social</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Cuentas_para_Community_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Cuentas para Community Manager</label>
+        <sharedTo>
+            <role>Community_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Profesional de la salud,Institución</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Cuentas_para_Gerente_Adultos</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Cuentas para Gerente Adultos</label>
+        <sharedTo>
+            <group>Gerente_Stakeholders_Adultos</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>Equipo_de_Profesional__c</field>
+            <operation>equals</operation>
+            <value>Adultos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Institución</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Obra social</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Cuentas_para_Gerente_Peditaricos</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Cuentas para Gerente Peditaricos</label>
+        <sharedTo>
+            <group>Gerente_Stakeholders_Pediatricos</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>Equipo_de_Profesional__c</field>
+            <operation>equals</operation>
+            <value>Pediátrico</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Obra social</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Institución</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Cuentas_stakeholders</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <label>Cuentas stakeholders</label>
+        <sharedTo>
+            <group>Stakeholders</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Institución</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Otro profesional</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Profesional de la salud</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Obra social</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CustomerWebVeTodasLasCuentas</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>CustomerWebVeTodasLasCuentas</label>
+        <sharedTo>
+            <group>Customer_Web</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Sucursal de facturación,Sucursal de envío,Cliente</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Habilitar_edici_n_cuentas_prospect</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Edit</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Edit</opportunityAccessLevel>
+        </accountSettings>
+        <description>Habilitar los permisos de modificación de cuentas prospect a todos los coordinadores HCPs.</description>
+        <label>Habilitar edición cuentas prospect</label>
+        <sharedTo>
+            <group>CoordinadoresBC</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Prospect</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Instituciones_APMs</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Instituciones APMs</label>
+        <sharedTo>
+            <group>Todos_los_APMs</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Institución</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Obra social</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Integracion_Keto</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Integracion Keto</label>
+        <sharedTo>
+            <group>Integracion_Keto</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Regular,Paciente Best Care</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Ver_Modificar_Baby</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>None</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Ver/Modificar Baby</label>
+        <sharedTo>
+            <group>Ver_Modificar_Baby</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Consumidor</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Ver_Modificar_Best_Care</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>None</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Ver/Modificar Best Care</label>
+        <sharedTo>
+            <group>Ver_Modificar_Best_Care</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Best Care</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Ver_Modificar_Regulares</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>None</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Ver/Modificar Regulares</label>
+        <sharedTo>
+            <group>Ver_Modificar_Regulares</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Regular</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingGuestRules>
+        <fullName>Acceso_a_Obra_Social_y_Profesionales</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Acceso a Obra Social y Profesionales</label>
+        <sharedTo>
+            <guestUser>Pacientes_Landing</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Obra social,Paciente Regular,Profesional de la salud,Institución</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+    <sharingOwnerRules>
+        <fullName>Administracion_Compartida_Acc</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>Read</opportunityAccessLevel>
+        </accountSettings>
+        <label>Administracion Compartida Acc</label>
+        <sharedTo>
+            <group>Supervisores_Stakeholders</group>
+        </sharedTo>
+        <sharedFrom>
+            <portalRole>NegocioTotalSocioUsuario</portalRole>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Operador_Test</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>None</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Operador Test</label>
+        <sharedTo>
+            <role>Operador_Mendoza</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>Operador_Mendoza</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Profesionales_adultos</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Profesionales adultos</label>
+        <sharedTo>
+            <group>KAE_Adultos</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>APM_Adultos</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Profesionales_pediatricos</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Edit</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Profesionales pediatricos</label>
+        <sharedTo>
+            <group>KAE_Pediatrico</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>APM_Pediatrico</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

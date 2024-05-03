@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div><font face="arial">Estimado/a,</font></div><div><font face="arial">Se recibió un nuevo registro de "Llamado sensible":</font></div><div><font face="arial"><br></font></div><div><font face="arial">N° de registro:{!Case.CaseNumber}</font></div><div><font face="arial">Fecha de creacion:{!Case.CreatedDate}</font></div><div><font face="arial"><br></font></div><div><a href="https://danonearg--uat.sandbox.lightning.force.com/{!Case.Id}">Ver Caso</a></div><div><font face="arial"><br></font></div><div><font face="arial">Este mensaje se genera de manera automática.</font></div><div><font face="arial">Gracias!</font></div>]]></td>
+</tr>
+</table>

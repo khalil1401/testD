@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Introducci_n_de_la_alimentaci_n__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Introducción de la alimentación complementaria oral (edad/Comentarios)</inlineHelpText>
+    <label>Introducción de la alimentación</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

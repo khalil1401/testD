@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <description>Reporte de aviso de no cobertura por parte de los pacientes.</description>
+    <filter>
+        <criteriaItems>
+            <column>SUBJECT</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Cobertura Médica Sin Respuesta,Cobertura Médica Aprobada Parcialmente,Cobertura Médica Rechazada</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_DATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>THIS_MONTH</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SUBJECT</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>PC_$Contact.Obra_social__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Aviso de cobertura</name>
+    <params>
+        <name>closed</name>
+        <value>open</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountActivity</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

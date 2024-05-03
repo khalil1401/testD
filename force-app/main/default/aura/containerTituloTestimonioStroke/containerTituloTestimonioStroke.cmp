@@ -1,0 +1,32 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+	<aura:attribute name="recursoEstatico" type="String"/>
+	<aura:attribute name="rutaImg" type="String"/>
+	<aura:attribute name="titulo" type="String"/>
+	<aura:attribute name="altoDesktop" type="String"/>
+	<aura:attribute name="sinFlechasMobile" type="Boolean" default="false"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <div class="slds-grid slds-wrap slds-grid_vertical-align-center"
+            style="{!'background-image: url('+ v.rutaImg +');
+                background-position: center;
+                background-repeat: repeat-y;'}">
+        <div class="slds-col slds-large-size_2-of-12"></div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_8-of-12 slds-align_absolute-center slds-m-top_x-large slds-m-bottom_x-large">
+            <aura:if isTrue="{! !v.sinFlechasMobile}">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-DIMENSION_PSICOLOGICA_DE_LA_DISFAGIA/PP-imagenFlechaTestimoniosStroke%282022-05-24%29.png" alt="imgFlecha" class="flechaIzqTestimonioS"/>
+                <aura:unescapedHtml value="{!v.titulo}" />
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-DIMENSION_PSICOLOGICA_DE_LA_DISFAGIA/PP-imagenFlechaTestimoniosStroke%282022-05-24%29.png" alt="imgFlecha" class="flechaDerTestimonioS"/>
+                <!--Si no tiene flechas en mobile-->
+                <aura:set attribute="else">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-DIMENSION_PSICOLOGICA_DE_LA_DISFAGIA/PP-imagenFlechaTestimoniosStroke%282022-05-24%29.png" alt="imgFlecha" class="sinFlechaIzqTestimonioS"/>
+                    <aura:unescapedHtml value="{!v.titulo}" />
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-DIMENSION_PSICOLOGICA_DE_LA_DISFAGIA/PP-imagenFlechaTestimoniosStroke%282022-05-24%29.png" alt="imgFlecha" class="sinFlechaDerTestimonioS"/>
+                </aura:set>
+            </aura:if>
+        </div>
+        <div class="slds-col slds-large-size_2-of-12"></div>
+    </div>
+
+</aura:component>

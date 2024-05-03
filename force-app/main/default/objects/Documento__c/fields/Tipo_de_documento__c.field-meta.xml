@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_documento__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de documento</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FC Licitaciones ME</fullName>
+                <default>false</default>
+                <label>FC Licitaciones ME</label>
+            </value>
+            <value>
+                <fullName>FC Directa Medical</fullName>
+                <default>false</default>
+                <label>FC Directa Medical</label>
+            </value>
+            <value>
+                <fullName>NUB Transferencia ARS</fullName>
+                <default>false</default>
+                <label>NUB Transferencia ARS</label>
+            </value>
+            <value>
+                <fullName>NC Directa Medical</fullName>
+                <default>false</default>
+                <label>NC Directa Medical</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

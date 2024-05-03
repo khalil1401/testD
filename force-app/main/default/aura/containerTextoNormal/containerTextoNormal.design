@@ -1,0 +1,12 @@
+<design:component >
+
+    <design:attribute name="mensaje" label="Mensaje texto"/>
+    <design:attribute name="mensajeParrafo1" label="Mensaje texto parrafo 1"/>
+    <design:attribute name="mensajeParrafo2" label="Mensaje texto parrafo 2"/>
+    <design:attribute name="mensajeParrafo3" label="Mensaje texto parrafo 3"/>
+    <design:attribute name="backgroundColor" label="Color de fondo"/>
+    <design:attribute name="fontColor" label="Color de fuente"/>
+    <design:attribute name="fontSize" label="Tamaño de fuente en 'em'"/>
+    <design:attribute name="fontFamily" label="Tipo de fuente de textos"/>
+
+</design:component>

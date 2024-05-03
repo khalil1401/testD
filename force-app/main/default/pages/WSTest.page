@@ -1,0 +1,11 @@
+<apex:page >    
+    <script type="text/javascript">
+        var CONNECTION;
+        window.onload = function () {
+			CONNECTION = new WebSocket('ws://127.0.0.1/chat');
+            CONNECTION.onopen = function () {
+                alert('Hello!');
+            };
+        }
+    </script>
+</apex:page>

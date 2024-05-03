@@ -1,0 +1,23 @@
+<design:component >
+
+    <design:attribute name="backgroundColor" label="Color de fondo de acordeon"/>
+    <design:attribute name="backgroundColorHeader" label="Color de fondo de header no seleccionado"/>
+    <design:attribute name="backgroundColorText" label="Color de fondo de cuadro de texto de sección"/>
+    <design:attribute name="backgroundColorHeaderActive" label="Color de fondo de header seleccionado"/>
+    <design:attribute name="backgroundColorHeaderActiveGradiente1" label="Primer color de fondo de header seleccionado para gradiente"/>
+    <design:attribute name="backgroundColorHeaderActiveGradiente2" label="Segundo color de fondo de header seleccionado para gradiente"/>
+    <design:attribute name="textHeaderColor" label="Color de texto de header"/>
+    <design:attribute name="textHeaderActiveColor" label="Color de texto de header seleccionado"/>
+    <design:attribute name="textBodyColor" label="Color de texto de body"/>
+    <design:attribute name="radioEsquinas" label="Curvatura de esquinas"/>
+    <design:attribute name="isSeccion1" label="Existe sección 1"/>
+    <design:attribute name="textTitleSeccion1" label="Texto de título de la sección 1"/>
+    <design:attribute name="textBodySeccion1" label="Texto de body de la sección 1"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion2" label="Existe sección 2"/>
+    <design:attribute name="textTitleSeccion2" label="Texto de título de la sección 2"/>
+    <design:attribute name="textBodySeccion2" label="Texto de body de la sección 2"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion3" label="Existe sección 3"/>
+    <design:attribute name="textTitleSeccion3" label="Texto de título de la sección 3"/>
+    <design:attribute name="textBodySeccion3" label="Texto de body de la sección 3"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+
+</design:component>

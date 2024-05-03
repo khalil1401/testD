@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EclairGeoData xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <content xsi:nil="true"/>
+    <maps>
+        <boundingBoxBottom>-54.92973709106445</boundingBoxBottom>
+        <boundingBoxLeft>-74.00114440917969</boundingBoxLeft>
+        <boundingBoxRight>-50.620967864990234</boundingBoxRight>
+        <boundingBoxTop>-21.78113555908203</boundingBoxTop>
+        <mapLabel>Nuevo mapa</mapLabel>
+        <mapName>map_1541905543880</mapName>
+        <projection>Equirectangular</projection>
+    </maps>
+    <masterLabel>provincias</masterLabel>
+</EclairGeoData>

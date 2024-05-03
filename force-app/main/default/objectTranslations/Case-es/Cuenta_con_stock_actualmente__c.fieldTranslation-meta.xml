@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Cuenta_con_stock_actualmente__c</name>
+    <picklistValues>
+        <masterLabel>+ de 14 días</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Si</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

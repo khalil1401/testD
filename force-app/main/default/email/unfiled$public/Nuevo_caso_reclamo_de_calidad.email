@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Hola, equipo de Asuntos regulatorios!<div><br></div><div>Se ha recibido un nuevo caso de reclamo de calidad, por favor revisarlo para su autorización ingresando al siguiente vínculo: {!Case.Link}</div><div><br></div><div>Saludos.</div>]]></td>
+</tr>
+</table>

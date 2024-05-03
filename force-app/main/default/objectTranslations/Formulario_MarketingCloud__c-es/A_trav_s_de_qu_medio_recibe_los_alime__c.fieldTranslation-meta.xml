@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>A_trav_s_de_qu_medio_recibe_los_alime__c</name>
+    <picklistValues>
+        <masterLabel>Farmacia</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hospital</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recibe en la casa</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

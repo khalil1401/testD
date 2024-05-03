@@ -1,0 +1,6 @@
+<design:component >
+
+    <design:attribute name="backgroundCardColor" label="Color de fondo de card"/>
+    <design:attribute name="radioEsquinas" label="Curvatura de esquinas"/>
+
+</design:component>

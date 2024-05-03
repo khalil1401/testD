@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo_de_la_solicitud__c</fullName>
+    <externalId>false</externalId>
+    <label>Motivo de la solicitud</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OS demora aprobacion</fullName>
+                <default>false</default>
+                <label>OS demora aprobacion</label>
+            </value>
+            <value>
+                <fullName>Producto en quiebre</fullName>
+                <default>false</default>
+                <label>Producto en quiebre</label>
+            </value>
+            <value>
+                <fullName>OS no consigue stock</fullName>
+                <default>false</default>
+                <label>OS no consigue stock</label>
+            </value>
+            <value>
+                <fullName>Cobertura negativa</fullName>
+                <default>false</default>
+                <label>Cobertura negativa</label>
+            </value>
+            <value>
+                <fullName>Solicitada por profesional</fullName>
+                <default>false</default>
+                <label>Solicitada por profesional</label>
+            </value>
+            <value>
+                <fullName>Demora en distribucion a farmacia</fullName>
+                <default>false</default>
+                <label>Demora en distribucion a farmacia</label>
+            </value>
+            <value>
+                <fullName>Presentacion tardia en OS</fullName>
+                <default>false</default>
+                <label>Presentacion tardia en OS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

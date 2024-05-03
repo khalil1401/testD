@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_respondi_s_qu_resultado_tuvo__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Si responde SI (Utilizó anteriormente algún suplemento nutricional) preguntar &quot;Que resultado tuvo con el suplemento nutricional?&quot;</inlineHelpText>
+    <label>Si respondió sí, qué resultado tuvo?</label>
+    <length>200</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

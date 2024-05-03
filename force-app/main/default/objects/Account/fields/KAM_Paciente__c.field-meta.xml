@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KAM_Paciente__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(RecordType.Name = &apos;Paciente Regular&apos; || RecordType.Name = &apos;Paciente Best Care&apos; || RecordType.Name = &apos;Paciente Partner&apos;,
+IF(RecordType.Name = &apos;Paciente Regular&apos; ,UPPER(Obra_social__pr.KAM_Obra_Social__c),
+UPPER(Obra_social__pr.KAM_Obra_Social__c)) ,
+&apos;&apos;)
+
+/*IF(RecordType.Name = &apos;Paciente Regular&apos; || RecordType.Name = &apos;Paciente Best Care&apos; || RecordType.Name = &apos;Paciente Partner&apos;,
+     IF(Obra_social__pr.Usuario_KAM_obra_social__c== null, 
+								    UPPER(Obra_social__pr.KAM_Obra_Social__c), 
+								    UPPER(Obra_social__pr.Usuario_KAM_obra_social__r.FirstName + &apos; &apos;+Obra_social__pr.Usuario_KAM_obra_social__r.LastName)  
+		     ),
+			&apos;&apos;)*/</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>KAM Paciente</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Cuanto_demor_el_tratamiento__c</name>
+    <picklistValues>
+        <masterLabel>1 semana</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 semanas</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Menos de 1 semana</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>de 3 a 4 semanas</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

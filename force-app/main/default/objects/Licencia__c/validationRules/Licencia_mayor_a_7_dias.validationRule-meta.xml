@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Licencia_mayor_a_7_dias</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISNEW(),Fecha_de_inicio__c &lt; TODAY() - 7)</errorConditionFormula>
+    <errorDisplayField>Fecha_de_inicio__c</errorDisplayField>
+    <errorMessage>No se permite cargar una licencia con una antigüedad mayor a 7 días.</errorMessage>
+</ValidationRule>

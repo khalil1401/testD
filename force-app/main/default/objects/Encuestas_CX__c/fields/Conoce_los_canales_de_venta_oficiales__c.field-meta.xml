@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conoce_los_canales_de_venta_oficiales__c</fullName>
+    <description>¿Conoce nuestros canales de venta oficial?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>¿Conoce nuestros canales de venta oficial?</inlineHelpText>
+    <label>¿Conoce los canales de venta oficiales?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Conoce D2C y MELI</fullName>
+                <default>false</default>
+                <label>Conoce D2C y MELI</label>
+            </value>
+            <value>
+                <fullName>Conoce D2C</fullName>
+                <default>false</default>
+                <label>Conoce D2C</label>
+            </value>
+            <value>
+                <fullName>Conoce MELI</fullName>
+                <default>false</default>
+                <label>Conoce MELI</label>
+            </value>
+            <value>
+                <fullName>No los conoce</fullName>
+                <default>false</default>
+                <label>No los conoce</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

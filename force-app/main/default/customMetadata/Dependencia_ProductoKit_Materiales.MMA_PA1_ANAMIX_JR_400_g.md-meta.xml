@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>MMA / PA1 ANAMIX JR 400 g</label>
+    <protected>false</protected>
+    <values>
+        <field>Alimentacion__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Materiales_Kit__c</field>
+        <value xsi:type="xsd:string">179150</value>
+    </values>
+    <values>
+        <field>Producto_Kit__c</field>
+        <value xsi:type="xsd:string">89465</value>
+    </values>
+</CustomMetadata>

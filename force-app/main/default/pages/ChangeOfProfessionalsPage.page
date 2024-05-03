@@ -1,0 +1,36 @@
+<apex:page standardController="Account" recordSetVar="accounts" tabStyle="Account" extensions="ChangeOfProfessionalsController" showHeader="true">
+
+    <apex:form >
+        <apex:pageBlock title="Profesionales a Transferir">
+      
+            <apex:pageMessages />
+            
+            <apex:commandLink action="{!volver}" value="Volver"/>
+
+            <apex:pageBlockSection rendered="{!rend}">
+                <apex:inputField value="{!Account.Usuario_Visitador_medico__c}"/>  
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection rendered="{!rend}">
+                <apex:pageBlockTable value="{!accountList}" var="acc" id="table">
+
+                    <apex:column >
+                        <apex:inputCheckbox value="{!acc.selected}" id="inputId"/>
+                    </apex:column>
+
+                    <apex:column >
+                        <apex:facet name="header">NOMBRE DE LA CUENTA</apex:facet>
+                        {!acc.cuenta.LastName}, {!acc.cuenta.FirstName}
+                    </apex:column>
+
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection columns="1" rendered="{!rend}">
+                <apex:commandButton value="Transferir" action="{!save}"/>
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

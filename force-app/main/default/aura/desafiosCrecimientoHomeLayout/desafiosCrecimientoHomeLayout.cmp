@@ -1,0 +1,123 @@
+<aura:component implements="forceCommunity:layout">
+
+    <aura:attribute name="container1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container2" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container3" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container4" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container5" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container6" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container7" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container8" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container9" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container10" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container11" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container12" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container13" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container14" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container15" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container16" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container17" type="Aura.Component[]" required="false"/>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container1}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1" id="top-hddc-page">
+            {!v.container2}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container3}
+        </div>
+        
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container4}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="div-texts-home-layout-ddc">
+                {!v.container5}
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="div-texts-home-layout-ddc">
+                {!v.container6}
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="div-texts-home-layout-ddc">
+                {!v.container7}
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="div-texts-home-layout-ddc">
+                {!v.container8}
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container9}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1">
+            <div class="slds-grid slds-wrap div-cards-home-layout-ddc">
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large slds-m-bottom_x-large slds-text-align_center">
+                    <p class="title-home-layout-ddc">
+                        Te invitamos a conocer más acerca de la desnutrición infantil:
+                    </p>
+                    <hr class="linea-home-layout-ddc slds-align_absolute-center"/>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-p-around_large">
+                    {!v.container10}
+                </div>
+        
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-p-around_large">
+                    {!v.container11}
+                </div>
+        
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-p-around_large">
+                    {!v.container12}
+                </div>
+        
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-p-around_large">
+                    {!v.container13}
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large slds-m-bottom_x-large">
+            {!v.container14}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-m-top_x-large slds-m-bottom_x-large">
+            <button 
+                data-seccion="top-hddc-page"
+                class="back-button-kdi-desafios"
+                onclick="{!c.goToDiv}">
+                <lightning:icon 
+                    iconName="utility:chevronup"
+                    size="small"
+                    alternativeText="up"
+                    variant="inverse"/>
+                VOLVER ARRIBA
+            </button>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container15}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large slds-m-bottom_x-large">
+            {!v.container16}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container17}
+        </div>
+    </div>
+
+</aura:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Otros_profesionales</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Primera_especialidad__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PersonAccount.Otro_profesional</value>
+    </filters>
+    <label>Otros profesionales</label>
+</ListView>

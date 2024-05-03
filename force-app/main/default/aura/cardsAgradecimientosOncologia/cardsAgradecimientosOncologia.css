@@ -1,0 +1,61 @@
+.THIS {
+}
+
+.THIS .cardAgradecimientoOncologia{
+    border-radius: 10px 10px 10px 10px;
+    background-color: #ebebeb;
+    height: 400px;
+}
+
+.THIS .imgCardAgradecimientoOncologia{
+    height: 175px;
+}
+
+.THIS .nombreAgradecimientoOncologia{
+    font-family: MontserratSemiBold;
+    color: #293896;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.THIS .especialidaAgradecimientoOncologia{
+    color: #C09AC2;
+    font-family: MontserratSemiBold;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.THIS .lugarAgradecimientoOncologia{
+    color: #293896;
+    font-family: MontserratRegular;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@media (max-width: 600px) {
+    .THIS {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .THIS .cardAgradecimientoOncologia{
+        height: 400px;
+    }
+    .THIS .imgCardAgradecimientoOncologia{
+        height: 200px;
+    }
+    .THIS .imgAgradecimientoOncologia{
+        width: 75%;
+    }
+    .THIS .nombreAgradecimientoOncologia{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .THIS .especialidaAgradecimientoOncologia{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .THIS .lugarAgradecimientoOncologia{
+        font-size: 15px;
+        line-height: 23px;
+    }    
+}

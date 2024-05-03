@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recibe_alimentos_aproteicos_mensualmente__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Además de los alimentos del programa EYN</inlineHelpText>
+    <label>Recibe alimentos aproteícos mensualmente</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Si, EYN</fullName>
+                <default>false</default>
+                <label>Si, EYN</label>
+            </value>
+            <value>
+                <fullName>Si, otros además de EYN</fullName>
+                <default>false</default>
+                <label>Si, otros además de EYN</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

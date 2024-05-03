@@ -1,0 +1,80 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="tituloHeader" type="String"/>
+    <aura:attribute name="mensaje" type="String"/>
+    <aura:attribute name="tituloFooter" type="String"/>
+    <aura:attribute name="backgorundColor" type="String"/>
+
+    <aura:attribute name="isDesktop" type="Boolean"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div style="background-color: #ebebeb;
+                border-radius: 10px 10px 10px 10px;">
+        <div class="slds-grid">
+            <div class="slds-col slds-large-size_1-of-12">
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_10-of-12">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_3-of-12 slds-large-size_3-of-12 slds-m-top_x-large">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-MALNUTRICION/PP-iconoAtencionOncologia%282022-05-20%29.png" alt="warning"/>
+                    </div>
+                    <div class="slds-col slds-size_9-of-12 slds-large-size_9-of-12 slds-m-top_x-large">
+                        <aura:if isTrue="{!v.isDesktop}">
+                            <div class="slds-clearfix">
+                                <div class="slds-float_left">
+                                    <span   class="tituloAvisoNutricionOncologia">
+                                        Es importante prestar
+                                    </span>
+                                </div>
+                                <div class="slds-float_right">
+                                    <span   class="tituloAvisoNutricionOncologia">
+                                        atención
+                                        <span   class="tituloRosaAvisoNutricionOncologia">
+                                            a las señales
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <aura:set attribute="else">
+                                <span   class="tituloAvisoNutricionOncologia">
+                                    Es importante prestar atención
+                                    <span   class="tituloRosaAvisoNutricionOncologia">
+                                        a las señales
+                                    </span>
+                                </span>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+                </div>
+            
+                <ul class="slds-list_dotted slds-m-top_large textoAvisoNutricionOncologia">
+                    <li class="slds-m-top_small">
+                        Pérdida de peso involuntaria.
+                    </li>
+                    <li class="slds-m-top_small">
+                        Disminución o pérdida de apetito.
+                    </li>
+                    <li class="slds-m-top_small">
+                        Reducción de la ingesta habitual.
+                    </li>
+                    <li class="slds-m-top_small">
+                        Debilitamiento.
+                    </li>
+                    <li class="slds-m-top_small">
+                        Presencia de efectos secundarios del tratamiento oncológico.
+                    </li>
+                </ul>
+            
+                <br></br>
+                <p  class="slds-m-bottom_medium textoBajadaAvisoNutricionOncologia" >
+                    Ante cualquier síntoma, te aconsejamos consultar con tu médico tratante o un especialista en nutrición para recibir apoyo.
+                </p>
+                <br></br>
+
+            </div>
+            <div class="slds-col slds-large-size_1-of-12">
+            </div>
+        </div>
+    </div>
+
+</aura:component>

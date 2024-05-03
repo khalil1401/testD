@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Cual_sabor_de_Fortisip_Compact_Protein_e__c</name>
+    <picklistValues>
+        <masterLabel>Frutos rojos</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jengibre</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neutro</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

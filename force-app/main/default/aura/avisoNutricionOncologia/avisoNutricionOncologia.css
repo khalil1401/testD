@@ -1,0 +1,54 @@
+.THIS {
+}
+
+.THIS .textoAvisoNutricionOncologia{
+    color: #606060;
+    font-family: MontserratRegular;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.THIS .textoBajadaAvisoNutricionOncologia{
+    font-family:MontserratSemiBold;
+    font-size:16px;
+    color:#606060;
+    line-height: 28px;
+}
+
+.THIS .tituloAvisoNutricionOncologia{
+    font-family:MontserratBlack;
+    font-size:35px;
+    color: #293896;
+    line-height: 30px;
+}
+
+.THIS .tituloRosaAvisoNutricionOncologia{
+    color:#C09AC2;
+    font-family:PacificoRegular;
+    font-size:40px;
+    line-height: 30px;
+}
+
+@media (max-width: 600px) {
+    .THIS {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .THIS .textoAvisoNutricionOncologia{
+        font-size: 15px;
+        line-height: 23px;
+    }
+
+    .THIS .textoBajadaAvisoNutricionOncologia{
+        font-size:15px;
+        line-height: 23px;
+    }
+
+    .THIS .tituloAvisoNutricionOncologia{
+        font-family:MontserratBlack;
+        font-size:28px;
+        color: #293896;
+        line-height: 30px;
+    }    
+}

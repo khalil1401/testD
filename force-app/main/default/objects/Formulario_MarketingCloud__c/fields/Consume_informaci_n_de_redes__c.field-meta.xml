@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consume_informaci_n_de_redes__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Consume información de redes?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Si, regularmente</fullName>
+                <default>false</default>
+                <label>Si, regularmente</label>
+            </value>
+            <value>
+                <fullName>Si, a veces</fullName>
+                <default>false</default>
+                <label>Si, a veces</label>
+            </value>
+            <value>
+                <fullName>Casi nunca</fullName>
+                <default>false</default>
+                <label>Casi nunca</label>
+            </value>
+            <value>
+                <fullName>No, no consume y no le interesa</fullName>
+                <default>false</default>
+                <label>No, no consume y no le interesa</label>
+            </value>
+            <value>
+                <fullName>No, no consume pero le interesaría</fullName>
+                <default>false</default>
+                <label>No, no consume pero le interesaría</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

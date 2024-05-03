@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actualizar__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Sirve para hacer un ultimo calculo a los ciclos que ya cerraron</description>
+    <externalId>false</externalId>
+    <label>Actualizar</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

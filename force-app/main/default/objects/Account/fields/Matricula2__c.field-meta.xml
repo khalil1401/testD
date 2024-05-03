@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Matricula2__c</fullName>
+    <externalId>false</externalId>
+    <label>Matrícula2</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Matrícula Nacional</fullName>
+                <default>false</default>
+                <label>Matrícula Nacional</label>
+            </value>
+            <value>
+                <fullName>Matrícula Provincial</fullName>
+                <default>false</default>
+                <label>Matrícula Provincial</label>
+            </value>
+            <value>
+                <fullName>Sin Definir</fullName>
+                <default>false</default>
+                <label>Sin Definir</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

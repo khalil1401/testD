@@ -1,0 +1,12 @@
+<design:component >
+
+    <design:attribute name="tituloDeDNI" label="Título de DNI"/>
+    <design:attribute name="tituloDeSeleccionDePaciente" label="Título de selección de paciente"/>
+    <!--nuevo-->
+    <design:attribute name="mensajeCondiciones" label="Mensaje de consentimiento de términos de formulario de registro" description="En formato html"/>
+    <design:attribute name="mensajeLeiYAceptoCondiciones" label="Check de consentimiento de términos de formulario de registro" description="En formato texto"/>
+    <design:attribute name="mensajeAlertaCondiciones" label="Mensaje de alerta si no se aceptan los términos" description="En formato texto"/>
+    <design:attribute name="altoContainerCondiciones" label="Alto de container de términos de formulario de registro en porcentaje segun los px de la pantalla" description="En formato texto"/>
+    <design:attribute name="altoContainerCondicionesMobile" label="No completar"/>
+
+</design:component>

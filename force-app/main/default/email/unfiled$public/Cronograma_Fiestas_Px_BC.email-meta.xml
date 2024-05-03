@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Nutricia</letterhead>
+    <name>Cronograma Fiestas Px BC</name>
+    <style>freeForm</style>
+    <subject>Cronograma de atención - Fin de año</subject>
+    <textOnly>Estimado paciente:
+
+A continuación les compartimos nuestros esquemas de trabajo para este fin de año:
+
+
+• 24 y 25 de diciembre: Sin operación ni envíos.
+
+• 31 y 1 de enero: Sin operación ni envíos
+
+• 28, 29 y 30 de diciembre: Los ingresos de pedidos serán procesados y  entregados a partir del 4 de enero 2021, dependiendo de la localidad-
+
+
+Sugerimos que puedan contactar a su Obra Social y presentar la orden médica para este mes antes del 20 de diciembre.
+
+
+Desde ya muchas gracias por confiar en Best Care para su cuidado.
+
+Les deseamos Felices Fiestas con un próspero 2021.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

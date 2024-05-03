@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$ID_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Account$Estado_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$Subestado_del_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Type</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Subtipo__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Motivo__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Owner</field>
+    </columns>
+    <description>Muestra los pacientes en Subestado Seguimiento ONG con casos derivados a la ONG</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$Subestado_del_paciente__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>En Seguimiento de ONG</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Cases$Subtipo__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Seguimiento ONG</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Seguimiento ONG</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cuentas_con_casos__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account$Name</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

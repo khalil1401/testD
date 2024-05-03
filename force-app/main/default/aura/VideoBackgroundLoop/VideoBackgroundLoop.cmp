@@ -1,0 +1,77 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+	<aura:attribute name="urlVideo" type="String" access="global" required="true"/> 
+	<aura:attribute name="urlImage" type="String" access="global" required="true"/>
+	<aura:attribute name="maxHeight" type="String" access="global" default="100" required="true"/>
+	<aura:attribute name="maxHeightMobile" type="String" access="global" default="100" required="true"/>
+	<aura:attribute name="maxWidth" type="String" access="global" default="100" required="true"/>
+	<aura:attribute name="moveVertically" type="String" access="global"/>
+	<aura:attribute name="minWidth" type="String" access="global" default="100" required="true"/>
+	<aura:attribute name="flag" type="Boolean" default="false"/>
+    
+	<link rel="preload" href="{!v.urlVideo}" as="video" type="video/mp4"/>
+    
+	<!-- Desktop -->
+	<div class="slds-show_medium"
+	     style="{!join(';',
+			'min-width: ' + v.minWidth,
+    		'max-width: ' + v.maxWidth,	
+    		'height: ' + v.maxHeight,
+         	'max-height: ' + v.maxHeight,
+            'position: relative',
+        	'overflow: hidden'
+	)}">
+        <!-- Desktop-Image -->
+		<div class="slds-show_medium" id="imagen"
+             style="{!join(';',
+                'width: 100%',
+      			'position: relative',
+    			'overflow: hidden',
+    			'max-height: ' + v.maxHeightMobile
+       	)}">
+			<img src="{!v.urlImage}"
+                 style="{!join(';',
+              		'width: 100%',
+                	'transform: translateY(' + v.moveVertically + ')' 
+     		)}"/>
+		</div>
+        <!-- Desktop-Video -->
+		<div>
+			<video id="video"
+			       autoplay="autoplay" 
+			       loop="loop"
+			       muted="muted"
+			       onwaiting="{!c.init}"
+			       oncanplay="{!c.canPlay}" 
+                   style="{!join(';',
+					  'width: 100%',
+                      'transform: translateY(' + v.moveVertically + ')'
+          	)}">
+				<source src="{!v.urlVideo}" type="video/mp4"/>
+				<source src="{!v.urlVideo}" type="video/ogg" />
+				<source src="{!v.urlVideo}" type="video/webm" />
+				<img src="{!v.urlImage}"
+				     style="{!join(';',
+                        'width: 100%',
+                        'transform: translateY(' + v.moveVertically + ')'
+	 			)}"/>
+			</video>
+		</div>
+	</div>
+	
+	<!-- Mobile -->
+	<div class="slds-hide_medium"
+         style="{!join(';',
+			'min-width: ' + v.minWidth,
+    		'max-width: ' + v.maxWidth,	
+    		'height: ' + v.maxHeight,
+			'position: relative',
+			'overflow: hidden',
+			'max-height: ' + v.maxHeightMobile
+ 	)}">
+		<img src="{!v.urlImage}" 
+             style="{!join(';',
+                'width: 100%',
+    			'transform: translateY(' + v.moveVertically + ')'
+    	)}"/>
+	</div>
+</aura:component>

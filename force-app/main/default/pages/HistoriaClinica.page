@@ -1,0 +1,102 @@
+<apex:page renderAs="pdf" standardController="Formulario__c" 
+           extensions="HistoriaClinicaController" action="{!updateForm}" 
+           showHeader="false" >    
+    <head>
+        <apex:stylesheet value="{!$Resource.HistoriaClinica}" />
+    </head>
+    
+    <div class="header">
+        <div style="position: relative">
+            <apex:image url="{!$Resource.HeaderBestCare}" height="50px"/>
+        </div>
+    </div>
+    <div class="content">
+        <apex:repeat value="{!layout}" var="seccion" id="theRepeat">
+            <!-- <apex:outputPanel rendered="{!seccion.label != 'System Information'}"> -->
+            <apex:outputPanel rendered="{! if(secciones[seccion.label],true,false)}">
+                <div class="row">
+                    <div class="colTitle">
+                        <h3 class="text-center">
+                            <apex:outputtext value="{!seccion.label}" escape="false"/>
+                        </h3>
+                    </div>
+                </div>
+                <apex:repeat value="{! seccionesLabel[seccion.label]}" var="colum" >
+                    
+                    <div class="row" style="display: table-row;">
+                        
+                        <apex:pageBlock rendered="{! colum == 'Estado Actual'
+                                                  || colum == 'Obs. (sistema nervioso)'
+                                                  || colum == 'Otros (motivo del soporte nutricional)'
+                                                  || colum == 'Patología'
+                                                  || colum == 'Otra patología'}">
+                            <div class="col-12" style= "display: table-cell;padding :10px; ">
+                                <apex:outputText value="{!valores[colum]}" escape="false" style=""/>
+                            </div>
+                        </apex:pageBlock>
+                        
+                        <apex:pageBlock rendered="{! colum != 'Obs. (sistema nervioso)' 
+                                                  && colum != 'Otros (motivo del soporte nutricional)'
+                                                  && colum != 'Estado Actual'
+                                                  && colum != 'Patología' 
+                                                  && colum != 'Otra patología'}">
+                            <div class="col " style= "display: table-cell;padding :0px; ">
+                                <apex:outputText value="{!colum}" escape="false"/>
+                            </div>   
+                            
+                        </apex:pageBlock>
+                        
+                        
+                        
+                        <div  style= "display: table-cell;padding :10px;">
+                            <apex:outputText value="{!if(colum != 'Obs. (sistema nervioso)'
+                                                    && colum != 'Otros (motivo del soporte nutricional)'
+                                                    && colum != 'Estado Actual'
+                                                    && colum != 'Patología'
+                                                    && colum != 'Otra patología'
+                                                    , valores[colum],null)}"  escape="false"/>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </apex:repeat>
+                
+            </apex:outputPanel>
+           
+
+        </apex:repeat> 
+        <!-- <div class="row" style="display: table-row;">
+<div class="col colIzq" style= "display: table-cell;padding :10px; ">
+<apex:outputText value="Nombre" />
+
+</div>
+<div class="col" style= "display: table-cell;padding :10px; ">
+<apex:outputText value="{!profesional.FirstName} " />
+
+</div>
+</div>
+
+<div class="row" style="display: table-row;">
+<div class="col colIzq" style= "display: table-cell;padding :10px; ">
+<apex:outputText value="Apellido" />
+
+</div>
+<div class="col" style= "display: table-cell;padding :10px; ">
+<apex:outputText value="{!profesional.LastName} " />
+
+</div>
+</div>
+
+<div class="row" style="display: table-row;">
+<div class="col colIzq" style= "display: table-cell;padding :10px; ">
+<apex:outputText value="Matricula" />
+
+</div>
+<div class="col" style= "display: table-cell;padding :10px; ">
+<apex:outputText value="{!profesional.Matricula__c} " />
+
+</div>
+</div>-->
+    </div>
+</apex:page>

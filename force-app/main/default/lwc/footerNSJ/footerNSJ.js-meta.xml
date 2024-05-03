@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="textPrimeraLinea" type="String" label="Texto primera linea"/>
+            <property name="textTerminos" type="String" label="Texto de Términos de uso"/>
+            <property name="textPoliticas" type="String" label="Texto Politicas de privacidad"/>
+            <property name="textFAQ" type="String" label="Texto de Preguntas Frecuentes"/>
+            <property name="apiNameTerminos" type="String" label="API name de página de Terminos de uso"/>
+            <property name="apiNamePoliticas" type="String" label="API name de página de Políticas de privacidad"/>
+            <property name="apiNameFAQ" type="String" label="API name de página de Preguntas Frecuentes"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

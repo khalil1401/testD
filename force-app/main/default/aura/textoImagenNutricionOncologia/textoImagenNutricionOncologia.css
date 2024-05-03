@@ -1,0 +1,30 @@
+.THIS {
+}
+
+.THIS .textoImagenNutricionOncologia{
+    color: #293896;
+    font-family: MontserratRegular;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.THIS .imagenNutricionOncologia{
+    float: right;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .THIS {
+        padding-right: 5%;
+        padding-left: 5%;
+    }    
+    .THIS .textoImagenNutricionOncologia{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .THIS .imagenNutricionOncologia{
+        float: none;
+        width: 80%;
+        padding-top: 5%;
+    }    
+}

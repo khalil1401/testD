@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Formato_para_llevar_que_prefiere__c</fullName>
+    <externalId>false</externalId>
+    <label>Formato para llevar que prefiere</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pouch</fullName>
+                <default>false</default>
+                <label>Pouch</label>
+            </value>
+            <value>
+                <fullName>Sobre</fullName>
+                <default>false</default>
+                <label>Sobre</label>
+            </value>
+            <value>
+                <fullName>Brick</fullName>
+                <default>false</default>
+                <label>Brick</label>
+            </value>
+            <value>
+                <fullName>Botella</fullName>
+                <default>false</default>
+                <label>Botella</label>
+            </value>
+            <value>
+                <fullName>Barra</fullName>
+                <default>false</default>
+                <label>Barra</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

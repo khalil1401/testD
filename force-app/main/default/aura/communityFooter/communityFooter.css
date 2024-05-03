@@ -1,0 +1,20 @@
+.THIS{
+}
+
+.THIS .text-footer-nsj{
+    font-family: MontserratRegular;
+    font-size: 0.8rem !important;
+    color:white;
+}
+
+.THIS .text-link-footer-nsj{
+    font-family: MontserratRegular;
+    font-size: 0.7rem !important;
+    color:white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.THIS .text-link-footer-nsj:hover{
+    cursor: pointer;
+}

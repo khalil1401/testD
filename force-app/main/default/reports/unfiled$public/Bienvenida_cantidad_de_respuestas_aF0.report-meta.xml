@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Survey__c.SurveyQuestions__r.Survey_Question_Answers__r$Response__c</field>
+    </columns>
+    <columns>
+        <field>Survey__c.SurveyQuestions__r$Name</field>
+    </columns>
+    <description>Encuesta de bienvenida a Junto a Vos cantidad de respuestas</description>
+    <format>Tabular</format>
+    <name>Bienvenida cantidad de respuestas</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Encuestas_con_Survey_Questions_Responses__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Survey__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

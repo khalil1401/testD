@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>De_qu_manera_lo_consume__c</fullName>
+    <description>¿De qué manera lo consume?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>En caso de haber respondido distención abdominal, diarrea, vómitos o aroma o sabor:
+¿De qué manera consume el producto?</inlineHelpText>
+    <label>¿De qué manera lo consume?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Frio</fullName>
+                <default>false</default>
+                <label>Frio</label>
+            </value>
+            <value>
+                <fullName>Caliente</fullName>
+                <default>false</default>
+                <label>Caliente</label>
+            </value>
+            <value>
+                <fullName>Temperatura ambiente</fullName>
+                <default>false</default>
+                <label>Temperatura ambiente</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,30 @@
+.THIS h2{
+    font-family: MontserratSemiBold;
+    font-size: 1.7em;
+}
+
+.THIS label{
+    font-family: MontserratSemiBold;
+}
+
+.THIS input{
+    font-family: MontserratSemiBold;
+}
+
+.THIS button{
+    font-family: MontserratSemiBold;
+}
+
+.THIS .localidad {
+    font-size: 0.95em;
+    font-weight: bold;
+    color: rgb(105, 105, 105);
+}
+
+.THIS .combobox-provincias .slds-listbox{
+    max-height: 30vh;
+}
+
+.THIS .combobox-municipios .slds-listbox{
+    max-height: 30vh;
+}

@@ -1,0 +1,43 @@
+.THIS {
+    border-radius: 10px 10px 10px 10px;
+    background-color: #ebebeb;
+}
+
+.THIS .tituloInformacionAFOncologia{
+    font-family:MontserratSemiBold;
+    color:#606060;
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.THIS .textoInformacionAFOncologia{
+    font-family: MontserratRegular;
+    color: #606060;
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.THIS .containerInformacionAFOncologia{
+}
+
+@media (max-width: 600px) {
+    .THIS {
+        padding-left: 5%;
+        padding-right: 5%;
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    .THIS .tituloInformacionAFOncologia{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    
+    .THIS .textoInformacionAFOncologia{
+        font-size: 15px;
+        line-height: 23px;
+    }
+
+    .THIS .itemsInformacionAFOncologia{
+        padding-top: 2%;
+    }
+}

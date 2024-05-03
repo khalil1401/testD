@@ -1,0 +1,163 @@
+<template>
+    <div class="div-footer-ddc">
+        <div class="desktop">
+            <div class="slds-grid slds-wrap slds-p-top_xx-large slds-p-bottom_xx-large">
+                <div class="slds-col slds-size_1-of-12">
+                </div>
+                <div class="slds-col slds-size_10-of-12">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_3-of-12">
+                            <span class="title-footer-ddc">
+                                Secciones
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <span class="title-footer-ddc">
+                                Contacto para profesionales y pacientes
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <span class="title-footer-ddc">
+                                Seguinos en nuestras redes
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-m-top_medium">
+                        <div class="slds-col slds-size_3-of-12">
+                            <template for:each={items} for:item="item">
+                                <div key={item.dataId}>
+                                    <span
+                                        class="text-footer-ddc"
+                                        style="cursor: pointer;"
+                                        data-redirect="internal"
+                                        data-id={item.dataId}
+                                        onclick={redirect}>
+                                        {item.label}
+                                    </span>
+                                </div>
+                            </template>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <p class="text-footer-ddc">
+                                Lunes a viernes de 9 a 18 hs.
+                            </p>
+                            <p class="text-footer-ddc">
+                                Tel: 
+                                <span>
+                                    <a href="tel:0800-122-5544">
+                                        <span
+                                            data-iddesktop="telefono"
+                                            class="contact-text-footer-ddc">
+                                            0800-122-5544
+                                        </span>
+                                    </a>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <span>
+                                <template for:each={itemsRS} for:item="rs">
+                                    <span key={rs.id}>
+                                        <img
+                                            class="icon-rs-footer-ddc"
+                                            style="cursor: pointer;"
+                                            src={rs.img}
+                                            data-redirect="external"
+                                            data-id={rs.dataId}
+                                            onclick={redirect}/>
+                                    </span>
+                                </template>
+                            </span>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_3-of-12">
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <img 
+                                src={logonb}
+                                class="icon-footer-ddc"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-12">
+                </div>
+            </div>
+        </div>
+        <div class="mobile">
+                <div class="slds-p-top_x-large">
+                    <p class="title-footer-ddc">
+                        Secciones
+                    </p>
+                    <div class="slds-m-top_small">
+                        <template for:each={items} for:item="itemmobile">
+                            <p
+                                key={itemmobile.dataId}
+                                class="text-footer-ddc"
+                                style="cursor: pointer;"
+                                data-redirect="internal"
+                                data-id={itemmobile.dataId}
+                                onclick={redirect}>
+                                {itemmobile.label}
+                            </p>
+                        </template>
+                    </div>
+                </div>
+                <div class="slds-p-top_x-large">
+                    <p class="title-footer-ddc">
+                        Contacto para profesionales y pacientes
+                    </p>
+                    <div class="slds-m-top_small">
+                        <p class="text-footer-ddc">
+                            Lunes a viernes de 9 a 18 hs.
+                        </p>
+                        <p class="text-footer-ddc">
+                            Tel: 
+                            <span>
+                                <a href="tel:0800-122-5544">
+                                    <span
+                                        data-idmobile="telefono"
+                                        class="contact-text-footer-ddc">
+                                        0800-122-5544
+                                    </span>
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-p-top_x-large">
+                    <p class="title-footer-ddc">
+                        Seguinos en nuestras redes
+                    </p>
+                    <div class="slds-m-top_small">
+                        <span>
+                            <template for:each={itemsRS} for:item="rsmobile">
+                                <span key={rsmobile.id}>
+                                    <img
+                                        class="icon-rs-footer-ddc"
+                                        style="cursor: pointer;"
+                                        src={rsmobile.img}
+                                        data-redirect="external"
+                                        data-id={rsmobile.dataId}
+                                        onclick={redirect}/>
+                                </span>
+                            </template>
+                        </span>
+                    </div>
+                </div>
+                <div class="slds-p-top_x-large slds-p-bottom_x-large slds-text-align_right">
+                    <img 
+                        src={logonb}
+                        class="icon-footer-ddc"/>
+                </div>
+        </div>
+    </div>
+</template>

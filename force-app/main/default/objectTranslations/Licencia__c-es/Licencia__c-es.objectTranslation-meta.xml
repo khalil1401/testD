@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Licencia</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Licencias</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato Licencia</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Duracion_obligatoria_cuando_es_un_dia</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Fecha_igual_a_la_del_ciclo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Licencia_de_lunes_a_viernes</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Licencia_mayor_a_7_dias</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Modificar_licencia_ya_aprobada</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>duracion_solo_si_es_mismo_dia</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modalidad__c</fullName>
+    <externalId>false</externalId>
+    <label>Modalidad</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dieta oral</fullName>
+                <default>false</default>
+                <label>Dieta oral</label>
+            </value>
+            <value>
+                <fullName>Suplementos orales</fullName>
+                <default>false</default>
+                <label>Suplementos orales</label>
+            </value>
+            <value>
+                <fullName>Nutrición enteral</fullName>
+                <default>false</default>
+                <label>Nutrición enteral</label>
+            </value>
+            <value>
+                <fullName>Transición de enteral a oral</fullName>
+                <default>false</default>
+                <label>Transición de enteral a oral</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

@@ -1,0 +1,34 @@
+.THIS {
+}
+
+.THIS .titulosNutricionOncologia{
+    font-family:MontserratSemiBold;
+    font-size: 22px;
+    color:#606060;
+    line-height: 30px;
+}
+
+.THIS .linea{
+    border-top: 1px solid #606060;
+    width:100px;
+    margin-top:1.2%;
+}
+
+@media (max-width: 600px) {
+
+    .THIS .titulosNutricionOncologia{
+        font-family:MontserratSemiBold;
+        font-size: 18px;
+        color:#606060;
+        line-height: 24px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .THIS .linea{
+        border-top: 1px solid #606060;
+        width:100px;
+        margin-top:3.5%;
+    }
+    
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certificado_de_Discapacidad_CUD__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>Certificado de Discapacidad (CUD)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

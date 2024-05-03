@@ -1,0 +1,58 @@
+.container-rdno{
+    background: linear-gradient(90deg, rgba(152, 123, 217, 0.6) 0%, rgba(110,131,229, 0.6) 100%);
+    width: 100%;
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+.title-rdno{
+    font-family: MontserratSemiBold;
+    color: #293896;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    padding-right: 40%;
+}
+
+.text-rdno{
+    color: #293896;
+    font-family: MontserratRegular;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.line-rdno-onco{
+    width:200px;
+    border-bottom:2px solid #293896;
+    position:relative;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.img-rdno{
+    width: 40%;
+    margin: 2%;
+    float: right;
+}
+
+@media (max-width: 1324px) {
+    .container-rdno{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 600px){
+    .container-rdno{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .title-rdno{
+        padding-right: 0%;
+    }
+    
+    .img-rdno{
+        width: 100%;
+        float: none;
+    }    
+}

@@ -1,0 +1,77 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1 slds-p-around_medium slds-m-bottom_x-large">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="form-element-01">
+                    Tu ubicación
+                </label>
+                <div class="slds-form-element__control">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_6-of-12">
+                            <input type="text" class="slds-input" data-id="ubicacion-input"/>
+                            <div class="slds-form-element__help" id="error-message-id-51">{error}</div>
+                        </div>
+                        <div class="slds-col slds-size_6-of-12 slds-p-left_medium">
+                            <button class="slds-button slds-button_brand" onclick={filter}>
+                                Buscar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1">
+            <div class="desktop">
+                <div class="slds-scrollable_y marker-list">
+                    <template for:each={listMarkerFiltered} for:item="marker">
+                        <div key={marker.value} class="slds-m-top_medium slds-p-around_medium">
+                            <p class="title-map-marker">
+                                {marker.title}
+                            </p>
+                            <p class="text-map-marker slds-m-top_x-small">
+                                <lightning-formatted-rich-text value={marker.description}></lightning-formatted-rich-text>
+                            </p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-medium-size_8-of-12 slds-size_1-of-1">
+            <div class="desktop">
+                <lightning-map
+                    markers-title="Direcciones"
+                    map-markers={listMarkerFiltered}
+                    list-view="false"
+                    zoom-level="5">
+                </lightning-map>
+            </div>
+        </div>
+        <!--En mobile se debe mostrar la lista debajo del mapa-->
+        <div class="slds-col slds-size_1-of-1">
+            <div class="mobile">
+                <lightning-map
+                    markers-title="Direcciones"
+                    map-markers={listMarkerFiltered}
+                    list-view="false"
+                    zoom-level="5">
+                </lightning-map>
+            </div>
+        </div>
+        <div class="slds-col slds-size_1-of-1">
+            <div class="mobile">
+                <div class="slds-scrollable_y marker-list">
+                    <template for:each={listMarkerFiltered} for:item="marker">
+                        <div key={marker.value} class="slds-m-top_medium slds-p-around_medium">
+                            <p class="title-map-marker">
+                                {marker.title}
+                            </p>
+                            <p class="text-map-marker slds-m-top_x-small">
+                                <lightning-formatted-rich-text value={marker.description}></lightning-formatted-rich-text>
+                            </p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

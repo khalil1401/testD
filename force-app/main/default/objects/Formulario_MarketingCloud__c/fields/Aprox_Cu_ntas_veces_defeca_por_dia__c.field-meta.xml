@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aprox_Cu_ntas_veces_defeca_por_dia__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Aprox. cuántas veces defeca por dia?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 vez por día</fullName>
+                <default>false</default>
+                <label>1 vez por día</label>
+            </value>
+            <value>
+                <fullName>2-3 veces por día</fullName>
+                <default>false</default>
+                <label>2-3 veces por día</label>
+            </value>
+            <value>
+                <fullName>Cada dos días</fullName>
+                <default>false</default>
+                <label>Cada dos días</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

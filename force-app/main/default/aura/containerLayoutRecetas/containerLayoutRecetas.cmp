@@ -1,0 +1,76 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="numberShowCards" type="Integer" default="3"/>
+    <aura:attribute name="dataCards" type="String" default="[]"/>
+    <aura:attribute name="listDataCards" type="List" default="[]"/>
+    <aura:attribute name="listToShow" type="List" default="[]"/>
+    <aura:attribute name="indiceInicial" type="Integer" default="0"/>
+    <aura:attribute name="titulo" type="String"/>
+    <aura:attribute name="textTituloColor" type="String"/>
+    <aura:attribute name="fontFamilyTitulo" type="String"/>
+    <aura:attribute name="backgroundColor" type="String" default="white"/>
+    <aura:attribute name="backgroundColorHeaderActiveGradiente1" type="String"/>
+    <aura:attribute name="backgroundColorHeaderActiveGradiente2" type="String"/>
+    <aura:attribute name="marginTop" type="String" default="0"/>
+    <aura:attribute name="marginBottom" type="String" default="0"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:html tag="style">
+        .tituloRecetas {
+            color: {!v.textTituloColor};
+            font-family: {!v.fontFamilyTitulo};
+            font-size: 22px;
+        }
+        .containerGlobalLayoutArticulos{
+            background-color: {!v.backgroundColor};
+        }
+    </aura:html>
+
+    <div class="slds-grid">
+        <div class="slds-col slds-large-size_2-of-12">
+        </div>
+        <div class="slds-col slds-size_8-of-12">
+            <p class="titulosOncologia">
+                {!v.titulo}
+                <hr class="linea"/>
+            </p>
+        </div>
+        <div class="slds-col slds-large-size_2-of-12">
+        </div>
+    </div>
+
+    <div class="containerGlobalLayoutArticulos">
+        <div class="c-container">
+            <div style="{!'background-color:'+ v.backgroundColor + '!important;
+                            height:' + v.marginTop + 'px;'}">
+            </div>
+            <lightning:layout class="slds-align_absolute-center">
+                <aura:iteration items="{!v.listToShow}" var="card">
+                    <lightning:layoutItem size="3" padding="around-small">
+                        <div class="custom-box">
+                            <c:cardRecetaItem   backgroundCardColor="{!card.backgroundCardColor}"
+                                                radioEsquinas="{!card.radioEsquinas}"
+                                                textHeaderCard="{!card.textHeaderCard}"
+                                                textHeaderCardColor="{!card.textHeaderCardColor}"
+                                                textHeaderCardSize="{!card.textHeaderCardSize}"
+                                                fontFamilyTitulosCard="{!card.fontFamilyTitulosCard}"
+                                                textButtonCardColor="{!card.textButtonCardColor}"
+                                                textTituloBodyCard="{!card.textTituloBodyCard}"
+                                                textTituloBodyCardColor="{!card.textTituloBodyCardColor}"
+                                                textTituloBodyCardSize="{!card.textTituloBodyCardSize}"
+                                                nombreRecursoEstatico="{!card.nombreRecursoEstatico}"
+                                                textButtonCard="{!card.textButtonCard}"
+                                                heightTituloBodyCard="{!card.heightTituloBodyCard}"/>
+                        </div>
+                    </lightning:layoutItem>
+                </aura:iteration>
+            </lightning:layout>
+            <div style="{!'background-color:'+ v.backgroundColor + '!important;
+                        height:' + v.marginBottom + 'px;'}">
+            </div>
+        </div>
+    
+    </div>
+
+</aura:component>

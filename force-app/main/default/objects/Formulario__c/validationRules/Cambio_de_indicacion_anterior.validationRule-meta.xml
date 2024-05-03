@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cambio_de_indicacion_anterior</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( AND(ISPICKVAL(Cambios_Indicaciones_Anteriores__c, &apos;Si&apos;),
+    OR( ISBLANK(Requerimientos_hidricos__c), 
+        ISBLANK( Requerimiento_Proteico__c ),
+        ISBLANK( Requerimiento_calorico__c )
+       )
+     ),TRUE,FALSE)</errorConditionFormula>
+    <errorDisplayField>Cambios_Indicaciones_Anteriores__c</errorDisplayField>
+    <errorMessage>Debe completar las indicaciones medicas</errorMessage>
+</ValidationRule>

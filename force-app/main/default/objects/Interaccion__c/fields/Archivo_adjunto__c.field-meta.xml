@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Archivo_adjunto__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Tiene_archivo_adjunto__c,
+    IMAGE(&quot;/resource/Clip_de_archivo_adjunto&quot;, &quot;&quot;, 15, 15),
+    &quot;&quot;
+    )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Archivo adjunto</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

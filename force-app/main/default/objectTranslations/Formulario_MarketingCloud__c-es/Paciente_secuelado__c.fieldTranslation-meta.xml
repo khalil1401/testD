@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Paciente_secuelado__c</name>
+    <picklistValues>
+        <masterLabel>nivel alto</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>nivel bajo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>nivel moderado</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

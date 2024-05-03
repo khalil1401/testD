@@ -1,0 +1,124 @@
+.container-diagnostico-cmpdig {
+    background: transparent linear-gradient(0deg, #A5D3F980 0%, #A5D3F942 89%, #A5D3F900 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.title-diagnostico-cmpdig {
+    font-family: MontserratSemiBold;
+    font-size: 26px;
+    line-height: 30px;
+    color: #3DC6F0;
+}
+
+.text-diagnostico-cmpdig {
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: #606060;
+}
+
+.card-microbiota-dig {
+    background-color: #A5D3F9;
+    border-radius: 75pt 25pt 75pt 25pt;
+    height: auto;
+}
+
+.text-card-microbiota-dig {
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: white;
+}
+
+.container-la-microbiota-dig {
+    background-color: #EBEBEB;
+    border-radius: 18px;
+}
+
+.img-porcentaje-digestivos {
+    padding: 15px;
+}
+
+.container-title-la-microbiota {
+    position: relative; 
+    top: -50px; 
+    width: 253px; 
+    height: 52px; 
+    background: transparent linear-gradient(90deg, #6552AC 0%, #7970CEF0 43%, #777BCF 81%, #7583D0 100%) 0% 0% no-repeat padding-box;
+    border-radius: 0pt 0pt 30pt 0pt;
+}
+
+.title-la-microbiota {
+    color: white; 
+    font-family: MontserratSemiBold;
+    font-size: 22pt;
+    line-height: 30pt;
+}
+
+@media (min-width: 768px) {
+    .title-diagnostico-cmpdig {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    
+    .text-diagnostico-cmpdig {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .container-la-microbiota-dig {
+        width: 90%;
+    }
+    
+    .card-microbiota-dig {
+        border-radius: 0px 0px 50px 0px;
+        width: 90%;
+    }    
+    
+    .text-card-microbiota-dig {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .img-porcentaje-digestivos {
+        padding: 15%;
+    }
+
+    .container-sintomas-digestivos {
+        padding-left: 10%;
+    }
+
+    .container-title-la-microbiota {
+        width: 450px; 
+        height: 65px; 
+        border-radius: 0pt 0pt 50px 0pt;
+        padding-left: 42px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .title-la-microbiota {
+        color: white; 
+        font-family: MontserratSemiBold;
+        font-size: 22pt;
+        line-height: 30pt;
+    }    
+}
+
+@media (min-width: 1024px) {
+    .container-title-la-microbiota {
+        width: 529px;
+        margin-left: 200px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .container-title-la-microbiota {
+        width: 529px;
+        margin-left: 500px;
+    }
+}

@@ -1,0 +1,13 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="texto" type="String" default="ejemplo"/>
+    <aura:attribute name="backgroundColor" type="String" default="#313183"/>
+    <aura:attribute name="padding" type="String" default="1%"/>
+    <aura:attribute name="borderRadius" type="String" default="10px"/>
+    <aura:attribute name="textColor" type="String" default="white"/>
+
+    <div class="slds-text-align_center">
+        <aura:unescapedHtml value="{!v.texto}"/>
+    </div>
+
+</aura:component>

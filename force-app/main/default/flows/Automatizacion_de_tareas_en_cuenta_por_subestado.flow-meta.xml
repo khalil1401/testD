@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>isChangedDecision2_myRule_1_Subestado_del_paciente_c</name>
+        <label>isChangedDecision2_myRule_1_Subestado_del_paciente_c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>isChangedRule_2_myRule_1_Subestado_del_paciente_c</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>myVariable_old.Subestado_del_paciente__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>myVariable_current.Subestado_del_paciente__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myDecision</targetReference>
+            </connector>
+            <label>isChangedRule_2_myRule_1_Subestado_del_paciente_c</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>1 AND 2 AND 3 AND 4 AND (5 OR 6)</conditionLogic>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Subestado_del_paciente__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Internado REG</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Boolean</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>isChangedRule_2_myRule_1_Subestado_del_paciente_c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Paciente_Regular</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Area_terapeutica__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Oncología</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Estado_de_paciente__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>En Seguimiento</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <processMetadataValues>
+                    <name>inputDataType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>leftHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>operatorDataType</name>
+                    <value>
+                        <stringValue>String</stringValue>
+                    </value>
+                </processMetadataValues>
+                <processMetadataValues>
+                    <name>rightHandSideType</name>
+                    <value>
+                        <stringValue>Picklist</stringValue>
+                    </value>
+                </processMetadataValues>
+                <leftValueReference>myVariable_current.Estado_de_paciente__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>En tratamiento</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_A1</targetReference>
+            </connector>
+            <label>Si cambia el subestado y no es &quot;Internado REG&quot;</label>
+        </rules>
+    </decisions>
+    <description>Para todas las areas terapéuticas excepto oncología.</description>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>
+IF(
+AND(
+        NOT(ISPICKVAL([Account].Subestado_del_paciente__c , &apos;En desafío REG&apos;)),
+        ISPICKVAL([Account].Estado_de_paciente__c , &apos;En seguimiento&apos;))
+       , TODAY() + 15,
+
+IF(
+
+AND(
+        ISPICKVAL([Account].Subestado_del_paciente__c , &apos;En desafío REG&apos;),
+        ISPICKVAL([Account].Estado_de_paciente__c , &apos;En seguimiento&apos;))
+       , TODAY() + 30,
+
+ IF(
+
+AND(
+        NOT(ISPICKVAL([Account].Subestado_del_paciente__c , &apos;Internado REG&apos;)),
+        ISPICKVAL([Account].Estado_de_paciente__c , &apos;En tratamiento&apos;))
+       , TODAY() + 90,
+
+  TODAY() +1)
+ 
+)
+ 
+)
+
+
+</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_3_myRule_1_A1_2081775187</name>
+        <dataType>Date</dataType>
+        <expression>
+IF(
+AND(
+        NOT(ISPICKVAL({!myVariable_current.Subestado_del_paciente__c} , &apos;En desafío REG&apos;)),
+        ISPICKVAL({!myVariable_current.Estado_de_paciente__c} , &apos;En seguimiento&apos;))
+       , TODAY() + 15,
+
+IF(
+
+AND(
+        ISPICKVAL({!myVariable_current.Subestado_del_paciente__c} , &apos;En desafío REG&apos;),
+        ISPICKVAL({!myVariable_current.Estado_de_paciente__c} , &apos;En seguimiento&apos;))
+       , TODAY() + 30,
+
+ IF(
+
+AND(
+        NOT(ISPICKVAL({!myVariable_current.Subestado_del_paciente__c} , &apos;Internado REG&apos;)),
+        ISPICKVAL({!myVariable_current.Estado_de_paciente__c} , &apos;En tratamiento&apos;))
+       , TODAY() + 90,
+
+  TODAY() +1)
+ 
+)
+ 
+)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>$CustomMetadata.Record_types_Danone__mdt.PSP.Id__c</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_4_myRule_1_A1_5655481752</name>
+        <dataType>String</dataType>
+        <expression>{!$CustomMetadata.Record_types_Danone__mdt.PSP.Id__c}</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>$CustomMetadata.Record_types_Danone__mdt.Llamado_de_seguimiento.RecordType_Id__c </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_5_myRule_1_A1_9425950732</name>
+        <dataType>String</dataType>
+        <expression>{!$CustomMetadata.Record_types_Danone__mdt.Llamado_de_seguimiento.RecordType_Id__c}</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>&apos;Seguimiento de paciente -  &apos; + TEXT([Account].Area_terapeutica__c ) + &apos; - &apos; 
+ + TEXT([Account].Subestado_del_paciente__c) </stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_6_myRule_1_A1_4225036929</name>
+        <dataType>String</dataType>
+        <expression>&apos;Seguimiento de paciente -  &apos; + TEXT({!myVariable_current.Area_terapeutica__c} ) + &apos; - &apos; 
+ + TEXT({!myVariable_current.Subestado_del_paciente__c})</expression>
+    </formulas>
+    <interviewLabel>Automatizacion_de_tareas_en_cuenta_por_subestado-4_InterviewLabel</interviewLabel>
+    <label>Automatización de tareas en cuenta por subestado</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Account</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <recordCreates>
+        <name>myRule_1_A1</name>
+        <label>Primer seguimiento</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Date</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Fecha de vencimiento solamente</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>formula_3_myRule_1_A1_2081775187</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Llamada</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Llamada__c</field>
+            <value>
+                <stringValue>No realizada</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Asignado al Id.</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>formula_4_myRule_1_A1_5655481752</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Paciente</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Account</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Paciente__c</field>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Prioridad</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Priority</field>
+            <value>
+                <stringValue>Alta</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Id. del tipo de registro de tarea</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>RecordType</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>formula_5_myRule_1_A1_9425950732</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Estado</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Picklist</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Status</field>
+            <value>
+                <stringValue>Abierta</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>String</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Asunto</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue></stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Formula</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>Subject</field>
+            <value>
+                <elementReference>formula_6_myRule_1_A1_4225036929</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <processMetadataValues>
+                <name>dataType</name>
+                <value>
+                    <stringValue>ID</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>isRequired</name>
+                <value>
+                    <booleanValue>false</booleanValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideLabel</name>
+                <value>
+                    <stringValue>Id. de relacionado con</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>leftHandSideReferenceTo</name>
+                <value>
+                    <stringValue>Account;Asset;AssetRelationship;Campaign;Case;ChannelProgram;ChannelProgramLevel;CommSubscriptionConsent;ContactRequest;Contacto_de_paciente__c;Contract;ContractLineItem;DelegatedAccount;Encuestas_CX__c;Entitlement;Envio_sin_Cargo__c;Filial__c;Formulario_MarketingCloud__c;Formulario__c;Formulario_de_gestion__c;Historial_del_paciente__c;Image;Interaccion__c;ListEmail;Location;Modulo__c;Modulo_de_paciente__c;Opportunity;Order;PartyConsent;ProcessException;Product2;Producto_de_modulo__c;Producto_de_paciente__c;Productos_Activos_Compania__c;Quote;ServiceContract;Snapshot_Modulos__c;Snapshot_Tratamientos__c;Snapshot_producto_de_modulo__c;Snapshot_profesionales_con_tratamiento__c;Solicitud_de_Cambio__c;Solution;SurveyQuestion;Tratamiento__c;Tratamiento_de_profesional__c;et4ae5__Triggered_Send_Execution__c</stringValue>
+                </value>
+            </processMetadataValues>
+            <processMetadataValues>
+                <name>rightHandSideType</name>
+                <value>
+                    <stringValue>Reference</stringValue>
+                </value>
+            </processMetadataValues>
+            <field>WhatId</field>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+    </recordCreates>
+    <startElementReference>isChangedDecision2_myRule_1_Subestado_del_paciente_c</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+</Flow>

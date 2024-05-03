@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Correo de confirmación de cambio de correo electrónico nuevo</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Portal Pacientes: Correo electrónico nuevo</name>
+    <style>none</style>
+    <subject>Finalizar Cambio de Dirección de Correo Electrónico</subject>
+    <textOnly>Hi {!User.FirstName},
+
+We received a request to change the email address for the username {!User.Username}. Please make sure the following changes are correct:
+
+Previous email address: {!ChgEmailVer.OldEmail}
+New email address: {!ChgEmailVer.NewEmail}
+
+To finish changing your email address, go to the following link. This link expires in 72 hours.
+{!ChgEmailVer.Url}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,81 @@
+.THIS {
+}
+
+.THIS .container-accordion-dig{
+    background-color: white;
+}
+
+.THIS .title-accordion-dig {
+    font-family: MontserratBlack;
+    font-size: 20pt;
+    line-height: 23pt;
+    color: #3DC6F0;
+}
+
+.THIS .slds-accordion__list-item{
+    border: none;
+}
+
+.THIS .slds-accordion__summary-content{
+    white-space: normal;
+    font-size: 15pt;
+    line-height: 18pt;
+}
+
+.THIS .slds-accordion__summary-action{
+    border-radius: 10px;
+    background-color: #EBEBEB;
+    color: #606060;
+    margin-top: 20px;
+    font-family: MontserratSemiBold;
+    font-size: 15pt;
+    line-height: 18pt;
+}
+
+.THIS .slds-accordion__summary button[aria-expanded="true"]{
+    background: transparent linear-gradient(180deg, #6552AC 0%, #7970CEF0 43%, #777BCF 81%, #7583D0 100%) 0% 0% no-repeat padding-box;
+    color: white;
+    text-decoration: none;
+}
+
+.THIS .slds-accordion__summary-heading{
+    height: 77px;
+}
+
+.THIS .slds-accordion__summary-heading .slds-button:focus{
+    text-decoration: none;
+}
+
+.THIS .slds-accordion__content{
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: #606060;
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+@media (min-width: 768px) {
+    .THIS .title-accordion-dig {
+        font-size: 40px;
+        line-height: 70.28px;
+    }
+    
+    .THIS .slds-accordion__summary-action{
+        margin-top: 20px;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .THIS .slds-accordion__content{
+        font-size: 22px;
+        line-height: 30px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .THIS .slds-accordion__summary-heading{
+        height: 69px;
+    }    
+}

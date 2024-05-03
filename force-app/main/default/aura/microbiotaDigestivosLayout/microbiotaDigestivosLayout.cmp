@@ -1,0 +1,107 @@
+<aura:component implements="forceCommunity:layout">
+
+    <aura:attribute name="container1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container2" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container3" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container4" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container5" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container6" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container7" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container8" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container9" type="Aura.Component[]" required="false"/>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container1}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1" id="top-microbiota-dig-page">
+            {!v.container2}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container3}
+        </div>
+        
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container4}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1">
+            <div class="div-microbiota-layout-dig">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_2-of-12 slds-align_absolute-center slds-m-top_x-large slds-p-around_medium desktop">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/3_MICROBIOTA/PP-Digestivos-Microbiota-Icono-Titulo-Mobile%403x.png"
+                            style="margin-top: 75px;"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_x-large desktop">
+                        <p class="title-dig">
+                            El impacto en la microbiota intestinal
+                        </p>
+                        <p class="text-dig slds-m-top_large">
+                            La <span style="font-family: MontserratSemiBold;">microbiota intestinal</span>, un conjunto de microorganismos que viven en nuestro intestino juega un <span style="font-family: MontserratSemiBold;">papel importante</span> en la salud de los niños. Su equilibrio adecuado es crucial para el <span style="font-family: MontserratSemiBold;">metabolismo, la nutrición y el sistema inmunológico. </span>
+                        </p>
+                        <p class="text-dig slds-m-top_medium">
+                            Cuando la microbiota <span style="font-family: MontserratSemiBold;">se altera</span>, puede contribuir a los trastornos funcionales gastrointestinales (TFGI) en los niños. Es por eso que es importante cuidarla y mantenerla saludable. 
+                        </p>
+                        <p class="text-dig slds-m-top_medium">
+                            Tanto la medicación innecesaria como la reducción de la lactancia materna pueden tener un impacto negativo en la microbiota del bebé.
+                        </p>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-m-top_x-large mobile">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/3_MICROBIOTA/PP-Digestivos-Microbiota-Icono-Titulo-Mobile%403x.png"
+                            style="margin-top: 15px;"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_x-large mobile">
+                        <p class="title-dig slds-m-left_small">
+                            El impacto en la microbiota intestinal
+                        </p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 mobile">
+                        <p class="text-dig slds-m-top_large">
+                            La <span style="font-family: MontserratSemiBold;">microbiota intestinal</span>, un conjunto de microorganismos que viven en nuestro intestino juega un <span style="font-family: MontserratSemiBold;">papel importante</span> en la salud de los niños. Su equilibrio adecuado es crucial para el <span style="font-family: MontserratSemiBold;">metabolismo, la nutrición y el sistema inmunológico. </span>
+                        </p>
+                        <p class="text-dig slds-m-top_medium">
+                            Cuando la microbiota <span style="font-family: MontserratSemiBold;">se altera</span>, puede contribuir a los trastornos funcionales gastrointestinales (TFGI) en los niños. Es por eso que es importante cuidarla y mantenerla saludable. 
+                        </p>
+                        <p class="text-dig slds-m-top_medium">
+                            Tanto la medicación innecesaria como la reducción de la lactancia materna pueden tener un impacto negativo en la microbiota del bebé.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="div-microbiota-layout-dig">
+                {!v.container5}
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-m-top_xx-large slds-m-bottom_x-large">
+            <button 
+                data-seccion="top-microbiota-dig-page"
+                class="back-button-kdi-dig"
+                onclick="{!c.goToDiv}">
+                <lightning:icon 
+                    class="icon-up"
+                    iconName="utility:chevronup"
+                    size="small"
+                    alternativeText="up"/>
+                VOLVER ARRIBA
+            </button>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container6}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container7}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+            {!v.container8}
+        </div>
+    </div>
+</aura:component>

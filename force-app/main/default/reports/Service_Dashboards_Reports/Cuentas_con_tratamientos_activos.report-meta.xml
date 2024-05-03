@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Tratamiento__c.Patologia__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Tratamiento__c.Activo__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Cuentas con tratamientos activos</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Tratamiento__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>USERS.NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

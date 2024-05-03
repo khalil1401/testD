@@ -1,0 +1,74 @@
+.card-articulo-meta{
+    background-color: #EBEBEB;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 475px;
+}
+
+.div-img-article-meta{
+    height: 200px;
+}
+
+.img-card-ariculo-meta{
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+}
+
+.div-text-article-meta{
+    height: 200px;
+}
+
+.title-card-articulo-meta{
+    font-family: MontserratSemiBold;
+    color: #947DD5;
+    font-size: 1.25rem;
+}
+
+.text-card-articulo-meta{
+    font-family: MontserratRegular;
+    color: #606060;
+    font-size: 0.938rem;
+}
+
+.ver-mas-card-articulo-meta{
+    font-family: MontserratSemiBold;
+    color: #293896;
+    font-size: 0.938rem;
+}
+
+@media (max-width: 1600px){
+    .card-articulo-meta{
+        height: 500px;
+    }
+    .div-text-article-meta{
+        height: 225px;
+    }
+}
+
+@media (max-width: 1300px){
+    .card-articulo-meta{
+        height: 550px;
+    }
+    .div-text-article-meta{
+        height: 275px;
+    }
+}
+
+@media (max-width: 1024px){
+    .card-articulo-meta{
+        height: 600px;
+    }
+    .div-text-article-meta{
+        height: 325px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-articulo-meta{
+        height: auto;
+    }
+    .div-text-article-meta{
+        height: auto;
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Llamadossensibles_Llamado_anonimo</fullName>
+    <active>false</active>
+    <description>Si la llamada sensible es anonima, deberan responderse de manera obligatoria las preguntas:
+-Sexo del que llama
+-El tono de la persona es</description>
+    <errorConditionFormula>AND(ISBLANK(TEXT( Tipo_de_llamado__c)),OR(ISBLANK(TEXT( Sexo_del_que_llama__c )),ISBLANK(TEXT(  El_tono_de_la_llamada_es__c ))))</errorConditionFormula>
+    <errorDisplayField>Tipo_de_llamado__c</errorDisplayField>
+    <errorMessage>Como la llamada fue anonima debe completar las siguientes preguntas:
+-El que llama es
+-El tono de la llamada fue</errorMessage>
+</ValidationRule>

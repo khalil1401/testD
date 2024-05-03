@@ -1,0 +1,119 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="height" type="String" default="450px"/>
+	<aura:attribute name="heightMobile" type="String" default="450px"/>
+	<aura:attribute name="derecha" type="Boolean" default="false"/>
+	<aura:attribute name="izquierda" type="Boolean" default="true"/>
+	<aura:attribute name="recursoEstatico" type="String"/>
+	<aura:attribute name="rutaRecursoEstatico" type="String"/>
+    <aura:attribute name="recursoEstaticoBoton" type="String"/>
+	<aura:attribute name="rutaRecursoEstaticoBoton" type="String"/>
+    <aura:attribute name="recursoEstaticoCard" type="String"/>
+	<aura:attribute name="rutaImagen" type="String"/>
+	<aura:attribute name="primerTitulo" type="String"/>
+	<aura:attribute name="segundoTitulo" type="String"/>
+	<aura:attribute name="textoBajada" type="String"/>
+	<aura:attribute name="apiName" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<lightning:navigation aura:id="navService"/>
+
+    <div class="desktop">
+        <aura:if isTrue="{!v.izquierda}">
+            <div class="slds-grid slds-grid_vertical-align-center slds-wrap" 
+                style="{!'background-image: url('+ v.rutaRecursoEstatico +');
+                        background-position: center;
+                        height: '+ v.height +';
+                        background-repeat: repeat-y;
+                        position: relative;'}">
+                <img src="{!$Resource.imagenLineasDisfagia}" alt="lineasCard" class="imgLineas"/>
+                <div class="slds-col slds-medium-size_1-of-12 slds-large-size_2-of-12"></div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_5-of-12 slds-large-size_3-of-12">
+                    <div class="containerImageCardStrokeIzq">
+                        <img src="{!v.rutaImagen}" alt="imgCard" class="imageCardStrokeIzq"/>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_5-of-12 slds-large-size_4-of-12 elementsContainerCardStroke">
+                    <aura:unescapedHtml value="{!v.primerTitulo}" />
+                    <aura:unescapedHtml value="{!v.segundoTitulo}" />
+                    <aura:unescapedHtml value="{!v.textoBajada}" />
+                    <div style="text-align: right;">
+                        <img src="{!v.rutaRecursoEstaticoBoton}" alt="imgBoton" class="botonCardStroke"
+                            onclick="{!c.redireccionar}"/>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12 slds-large-size_3-of-12"></div>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!v.derecha}">
+            <div class="slds-grid slds-grid_vertical-align-center slds-wrap" 
+                    style="{!'height: '+ v.height +';'}">
+                <div class="slds-col slds-medium-size_1-of-12 slds-large-size_3-of-12"></div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_5-of-12 slds-large-size_4-of-12 elementsContainerCardStroke">
+                    <aura:unescapedHtml value="{!v.primerTitulo}" />
+                    <aura:unescapedHtml value="{!v.segundoTitulo}" />
+                    <aura:unescapedHtml value="{!v.textoBajada}" />
+                    <div style="text-align: left;">
+                        <img src="{!v.rutaRecursoEstaticoBoton}" alt="imgBoton" class="botonCardStroke"
+                            onclick="{!c.redireccionar}"/>
+                    </div>    
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_5-of-12 slds-large-size_3-of-12">
+                    <div class="containerImageCardStrokeDer">
+                        <img src="{!v.rutaImagen}" alt="imgCard"  class="imageCardStrokeDer"/>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12 slds-large-size_2-of-12"></div>
+            </div>
+        </aura:if>
+    </div>
+    <div class="mobile">
+        <aura:if isTrue="{!v.izquierda}">
+            <div class="slds-grid slds-grid_vertical-align-center slds-wrap" 
+                style="{!'background-image: url('+ v.rutaRecursoEstatico +');
+                        background-position: center;
+                        background-repeat: repeat-y;'}">
+                <div class="slds-col slds-size_1-of-1">
+                    <div class="containerImageCardStrokeIzq slds-m-top_x-large slds-m-bottom_x-large">
+                        <img src="{!v.rutaImagen}" alt="imgCard" class="imageCardStrokeIzq"/>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 elementsContainerCardStroke">
+                    <div class="slds-align_absolute-center">
+                        <aura:unescapedHtml value="{!v.primerTitulo}" />
+                    </div>
+                    <div class="slds-align_absolute-center">
+                        <aura:unescapedHtml value="{!v.segundoTitulo}" />
+                    </div>
+                    <aura:unescapedHtml value="{!v.textoBajada}" />
+                    <div class="slds-m-bottom_x-large" style="text-align: right;">
+                        <img src="{!v.rutaRecursoEstaticoBoton}" alt="imgBoton" class="botonCardStroke"
+                            onclick="{!c.redireccionar}"/>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!v.derecha}">
+            <div class="slds-grid slds-grid_vertical-align-center slds-wrap">
+                <div class="slds-col slds-size_1-of-1">
+                    <div class="containerImageCardStrokeDer slds-m-top_x-large slds-m-bottom_x-large">
+                        <img src="{!v.rutaImagen}" alt="imgCard"  class="imageCardStrokeDer"/>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 elementsContainerCardStroke">
+                    <div class="slds-align_absolute-center">
+                        <aura:unescapedHtml value="{!v.primerTitulo}" />
+                    </div>
+                    <div class="slds-align_absolute-center">
+                        <aura:unescapedHtml value="{!v.segundoTitulo}" />
+                    </div>
+                    <aura:unescapedHtml value="{!v.textoBajada}" />
+                    <div class="slds-m-bottom_x-large" style="text-align: right;">
+                        <img src="{!v.rutaRecursoEstaticoBoton}" alt="imgBoton" class="botonCardStroke"
+                            onclick="{!c.redireccionar}"/>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+    </div>
+</aura:component>

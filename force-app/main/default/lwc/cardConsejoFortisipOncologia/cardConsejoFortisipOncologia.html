@@ -1,0 +1,42 @@
+<template>
+
+    <div>
+    <template if:true={textoDorso}>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="containerImgCardFortisipOncologia slds-align_absolute-center">
+                        <img src={imagen} class="imgCardFortisipOncologia">
+                    </div>
+                    <div class="containerTextoCardFortisipOncologia">
+                        <p class="textoCardFortisipOncologia slds-text-align_center">
+                            {textoFrente}
+                        </p>
+                    </div>
+                    <p class="verMasCardFortisipOncologia">
+                        + VER MÁS
+                    </p>
+                </div>
+                <div class="flip-card-back slds-align_absolute-center">
+                    <p class="textoCardFortisipOncologia slds-text-align_center">
+                        {textoDorso}
+                    </p>
+                </div>
+            </div>
+        </div>    
+    </template>
+    <template if:false={textoDorso}>
+        <div class="cardConsejoFortisipOncologia">
+            <div class="containerImgCardFortisipOncologia slds-align_absolute-center">
+                <img src={imagen} class="imgCardFortisipOncologia">
+            </div>
+            <div class="containerTextoCardFortisipOncologia">
+                <p class="textoCardFortisipOncologia slds-text-align_center">
+                    {textoFrente}
+                </p>
+            </div>
+        </div>    
+    </template>
+    </div>
+
+</template>

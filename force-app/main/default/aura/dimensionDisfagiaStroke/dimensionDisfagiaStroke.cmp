@@ -1,0 +1,166 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+	<lightning:navigation aura:id="navService"/>
+
+    <div class="slds-grid slds-wrap slds-m-top_x-large slds-m-bottom_x-large slds-grid_vertical-align-center">
+        <!--Primera linea-->
+        <div class="slds-col slds-large-size_3-of-12"></div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+            <div>
+                <div class="containerTituloDimensionDisfagia">
+                    <p class="tituloDimension">
+                        La dimensión psicológica de la disfagia
+                    </p>
+                </div>
+                <p class="tituloDimension" style="color:#513386 !important;">
+                    ¿Cómo nos impacta?
+                </p>
+            </div>
+        </div>
+        <div class="slds-col slds-large-size_3-of-12"></div>
+        <!--Segunda linea-->
+        <div class="slds-col slds-large-size_3-of-12"></div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-m-top_x-large">
+            <div class="textoItemsDimension" style="padding-right: 5%;">
+                <ul class="slds-list_dotted">
+                    <li class="itemsDimension">
+                        La disfagia tiene un impacto negativo inmediato 
+                        en la vida diaria de quien la sufre.</li>
+                    <li class="itemsDimension">
+                        El no poder comer por la boca es vivido como una 
+                        discapacidad</li>
+                    <li class="itemsDimension">
+                        El no poder comer por la boca es vivido como una 
+                        discapacidad</li>
+                    <li class="itemsDimension">
+                        El aislamiento social, la depresión y la ansiedad 
+                        son los sentimientos más prevalentes 
+                        en quienes sufren disfagia.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12 slds-m-top_x-large">
+            <div class="containerImgDimensionDisfagia">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/OPTIMIZACION/DISFAGIA-DIMENSION_PSICOLOGICA_DE_LA_DISFAGIA_OPTIMIZADA/PP-imagenDisfagia02Stroke.jpeg" alt="img"
+                    class="imgDimensionDisfagia"/>
+            </div>
+        </div>
+        <div class="slds-col slds-large-size_2-of-12"></div>
+        <!--Tercer linea-->
+        <div class="slds-col slds-large-size_3-of-12"></div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 slds-m-top_x-large slds-m-bottom_x-large">
+            <div class="slds-text-align_center">
+                <p class="tituloDimension" style="color: #2B3C8B !important;">
+                    ¿Cómo puedo sobrellevar esta situación?
+                </p>
+                <p class="textoItemsDimension slds-p-around_large">
+                    Realizando la rehabilitación deglutoria, con fonoaudiólogos que te ayuden a la recuperación
+                    Adecuando la consistencia de los alimentos y bebidas para facilitar la deglución
+                    Mediante en contacto con profesionales de la salud expertos en el tema, tanto psicólogos 
+                    como psiquiatras
+                </p>
+            </div>
+            <!--Cuarta linea-->
+            <div class="backgroundApoyandote slds-text-align_center">
+                <div class="slds-grid slds-wrap slds-m-top_x-large">
+                    <div class="slds-col slds-large-size_1-of-12 slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-DIMENSION_PSICOLOGICA_DE_LA_DISFAGIA/PP-imagenFlechaTestimoniosStroke%282022-05-24%29.png" alt="imgFlecha"
+                            style="width: 65%;" class="imgFlechaApoyandote"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_10-of-12">
+                        <div class="containerApoyante">
+                            <p class="tituloDimension"
+                                style="color: white !important; padding-top: 2%;">
+                                Apoyándote en tu familia y amigos.
+                            </p>
+                            <p class="slds-p-around_large"
+                                style=" color: white;
+                                        font-size: 1.840208351735424em;
+                                        line-height: 1.2em;
+                                        font-family: NunitoBold;">
+                                Vinculándote con personas que estén transitando situaciones 
+                                similares. El contacto con pares influye de manera positiva en 
+                                el estado de ánimo
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-large-size_1-of-12"></div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-large-size_3-of-12"></div>
+        <!--Quinta linea-->
+        <div class="slds-col slds-large-size_3-of-12"></div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12 slds-m-top_x-large">
+            <div class="slds-text-align_center">
+                <span class="tituloDimension"
+                    style=" background: linear-gradient(90deg, #513386 0%, #2B3C8B 100%);
+                            padding-right: 8%;padding-left: 8%;padding-top: 1%;padding-bottom: 1%;
+                            border-radius: 0px 100px 0px 100px;">
+                    Testimonios
+                </span>
+            </div>
+        </div>
+        <div class="slds-col slds-size_3-of-12"></div>
+        <!--Sexta linea-->
+        <div class="slds-col slds-large-size_3-of-12"></div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_3-of-12 slds-m-top_x-large containerCardTestimonioIzq">
+            <div class="containerCardsTestimonios" style="background-color: #5d6ba9;border-radius: 0px 100px 0px 100px;">
+                <div class="containerTextoCardsTestimonios slds-align_absolute-center">
+                    <p class="slds-text-align_center textoCardsTestimonios">
+                        ¿Cómo llegamos a la disfagia? Mi papá se 
+                        descompensó el día 7 de abril de 2020 en 
+                        Corrientes. Lo trasladaron a un centro de 
+                        saluden medio de la Pandemia. Un neurólogo 
+                        que su diagnóstico no era neumonía, sino que 
+                        tuvo un ACV. Envió especialistas tales como 
+                        un nutricionista y una otorrinolaringóloga...
+                    </p>
+                </div>
+                <div>
+                    <div class="slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-DIMENSION_PSICOLOGICA_DE_LA_DISFAGIA/PP-imagenBotonContinuarLeyendoStroke%282022-05-24%29.png" alt="imgFlecha"
+                            style="cursor: pointer;" data-id="primero" onclick="{!c.redireccionar}"/>
+                    </div>
+                    <p class="slds-text-align_right textoAutorCardsTestimonios">
+                        Anónimo
+                    </p>
+                    <div class="slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-DIMENSION_PSICOLOGICA_DE_LA_DISFAGIA/PP-imagenFlechaTestimoniosStroke%282022-05-24%29.png" alt="imgFlecha"
+                            style="transform: rotate(-90deg);"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_3-of-12 slds-m-top_x-large containerCardTestimonioDer">
+            <div class="containerCardsTestimonios" style="background-color: #513386;border-radius: 100px 0px 100px 0px;">
+                <div class="containerTextoCardsTestimonios slds-align_absolute-center">
+                    <p class="slds-text-align_center textoCardsTestimonios">
+                        Mi nombre es Margarita, tengo 68 años, en el 
+                        año 2019 sufrí un ACV. Cuando me desperté 
+                        me costaba entender un poco lo que decían, 
+                        tenía una sonda en la nariz, por donde me 
+                        alimentaban y complicaciones respiratorias, 
+                        consecuencias de mi enfermedad de los 
+                        pulmones (EPOC)...
+                    </p>
+                </div>
+                <div>
+                    <div class="slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-DIMENSION_PSICOLOGICA_DE_LA_DISFAGIA/PP-imagenBotonContinuarLeyendoStroke%282022-05-24%29.png" alt="imgFlecha"
+                            style="cursor: pointer;" data-id="segundo" onclick="{!c.redireccionar}"/>
+                    </div>
+                    <p class="slds-text-align_right textoAutorCardsTestimonios">
+                        Margarita Gutiérrez
+                    </p>
+                    <div class="slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-DIMENSION_PSICOLOGICA_DE_LA_DISFAGIA/PP-imagenFlechaTestimoniosStroke%282022-05-24%29.png" alt="imgFlecha"
+                            style="transform: rotate(-90deg);"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-large-size_3-of-12"></div>
+    </div>
+    
+</aura:component>

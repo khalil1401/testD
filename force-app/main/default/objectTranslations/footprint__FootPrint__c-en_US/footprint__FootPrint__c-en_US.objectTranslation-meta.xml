@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>footprint__FP_BlockEdit</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>footprint__Footprint_report</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>footprint__Launch_Metadata_analysis</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>footprint__Launch_analysis</name>
+    </webLinks>
+</CustomObjectTranslation>

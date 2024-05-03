@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dias_de_campo_efectivo__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(TODAY()&gt;= Fecha_de_fin__c, Cantidad_de_dias_habiles__c,
+			
+(5 * ( FLOOR( ( TODAY() - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( TODAY() - DATE( 1900, 1, 8), 7 ) ) )
++
+IF(OR(Dias__c=&quot;Sabado&quot;, Dias__c=&quot;Domingo&quot; ), 0,1)
+-
+(5 * ( FLOOR( ( Fecha_de_inicio__c - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( Fecha_de_inicio__c - DATE( 1900, 1, 8), 7 ) ) )
+			
+	) 
+	
+	- Total_dias_de_licencia__c 
+
+- D_as_feriados__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Días de campo efectivo</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

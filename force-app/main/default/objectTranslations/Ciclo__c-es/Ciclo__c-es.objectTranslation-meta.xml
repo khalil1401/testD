@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ciclo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ciclos</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Admin Aprobacion Licencias</layout>
+        <sections>
+            <label></label>
+            <section>Aprobacion de Licencias</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Ciclo</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

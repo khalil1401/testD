@@ -1,0 +1,59 @@
+<template>
+    <div class="slds-form-element">
+        <div class="slds-form-element__control">
+            <div class="slds-combobox_container">
+                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open" aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                        <lightning-input 
+                            class="inputValidation"
+                            type="text" 
+                            label={label}
+                            value={value}
+                            required={required}
+                            autocomplete="false"
+                            placeholder="Buscar..."
+                            disabled={disabled}
+                            onchange={filterItems}>
+                        </lightning-input>
+                    </div>
+                    <template if:true={showItems}>
+                        <!--
+                        <div class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid" role="listbox">
+                            <ul class="slds-listbox slds-listbox_vertical" >
+                                <template for:each={filteredItems} for:item="item">
+                                    <li key={item.Id} role="presentation" class="slds-listbox__item">
+                                        <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option"
+                                            data-id={item.Id} data-name={item.Name} onclick={selectItem}>
+                                            <span class="slds-media__body" style="pointer-events: none;">
+                                                <span class="slds-truncate item-lookup-input">
+                                                    {item.Name}
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                        -->
+                        <div class="div-list-lookup slds-scrollable_y">
+                            <ul class="slds-listbox slds-listbox_vertical" >
+                                <template for:each={filteredItems} for:item="item">
+                                    <li key={item.Id} role="presentation" class="slds-listbox__item">
+                                        <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option"
+                                            data-id={item.Id} data-name={item.Name} onclick={selectItem}>
+                                            <span class="slds-media__body" style="pointer-events: none;">
+                                                <span class="slds-truncate item-lookup-input">
+                                                    {item.Name}
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

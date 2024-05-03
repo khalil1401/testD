@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Mail_a_gerente_comercial_de_Adultos_por_nueva_licencia</fullName>
+        <description>Mail a gerente comercial de Adultos por nueva licencia</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>danone@xappia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nueva_licencia_generada</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_a_gerente_comercial_de_Negocio_Total_por_nueva_licencia</fullName>
+        <description>Mail a gerente comercial de Negocio Total por nueva licencia</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>alejandra.palazzo@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>cecilia.kramarczuk@danone.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nueva_licencia_generada</template>
+    </alerts>
+    <alerts>
+        <fullName>Mail_a_gerente_comercial_de_Pedi_tricos_por_nueva_licencia</fullName>
+        <description>Mail a gerente comercial de Pediátricos por nueva licencia</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>danone@xappia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Nueva_licencia_generada</template>
+    </alerts>
+    <rules>
+        <fullName>Alerta de mail por nueva licencia APM Adultos</fullName>
+        <actions>
+            <name>Mail_a_gerente_comercial_de_Adultos_por_nueva_licencia</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>Se envía una alerta de mail a pos KAE Adultos cuando un APM Adultos genera una nueva licencia.</description>
+        <formula>CreatedBy.Contact.Account.Name = &quot;KAE Adultos&quot;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Alerta de mail por nueva licencia APM Pediatricos</fullName>
+        <actions>
+            <name>Mail_a_gerente_comercial_de_Pedi_tricos_por_nueva_licencia</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>Se envía una alerta de mail a pos KAE Pediatricos cuando un APM Pediatricos genera una nueva licencia.</description>
+        <formula>CreatedBy.Contact.Account.Name = &quot;KAE Pediátricos&quot;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Alerta de mail por nueva licencia Negocio Total</fullName>
+        <actions>
+            <name>Mail_a_gerente_comercial_de_Negocio_Total_por_nueva_licencia</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Se envía una alerta de mail a los  jefes Negocio Total cuando un APM Negocio Total genera una nueva licencia.</description>
+        <formula>CreatedBy.Contact.Account.Name = &quot;Negocio Total&quot;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Alerta de mail por nueva licencia Obra Social</fullName>
+        <active>false</active>
+        <description>Se envía una alerta de mail a los  jefes de equipo Obras Sociales cuando un APM Obras Sociales genera una nueva licencia.</description>
+        <formula>CreatedBy.Contact.Account.Name = &quot;APM Obras Sociales&quot;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Pasar_a_may_sculas_SalesGroup</fullName>
+        <description>Para Localidad</description>
+        <field>SalesGroup__c</field>
+        <formula>UPPER(SalesGroup__c)</formula>
+        <name>Pasar a mayúsculas SalesGroup</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Pasar_a_may_sculas_SalesOffice</fullName>
+        <description>Para Localidad</description>
+        <field>SalesOffice__c</field>
+        <formula>UPPER( SalesOffice__c)</formula>
+        <name>Pasar a mayúsculas SalesOffice</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Pasar a mayúsculas localidad</fullName>
+        <actions>
+            <name>Pasar_a_may_sculas_SalesGroup</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Pasar_a_may_sculas_SalesOffice</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Localidad__c.SalesGroup__c</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Localidad__c.Descripcion_SalesOffice__c</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

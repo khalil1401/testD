@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alerta_por_cierre_de_ciclo</fullName>
+        <description>Alerta por cierre de ciclo</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Recordatorio_de_final_de_Ciclo</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Setear_equipo_Ciclo</fullName>
+        <field>Equipo_de_APM__c</field>
+        <formula>IF(Owner:User.Contact.Account.Name = &quot;APM Adultos&quot;, &quot;Adultos&quot;, IF(Owner:User.Contact.Account.Name = &quot;APM Pediatrico&quot;, &quot;Pediátrico&quot;, IF(Owner:User.Contact.Account.Name = &quot;APM Obras Sociales&quot;, &quot;Obras Sociales&quot;, IF(Owner:User.Contact.Account.Name = &quot;Negocio Total&quot;, &quot;Negocio Total&quot;, &quot;&quot;) ) ) )</formula>
+        <name>Setear equipo Ciclo</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Notificar a APM por cierre de ciclo</fullName>
+        <active>true</active>
+        <formula>TRUE</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Alerta_por_cierre_de_ciclo</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Ciclo__c.Fecha_de_fin__c</offsetFromField>
+            <timeLength>-5</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Setear equipo de APM</fullName>
+        <actions>
+            <name>Setear_equipo_Ciclo</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>TRUE</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

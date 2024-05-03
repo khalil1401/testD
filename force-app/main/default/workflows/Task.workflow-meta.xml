@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Envia_mail_al_usuario_que_genero_la_tarea</fullName>
+        <description>Envia mail al usuario que genero la tarea</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Mail_para_Tarea_completa</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Cambio_Asunto_Tarea_Tipo_Visita</fullName>
+        <description>Cambia el campo del asunto de las tareas de tipo visita por el profesional</description>
+        <field>Subject</field>
+        <formula>TEXT(Profesional__c)</formula>
+        <name>Cambio Asunto Tarea Tipo Visita</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Asunto de Tareas %28visita%29</fullName>
+        <actions>
+            <name>Cambio_Asunto_Tarea_Tipo_Visita</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Se reescribe el asunto de las tareas de tipo de registro visita por el tipo de profesional seleccionado</description>
+        <formula>AND(RecordType.Name = &apos;Visita&apos;,       OR(        ISNEW(),        ISCHANGED(Profesional__c)       )     )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Si la tarea se completa</fullName>
+        <actions>
+            <name>Envia_mail_al_usuario_que_genero_la_tarea</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Si la tarea se completa y es paciente Best care o Regular</description>
+        <formula>AND(OR(Paciente__r.RecordType.Name = &apos;Paciente Best Care&apos;, 							Paciente__r.RecordType.Name =&apos;Paciente Regular&apos;), 			  ISPICKVAL(Status, &apos;Completa&apos;) , 				ISCHANGED(Status) , 				 Paciente__r.Listo_para_Jitterbit__c =true 			)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Tarea asignada a Master Data</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>Task.OwnerId</field>
+            <operation>equals</operation>
+            <value>Xappia Cloud Experts</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

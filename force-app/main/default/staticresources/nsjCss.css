@@ -1,0 +1,53 @@
+.slds-form-element__label{
+	font-family: BariolBold;
+	font-size: 16px;
+	color: #393939;
+}
+
+.slds-input{
+	background-color: #ECF1F4;
+	font-family: BariolRegular;
+	font-size: 16px;
+	color: #1C1B1F;
+}
+
+.slds-input[disabled], .slds-input.slds-is-disabled{
+	background-color: #ECF1F4;
+	font-family: BariolRegular;
+	font-size: 16px;
+	border-color: transparent;
+}
+
+.slds-input_faux.slds-is-disabled{
+	background-color: #ECF1F4;
+	font-family: BariolRegular;
+	font-size: 16px;
+}
+
+.slds-textarea{
+	background-color: #ECF1F4;
+	font-family: BariolRegular;
+	font-size: 16px;
+}
+
+.slds-combobox__input{
+	background-color: #ECF1F4;
+	font-family: BariolRegular;
+	font-size: 16px;
+	color: #1C1B1F !important;
+}
+
+.slds-combobox__input:hover{
+	--slds-c-input-color-border: #9D67A8;
+	--slds-c-input-shadow: #9D67A8;
+}
+
+.slds-combobox__input:focus, .slds-combobox__input.slds-has-focus{
+	border-color: #9D67A8;
+	box-shadow: none !important;
+}
+
+.slds-input:hover{
+	--slds-c-input-color-border: #9D67A8;
+	--slds-c-input-shadow: #9D67A8;
+}

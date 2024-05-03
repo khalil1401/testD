@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>CopiarCodigoDeProductoAInventoryItem</fullName>
+        <field>Id_inventory_item__c</field>
+        <formula>ProductCode</formula>
+        <name>CopiarCodigoDeProductoAInventoryItem</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Copiar Product2 a InventoryItem</fullName>
+        <actions>
+            <name>CopiarCodigoDeProductoAInventoryItem</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Se copia el Id del producto al objeto InventoryItem para que en la integracion de Jitterbit con Oracle funcione.</description>
+        <formula>NOT(ISBLANK(ProductCode))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Institucion_en_la_que_se_di_de_alta__c</name>
+    <relationshipLabel></relationshipLabel>
+</CustomFieldTranslation>

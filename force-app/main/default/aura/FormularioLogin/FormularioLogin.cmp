@@ -1,0 +1,422 @@
+<aura:component controller="FormularioLoginController" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="isOpen" type="boolean" default="true"/>
+    <aura:attribute name="noExisteDNI" type="boolean" default="false"/>
+    <aura:attribute name="seleccionarPaciente" type="boolean" default="false"/>
+    <aura:attribute name="ingresarContrasena" type="boolean" default="false"/>
+    <aura:attribute name="esPaciente" type="boolean" default="false"/>
+    <aura:attribute name="confirmacionReestablecerContrasena" type="boolean" default="false"/>
+    <aura:attribute name="passwordRestablecida" type="boolean" default="false"/>
+    <aura:attribute name="alertaDNI" type="boolean" default="false"/>
+    <aura:attribute name="alertaSeleccionarPaciente" type="boolean" default="false"/>
+    <aura:attribute name="alertaPasswordIncorrecta" type="boolean" default="false"/>
+
+    <aura:attribute name="DNI" type="String" default=""/>
+    <aura:attribute name="username" type="String" default=""/>
+    <aura:attribute name="emailUsuario" type="String" default=""/>
+    <aura:attribute name="password" type="String" default=""/>
+    <aura:attribute name="mensajeEmail" type="String" default=""/>
+    <aura:attribute name="showpassword" type="Boolean" default="false"/>
+
+    <aura:attribute name="pacientes" type="List"/>
+    <aura:attribute name="optionsPacientes" type="List" default="[]"/>
+    <aura:attribute name="idPacienteSeleccionado" type="String" default=""/>
+    <aura:attribute name="nombrePacienteSeleccionado" type="String" default=""/>
+
+    <aura:attribute name="tituloDeDNI" type="String" default=""/>
+    <aura:attribute name="tituloDeSeleccionDePaciente" type="String" default=""/>
+    
+    <!--design-->
+    <aura:attribute name="mensajeCondiciones" type="String"/>
+    <aura:attribute name="mensajeLeiYAceptoCondiciones" type="String" default="Leí y acepto los términos y condiciones."/>
+    <aura:attribute name="mensajeAlertaCondiciones" type="String" default="Debe aceptar los términos y condiciones de uso."/>
+    <aura:attribute name="altoContainerCondiciones" type="String"/>
+    <aura:attribute name="altoContainerCondicionesMobile" type="String"/>
+
+    <aura:attribute name="pageReference" type="Object"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="false" />
+    <lightning:navigation aura:id="navService"/>
+
+    <aura:if isTrue="{!v.showSpinner}">
+        <div style="background-color: none; background: none;">
+            <lightning:spinner 
+                alternativeText="Cargando"
+                variant="brand"
+                style="background-color: none; background: none;"/>
+        </div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.isOpen}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-align_absolute-center" onkeypress="{!c.pressEnterFormDNI}">
+            <div class="slds-modal__container modal-dni">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button 
+                        class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close"
+                        onclick="{!c.likenClose}">
+                        <lightning:icon 
+                            class="icn"
+                            iconName="utility:close"
+                            size="small"
+                            variant="inverse"
+                            alternativeText="Indicates approval"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div class="slds-text-align_center" style="margin-top: 10%; margin-left: 10%;margin-right: 10%;">
+                        <p class="text-regular-login-nsj slds-m-top_x-large">
+                            Ingrese su DNI
+                        </p>
+                    </div>
+                    <div class="slds-align_absolute-center" style="margin-bottom: 5%;">
+                        <div>
+                            <lightning:input
+                                aura:id="dni"
+                                name="dni"
+                                value="{!v.DNI}"
+                                autocomplete="off"
+                                type="number"
+                                min="1000000"
+                                maxlength="8"/>
+                            <aura:if isTrue="{!v.alertaDNI}">
+                                <div class="slds-m-top_x-small">
+                                    <label class="alert">
+                                        Debe ingresar un DNI.
+                                    </label>
+                                </div>
+                            </aura:if>
+                        </div>
+                    </div>
+                    <div class="slds-align_absolute-center" style="margin-bottom: 10%;">
+                        <button
+                            class="button"
+                            onclick="{!c.validarDNI}">
+                            Siguiente
+                        </button>
+                    </div>
+                </div>    
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.noExisteDNI}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-align_absolute-center">
+            <div class="slds-modal__container modal-dni">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button
+                        class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close"
+                        onclick="{!c.likenClose}">
+                        <lightning:icon 
+                            class="icn"
+                            iconName="utility:close"
+                            size="small"
+                            variant="inverse"
+                            alternativeText="Indicates approval"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div style="margin: 10%;">
+                        <div class="slds-align_absolute-center">
+                            <lightning:icon 
+                                class="icnModal"
+                                iconName="utility:logout" 
+                                alternativeText="logout" 
+                                title="logout"
+                                size="small"/>
+                        </div>
+                        <p class="slds-text-align_center text-blue-login-nsj slds-m-top_large">
+                            El DNI ingresado no corresponde a un paciente enrolado en la plataforma para pacientes, <span style="color: #C09AC2;">Nutricia Siempre Juntos.</span>
+                        </p>
+                        <p class="slds-text-align_center text-blue-login-nsj slds-m-top_x-large">
+                            Si desea iniciar un tratamiento, <span style="color: #C09AC2;">puede seguir los siguientes pasos:</span>
+                        </p>
+                        <div class="slds-text-align_center text-blue-login-nsj">
+                            <div class="slds-m-top_small">
+                                <p>
+                                    1. Desde la página principal, ingresar a la sección del área terapéutica que le corresponda.
+                                </p>
+                            </div>
+                            <div class="slds-m-top_x-small">
+                                <p>
+                                    2. Hacer click en el botón “Solicitá tu kit de inicio aquí”.
+                                </p>
+                            </div>
+                            <div class="slds-m-top_x-small">
+                                <p>
+                                    3. Completar el registro.                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.seleccionarPaciente}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-align_absolute-center" onkeypress="{!c.pressEnterFormPacientes}">
+            <div class="slds-modal__container modal-dni">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button 
+                        class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close"
+                        onclick="{!c.likenClose}">
+                        <lightning:icon 
+                            class="icn"
+                            iconName="utility:close"
+                            size="small"
+                            variant="inverse"
+                            alternativeText="Indicates approval"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_large">
+                    <div class="slds-text-align_center" style="margin-top: 10%;margin-left: 10%;margin-right: 10%;">
+                        <p class="text-regular-login-nsj">Seleccionar paciente</p>
+                    </div>
+                    <div class="slds-align_absolute-center">
+                        <form onkeypress="{!c.pressEnter}" class="form">
+                            <lightning:combobox
+                                aura:id="pacientes"
+                                name="paciente"
+                                value="{!v.idPacienteSeleccionado}"
+                                options="{!v.optionsPacientes}"
+                                onchange="{!c.handleOptionPacienteSelected}"/>
+                            <aura:if isTrue="{!v.alertaSeleccionarPaciente}">
+                                <div>
+                                    <label for="dni" class="alert">Seleccione un paciente.</label>
+                                </div>
+                            </aura:if>
+                        </form>
+                    </div>
+                    <div class="slds-clearfix slds-m-top_x-large" style="margin-top: 10%; margin-bottom: 10%;">
+                        <div class="slds-float_left">
+                            <button
+                                class="back-button"
+                                onclick="{!c.volverAIngresarDNI}">
+                                Volver
+                            </button>
+                        </div>
+                        <div class="slds-float_right">
+                            <button
+                                class="button"
+                                onclick="{!c.ingresarPaciente}">
+                                Siguiente
+                            </button>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.ingresarContrasena}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-align_absolute-center" onkeypress="{!c.pressEnterFormPass}">
+            <div class="slds-modal__container modal-dni">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button 
+                        class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close"
+                        onclick="{!c.likenClose}">
+                        <lightning:icon 
+                            class="icn"
+                            iconName="utility:close"
+                            size="small"
+                            variant="inverse"
+                            alternativeText="Indicates approval"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_large">
+                    <div class="slds-align_absolute-center" style="margin-top: 10%;margin-left: 10%;margin-right: 10%;">
+                        <form onkeypress="{!c.pressEnter}" class="form">
+                            <p class="text-blue-login-nsj slds-text-align_center" style="margin-top: 5%;color:#58368C;font-weight:bold;">
+                                {!v.nombrePacienteSeleccionado}
+                            </p>
+                            <p class="text-regular-login-nsj slds-text-align_center">
+                                Por favor ingrese su contraseña
+                            </p>
+                            <lightning:input    
+                                aura:id="password"
+                                name="password"
+                                autocomplete="off"
+                                value="{!v.password}"
+                                type="password"/>
+                            <aura:if isTrue="{!v.alertaPasswordIncorrecta}">
+                                <div>
+                                    <label for="password" class="alert">
+                                        La contraseña ingresada no es válida.
+                                    </label>
+                                </div>
+                            </aura:if>
+                            <div class="slds-text-align_center slds-m-top_medium">
+                                <a  
+                                    class="text-fp-login-nsj"
+                                    onclick="{!c.confirmarReestablecimientoContrasena }">
+                                    ¿Olvidaste tu contraseña?
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="slds-clearfix slds-m-top_x-large" style="margin-bottom: 10%;">
+                        <div class="slds-float_left">
+                            <button
+                                class="back-button"
+                                onclick="{!c.volverAElegirPaciente}">
+                                Volver
+                            </button>
+                        </div>
+                        <div class="slds-float_right">
+                            <button
+                                class="button"
+                                onclick="{!c.login}">
+                                Ingresar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.confirmacionReestablecerContrasena}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-align_absolute-center" onkeypress="{!c.pressEnterFormPass}">
+            <div class="slds-modal__container modal-dni">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button 
+                        class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close"
+                        onclick="{!c.likenClose}">
+                        <lightning:icon 
+                            class="icn"
+                            iconName="utility:close"
+                            size="small"
+                            variant="inverse"
+                            alternativeText="Indicates approval"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_large">
+                    <div style="margin-top: 10%;margin-left: 10%;margin-right: 10%;">
+                        <p class="text-regular-login-nsj slds-text-align_center">
+                            Se enviará un correo a {!v.emailUsuario}.
+                        </p>
+                        <p class="text-regular-login-nsj slds-text-align_center">
+                            ¿Desea seguir adelante?
+                        </p>
+                    </div>
+                    <div class="slds-clearfix slds-m-top_x-large" style="margin-bottom: 10%;">
+                        <div class="slds-float_left">
+                            <button
+                                class="back-button"
+                                onclick="{!c.volverAIngresarConstrasena}">
+                                Volver
+                            </button>
+                        </div>
+                        <div class="slds-float_right">
+                            <button
+                                class="button"
+                                onclick="{!c.resetPassword}">
+                                Enviar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.esPaciente}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-align_absolute-center">
+            <div class="slds-modal__container modal-dni">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button
+                        class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close"
+                        onclick="{!c.likenClose}">
+                        <lightning:icon 
+                            class="icn"
+                            iconName="utility:close"
+                            size="small"
+                            variant="inverse"
+                            alternativeText="Indicates approval"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div style="margin: 10%;">
+                        <div class="slds-align_absolute-center">
+                            <lightning:icon 
+                                class="icnModal"
+                                iconName="utility:logout" 
+                                alternativeText="logout" 
+                                title="logout"
+                                size="small"/>
+                        </div>
+                        <p class="slds-text-align_center text-blue-login-nsj slds-m-top_large">
+                            El DNI ingresado corresponde a un paciente ya enrolado en la plataforma para pacientes, <span style="color: #C09AC2; font-family: MontserratSemiBold;">Nutricia Siempre Juntos.</span>
+                        </p>
+                        <p class="slds-text-align_center text-blue-login-nsj slds-m-top_medium">
+                            Por cualquier duda o consulta puede comunicarse con el <span style="color: #C09AC2; font-family: MontserratSemiBold;">Programa de Soporte al Paciente:</span>
+                        </p>
+                        <div class="container-contacto-fvr text-blue-login-nsj slds-m-top_medium" style="font-family: MontserratSemiBold;">
+                            <a href="https://api.whatsapp.com/send?phone=5491159706647">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_HOME/PP-HOME-Logo%20whatsapp%20violeta.png" alt="img-wsp" 
+                                    style="width: 30px;"/>
+                                <span class="slds-m-left_x-small">
+                                    +54 911 5970-6647
+                                </span>
+                            </a>
+                        </div>
+                        <div class="container-contacto-fvr text-blue-login-nsj slds-m-top_small" style="font-family: MontserratSemiBold;">
+                            <a href="tel:0800-122-5544">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_HOME/PP-HOME-Logo%20telefono%20violeta.png" alt="img-tel" 
+                                    style="width: 30px;"/>
+                                <span class="slds-m-left_small">0800-122-5544</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+
+    <aura:if isTrue="{!v.passwordRestablecida}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-align_absolute-center">
+            <div class="slds-modal__container modal-dni">
+                <header class="slds-modal__header slds-modal__header_empty">
+                    <button
+                        class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close"
+                        onclick="{!c.likenClose}">
+                        <lightning:icon 
+                            class="icn"
+                            iconName="utility:close"
+                            size="small"
+                            variant="inverse"
+                            alternativeText="Indicates approval"/>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_large">
+                    <div style="margin: 10%;">
+                        <div class="slds-align_absolute-center">
+                            <lightning:icon 
+                                class="icnModal"
+                                iconName="utility:success" 
+                                alternativeText="success" 
+                                title="success"
+                                size="large"/>
+                        </div>
+                        <p class="slds-text-align_center slds-m-top_large text-regular-login-nsj">
+                            {!v.mensajeEmail}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+</aura:component>

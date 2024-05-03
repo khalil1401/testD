@@ -1,0 +1,33 @@
+<aura:component implements="forceCommunity:layout" access="global">
+
+    <aura:attribute name="container1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container2" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container3" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container4" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container5" type="Aura.Component[]" required="false"/>
+
+    <div class="slds-col slds-size_1-of-1">
+        {!v.container1}
+    </div>
+
+    <div class="slds-col slds-size_1-of-1">
+        {!v.container5}
+    </div>
+
+    <div class="slds-col slds-size_1-of-1">
+        {!v.container2}
+    </div>
+
+    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+        {!v.container3}
+    </div>
+
+    <div class="slds-grid slds-wrap">
+        <div class="div-center-tc">
+            <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                {!v.container4}
+            </div>
+        </div>
+    </div>
+
+</aura:component>

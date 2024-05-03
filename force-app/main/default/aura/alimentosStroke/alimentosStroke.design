@@ -1,0 +1,11 @@
+<design:component >
+
+    <design:attribute name="iddsi" label="Componente de IDDSI"/>
+    <design:attribute name="comoMeAlimento" label="Componente de cómo me alimento si tengo disfagia"/>
+    <design:attribute name="diagnosticarlaYTratarla" label="Componente de por qué es importante diagnosticarla y tratarla"/>
+    <design:attribute name="recursoEstaticoImagenPrincipal" label="URL de la imagen principal de componente"/>
+    <design:attribute name="recursoEstaticoImagenPrincipalMobile" label="URL de la imagen principal de componente Mobile"/>
+    <design:attribute name="titulo" label="Título de componente"/>
+    <design:attribute name="textoPrimeraBajada" label="Texto de primera bajada de componente"/>
+
+</design:component>

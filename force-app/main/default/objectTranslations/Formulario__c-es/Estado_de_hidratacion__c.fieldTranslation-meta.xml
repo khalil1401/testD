@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Estado_de_hidratacion__c</name>
+    <picklistValues>
+        <masterLabel>Deshidratado</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Normohidratado</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sobrehidratado/Edemas</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

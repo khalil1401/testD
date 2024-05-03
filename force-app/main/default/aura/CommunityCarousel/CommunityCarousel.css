@@ -1,0 +1,40 @@
+.THIS .slds-carousel {
+	height: inherit;
+}
+
+.THIS .slds-carousel__stage{
+    height: inherit;
+}
+
+.THIS .slds-carousel__panels {
+    height: inherit;
+}
+
+.THIS .slds-carousel__image{
+	min-width: 100%;
+	height: inherit;
+	position: absolute;
+	z-index: -99800;
+	border-top-left-radius: initial;
+	border-top-right-radius: initial;
+}
+
+.THIS .slds-carousel__content {
+	display: none;
+}
+
+.THIS .slds-carousel__content-title {
+	display: none;
+}
+
+.THIS .slds-carousel__indicators {
+	display: none;
+}
+
+.THIS .slds-carousel__autoplay {
+	display: none;
+}
+
+.THIS .slds-carousel__panel-action {
+	border: none;
+}

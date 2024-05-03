@@ -1,0 +1,125 @@
+.THIS {
+}
+
+.THIS .nav-patologias-nsj-tablet{
+    display: none;
+}
+
+.THIS .div-patologias{
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    animation: fadeIn 0.5s;
+}
+
+.THIS .td-patologia{
+    text-align: center;
+    width: 231px;
+    height: 42px;
+    background-color: #ECF1F4;
+    color: #4A2A80;
+}
+
+.THIS .td-patologia:hover{
+    background-color: #9D67A8;
+    color: white;
+    cursor: pointer;
+}
+
+.THIS .first-td-patologia{
+    text-align: center;
+    width: 231px;
+    height: 42px;
+    background-color: #ECF1F4;
+    border-radius: 0px 0px 0px 8px;
+    color: #4A2A80;
+}
+
+.THIS .first-td-patologia:hover{
+    background-color: #9D67A8;
+    color: white;
+    cursor: pointer;
+}
+
+.THIS .last-td-patologia{
+    text-align: center;
+    width: 231px;
+    height: 42px;
+    background-color: #ECF1F4;
+    border-radius: 0px 0px 8px 0px;
+    color: #4A2A80;
+}
+
+.THIS .last-td-patologia:hover{
+    background-color: #9D67A8;
+    color: white;
+    cursor: pointer;
+}
+
+.THIS .text-patologia{
+    font-family: BariolRegular;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.32px;
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0.75; 
+        transform: translateY(-20px);
+    }
+
+    100% { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1366px) {
+    .THIS .td-patologia{
+        width: 186px;
+    }
+
+    .THIS .first-td-patologia{
+        width: 186px;
+    }
+
+    .THIS .last-td-patologia{
+        width: 186px;
+    }
+
+    .THIS .td-patologia-selected{
+        width: 186px;
+    }    
+}
+
+@media (max-width: 1024px) {
+    .THIS .nav-patologias-nsj-desktop{
+        display: none;
+    }
+
+    .THIS .nav-patologias-nsj-tablet{
+        display: initial;
+    }
+
+    .THIS .td-patologia{
+        text-align: center;
+        width: 416px;
+        height: 42px;
+        background-color: #ECF1F4;
+        border-radius: 20px;
+        margin-top: 8px;
+        color: #606060;
+    }
+}
+
+@media (max-width: 768px) {
+    .THIS .nav-patologias-nsj-desktop{
+        display: none;
+    }
+
+    .THIS .nav-patologias-nsj-tablet{
+        display: none;
+    }
+}

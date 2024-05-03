@@ -1,0 +1,119 @@
+<template>
+    <template if:false={menuStyle}>
+        <div class="desktop">
+            <template if:false={navFooter}>
+                <div class="slds-grid slds-wrap slds-m-top_x-large slds-m-bottom_x-large nav-dis-mal-nsj">
+                    <div class="slds-col slds-size_1-of-1">
+                        <table>
+                            <tr>
+                                <template for:each={items} for:item="item">
+                                    <td key={item.label}>
+                                        <span
+                                            key={item.label}
+                                            data-id={item.dataId}
+                                            class="text-item-nav-int-nsj slds-align_absolute-center"
+                                            onclick={redireccionar}>
+                                            {item.label}
+                                        </span>
+                                    </td>
+                                </template>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </template>
+            <template if:true={navFooter}>
+                <div data-id="containerNav" class="slds-grid slds-wrap containerNavStroke">
+                    <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+                        <div style="padding-top: 0.75%;padding-bottom: 0.75%;">
+                            <table class="slds-align_absolute-center">
+                                <tr>
+                                    <!--
+                                    <td class="vl">
+                                        <template if:false={malnutricion}>
+                                            <img
+                                                src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-HOME/PP-imagenHomeDisfagia%282022-05-24%29.png"
+                                                data-id="Stroke__c"
+                                                class="textoNavegacionStroke"
+                                                onclick={redireccionar}>
+                                        </template>
+                                        <template if:true={malnutricion}>
+                                            <img
+                                                src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-HOME/PP-imagenHomeDisfagia%282022-05-24%29.png"
+                                                data-id="malnutricion_home__c"
+                                                class="textoNavegacionStroke"
+                                                onclick={redireccionar}>
+                                        </template>
+                                    </td>
+                                    -->
+                                    <template for:each={items} for:item="item">
+                                        <td key={item.label} class={item.classFooter}>
+                                            <p 
+                                                data-id={item.dataId}
+                                                class="textoNavegacionStroke"
+                                                onclick={redireccionar}>
+                                                {item.label}
+                                            </p>
+                                        </td>    
+                                    </template>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-medium-size_5-of-12"></div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-12">
+                        <div class="slds-align_absolute-center slds-p-top_xx-large slds-p-bottom_xx-large">
+                            <img src={logo} class="iconoNutriciaBago">
+                        </div>
+                    </div>
+                    <div class="slds-col slds-medium-size_5-of-12"></div>
+                </div>
+            </template>
+        </div>
+    </template>
+    <template if:true={menuStyle}>
+        <div class="mobile">
+            <div data-id="containerNavMobile" class="slds-grid slds-wrap containerNavStroke slds-grid_vertical-align-center">
+                <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+                    <div class="slds-clearfix">
+                        <div class="slds-float_left">
+                            <lightning-icon
+                                class="slds-p-around_small icn"
+                                icon-name="utility:rows"
+                                alternative-text="Back"
+                                title="Back"
+                                size="medium"
+                                variant="bare"
+                                onclick={actionDropdown}>
+                            </lightning-icon>
+                        </div>
+                    </div>
+                    <div data-id="containerNavDropdown" class="display-none" style="left: 0px;z-index: 3;position: absolute;width: 100%;">
+                        <ul role="menu" aria-label="Show More">
+                            <template for:each={items} for:item="item">
+                                <div key={item.dataId}>
+                                    <li style="padding-top: 2%;padding-bottom: 2%;">
+                                        <span
+                                            data-id={item.dataId}
+                                            class="textoNavegacionMobileDisfagia"
+                                            onclick={redireccionar}>
+                                                {item.label}
+                                        </span>
+                                    </li>
+                                    <div class="lineaDivision slds-align_absolute-center"></div>
+                                </div>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+                <template if:true={navFooter}>
+                    <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+                        <div class="slds-align_absolute-center slds-p-top_x-large slds-p-bottom_xx-large">
+                            <img src={logo} class="iconoNutriciaBago">
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,27 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 slds-text-align_center">
+            <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-VIVIR_MEJOR/ONCO-ACTIVIDAD_FISICA/PP-IconoResbalarConsultaMedicaOncologia%282022-05-20%29.png" alt="img"
+                    class="imagenImagenesAFOncologia"/>
+            <p  class="slds-m-top_small textoImagenesAFOncologia">
+                Comprobá que la superficie del suelo no esté húmeda o resbaladiza
+            </p>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 slds-text-align_center containerImagenesAFOncologia">
+            <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-VIVIR_MEJOR/ONCO-ACTIVIDAD_FISICA/PP-IconoZapatillaActividadFisicaOncologia%282022-05-20%29.png" alt="img"
+                    class="imagenImagenesAFOncologia"/>
+            <p  class="slds-m-top_small textoImagenesAFOncologia">
+                Para evitar lesiones, usá siempre el calzado adecuado
+            </p>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3 slds-text-align_center containerImagenesAFOncologia">
+            <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-VIVIR_MEJOR/ONCO-ACTIVIDAD_FISICA/PP-IconoSillaActividadFisicaOncologia%282022-05-20%29.png" alt="img"
+                    class="imagenImagenesAFOncologia"/>
+            <p  class="slds-m-top_small textoImagenesAFOncologia">
+                Tené siempre a mano una mesa o silla firme como apoyo por si fuera necesario
+            </p>
+        </div>
+    </div>
+
+</aura:component>

@@ -1,0 +1,555 @@
+<template>
+    <div style="width: 100%;" class="mobile-tablet-perfil slds-align_absolute-center">
+        <div class="div-perfil-manager">
+            <!--Menu general-->
+            <template if:true={showManager}>
+                <!--Info paciente-->
+                <div class="show-mobile">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-12">
+                        </div>
+                        <div class="slds-col slds-size_4-of-12 slds-text-align_right">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/User_Perfil.png"
+                                style="width: 100px;">
+                        </div>
+                        <div class="slds-col slds-size_7-of-12">
+                            <template if:true={paciente}>
+                                <div>
+                                    <p class="name-text slds-m-bottom_xxx-small">{paciente.FirstName} {paciente.LastName}</p>
+                                    <p class="card-item-text"><span class="card-item-title">DNI: </span>
+                                        <lightning-formatted-number 
+                                            value={paciente.DNI__c}>
+                                        </lightning-formatted-number>
+                                    </p>
+                                    <p class="card-item-text"><span class="card-item-title">Fecha Nacimiento: </span>
+                                        <lightning-formatted-date-time
+                                            value={paciente.PersonBirthdate}
+                                            year="numeric"
+                                            month="numeric"
+                                            day="numeric">
+                                        </lightning-formatted-date-time>
+                                    </p>
+                                    <p class="card-item-text"><span class="card-item-title">Teléfono: </span>
+                                        {paciente.Phone}
+                                    </p>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-tablet">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_2-of-12">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/User_Perfil.png"
+                                style="width: 100px;">
+                        </div>
+                        <div class="slds-col slds-size_10-of-12">
+                            <template if:true={paciente}>
+                                <div>
+                                    <p class="name-text slds-m-bottom_xx-small">{paciente.FirstName} {paciente.LastName}</p>
+                                    <p class="card-item-text"><span class="card-item-title">DNI: </span>
+                                        <lightning-formatted-number 
+                                            value={paciente.DNI__c}>
+                                        </lightning-formatted-number>
+                                    </p>
+                                    <p class="card-item-text"><span class="card-item-title">Fecha Nacimiento: </span>
+                                        <lightning-formatted-date-time
+                                            value={paciente.PersonBirthdate}
+                                            year="numeric"
+                                            month="numeric"
+                                            day="numeric">
+                                        </lightning-formatted-date-time>
+                                    </p>
+                                    <p class="card-item-text"><span class="card-item-title">Teléfono: </span>
+                                        {paciente.Phone}
+                                    </p>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large slds-align_absolute-center">
+                        <div class="carrusel" data-id="container-cards" onscroll={scrollEvent}>
+                            <!--Aviso No Cobertura-->
+                            <div class="card-envio card-envio-left slds-grid slds-wrap slds-grid_vertical-align-center">
+                                <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-p-around_small">
+                                    <p class="card-item-text">
+                                        ¿Necesitás soporte con el trámite de tu cobertura médica?
+                                    </p>
+                                    <button 
+                                        class="slds-m-top_small os-gestion-button"
+                                        data-id="aviso-cobertura"
+                                        onclick={goToSubseccion}>
+                                        Iniciar Gestión
+                                    </button>
+                                </div>
+                            </div>
+                            <!--Paciente Best Care
+                            <template if:true={dataBestCare}>
+                                <div class="card-envio slds-grid slds-wrap slds-grid_vertical-align-center">
+                                    <div class="slds-col slds-size_3-of-12 slds-align_absolute-center"
+                                        style="background: linear-gradient(#C09AC2, #313183); height:100%; border-radius: 8px 0px 0px 8px;">
+                                        <div class="slds-text-align_center">
+                                            <p style="font-family: BariolBold; font-size: 24px; line-height: 26.45px; color:white;">
+                                                {daysBetween}</p>
+                                            <p style="font-family: BariolBold; font-size: 10px; line-height: 11.02px; color:white;">
+                                                Días restantes</p>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_9-of-12">
+                                        <div class="slds-p-around_small">
+                                            <p class="pedido-title">{dataBestCare.producto}</p>
+                                            <p class="pedido-text slds-p-top_x-small" style="font-family: BariolRegular; text-transform: capitalize;">{dataBestCare.estadoDePaciente}</p>
+                                            <p class="pedido-text slds-p-top_xx-small" style="font-family: BariolRegular; text-transform: capitalize;">Duración estimada:</p>
+                                            <p class="pedido-text" style="font-family: BariolRegular; text-transform: capitalize;">
+                                                <lightning-formatted-date-time
+                                                    value={dataBestCare.moduloDesde}
+                                                    year="numeric"
+                                                    month="numeric"
+                                                    day="numeric">
+                                                </lightning-formatted-date-time>
+                                                <span> - </span>
+                                                <lightning-formatted-date-time
+                                                    value={dataBestCare.moduloHasta}
+                                                    year="numeric"
+                                                    month="numeric"
+                                                    day="numeric">
+                                                </lightning-formatted-date-time>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                            -->
+                            <!--Seguimiento de envío-->
+                            <template if:true={envio}>
+                                <div class="card-envio card-envio-right slds-grid slds-wrap slds-grid_vertical-align-center">
+                                    <div class="slds-col slds-size_3-of-12 slds-align_absolute-center"
+                                        style="background: linear-gradient(#C09AC2, #313183); height:100%; border-radius: 8px 0px 0px 8px;">
+                                        <lightning-icon 
+                                            icon-name="utility:transport_heavy_truck" 
+                                            alternative-text="Transport!"
+                                            variant="inverse"
+                                            size="small"
+                                            title="Transport">
+                                        </lightning-icon>
+                                    </div>
+                                    <div class="slds-col slds-size_9-of-12">
+                                        <template if:true={envio}>
+                                            <div class="slds-p-around_small">
+                                                <p class="pedido-title">Pedido N° {envio.NIC__c}</p>
+                                                <p class="pedido-text slds-p-top_x-small" style="font-family: BariolRegular; text-transform: capitalize;">Dirección: {envio.direccion}</p>
+                                                <p class="pedido-text slds-p-top_x-small"><a href={envio.Link_Seguimiento_completo__c} class="pedido-link" target="_blank">Seguí tu pedido acá</a></p>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                    <template if:true={envio}>
+                        <div class="slds-col slds-size_1-of-1 slds-p-top_x-small slds-text-align_center indicators-cards">
+                            <button
+                                class="circle-selected"
+                                data-id="toleft"
+                                onclick={scrollTo}>
+                            </button>
+                            <button
+                                class="circle"
+                                data-id="toright"
+                                onclick={scrollTo}>
+                            </button>
+                        </div>
+                    </template>
+                    <!--Menu de opciones-->
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large slds-align_absolute-center">
+                        <div class="options-perfil-manager">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_1-of-1 slds-m-top_large" data-id="datos-personales" 
+                                    style="cursor: pointer;" onclick={goToSubseccion}>
+                                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="pointer-events: none;">
+                                        <div class="slds-col slds-size_3-of-12 slds-align_absolute-center">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Datos_Personales.png"
+                                                class="img-items-options-perfil" style="width: 14px;">
+                                        </div>
+                                        <div class="slds-col slds-size_6-of-12">
+                                            <span class="items-options-perfil">Datos personales</span>
+                                        </div>
+                                        <div class="slds-col slds-size_3-of-12 slds-text-align_center">
+                                            <lightning-icon
+                                                class="icon-items-options-perfil"
+                                                icon-name="utility:chevronright"
+                                                size="small"
+                                                alternative-text="Go">
+                                            </lightning-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-m-top_large slds-align_absolute-center">
+                                    <div class="hr-line"></div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large" data-id="datos-tratamiento" onclick={goToSubseccion}>
+                                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="pointer-events: none;">
+                                        <div class="slds-col slds-size_3-of-12 slds-align_absolute-center">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/folder_shared.png"
+                                                class="img-items-options-perfil" style="width: 14px;">
+                                        </div>
+                                        <div class="slds-col slds-size_6-of-12">
+                                            <span class="items-options-perfil">Tu tratamiento</span>
+                                        </div>
+                                        <div class="slds-col slds-size_3-of-12 slds-text-align_center">
+                                            <lightning-icon
+                                                class="icon-items-options-perfil"
+                                                icon-name="utility:chevronright"
+                                                size="small"
+                                                alternative-text="Go">
+                                            </lightning-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-m-top_large slds-align_absolute-center">
+                                    <div class="hr-line"></div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-m-top_large" data-id="datos-direccion" onclick={goToSubseccion}>
+                                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="pointer-events: none;">
+                                        <div class="slds-col slds-size_3-of-12 slds-align_absolute-center">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Direccion_Entrega.png"
+                                                class="img-items-options-perfil" style="width: 17px;">
+                                        </div>
+                                        <div class="slds-col slds-size_6-of-12">
+                                            <span class="items-options-perfil">Dirección de entrega</span>
+                                        </div>
+                                        <div class="slds-col slds-size_3-of-12 slds-text-align_center">
+                                            <lightning-icon
+                                                class="icon-items-options-perfil" 
+                                                icon-name="utility:chevronright"
+                                                size="small"
+                                                alternative-text="Go">
+                                            </lightning-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-m-top_large slds-align_absolute-center">
+                                    <div class="hr-line"></div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-m-top_large" data-id="datos-contacto" onclick={goToSubseccion}>
+                                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="pointer-events: none;">
+                                        <div class="slds-col slds-size_3-of-12 slds-align_absolute-center">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/call.png"
+                                                class="img-items-options-perfil" style="width: 17px;">
+                                        </div>
+                                        <div class="slds-col slds-size_6-of-12">
+                                            <span class="items-options-perfil">Personas de contacto</span>
+                                        </div>
+                                        <div class="slds-col slds-size_3-of-12 slds-text-align_center">
+                                            <lightning-icon
+                                                class="icon-items-options-perfil" 
+                                                icon-name="utility:chevronright"
+                                                size="small"
+                                                alternative-text="Go">
+                                            </lightning-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-m-top_large slds-align_absolute-center">
+                                    <div class="hr-line"></div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large slds-m-bottom_x-large" onclick={logout}>
+                                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="pointer-events: none;">
+                                        <div class="slds-col slds-size_3-of-12 slds-align_absolute-center">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/exit_to_app.png"
+                                                class="img-items-options-perfil" style="width: 25px;">
+                                        </div>
+                                        <div class="slds-col slds-size_6-of-12">
+                                            <span class="items-options-perfil">Cerrar sesión</span>
+                                        </div>
+                                        <div class="slds-col slds-size_3-of-12 slds-text-align_center">
+                                            <lightning-icon
+                                                class="icon-items-options-perfil" 
+                                                icon-name="utility:chevronright"
+                                                size="small"
+                                                alternative-text="Go">
+                                            </lightning-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <!--Form datos personales-->
+            <template if:true={showFormDatosPersonales}>
+                <c-form-perfil-datos-personales
+                    paciente={paciente}
+                    nombre-paciente={nombrePaciente}
+                    oncloseform={gotToHome}>
+                </c-form-perfil-datos-personales>
+            </template>
+            <!--Direccion de entrega-->
+            <template if:true={showFormDireccion}>
+                <c-form-perfil-direcciones
+                    paciente={paciente}
+                    oncloseform={gotToHome}>
+                </c-form-perfil-direcciones>
+            </template>
+            <!--Datos de tratamiento-->
+            <template if:true={showFormTratamiento}>
+                <c-form-perfil-tratamiento
+                    paciente={paciente}
+                    oncloseform={gotToHome}>
+                </c-form-perfil-tratamiento>
+            </template>
+            <!--Personas de contacto-->
+            <template if:true={showFormContactos}>
+                <c-form-perfil-contactos
+                    paciente={paciente}
+                    oncloseform={gotToHome}>
+                </c-form-perfil-contactos>
+            </template>
+            <!--Aviso no cobertura-->
+            <template if:true={showAvisoCoberturaOS}>
+                <c-form-perfil-aviso-cobertura
+                    paciente={paciente}
+                    oncloseform={gotToHome}>
+                </c-form-perfil-aviso-cobertura>
+            </template>
+        </div>
+    </div>
+    <div style="width: 100%;" class="desktop-perfil">
+        <div class="slds-align_absolute-center body-perfil">
+            <div class="slds-grid slds-wrap grid-body-perfil">
+                <div class="slds-col slds-size_3-of-12" style="height: 100%;">
+                    <div class="div-perfil-manager slds-align_absolute-center">
+                        <div>
+                            <div class="slds-align_absolute-center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/User_Perfil.png"
+                                    style="width: 124.24px; cursor: pointer;" data-id="principal" onclick={showForm}>
+                            </div>
+                            <div class="slds-align_absolute-center">
+                                <template if:true={paciente}>
+                                    <div class="div-info-paciente slds-m-top_large">
+                                        <p class="name-text">{paciente.FirstName} {paciente.LastName}</p>
+                                        <p class="card-item-text"><span class="card-item-title">DNI: </span>
+                                            <lightning-formatted-number 
+                                                value={paciente.DNI__c}>
+                                            </lightning-formatted-number>
+                                        </p>
+                                        <p class="card-item-text"><span class="card-item-title">Fecha Nacimiento: </span>
+                                            <lightning-formatted-date-time
+                                                value={paciente.PersonBirthdate}
+                                                year="numeric"
+                                                month="numeric"
+                                                day="numeric">
+                                            </lightning-formatted-date-time>
+                                        </p>
+                                        <p class="card-item-text"><span class="card-item-title">Teléfono: </span>
+                                            {paciente.Phone}
+                                        </p>
+                                    </div>
+                                </template>
+                            </div>
+                            <div class="slds-align_absolute-center">
+                                <div class="slds-grid slds-wrap container-items-options-perfil">
+                                    <div class="slds-col slds-size_3-of-12 slds-m-top_medium slds-align_absolute-center" data-id="datos-personales"
+                                        style="cursor: pointer;" onclick={showForm}>
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Datos_Personales.png"
+                                            class="img-items-options-perfil" style="width: 14px; pointer-events: none;">
+                                    </div>
+                                    <div class="slds-col slds-size_9-of-12 slds-m-top_medium" data-id="datos-personales" 
+                                        style="cursor: pointer;" onclick={showForm}>
+                                        <span class="items-options-perfil" style="pointer-events: none;">Datos personales</span>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium slds-align_absolute-center">
+                                        <div class="hr-line"></div>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12 slds-m-top_medium slds-align_absolute-center" data-id="datos-tratamiento"
+                                        style="cursor: pointer;" onclick={showForm}>
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/folder_shared.png"
+                                            class="img-items-options-perfil" style="width: 14px; pointer-events: none;">
+                                    </div>
+                                    <div class="slds-col slds-size_9-of-12 slds-m-top_medium" data-id="datos-tratamiento" 
+                                        style="cursor: pointer;" onclick={showForm}>
+                                        <span class="items-options-perfil" style="pointer-events: none;">Tu tratamiento</span>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium slds-align_absolute-center">
+                                        <div class="hr-line"></div>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12 slds-m-top_medium slds-align_absolute-center" data-id="datos-direccion" 
+                                        style="cursor: pointer;" onclick={showForm}>
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Direccion_Entrega.png"
+                                            class="img-items-options-perfil" style="width: 17px; pointer-events: none;">
+                                    </div>
+                                    <div class="slds-col slds-size_9-of-12 slds-m-top_medium" data-id="datos-direccion" 
+                                        style="cursor: pointer;" onclick={showForm}>
+                                        <span class="items-options-perfil" style="pointer-events: none;">Dirección de entrega</span>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium slds-align_absolute-center">
+                                        <div class="hr-line"></div>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12 slds-m-top_medium slds-align_absolute-center" data-id="datos-contacto"
+                                        style="cursor: pointer;" onclick={showForm}>
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/call.png"
+                                            class="img-items-options-perfil" style="width: 14px; pointer-events: none;">
+                                    </div>
+                                    <div class="slds-col slds-size_9-of-12 slds-m-top_medium" data-id="datos-contacto" 
+                                        style="cursor: pointer;" onclick={showForm}>
+                                        <span class="items-options-perfil" style="pointer-events: none;">Personas de contacto</span>
+                                    </div>
+                                    <!--
+                                    <template if:true={envio}>
+                                        <div class="slds-col slds-size_1-of-1 slds-m-top_medium slds-align_absolute-center">
+                                            <div class="hr-line"></div>
+                                        </div>
+                                        <div class="slds-col slds-size_3-of-12 slds-m-top_medium slds-align_absolute-center" data-id="datos-pedido" 
+                                            style="cursor: pointer;" onclick={showForm}>
+                                            <img src={iconEnvio}
+                                                class="img-items-options-perfil" style="width: 22px; pointer-events: none;">
+                                        </div>
+                                        <div class="slds-col slds-size_9-of-12 slds-m-top_medium" data-id="datos-pedido" 
+                                            style="cursor: pointer;" onclick={showForm}>
+                                            <span class="items-options-perfil" style="pointer-events: none;">Seguimiento de Pedido</span>
+                                        </div>
+                                    </template>
+                                    -->
+                                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium slds-align_absolute-center">
+                                        <div class="hr-line"></div>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12 slds-m-top_medium slds-align_absolute-center"
+                                        style="cursor: pointer;" onclick={logout}>
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/exit_to_app.png"
+                                            class="img-items-options-perfil" style="width: 22px; pointer-events: none;">
+                                    </div>
+                                    <div class="slds-col slds-size_9-of-12 slds-m-top_medium"
+                                        style="cursor: pointer;" onclick={logout}>
+                                        <span class="items-options-perfil" style="pointer-events: none;">Cerrar sesión</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_9-of-12" style="height: 100%; position: relative;">
+                    <!--Form datos personales-->
+                    <template if:true={showManager}>
+                        <div class="slds-align_absolute-center" style="height: 100%;">
+                            <div>
+                                <template if:true={paciente}>
+                                    <p class="paciente-name-text slds-m-left_small">
+                                        Hola {paciente.FirstName},
+                                    </p>
+                                </template>
+                                <template if:true={envio}>
+                                    <div class="card-envio slds-grid slds-wrap slds-grid_vertical-align-center slds-m-top_x-large">
+                                        <div class="slds-col slds-size_3-of-12 slds-align_absolute-center"
+                                            style="background: linear-gradient(#C09AC2, #313183); height:100%; border-radius: 8px 0px 0px 8px;">
+                                            <lightning-icon 
+                                                icon-name="utility:transport_heavy_truck" 
+                                                alternative-text="Transport!"
+                                                variant="inverse"
+                                                size="small"
+                                                title="Transport">
+                                            </lightning-icon>
+                                        </div>
+                                        <div class="slds-col slds-size_9-of-12">
+                                            <div class="slds-p-around_small">
+                                                <p class="pedido-title">Pedido N° {envio.NIC__c}</p>
+                                                <p class="pedido-text slds-p-top_x-small" style="font-family: BariolRegular; text-transform: capitalize;">Dirección: {envio.direccion}</p>
+                                                <p class="pedido-text slds-p-top_x-small"><a href={envio.Link_Seguimiento_completo__c} class="pedido-link" target="_blank">Seguí tu pedido acá</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                                <template if:true={paciente}>
+                                    <div class="card-envio slds-grid slds-wrap slds-grid_vertical-align-center slds-m-top_x-large">
+                                        <div class="slds-col slds-size_1-of-1 slds-text-align_center">
+                                            <div class="slds-p-around_small">
+                                                <p class="card-item-text">
+                                                    ¿Necesitás soporte con el trámite de tu cobertura médica?
+                                                </p>
+                                                <button 
+                                                    class="slds-m-top_small os-gestion-button"
+                                                    data-id="aviso-cobertura"
+                                                    onclick={goToSubseccion}>
+                                                    Iniciar Gestión
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                    <!--Form datos personales-->
+                    <template if:true={showFormDatosPersonales}>
+                        <img 
+                            src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/home.png"
+                            style="position: absolute; top: 2%; right: 10%; cursor: pointer;"
+                            data-id="principal"
+                            onclick={showForm}>
+                        <c-form-perfil-datos-personales
+                            paciente={paciente}
+                            nombre-paciente={nombrePaciente}
+                            oncloseform={gotToHome}>
+                        </c-form-perfil-datos-personales>
+                    </template>
+                    <!--Datos de tratamiento-->
+                    <template if:true={showFormTratamiento}>
+                        <img 
+                            src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/home.png"
+                            style="position: absolute; top: 2%; right: 10%; cursor: pointer;"
+                            data-id="principal"
+                            onclick={showForm}>
+                        <c-form-perfil-tratamiento
+                            paciente={paciente}
+                            oncloseform={gotToHome}>
+                        </c-form-perfil-tratamiento>
+                    </template>
+                    <!--Direccion de entrega-->
+                    <template if:true={showFormDireccion}>
+                        <img 
+                            src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/home.png"
+                            style="position: absolute; top: 2%; right: 10%; cursor: pointer;"
+                            data-id="principal"
+                            onclick={showForm}>
+                        <c-form-perfil-direcciones
+                            paciente={paciente}
+                            oncloseform={gotToHome}>
+                        </c-form-perfil-direcciones>
+                    </template>
+                    <!--Personas de contacto-->
+                    <template if:true={showFormContactos}>
+                        <img 
+                            src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/home.png"
+                            style="position: absolute; top: 2%; right: 10%; cursor: pointer;"
+                            data-id="principal"
+                            onclick={showForm}>
+                        <c-form-perfil-contactos
+                            paciente={paciente}
+                            oncloseform={gotToHome}>
+                        </c-form-perfil-contactos>
+                    </template>                
+                    <!--Pedidos-->
+                    <template if:true={showFormPedido}>
+                        <img 
+                            src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/home.png"
+                            style="position: absolute; top: 2%; right: 15%; cursor: pointer;"
+                            data-id="principal"
+                            onclick={showForm}>
+                        <c-form-perfil-pedidos
+                            envio={envio}>
+                        </c-form-perfil-pedidos>
+                    </template>
+                    <!--Aviso no cobertura-->
+                    <template if:true={showAvisoCoberturaOS}>
+                        <c-form-perfil-aviso-cobertura
+                            paciente={paciente}
+                            oncloseform={gotToHome}>
+                        </c-form-perfil-aviso-cobertura>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

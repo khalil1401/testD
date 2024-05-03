@@ -1,0 +1,17 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="title" type="String" default=""/>
+    <aura:attribute name="text" type="String" default=""/>
+
+    <div>
+        <aura:if isTrue="{!v.title != ''}">
+            <div class="div-title-ddc">
+                <aura:unescapedHtml value="{!v.title}"/>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!v.text != ''}">
+            <aura:unescapedHtml value="{!v.text}"/>
+        </aura:if>
+    </div>
+
+</aura:component>

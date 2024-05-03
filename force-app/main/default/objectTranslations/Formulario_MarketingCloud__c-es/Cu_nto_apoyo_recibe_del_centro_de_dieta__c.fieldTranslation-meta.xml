@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Cu_nto_apoyo_recibe_del_centro_de_dieta__c</name>
+    <picklistValues>
+        <masterLabel>No recibe apoyo y lo necesita</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No recibe apoyo y no le interesa</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recibe apoyo pero no le sirve</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recibe mucho apoyo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

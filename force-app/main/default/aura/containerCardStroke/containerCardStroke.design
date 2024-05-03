@@ -1,0 +1,15 @@
+<design:component >
+
+    <design:attribute name="izquierda" label="Ubicación de componente a la izquierda"/>
+    <design:attribute name="derecha" label="Ubicación de componente a la derecha"/>
+    <design:attribute name="height" label="Altura de componente en px"/>
+    <design:attribute name="heightMobile" label="Altura de componente en px Mobile"/>
+    <design:attribute name="recursoEstatico" label="URL de la imagen de fondo"/>
+    <design:attribute name="recursoEstaticoBoton" label="URL de la imagen del boton"/>
+    <design:attribute name="recursoEstaticoCard" label="URL de la imagen de la card"/>
+    <design:attribute name="primerTitulo" label="Titulo (Primnera parte) de card"/>
+    <design:attribute name="segundoTitulo" label="Titulo (Segunda parte) de card"/>
+    <design:attribute name="textoBajada" label="Texto de bajada de card"/>
+    <design:attribute name="apiName" label="apiName de página a redireccionar"/>
+
+</design:component>

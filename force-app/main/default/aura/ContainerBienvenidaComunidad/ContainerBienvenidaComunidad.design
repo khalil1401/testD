@@ -1,0 +1,8 @@
+<design:component >
+
+    <design:attribute name="tituloHeader" label="Texto de título de header de Bienvenida"/>
+    <design:attribute name="mensaje" label="Texto de mensaje de Bienvenida"/>
+    <design:attribute name="tituloFooter" label="Texto de título de footer de Bienvenida"/>
+    <design:attribute name="backgorundColor" label="Color de background de container de bienvenida"/>
+
+</design:component>

@@ -1,0 +1,394 @@
+<template>
+    <div class="div-p-articles-meta">
+        <div class="slds-grid slds-wrap">
+            <template for:each={articles} for:item="articulo">            
+                <div class="slds-col slds-medium-size_3-of-12 slds-size_1-of-1" key={articulo.id}>
+                    <div class="slds-m-around_x-small">
+                        <c-card-articulo-metabolicos
+                            articulo-id={articulo.id}
+                            title={articulo.title}
+                            text={articulo.text}
+                            img={articulo.img}
+                            onclickarticulo={handleClickArticulo}>
+                        </c-card-articulo-metabolicos>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+    <div data-id="description-article-meta" class="div-description-article-meta div-p-articles-meta slds-m-top_xx-large slds-p-top_xx-large slds-p-bottom_x-large">
+        <div data-id="0">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop"  style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12 slds-size_1-of-1">
+                    <p class="title-description-text-article-meta slds-m-bottom_x-large">Adherencia al tratamiento</p>
+                    <br>
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_3/PP-Metab%C3%B3licos%20-Arti_Adherencia%20al%20tratamiento%20grande.png"
+                        class="img-description-text-article-meta"/>
+                    <p class="subtitle-description-text-article-meta">¿Qué es la adherencia al tratamiento?</p>
+                    <br><p class="description-text-article-meta">Cada vez que consultamos a un profesional de la salud éste nos guía con los distintos pasos que debemos seguir (tratamientos, terapias, estudios); con el objetivo de mejorar nuestro bienestar y estado general de salud.</p>
+                    <br><p class="description-text-article-meta">La adherencia al tratamiento es la medida en que el comportamiento de una persona es consistente con las recomendaciones de los profesionales de la salud, es decir, cuánto cumplimos o no, con estas recomendaciones.</p>
+                    <br><p class="description-text-article-meta">Pero esto no tiene que ver con la voluntad de la persona, sino que hay muchos factores psicológicos implicados. Uno muy importante es la percepción de empoderamiento ¿en qué medida me siento capaz de hacer algo con lo que me sucede, de tomar decisiones, de evaluar beneficios y barreras en mi tratamiento?, ¿cuán grave siento que es mi condición, en qué medida me percibo en riesgo si dejo el tratamiento?</p>
+                    <br><p class="description-text-article-meta">El empoderamiento hace referencia a las estrategias de autocuidado que tiene el paciente para mejorar su estado de salud y su calidad de vida.</p>
+                    <br><p class="subtitle-description-text-article-meta slds-m-top_x-large">¿Quiénes son los responsables de que quien recibe un diagnóstico tenga una buena adherencia al tratamiento?</p>
+                    <br><p class="description-text-article-meta">Un diagnóstico no impacta sólo en quien lo recibe, sino también en todo su entorno socio familiar (madre, padre, hermanos, abuelos, pareja, amigos, compañeros de escuela/trabajo). Algunos de estos miembros se convierten en los cuidadores principales (informales, ya que no es un trabajo rentado); y pueden sentir lo que se conoce como el síndrome de sobrecarga del cuidador, caracterizado por agotamiento emocional, cansancio y estrés.</p>
+                    <br><p class="description-text-article-meta">Debido a esto, siempre debemos tener presente el “cuidar al que cuida”, es decir, cuidar también del cuidador. Es similar a cuando subimos a un avión y nos dicen que, en caso de una emergencia, si viajamos con niños, primero tenemos que ponernos la máscara de oxígeno nosotros. Sabemos que instintivamente primero querríamos ponerle la máscara al niño, pero nos explican que, para poder asistir al otro, primero tenemos que estar bien nosotros.</p>
+                    <br><p class="description-text-article-meta">Sabemos que es mejor “ocuparnos” del tratamiento en lugar de “preocuparnos”, pero esto no siempre es fácil. A veces el cuidar al otro se convierte en sobreprotección. Es importante hablar, preguntar cómo se siente con el tratamiento, validar sus emociones. Entender que raramente una respuesta nuestra mejora las cosas, sino que lo que las mejora es la conexión, el sentir con el otro, demostrándole que no está solo.</p>
+                    <br><p class="subtitle-description-text-article-meta slds-m-top_x-large">¿Por qué es tan importante la adherencia al tratamiento?</p>
+                    <br><p class="description-text-article-meta">Porque muchas condiciones de salud no tienen aún una cura, por lo tanto, lo que mejora el pronóstico y la calidad de vida es el logro de una buena adherencia al tratamiento.</p>
+                    <br><p class="subtitle-description-text-article-meta slds-m-top_x-large">¿Qué estrategias nos ayudan para empoderarnos en nuestro tratamiento?</p>
+                    <br><p class="description-text-article-meta">Es muy importante tener en claro nuestra meta y poder dividirla en pequeños objetivos, como si fueran pequeños escalones para llegar a esa meta.</p>
+                    <br><p class="description-text-article-meta">Es necesario además identificar barreras <span style="font-family: MontserratSemiBold;">(sentimientos de miedo, cansancio, enojo)</span> y beneficios del tratamiento (medir cambios y mejorías).</p>
+                    <br><p class="description-text-article-meta">También es importante poder comunicar al equipo tratante las dudas, los miedos o preocupaciones sobre nuestro tratamiento, generando un espacio de seguridad para poder compartir estas inquietudes.</p>
+                    <br><p class="description-text-article-meta">Siempre recomendamos poder pedir ayuda, el acompañamiento psicológico nos permite encontrar estrategias para afrontar mejor nuestro tratamiento.</p>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop"  style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+            <br><p class="text-fuentes-cam-meta slds-m-top_x-large">
+                Fuente:
+                <br>
+                - FUPAEH
+                <br>
+                - Horwitz, R. I., & Horwitz, S. M. (1993). Adherence to treatment and health outcomes. Archives of internal medicine, 153(16), 1863-1868.
+                <br>
+                - Vermeire, E., Hearnshaw, H., Van Royen, P., & Denekens, J. (2001). Patient adherence to treatment: three decades of research. A comprehensive review. Journal of clinical pharmacyand therapeutics, 26(5), 331-342.
+                <br>
+                - Zolnierek, K. B. H., & DiMatteo, M. R. (2009). Physician communication and patient adherence to treatment: a meta-analysis. Medical care, 47(8), 826.
+                <br>
+                - Ford et al., MacDonald, 2018
+                <br>
+                - McAllister, Dunn, Payne, Davies & Todd, 2012; McAllister, Wood, Dunn, Shiloh & Todd, 2011
+            </p>
+        </div>
+        <div data-id="1" style="display: none;">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop"  style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12">
+                    <p class="title-description-text-article-meta slds-m-bottom_x-large">Adolescencia y autocuidado</p>
+                    <br>
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_3/PP-Metab%C3%B3licos%20-Arti_Adolescencia%20y%20autocuidado%20grande.png"
+                        class="img-description-text-article-meta"/>
+                    <p class="subtitle-description-text-article-meta">¿Cuándo es el mejor momento para trasladar el cuidado a nuestros hijos e hijas?</p>
+                    <br><p class="description-text-article-meta">Desde el momento en el que diagnostican una metabolopatía a un hijo o hija, es muy frecuente que los padres y las madres tomen las riendas del tratamiento, pero llega un momento en el que debemos trasladar de forma paulatina el cuidado a ellos mismos, porque serán los verdaderos responsables de su vida. Es importante que adquieran habilidades de autocuidado desde que son chicos ya que se trata de un aprendizaje continuo, y esto los irá preparando para desarrollar autonomía y ser más independientes a la hora de llevar adelante su propio tratamiento de manera exitosa. Pero esto no tiene que ver con la voluntad de la persona,</p>
+                    <br><p class="description-text-article-meta">Y si bien sabemos que cuesta, hay que ayudarlos a empoderase a través de instrucción, herramientas y conocimiento, para que puedan vivir con una mejor calidad de vida, siempre en conjunto con el equipo médico y el acompañamiento de toda su red de apoyo y contención.</p>
+                    <br><p class="description-text-article-meta">Ahora bien, si tuviéramos que elegir un momento en la vida de estas personas, ¿cuál sería?</p>
+                    <br><p class="description-text-article-meta">Muchos profesionales, aconsejan empezar a los 11 o 12 años porque es el momento ideal en que los chicos y las chicas son más receptivos a escucharnos ya que aún no llegaron a la adolescencia, la etapa de mayores cuestionamientos.</p>
+                    <div class="slds-grid slds-wrap slds-m-top_large slds-m-bottom_large slds-p-around_medium" style="border: #947DD5 1px solid;">
+                        <div class="slds-col slds-medium-size_7-of-12 slds-size_1-of-1">
+                            <p class="subtitle-description-text-article-meta">Tips para empezar:</p>
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_1-of-12">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                        class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-article-meta"><span style="font-family: MontserratSemiBold;">Sustituto proteico.</span> Enseñarles cómo prepararlo, en qué horarios es conveniente tomarlo, porqué conviene distribuir las tomas, qué efectos tendrán en nuestro organismo.</p>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                        class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-article-meta"><span style="font-family: MontserratSemiBold;">Comidas.</span> Qué pueden comer de manera libre y qué no.</p>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                        class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-article-meta"><span style="font-family: MontserratSemiBold;">Alimentos envasados.</span> Enseñarles a leer las etiquetas de los alimentos.</p>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                        class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-article-meta"><span style="font-family: MontserratSemiBold;">Registro.</span> Enseñarles a tomar registro de lo que comen diariamente para que cuando vayan al control médico puedan ser ellos mismos quienes se lo cuenten a su médica/o.</p>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                        class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-article-meta"><span style="font-family: MontserratSemiBold;">Menús.</span> Hacer sus propios menús de acuerdo con sus gustos, pero también prestando atención a los valores de cada comida para cubrir las recomendaciones nutricionales de aminoácidos y que no falte algún nutriente fundamental para el buen desarrollo. Compras. Hacer las compras juntos y luego cocinar en familia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-medium-size_5-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos-Art2_Adolescencia-y-Autocuidados.png">
+                        </div>
+                    </div>
+                    <br><p class="subtitle-description-text-article-meta">¿Por qué es importante ir delegando y no sobre protegerlos?</p>
+                    <br><p class="description-text-article-meta">Porque llegarán más seguros y con menos angustias a la adolescencia, y sin duda su adherencia al tratamiento seguirá siendo fuerte. Consultá con el equipo médico cuáles pueden ser los primeros pasos que pueden implementar en su autocuidado y animate a llevarlo adelante con paciencia y esfuerzo.</p>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+            <br><p class="text-fuentes-cam-meta slds-m-top_x-large">
+                Fuente:
+                <br>
+                – Siddiq, S., Wilson, B. J., Graham, I. D., Lamoureux, M., Khangura, S. D., Tingley, K., ... & Potter, B. K. (2016). Experiences of caregivers of children with inherited metabolic diseases: a qualitative study. Orphanet journal of rare diseases, 11(1), 1-10.
+                <br>
+                – Khangura, S. D., Tingley, K., Chakraborty, P., Coyle, D., Kronick, J. B., Laberge, A. M., ... & Canadian Inherited Metabolic Diseases Research Network (CIMDRN. (2016).
+                <br>
+                – Child and family experiences with inborn errors of metabolism: a qualitative interview study with representatives of patient groups. Journal of inherited metabolic disease, 39(1), 139-147.
+                <br>
+                – McAllister, Dunn, Payne, Davies & Todd, 2012; McAllister, Wood, Dunn, Shiloh & Todd, 2011
+                <br>
+                – Biesecker, 2010; Dinc & Terzioglu, 2006; Kessler, Kessler, Ward & Opitz, 1984; McAllister et al., 2008
+                <br>
+                – MacDonald, A., Van Wegberg, A. M. J., Ahring, K., Beblo, S., Bélanger-Quintana, A., Burlina, A., ... & Van Spronsen, F. J. (2020). PKU dietary handbook to accompany PKU guidelines. Orphanet journal of rare diseases, 15(1), 1-21.
+            </p>
+        </div>
+        <div data-id="2" style="display: none;">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12">
+                    <p class="title-description-text-article-meta slds-m-bottom_x-large">Cuidando en equipo: cómo delegar tareas de cuidado</p>
+                    <br>
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_3/PP-Metab%C3%B3licos%20-Art-Cuidando%20en%20equipo%20grande.png"
+                        class="img-description-text-article-meta"/>
+                    <br><p class="description-text-article-meta">Desde el momento en el cual el bebé es diagnosticado con alguna metabolopatía congénita luego de la pesquisa neonatal, sus padres, además de haberse convertido en papás, asumen el rol de cuidadores de su salud, llevando adelante un tratamiento para mejorar su calidad de vida.</p>
+                    <br><p class="description-text-article-meta">Con el resultado del diagnóstico surgen un montón de miedos, dudas e inseguridades frente a lo desconocido, pero lo importante es confiar en el equipo médico tratante quien les brindará herramientas para hacer el tratamiento de la mejor manera posible.</p>
+                    <br><p class="description-text-article-meta">El desafío de la/las personas que cuidan a una persona con un ECM con alteración del metabolismo de los aminoácidos como lo es la fenilcetonuria o PKU, está en aprender los conceptos básicos de una dieta saludable baja en proteínas para lograr una alimentación adecuada para su hijo. Creemos que uno de los mayores desafíos del cuidador es trabajar en equipo con el/la niño/a en cada una de las diferentes etapas hasta que este logre la autonomía total en su tratamiento.</p>
+                    <br><p class="description-text-article-meta">Es muy frecuente, especialmente en los primeros años de vida de la persona, que el cuidador pueda verse sobrepasado en su día a día. Por eso, trabajar en equipo y que el cuidador no sea uno solo son la clave de una buena dinámica familiar. Es importante que toda persona que cuida siempre recuerde que, para cuidar a otros, debe cuidarse y ocuparse de sí mismo.</p>
+                    <br><p class="description-text-article-meta">Por lo general el cuidador principal suele ser la madre, pero es importante involucrar a los familiares más cercanos con los cuales se conformará una red de contención y delegación de responsabilidades para que el niño pueda tener su correcto tratamiento.</p>
+                    <br><p class="description-text-article-meta">Dentro de las tareas de la persona que cuida, no solo existe la responsabilidad de cuidar la alimentación, sino también de organizar los turnos médicos, controles, trámites, entre otros.</p>
+                    <br><p class="description-text-article-meta">Es importante que quienes conformen este equipo manejen la misma información porque en caso de tener que relevar al cuidador principal podrán hacerlo sin inconvenientes.</p>
+                    <br><p class="description-text-article-meta">Lo que seguramente cambie sea el porcentaje total de tareas asignadas a cada integrante del equipo, ya que cada uno tiene también otras actividades de su vida personal y está bien que así sea.</p>
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-top_large slds-p-around_medium" style="border: #947DD5 1px solid;">
+                        <div class="slds-col slds-medium-size_7-of-12 slds-size_1-of-1">
+                            <p class="subtitle-description-text-article-meta">Autorevisión:</p>
+                            <br><p class="description-text-article-meta">Te invitamos a revisar si como cuidador estás trabajando en equipo o no. En caso de que lo estés haciendo, nunca está demás una autorevisión para evaluar si se puede modificar o realizar un ajuste que podría aliviar las responsabilidades.</p>
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_1-of-12">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                        class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-article-meta">Escribí una lista de todas las tareas que haces día a día como cuidador, hasta la que te parezca más pequeña o que lleva menos tiempo. Sé honesta/o y enlistá todo.</p>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                        class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-article-meta">¿Quién está a cargo de ciertas tareas hoy en día?</p>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                        class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-article-meta">¿Quiénes podrían estar a cargo de algunas tareas?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-medium-size_5-of-12 slds-size_1-of-1 slds-align_absolute-center slds-m-top_medium">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos-Art3_Autoevaluaci%C3%B3n.png" 
+                                style="width: 90%;">
+                        </div>
+                        <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+                            <br><p class="subtitle-description-text-article-meta">Ventajas de trabajar en equipo:</p>
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                    class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-article-meta"><span style="font-family: MontserratSemiBold;">Bienestar mental y emocional,</span> lo cual nos aleja del síndrome del cuidador agotado. Este es el estado de agotamiento físico y mental que pueden sufrir las personas que cuidan a alguien, de forma continua y durante largos plazos.</p>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                        class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-article-meta"><span style="font-family: MontserratSemiBold;">Confiar en que los otros también pueden hacer la tarea con la cual se comprometieron.</span></p>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                        class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-article-meta"><span style="font-family: MontserratSemiBold;">Aprender/Desaprender:</span> ver cómo otros pueden hacer la misma tarea, tal vez de una manera diferente, respetando ciertas reglas, pero llegando al mismo resultado.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><p class="description-text-article-meta">Ante cualquier duda consultar con el equipo tratante.</p>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+            <br><p class="text-fuentes-cam-meta slds-m-top_x-large">
+                Fuente:
+                <br>
+                – FUPAEH
+                <br>
+                – Siddiq, S., Wilson, B. J., Graham, I. D., Lamoureux, M., Khangura, S. D., Tingley, K., … Potter, B. K. (2016). Experiences of caregivers of children with inherited metabolic diseases: a qualitative study. Orphanet Journal of Rare Diseases, 11(1), 1–10. https://doi.org/10.1186/s13023-016-0548-2
+                <br>
+                – https://www.cdc.gov/aging/publications/features/supporting-caregivers.htm
+            </p>
+        </div>
+        <div data-id="3" style="display: none;">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12">
+                    <p class="title-description-text-article-meta slds-m-bottom_x-large">Pesquisa neonatal</p>
+                    <br>
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_3/PP-Metab%C3%B3licos%20-Art_PesquisaNeonatal%20grande.png"
+                        class="img-description-text-article-meta"/>
+                    <br><p class="description-text-article-meta">Entre <span style="font-family: MontserratSemiBold;">500 y 700 niños y niñas nacen por año en Argentina con alguna de las enfermedades que están contempladas en el Programa Nacional de Pesquisa Neonatal.</span> Detectadas a tiempo y con el inicio oportuno del tratamiento que necesiten, se puede prevenir el desarrollo de daño neurológico, motriz o metabólico y pueden llevar una vida con buen pronóstico.</p>
+                    <br><p class="description-text-article-meta">Todos los recién nacidos tienen el derecho a que se les realice la ‘pesquisa neonatal’, un estudio sencillo para detectar enfermedades graves, pero que requiere de una serie de acciones coordinadas y de seguimiento y del compromiso de un conjunto de actores involucrados en el proceso.</p>
+                    <br><p class="description-text-article-meta">Más conocida como ‘la gotita de sangre del talón del bebé’, la pesquisa es un análisis obligatorio estipulado por una ley nacional <span style="font-family: MontserratSemiBold;">(la N° 26.279 del año 2007)</span> que debe ser realizado en los recién nacidos no antes de las 36 horas de vida y no más allá de los 7 días desde el nacimiento. Tiene por objetivo la detección de una serie de enfermedades congénitas inaparentes a la clínica al momento del nacimiento, pero que detectadas a tiempo permiten establecer tratamientos favorables.</p>
+                    <br><p class="description-text-article-meta">La pesquisa es un proceso y para que tenga éxito deben estar comprometidos e involucrados en su realización diferentes actores. En primer lugar, la maternidad donde ocurre el nacimiento ya que es fundamental que se incorpore este análisis en los esquemas de rutina y se constate su implementación. En segundo lugar, los padres, reclamando su realización, al igual que los médicos obstetras y neonatólogos que participaron del nacimiento; luego, el laboratorio del Programa de Pesquisa realiza el análisis y tiene a su cargo la confirmación del diagnóstico y la derivación al centro especializado de referencia para el tratamiento de esa enfermedad. Finalmente, juega un rol importantísimo el o la pediatra que es quien debe chequear que se haya cumplido todo el proceso solicitando en la primera consulta (generalmente a los 15 días de vida) el resultado de la pesquisa realizada.</p>
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-medium-size_5-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos-Art4_BebeFeliz.png">
+                        </div>
+                        <div class="slds-col slds-medium-size_7-of-12 slds-size_1-of-1">
+                            <br><p class="description-text-article-meta">Detectar cualquiera de estas enfermedades poco frecuentes mediante la pesquisa neonatal permite actuar rápidamente y evitar el desarrollo de patologías que provocan daños irreversibles, como discapacidades mentales o físicas severas, comprometiendo la vida del niño o la niña y la calidad de vida de todo su entorno familiar.</p>
+                            <br><p class="description-text-article-meta">La cantidad de enfermedades pesquisadas no es uniforme en todo el territorio nacional; la ley contempla -y la mayoría de los programas las incluyen- a 6 enfermedades poco frecuentes: hipotiroidismo congénito, fenilcetonuria, fibrosis quística, galactosemia, hiperplasia suprarrenal congénita y deficiencia de biotinidasa.</p>
+                        </div>
+                    </div>
+                    <br><p class="description-text-article-meta">Algunos programas como el de la Ciudad Autónoma de Buenos Aires, incluyen además la denominada ‘defecto de ácidos grasos de cadena media y la leucinosis, también llamada ‘enfermedad de la orina con olor a jarabe de arce’ cuya detección también está contemplada en el programa la Provincia de Buenos Aires. No obstante, la ley nacional es abierta y permite en el futuro la incorporación de cualquier otra enfermedad que resulte fácilmente pesquisable y para la que haya tratamiento disponible.</p>
+                    <br><p class="description-text-article-meta">Actualmente existe la posibilidad de realizar la pesquisa neonatal ampliada en Argentina, un programa de salud orientado a la búsqueda de otras patologías en recién nacidos. El mismo abarca 25 enfermedades, incluyendo las de detección obligatoria.</p>
+                    <br><p class="description-text-article-meta">Si se realiza un diagnóstico temprano con la pesquisa neonatal ampliada, se puede implementar un tratamiento adecuado y evitar secuelas graves.</p>                    
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+            <br><p class="text-fuentes-cam-meta slds-m-top_x-large">
+                Fuente:
+                <br>
+                – https://www.fesen.org.ar/
+                <br>
+                – https://salud.gob.ar/dels/entradas/regimen-para-la-deteccion-y-tratamiento-de-determinadas-patologias-en-el-recien-nacido-ley#:~:text=Mediante%20ley%20nacional%2026.279%20(2007,o%20cong%C3%A9nitas%20que%20resulten%20discapacitantes.&text=Abarca%20asimismo%20a%20toda%20persona,la%20vigencia%20de%20la%20ley
+            </p>
+        </div>
+        <div class="mobile">
+            <div class="slds-grid slds-wrap slds-p-top_x-large slds-p-bottom_medium">
+                <div class="slds-col slds-size_6-of-12 slds-align_absolute-center">
+                    <lightning-button-icon 
+                        icon-name="utility:chevronleft"
+                        alternative-text="Back"
+                        title="Back"
+                        icon-class="dark"
+                        size="large"
+                        variant="bare"
+                        onclick={previousStep}
+                        disabled={previousIcon}>
+                    </lightning-button-icon>
+                </div>
+                <div class="slds-col slds-size_6-of-12 slds-align_absolute-center">
+                    <lightning-button-icon
+                        icon-name="utility:chevronright"
+                        alternative-text="Next"
+                        title="Next"
+                        size="large"
+                        variant="bare"
+                        onclick={nexStep}
+                        disabled={nextIcon}>
+                    </lightning-button-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

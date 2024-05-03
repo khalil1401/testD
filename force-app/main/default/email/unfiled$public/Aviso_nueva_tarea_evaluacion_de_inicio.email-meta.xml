@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>BEC_Siempre_Juntos</letterhead>
+    <name>Aviso nueva tarea evaluacion de inicio</name>
+    <style>freeForm</style>
+    <subject>Nueva Evaluacion de Inicio: {!Account.FirstName} {!Account.LastName}</subject>
+    <textOnly>Estimado/a:
+
+Se creo un nuevo paciente prospect al cual se le debe realizar la correspondiente &quot;Evaluación de Inicio&quot;. Se adjunta la información del paciente:
+
+Nombre: {!Account.FirstName} {!Account.LastName}
+ID de Paciente: {!Account.ID__c}
+Fecha de creación: {!Account.CreatedDate}
+
+Este es un mensaje automático por favor no responda.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

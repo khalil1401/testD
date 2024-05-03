@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Motivo_de_no_tratamiento__c</name>
+    <picklistValues>
+        <masterLabel>Cobertura (no puede costearlo de forma particular)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resistencia al cambio</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sabor</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tolerancia digestivas (vomitos, diarreas, acidez, etc)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

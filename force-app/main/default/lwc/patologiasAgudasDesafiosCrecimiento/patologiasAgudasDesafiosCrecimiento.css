@@ -1,0 +1,145 @@
+.container-patologias-ddc {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.title-patologias-ddc {
+    font-family: MontserratSemiBold;
+    font-size: 26px;
+    line-height: 30px;
+    color: #606060;
+}
+
+.linea-patologias-ddc{
+    border-top: 1px solid #606060;
+    width:100px;
+    margin-top: 26px;
+}
+
+.button-patologias-ddc {
+    width: 95%;
+    height: 81px;
+    border-radius: 10px;
+    background-color: #EBEBEB;
+    color: #606060;
+    font-family: MontserratSemiBold;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.button-patologias-ddc:hover {
+    background-color: #F6A608;
+    color: white;
+    cursor: pointer;
+}
+
+.container-details-patologias-ddc {
+    background-color: #EBEBEB;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.title-orange-patologias-ddc {
+    font-family: MontserratBlack;
+    font-size: 20pt;
+    line-height: 30pt;
+    color: #F6A608;
+}
+
+.title-violet-patologias-ddc {
+    font-family: MontserratSemiBold;
+    font-size: 18pt;
+    line-height: 22pt;
+    color: #502777;
+}
+
+.text-patologias-ddc {
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: #606060;
+}
+
+.card-pa-ddc {
+    background-color: #F6A608;
+    border-radius: 75px 25px 75px 25px;
+    height: auto;
+}
+
+.text-card-pa-ddc {
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: white;
+}
+
+.text-fuente-patologias-ddc {
+    font-family: MontserratRegular;
+    font-size: 18px;
+    line-height: 30px;
+    color: #606060;
+} 
+
+.img-ninos-paddc {
+    width: 100%;
+}
+
+.left-arrow {
+    display: none;
+}
+
+.right-arrow {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .container-patologias-ddc {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .container-details-patologias-ddc {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .title-orange-patologias-ddc {
+        font-size: 50px;
+        line-height: 70.28px;
+    }
+
+    .title-violet-patologias-ddc {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .text-patologias-ddc {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .text-card-pa-ddc {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .img-ninos-paddc {
+        width: 60%;
+    }
+
+    .left-arrow {
+        display: initial;
+        position: absolute;
+        left: 5%;
+        top: 500px; 
+        cursor: pointer;
+    }
+    
+    .right-arrow {
+        display: initial;
+        position: absolute;
+        right: 5%; 
+        top: 500px; 
+        cursor: pointer;
+    }
+}

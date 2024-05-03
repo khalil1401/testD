@@ -1,0 +1,10 @@
+<design:component >
+
+    <design:attribute name="altoMaximo" label="Alto máximo para imagen en px"/>
+    <design:attribute name="altoMinimo" label="Alto máximo para imagen en px"/>
+    <design:attribute name="recursoEstatico" label="URL de la imagen"/>
+    <design:attribute name="rutaRecursoEstaticoMobile" label="URL de la imagen Mobile"/>
+    <design:attribute name="radioEsquinas" label="Curvatura de esquinas"/>
+    <design:attribute name="claseCSSImagen" label="Clase de css de imagen"/>
+
+</design:component>

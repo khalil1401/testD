@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label></label>
+        <name>Campos_para_generador_de_tareas</name>
+    </fieldSets>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label></label>
+            <section>Account Summary</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Campos APP Profesional</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Criterios de Selección</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Domicilio</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Horarios</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información cualitativa</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Perfil del profesional</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Hospital/Institucion/DistribuidorFarmacia/</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Ubicación</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Otros Profesionales</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Criterios de Selección</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Domicilio</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Horarios</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información cualitativa</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Perfil del profesional</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Profesional Stakeholders</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Criterios de Selección</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Datos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Horario en caso de ser fijo</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Horarios específicos por día</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información cualitativa</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Perfil del profesional</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de Consumidor</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Mapa</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Niño</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Producto</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Ubicacion</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de Pacientes Finanzas</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Finanzas</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mapa</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Paciente mayor de 21 años</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de cuenta Best Care para Comunidad</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Datos del tratamiento activo</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información adicional</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Lista de tareas - Carga de pedido en Oracle</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mapa</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Paciente mayor de 21 años</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Servicios que recibe</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de cuenta BestCare</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Asignacion de Profesionales</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Detalles SAP</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informacion de Contactos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informacion de Direccion</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Modulo de paciente</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de cuenta BestCare para Grupo RAK</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Paciente mayor de 21 años</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de cuenta BestCare para HCPs</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Asignación de profesional</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Datos del tratamiento activo</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Paciente mayor de 21 años</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de cuenta Regular</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Datos del tratamiento activo</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Detalles SAP</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informacion de Contacto</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de cuenta Regular Comunidad</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Datos del tratamiento activo</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Mapa</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de cuenta Sanatorio</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato grupo de Visitadores</layout>
+        <sections>
+            <label></label>
+            <section>Account Summary</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Obra social</layout>
+        <sections>
+            <label></label>
+            <section>Contacto CX</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Detalles SAP</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Paciente Mendoza</layout>
+        <layoutType>PersonAccount</layoutType>
+        <sections>
+            <label></label>
+            <section>Información de dirección</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sucursal de facturacion</layout>
+        <sections>
+            <label></label>
+            <section>Datos de contacto</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Datos de crédito</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Estado</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Cambiar_propietario</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Cliente</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Cuenta_community</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Cuenta_empresa</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Grupo_de_Visitadores_Medicos</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Institucion</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Obra_social</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Sucursal_de_envio</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Sucursal_de_facturacion</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Cambio_de_registro_no_puede_tener_modulo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Caracteres_no_permitidos</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Fecha_de_baja_Requerida</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Fecha_de_baja_no_requerida</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Pedir_fecha_de_obito_si_es_fallecido</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Solo_Numeros_DNI</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Telefono_2</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>Enviar_consentimiento</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Generar_CSV</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Generar_tareas</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Multiples</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Transferir_Profesional</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>et4ae5__ExactTarget_Resubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>et4ae5__ExactTarget_Unsubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>et4ae5__Send_ExactTarget_Email</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>et4ae5__View_ExactTarget_Analytics</name>
+    </webLinks>
+    <workflowTasks>
+        <name>Confirmar_datos_del_paciente</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>Crear_Paciente_Partner_en_SAP</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>Csv_generado_para_cuenta</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>Derivacion_pacientes_Onco</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description></description>
+        <name>Gestionar_capacitacion</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Gestionar_envio_de_productos</name>
+        <subject></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Modulo</name>
+        <subject></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

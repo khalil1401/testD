@@ -1,0 +1,68 @@
+.THIS {
+}
+
+/*Titulos*/
+.THIS .tituloContainerInfoDisfagiaStroke{
+    font-family: NunitoBold;
+    color: #3FA8C1;
+    font-size: 2.0911458542448003em;
+    line-height: 1.2em;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.THIS .tituloContainerInfoDisfagiaVerdeStroke{
+    font-family: NunitoBold;
+    color: #33708b;
+    font-size: 2.0911458542448003em;
+    line-height: 1.2em;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+/*Textos*/
+.THIS .textoContainerInfoDisfagiaStroke{
+    font-family: NunitoRegular;
+    font-size: 1.338333346716672em;
+    line-height: 1.338333346716672em;
+    color: #606060;
+}
+
+.THIS .itemsDimension{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 1%;
+}
+
+.THIS .slds-list_dotted{
+    list-style: none
+}
+
+.THIS ul li.bulletVerdeAgua::before {
+    content: "\2022";
+    color: #3FA8C1;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.THIS ul li.bulletVerde::before {
+  content: "\2022";
+  color:#33708b;
+  width: 1em;
+  margin-left: -0.8em;
+}
+
+@media (max-width: 600px) {
+    /*Título*/
+    .THIS .tituloContainerInfoDisfagiaStroke{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    /*Textos*/
+    .THIS .textoContainerInfoDisfagiaStroke{
+        padding-left: 7%;
+        padding-right: 7% !important;
+        text-align: left;
+    }
+    
+}

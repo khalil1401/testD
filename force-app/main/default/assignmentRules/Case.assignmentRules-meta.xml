@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>BestCareAssignment</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <assignedTo>PSP</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Nuevo paciente</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>PSP</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>AND(TEXT(Origin) = &apos;Whatsapp&apos; , ISNEW())</formula>
+        </ruleEntry>
+        <ruleEntry>
+            <formula>true</formula>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

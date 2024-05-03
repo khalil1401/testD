@@ -1,0 +1,19 @@
+.THIS {
+}
+
+.THIS p{
+    font-family: MontserratRegular;
+    font-size: 1rem;
+}
+
+.THIS div.slds-modal__content {
+    border-radius: 25px 25px 25px 25px !important;
+}
+
+.THIS .icn svg{
+    fill: white;
+}
+
+.THIS .icnModal svg{
+    fill: #58368C;
+}

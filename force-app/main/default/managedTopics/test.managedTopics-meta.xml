@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>test.Featured:Help Center Setup Flow</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>Help Center Setup Flow</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>test.Navigational:Help Center Setup Flow</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>Help Center Setup Flow</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

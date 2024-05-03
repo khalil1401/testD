@@ -1,0 +1,296 @@
+<template>
+    <div class="div-container-tips-cocina-metabolicos">
+        <div class="slds-grid slds-wrap">
+            <template for:each={tips} for:item="tip">
+                <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1" key={tip.id}>
+                    <div class="slds-m-around_medium">
+                        <c-card-tip-cocina-metabolicos
+                            tip-cocina-id={tip.id}
+                            title={tip.title}
+                            image={tip.img}
+                            onclicktipcocina={handleClickTipCocina}>
+                        </c-card-tip-cocina-metabolicos>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+    <div data-id="description-tip-cocina-meta" class="div-description-tip-cocina-meta slds-m-top_xx-large slds-p-top_xx-large slds-p-bottom_xx-large">
+        <div data-id="0">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12 slds-align_absolute-center">
+                    <div class="desktop">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12 slds-size_1-of-1">
+                    <p class="title-description-text-cocina-meta">¿Cómo sustituir el huevo o la gelatina en una receta?</p>
+                    <br><p class="description-text-tip-cocina-meta">Utilizar agar-agar es una buena estrategia para tus recetas bajas en proteínas especialmente cuando necesites reemplazar alimentos como huevo o gelatina.</p>
+                    <br><p class="subtitle-description-text-cocina-meta">¿Qué es?</p>
+                    <br><p class="description-text-tip-cocina-meta">Un extracto de algas, que no contiene proteínas, y que sirve como espesante o gelificante ya que tiene alta capacidad para absorber agua.</p>
+                    <br><p class="subtitle-description-text-cocina-meta">¿Cómo se utiliza?</p>
+                    <br><p class="description-text-tip-cocina-meta">Para disolverlo, se debe mezclar con agua (o el líquido de la receta) y llevar a hervor durante unos minutos, dependiendo de la consistencia que deseemos lograr. Es importante remover constantemente para evitar que se formen grumos.</p>
+                    <br><p class="subtitle-description-text-cocina-meta">¿Dónde se consigue?</p>
+                    <br><p class="description-text-tip-cocina-meta">En supermercados o dietéticas, generalmente en polvo.</p>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12 slds-align_absolute-center">
+                    <div class="desktop">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-id="1" style="display: none;">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12 slds-align_absolute-center">
+                    <div class="desktop">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12 slds-size_1-of-1">
+                    <p class="title-description-text-cocina-meta">¿Cómo organizarte a la hora de hacer una receta?</p>
+                    <br><p class="description-text-tip-cocina-meta">Para que seas más eficiente en tu cocina, la tarea te resulte más sencilla y no pierdas tiempo innecesario, te sugerimos algunas estrategias: </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">1)</span> Leé toda la receta en detalle. Prestá atención no sólo a los ingredientes sino también los elementos que vas a necesitar. </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">2)</span> Escribí tu propia hoja de ruta y organizate como te resulte más práctico. Por ejemplo, determinando lavar y pelar todas las verduras como primer paso, para luego cortarlas o picarlas; o poner a hervir el agua si vas a hacer pastas. </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">3)</span> Prepará y disponé todo lo necesario, acomodándolo según el orden en que los vas a utilizar. Esto es lo que se conoce como “mise en place”. Tené en cuenta que también vas a necesitar tener a mano un recipiente para los desperdicios. </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">4)</span> Comenzá a cocinar, de manera ordenada y en lo posible, tratá de ir lavando los recipientes que vas usando y manteniendo limpia tu mesada para que luego tengas menos trabajo al terminar. </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">5)</span> Por último, no desesperes si al principio sentís que todo es un caos. A medida que sigas cocinando, vas a poder poner en práctica estas estrategias, mejorando tu técnica y adquiriendo nuevas habilidades. ¡Es puro entrenamiento!</p>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12 slds-align_absolute-center">
+                    <div class="desktop">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-id="2" style="display: none;">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12 slds-align_absolute-center">
+                    <div class="desktop">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12 slds-size_1-of-1">
+                    <p class="title-description-text-cocina-meta">¿Por qué la fruta se oscurece cuando la cortamos?</p>
+                    <br><p class="description-text-tip-cocina-meta">Por un proceso llamado pardeamiento enzimático, en el que están involucrados 3 compuestos: la enzima polifenoloxidasa, compuestos fenólicos, y el oxígeno. </p>
+                    <br><p class="description-text-tip-cocina-meta">La enzima cataliza la oxidación de los compuestos fenólicos, dando como resultado quinonas que al agruparse forman el pigmento melanina, responsable del color oscuro. </p>
+                    <br><p class="description-text-tip-cocina-meta">En la fruta, esta enzima no está en contacto con los compuestos fenólicos ni con el oxígeno, porque se encuentra dentro de compartimentos, pero al cortarla entran en contacto y se produce la reacción. </p>
+                    <br><p class="subtitle-description-text-cocina-meta">¿Podemos ayudar evitar este oscurecimiento? </p>
+                    <br><p class="description-text-tip-cocina-meta">¡Sí! Utilizando jugo de algún cítrico, como el limón. Su alto contenido de Vitamina C, con efecto antioxidante, ayuda a prevenir el pardeamiento enzimático.</p>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12 slds-align_absolute-center">
+                    <div class="desktop">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+            <br><p class="description-text-fuentes-tip-cocina-meta">
+                Fuente: 
+                <br>
+                - Silveira Ana Cecilia. Uso de aditivos y métodos físicos para mantener la calidad de los productos de IV gama o mínimamente procesados. Agrociencia Uruguay - Volumen 21 1:1-6 - junio 2017 - ISSN 1510 0839
+            </p>
+        </div>
+        <div data-id="3" style="display: none;">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12 slds-align_absolute-center">
+                    <div class="desktop">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12 slds-size_1-of-1">
+                    <p class="title-description-text-cocina-meta">¿Cómo conservar las hojas verdes por más tiempo?</p>
+                    <br><p class="description-text-tip-cocina-meta">¿Te resulta tedioso tener que ir que a la verdulería seguido para que no se te echen a perder las verduras de hojas verdes? </p>
+                    <br><p class="description-text-tip-cocina-meta">Te traemos un tip para que puedas ir una vez por semana a la verdulería: </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">1)</span> Sanitizá los vegetales y aprovechá a hacerlo en cantidad </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">2)</span> Dejalos secar bien (¡este paso es fundamental!) Podés usar el escurridor de verdura, pero aquí está la clave. </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">3)</span> Una vez secas las hojas, colocalas una al lado de la otra en un recipiente con tapa </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">4)</span> Sobre esa capa de hojas verdes, colocá un papel de cocina. </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">5)</span> Luego colocá una nueva capa de hojas verdes y así sucesivamente hasta que llenes el recipiente. </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">6)</span> Tapalo y conservalo en la heladera. </p>
+                    <br><p class="description-text-tip-cocina-meta">¡De esta manera, cada vez que quieras usar hojas verdes para una ensalada o cualquier otra preparación ya las tendrás listas y bien frescas!</p>                    
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12 slds-align_absolute-center">
+                    <div class="desktop">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-id="4" style="display: none;">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12 slds-align_absolute-center">
+                    <div class="desktop">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12 slds-size_1-of-1">
+                    <p class="title-description-text-cocina-meta">¿Cómo quitarse el olor a ajo o cebolla de las manos después de cocinar?</p>
+                    <br><p class="description-text-tip-cocina-meta">El ajo y la cebolla suelen ser nuestros aliados en muchas preparaciones a la hora de sazonar rico nuestras comidas, pero lo molesto es la impregnación del olor fuerte que queda en nuestras manos.</p>
+                    <br><p class="description-text-tip-cocina-meta">Por eso, te traemos un tip súper útil: </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">Lavate las manos con agua y jabón o detergente, luego colocate sal y vinagre de alcohol, y fregate nuevamente las manos, finalmente enjuagá con jabón y detergente. </span></p>
+                    <br><p class="description-text-tip-cocina-meta">Te contamos un dato interesante: </p>
+                    <br><p class="description-text-tip-cocina-meta">¿Sabías que el olor intenso del ajo se debe a dos componentes que se llaman “alicina” y “disulfuro de alilo”? </p>
+                    <br><p class="description-text-tip-cocina-meta">Al cortar el ajo estos compuestos se desprenden por el aire, por eso mientras más picamos el ajo, más intenso es el olor que sentimos.</p>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12 slds-align_absolute-center">
+                    <div class="desktop">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-id="5" style="display: none;">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12 slds-align_absolute-center">
+                    <div class="desktop">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12 slds-size_1-of-1">
+                    <p class="title-description-text-cocina-meta">¿Cómo sazonar mejor tus comidas?</p>
+                    <br><p class="description-text-tip-cocina-meta">¿Sabías que las hierbas aromáticas son excelentes para condimentar tus comidas y disminuir el consumo de sal de mesa? </p>
+                    <br><p class="description-text-tip-cocina-meta">Si bien son súper ricas, a veces es difícil que duren frescas más de tres o cuatro días, por eso te traemos un Nutritip para que puedas usarlas de una forma bien práctica y siempre las tengas a mano a la hora de cocinar. </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">1)</span> Conseguí las hierbas aromáticas frescas que más te gusten. Por ejemplo: perejil, romero, tomillo, orégano, cilantro, etc. </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">2)</span> Sanitizalas </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">3)</span> Picalas y colocalas en una cubetera con un poquito de agua o aceite hasta cubrir. </p>
+                    <br><p class="description-text-tip-cocina-meta"><span style="font-family: MontserratSemiBold;">4)</span> Una vez congelado, podés retirarlo de la hielera y conservar los cubitos en una bolsa o recipiente para freezer. </p>
+                    <br><br><p class="description-text-tip-cocina-meta">¡Disfrutá de los aromas y sabores animándote a usar este Nutritip para tus próximas comidas!</p>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12 slds-align_absolute-center">
+                    <div class="desktop">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="slds-grid slds-wrap slds-p-top_x-large slds-p-bottom_medium">
+                <div class="slds-col slds-size_6-of-12 slds-align_absolute-center">
+                    <lightning-button-icon 
+                        icon-name="utility:chevronleft"
+                        alternative-text="Back"
+                        title="Back"
+                        icon-class="dark"
+                        size="large"
+                        variant="bare"
+                        onclick={previousStep}
+                        disabled={previousIcon}>
+                    </lightning-button-icon>
+                </div>
+                <div class="slds-col slds-size_6-of-12 slds-align_absolute-center">
+                    <lightning-button-icon
+                        icon-name="utility:chevronright"
+                        alternative-text="Next"
+                        title="Next"
+                        size="large"
+                        variant="bare"
+                        onclick={nexStep}
+                        disabled={nextIcon}>
+                    </lightning-button-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

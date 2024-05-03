@@ -1,0 +1,58 @@
+.containerFortisipInfoOncologiaDesktop{
+    display: initial;
+}
+
+.containerFortisipInfoOncologiaMobile{
+    display: none;
+}
+
+.tituloFortisipInfoROncologia{
+    font-family: MontserratSemiBold;
+    color: #606060;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.textoFortisipInfoROncologia{
+    font-family: MontserratRegular;
+    color: #606060;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.lineaFortisipInfoROncologia{
+    border-top: 1px solid #606060;
+    width:100px;
+    margin-top:1.2%;
+}
+
+.imgFortisip{
+    width: 65%;
+}
+
+@media (max-width: 600px) {
+    .containerFortisipInfoOncologiaDesktop{
+        display: none;
+    }    
+    .containerFortisipInfoOncologiaMobile{
+        display: initial;
+    }    
+    .containerFortisipInfoROncologia{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .tituloFortisipInfoROncologia{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .textoFortisipInfoROncologia{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .lineaFortisipInfoROncologia{
+        margin-top:3.5%;
+    }
+    .imgFortisip{
+        width: 90%;
+    }
+}

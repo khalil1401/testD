@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>true</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <communityRoles/>
+    <disableReputationRecordConversations>false</disableReputationRecordConversations>
+    <emailSenderAddress>jazmin.fisquetti@danone.com</emailSenderAddress>
+    <emailSenderName>Danone Best Care</emailSenderName>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>false</enableDirectMessages>
+    <enableExperienceBundleBasedSnaOverrideEnabled>false</enableExperienceBundleBasedSnaOverrideEnabled>
+    <enableGuestChatter>true</enableGuestChatter>
+    <enableGuestFileAccess>true</enableGuestFileAccess>
+    <enableGuestMemberVisibility>true</enableGuestMemberVisibility>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableMemberVisibility>true</enableMemberVisibility>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableShowAllNetworkSettings>false</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>false</enableSiteAsContainer>
+    <enableTalkingAboutStats>true</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
+    <enableTopicSuggestions>false</enableTopicSuggestions>
+    <enableUpDownVote>true</enableUpDownVote>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <networkMemberGroups>
+        <permissionSet>Gestionar_Informes_y_Paneles</permissionSet>
+        <permissionSet>Gestionar_contactos</permissionSet>
+        <profile>Admin</profile>
+        <profile>Partner Community User</profile>
+        <profile>Profesional Best Care</profile>
+        <profile>Stakeholders</profile>
+        <profile>Visitador Medico Adulto</profile>
+        <profile>Acceso</profile>
+        <profile>Jefes de venta</profile>
+        <profile>Community Manager</profile>
+        <profile>Licitaciones CW</profile>
+        <profile>Marketing CW</profile>
+        <profile>Administrador Service</profile>
+        <profile>Asesoras nutricionales</profile>
+        <profile>Asuntos regulatorios</profile>
+        <profile>coordinación médica/enfermería</profile>
+        <profile>Customer</profile>
+        <profile>Finanzas</profile>
+        <profile>Gerente Best Care%2FCalidad</profile>
+        <profile>Gerente comercial</profile>
+        <profile>KAM Best Care</profile>
+        <profile>logística</profile>
+        <profile>PSP</profile>
+        <profile>Perfil de comunidad</profile>
+        <profile>Acceso - Comunidad</profile>
+        <profile>KAE</profile>
+        <profile>Api Only</profile>
+        <profile>Visitador Medico Nicho</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Standard</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>Standard</homePageOverrideSetting>
+        <loginPageOverrideSetting>Standard</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Standard</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>Danone_Best_Care1</picassoSite>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>false</sendWelcomeEmail>
+    <site>Danone_Best_Care</site>
+    <siteArchiveStatus>NotArchived</siteArchiveStatus>
+    <status>Live</status>
+    <tabs>
+        <customTab>Ciclo__c</customTab>
+        <customTab>Colaboracion__c</customTab>
+        <defaultTab>home</defaultTab>
+        <standardTab>home</standardTab>
+        <standardTab>Account</standardTab>
+        <standardTab>Order</standardTab>
+        <standardTab>Contact</standardTab>
+        <standardTab>Case</standardTab>
+        <standardTab>Product2</standardTab>
+        <standardTab>report</standardTab>
+        <standardTab>Dashboard</standardTab>
+    </tabs>
+    <urlPathPrefix>bestcare</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

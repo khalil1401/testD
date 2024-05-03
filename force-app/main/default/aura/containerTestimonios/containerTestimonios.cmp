@@ -1,0 +1,42 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="altoMaximo" type="String" default="200"/>
+	<aura:attribute name="altoMinimo" type="String" default="200"/>
+    <aura:attribute name="duracion" type="String" default="10"/>
+    <aura:attribute name="image1StaticResourceName" type="String" default=""/>
+    <aura:attribute name="backgroundColor" type="String"/>
+
+    <aura:html tag="style">
+        .containerCarruselTestimonios {
+            max-height: {!v.altoMaximo + 'px'};
+            min-height: {!v.altoMinimo + 'px'};
+            background-color: {!v.backgroundColor};
+        }
+        .slds-carousel__image {
+            background-color: {!v.backgroundColor};
+        }
+        .slds-carousel__content {
+            background-color: {!v.backgroundColor};
+        }
+
+    </aura:html>
+
+    <div class="containerCarruselTestimonios slds-align_absolute-center">
+        <lightning:carousel scrollDuration="{!v.duracion}">
+            <lightning:carouselImage
+                src="{!'/sfsites/c/resource/'+v.image1StaticResourceName}"
+                header="Lorem ipsum"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+                alternativeText="Company logo"
+                style="font-size: x-large;">
+            </lightning:carouselImage>
+            <lightning:carouselImage
+                src="{!'/sfsites/c/resource/'+v.image1StaticResourceName}"
+                header="Lorem ipsum"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+                alternativeText="Company logo">
+            </lightning:carouselImage>
+        </lightning:carousel>
+    </div>
+
+</aura:component>

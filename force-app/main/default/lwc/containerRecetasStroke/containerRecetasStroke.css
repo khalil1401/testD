@@ -1,0 +1,87 @@
+.conatinerDetallesHidden{
+    display: none;
+}
+
+.conatinerDetallesShow{
+    display: initial;
+}
+
+.tituloTipoRecetaDisfagia, .tituloTipoRecetaDisfagiaMas{
+    font-family: NunitoBold;
+    font-size: 2.0911458542448003em;
+    line-height: 1.2em;
+    color: #513386;
+    cursor: pointer;
+}
+
+.tituloReceta{
+    font-family: NunitoBold;
+    font-size: 1.338333346716672em;
+    line-height: 1.338333346716672em;
+    color: #513386;
+}
+
+.containerCardTipoReceta{
+    margin: 10%;
+    cursor: pointer;
+}
+
+.slds-modal__container{
+    width: 50% !important;
+    max-width: 50% !important;
+    min-width: 50% !important;
+}
+
+.icn svg{
+    fill: white;
+}
+
+.containerVideoYT{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;    
+}
+
+.videoYT{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.botonMas{
+    background-color: #ebebeb;
+    padding-left: 5%;padding-right: 5%;
+    border-radius: 0px 20px 0px 20px;
+    color: #606060;
+}
+
+.botonMasSeleccionado{
+    background: linear-gradient(90deg, #513386 0%, #5d6bac 100%);
+    padding-left: 5%;padding-right: 5%;
+    border-radius: 0px 20px 0px 20px;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .tituloTipoRecetaDisfagia{
+        font-size: 1.5em;
+    }
+
+    .tituloTipoRecetaDisfagiaMas{
+        font-size: 1.5em;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .botonMas{
+        padding-left: 2.5%;padding-right: 2.5%;
+        border-radius: 0px 10px 0px 10px;
+    }
+
+    .botonMasSeleccionado{
+        padding-left: 2.5%;padding-right: 2.5%;
+        border-radius: 0px 10px 0px 10px;
+    }    
+}

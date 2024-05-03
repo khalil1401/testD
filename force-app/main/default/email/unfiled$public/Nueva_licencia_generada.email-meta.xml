@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Nutricia</letterhead>
+    <name>Nueva licencia generada</name>
+    <style>freeForm</style>
+    <subject>Se ha generado una nueva licencia por parte de un APM</subject>
+    <textOnly>Hola,
+
+El APM {!Licencia__c.CreatedBy} ha generado una nueva Licencia dentro de su Ciclo mensual. Para revisarla y aprobarla, debe entrar en la plataforma y modificar el registro de la misma.
+
+El link de la Licencia es el siguiente: {!Licencia__c.Link}
+
+Gracias.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

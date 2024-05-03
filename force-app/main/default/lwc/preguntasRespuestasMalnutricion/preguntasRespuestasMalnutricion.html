@@ -1,0 +1,68 @@
+<template>
+    <template if:false={izquierda}>
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+            <div class="slds-col slds-medium-size_6-of-12">
+                <template if:true={primerPregunta}>
+                    <p class="pregunta-malnutricion">
+                        {primerPregunta}
+                    </p>
+                    <p class="respuesta-malnutricion slds-m-top_medium">
+                        {primerRespuesta}
+                    </p>
+                </template>
+                <template if:true={segundaPregunta}>
+                    <p class="pregunta-malnutricion slds-m-top_medium">
+                        {segundaPregunta}
+                    </p>
+                    <p class="respuesta-malnutricion slds-m-top_medium">
+                        {segundaRespuesta}
+                    </p>
+                </template>
+                <template if:true={tercerPregunta}>
+                    <p class="pregunta-malnutricion slds-m-top_medium">
+                        {tercerPregunta}
+                    </p>
+                    <p class="respuesta-malnutricion slds-m-top_medium">
+                        {tercerRespuesta}
+                    </p>
+                </template>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12">
+                <img src={img}>
+            </div>
+        </div>
+    </template>
+    <template if:true={izquierda}>
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+            <div class="slds-col slds-medium-size_6-of-12">
+                <img src={img}>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12">
+                <template if:true={primerPregunta}>
+                    <p class="pregunta-malnutricion">
+                        {primerPregunta}
+                    </p>
+                    <p class="respuesta-malnutricion slds-m-top_medium">
+                        {primerRespuesta}
+                    </p>
+                </template>
+                <template if:true={segundaPregunta}>
+                    <p class="pregunta-malnutricion slds-m-top_medium">
+                        {segundaPregunta}
+                    </p>
+                    <p class="respuesta-malnutricion slds-m-top_medium">
+                        {segundaRespuesta}
+                    </p>
+                </template>
+                <template if:true={tercerPregunta}>
+                    <p class="pregunta-malnutricion slds-m-top_medium">
+                        {tercerPregunta}
+                    </p>
+                    <p class="respuesta-malnutricion slds-m-top_medium">
+                        {tercerRespuesta}
+                    </p>
+                </template>
+            </div>
+        </div>
+    </template>
+</template>

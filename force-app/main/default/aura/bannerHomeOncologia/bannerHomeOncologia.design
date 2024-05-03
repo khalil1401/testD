@@ -1,0 +1,5 @@
+<design:component >
+
+    <design:attribute name="textoBannerEnHTML" label="Texto de banner en formato HTML"/>
+
+</design:component>

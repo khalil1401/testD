@@ -1,0 +1,438 @@
+<apex:component rendered="{!nurtricion}" controller="HCReportPageController" layout="none">
+
+    <head>
+        <style>
+            body {
+                background-color: #f6f2fa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+            }
+
+            .input {
+                text-align: center;
+            }
+
+
+            .colMedico {
+                width: 95%;
+                padding: 8px;
+            }
+
+            .section {
+                width: 95%;
+                padding: 5px;
+                text-align: center;
+                text-justify: inter-word;
+                border: 1px solid;
+                line-height: 1;
+            }
+
+            .sectionFirma {
+                width: 45%;
+                padding: 5px;
+                text-align: center;
+                text-justify: inter-word;
+                border: 1px solid;
+                line-height: 1;
+                margin-left: 50%;
+            }
+
+            .fieldSec {
+                width: 70%;
+                padding: 8px;
+                /*border: 1px solid;*/
+                line-height: 1;
+                margin-bottom: 3px;
+            }
+
+            .fieldSecValoracion {
+                width: 70%;
+                padding: 8px;
+                border: 1px solid;
+                line-height: 1;
+                margin-bottom: 3px;
+            }
+
+            .fieldSecExamen {
+                width: 80%;
+                height: 80%;
+                padding: 8px;
+                border: 1px solid;
+                line-height: 1;
+                margin-bottom: 3px;
+            }
+
+            .date {
+                width: 50%;
+                padding: 2px;
+                border: 1px solid;
+                line-height: 1;
+                margin-left: 90%;
+            }
+
+            .tableCustom,
+            .tdCustom,
+            .thCustom {
+                border: 1px solid #ddd;
+                text-align: left;
+                padding: 15px;
+
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            .tableTerap {
+                border: 0px;
+            }
+
+            td,
+            th {
+                padding: 10px;
+            }
+
+            #col1,
+            #col2 {
+                width: 45%;
+                display: inline-block;
+            }
+
+            #col1Valoracion {
+                width: 80%;
+                display: inline-block;
+            }
+
+            #col1Examen {
+                width: 49%;
+                display: inline-block;
+            }
+
+            #col2Examen {
+                width: 45%;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <apex:pageBlock >
+        <apex:panelGrid columns="2" columnClasses="col2" id="theGrid">
+            <apex:image url="{!$Resource.HeaderBestCare2}" height="80px" />
+            <div> {!DAY(TODAY())}/{!MONTH(TODAY())}/{!YEAR(TODAY())} </div>
+        </apex:panelGrid>
+
+        <p>
+            Estimado Auditor :
+            <br/> Adjunto informe de seguimiento del paciente {!historiaClinica.Nombre_y_Apellido_del_Paciente__r.Name} en seguimiento
+            por:
+        </p>
+        <apex:form >
+            <div class="colMedico">
+                <strong> Nutricionista:</strong>
+                <apex:inputField value="{!historiaClinica.Nombre_y_Apellido_del_Paciente__r.Nutricionista_Asignado__r.Name}" />
+            </div>
+            <div class="colMedico">
+                <strong>Enfermero:</strong>
+                <apex:inputField value="{!historiaClinica.Nombre_y_Apellido_del_Paciente__r.Enfermero_Asignado__r.Name}" />
+            </div>
+            <div class="colMedico">
+                <strong>Medico:</strong>
+                <apex:inputField value="{!historiaClinica.Nombre_y_Apellido_del_Paciente__r.Medico_Asignado__r.Name}" />
+            </div>
+        </apex:form>
+        <div>
+            <p class="section">
+                Informe Nutricional
+            </p>
+        </div>
+        <apex:form >
+            <div id="col1">
+                <apex:pageblock >
+
+                    <div class="fieldSec">
+                        <strong>Paciente:</strong>
+                        <apex:outputField value="{!historiaClinica.Nombre_y_Apellido_del_Paciente__c}" />
+                    </div>
+                    <div class="fieldSec">
+                        <strong>Cobertura:</strong>
+                        <apex:outputField value="{!historiaClinica.Nombre_y_Apellido_del_Paciente__r.Obra_social__pc}" />
+                    </div>
+                    <div class="fieldSec">
+                        <strong>Diagnostico:</strong>
+                        <apex:outputField value="{!historiaClinica.Patologia__c}" />
+                    </div>
+                    <div class="fieldSec">
+                        <strong> Estado:</strong>
+                        <apex:outputField value="{!historiaClinica.Estado_Actual_medico__c}" />
+                    </div>
+                </apex:pageblock>
+            </div>
+            <div id="col2">
+                <apex:pageblock >
+                    <div class="fieldSec">
+                        <strong>Edad:</strong>
+                        <apex:outputField value="{!historiaClinica.Edad__c}" />
+                    </div>
+                    <div class="fieldSec">
+                        <strong>Lugar de residencia:</strong>
+                        <apex:outputField value="{!historiaClinica.Lugar_de_residencia__c}" />
+                    </div>
+                    <div class="fieldSec">
+                        <strong>Visita:</strong>
+                        <apex:outputField value="{!historiaClinica.Visita__c}" />
+                    </div>
+                </apex:pageblock>
+            </div>
+        </apex:form>
+
+        <div>
+            <p class="section">
+                Evaluación Nutricional
+            </p>
+        </div>
+
+        <apex:form >
+            <div id="col1Valoracion">
+                <apex:pageblock >
+
+                    <div class="fieldSec">
+                        <strong>Peso actual:</strong>
+                        <apex:outputField value="{!historiaClinica.Peso__c}" />
+                    </div>
+                    <div class="fieldSec">
+                        <strong>Talla:</strong>
+                        <apex:outputField value="{!historiaClinica.Talla__c}" />
+                    </div>
+                    <div class="fieldSec">
+                        <strong>IMC:</strong>
+                        <apex:outputField value="{!historiaClinica.IMC__c}" />
+                    </div>
+                    <div class="fieldSec">
+                        <strong>Valoración Global Subjetiva:</strong>
+                        <apex:outputpanel styleClass="fieldSecValoracion">
+                            <apex:outputField value="{!historiaClinica.Fecha__c}" /> </apex:outputpanel>
+                        <apex:outputpanel styleClass="fieldSecValoracion">
+                            <apex:outputField value="{!historiaClinica.VGS__c}" /> </apex:outputpanel>
+                    </div>
+
+                </apex:pageblock>
+
+            </div>
+
+            <div>
+                <p style=" text-align: center;">
+                    Mediciones
+                </p>
+            </div>
+            <table class="tableCustom">
+                <tr>
+                    <th class="thCustom"></th>
+                    <th class="thCustom">Fecha</th>
+                    <th class="thCustom">Valor</th>
+                    <th class="thCustom">Percentillo</th>
+                </tr>
+                <tr>
+                    <td class="tdCustom">Circunf. del Brazo (cm):</td>
+                    <td class="tdCustom">{!fechaMediciones}</td>
+                    <td class="tdCustom">{!historiaClinica.Circunferencia_del_brazo_cm__c}</td>
+                    <td class="tdCustom">{!historiaClinica.Percentilo_circunferencia_del_Brazo__c}</td>
+                </tr>
+                <tr>
+                    <td class="tdCustom">Pliegue Tricipital (mm):</td>
+                    <td class="tdCustom">{!fechaMediciones}</td>
+                    <td class="tdCustom">{!historiaClinica.Pliegue_tricipital__c}</td>
+                    <td class="tdCustom">{!historiaClinica.Percentilo_pliegue_tricipital__c}</td>
+                </tr>
+
+                <tr>
+                    <td class="tdCustom">Circunf. Musc del Brazo (cm):</td>
+                    <td class="tdCustom">{!fechaMediciones}</td>
+                    <td class="tdCustom">{!historiaClinica.area_muscular_del_brazo__c}</td>
+                    <td class="tdCustom">{!historiaClinica.Percentilo_Area_Muscular_del_Brazo__c}</td>
+                </tr>
+            </table>
+
+        </apex:form>
+
+        <div style="page-break-after:always" />
+        <br/>
+
+        <div>
+            <p class="section">
+                Examen Físico
+            </p>
+        </div>
+
+        <apex:form >
+            <div id="col1Examen">
+                <apex:pageblock >
+
+                    <div class="fieldSec">
+                        <strong>Acceso Enteral:</strong>
+                        <br/>
+                        <apex:repeat value="{!viasDeAcceso}" var="hcVia" id="viasAcc">
+                            <apex:outputText value="{!hcVia}" id="theValue" />
+                            <br/>
+                        </apex:repeat>
+                    </div>
+                    <div class="fieldSec">
+                        <strong>Complicaciones acceso:</strong>
+                        <br/>
+                        <apex:repeat value="{!complicacionesDeAcceso}" var="hcComp" id="comp">
+                            <apex:outputText value="{!hcComp}" id="theValue" />
+                            <br/>
+                        </apex:repeat>
+                    </div>
+                    <div class="fieldSec">
+                        <strong>Fecha ult recambio:</strong>{!ultimoRecambio}
+                    </div>
+                </apex:pageblock>
+            </div>
+            <div id="col2Examen">
+                <apex:pageblock >
+                    <table class="tableCustom">
+                        <tr>
+                        </tr>
+                        <tr>
+                            <td class="tdCustom">Edema:</td>
+                            <td class="tdCustom">{!historiaClinica.Edemas1__c}</td>
+                        </tr>
+                        <tr>
+                            <td class="tdCustom">Sarcopenia:</td>
+                            <td class="tdCustom">{!historiaClinica.Sarcopenia__c}</td>
+                        </tr>
+                        <tr>
+                            <td class="tdCustom">Escara:</td>
+                            <td class="tdCustom">{!historiaClinica.Escaras_examen_medico__c}</td>
+                        </tr>
+
+                        <tr>
+                            <td class="tdCustom">Grado:</td>
+                            <td class="tdCustom">{!historiaClinica.Grado_escara__c}</td>
+                        </tr>
+
+                    </table>
+                </apex:pageblock>
+            </div>
+        </apex:form>
+    </apex:pageBlock>
+    <div>
+        <p class="section">
+            Plan terapéutico Nutricional
+        </p>
+    </div>
+    <apex:form >
+
+        <table class="tableTerap">
+            <tr>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Requerimiento Calórico:</strong>{!historiaClinica.Requerimiento_calorico__c}" (kcal)</td>
+                <td>
+                    <strong>Requerimiento Proteico:</strong>{!historiaClinica.Requerimiento_Proteico__c} (g)</td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Modalidad Soporte:</strong>
+                    <br/>
+                    <apex:repeat value="{!modalidades}" var="mod" id="mod">
+                        <apex:outputText value="{!mod}" id="theValue" />
+                        <br/>
+                    </apex:repeat>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Meta Soporte:</strong>
+                    <apex:outputField value="{!historiaClinica.Meta__c}" /> </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>Aporte Calórico total:</strong>{!historiaClinica.Aporte_cal_rico_total_Kcal_d_a__c} (kcal)</td>
+                <td>
+                    <strong>Aporte proteico total:</strong>{!historiaClinica.Aporte_proteico_total_g_d_a__c} (g) </td>
+            </tr>
+
+        </table>
+
+        <table class="tableCustom">
+            <th class="thCustom">Prescripción</th>
+            <th class="thCustom">Productos</th>
+            <th class="thCustom">Unidades de producto/Mes </th>
+
+            <tr>
+                <td class="tdCustom">Prod 1:</td>
+                <td class="tdCustom">
+                    <apex:outputField value="{!historiaClinica.Producto__c}" /> </td>
+                <td class="tdCustom">
+                    <apex:outputField value="{!historiaClinica.Unidades_de_producto_1__c}" /> </td>
+            </tr>
+            <tr>
+                <td class="tdCustom">Prod 2:</td>
+                <td class="tdCustom">
+                    <apex:outputField value="{!historiaClinica.Producto2__c}" /> </td>
+                <td class="tdCustom">
+                    <apex:outputField value="{!historiaClinica.Unidades_de_producto_n_2__c}" /> </td>
+            </tr>
+
+            <tr>
+                <td class="tdCustom">Prod 3:</td>
+                <td class="tdCustom">
+                    <apex:outputField value="{!historiaClinica.Producto_nro_3__c}" /> </td>
+                <td class="tdCustom">
+                    <apex:outputField value="{!historiaClinica.Unidades_de_producto_n_3__c}" /> </td>
+            </tr>
+        </table>
+
+    </apex:form>
+    <br/>
+    <div>
+        <p class="section">
+            Complicaciones Nutricionales
+        </p>
+    </div>
+    <apex:form >
+        <div id="col1">
+            <apex:pageblock >
+                <div class="fieldSec">
+                    <strong>Complicaciones sist. digestivo:</strong>
+                    <br/>
+                    <apex:repeat value="{!digestivo}" var="dig" id="dig">
+                        <apex:outputText value="{!dig}" id="theValue" />
+                        <br/>
+                    </apex:repeat>
+                </div>
+                <div class="fieldSec">
+                    <strong>Complicaciones metabólicas:</strong>
+                    <br/>
+                    <apex:repeat value="{!metabolicas}" var="met" id="met">
+                        <apex:outputText value="{!met}" id="theValue" />
+                        <br/>
+                    </apex:repeat>
+                </div>
+            </apex:pageblock>
+        </div>
+    </apex:form>
+    <br/>
+    <div style="page-break-after:always" />
+    <br/>
+    <div class="section">
+        <p>
+            Comentarios coordinación:
+        </p>
+        <apex:outputField value="{!historiaClinica.Nombre_y_Apellido_del_Paciente__r.Comentarios_coordinador_medico__c}" />
+    </div>
+
+    <p>Ante cualquier inquietud no dude en comunicarse con nosotros para mas información.
+        <br/>Sin otro particular, saludo a usted atentamente</p>
+    <div class="sectionFirma">
+        <p>
+            {!historiaClinica.Nombre_y_Apellido_del_Paciente__r.Nutricionista_Asignado__r.Name}
+            <br/> {!historiaClinica.Nombre_y_Apellido_del_Paciente__r.Nutricionista_Asignado__r.Matricula__c}
+        </p>
+    </div>
+
+</apex:component>

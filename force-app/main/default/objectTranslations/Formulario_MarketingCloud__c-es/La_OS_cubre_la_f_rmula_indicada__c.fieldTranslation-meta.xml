@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>La_OS_cubre_la_f_rmula_indicada__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sí</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

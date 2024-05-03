@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Puntaje_Nutriscore__c</name>
+    <picklistValues>
+        <masterLabel>Mayor o igual a 5 (con riesgo de desnutrición)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Menor a 5 (Sin riesgo de desnutrición)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

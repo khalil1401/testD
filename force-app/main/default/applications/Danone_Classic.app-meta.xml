@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Danone Classic</label>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>Modulo__c</tabs>
+    <tabs>Filial__c</tabs>
+    <tabs>Localidad__c</tabs>
+    <tabs>Municipio__c</tabs>
+    <tabs>Envio_sin_Cargo__c</tabs>
+    <tabs>Formulario__c</tabs>
+    <tabs>Historia_Cl_nica_Especializada__c</tabs>
+    <tabs>Profesional_por_Institucion__c</tabs>
+    <tabs>Tareas</tabs>
+    <tabs>NIC_Envio__c</tabs>
+</CustomApplication>

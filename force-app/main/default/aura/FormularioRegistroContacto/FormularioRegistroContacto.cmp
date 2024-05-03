@@ -1,0 +1,287 @@
+<aura:component controller="FormularioRegistroController" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="account" type="Account"/>
+    <aura:attribute name="contacts" type="Contact[]"/>
+    <aura:attribute name="contact" type="Contact"/>
+    <aura:attribute name="contact2" type="Contact"/>
+    <aura:attribute name="trackForm" type="Track_Solicitud_Kit_de_Inicio__c"/>
+    <aura:attribute name="relaciones" type="List"/>
+    <aura:attribute name="tiposDeTelefonoContacto" type="List"/>
+    <aura:attribute name="optionsRelaciones" type="List" default="[]"/>
+    <aura:attribute name="optionsTiposDeTelefonoContacto" type="List" default="[]"/>
+    <aura:attribute name="esMenorA18Anios" type="Boolean"/>
+    <aura:attribute name="codArea" type="String"/>
+    <aura:attribute name="numTelefono" type="String"/>
+    <aura:attribute name="codAreaContact2" type="String"/>
+    <aura:attribute name="numTelefonoContact2" type="String"/>
+    <aura:attribute name="agregarOtroContacto" type="Boolean"/>
+    <aura:attribute name="mensajeContactoObligatorio" type="Boolean" default="false"/>
+    <aura:attribute name="area" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="changePageEvent" type="c:ChangePageAltaPaciente"/>
+    <aura:attribute name="paginaActual" type="string"/>
+    <aura:attribute name="isDesktop" type="Boolean"/>
+
+    <c:ProgressStep current="{!v.paginaActual}"/>
+    
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1 slds-p-left_small slds-p-right_small">
+            <h2 class="slds-text-align_center slds-m-top_x-large slds-m-left_large slds-m-right_large">
+                Ingrese los datos del padre, madre o adulto responsable en caso de ser necesario.
+            </h2>
+        </div>
+        <aura:if isTrue="{!v.mensajeContactoObligatorio}">
+            <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+                <h3 class="contactoObligatorio slds-text-align_center slds-m-top_small slds-m-bottom_small">
+                    El Primer Contacto es obligatorio si el paciente es menor
+                </h3>
+            </div>
+        </aura:if>
+        <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+            <h3 class="slds-m-top_medium slds-m-bottom_small slds-m-left_small slds-m-right_small">
+                Primer Contacto
+            </h3>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-left_small slds-p-right_small">
+            <lightning:input
+                aura:id="formPaciente"
+                label="Nombres"
+                name="contacttFirstName"
+                value="{!v.contact.FirstName}"
+                pattern="[a-zA-Z áéíóúÁÉÍÓÚ]*"
+                messageWhenPatternMismatch="Sólo se aceptan letras"
+                required="{!v.esMenorA18Anios}"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-left_small slds-p-right_small">
+            <lightning:input
+                aura:id="formPaciente"
+                label="Apellidos"
+                name="contactLastName"
+                value="{!v.contact.LastName}"
+                pattern="[a-zA-Z áéíóúÁÉÍÓÚ]*"
+                messageWhenPatternMismatch="Sólo se aceptan letras"
+                required="{!v.esMenorA18Anios}"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input    
+                aura:id="formPaciente"
+                label="DNI"
+                name="contactDNI"
+                value="{!v.contact.DNI__c}"
+                autocomplete="off"
+                type="number"
+                min="1000000"
+                maxlength="8"
+                required="{!v.esMenorA18Anios}"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input
+                aura:id="formPaciente"
+                type="email"
+                label="Correo electrónico"
+                placeholder="ejemplo@ejemplo.com"
+                name="contactEmail"
+                value="{!v.contact.Email}"
+                pattern="[a-zA-Z\-0-9\.-_]+@+[a-zA-Z]+\.(com|org|com.ar|org.ar|COM|ORG|COM.AR|ORG.AR)"
+                required="{!v.esMenorA18Anios}"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:combobox 
+                aura:id="formPaciente" 
+                name="relacion"
+                label="Relación con el Paciente"
+                value="{!v.contact.Relacion__c}"
+                options="{!v.optionsRelaciones}"
+                onchange="{!c.handleOptionRelacionSelected}"
+                dropdownAlignment="top-left"
+                required="{!v.esMenorA18Anios}"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:combobox 
+                aura:id="formPaciente" 
+                name="tipoTelContacto"
+                label="Tipo de teléfono"
+                value="{!v.contact.Tipo_de_Telefono_de_Contacto__c}"
+                options="{!v.optionsTiposDeTelefonoContacto}"
+                dropdownAlignment="top-left"
+                required="{!v.esMenorA18Anios}"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                <div class="slds-col slds-medium-size_4-of-12 slds-size_4-of-12 slds-p-right_x-small">
+                    <lightning:input    
+                        aura:id="formPaciente"
+                        label="Cod. Área sin 0"
+                        name="contactCodArea"
+                        value="{!v.codArea}"
+                        pattern="[1-9][0-9]*"
+                        messageWhenPatternMismatch="Sólo se aceptan números"
+                        required="{!v.esMenorA18Anios}"/>
+                </div>
+                <div class="slds-col slds-medium-size_8-of-12 slds-size_8-of-12 slds-p-left_x-small">
+                    <lightning:input    
+                        aura:id="formPaciente"
+                        label="Teléfono (del contacto) sin el 15"
+                        name="contactNumTelefono"
+                        value="{!v.numTelefono}"
+                        pattern="[0-9]*"
+                        messageWhenPatternMismatch="Sólo se aceptan números"
+                        required="{!v.esMenorA18Anios}"/>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input    
+                class="checkbox"
+                type="checkbox"
+                aura:id="form"
+                label="Contacto Principal"
+                name="contactoPrincipal"
+                checked="{!v.contact.Principal__c}"
+                disabled="{!v.contact2.Principal__c}"/>
+        </div>
+    </div>
+    <aura:if isTrue="{!v.agregarOtroContacto}">
+        <div class="slds-grid slds-wrap slds-m-top_medium">
+            <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+                <h3 class="slds-m-top_medium slds-m-bottom_small slds-m-left_small slds-m-right_small">
+                    Segundo Contacto
+                </h3>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-left_small slds-p-right_small">
+                <lightning:input
+                    aura:id="formPaciente"
+                    label="Nombres"
+                    name="contacttFirstName"
+                    value="{!v.contact2.FirstName}"
+                    pattern="[a-zA-Z áéíóúÁÉÍÓÚ]*"
+                    messageWhenPatternMismatch="Sólo se aceptan letras"/>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-left_small slds-p-right_small">
+                <lightning:input
+                    aura:id="formPaciente"
+                    label="Apellidos"
+                    name="contactLastName"
+                    value="{!v.contact2.LastName}"
+                    pattern="[a-zA-Z áéíóúÁÉÍÓÚ]*"
+                    messageWhenPatternMismatch="Sólo se aceptan letras"/>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+                <lightning:input    
+                    aura:id="formPaciente"
+                    type="number"
+                    label="DNI"
+                    name="contactDNI"
+                    value="{!v.contact2.DNI__c}"
+                    autocomplete="off"
+                    min="1000000"
+                    maxlength="8"/>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+                <lightning:input
+                    aura:id="formPaciente"
+                    label="Correo electrónico"
+                    placeholder="ejemplo@ejemplo.com"
+                    type="email"
+                    name="contactEmail"
+                    value="{!v.contact2.Email}"
+	                                pattern="[a-zA-Z\-0-9\.-_]+@+[a-zA-Z]+\.(com|org|com.ar|org.ar|COM|ORG|COM.AR|ORG.AR)"/>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+                <lightning:combobox
+                    aura:id="formPaciente" 
+                    name="relacion"
+                    label="Relación con el Paciente"
+                    value="{!v.contact2.Relacion__c}"
+                    options="{!v.optionsRelaciones}"
+                    onchange="{!c.handleOptionRelacionSelectedContact2}"
+                    dropdownAlignment="top-left"/>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+                <lightning:combobox 
+                    aura:id="formPaciente" 
+                    name="tipoTelContacto"
+                    label="Tipo de teléfono"
+                    value="{!v.contact2.Tipo_de_Telefono_de_Contacto__c}"
+                    options="{!v.optionsTiposDeTelefonoContacto}"
+                    dropdownAlignment="top-left"/>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-medium-size_4-of-12 slds-size_4-of-12 slds-p-right_x-small">
+                        <lightning:input
+                            aura:id="formPaciente" 
+                            label="Cod. Área sin 0"
+                            name="contactCodArea"
+                            pattern="[1-9][0-9]*"
+                            messageWhenPatternMismatch="Sólo se aceptan números"
+                            value="{!v.codAreaContact2}"/>
+                    </div>
+                    <div class="slds-col slds-medium-size_8-of-12 slds-size_8-of-12 slds-p-left_x-small">
+                        <lightning:input
+                            aura:id="formPaciente" 
+                            label="Teléfono (del contacto) sin el 15"
+                            name="contactNumTelefono"
+                            pattern="[0-9]*"
+                            messageWhenPatternMismatch="Sólo se aceptan números"
+                            value="{!v.numTelefonoContact2}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            </div>    
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+                <lightning:input    
+                    class="checkbox"
+                    type="checkbox"
+                    aura:id="form"
+                    label="Contacto Principal"
+                    name="contactoPrincipal"
+                    checked="{!v.contact2.Principal__c}"
+                    disabled="{!v.contact.Principal__c}"/>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            </div>
+        </div>
+    </aura:if>
+    <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+        <aura:if isTrue="{!!v.agregarOtroContacto}">
+            <button
+                id="id-btn-add-contacto-form"
+                class="button"
+                onclick="{!c.agregarContacto}">
+                + Agregar Contacto
+            </button>
+        </aura:if>
+        <aura:if isTrue="{!v.agregarOtroContacto}">
+            <button
+                id="id-btn-delete-contacto-form"
+                class="botonEliminarContacto"
+                onclick="{!c.eliminarContacto}">
+                - Eliminar Contacto
+            </button>
+        </aura:if>
+    </div>
+    <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+        <div class="slds-clearfix slds-m-top_xx-large">
+            <div class="slds-float_right slds-p-right_small">
+                <button
+                    id="id-btn-back-form-contacto"
+                    class="back-button"
+                    onclick="{!c.anterior}">
+                    Volver
+                </button>
+                <button
+                    id="id-btn-next-form-contacto"
+                    class="button"
+                    onclick="{!c.siguiente}">
+                    Siguiente
+                </button>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

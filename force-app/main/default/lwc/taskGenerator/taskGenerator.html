@@ -1,0 +1,47 @@
+<template>
+    <template if:false={showResult}>
+        <lightning-card title="Generador de tareas de visita medica">
+            <lightning-layout horizontal-align="end" vertical-align="end">
+                <div class="slds-size_1-of-5">
+                    <template if:false={empty}>
+                        <lightning-layout-item>
+                            <span>
+                                <lightning-input type="date" name="input1" label="Fecha de las tareas"
+                                    onchange={handleDateChange}>
+                                </lightning-input>
+                            </span>
+                        </lightning-layout-item>
+                    </template>
+                </div>
+                <template if:true={showSpinner}>
+                    <div class="spinner">
+                        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                    </div>
+                </template>
+                <lightning-layout-item>
+                    <template if:true={showButton}>
+                        <lightning-button variant="brand" label="Generar visitas" onclick={insertTasks}
+                            class="slds-p-around_x-small">
+                        </lightning-button>
+                    </template>
+                </lightning-layout-item>
+            </lightning-layout>
+            <p>Pacientes seleccionados: {selectedAccounts}</p>
+            <template if:false={empty}>
+                <div style="height: 500px">
+                    <lightning-datatable data={accounts} columns={columns} key-field="Id"
+                        onrowselection={getSelectedRows} selected-rows={preSelectedRows}>
+                    </lightning-datatable>
+                </div>
+            </template>
+            <div class="defaultValue">
+                <button class="slds-button slds-button_neutral" aria-label="Cancel and close"
+                    onclick={back}>Volver</button>
+            </div>
+        </lightning-card>
+    </template>
+    <br>
+    <template if:true={showResult}>
+        <c-task-generator-modal messagge-from-parent={resultMessage}></c-task-generator-modal>
+    </template>
+</template>

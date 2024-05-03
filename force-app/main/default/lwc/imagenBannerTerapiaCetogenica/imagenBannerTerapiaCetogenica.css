@@ -1,0 +1,36 @@
+.containerImagenBannerTCDesktop{
+    display: initial;
+}
+
+.containerImagenBannerTCMobile{
+    display: none;
+}
+
+.tituloBanner{
+    color: white;
+    font-size: 24px;
+}
+
+.textoBanner{
+    color: white;
+    font-size: 16px;
+}
+
+.lineaBannerTC{
+    border-top: 1px solid white;
+    width:150px;
+    margin-top:1.2%;
+    margin-bottom:1.2%;
+}
+
+@media (max-width: 600px) {
+
+    .containerImagenBannerTCDesktop{
+        display: none;
+    }
+    
+    .containerImagenBannerTCMobile{
+        display: initial;
+    }
+    
+}

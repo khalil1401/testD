@@ -1,0 +1,65 @@
+.THIS {
+}
+
+.THIS .textoTestimonioS{
+    font-family: NunitoRegular;
+    font-size: 1.338333346716672em;
+    line-height: 1.338333346716672em;
+    color: #606060;
+    text-align: justify;
+}
+
+.THIS .textoBoldTestimonioS{
+    font-family: NunitoBold;
+}
+
+.THIS .containerTextoDerTestimonioS{
+    padding-left: 5%;
+}
+
+.THIS .containerTextoIzqTestimonioS{
+    padding-right: 5%;
+}
+
+.THIS .containerImgDerTestimonio{
+    padding-left: 20%;
+}
+
+.THIS .containerImgIzqTestimonio{
+    padding-right: 20%;
+}
+
+.THIS .imgTestimonio{
+    border-radius: 0px 100px 0px 100px;
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+    .THIS .containerTextoDerTestimonioS, .THIS .containerTextoIzqTestimonioS{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .THIS p{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .THIS .containerImgDerTestimonio{
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 0%;
+        padding-bottom: 5%;
+    }
+
+    .THIS .containerImgIzqTestimonio{
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 7%;
+        padding-bottom: 3%;
+    }
+
+    .THIS .imgTestimonio{
+        border-radius: 0px 50px 0px 50px;
+    }    
+}

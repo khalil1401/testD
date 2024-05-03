@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>Paciente Terapia Cetogenica</audienceName>
+    <container>Pacientes Landing</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <profile>paciente terapia cetogénica</profile>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>Profile</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>98ad212b-95f0-41ea-a200-8608ed2dcb6e</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Terapia_Cetognica_Terapia_Cetognica_Pacientes_Page</targetValue>
+        </target>
+        <target>
+            <groupName>62546a05-ffc6-4c7c-bee0-20df2f044efb</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Preguntas_Frecuentes_Terapia_Cetognica_FAQs_Cetognica_Privado_Page</targetValue>
+        </target>
+        <target>
+            <groupName>b92a99f2-9068-44c9-b62e-358fbea5a6f0</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Videos_Terapia_Cetognica_Videos_Cetognica_Privado_Page</targetValue>
+        </target>
+        <target>
+            <groupName>1f57a0da-825a-4a75-8bba-54b0b003ec5f</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Qu_es_la_Terapia_Cetognica_Qu_es_la_Terapia_Cetognica_Privada_Page</targetValue>
+        </target>
+        <target>
+            <groupName>a126307b-ed86-4d4e-86a6-f87fb587a180</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Mapa_Mapa_Privado_Page</targetValue>
+        </target>
+        <target>
+            <groupName>ae490d85-54d8-4906-b8d2-902e9a9e6375</groupName>
+            <priority>1</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Recetas_Terapia_Cetognica_Recetas_Terapia_Cetognica_Privado_Page</targetValue>
+        </target>
+    </targets>
+</Audience>

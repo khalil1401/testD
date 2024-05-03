@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Qu_tipo_de_dieta_le_indicaron__c</name>
+    <picklistValues>
+        <masterLabel>Atkins-Atkins modificada</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BIG</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clasica 4:1</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TCM</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

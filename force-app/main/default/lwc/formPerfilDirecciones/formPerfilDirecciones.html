@@ -1,0 +1,203 @@
+<template>
+    <div style="width: 100%;" class="slds-align_absolute-center fade-in-right-left">
+        <div class="form-datos">
+            <div class="show-mobile">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_1-of-12">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                            style="width: 22px; position: absolute; top: 100px; left: 10px;" onclick={goToPerfilManager}>
+                    </div>
+                    <div class="slds-col slds-size_4-of-12 slds-text-align_right">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/User_Perfil.png"
+                        style="width: 100px;">
+                    </div>
+                    <div class="slds-col slds-size_7-of-12">
+                        <template if:true={paciente}>
+                            <div>
+                                <p class="name-text slds-m-bottom_xxx-small">{paciente.FirstName} {paciente.LastName}</p>
+                                <p class="card-item-text"><span class="card-item-title">DNI: </span>
+                                    <lightning-formatted-number 
+                                        value={paciente.DNI__c}>
+                                    </lightning-formatted-number>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Fecha Nacimiento: </span>
+                                    <lightning-formatted-date-time
+                                        value={paciente.PersonBirthdate}
+                                        year="numeric"
+                                        month="numeric"
+                                        day="numeric">
+                                    </lightning-formatted-date-time>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Telefono: </span>
+                                    {paciente.Phone}
+                                </p>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <div class="show-tablet">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                    style="width: 22px; position: relative; top: 25px; left: -50px; cursor: pointer;" onclick={goToPerfilManager}>
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_2-of-12">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/User_Perfil.png"
+                            style="width: 100px;">
+                    </div>
+                    <div class="slds-col slds-size_10-of-12">
+                        <template if:true={paciente}>
+                            <div>
+                                <p class="name-text slds-m-bottom_xx-small">{paciente.FirstName} {paciente.LastName}</p>
+                                <p class="card-item-text"><span class="card-item-title">DNI: </span>
+                                    <lightning-formatted-number 
+                                        value={paciente.DNI__c}>
+                                    </lightning-formatted-number>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Fecha Nacimiento: </span>
+                                    <lightning-formatted-date-time
+                                        value={paciente.PersonBirthdate}
+                                        year="numeric"
+                                        month="numeric"
+                                        day="numeric">
+                                    </lightning-formatted-date-time>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Telefono: </span>
+                                    {paciente.Phone}
+                                </p>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_5-of-12">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Direccion_Entrega.png"
+                                class="icon-title-form">
+                        </div>
+                        <div class="slds-col slds-size_7-of-12">
+                            <span class="text-title-form">Dirección de entrega</span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-m-top_small slds-m-bottom_large slds-align_absolute-center">
+                            <div class="hr-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <template if:true={direcciones}>
+                    <template for:each={direcciones} for:item="direccion">
+                        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center" key={direccion.id}>
+                            <div class="card-direccion slds-grid slds-wrap">
+                                <div class="slds-col slds-size_3-of-12 slds-align_absolute-center" 
+                                    style="background: linear-gradient(#C09AC2, #313183); height:100%; border-radius: 8px 0px 0px 8px;">
+                                    <div class="slds-text-align_center">
+                                        <lightning-icon 
+                                            icon-name="utility:checkin" 
+                                            alternative-text="checkin!"
+                                            variant="inverse"
+                                            size="small"
+                                            title="checkin">
+                                        </lightning-icon>
+                                        <template if:true={direccion.principal}>
+                                            <p class="icon-text-card-contact">Principal</p>
+                                        </template>
+                                        <template if:false={direccion.principal}>
+                                            <p class="icon-text-card-contact">Secundaria</p>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_9-of-12">
+                                    <div class="card-direccion-detalle slds-grid slds-wrap slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_1-of-1">
+                                            <div class="slds-clearfix">
+                                                <template if:true={direccion.principal}>
+                                                    <div class="slds-float_left">
+                                                        <span class="dir-pred-text">Dirección Predeterminada</span>
+                                                    </div>
+                                                </template>
+                                                <div class="slds-float_right">
+                                                    <template if:false={direccion.principal}>
+                                                        <lightning-icon 
+                                                            class="action-card"
+                                                            data-id={direccion.id} 
+                                                            onclick={deleteDireccion}
+                                                            icon-name="utility:delete"
+                                                            alternative-text="Delete"
+                                                            size="x-small"
+                                                            title="Delete">
+                                                        </lightning-icon>
+                                                    </template>
+                                                    <lightning-icon 
+                                                        class="action-card"
+                                                        data-id={direccion.id} 
+                                                        onclick={selectDireccion}
+                                                        icon-name="utility:edit"
+                                                        alternative-text="Edit" 
+                                                        size="x-small"
+                                                        title="Edit">
+                                                    </lightning-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1 card-direccion-data">
+                                            <span class="direccion-text">{direccion.direccion}</span>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1">
+                                            <div class="slds-clearfix">
+                                                <div class="slds-float_left">
+                                                    <span class="localidad-text">{direccion.localidad}</span>
+                                                </div>
+                                                <div class="slds-float_right">
+                                                    <span class="localidad-text">{direccion.cp}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-1">
+                                            <div class="slds-clearfix">
+                                                <div class="slds-float_left">
+                                                    <span class="localidad-text">{direccion.municipio}</span>
+                                                </div>
+                                                <div class="slds-float_right">
+                                                    <span class="localidad-text">{direccion.provincia}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_large slds-align_absolute-center">
+                    <button
+                        class="add-button"
+                        onclick={addNewDireccion}
+                        disabled={addButtonDisabled}>
+                        Agregar nueva dirección
+                    </button>
+                </div>
+            </div>
+        </div>
+        <template if:true={showModal}>
+            <c-modal-perfil-direcciones
+                direccion={selectedDireccion}
+                paciente-id={paciente.Id}
+                onsavedireccion={saveDireccion}
+                onclosemodal={closeModal}>
+            </c-modal-perfil-direcciones>
+        </template>
+        <template if:true={showModalEliminar}>
+            <c-modal-eliminacion-registro
+                record-id={paciente.Id}
+                object="Direccion"
+                onclosemodal={closeModal}>
+            </c-modal-eliminacion-registro>
+        </template>
+        <template if:true={showModalConfirmacion}>
+            <c-modal-confirmar-direccion
+                direccion={direccionObject}
+                onclosemodalconf={closeModal}>
+            </c-modal-confirmar-direccion>
+        </template>
+    </div>
+</template>

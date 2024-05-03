@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Ambiente_de_uso_APM__c</name>
+    <picklistValues>
+        <masterLabel>Comunitario</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Domiciliario</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ninguno</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

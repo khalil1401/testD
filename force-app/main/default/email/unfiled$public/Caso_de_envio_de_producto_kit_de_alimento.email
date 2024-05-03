@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Estimado,<div><br></div><div>Le informamos que se ha enviado un kit de inicio con los siguientes datos:</div><div><br></div><div>Paciente:&nbsp;{!Account.ID_de_paciente__c}&nbsp;<span style="font-size: 12pt;">{!Account.Nombre_oculto__c}&nbsp;</span><span style="font-size: 12pt;">{!Account.Apellido_oculto__c}</span></div><div>Nro de cupón:&nbsp;{!Case.Numero_de_cupon__c}</div><div>Obra social:&nbsp;{!Account.Obra_social__c}</div><div>Profesional que lo indica:&nbsp;{!Case.Profesional__c}</div><div>Fórmula de consumo:&nbsp;{!Case.Producto__c}</div><div>Dirección de envío:&nbsp;{!Account.Calle__c},&nbsp;{!Account.Localidad__c},&nbsp;{!Account.Provincia__c}</div><div><br></div><div>Para ver más detalles ingrese a:&nbsp;{!Case.Link}</div><div>Saludos.</div>]]></td>
+</tr>
+</table>

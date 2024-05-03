@@ -1,0 +1,365 @@
+<template>
+    <div class="div-container-tips-metabolicos">
+        <div class="slds-grid slds-wrap">
+            <template for:each={tips} for:item="tip">
+                <div class="slds-col slds-medium-size_3-of-12 slds-size_1-of-1" key={tip.id}>
+                    <div class="slds-m-around_x-small">
+                        <c-card-tip-metabolicos
+                            tip-id={tip.id}
+                            title={tip.title}
+                            image={tip.img}
+                            onclicktip={handleClickTip}>
+                        </c-card-tip-metabolicos>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+    <div data-id="description-tip-meta" class="div-description-tip-meta slds-m-top_xx-large slds-p-top_xx-large slds-p-bottom_xx-large">
+        <div data-id="0">
+            <div class="slds-grid slds-wrap">    
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12 slds-size_1-of-1">
+                    <p class="title-description-text-tip-meta slds-m-bottom_x-large">Actividad Física</p>
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-medium-size_8-of-12 slds-size_1-of-1 slds-p-right_medium">
+                            <br><p class="description-text-tip-meta">La "actividad física" no debe confundirse con el "ejercicio". Vamos a diferenciarlos:</p>
+                            <br><p class="description-text-tip-meta">El ejercicio, por un lado, es un tipo de actividad física que se planifica, es estructurada, repetitiva y se realiza con un objetivo específico relacionado con la mejora o el mantenimiento de uno o más componentes de la aptitud física.</p>
+                            <br><p class="description-text-tip-meta">Por otro lado, la actividad física incluye además cualquier otra actividad que implique movimiento corporal y gasto de energía. Por ejemplo: momentos de juego activo (bailar, jugar a las escondidas, la rayuela, etc.), trabajo que requiera movimiento, caminar, realizar las tareas domésticas y cualquier otra actividad recreativa o deportiva.</p>
+                        </div>
+                        <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                            <img class="img-description-tip-meta" src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_4/PP-Metab%C3%B3licos%20-Icono-Mujer-Corriendo.png"/>
+                        </div>
+                    </div>
+                    <br><p class="subtitle-description-text-tip-meta slds-m-top_x-large">¿Puedo realizar actividad física si tengo un ECM?</p>
+                    <br><p class="description-text-tip-meta">Es fundamental que consultes y lo charles con tu equipo médico tratante. Es muy probable que, dentro de la amplia gama de actividad física que existe, puedan encontrar juntos aquella que se adapte mejor a tus posibilidades y necesidades.</p>
+                    <br><p class="description-text-tip-meta">Además, es importante tener en cuenta que durante la práctica deportiva puede presentarse lo que se llama “catabolismo proteico”, que es la ruptura de proteínas que forman parte de la masa muscular, sobre todo en aquellas prácticas muy intensas o de larga duración. Tu equipo médico será quien te brinde todas las indicaciones que necesites para poder sumar movimiento a tu vida evitando estas complicaciones.</p>
+                    <br><p class="description-text-tip-meta">Tiene muchos beneficios para todas las personas y, junto con una alimentación adecuada, contribuye a mantener un estilo de vida lo más saludable posible. Los beneficios no sólo se presentan en el área física, sino también en el aprendizaje, las habilidades de pensamiento, el crecimiento y el desarrollo de niños y adolescentes. Además, ayuda a reducir los síntomas de depresión y ansiedad y mejora el bienestar general.</p>
+                    <br><p class="subtitle-description-text-tip-meta slds-m-top_x-large">¿Cuáles son los beneficios de la actividad física en pacientes con ECM?</p>
+                    <br><p class="description-text-tip-meta">Siempre que se realice bajo control médico y de forma adaptada al paciente:</p>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                class="check-meta">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12">
+                            <br><p class="description-text-tip-meta">Fomenta el desarrollo del equilibrio, la agilidad, la mayor estabilidad y la coordinación de movimientos.</p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                class="check-meta">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12">
+                            <br><p class="description-text-tip-meta">Favorece la integración de estos pacientes con el resto de sus pares.</p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                class="check-meta">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12">
+                            <br><p class="description-text-tip-meta">Ofrece la posibilidad de establecer objetivos posibles de lograr, proyectando nuevos objetivos día a día para poder superarse y enfrentarse mejor a la vida diaria. </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                class="check-meta">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12">
+                            <br><p class="description-text-tip-meta">Contribuye a la autosuperación y el fortalecimiento de la autoestima. </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                class="check-meta">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12">
+                            <br><p class="description-text-tip-meta">Brinda la posibilidad de desarrollar mejores destrezas sociales y ayuda a vencer la timidez. </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                class="check-meta">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12">
+                            <br><p class="description-text-tip-meta">Los deportes de equipo ayudan a reconocer las particularidades del paciente y también de sus compañeros, y de esta manera ayudan a disminuir el estigma que supone reconocer la propia enfermedad y a aceptar a los demás y a sı ́mismos. Permiten también el desarrollo de la disciplina, mediante el respeto a los normas, técnicas e indicaciones.</p>
+                        </div>
+                        <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1 slds-align_absolute-center slds-m-top_medium">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos-Bicicleta.png"/>
+                        </div>
+                        <div class="slds-col slds-medium-size_8-of-12 slds-size_1-of-1 slds-m-top_medium">
+                            <br><p class="description-text-tip-meta">Todo lo mencionado anteriormente genera beneficios tanto desde el punto de vista físico como psíquico, emocional y social.</p>
+                            <br><p class="description-text-tip-meta">Es muy importante que la actividad física sea introducida de forma gradual, atendiendo a los gustos y capacidades de los pacientes y bajo estricto control del equipo médico. </p>
+                            <br><p class="description-text-tip-meta">Y por sobre todo, hacerlo desde la perspectiva de que pueda contribuir a mantener un estilo de vida saludable, compartido, y divertido!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+            <br><p class="text-fuentes-ctm-meta slds-m-top_x-large">
+                Bibliografía:
+                <br>
+                - Serrano, M.; Antonia, V.; Campistol, J. Errores congénitos del metabolismo y práctica deportiva. España, 2010. 
+                <br>
+                - Pratt, M. Recomendaciones globales de la actividad física para la salud en niños y adolescentes. OMS, Julio 2010. 
+                <br>
+                - Sociedad Argentina de Pediatría. Día mundial de la actividad física. 2021 Disponible en https://www.sap.org.ar/novedades/30/6-de-abril-da-mundial-de-la-actividad-fsica.html 
+                <br>
+                - Sociedad Argentina de Pediatría. Comité Nacional de Medicina del Deporte Infanto Juvenil. ¿Sabe usted recomendar actividad física en cada edad? 
+                <br>
+                - Sociedad Argentina de Pediatría. El deporte, un juego en serio. Arch.argent.pediatr 2003; 101(4)
+            </p>
+        </div>
+        <div data-id="1" style="display: none;">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12 slds-size_1-of-1">
+                    <p class="title-description-text-tip-meta slds-m-bottom_x-large">Alimentación perceptiva</p>
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-medium-size_8-of-12 slds-size_1-of-1 slds-p-right_medium">
+                            <br><p class="subtitle-description-text-tip-meta slds-m-top_x-large">¿Qué es?</p>
+                            <br><p class="description-text-tip-meta">Bentley y Wasserman y DiSantis et al. la definen como un proceso que implica reciprocidad entre el niño y el cuidador durante el proceso de alimentación especialmente en los primeros años de vida.</p>
+                            <br><p class="description-text-tip-meta">Esta etapa es conocida como una ventana de oportunidad para que los niños aprendan, acepten y adquieran hábitos saludables que podrán continuar durante el resto de su vida.</p>
+                        </div>
+                        <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                            <img class="img-description-tip-meta" src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_4/PP-Metab%C3%B3licos%20-Icono-Alimentacion-perceptiva.png"/>
+                        </div>
+                    </div>
+                    <br><p class="subtitle-description-text-tip-meta slds-m-top_x-large">La alimentación perceptiva, se puede dividir en tres momentos distintos: </p>
+                    <br><p class="description-text-tip-meta"><span style="color: #907DD6; font-family: MontserratSemiBold;">1)</span> El bebé o niño pequeño indica que desea comer ya sea por alguna expresión facial, vocalización o movimiento. </p>
+                    <br><p class="description-text-tip-meta"><span style="color: #907DD6; font-family: MontserratSemiBold;">2)</span> El cuidador reconoce estas señales y responde alimentándolo de acuerdo a la etapa del desarrollo del niño. Además, también reconoce sus señales de saciedad, por lo que entiende en qué momento finalizar. </p>
+                    <br><p class="description-text-tip-meta"><span style="color: #907DD6; font-family: MontserratSemiBold;">3)</span> El cuidador reconoce estas señales y responde alimentándolo de acuerdo a la etapa del desarrollo del niño. Además, también reconoce sus señales de saciedad, por lo que entiende en qué momento finalizar. </p>
+                    <br><br><p class="description-text-tip-meta">Es decir que, en definitiva, son los cuidadores quienes deben decidir cuándo, cómo y cuánto alimentar al niño, pero siempre en base a sus señales de hambre y saciedad. </p>
+                    <br><p class="description-text-tip-meta">De esta manera, se favorece el desarrollo de habilidades de autorregulación en los niños, permitiendo tener más autonomía a la hora de alimentarse a medida que van creciendo. </p>
+                    <br><p class="description-text-tip-meta">Es importante que además de tener en cuenta estas cosas, siempre consultes con el equipo médico tratante para que sean ellos quienes puedan indicarte cuáles son los alimentos recomendados según la etapa del desarrollo del niño.</p>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+            <br><p class="text-fuentes-ctm-meta slds-m-top_x-large">
+                Fuente: 
+                <br>
+                - Comité de Lactancia Materna y Comité de Nutrición de la Asociación Española de Pediatría. Recomendaciones de la Asociación Española de Pediatría sobre la Alimentación Complementaria. 2018. 
+                <br>
+                - Pérez-Escamilla R, Segura-Pérez S, Lott M. Pautas de alimentación para niñas y niños menores de dos años: Un enfoque de crianza perceptiva. Durham, NC: Healthy Eating Research, 2017. 
+                <br>
+                - Organización Panamericana de la Salud. Principios de orientación para la alimentación complementaria del niño amamantado. Washington DC, 2003.
+            </p>
+        </div>
+        <div data-id="2" style="display: none;">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12 slds-size_1-of-1">
+                    <p class="title-description-text-tip-meta slds-m-bottom_x-large">Baby Led Weaning</p>
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-medium-size_8-of-12 slds-size_1-of-1 slds-p-right_medium">
+                            <br><p class="subtitle-description-text-tip-meta slds-m-top_x-large">¿Qué es BLW?</p>
+                            <br><p class="description-text-tip-meta">Es una estrategia de alimentación complementaria que hace hincapié en que el bebé sea quien lleva el alimento a su boca, en trozos, en lugar de la clásica alimentación con cuchara por parte de los cuidadores.</p>
+                            <br><p class="description-text-tip-meta">El BLW favorece el desarrollo de habilidades motoras e impactaría en los hábitos alimentarios de los niños debido a que de esta manera ellos pueden aprender a regular mejor la ingesta de alimentos y a preferir con mayor aceptación alimentos como frutas y verduras, fundamentales en la alimentación baja en proteínas.</p>
+                            <br><p class="description-text-tip-meta">Además, facilita la integración del bebé a la mesa familiar pudiendo comer en el mismo momento que el resto de la familia. </p>
+                        </div>
+                        <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                            <img class="img-description-tip-meta" src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_4/PP-Metab%C3%B3licos%20-Icono-Bebe.png"/>
+                        </div>
+                    </div>
+                    <br><p class="subtitle-description-text-tip-meta slds-m-top_x-large">¿Existe algún riesgo al utilizar el BLW? </p>
+                    <br><p class="description-text-tip-meta">Sí, por eso es muy importante que sea cuál sea el método de incorporación de alimentos complementarios que elijas, siempre lo converses antes con el equipo médico tratante. </p>
+                    <br><p class="description-text-tip-meta">El principal riesgo es el de asfixia, para lo cual se aconseja evitar alimentos de forma esférica o de tamaños muy chicos. </p>
+                    <br><p class="description-text-tip-meta">En general, los alimentos que se ofrecen deben ser de consistencia blanda, cortados en forma alargada, de tal manera que el bebé pueda tomarlo con la mano. </p>
+                    <br><p class="description-text-tip-meta">Es fundamental acompañar al bebé y observarlo mientras está comiendo, nunca dejarlo solo con los alimentos al alcance de su mano. También es importante que su desarrollo psicomotor sea adecuado, es decir, que pueda mantenerse sentado, con la cabeza erguida, tomar objetos con su mano, llevárselas a su boca, mostrar interés por la comida y haber perdido lo que se conoce como “reflejo de extrusión” que es el movimiento que los bebés hacen con su lengua empujando hacia afuera cualquier tipo de sólido. </p>
+                    <br><p class="description-text-tip-meta">Por todo esto, recordá siempre consultar con los profesionales de salud, quienes podrán ayudarte a encontrar la mejor forma de llevar adelante la alimentación de tu bebé.</p>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+            <br><p class="text-fuentes-ctm-meta slds-m-top_x-large">
+                Fuente: 
+                <br>
+                - Comité de Lactancia Materna y Comité de Nutrición de la Asociación Española de Pediatría. Recomendaciones de la Asociación Española de Pediatría sobre la Alimentación Complementaria. Noviembre de 2018. 
+                <br>
+                - Romero Velardea, E. et al. Consenso para las prácticas de alimentación complementaria en lactantes sanos. México, 2016.
+            </p>
+        </div>
+        <div data-id="3" style="display: none;">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon 
+                            icon-name="utility:chevronleft"
+                            alternative-text="Back"
+                            title="Back"
+                            icon-class="dark"
+                            size="large"
+                            variant="bare"
+                            onclick={previousStep}
+                            disabled={previousIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+                <div class="slds-col slds-medium-size_10-of-12 slds-size_1-of-1">
+                    <p class="title-description-text-tip-meta slds-m-bottom_x-large">¡Mi hijo no quiere comer!</p>
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-medium-size_8-of-12 slds-size_1-of-1 slds-p-right_medium">
+                            <br><p class="subtitle-description-text-tip-meta slds-m-top_x-large">¿Te ha pasado alguna vez?</p>
+                            <br><p class="description-text-tip-meta">El rechazo a comer alimentos nuevos o neofobia es algo que suele pasar en los niños. </p>
+                            <br><p class="description-text-tip-meta">Existen dos períodos en los que suele producirse:</p>
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                        class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-tip-meta">Durante el inicio de la alimentación complementaria entre los 6 meses al primer año de vida.</p>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                        class="check-meta">
+                                </div>
+                                <div class="slds-col slds-size_11-of-12">
+                                    <br><p class="description-text-tip-meta">Alrededor de los 3 años coincidiendo con la etapa del desarrollo del “yo”</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                            <img class="img-description-tip-meta" src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_4/PP-Metab%C3%B3licos%20-Icono-No-comer.png"/>
+                        </div>
+                    </div>
+                    <br><p class="description-text-tip-meta">La buena noticia es que esta neofobia no es irreversible, sino que puede reducirse ante la exposición reiterada al alimento. </p>
+                    <br><p class="description-text-tip-meta">Generalmente los alimentos vegetales son los que suelen rechazarse. </p>
+                    <br><p class="description-text-tip-meta">Entonces, ¿Cómo hago para que mi bebé incorpore vegetales a su dieta? (mayores a 6 meses una vez que su médico le indica comenzar con la alimentación complementaria).</p>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                class="check-meta">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12">
+                            <br><p class="description-text-tip-meta">Si lo rechaza, no dejes de intentar. Está comprobado que se pueden requerir entre 8 a 10 (incluso pueden ser hasta 15) contactos con el alimento para que el bebé o niño lo acepte.</p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos%20-Tilde.png"
+                                class="check-meta">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12">
+                            <br><p class="description-text-tip-meta">Seguí intentando sin obligarlo. Probá distintas formas de presentar el alimento: en papillas, mezclado con otros vegetales o alimentos, ralladas, al horno, grilladas, etc. Tratá de que el plato luzca divertido.</p>                    
+                        </div>
+                        <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1 slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/IMAGENES_RESTANTES/PP-Metab%C3%B3licos-Verduras.png">
+                        </div>
+                    </div>
+                    <br><p class="description-text-tip-meta">Es importante que los niños no sean obligados a comer porque de ser así probablemente desarrollen más rechazo al alimento. </p>
+                    <br><p class="description-text-tip-meta">Aprovechá las especias y vegetales aromáticos para condimentar tus comidas. Podés elegir opciones como: pimentón dulce, azafrán, canela, cúrcuma, provenzal, ají molido, orégano. De esta forma será más saludable y sabroso. La clave es ir probando distintas variedades, incorporándolas a tus preparaciones.</p>
+                </div>
+                <div class="slds-col slds-medium-size_1-of-12">
+                    <div class="desktop" style="text-align: center; margin-top: 400px;">
+                        <lightning-button-icon
+                            icon-name="utility:chevronright"
+                            alternative-text="Next"
+                            title="Next"
+                            size="large"
+                            variant="bare"
+                            onclick={nexStep}
+                            disabled={nextIcon}>
+                        </lightning-button-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="slds-grid slds-wrap slds-p-top_x-large slds-p-bottom_medium">
+                <div class="slds-col slds-size_6-of-12 slds-align_absolute-center">
+                    <lightning-button-icon 
+                        icon-name="utility:chevronleft"
+                        alternative-text="Back"
+                        title="Back"
+                        icon-class="dark"
+                        size="large"
+                        variant="bare"
+                        onclick={previousStep}
+                        disabled={previousIcon}>
+                    </lightning-button-icon>
+                </div>
+                <div class="slds-col slds-size_6-of-12 slds-align_absolute-center">
+                    <lightning-button-icon
+                        icon-name="utility:chevronright"
+                        alternative-text="Next"
+                        title="Next"
+                        size="large"
+                        variant="bare"
+                        onclick={nexStep}
+                        disabled={nextIcon}>
+                    </lightning-button-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

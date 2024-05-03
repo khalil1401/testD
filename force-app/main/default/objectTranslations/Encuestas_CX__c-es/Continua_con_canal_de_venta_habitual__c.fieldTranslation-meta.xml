@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Continua_con_canal_de_venta_habitual__c</name>
+    <picklistValues>
+        <masterLabel>Habitualmente cambia el canal de compra, más allá del reclamo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Le resulta indistinto</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Si</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

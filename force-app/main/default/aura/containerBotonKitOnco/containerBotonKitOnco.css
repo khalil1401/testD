@@ -1,0 +1,375 @@
+.THIS {
+    border-radius: 10px 10px 10px 10px;
+}
+
+.THIS .botonKitDeInicio{
+    background: linear-gradient(90deg, rgba(152, 123, 217, 1) 0%,  rgba(110,131,229,1) 100%);
+    border-color: #EBEBEB;
+    border-radius: 10px 10px 10px 10px;
+    font-family:MontserratSemiBold;
+    font-size: 22px;
+    border: transparent;
+    color: white;
+    line-height: 1.875rem;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.THIS .botonKitDeInicioAlergia{
+    background: linear-gradient(0deg, rgba(101,56,149,1) 0%, rgba(145,108,172,1) 50%, rgba(179,148,190,1) 100%);    border-color: #EBEBEB;    
+    border-radius: 10px 10px 10px 10px;
+    font-family:MontserratBlack;
+    border: transparent;
+    color: white;
+    line-height: 1.875rem;
+    font-size: 30px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.THIS .botonKitDeInicioMetabolicos{
+    background: linear-gradient(90deg, rgba(152, 123, 217, 1) 0%,  rgba(110,131,229,1) 100%);
+    border-color: #EBEBEB;
+    border-radius: 10px 10px 10px 10px;
+    font-family:MontserratBlack;
+    font-size: 1.875rem;
+    border: transparent;
+    color: white;
+    line-height: 1.875rem;
+    padding: 2%;
+}
+
+.THIS .boton-kit-cetogenica{
+    background: #3DC3D6;
+    border-color: #3DC3D6;
+    color: white;
+    border: transparent;
+    line-height: 1.875rem;
+    border-radius: 10px 10px 10px 10px;
+    font-family:MontserratBlack;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    padding: 2%;
+}
+
+.THIS .boton-kdi-desafios{
+    background: transparent linear-gradient(90deg, #522582 0%, #62398D 52%) 0% 0% no-repeat padding-box;
+    border-color: #EBEBEB;
+    border-radius: 10px 10px 10px 10px;
+    font-family:MontserratBlack;
+    font-size: 30px;
+    border: transparent;
+    color: white;
+    line-height: 1.875rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.THIS .boton-kdi-digestivos{
+    background: transparent linear-gradient(90deg, #6552AC 0%, #7970CEF0 43%, #777BCF 81%, #7583D0 100%) 0% 0% no-repeat padding-box;
+    border-color: #EBEBEB;
+    border-radius: 10px 10px 10px 10px;
+    font-family:MontserratBlack;
+    font-size: 30px;
+    border: transparent;
+    color: white;
+    line-height: 1.875rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.THIS .tituloAzulContainerBotonKitOnco{
+    font-family:MontserratBlack;
+    font-size: 35px;
+    color: #293896;
+}
+
+.THIS .tituloRosaContainerBotonKitOnco{
+    color:#C09AC2;
+    font-family:PacificoRegular;
+    font-size:60px;
+}
+
+.THIS .title-cbkdi-blue-tc{
+    font-family: LeavesAndGround;
+    font-size: 4rem;
+    color: #3DC3D6;
+}
+
+.THIS .title-cbkdi-white-tc{
+    font-family: MontserratSemiBold;
+    color: white;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.THIS .textoContainerBotonKitOnco{
+    font-family:MontserratRegular;
+    color: #606060;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.THIS .tituloPacificoRegularAlergia{
+    font-family: PacificoRegular;
+    color:#B294BE;
+    font-size: 90px;
+    line-height: 70px;
+    text-align: left;
+    padding-left: 20%;
+    padding-top: 3%;
+}
+
+.THIS .tituloMontserratBlackAlergia{
+    font-family:MontserratBlack;
+    font-size: 60px;
+    color:#293896;
+    line-height: 70px;
+    text-align: right;
+    padding-right: 20%;
+    padding-bottom: 3%;
+}
+
+.THIS .textoMontserratAlergia{
+    font-family:MontserratRegular;
+    color: #606060;
+    font-size: 22px;
+    line-height: 30px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.THIS .title-pacifico-bki-meta{
+    font-family: PacificoRegular;
+    color:#907ED6;
+    font-size: 5.625rem;
+    line-height: 4.375rem;
+}
+
+.THIS .title-montserrat-bki-meta{
+    font-family:MontserratBlack;
+    color:#4C2F92;
+    font-size: 3.75rem;
+    line-height: 4.375rem;
+}
+
+.THIS .text-bki-meta{
+    font-family:MontserratRegular;
+    color: #606060;
+    font-size: 1.375rem;
+    margin-top: 4%;
+}
+
+.THIS .text-bki-cetogenica{
+    font-family:MontserratRegular;
+    color: white;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+}
+
+.THIS .text-bki-cetogenica{
+    font-family:MontserratRegular;
+    color: white;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+}
+
+.THIS .title-montserrat-bki-desafios{
+    font-family:MontserratBlack;
+    color: #502777;
+    font-size: 60.59px;
+    line-height: 70.28px;
+}
+
+.THIS .title-pacifico-bki-desafios {
+    font-family: PacificoRegular;
+    color: #9A82B7;
+    font-size: 90px;
+    line-height: 70px;
+    text-align: right;
+    margin-right: 20%;
+}
+
+.THIS .text-bki-desafios {
+    font-family: MontserratRegular;
+    color: #606060;
+    font-size: 22px;
+    line-height: 30px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.THIS .title-montserrat-bold-bki-digestivos {
+    font-family:MontserratBlack;
+    color: #3DC6F0;
+    font-size: 60.59px;
+    line-height: 70.28px;
+}
+
+.THIS .title-montserrat-regular-bki-digestivos {
+    font-family:MontserratRegular;
+    color: #51338B;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: right;
+    margin-right: 20%;
+}
+
+@media (max-width: 768px) {
+    .THIS .tituloPacificoRegularAlergia{
+        font-size: 70px;
+        line-height: 60px;
+        padding-left: 5%;
+    }
+    
+    .THIS .tituloMontserratBlackAlergia{
+        font-size: 55px;
+        line-height: 60px;
+        padding-right: 0%;
+    }
+
+    .THIS .botonKitDeInicioAlergia{
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 600px) {
+    .THIS {
+        border-radius: 0px 0px 0px 0px;
+        padding-top: 8%;
+    }
+
+    .THIS .botonKitDeInicio {
+        border-radius: 10px 10px 10px 10px;
+        font-size: 18px;
+        line-height: 24px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .THIS .tituloAzulContainerBotonKitOnco{
+        font-size: 8vw;
+        line-height: 4.5vh;
+    }
+
+    .THIS .tituloRosaContainerBotonKitOnco{
+        font-size: 12vw;
+        line-height: 4vh;
+    }
+
+    .THIS .textoContainerBotonKitOnco{
+        margin-top: 5%;
+        font-size: 15px;
+        line-height: 23px;
+    }
+
+    .THIS .tituloPacificoRegularAlergia{
+        font-size: 31pt;
+        line-height: 25pt;
+        text-align: left !important;
+        padding-left: 0% !important;
+    }
+    
+    .THIS .tituloMontserratBlackAlergia{
+        font-size: 22pt;
+        line-height: 25pt;
+        text-align: right !important;
+        padding-right: 0% !important;
+        padding-top: 2%;
+    }
+    
+    .THIS .textoMontserratAlergia{
+        font-size: 15pt;
+        line-height: 18pt;
+        padding-left: 5%;
+        padding-right: 5%;    
+    }
+
+    .THIS .botonKitDeInicioAlergia{
+        font-family: MontserratBlack;
+        font-size: 20pt;
+        line-height: 23pt;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .THIS .title-pacifico-bki-meta{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    
+    .THIS .title-montserrat-bki-meta{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    .THIS .botonKitDeInicioMetabolicos{
+        line-height: 2rem;
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .THIS .title-montserrat-bki-desafios{
+        font-size: 29pt;
+        line-height: 30pt;
+    }
+    
+    .THIS .title-pacifico-bki-desafios{
+        font-size: 32pt;
+        line-height: 30pt;
+        margin-right: 0%;
+    }
+    
+    .THIS .text-bki-desafios{
+        font-size: 15pt;
+        line-height: 18pt;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .THIS .title-montserrat-bold-bki-digestivos {
+        font-size: 29pt;
+        line-height: 30pt;
+    }
+    
+    .THIS .title-montserrat-regular-bki-digestivos {
+        font-size: 29pt;
+        line-height: 30pt;
+        margin-right: 5%;
+    }
+
+    .THIS .boton-kdi-desafios{
+        font-size: 18pt;
+        line-height: 21pt;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .THIS .boton-kdi-digestivos{
+        font-size: 18pt;
+        line-height: 21pt;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

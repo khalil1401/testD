@@ -1,0 +1,119 @@
+<aura:component implements="forceCommunity:layout">
+
+    <aura:attribute name="container1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container2" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container3" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container4" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container5" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container6" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container7" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container8" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container9" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container10" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container11" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container12" type="Aura.Component[]" required="false"/>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container1}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1" id="top-dgl-page">
+            {!v.container2}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container3}
+        </div>
+        
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container4}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1">
+            <div class="div-home-layout-dig">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_2-of-12 slds-align_absolute-center slds-m-top_x-large slds-p-around_medium desktop">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/PP-Digestivos-Inicio-Icono-Titulo-Mobile%403x.png"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_x-large desktop">
+                        <p class="title-dig">
+                            ¿Qué son los trastornos digestivos funcionales?
+                        </p>
+                        <p class="text-dig slds-m-top_medium">
+                            Los <span style="font-family: MontserratSemiBold;">Trastornos Digestivos Funcionales o TDFs</span> son un grupo de síntomas relacionados con el sistema digestivo que suelen ser crónicos o recurrentes. Estos síntomas no tienen una causa estructural o bioquímica específica, pero pueden afectar significativamente la calidad de vida tanto del niño como de su familia.
+                        </p>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-align_absolute-center slds-m-top_x-large mobile">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/PP-Digestivos-Inicio-Icono-Titulo-Mobile%403x.png"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_x-large slds-p-left_small mobile">
+                        <p class="title-dig">
+                            ¿Qué son los trastornos digestivos funcionales?
+                        </p>
+                    </div>
+                    <div class="slds-col slds-size_12-of-12 slds-m-top_large mobile">
+                        <p class="text-dig slds-m-top_medium">
+                            Los <span style="font-family: MontserratSemiBold;">Trastornos Digestivos Funcionales o TDFs</span> son un grupo de síntomas relacionados con el sistema digestivo que suelen ser crónicos o recurrentes. Estos síntomas no tienen una causa estructural o bioquímica específica, pero pueden afectar significativamente la calidad de vida tanto del niño como de su familia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container6}
+        </div>
+        
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="slds-grid slds-wrap div-cards-home-layout-dig">
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large slds-m-bottom_x-large slds-text-align_center">
+                    <p class="title-home-layout-dig">
+                        Te invitamos a conocer más acerca de los TDFs:
+                    </p>
+                    <hr class="linea-home-layout-dig slds-align_absolute-center"/>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-p-around_large">
+                    {!v.container7}
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-p-around_large">
+                    {!v.container8}
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-p-around_large">
+                    {!v.container9}
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+            {!v.container10}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-m-top_x-large slds-m-bottom_x-large">
+            <button 
+                data-seccion="top-dgl-page"
+                class="back-button-kdi-dig"
+                onclick="{!c.goToDiv}">
+                <!--
+            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/2_INICIO/CONSTIPACION/PP-Digestivos-Inicio-Constipacion-Flecha%402x.png"
+                style="width: 25px; transform: rotate(90deg);"/>
+                -->
+            <lightning:icon 
+                class="icon-up"
+                iconName="utility:chevronup"
+                size="small"
+                alternativeText="up"/>
+                VOLVER ARRIBA
+            </button>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container11}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+            {!v.container12}
+        </div>
+    </div>
+
+</aura:component>

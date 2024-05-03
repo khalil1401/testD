@@ -1,0 +1,32 @@
+<design:component label="Community Carousel">
+
+    <design:attribute name="componentHeight" label="Alto del componente" required="true"/>
+    <design:attribute name="componentMobileHeight" label="Alto del componente - Mobile" required="true"/>
+    
+    <!-- Images -->
+    <design:attribute name="scrollDuration" label="Intervalo de tiempo entre imagenes en segundos"/>
+    
+    <!-- Image 1 -->
+	<design:attribute name="imageName1" label="Nombre del recurso estatico de la primer imagen" required="true"/>
+	<design:attribute name="imagePath1" label="Path del recurso estatico de la primer imagen" description="Utilizar en caso de que el recuso estatico sea un archivo comprimido"/>
+    
+    <!-- Image2 -->
+    <design:attribute name="imageName2" label="Nombre del recurso estatico de la segunda imagen"/>
+	<design:attribute name="imagePath2" label="Path del recurso estatico de la segunda imagen" description="Utilizar en caso de que el recuso estatico sea un archivo comprimido"/>
+    <design:attribute name="redirectPath2" label="Link para redireccionar"/>
+    
+    <!-- Image3 -->
+    <design:attribute name="imageName3" label="Nombre del recurso estatico de la tercer imagen"/>
+	<design:attribute name="imagePath3" label="Path del recurso estatico de la tercer imagen" description="Utilizar en caso de que el recuso estatico sea un archivo comprimido"/>
+    <design:attribute name="redirectPath3" label="Link para redireccionar"/>
+	
+     <!-- Image4 -->
+    <design:attribute name="imageName4" label="Nombre del recurso estatico de la cuarta imagen"/>
+	<design:attribute name="imagePath4" label="Path del recurso estatico de la cuarta imagen" description="Utilizar en caso de que el recuso estatico sea un archivo comprimido"/>
+    <design:attribute name="redirectPath4" label="Link para redireccionar"/>
+    
+     <!-- Image5 -->
+    <design:attribute name="imageName5" label="Nombre del recurso estatico de la quinta imagen"/>
+	<design:attribute name="imagePath5" label="Path del recurso estatico de la quinta imagen" description="Utilizar en caso de que el recuso estatico sea un archivo comprimido"/>
+    <design:attribute name="redirectPath5" label="Link para redireccionar"/>
+</design:component>

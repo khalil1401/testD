@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Contacto de paciente</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contactos de paciente</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Contacto de paciente</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Otra_relacion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Un_contacto_principal</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>Nuevo_Contacto_de_Paciente</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Nuevo_Contacto_de_Paciente_Comunidad</name>
+    </webLinks>
+</CustomObjectTranslation>

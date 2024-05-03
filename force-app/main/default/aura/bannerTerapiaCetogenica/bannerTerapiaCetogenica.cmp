@@ -1,0 +1,34 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+	<aura:attribute name="recursoEstaticoDesktop" type="String" default=""/>
+	<aura:attribute name="recursoEstaticoMobile" type="String" default=""/>
+	<aura:attribute name="contenido" type="String" default=""/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <div>
+        <!--Desktop-->
+        <div class="desktop">
+            <div class="slds-grid slds-grid_vertical-align-center div-banner-tc"
+                style="{!'background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('+ v.recursoEstaticoDesktop +');'}">
+                <div class="div-center-banner-tc">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1">
+                        <aura:unescapedHtml value="{!v.contenido}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Mobile-->
+        <div class="mobile">
+            <div class="slds-grid slds-grid_vertical-align-center div-banner-tc"
+                style="{!'background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('+ v.recursoEstaticoMobile +');'}">
+                <div class="div-center-banner-tc">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1">
+                        <aura:unescapedHtml value="{!v.contenido}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

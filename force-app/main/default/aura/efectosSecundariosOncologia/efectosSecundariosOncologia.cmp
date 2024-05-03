@@ -1,0 +1,1218 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="disfagia" type="Boolean" default="true"/>
+    <aura:attribute name="perdidaApetito" type="Boolean"/>
+    <aura:attribute name="estrenimiento" type="Boolean"/>
+    <aura:attribute name="fatiga" type="Boolean"/>
+    <aura:attribute name="gustoYOlfato" type="Boolean"/>
+    <aura:attribute name="diarrea" type="Boolean"/>
+    <aura:attribute name="vomitos" type="Boolean"/>
+    <aura:attribute name="mucositis" type="Boolean"/>
+
+    <aura:attribute name="isDesktop" type="Boolean"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <div style="background: linear-gradient(90deg, rgba(152, 123, 217, 0.6) 0%,  rgba(110,131,229,0.6) 100%);">
+
+        <div class="slds-grid">
+            <div class="slds-col slds-large-size_3-of-12">
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                <br></br>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_6-of-12 slds-large-size_1-of-3">
+                        <div    onclick="{!c.showInfo}"
+                                data-id="disfagia"
+                                class="cardEfectosSecundariosOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardEfectosSecundariosOncologia">
+                                <img    src="{!$Resource.IconoDisfagiaEfectosNutricion}" alt="flecha"
+                                        class="imgCardEfectosSecundariosOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardEfectosSecundariosOncologia">
+                                <p  class="slds-text-align_center tituloItemCard">
+                                    Disfagia
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-large-size_1-of-3">
+                        <div    onclick="{!c.showInfo}"
+                                data-id="perdidaApetito"
+                                class="cardEfectosSecundariosOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardEfectosSecundariosOncologia">
+                                <img src="{!$Resource.IconoApetitoEfectosNutricion}" alt="flecha"
+                                        class="imgCardEfectosSecundariosOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardEfectosSecundariosOncologia">
+                                <p  class="slds-text-align_center tituloItemCard">
+                                    Pérdida de apetito
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-large-size_1-of-3">
+                        <div    onclick="{!c.showInfo}"
+                                data-id="estrenimiento"
+                                class="cardEfectosSecundariosOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardEfectosSecundariosOncologia">
+                                <img src="{!$Resource.IconoEstrenimientoEfectosNutricion}" alt="flecha"
+                                        class="imgCardEfectosSecundariosOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardEfectosSecundariosOncologia">
+                                <p  class="slds-text-align_center tituloItemCard">
+                                    Estreñimiento
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-large-size_1-of-3">
+                        <div    onclick="{!c.showInfo}"
+                                data-id="fatiga"
+                                class="cardEfectosSecundariosOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardEfectosSecundariosOncologia">
+                                <img src="{!$Resource.IconoFatigaEfectosNutricion}" alt="flecha"
+                                        class="imgCardEfectosSecundariosOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardEfectosSecundariosOncologia">
+                                <p  class="slds-text-align_center tituloItemCard">
+                                    Fatiga
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-large-size_1-of-3">
+                        <div    onclick="{!c.showInfo}"
+                                data-id="gustoYOlfato"
+                                class="cardEfectosSecundariosOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardEfectosSecundariosOncologia">
+                                <img src="{!$Resource.IconoGustoYOlfatoEfectosNutricion}" alt="flecha"
+                                        class="imgCardEfectosSecundariosOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardEfectosSecundariosOncologia">
+                                <p  class="slds-text-align_center tituloItemCard">
+                                    Alteraciones de gusto y olfato
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-large-size_1-of-3">
+                        <div    onclick="{!c.showInfo}"
+                                data-id="diarrea"
+                                class="cardEfectosSecundariosOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardEfectosSecundariosOncologia">
+                                <img src="{!$Resource.IconoDiarreaEfectosNutricion}" alt="flecha"
+                                    class="imgCardEfectosSecundariosOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardEfectosSecundariosOncologia">
+                                <p  class="slds-text-align_center tituloItemCard">
+                                    Diarrea
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-large-size_1-of-3">
+                        <div    onclick="{!c.showInfo}"
+                                data-id="vomitos"
+                                class="cardEfectosSecundariosOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardEfectosSecundariosOncologia">
+                                <img src="{!$Resource.IconoVomitoEfectosNutricion}" alt="flecha"
+                                    class="imgCardEfectosSecundariosOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardEfectosSecundariosOncologia">
+                                <p  class="slds-text-align_center tituloItemCard">
+                                    Vómitos y náuseas
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-large-size_1-of-3">
+                        <div    onclick="{!c.showInfo}"
+                                data-id="gustoYOlfato"
+                                class="cardEfectosSecundariosOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardEfectosSecundariosOncologia">
+                                <img src="{!$Resource.IconoSequedadEfectosNutricion}" alt="flecha"
+                                    class="imgCardEfectosSecundariosOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardEfectosSecundariosOncologia">
+                                <p  class="slds-text-align_center tituloItemCard">
+                                    Sequedad en la boca
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <aura:if isTrue="{!v.isDesktop}">
+                        <div class="slds-col slds-size_6-of-12 slds-large-size_1-of-3">
+                            <div    onclick="{!c.showInfo}"
+                                    data-id="mucositis"
+                                    class="cardEfectosSecundariosOncologia">
+                                <div    class="slds-align_absolute-center containerImgCardEfectosSecundariosOncologia">
+                                    <img src="{!$Resource.IconoMucositosisEfectosNutricion}" alt="flecha"
+                                        class="imgCardEfectosSecundariosOncologia"/>
+                                </div>
+                                <div    class="containerTextoCardEfectosSecundariosOncologia">
+                                    <p  class="slds-align_absolute-center tituloItemCard">
+                                        Mucositis
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <aura:set attribute="else">
+                            <div class="slds-col slds-size_3-of-12">
+                            </div>
+                            <div class="slds-col slds-size_6-of-12 slds-large-size_1-of-3">
+                                <div    onclick="{!c.showInfo}"
+                                        data-id="mucositis"
+                                        class="cardEfectosSecundariosOncologia">
+                                    <div    class="slds-align_absolute-center containerImgCardEfectosSecundariosOncologia">
+                                        <img src="{!$Resource.IconoMucositosisEfectosNutricion}" alt="flecha"
+                                            class="imgCardEfectosSecundariosOncologia"/>
+                                    </div>
+                                    <div    class="containerTextoCardEfectosSecundariosOncologia">
+                                        <p  class="slds-align_absolute-center tituloItemCard">
+                                            Mucositis
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_3-of-12">
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <br></br>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12">
+            </div>
+        </div>
+    </div>
+
+    <br></br>
+    <br></br>
+    <div id="descripcion"></div>
+
+    <div style="background-color: #ebebeb;">
+        <div class="slds-grid containerDetallesEfectosSecundariosOncologia">
+            <div class="slds-col slds-large-size_3-of-12">
+            </div>
+            <div class="slds-col slds-large-size_6-of-12">
+                <aura:if isTrue="{!v.disfagia}">
+                    <div class="slds-m-bottom_large slds-m-top_x-large">
+                        <lightning:button   variant="brand"
+                                            label="Disfagia"
+                                            class="tituloItemSeleccinado"/>
+                    </div>
+                    <div class="slds-m-bottom_medium">
+                        <p class="textoInfo">
+                            Ante esta dificultad es recomendable consultar con un profesional de la salud, ya sea un especialista en deglución (fonoaudiólogo) para diagnosticar la disfagia y a un especialista en nutrición para adaptar la dieta.
+                            <br/>
+                            <br/>
+                            La disfagia causa dificultad o imposibilidad de tragar alimentos sólidos y líquidos. Aquí encontrarás algunas recomendaciones que podrían ayudarte.
+                        </p>
+                        <br/>
+                        <p  class="slds-m-top_medium tituloInfo">
+                            Recomendaciones cuando aparece la dificultad para tragar los alimentos sólidos
+                        </p>
+                        <p class="textoInfo">
+                            <ul class="slds-m-top_large">
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Se puede añadir caldo, salsas suaves o leche a los alimentos para conseguir una consistencia más blanda y suave y así facilitar la deglución. Los alimentos sólidos en forma de puré se ingieren de manera más fácil.
+                                       </div>
+                                    </div>        
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Hacer comidas frecuentes y de poco volumen (de 5 a 6 comidas al día). Evitar saltarse comidas. 
+                                       </div>
+                                    </div>                                            
+                                </li>
+                            </ul>        
+                        </p>
+                        <br/>
+                        <p class="tituloInfo slds-m-top_small">
+                            Recomendaciones cuando aparece la dificultad para tragar los líquidos
+                        </p>
+                        <p class="textoInfo">
+                            <ul class="slds-m-top_large">
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Evitar tomar líquidos (agua, leche, infusiones, caldo...) sin modificar la textura (es decir, sin espesar).
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Es importante una correcta hidratación, 1.5 L de agua al día, que puede tomarse en forma de aguas gelificadas o agua con espesante.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Se pueden utilizar espesantes con gomas para espesar cualquier alimento líquido de la dieta (agua, leche, caldos, jugos…) y llegar a la consistencia más segura.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Evitar los alimentos considerados riesgosos para esta situación:
+                                        </div>
+                                    </div>
+                                    <ul class="slds-list_dotted containerItemsEfectosSecundariosOncologia">
+                                        <li class="slds-m-top_x-small">
+                                            Aquellos que siendo sólidos, desprenden líquido al ser masticados (gelatina, frutas como la naranja, sandía, entre otros) o se vuelvan líquidos a temperatura ambiente (helados).
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Alimentos duros: zanahoria cruda, frutos secos, etc.   
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Alimentos con varias texturas (líquido y sólido): sopa con pasta, leche con  cereales, etc. 
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Alimentos que se desmenuzan: Galletas, chips, bizcochuelo, etc.
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Alimentos de textura fibrosa: Ananá, espárragos, apio, lechuga, etc.
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Frutas o vegetales con piel y/o semillas: kiwi, frambuesas, tomate, etc.
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Alimentos pegajosos: caramelos blandos, miel, pan de molde, etc.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Para comer, debe colocarse en la posición correcta: sentado con los hombros hacia adelante, la cabeza inclinada ligeramente al frente y los pies apoyados en el suelo.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>    
+                        </p>
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.perdidaApetito}">
+                    <div class="slds-m-bottom_large slds-m-top_xx-large">
+                        <lightning:button   variant="brand"
+                                            label="Disminución o pérdida de apetito"
+                                            class="tituloItemSeleccinado"/>
+                    </div>
+                    <div class="slds-m-bottom_medium">
+                        <p class="textoInfo">
+                            Se presenta en hasta el 66% de los pacientes<sup style="font-style: italic;">[1]</sup>
+                            <br/>
+                            <br/>
+                            Ciertos medicamentos o tratamientos, el dolor y la preocupación, afectan el apetito. Aquí te compartimos algunas recomendaciones que podrían ayudarte para hacer frente a esta dificultad.
+                        </p>
+                        <p class="textoInfo">
+                            <ul class="slds-m-top_large">
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12 slds-large-size_11-of-12">
+                                            Realizar varias comidas al día muy nutritivas y de poco volumen.
+                                        </div>
+                                    </div>        
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            No saltarse ninguna comida y asegurar horarios regulares e intervalos entre comidas de 2-4 horas. 
+                                        </div>
+                                    </div>                                            
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Procurar un mayor aporte energético y proteico en el momento del día que suela tener mayor apetito. Habitualmente suele ser por la mañana.
+                                        </div>
+                                    </div>                                            
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Evitar los alimentos o preparaciones que sacien rápidamente. 
+                                        </div>
+                                    </div>                                            
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Es importante enriquecer los platos para asegurar, en pequeños volúmenes, un aporte completo y muy nutritivo. Podes hacerlo añadiendo ciertos ingredientes que aporten mayor energía y/o proteínas o incluso consultar con tu médico o nutricionista por apoyo nutricional. 
+                                        </div>
+                                    </div>                                            
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Intentar ingerir algo antes de ir a dormir.
+                                        </div>
+                                    </div>                                            
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Los alimentos ácidos pueden estimular el apetito, se puede ingerir un juego de limón o naranja.
+                                        </div>
+                                    </div>                                            
+                                </li>
+                            </ul>        
+                        </p>
+                        <br/>
+                        <p  class="textoInfo">
+                            Si notas la pérdida de peso, recomendamos que realices una visita a tu médico tratante o un especialista en nutrición. Podrán ajustar tu dieta y/o recomendarte apoyo nutricional a través de complementos nutricionales para ayudarte a alcanzar la ingesta que tu cuerpo necesita antes, durante e incluso después del tratamiento.
+                        </p>
+                        <p  class="slds-m-top_large tituloInfo">
+                            Ejemplo de menú:
+                        </p>
+                        <div class="slds-m-top_medium">
+                            <table  class="tabla">
+                                <tr>
+                                    <td class="horaComida">
+                                        Desayuno
+                                    </td>
+                                    <td class="comida">
+                                        Infusión hecha con leche entera y enriquecida con leche en polvo. Mix de cereales y frutas disecadas.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Colación
+                                    </td> 
+                                    <td class="comida">
+                                        Arroz con leche.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Almuerzo
+                                    </td>    
+                                    <td class="comida">
+                                        Ñoquis de papa a la crema (enriquecidos con queso rallado). Manzana asada al caramelo.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Merienda
+                                    </td>
+                                    <td class="comida">
+                                        Yogur entero enriquecido con leche en polvo + 1 porción de tarta de manzana.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Colación
+                                    </td>
+                                    <td class="comida">
+                                        Rollitos de jamón y queso.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Cena
+                                    </td>
+                                    <td class="comida">
+                                        Risotto de lomo.
+                                        <br/>
+                                        Flan con dulce de leche.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br/>
+                        <p class="textoInfo" style="font-style: italic;">
+                            <sup style="font-style: italic;">[1]</sup>Guerdoux-Ninot E, Kilgour RD, Janiszewski C, et al. Meal context and food preferences in cancer patients: results from a French self-report survey. Springerplus. 2016;5(1):810. Published 2016 Jun 21. doi:10.1186/s40064-016-2538-1
+                        </p>    
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.estrenimiento}">
+                    <div class="slds-m-bottom_large slds-m-top_xx-large">
+                        <lightning:button   variant="brand"
+                                            label="Estreñimiento"
+                                            class="tituloItemSeleccinado"/>
+                    </div>
+                    <div class="slds-m-bottom_medium">
+                        <p class="textoInfo">
+                            El estreñimiento es muy frecuente con la quimioterapia. Se trata de la reducción en el número de deposiciones, aumentando la dureza de las heces. Aquí te dejamos algunas recomendaciones que podrían ayudarte.
+                        </p>
+                        <br/>
+                        <p class="textoInfo">
+                            <ul class="slds-m-top_large">
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Aumentar los alimentos ricos en fibra:
+                                        </div>
+                                    </div>
+                                    <ul class="slds-list_dotted containerItemsEfectosSecundariosOncologia">
+                                        <li class="slds-m-top_x-small">
+                                            Verdura un mínimo de 2 raciones al día (al menos una vez al día la verdura debe ingerirse cruda, como por ejemplo ensalada, tomate, etc).
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Tomar un mínimo de 3 raciones de fruta al día: debe consumirse la fruta cruda y entera, y siempre que sea posible con la piel tras un adecuado lavado. No sustituir el jugo por una fruta.
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Comer frutas disecadas (higos, ciruelas, pasas, etc) y frutos secos (nueces, almendras, etc) al menos una vez a la semana.
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Legumbres de 2 a 3 veces por semana (lentejas, garbanzos, guisantes).
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Es preferible que los cereales y derivados sean integrales.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Beber abundante cantidad de líquido a lo largo del día (más de 2 L): agua, infusiones, caldo, etc. 
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Evitar alimentos astringentes: membrillo, té, canela, etc.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </p>
+                        <p  class="slds-m-top_large tituloInfo">
+                            Ejemplo de menú:
+                        </p>
+                        <div class="slds-m-top_medium">
+                            <table  class="tabla">
+                                <tr>
+                                    <td class="horaComida">
+                                        Desayuno
+                                    </td>
+                                    <td class="comida">
+                                        Infusión a elección con leche + muffins integrales de zanahoria y naranjas.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Colación
+                                    </td> 
+                                    <td class="comida">
+                                        Licuado de mango y banana.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Almuerzo
+                                    </td>    
+                                    <td class="comida">
+                                        Ensalada de apio, manzana verde, pasas y nueces.
+                                        <br/>
+                                        Wok de vegetales con arroz integral, cerdo y semillas de sésamo.
+                                        <br/>
+                                        Compota de ciruela.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Merienda
+                                    </td>
+                                    <td class="comida">
+                                        Yogur con granola + ensalada de frutas.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Colación
+                                    </td>
+                                    <td class="comida">
+                                        Agua saborizada casera. Galletitas caseras de avena, coco y frutas secas.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Cena
+                                    </td>
+                                    <td class="comida">
+                                        Hamburguesas de lentejas y vegetales. Tortilla de espinaca.
+                                        <br/>
+                                        Helado casero de frutilla.
+                                    </td>
+                                </tr>
+                              </table>
+                        </div>
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.fatiga}">
+                    <div class="slds-m-bottom_large slds-m-top_xx-large">
+                        <lightning:button   variant="brand"
+                                            label="Fatiga"
+                                            class="tituloItemSeleccinado"/>
+                    </div>
+                    <div class="slds-m-bottom_xx-large">
+                        <p class="textoInfo">
+                            Se estima que entre un 60% a 100% de los pacientes experimentan fatiga durante su tratamiento
+                            <sup style="font-style: italic;">[1]</sup>
+                            <br/>
+                            <br/>
+                            El cansancio asociado al cáncer es la sensación de agotamiento físico, emocional y mental de manera constante, producido por la propia enfermedad o por sus tratamientos.
+                            <br/>
+                            <br/>
+                            La nutrición, para incrementar la energía e incluso prevenir el cansancio, también puede ser un tratamiento eficaz, ya que aporta nutrientes necesarios que se han perdido por comer menos. Siempre es bueno acompañar la nutrición con ejercicio físico y en algunos casos también con seguimiento psicológico.
+                            <br/>
+                            <br/>
+                            <p style="font-style: italic;">
+                                <sup style="font-style: italic;">[1]</sup>AFSOS, Fatigue et cancer, 03/12/2010, [Internet). Issu de : 
+                            </p>
+                                <a href="https://www.afsos.org/wp-content/ uploads/2016/09/fatigue_et_cancer.pdf">https://www.afsos.org/wp-content/ uploads/2016/09/fatigue_et_cancer.pdf</a>
+                        </p>
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.gustoYOlfato}">
+                    <div class="slds-m-bottom_large slds-m-top_xx-large">
+                        <lightning:button   variant="brand"
+                                            label="Alteraciones en percepción de sabor/sequedad en la boca"
+                                            class="tituloItemSeleccinado"/>
+                    </div>
+                    <div class="slds-m-bottom_medium">
+                        <p class="textoInfo">
+                            La alteración del gusto es muy frecuente, suele presentarse en hasta el 70% de los casos. El sabor de algunos alimentos puede cambiar o alterarse temporalmente debido a ciertos tratamientos. Estas alteraciones, a menudo definidas como sabor metálico, pueden afectar también el apetito. Te dejamos algunas recomendaciones que podrían ayudarte:
+                        </p>
+                        <br/>
+                        <p class="textoInfo">
+                            <ul class="slds-m-top_large">
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Reemplazar carnes rojas (vaca) por blancas (pollo, pescado).
+                                        </div>
+                                    </div>        
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Reemplazar cubiertos metálicos por plásticos.
+                                        </div>
+                                    </div>                                            
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Tomar pequeños sorbos de líquidos frecuentemente (agua, agua con limón, menta). Se sugiere llevar consigo una botella de agua para estimular la hidratación.
+                                        </div>
+                                    </div>                                            
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Los sabores ácidos estimulan la salivación, ejemplo: beber limonada, chupar cubitos de hielo elaborados con jugo de fruta (limón/ananá), chupar caramelos ácidos o masticar chicles sin azúcar.
+                                        </div>
+                                    </div>                                            
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Ingerir alimentos jugosos y blandos (verduras, pasta, carnes) cocidos y preparados con caldo o salsas suaves.
+                                        </div>
+                                    </div>                                            
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Mantener una buena  higiene bucal, mínimo 2 veces por día (mañana y noche).
+                                            A su vez, se sugiere higienizar la boca previamente a las comidas para estimular la percepción del sabor y disminuir la sensación de gusto metálico.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>    
+                        </p>
+                        <br/>
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.diarrea}">
+                    <div class="slds-m-bottom_large slds-m-top_xx-large">
+                        <lightning:button   variant="brand"
+                                            label="Diarrea"
+                                            class="tituloItemSeleccinado"/>
+                    </div>    
+                    <div class="slds-m-bottom_medium">
+                        <p class="textoInfo">
+                            La diarrea es un efecto relativamente frecuente que aparece a raíz del tratamiento oncológico como puede ser la quimioterapia y la radioterapia. Te compartimos algunas recomendaciones que podrían ayudarte.
+                        </p>
+                        <br/>
+                        <p class="textoInfo">
+                            <ul class="slds-m-top_large">
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Beber abundante líquido de a pequeños sorbos a lo largo del día (1,5-2 litros): agua, infusiones suaves.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Para reponer los minerales que se pierden a raíz del cuadro de diarrea se puede consumir bebidas isotónicas, limonada, entre otros.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Ingerir los alimentos a temperatura ambiente, para no acelerar el tránsito intestinal.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Evitar verduras de hoja, legumbres, cereales integrales, frutos secos.  Alimentos que contienen fibra soluble pueden ser beneficiosos como: manzana rallada o cocida, zanahoria cocida, etc.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Cocinar de forma sencilla: hervidos, horno, vapor, etc.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Limitar la ingesta de alimentos grasos.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Suprimir los alimentos estimulantes del peristaltismo intestinal como el café, el alcohol, chocolate, jugos o bebidas muy azucarados.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </p>
+                        <p  class="slds-m-top_large tituloInfo">
+                            Ejemplo de menú:
+                        </p>
+                        <div class="slds-m-top_medium">
+                            <table  class="tabla">
+                                <tr>
+                                    <td class="horaComida">
+                                        Desayuno
+                                    </td>
+                                    <td class="comida">
+                                        Infusión a gusto  + Tostado de pan árabe y queso fresco.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Colación
+                                    </td> 
+                                    <td class="comida">
+                                        Pera al vapor.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Almuerzo
+                                    </td>    
+                                    <td class="comida">
+                                        Bife a la plancha con papas al natural.
+                                        <br/>
+                                        Aspic de frutas.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Merienda
+                                    </td>
+                                    <td class="comida">
+                                        Infusión a gusto. Budín casero de vainilla.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Colación
+                                    </td>
+                                    <td class="comida">
+                                        Compota de manzana.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Cena
+                                    </td>
+                                    <td class="comida">
+                                        Panaché de zanahoria. Ravioles de ricota con aceite de oliva.
+                                        <br/>
+                                        Postre vigilante.
+                                    </td>
+                                </tr>
+                              </table>
+                        </div>
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.vomitos}">
+                    <div class="slds-m-bottom_large slds-m-top_xx-large">
+                        <lightning:button   variant="brand"
+                                            label="Vómitos y náuseas"
+                                            class="tituloItemSeleccinado"/>
+                    </div>    
+                    <div class="slds-m-bottom_medium">
+                        <p class="textoInfo">
+                            Durante la quimioterapia o la radioterapia, a pesar del uso de medicamentos antieméticos (contra los vómitos), es posible que se presenten náuseas o vómitos. Algunos consejos generales que podrían ayudarte: 
+                        </p>
+                        <br/>
+                        <p class="textoInfo">
+                            <ul class="slds-m-top_large">
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Comer poca cantidad y con frecuencia (de 6 a 10 tomas). Despacio y masticando bien.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Ingerir los alimentos a temperatura ambiente o, más bien, fríos para disminuir su sabor y aroma.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Consumir alimentos de poco contenido graso (pescado blanco, pollo), con poco condimento. Evitar alimentos flatulentos como legumbres, coliflor, etc. 
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Reposar después de las comidas, sentado o semi-incorporado.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Ingerir rodajas de fruta fresca para calmar el estómago.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Ingerir los líquidos o bebidas preferentemente entre las comidas.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Beber infusiones de manzanilla, menta, anís, jengibre, azahar o hierba después de las comidas para facilitar la digestión. Hacer pequeños sorbos de bebidas carbonatadas (agua con gas, jugos con gas, gaseosa...) ayuda a calmar las molestias digestivas.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Si las náuseas aparecen por las mañanas, consumir alimentos secos, como tostadas o galletas al levantarse. 
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Si los vómitos aparecen durante la sesión de tratamiento, se recomienda no ingerir ningún alimento en las 2 horas previas.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </p>
+                        <p  class="slds-m-top_large tituloInfo">
+                            Ejemplo de menú:
+                        </p>
+                        <div class="slds-m-top_medium">
+                            <table  class="tabla">
+                                <tr>
+                                    <td class="horaComida">
+                                        Desayuno
+                                    </td>
+                                    <td class="comida">
+                                        Infusión a gusto. Galletitas dulces tipo vainillas.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Colación
+                                    </td> 
+                                    <td class="comida">
+                                        Helado de agua.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Almuerzo
+                                    </td>    
+                                    <td class="comida">
+                                        Pollo grillado. Calabaza al vapor.
+                                        <br/>
+                                        Gelatina.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Merienda
+                                    </td>
+                                    <td class="comida">
+                                        Yogur natural. Pan árabe con queso fresco.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Colación
+                                    </td>
+                                    <td class="comida">
+                                        Macedonia de frutas cocidas.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Cena
+                                    </td>
+                                    <td class="comida">
+                                        Sopa de verduras con fideos. Omelette de queso. 
+                                        <br/>
+                                        Manzana asada.
+                                    </td>
+                                </tr>
+                              </table>
+                        </div>
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.mucositis}">
+                    <div class="slds-m-bottom_large slds-m-top_xx-large">
+                        <lightning:button   variant="brand"
+                                            label="Mucositis"
+                                            class="tituloItemSeleccinado"/>
+                    </div>    
+                    <div class="slds-m-bottom_medium">
+                        <p class="textoInfo">
+                            Se denomina mucositis a la inflamación de la mucosa, en este caso del aparato digestivo. Se enrojece la zona y pueden producir úlceras. Es un síntoma que aparece con frecuencia a raíz de la radioterapia. Aquí te compartimos algunas recomendaciones que podrían ayudarte:
+                        </p>
+                        <br/>
+                        <p class="textoInfo">
+                            <ul class="slds-m-top_large">
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Potenciar la ingesta de alimentos cremosos, triturados en la batidora, pasados por el pisapurés. Utilizar manteca, crema de leche, aceite, salsa blanca, mayonesa para suavizar y dar sabor variado a los alimentos.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Hacer comidas poco voluminosas sin omitir tomas.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Evitar alimentos que irriten:
+                                        </div>
+                                    </div>
+                                    <ul class="slds-list_dotted containerItemsEfectosSecundariosOncologia">
+                                        <li class="slds-m-top_x-small">
+                                            Ácidos: naranja, limón, kiwi, vinagre.
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Salados: embutidos, conservas, ahumados, enlatados.
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Picantes: tomate, cebolla, ajo, pimiento, pepino.
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Alimentos de textura granular: granos de sal, fibras de verduras.
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Alimentos secos y duros: frutos secos, galleta, tostada.
+                                        </li>
+                                        <li class="slds-m-top_x-small">
+                                            Térmicos: alimentos muy calientes, ingerirlos mejor a temperatura ambiente.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Aumentar el consumo de agua (alrededor de 2 a 3 litros al día). Utilizar pajita para beber si es preciso.
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="list-style: none;">
+                                    <div class="slds-grid slds-grid_vertical-align-center">
+                                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                                            <img src="{!$Resource.IconoFlechaBalanceOncologia}" alt="flecha"
+                                                style="width: 50%;" class="slds-align_absolute-center"/>
+                                        </div>
+                                        <div class="slds-col slds-size_10-of-12 slds-large-size_11-of-12">
+                                            Utilizar hielo, gelatinas, helados o yogur helado para disminuir las molestias que tenga en la boca.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </p>
+                        <p  class="slds-m-top_large tituloInfo">
+                            Ejemplo de menú:
+                        </p>
+                        <div class="slds-m-top_medium">
+                            <table  class="tabla">
+                                <tr>
+                                    <td class="horaComida">
+                                        Desayuno
+                                    </td>
+                                    <td class="comida">
+                                        Licuado de frutas con leche + magdalenas.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Colación
+                                    </td> 
+                                    <td class="comida">
+                                        Yogur firme con puré de duraznos.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Almuerzo
+                                    </td>    
+                                    <td class="comida">
+                                        Pastel de pollo y calabaza.
+                                        <br/>
+                                        Puré de banana con crema.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Merienda
+                                    </td>
+                                    <td class="comida">
+                                        Leche con cacao + vainillas.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Colación
+                                    </td>
+                                    <td class="comida">
+                                        Flan al caramelo.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="horaComida">
+                                        Cena
+                                    </td>
+                                    <td class="comida">
+                                        Canelones de ricota y verdura con salsa mixta.
+                                        <br/>
+                                        Budín de pan.
+                                    </td>
+                                </tr>
+                              </table>
+                        </div>
+                    </div>
+                </aura:if>
+                <p  class="textoInfo slds-m-bottom_medium"
+                    style=" font-style: italic;
+                            text-align: right;">
+                    Consultá con tu médico y/o especialista
+                </p>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12">
+            </div>
+        </div>    
+    </div>
+
+</aura:component>

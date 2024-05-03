@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Cambio de pagina de formulario alta paciente">
+    <aura:attribute name="page" type="String"/>
+</aura:event>

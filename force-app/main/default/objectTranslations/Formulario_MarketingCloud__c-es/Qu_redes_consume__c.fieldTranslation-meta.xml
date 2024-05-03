@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Qu_redes_consume__c</name>
+    <picklistValues>
+        <masterLabel>Informacion de redes sociales de empresas o marcas (facebook, twitter, etc.)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Informacion de redes sociales informales (facebook, twitter, etc.)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Información de blogs informales hecha por cuidadores, familiares, etc.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Información de portales de pacientes diseñados por empresas farmaceuticas</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Información de redes de asociaciones de pacientes</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No consume redes de información</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

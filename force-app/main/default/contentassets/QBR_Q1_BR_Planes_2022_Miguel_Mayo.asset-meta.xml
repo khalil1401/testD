@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+    <language>es</language>
+    <masterLabel>QBR_Q1_BR_Planes_2022_Miguel_Mayo</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>QBR (Q1) BR + Planes 2022 Miguel Mayo 22 V3 (FINAL).jpg</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

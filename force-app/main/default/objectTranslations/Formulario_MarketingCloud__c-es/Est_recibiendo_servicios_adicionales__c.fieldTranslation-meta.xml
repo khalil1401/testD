@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Est_recibiendo_servicios_adicionales__c</name>
+    <picklistValues>
+        <masterLabel>Enfemería a domicilio</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kinesiología</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ninguno</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Terapia ocupacional</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,473 @@
+<template>
+    <div class="slds-grid slds-wrap container-patologias-ddc">
+        <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-m-bottom_medium">
+            <p class="title-patologias-ddc" data-id="main-menu">
+                Elegí cuál explorar:
+            </p>
+            <hr class="linea-patologias-ddc slds-align_absolute-center"/>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-ddc slds-align_absolute-center"
+                data-patologia="traumatismos"
+                onclick={showDetails}>
+                Traumatismos
+            </span>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-ddc slds-align_absolute-center"
+                data-patologia="cirugia"
+                onclick={showDetails}>
+                Cirugía
+            </span>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-ddc slds-align_absolute-center"
+                data-patologia="quemaduras"
+                onclick={showDetails}>
+                Quemaduras
+            </span>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-ddc slds-align_absolute-center"
+                data-patologia="patologias-infecciosas"
+                onclick={showDetails}>
+                Patologías infecciosas
+            </span>
+        </div>
+    </div>
+    <div class="slds-grid slds-wrap slds-m-top_x-large container-details-patologias-ddc"
+        data-id="container-info" style="position: relative;">
+
+        <template if:true={showArrows}>
+            <lightning-button-icon
+                icon-name="utility:chevronleft"
+                alternative-text="Back"
+                title="Back"
+                size="large"
+                variant="bare"
+                onclick={back}
+                disabled={disabledBack}
+                class="left-arrow">
+            </lightning-button-icon>
+        </template>
+        <template if:true={showArrows}>
+            <lightning-button-icon
+                icon-name="utility:chevronright"
+                alternative-text="Next"
+                title="Next"
+                size="large"
+                variant="bare"
+                onclick={next}
+                disabled={disabledNext}
+                class="right-arrow">
+            </lightning-button-icon>
+        </template>
+
+        <div class="slds-col slds-size_1-of-1">
+            <div class="slds-grid slds-wrap" data-id="container-traumatismos" style="display: none;">
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large mobile">
+                    <p class="title-orange-patologias-ddc">
+                        Traumatismos
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-p-top_x-large mobile">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/3_PATOLOGIAS_AGUDAS_Y_TRAUMATISMOS/TRAUMATISMOS/PP-DesafiosDelCrecimiento-Imagen-Traumatismos.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_x-large mobile">
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        ¿Qué rol tiene la nutrición?
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        La nutrición ocupa un papel fundamental en la recuperación de los niños después de un traumatismo. Cuando el cuerpo no recibe los nutrientes que necesita tras un trauma, comienza a nutrirse de sus propios tejidos y esta es una situación que se debe evitar para favorecer la mejoría y reducir la estancia en el hospital. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        Para ello, habitualmente se <span style="font-family: MontserratSemiBold;">brinda a los niños traumatizados un apoyo nutricional temprano mediante nutrición enteral</span> (suele ser mediante una sonda nasogástrica que lleva alimento al estómago). Siempre será el equipo de salud el que definirá la mejor estrategia para cada caso.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_7-of-12 slds-p-top_xx-large slds-p-right_small desktop">
+                    <p class="title-orange-patologias-ddc">
+                        Traumatismos
+                    </p>
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        ¿Qué rol tiene la nutrición?
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_large">
+                        La nutrición ocupa un papel fundamental en la recuperación de los niños después de un traumatismo. Cuando el cuerpo no recibe los nutrientes que necesita tras un trauma, comienza a nutrirse de sus propios tejidos y esta es una situación que se debe evitar para favorecer la mejoría y reducir la estancia en el hospital. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        Para ello, habitualmente se <span style="font-family: MontserratSemiBold;">brinda a los niños traumatizados un apoyo nutricional temprano mediante nutrición enteral</span> (suele ser mediante una sonda nasogástrica que lleva alimento al estómago). Siempre será el equipo de salud el que definirá la mejor estrategia para cada caso.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_5-of-12 slds-align_absolute-center slds-m-top_xx-large desktop">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/3_PATOLOGIAS_AGUDAS_Y_TRAUMATISMOS/TRAUMATISMOS/PP-DesafiosDelCrecimiento-Imagen-Traumatismos.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                    <p class="title-violet-patologias-ddc">
+                        ¿Qué beneficios aporta el apoyo nutricional?
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_large">
+                        Es importante que sepas que <span style="font-family: MontserratSemiBold;">el apoyo nutricional</span> tras un traumatismo pediátrico <span style="font-family: MontserratSemiBold;">está diseñado para proporcionar las calorías y proteínas adecuadas para atenuar los efectos de la lesión</span>, preservar la masa corporal magra y disminuir el tiempo de recuperación. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        Los profesionales que atienden a tu hijo o hija estimarán sus necesidades energéticas y proteicas en función de la edad, así como la gravedad y el mecanismo de la lesión. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        En general, <span style="font-family: MontserratSemiBold;">los niños con función gastrointestinal normal pueden recibir fórmulas poliméricas estándar</span>, mientras que aquellos con función gastrointestinal alterada se benefician de fórmulas con nutrientes pre-digeridos que minimizan el trabajo intestinal.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1" style="margin-top: 50px;">
+                    <div class="card-pa-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-align_absolute-center slds-p-around_medium">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/3_PATOLOGIAS_AGUDAS_Y_TRAUMATISMOS/TRAUMATISMOS/PP-DesafiosDelCrecimiento-Icono-Proteinas.png">
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-p-around_large">
+                                <p class="text-card-pa-ddc">
+                                    El aporte adecuado de proteínas es probablemente la intervención más importante después de un traumatismo. La nutrición enteral suele ser la vía preferida cuando la alimentación oral es inadecuada, y debe iniciarse cuanto antes en el periodo posterior a la lesión.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <p class="text-fuente-patologias-ddc" style="font-style: italic;">
+                        Fuente: 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Frantz, F. Surgical Nutrition. En Kennedy Jr AP, Ignacio RC, Ricca R, editors. Pediatric Trauma Care. Springer, Cham; 2022, pp 141–157. 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Wang A, Pelletier H, Calligan D, et al. Improving the quality of nutrition in pediatric trauma. Int J Health Care Qual Assur. 2017 Jul 10;30(6):539-44.
+                    </p>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap" data-id="container-cirugia" style="display: none;">
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large mobile">
+                    <p class="title-orange-patologias-ddc">
+                        Cirugía
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-p-top_x-large mobile">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/6_RESTANTES/PP_DesafiosDelCrecimiento_Imagen_Cirugia.png"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_x-large mobile">
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        El estado nutricional de los niños, clave antes y después
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        Las intervenciones quirúrgicas desencadenan en el cuerpo una serie de reacciones ante el estrés provocado por la cirugía. Esto requiere un período de curación en el que las necesidades nutricionales pueden cambiar temporalmente. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        En niños que deben ser operados, es fundamental un enfoque integral de la alimentación como parte de las estrategias para obtener los mejores resultados en el procedimiento quirúrgico; este abordaje debería incluir una evaluación tanto antes de la cirugía como durante la recuperación posoperatoria.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_7-of-12 slds-p-top_xx-large slds-p-right_small desktop">
+                    <p class="title-orange-patologias-ddc">
+                        Cirugía
+                    </p>
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        El estado nutricional de los niños, clave antes y después
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        Las intervenciones quirúrgicas desencadenan en el cuerpo una serie de reacciones ante el estrés provocado por la cirugía. Esto requiere un período de curación en el que las necesidades nutricionales pueden cambiar temporalmente. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        En niños que deben ser operados, es fundamental un enfoque integral de la alimentación como parte de las estrategias para obtener los mejores resultados en el procedimiento quirúrgico; este abordaje debería incluir una evaluación tanto antes de la cirugía como durante la recuperación posoperatoria.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_5-of-12 slds-align_absolute-center slds-p-top_xx-large desktop">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/6_RESTANTES/PP_DesafiosDelCrecimiento_Imagen_Cirugia.png"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_7-of-12">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_2-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/3_PATOLOGIAS_AGUDAS_Y_TRAUMATISMOS/CIRUGIA/PP-DesafiosDelCrecimiento-Icono-Antes.png">
+                        </div>
+                        <div class="slds-col slds-size_10-of-12 slds-p-top_x-large slds-p-left_medium">
+                            <p class="text-patologias-ddc" style="font-family: MontserratSemiBold; color: #F6A608">
+                                Antes
+                            </p>
+                            <p class="text-patologias-ddc slds-m-top_medium">
+                                En los momentos previos a una operación, el estado nutricional del niño o la niña debería ser tomado en cuenta para determinar si están listos para el procedimiento. 
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/3_PATOLOGIAS_AGUDAS_Y_TRAUMATISMOS/CIRUGIA/PP-DesafiosDelCrecimiento-Icono-Despues.png">
+                        </div>
+                        <div class="slds-col slds-size_10-of-12 slds-p-top_x-large slds-p-left_medium">
+                            <p class="text-patologias-ddc" style="font-family: MontserratSemiBold; color: #F6A608">
+                                Después 
+                            </p>
+                            <p class="text-patologias-ddc slds-m-top_medium">
+                                En el posoperatorio, se sabe que iniciar la alimentación lo antes posible acelera la recuperación.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <p class="text-patologias-ddc slds-m-top_xx-large">
+                        Es importante que sepas que:
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large" style="font-family: MontserratSemibold;">
+                        Si la nutrición no puede proporcionarse por vía oral, en general debe iniciarse por vía enteral o parenteral en las 24 a 48 horas siguientes a la intervención. Los profesionales de salud evaluarán cuál es la mejor opción para el caso de tu hijo o hija. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large" style="font-family: MontserratSemibold;">
+                        Las proteínas son macronutrientes fundamentales después de la cirugía para facilitar la cicatrización. Su aporte puede aumentarse entre un 20% y un 25% si la herida no cicatriza como se esperaba tras unos días o una semana después de que el niño o la niña hayan consumido el 100% de las necesidades iniciales estimadas de calorías y proteínas.
+                    </p>
+                    <p class="title-violet-patologias-ddc slds-m-top_xx-large">
+                        ¿Qué beneficios aporta el apoyo nutricional?
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        El apoyo nutricional aporta los siguientes beneficios:
+                    </p>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                <span style="font-family: MontserratSemiBold;">Resuelve</span> antes el restablecimiento de la <span style="font-family: MontserratSemiBold;">función intestinal.</span>
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                <span style="font-family: MontserratSemiBold;">Disminuye</span> las tasas de posibles <span style="font-family: MontserratSemiBold;">infecciones.</span>
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                Favorece la <span style="font-family: MontserratSemiBold;">cicatrización</span> de las heridas.
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                <span style="font-family: MontserratSemiBold;">Reduce</span> el tiempo de <span style="font-family: MontserratSemiBold;">internación.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                    <div class="card-pa-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-align_absolute-center slds-p-around_medium">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/3_PATOLOGIAS_AGUDAS_Y_TRAUMATISMOS/CIRUGIA/PP-DesafiosDelCrecimiento-Icono-Internacion.png">
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-p-around_large">
+                                <p class="text-card-pa-ddc">
+                                    Proporcionar un apoyo nutricional adecuado a los niños antes y después de la cirugía es una parte importante del éxito en la recuperación.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <p class="text-fuente-patologias-ddc" style="font-style: italic;">
+                        Fuente: 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Canada NL, Mullins L, Pearo B, Spoede E. Optimizing perioperative nutrition in pediatric populations. Nutr Clin Pract. 2016 Feb;31(1):49-58. 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        Martins DS, Piper HG. Nutrition considerations in pediatric surgical patients. Nutr Clin Pract. 2022 Jun;37(3):510-20.
+                    </p>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap" data-id="container-quemaduras" style="display: none;">
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large mobile">
+                    <p class="title-orange-patologias-ddc">
+                        Quemaduras
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-p-top_x-large mobile">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/3_PATOLOGIAS_AGUDAS_Y_TRAUMATISMOS/QUEMADURAS/PP-DesafiosDelCrecimiento-Imagen-Quemaduras.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_x-large mobile">
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        ¿Pueden cambiar las necesidades nutricionales de los niños?
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        Las lesiones por quemaduras son las que más cambios suelen producir en el funcionamiento del cuerpo e incluyen desde alteraciones hormonales, inflamatorias y del sistema de defensa hasta el modo en que se procesan los alimentos para obtener la energía que necesita.
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        Por eso, es esencial un apoyo nutricional adecuado.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_7-of-12 slds-p-top_xx-large desktop">
+                    <p class="title-orange-patologias-ddc">
+                        Quemaduras
+                    </p>
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        ¿Pueden cambiar las necesidades nutricionales de los niños?
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        Las <span style="font-family: MontserratSemiBold;">lesiones por quemaduras</span> son las que <span style="font-family: MontserratSemiBold;">más cambios suelen producir en el funcionamiento del cuerpo</span> e incluyen desde alteraciones hormonales, inflamatorias y del sistema de defensa hasta el modo en que se procesan los alimentos para obtener la energía que necesita.
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        Por eso, es esencial un <span style="font-family: MontserratSemiBold;">apoyo nutricional adecuado.</span>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_5-of-12 slds-align_absolute-center slds-p-top_xx-large desktop">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/3_PATOLOGIAS_AGUDAS_Y_TRAUMATISMOS/QUEMADURAS/PP-DesafiosDelCrecimiento-Imagen-Quemaduras.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                    <p class="title-violet-patologias-ddc">
+                        ¿Qué beneficios aporta el apoyo nutricional?
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_large">
+                        El <span style="font-family: MontserratSemiBold;">apoyo nutricional</span> permite que los niños puedan satisfacer las demandas energéticas del organismo tras una quemadura. Las características del apoyo nutricional van a variar en función de la gravedad del cuadro y otros parámetros que permiten evaluar su estado nutricional. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        Una vez superada la etapa inmediata al accidente, durante la rehabilitación de la quemadura tu hijo o hija deberá seguir con una <span style="font-family: MontserratSemiBold;">evaluación nutricional periódica</span> para definir si cuenta con un adecuado perfil de nutrientes o detectar alteraciones del modo en que son utilizados. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        Muchos niños con quemaduras llegan a la fase de rehabilitación con una disminución visible de la masa corporal magra. En esos casos, el objetivo de la terapia nutricional pasa a ser <span style="font-family: MontserratSemiBold;">reponer el estado nutricional</span>, apoyando al mismo tiempo los esfuerzos de rehabilitación.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                    <div class="card-pa-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-align_absolute-center slds-p-around_medium">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/3_PATOLOGIAS_AGUDAS_Y_TRAUMATISMOS/QUEMADURAS/PP-DesafiosDelCrecimiento-Icono-Curitas.png">
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-p-around_large">
+                                <p class="text-card-pa-ddc">
+                                    Las intervenciones nutricionales después de una quemadura buscan no solo minimizar los cambios de la composición corporal sino también favorecer la rehabilitación de las lesiones.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <p class="text-fuente-patologias-ddc" style="font-style: italic;">
+                        Fuente: 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Houschyar M, Borrelli MR, Tapking C, et al. Burns: modified metabolism and the nuances of nutrition therapy. J Wound Care. 2020 Mar 2;29(3):184-91.
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Prelack K, Yu YM, Sheridan RL. Nutrition and metabolism in the rehabilitative phase of recovery in burn children: a review of clinical and research findings in a speciality pediatric burn hospital. Burns Trauma. 2015 May 28;3:7.
+                    </p>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap" data-id="container-patologias-infecciosas" style="display: none;">
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large mobile">
+                    <p class="title-orange-patologias-ddc">
+                        Patologías infecciosas
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-p-top_x-large mobile">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/3_PATOLOGIAS_AGUDAS_Y_TRAUMATISMOS/PATOLOGIAS_INFECCIOSAS/PP-DesafiosDelCrecimiento-Imagen-Patolog%C3%ADas-Infecciosas.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_x-large mobile">
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        El apoyo nutricional como aliado en el tratamiento
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        Los niños que deben ser internados a consecuencia de infecciones graves —como neumonía o bronquiolitis, entre otras— suelen presentar un proceso llamado “estrés metabólico”. Esto significa que las necesidades de nutrientes aumentan cuando el cuerpo enfrenta una situación de estrés agudo, como el que se da en caso de una enfermedad infecciosa. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        Ese incremento agudo en las necesidades metabólicas desencadena una serie de respuestas por parte del organismo, que busca combatir la agresión y promover la recuperación. En ese proceso, el aporte adecuado de nutrientes juega un rol fundamental. Es especialmente importante que tu hijo o hija reciba la cantidad de calorías y proteínas necesarias para recuperarse.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_7-of-12 slds-p-top_xx-large desktop">
+                    <p class="title-orange-patologias-ddc">
+                        Patologías infecciosas
+                    </p>
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        El apoyo nutricional como aliado en el tratamiento
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_large">
+                        Los niños que deben ser internados a consecuencia de infecciones graves —como <span style="font-family: MontserratSemiBold;">neumonía o bronquiolitis</span>, entre otras— suelen presentar un proceso llamado <span style="font-family: MontserratSemiBold;">“estrés metabólico”</span>. Esto significa que las necesidades de nutrientes aumentan cuando el cuerpo enfrenta una situación de estrés agudo, como el que se da en caso de una enfermedad infecciosa. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        Ese <span style="font-family: MontserratSemiBold;">incremento agudo en las necesidades metabólicas</span> desencadena una serie de respuestas por parte del organismo, que busca combatir la agresión y promover la recuperación. En ese proceso, el <span style="font-family: MontserratSemiBold;">aporte adecuado de nutrientes</span> juega un rol fundamental. Es especialmente importante que tu hijo o hija reciba la cantidad de calorías y proteínas necesarias para recuperarse.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_5-of-12 slds-align_absolute-center slds-p-top_xx-large desktop">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/3_PATOLOGIAS_AGUDAS_Y_TRAUMATISMOS/PATOLOGIAS_INFECCIOSAS/PP-DesafiosDelCrecimiento-Imagen-Patolog%C3%ADas-Infecciosas.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large slds-align_absolute-center">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/6_RESTANTES/PP_DesafiosDelCrecimiento_Infografia_Nenes.png"
+                        class="img-ninos-paddc">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                    <p class="title-violet-patologias-ddc">
+                        ¿Qué beneficios aporta el apoyo nutricional?
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_large">
+                        Una terapia nutricional adecuada en aporte de calorías, proteínas y micronutrientes <span style="font-family: MontserratSemiBold;">previene la pérdida de masa magra</span> y mejora la producción de proteínas necesarias para la <span style="font-family: MontserratSemiBold;">respuesta inmunológica</span> frente a infecciones.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1" style="margin-top: 75px;">
+                    <div class="card-pa-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-align_absolute-center slds-p-around_medium">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Icono-Enteral-2x.png"
+                                style="width: 85px;"/>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-p-around_large">
+                                <p class="text-card-pa-ddc">
+                                    La nutrición enteral temprana ayuda a acortar los tiempos de internación en unidades de cuidados intensivos y permite que el niño o la niña reciban mayor porcentaje de las calorías y proteínas que son necesarias durante este tipo de cuadros.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <p class="text-fuente-patologias-ddc" style="font-style: italic;">
+                        Fuente: 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Haney A, Burritt E, Babbitt CJ. The impact of early enteral nutrition on pediatric acute respiratory failure. Clin Nutr ESPEN. 2018 Aug;26:42-6. 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Wilson B, Typpo K. Nutrition: a primary therapy in pediatric acute respiratory distress syndrome. Front Pediatr. 2016 Oct 13;4:108.
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        *En la unidad de cuidados intensivos pediátricos
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <template if:true={footer}>
+        <div class="slds-grid slds-wrap slds-m-top_xx-large">
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                <button
+                    class="back-button-kdi-desafios"
+                    onclick={scrollTo}>
+                    <lightning-icon 
+                        icon-name="utility:chevronup"
+                        alternative-text="up"
+                        size="small"
+                        title="Up"
+                        variant="inverse"
+                        style="margin-right: 5px;">
+                    </lightning-icon>
+                    VOLVER AL MENÚ
+                </button>
+            </div>
+        </div>
+    </template>
+</template>

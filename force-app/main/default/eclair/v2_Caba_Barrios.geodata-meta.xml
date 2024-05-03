@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EclairGeoData xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <content xsi:nil="true"/>
+    <maps>
+        <mapLabel>v2 Caba Barrios</mapLabel>
+        <mapName>map_1606481661983</mapName>
+        <projection>Equirectangular</projection>
+    </maps>
+    <maps>
+        <mapLabel>v3 barrios caba</mapLabel>
+        <mapName>map_1606481824490</mapName>
+        <projection>Equirectangular</projection>
+    </maps>
+    <masterLabel>v2_Caba_Barrios</masterLabel>
+</EclairGeoData>

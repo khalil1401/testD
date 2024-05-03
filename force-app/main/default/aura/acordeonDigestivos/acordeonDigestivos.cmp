@@ -1,0 +1,78 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+<aura:attribute name="activeSections" type="List" default="" />
+
+<div class="container-accordion-dig">
+    <p class="title-accordion-dig">
+        Criterios diagnósticos (ROMA IV)
+    </p>
+    <lightning:accordion
+        allowMultipleSectionsOpen="true"
+        onsectiontoggle="{!c.handleSectionToggle}"
+        activeSectionName="{! v.activeSections}">
+        <lightning:accordionSection name="A" label="Cólicos">
+            <p>
+                Cuando hablamos de cólicos, es importante tener en cuenta los siguientes tres criterios: 
+            </p>
+            <div class="slds-m-left_xx-large">
+                <p class="slds-m-top_large">
+                    <span style="color: #3DC6F0; font-family: MontserratSemiBold;">1.</span> Los síntomas comienzan <span style="font-family: MontserratSemiBold;">antes de los 5 meses de edad.</span>
+                </p>
+                <p class="slds-m-top_large">
+                    <span style="color: #3DC6F0; font-family: MontserratSemiBold;">2.</span> Se producen <span style="font-family: MontserratSemiBold;">episodios recurrentes y prolongados</span> de llanto, malestar o irritavilidad <span style="font-family: MontserratSemiBold;">sin una causa evidente,</span> y los cuidadores no pueden prevenirlo ni solucionarlo fácilmente.
+                </p>
+                <p class="slds-m-top_large">
+                    <span style="color: #3DC6F0; font-family: MontserratSemiBold;">3.</span> <span style="font-family: MontserratSemiBold;">No se observa</span> evidencia de <span style="font-family: MontserratSemiBold;">retraso en el crecimiento,</span> fiebre o enfermedad asociada.
+                </p>    
+            </div>
+            <p class="slds-m-top_large">
+                Estos criterios nos ayudan a entender y reconocer los cólicos en los bebés, y aunque puede ser desafiante, recuerda que es un proceso común en su desarrollo y que no está relacionado con problemas graves de salud. Si tenés alguna preocupación, es recomendable consultar a un médico pediatra para recibir la orientación adecuada.
+            </p>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="B" label="Constipación">
+            <p>
+                Cuando hablamos de constipación en niños <span style="font-family: MontserratSemiBold;">menores de 4 años,</span> se deben cumplir <span style="font-family: MontserratSemiBold;">dos o más</span> de los siguientes criterios durante al menos un mes:
+            </p>
+            <div class="slds-m-left_xx-large">
+                <p class="slds-m-top_large">
+                    <span style="color: #3DC6F0;">￭</span> Tener menos de <span style="font-family: MontserratSemiBold;">dos deposiciones por semana.</span>
+                </p>
+                <p class="slds-m-top_large">
+                    <span style="color: #3DC6F0;">￭</span> Historial de evacuaciones intestinales <span style="font-family: MontserratSemiBold;">duras o dolorosas.</span> 
+                </p>
+                <p class="slds-m-top_large">
+                    <span style="color: #3DC6F0;">￭</span> Historial de <span style="font-family: MontserratSemiBold;">retención excesiva</span> de materia fecal.
+                </p>
+                <p class="slds-m-top_large">
+                    <span style="color: #3DC6F0;">￭</span> Historial de heces de <span style="font-family: MontserratSemiBold;">gran tamaño. </span>
+                </p>
+                <p class="slds-m-top_large">
+                    <span style="color: #3DC6F0;">￭</span> Presencia de una <span style="font-family: MontserratSemiBold;">masa fecal</span> grande en el recto.
+                </p>
+                <p class="slds-m-top_large">
+                    <span style="color: #3DC6F0;">￭</span> Experimentar al menos un episodio de <span style="font-family: MontserratSemiBold;">incontinencia fecal</span> por semana.
+                </p>
+            </div>
+            <p class="slds-m-top_large">
+                Estos criterios nos ayudan a identificar y comprender la constipación en los niños pequeños. Recordá que, si observás alguno de estos síntomas en tu hijo, es importante consultar a un médico especialista.
+            </p>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="C" label="Regurgitación">
+            <p>
+                La regurgitación es un trastorno digestivo funcional muy común durante el primer año de vida. Puede diagnosticarse en un niño sano de entre 3 semanas y 12 meses de edad si cumple con los siguientes <span style="font-family: MontserratSemiBold;">dos criterios:</span>
+            </p>
+            <div class="slds-m-left_xx-large">
+                <p class="slds-m-top_large">
+                    <span style="color: #3DC6F0;">￭</span> Experimenta <span style="font-family: MontserratSemiBold;">regurgitación dos o más veces al día</span> durante un período de <span style="font-family: MontserratSemiBold;">tres semanas</span> o más.
+                </p>
+                <p class="slds-m-top_large">
+                    <span style="color: #3DC6F0;">￭</span> No presenta síntomas como náuseas, hematemesis (vómito con sangre), aspiración, apnea, fallo en el crecimiento, dificultades para alimentarse o tragar, ni adopta posturas anormales.
+                </p>
+            </div>
+            <p class="slds-m-top_large">
+                Si tenés alguna preocupación, es recomendable consultar a un médico especialista para recibir la orientación adecuada.
+            </p>
+        </lightning:accordionSection>
+    </lightning:accordion>
+</div>
+</aura:component>

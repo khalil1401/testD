@@ -1,0 +1,6 @@
+<messaging:emailTemplate subject="Liquidacion" recipientType="Lead" relatedToType="Account">
+<messaging:plainTextEmailBody >
+Enhorabuena.
+Ésta es la nueva plantilla de correo electrónico de Visualforce.
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

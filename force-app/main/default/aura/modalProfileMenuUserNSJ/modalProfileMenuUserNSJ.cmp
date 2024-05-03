@@ -1,0 +1,69 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" controller="FormularioLoginController">
+
+    <aura:attribute name="currentUser" type="User"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:navigation aura:id="navService"/>
+
+    <div class="mobile">
+        <div class="container-items-profile-menu-nsj" id="items-profile-menu-nsj">
+            <section role="dialog" class="slds-modal slds-fade-in-open slds-modal_medium">
+                <c:headerNSJ
+                    currentUser="{!v.currentUser}">
+                </c:headerNSJ>
+                <div class="modal-items-profile-menu">
+                    <aura:if isTrue="{!v.currentUser != null}">
+                        <div class="dropdown-profile-menu-user">
+                            <div class="container-username-pm">
+                                <div class="slds-text-align_center" style="padding-top: 19px;">
+                                    <span 
+                                        class="pacifico-username-nsj">
+                                        ¡Hola {!v.currentUser.FirstName}!
+                                    </span>
+                                    <hr class="hr-menu-user-nsj"/>
+                                </div>
+                            </div>
+                            <div class="container-items-pm slds-text-align_center">
+                                <div
+                                    aura:id="perfil__c-modal-item-profile"
+                                    class="text-profilemenu-nsj slds-align_absolute-center" 
+                                    data-id="perfil__c" 
+                                    onclick="{!c.goTo}">
+                                    <span style="pointer-events: none;">Mi perfil</span>
+                                </div>
+                                <div
+                                    aura:id="logout-modal-item-profile"
+                                    class="text-profilemenu-nsj slds-align_absolute-center"
+                                    onclick="{!c.goToLogout}">
+                                    <span>Cerrar Sesión</span>
+                                </div>
+                            </div>
+                        </div>
+                        <aura:set attribute="else">
+                            <div class="dropdown-logout-profile-menu-user">
+                                <div class="container-items-pm slds-text-align_center">
+                                    <div 
+                                        aura:id="registro_y_solicitud__c-modal-item-profile"
+                                        class="text-profilemenu-nsj slds-align_absolute-center" 
+                                        data-id="registro_y_solicitud__c" 
+                                        onclick="{!c.goTo}">
+                                        <span style="pointer-events: none;">Registrarse</span>
+                                    </div>
+                                    <div
+                                        aura:id="login-modal-item-profile" 
+                                        class="text-profilemenu-nsj slds-align_absolute-center"
+                                        onclick="{!c.goToLogin}">
+                                        <span>Iniciar Sesión</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                </div>    
+            </section>
+            <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+        </div>
+    </div>
+    
+</aura:component>

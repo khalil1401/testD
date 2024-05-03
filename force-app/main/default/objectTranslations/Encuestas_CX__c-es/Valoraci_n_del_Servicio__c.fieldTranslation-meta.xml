@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Valoraci_n_del_Servicio__c</name>
+    <picklistValues>
+        <masterLabel>Le resulta indistinto</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Le resulta valioso</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

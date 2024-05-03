@@ -1,0 +1,15 @@
+.THIS {
+}
+
+.THIS .div-nyecm-layout-meta{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media (max-width: 600px) {
+    .THIS .div-nyecm-layout-meta{
+        padding-left: 5%;
+        padding-right: 5%;
+    }    
+}

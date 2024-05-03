@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+    <language>es</language>
+    <masterLabel>duracion_tratamientos_regularesJPG</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>duracion tratamientos regulares.JPG</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

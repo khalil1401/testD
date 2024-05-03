@@ -1,0 +1,121 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="apiNameAPLV" type="String" default="Alergia__c"/>
+    <aura:attribute name="apiNameCuidadosYRecomendaciones" type="String" default="cuidados_y_recomendaciones_alergia__c"/>
+    <aura:attribute name="apiNameRecetario" type="String" default="Recetario_Alergia__c"/>
+    <aura:attribute name="apiNameCaminoAPLV" type="String" default="camino_aplv_alergia__c"/>
+    <aura:attribute name="currentPage" type="String"/>
+
+    <aura:attribute name="isFacebook" type="Boolean" default="false"/>
+    <aura:attribute name="rutaFacebook" type="String" default="https://www.facebook.com/"/>
+    <aura:attribute name="isInstagram" type="Boolean" default="true"/>
+    <aura:attribute name="rutaInstagram" type="String" default="https://www.instagram.com/nutriciacomunidad/"/>
+    <aura:attribute name="isYoutube" type="Boolean" default="false"/>
+    <aura:attribute name="rutaYoutube" type="String" default="https://www.youtube.com/"/>
+    <aura:attribute name="privado" type="Boolean"/>
+    <aura:attribute name="isDesktop" type="Boolean"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<lightning:navigation aura:id="navService"/>
+
+    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+        <!--Desktop-->
+        <aura:if isTrue="{!v.isDesktop}">
+            <div class="slds-col slds-medium-size_9-of-12">
+                <span class="texto-secciones">Secciones:</span>
+                <span
+                    class="tabNavegacionAlergia"
+                    onclick="{!c.redirectToPortalPage}"
+                    data-id="apiNameAPLV"
+                    aura:id="alergia">
+                    ¿Qué es la APLV?
+                </span>
+                <span
+                    class="tabNavegacionAlergia"
+                    onclick="{!c.redirectToPortalPage}"
+                    data-id="apiNameCuidadosYRecomendaciones"
+                    aura:id="cuidados-y-recomendaciones">
+                    Cuidados y recomendaciones
+                </span>
+                <aura:if isTrue="{!v.privado}">
+                    <span
+                        class="tabNavegacionAlergia"
+                        onclick="{!c.redirectToPortalPage}"
+                        data-id="apiNameRecetario"
+                        aura:id="recetario-alergia">
+                        Recetario
+                    </span>
+                </aura:if>
+                <span
+                    class="tabNavegacionAlergia"
+                    onclick="{!c.redirectToPortalPage}"
+                    data-id="apiNameCaminoAPLV"
+                    aura:id="camino-aplv">
+                    El camino de la APLV
+                </span>
+            </div>
+            <div class="slds-col slds-medium-size_3-of-12" style="text-align: right;">
+                <span class="texto-secciones">Seguinos en </span>
+                <aura:if isTrue="{!v.isFacebook}">
+                    <img    src="{!$Resource.SocialMediaIcons + '/Icono_FB_violeta.svg'}" alt="img"
+                            class="iconos"
+                            onclick="{!c.redirectToRedSocial}"
+                            data-id="rutaFacebook"/>
+                </aura:if>
+                <aura:if isTrue="{!v.isInstagram}">
+                    <img    src="{!$Resource.SocialMediaIcons + '/Icono_IG_violeta.svg'}" alt="img"
+                            class="iconos"
+                            onclick="{!c.redirectToRedSocial}"
+                            data-id="rutaInstagram"/>
+                </aura:if>
+            </div>
+            <!--Mobile-->
+            <aura:set attribute="else">
+                <div class="slds-col slds-size_7-of-12" style="padding-left: 5%;">
+                    <span
+                        class="tabNavegacionAlergia"
+                        data-id="apiNameAPLV"
+                        aura:id="alergia">
+                        ¿Qué es la APLV?
+                    </span>
+                    <span            
+                        class="tabNavegacionAlergia"
+                        data-id="apiNameCuidadosYRecomendaciones"
+                        aura:id="cuidados-y-recomendaciones">
+                        Cuidados y recomendaciones
+                    </span>
+                    <aura:if isTrue="{!v.privado}">
+                        <span
+                            class="tabNavegacionAlergia"
+                            data-id="apiNameRecetario"
+                            aura:id="recetario-alergia">
+                            Recetario
+                        </span>
+                    </aura:if>    
+                    <span
+                        class="tabNavegacionAlergia"
+                        data-id="apiNameCaminoAPLV"
+                        aura:id="camino-aplv">
+                        El camino de la APLV
+                    </span>
+                </div>
+                <div class="slds-col slds-size_5-of-12" style="text-align: right;padding-right: 5%;">
+                    <span class="texto-secciones">Seguinos en </span>
+                    <aura:if isTrue="{!v.isFacebook}">
+                        <img    src="{!$Resource.SocialMediaIcons + '/Icono_FB_violeta.svg'}" alt="img"
+                                class="iconos"
+                                onclick="{!c.redirectToRedSocial}"
+                                data-id="rutaFacebook"/>
+                    </aura:if>
+                    <aura:if isTrue="{!v.isInstagram}">
+                        <img    src="{!$Resource.SocialMediaIcons + '/Icono_IG_violeta.svg'}" alt="img"
+                                class="iconos"
+                                onclick="{!c.redirectToRedSocial}"
+                                data-id="rutaInstagram"/>
+                    </aura:if>
+                </div>    
+            </aura:set>
+        </aura:if>
+    </div>
+
+</aura:component>

@@ -1,0 +1,12 @@
+<design:component >
+
+	<design:attribute name="icono1" label="URL del primer logo del header"/>
+	<design:attribute name="linkToIcono1" label="API Name de página a redireccionar del primer icono"/>
+	<design:attribute name="icono2" label="URL del segundo logo del header"/>
+	<design:attribute name="linkToIcono2" label="API Name de página a redireccionar del segundo icono"/>
+	<design:attribute name="alturaDesktopIcono1" label="Desactivado"/>
+	<design:attribute name="alturaMobileIcono1" label="Desactivado"/>
+	<design:attribute name="alturaDesktopIcono2" label="Desactivado"/>
+	<design:attribute name="alturaMobileIcono2" label="Desactivado"/>
+
+</design:component>

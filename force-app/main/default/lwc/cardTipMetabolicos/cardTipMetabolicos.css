@@ -1,0 +1,42 @@
+.card-tip-meta{
+    background-color: #EBEBEB;
+    border-radius: 10px;
+    height: 350px;
+    cursor: pointer;
+}
+
+.div-text-tip-meta{
+    height: 50px;
+}
+
+.title-card-tip-meta{
+    font-family: MontserratSemiBold;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    color: #606060;
+    text-align: center;
+}
+
+.div-img-tip-meta{
+    height: 275px;
+}
+
+.img-tip-meta{
+    width: 75%;
+}
+
+@media (max-width: 600px) {
+    .card-tip-meta{
+        height: auto;
+    }
+    .div-text-tip-meta{
+        height: auto;
+    }
+    .div-img-tip-meta{
+        height: auto;
+    }
+    .img-tip-meta{
+        margin-top: 5%;
+        width: 80%;
+    }
+}

@@ -1,0 +1,66 @@
+.containerCardsRecetasDesktop{
+    display: initial;
+}
+
+.containerCardsRecetasMobile{
+    display: none;
+}
+
+.titulosOncologia{
+    font-family:MontserratSemiBold;
+    font-size: 22px;
+    color:#606060;
+    line-height: 30px;
+}
+
+.linea{
+    border-top: 1px solid #606060;
+    width:100px;
+    margin-top:1.2%;
+}
+
+.botonVerTodasLasRecetas{
+    background: linear-gradient(90deg, rgba(152, 123, 217, 1) 0%,  rgba(110,131,229,1) 100%);
+    border-color: #EBEBEB;
+    border-radius: 10px 10px 10px 10px;
+    font-family:MontserratSemiBold;
+    font-size: 22px;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .containerDescubriRecetas{
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .containerCardsRecetasDesktop{
+        display: none;
+    }
+    .containerCardsRecetasMobile{
+        display: initial;
+    }    
+    .titulosOncologia{
+        font-size: 18px;
+        line-height: 27px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .linea{
+        margin-top:1.2%;
+        margin-left: 5%;
+    }
+    .iconAnterior{
+        display: initial;
+    }
+    .iconSiguiente{
+        display: initial;
+    }
+    .botonVerTodasLasRecetas{
+        font-size: 18px;
+    }
+}

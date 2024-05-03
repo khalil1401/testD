@@ -1,0 +1,14 @@
+<design:component >
+
+	<design:attribute name="imagenALaIzquierda" label="Imagen a la izquierda"/>
+	<design:attribute name="rutaImagenFondo" label="URL de la imagen de fondo del componente"/>
+	<design:attribute name="rutaImagen" label="URL de la imagen del componente"/>
+	<design:attribute name="claseImagenInterna" label="Clase de css de la imagen del componente"/>
+	<design:attribute name="textoHTML" label="Texto del componente en HTML"/>
+	<design:attribute name="botonDoble" label="Botón doble de malnutrición"/>
+	<design:attribute name="rutaImagenBoton" label="Botón del componente"/>
+	<design:attribute name="claseImagenBotonInterna" label="Clase de css de la imagen del boton del componente"/>
+	<design:attribute name="apiName" label="API name de página a redireccionar"/>
+	<design:attribute name="margen" label="Margin derecha izquierda"/>
+
+</design:component>

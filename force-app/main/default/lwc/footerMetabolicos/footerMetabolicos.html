@@ -1,0 +1,149 @@
+<template>
+    <div class="footer-meta">
+        <div class="desktop">
+            <div class="slds-grid slds-wrap slds-p-top_xx-large">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                    <span class="title-footer-meta">
+                        Secciones
+                    </span>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                    <span class="title-footer-meta">
+                        Contacto para pacientes
+                    </span>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                    <span class="title-footer-meta">
+                        Seguinos en nuestras redes
+                    </span>
+                </div>
+                <div class="slds-col slds-medium-size_3-of-12">
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_small">
+                    <template for:each={items} for:item="item">
+                        <div key={item.label}>
+                            <span
+                                class={item.class}
+                                style="cursor: pointer;"
+                                data-id={item.dataId}
+                                onclick={redirect}>
+                                {item.label}
+                            </span>
+                            <br>
+                        </div>
+                    </template>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_small">
+                    <p class="text-footer-meta">
+                        Lunes a viernes de 9 a 18 hs.
+                    </p>
+                    <p class="text-footer-meta">
+                        Whatsapp: 
+                        <span>
+                            <a href="https://api.whatsapp.com/send?phone=5491159706647">
+                                <img src={wsp} style="width: 30px; margin-left: 5px;">
+                            </a>
+                        </span>
+                    </p>
+                    <p class="title-footer-meta" style="font-family: MontserratRegular;">
+                        Tel: 
+                        <span>
+                            <a href="tel:0800-122-5544">
+                                <span
+                                    class="textoFooterAlergia"
+                                    style="color: #653895; font-family: MontserratSemiBold; margin-left: 5px;">
+                                    0800-122-5544
+                                </span>
+                            </a>                                
+                        </span>    
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_small">
+                    <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_1/PP-Metab%C3%B3licos%20-Icono%20FB.png"
+                            data-id="https://www.facebook.com/comunidadmetabolica"
+                            class="icon-footer-meta"
+                            onclick={redirectRS}/>
+                    <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_1/PP-Metab%C3%B3licos%20-Icono%20IG.png"
+                            data-id="https://www.instagram.com/comunidadmetabolica/"
+                            class="icon-footer-meta"
+                            onclick={redirectRS}/>
+                </div>
+                <div class="slds-col slds-medium-size_3-of-12 slds-m-top_small">
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap" style="padding-bottom: 3%;">
+                <div class="slds-col slds-size_3-of-12">
+                </div>
+                <div class="slds-col slds-size_3-of-12">
+                </div>
+                <div class="slds-col slds-size_3-of-12">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_1/PP-Metab%C3%B3licos%20-Logo%20NB%20Gris.png"/>
+                </div>
+            </div> 
+        </div>
+        <div class="mobile">
+            <div class="slds-p-top_x-large slds-p-bottom_x-large">
+                <p class="title-footer-meta slds-m-bottom_small">
+                    Secciones
+                </p>
+                <template for:each={items} for:item="item">
+                    <div key={item.label}>
+                        <p  
+                            class={item.class}
+                            style="cursor: pointer;"
+                            data-id={item.dataId}
+                            onclick={redirect}>
+                            {item.label}
+                        </p>
+                    </div>
+                </template>
+                <p class="title-footer-meta slds-m-top_medium">
+                    Contacto para pacientes
+                </p>
+                <p class="text-footer-meta">
+                    Whatsapp: 
+                    <span>
+                        <a href="https://api.whatsapp.com/send?phone=5491159706647">
+                            <img src={wsp} style="width: 30px; margin-left: 5px;">
+                        </a>
+                    </span>
+                </p>
+                <p class="title-footer-meta" style="font-family: MontserratRegular;">
+                    Tel:
+                    <span>
+                        <a href="tel:0800-122-5544">
+                            <span
+                                class="textoFooterAlergia"
+                                style="color: #653895; font-family: MontserratSemiBold; margin-left: 5px;">
+                                0800-122-5544
+                            </span>
+                        </a>
+                    </span>
+                </p>
+                <br>
+                <p class="title-footer-meta slds-m-top_medium">
+                    Seguinos en nuestras redes
+                </p>
+                <p class="slds-m-top_small">
+                    <img
+                        src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_1/PP-Metab%C3%B3licos%20-Icono%20FB.png"
+                        data-id="https://www.facebook.com/comunidadmetabolica"
+                        class="icon-footer-meta"
+                        onclick={redirectRS}/>
+                    <img
+                        src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_1/PP-Metab%C3%B3licos%20-Icono%20IG.png"
+                        data-id="https://www.instagram.com/comunidadmetabolica/"
+                        class="icon-footer-meta"
+                        onclick={redirectRS}/>
+                </p>
+                <p style="text-align: right;">
+                    <img class="logo-nutricia-footer-meta" src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_1/PP-Metab%C3%B3licos%20-Logo%20NB%20Gris.png"/>
+                </p> 
+            </div>
+        </div>
+    </div>
+</template>

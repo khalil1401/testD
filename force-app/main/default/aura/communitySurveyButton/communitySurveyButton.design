@@ -1,0 +1,34 @@
+<design:component>
+    
+    <design:attribute name="comunidadOrigen" label="Comunidad donde se va a usar el componente" datasource="Pacientes Alergia,Pacientes Best care,Pacientes Disfagia,Pacientes Malnutrición,Pacientes Metabólicos,Pacientes Terapia Cetogénica" /> 
+    <design:attribute name="surveyUrl" label="URL completa de la SurveyForce"/>
+    <design:attribute name="templateDeveloperName" label="Nombre exclusivo de plantilla (Email Template) para Terminos y Condiciones"/> 
+    <design:attribute name="altoMaximo" label="Alto maximo de la imagen en PX"/>
+    <design:attribute name="anchoMaximo" label="Ancho maximo de la imagen en PX"/>
+    <design:attribute name="altoMinimo" label="Alto minimo de la imagen en PX"/>
+    <design:attribute name="anchoMinimo" label="Ancho minimo de la imagen en PX"/>
+    <design:attribute name="radioEsquinas" label="Curvatura de esquinas"/> 
+	<design:attribute name="staticResourceName" label="Nombre del recurso estatico"/>
+	<design:attribute name="imageName" label="Ruta completa a la imagen en el recurso estatico"/>
+    <design:attribute name="hoverColorTransparency" label="Nivel de transparencia del hover (0 a 1)"/> 
+    <design:attribute name="colorHover" label="Color de la transparencia que va a aparecer sobre la imagen"/>
+	<design:attribute name="textoHover" label="Texto que aparece sobre la imagen al pasar sobre el boton"/>
+	<design:attribute name="textoHoverColor" label="Color del texto que aparece sobre la imagen al pasar por el boton"/>
+	
+    
+    <design:attribute name="altoMaximoFooter" label="Altura maxima del footer en PX"/> 
+    <design:attribute name="altoMinimoFooter" label="Altura minima del footer en PX"/> 
+    <design:attribute name="footerColor" label="Color de fondo del footer HEX"/> 
+	<design:attribute name="textoIzquierdaFooter" label="Texto a la izquierda del footer"/>
+	<design:attribute name="textoCentroFooter" label="Texto en el centro del footer"/>
+    <design:attribute name="textoDerechaFooter" label="Texto a la derecha del footer"/>
+	<design:attribute name="textoFooterColor" label="Color para el texto del footer"/>
+	<design:attribute name="margenTextoFooter" label="Margen entre los textos del footer"/> 
+    <design:attribute name="textoHoverFooter" label="Texto del footer al pasar por el boton"/>
+	<design:attribute name="textoHoverFooterColor" label="Color del Texto del footer al pasar por el boton"/>
+    
+    <design:attribute name="textoHoverTamanio" label="Tamaño del texto que aparece sobre la imagen al pasar por el boton"/>
+    <design:attribute name="textoHoverFooterTamanio" label="Tamaño del Texto del footer al pasar por el boton"/>
+	<design:attribute name="textoFooterTamanio" label="Tamanio de la fuente del footer"/>
+
+</design:component>

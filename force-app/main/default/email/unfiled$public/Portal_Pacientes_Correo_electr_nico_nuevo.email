@@ -1,0 +1,69 @@
+<body style="margin: 5%;">
+	<div style="text-align: left;">
+		<div style="text-align: center;">
+			<a href="https://www.nutriciasiemprejuntos.com.ar" style="text-decoration: none !important;">
+				<img alt="siempreJuntos" style="max-height: 65px;" src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_HOME/PP-HOME-Logo-NSJ.png">
+			</a>
+			</br>
+		</div>
+		<p style="font-family: system-ui; text-align: center; font-weight: bolder; font-size: 1.75rem; color: #6E6E6E !important;">
+			Finalizar Cambio de Dirección de Correo Electrónico
+		</p>
+		<p style="font-family: system-ui; font-size:1.25rem; color: #6E6E6E !important; text-align: left; margin-right: 25%;">
+			Hemos recibido recientemente una solicitud para cambiar la dirección de correo electrónico de su cuenta de la plataforma de pacientes “Nutricia Siempre Juntos”.
+		</p>
+		<p style="font-family: system-ui; font-size:1.25rem; color: #6E6E6E !important; text-align: left; margin-right: 25%;">
+			Dirección de correo electrónico anterior: {!ChgEmailVer.OldEmail}
+		</p>
+		<p style="font-family: system-ui; font-size:1.25rem; color: #6E6E6E !important; text-align: left; margin-right: 25%;">
+			Nueva dirección de correo electrónico: {!ChgEmailVer.NewEmail}
+		</p>
+		<p style="font-family: system-ui; font-size:1.25rem; color: #6E6E6E !important; text-align: left; margin-right: 25%;">
+			Para finalizar el cambio de su dirección de correo electrónico, haga click en el botón debajo. Este vínculo caduca en 72 horas.
+		</p>
+		<br></br>
+		<div style="text-align: center;">		
+			<a href={!ChgEmailVer.Url} style="text-decoration: none !important;">
+				<span style="font-family: system-ui; font-size: 1.25rem; background-color: #4A2A80; color:white; border-radius: 10px; padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px;">
+					Confirmar cambio
+				</span>
+			</a>
+		</div>
+		<br></br>
+		<br></br>
+		<p style="font-family: system-ui; font-size:1.25rem; color: #6E6E6E !important; text-align: left; margin-right: 25%;">
+			Si no solicitaste este cambio o tenes alguna pregunta, podes comunicarte con nuestro Programa de Soporte al Paciente:
+		</p>
+		<p>			
+			<a href="https://api.whatsapp.com/send?phone=5491159706647" style="text-decoration: none !important;font-family: system-ui; font-size:1rem; color: #6E6E6E !important;">
+				<img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_HOME/PP-HOME-Logo%20whatsapp%20violeta.png" alt="img-wsp" 
+					style="width: 30px;"/>
+				<span> +54 911 5970-6647 </span>
+			</a>
+		</p>
+		<p>
+			<a href="tel:0800-122-5544" style="text-decoration: none !important;font-family: system-ui; font-size:1rem; color: #6E6E6E !important;">
+				<img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_HOME/PP-HOME-Logo%20telefono%20violeta.png" alt="img-tel" 
+					style="width: 30px;"/>
+				<span> 0800-122-5544 </span>
+			</a>
+		</p>
+	</div>
+	<div style="text-align: center; margin-top: 5%;">
+		<p style="font-family: system-ui; font-size:1rem; color: #6E6E6E !important; text-align: center;">
+			Material exclusivo para pacientes enrolados en la plataforma 
+			<a href="https://www.nutriciasiemprejuntos.com.ar" style="text-decoration: none !important;font-family: system-ui; font-size:1rem; color: #6E6E6E !important;">
+				www.nutriciasiemprejuntos.com.ar
+			</a>
+		</p>
+	</div>
+	<div style="text-align: center; margin-top: 2%;">
+		<a href="https://www.nutriciasiemprejuntos.com.ar/s/terminos-de-uso" style="font-family: system-ui; font-size:0.7rem; color: #6E6E6E !important;">
+			Términos de Uso 
+		</a>
+		<span style="font-family: system-ui; font-size:0.7rem; color: #6E6E6E !important;">-</span>
+		<a href="https://www.nutriciasiemprejuntos.com.ar/s/politicas-de-privacidad" style="font-family: system-ui; font-size:0.7rem; color: #6E6E6E !important;">
+			Políticas de Privacidad
+		</a>
+	</div>
+</body>

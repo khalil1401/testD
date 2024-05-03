@@ -1,0 +1,109 @@
+<aura:component implements="forceCommunity:profileMenuInterface,forceCommunity:availableForAllPageTypes" access="global">
+    
+    <aura:attribute name="currentUser" type="User"/>
+    <aura:attribute name="showList" type="Boolean"/>
+    
+    <lightning:navigation aura:id="navService"/>
+
+    <div>
+        <aura:if isTrue="{!v.currentUser != null}">
+            <!--Desktop-->
+            <div class="desktop">
+                <img 
+                    src="{!$Resource.iconProfileMenuUserNSJ}" 
+                    class="icon-menu-profile-nsj"
+                    data-id="perfil__c" 
+                    onclick="{!c.goTo}"/>
+            </div>
+            <aura:if isTrue="{!v.showList}">
+                <div class="dropdown-profile-menu-user">
+                    <div class="container-username-pm">
+                        <div class="slds-text-align_center" style="padding-top: 19px;">
+                            <span 
+                                class="pacifico-username-nsj">
+                                ¡Hola {!v.currentUser.FirstName}!
+                            </span>
+                            <hr class="hr-menu-user-nsj"/>
+                        </div>
+                    </div>
+                    <div class="container-items-pm slds-text-align_center">
+                        <div
+                            aura:id="perfil__c-item-profile-menu" 
+                            class="text-profilemenu-nsj slds-align_absolute-center" 
+                            data-id="perfil__c" 
+                            onclick="{!c.goTo}">
+                            <span>Mi perfil</span>
+                        </div>
+                        <div
+                            aura:id="logout-item-profile" 
+                            class="text-profilemenu-nsj slds-align_absolute-center"
+                            onclick="{!c.goToLogout}">
+                            <span>Cerrar Sesión</span>
+                        </div>
+                    </div>
+                </div>
+            </aura:if>
+            <!--Mobile-->
+            <div class="mobile">
+                <img 
+                    src="{!$Resource.iconProfileMenuUserLoginNSJ}" 
+                    class="icon-menu-profile-nsj"
+                    data-id="perfil__c" 
+                    onclick="{!c.goTo}"/>
+            </div>
+            <aura:set attribute="else">
+                <div class="desktop">
+                    <!--Large Desktop-->
+                    <div class="header-nsj-large-desktop">
+                        <span 
+                            aura:id="login-btn-nsj"
+                            class="login-btn-profile-nsj" 
+                            onclick="{!c.goToLogin}">
+                            Iniciar Sesión
+                        </span>
+                        <span 
+                            aura:id="register-btn-nsj"
+                            class="register-btn-profile-nsj"
+                            onclick="{!c.goTo}"
+                            data-id="registro_y_solicitud__c">
+                            Registrarse
+                        </span>
+                    </div>
+                    <!--Small Desktop-->
+                    <div class="header-nsj-small-desktop">
+                        <img 
+                            src="{!$Resource.iconProfileMenuUserNSJ}" 
+                            class="icon-menu-profile-nsj"
+                            onclick="{!c.showList}"/>
+                        <aura:if isTrue="{!v.showList}">
+                            <div class="dropdown-logout-profile-menu-user">
+                                <div class="container-items-pm slds-text-align_center">
+                                    <div
+                                        aura:id="registro_y_solicitud__c-item-profile-menu" 
+                                        class="text-profilemenu-nsj slds-align_absolute-center" 
+                                        data-id="registro_y_solicitud__c" 
+                                        onclick="{!c.goTo}">
+                                        <span style="pointer-events: none;">Registrarse</span>
+                                    </div>
+                                    <div
+                                        aura:id="login-btn-nsj-tablet" 
+                                        class="text-profilemenu-nsj slds-align_absolute-center"
+                                        onclick="{!c.goToLogin}">
+                                        <span>Iniciar Sesión</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </aura:if>
+                    </div>
+                </div>
+                <!--Mobile-->
+                <div class="mobile">
+                    <img 
+                        src="{!$Resource.iconProfileMenuUserNSJ}" 
+                        class="icon-menu-profile-nsj" 
+                        onclick="{!c.showModalProfile}"/>
+                </div>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

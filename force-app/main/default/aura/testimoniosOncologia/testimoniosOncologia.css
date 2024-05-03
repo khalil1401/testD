@@ -1,0 +1,22 @@
+.THIS {
+}
+
+.THIS .iconComillas{
+    vertical-align: bottom !important;
+}
+
+.THIS .iconComillas svg{
+    fill: #293896;
+}
+
+.THIS .imagenTestimonio{
+    max-height: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    min-width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 50%;
+}

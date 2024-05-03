@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+    <language>es</language>
+    <masterLabel>RDR_AMN_Diciembre_SIN_RECOGNITION2j1</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>RDR AMN Diciembre SIN RECOGNITION2.jpg</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

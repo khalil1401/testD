@@ -1,0 +1,74 @@
+<template>
+    <div class="desktop">
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center container-header-malnutricion" data-id="img-header-malnutricion">
+            <div class="slds-col slds-medium-size_6-of-12">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <!--Primer línea-->
+                    <div class="div-contenido-izq">
+                        <div class="slds-col slds-large-size_1-of-1">
+                            <div class="container-texto-header">
+                                <p class="volanta-header">
+                                    {volanta}
+                                </p>
+                                <p class="titulo-header">
+                                    {titulo}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Segunda línea-->
+                    <div class="slds-col slds-large-size_1-of-1">
+                        <div class="container-texto-header">
+                            <div class="linea-header">
+                                <div class="circle-header">                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Tercer línea-->
+                    <div class="div-contenido-izq">
+                        <div class="slds-col slds-large-size_1-of-1">
+                            <div class="container-texto-header">
+                                <p class="texto-bajada">
+                                    {textoBajada}
+                                </p>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12">
+                <div class="div-contenido-der">
+                    <div class="slds-p-top_medium slds-p-bottom_medium">
+                        <img src={imgPrincipal} class="img-header-malnutricion">
+                    </div>    
+                </div>
+                <div class="div-derecha"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="slds-grid slds-wrap container-header-malnutricion" data-id="img-header-malnutricion-mobile">
+            <div class="slds-col slds-medium-size_1-of-1 slds-m-top_xx-large">
+                <div class="container-texto-header">
+                    <p class="volanta-header">
+                        {volanta}
+                    </p>
+                    <p class="titulo-header">
+                        {titulo}
+                    </p>
+                    <div class="linea-header">
+                        <div class="circle-header">                      
+                        </div>
+                    </div>
+                    <p class="texto-bajada">
+                        {textoBajada}
+                    </p>
+                    <div class="slds-p-top_medium slds-p-bottom_medium">
+                        <img src={imgPrincipal} class="img-header-malnutricion">
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

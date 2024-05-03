@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Prob_la_f_mula__c</name>
+    <picklistValues>
+        <masterLabel>No la van a probar</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No, aún no la probaron</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Si, ya la probaron</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

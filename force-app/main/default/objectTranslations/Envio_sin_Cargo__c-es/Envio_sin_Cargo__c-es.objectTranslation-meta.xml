@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Envío sin cargo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Envíos sin cargo</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>EYN</layout>
+        <sections>
+            <label></label>
+            <section>Detalle De Envio</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Detalle De Paciente</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Envio sin Cargo</layout>
+        <sections>
+            <label></label>
+            <section>Detalle De Envio</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Detalle De Paciente</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label></label>
+        <name>EYN</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Envio_Sin_Cargo</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Envio_Reservado</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Si_se_genera_XML_no_puede_ser_Ingresado</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>Agregar_productos</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Generar_XML</name>
+    </webLinks>
+</CustomObjectTranslation>

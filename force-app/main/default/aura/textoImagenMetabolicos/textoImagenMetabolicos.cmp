@@ -1,0 +1,11 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+	<aura:attribute name="title" type="String"/>
+
+    <div>
+        <aura:if isTrue="{!v.title!=''}">
+            <aura:unescapedHtml value="{!v.title}"/>
+        </aura:if>
+    </div>
+
+</aura:component>

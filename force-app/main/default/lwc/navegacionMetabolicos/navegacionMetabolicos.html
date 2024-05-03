@@ -1,0 +1,31 @@
+<template>
+    <div class="nav-meta">
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+            <div class="slds-col slds-medium-size_9-of-12">
+                <div class="desktop">
+                    <template for:each={itemsMetabolicos} for:item="item">
+                        <span   key={item.label}
+                                data-id={item.dataId}
+                                class={item.class} 
+                                onclick={redirect}>
+                            {item.label}
+                        </span>
+                    </template>
+                </div> 
+            </div> 
+            <div class="slds-col slds-medium-size_3-of-12 slds-size_1-of-1">
+                <div style="text-align: right;">
+                    <span class="text-rs-nav-meta">Seguinos en </span>
+                    <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_1/PP-Metab%C3%B3licos%20-Icono%20FB.png"
+                            class="img-rs-nav-meta"
+                            data-id="https://www.facebook.com/comunidadmetabolica"
+                            onclick={redirectRS}>
+                    <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_METABOLICOS/PAGINA_1/PP-Metab%C3%B3licos%20-Icono%20IG.png"
+                            class="img-rs-nav-meta"
+                            data-id="https://www.instagram.com/comunidadmetabolica/"
+                            onclick={redirectRS}>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

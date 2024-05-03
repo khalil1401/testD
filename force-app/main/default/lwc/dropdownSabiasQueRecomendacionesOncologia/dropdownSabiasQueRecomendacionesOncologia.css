@@ -1,0 +1,67 @@
+.backgroundDropdownSQROncologia{
+    padding-left: 17%;
+    padding-right: 17%;
+    background: linear-gradient(90deg, rgba(152, 123, 217, 0.6) 0%, rgba(110,131,229, 0.6) 100%);
+}
+
+.tituloDropdownSQROncologia{
+    font-family: MontserratSemiBold;
+    color: #293896;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.textoDropdownSQROncologia{
+    font-family: MontserratRegular;
+    color: #293896;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.lineaDropdownBalanceOncologia{
+    border-top: 1px solid #293896;
+    width:100px;
+    margin-top:1.2%;
+}
+
+.imgSabiasQue{
+    width: 65%;
+}
+
+@media (max-width: 1600px) {
+    .backgroundDropdownSQROncologia{
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+}
+
+@media (max-width: 600px) {
+    .backgroundDropdownSQROncologia{
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .tituloDropdownSQROncologia{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .textoDropdownSQROncologia{
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .lineaDropdownBalanceOncologia{
+        margin-top:3.5%;
+    }
+    .imgSabiasQue{
+        width: 50%;
+    }
+    .containerSaltoDeLinea{
+        display: none;
+    }
+    .containerTextoDropdownSQROncologia{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .imagenDetalleSabiasQue{
+        width: 75%;
+    }
+}

@@ -1,0 +1,72 @@
+.title-pacifico-contacto-manager{
+    font-family: PacificoRegular;
+    color:#C09AC2;
+    font-size: 85px;
+    line-height: 70px;
+}
+
+.div-info-contacto-manager{
+    position: relative; 
+    height: 400px; 
+    margin-left: 10%; 
+    margin-right: 10%;
+}
+
+.text-contacto{
+    font-family: MontserratRegular;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+.left-container-contact{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 30%;
+    height: 300px;
+    border: 2px solid #9D67A8;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.right-container-contact{
+    position: absolute; 
+    left: 25%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 0;
+    width: 75%;
+    height: 350px;
+    border: 2px solid #9D67A8;
+    border-radius: 15px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media (max-width: 412px) {
+    .title-pacifico-contacto-manager{
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .div-info-contacto-manager{
+        margin-left: 5%; 
+        margin-right: 5%;
+        text-align: center;
+    }
+
+    .right-container-contact{
+        height: 400px;
+        padding-left: 0%;
+        padding-right: 0%;
+        left: 0%;
+        width: 100%;
+    } 
+
+    .left-container-contact{
+        display: none;
+    }
+}

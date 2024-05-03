@@ -1,0 +1,274 @@
+.desktop-aviso-cobertura {
+    display: none;
+}
+
+.div-form-perfil-aviso-cobertura {
+    width: 100%;
+}
+
+.form-datos {
+    width: 328px;
+}
+
+.icon-back {
+    width: 25px; 
+    position: relative; 
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.img-step {
+    margin-top: 35px;
+}
+
+.name-text {
+    font-family: BariolBold;
+    color: #313183;
+    font-size: 24px;
+    line-height: 26.45px;
+}
+
+.card-item-title {
+    font-family: BariolBold;
+    color: #1C1B1F;
+    font-size: 18px;
+    line-height: 19.84px;
+}
+
+.card-item-text {
+    font-family: BariolRegular;
+    color: #1C1B1F;
+    font-size: 16px;
+    line-height: 17.63px;
+}
+
+.card-aviso-cobertura {
+    width: 100%;
+    height: 418px;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.card-header {
+    height: 50px;
+}
+
+.card-body {
+    height: 368px;
+}
+
+.back-button{
+    width: 100%;
+    height: 40px;
+    background-color: #ECF1F4;
+    color: #522583;
+    border-radius: 8px;
+    font-family: BariolBold;
+    font-size: 16px;
+    line-height: 17.63px;
+    border-color: transparent;
+}
+
+.next-button{
+    width: 100%;
+    height: 40px;
+    background-color: #9D67A8;
+    color: white;
+    border-radius: 8px;
+    font-family: BariolBold;
+    font-size: 16px;
+    line-height: 17.63px;
+    border-color: transparent;
+}
+
+.estado-button{
+    width: 187px;
+    height: 40px;
+    background-color: #ECF1F4;
+    color: #522583;
+    border-radius: 8px;
+    font-family: BariolBold;
+    font-size: 16px;
+    line-height: 17.63px;
+    border-color: transparent;
+}
+
+.slds-progress__item .slds-is-completed .slds-progress__marker, .slds-progress__item.slds-is-active .slds-progress__marker {
+    border-color: #9D67A8 !important;
+    background: #9D67A8 !important;
+}
+
+.slds-modal__content{
+    border-radius: 16px !important;
+    width: 328px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+.slds-backdrop_open{
+    background: #606060 !important;
+    opacity: 0.2 !important;
+}
+
+.modal-spinner{
+    position: relative;
+}
+
+.hr-line::before {
+    content: '';
+    display: block;
+    width: 85%;
+    border-top: 1px solid #1C1B1F;
+    transform: scaleY(0.3);
+}
+
+.icon-faq {
+    width: 40px;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+.container-span-icon-help{
+    background-color: #B59AC8;
+	position: absolute;
+	z-index: 1;
+	right: 3%;
+    bottom: 20%;
+    width: 200px;
+	animation: fadeIn 0.5s;
+}
+
+.triangulo-2 {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #B59AC8;
+	position: absolute;
+	z-index: 1;
+	right: 5%;
+    bottom: 17.5%;
+	animation: fadeIn 0.5s;
+}
+
+.span-icon-help{
+    color: white;
+    font-family: BariolRegular;
+    font-weight: 700;
+	letter-spacing: 0.32px;
+}
+
+.fade-in-right-left {
+    animation: fadeInRightLeft 0.25s;
+}
+
+@keyframes fadeInRightLeft {
+    0% { 
+        opacity: 1;
+        transform: translateX(412px);
+    }
+
+    100% { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 412px) {
+    .form-datos {
+        width: 380px;
+    }
+
+    .slds-modal__content{
+        width: 380px !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;    
+    }
+
+    .card-aviso-cobertura {
+        height: 471px;
+    }
+
+    .card-header {
+        height: 71px;
+    }
+    
+    .card-body {
+        height: 400px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .card-without-header {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .estado-button{
+        width: 266px;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-aviso-cobertura {
+        display: none;
+    }
+
+    .desktop-aviso-cobertura {
+        display: initial;
+    }
+
+    .form-datos {
+        width: 598px;
+    }
+
+    .card-body {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .card-without-header {
+        padding-left: 125px;
+        padding-right: 125px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .div-form-perfil-aviso-cobertura {
+        height: 100%;
+        background-color: white;
+        border-radius: 25px;
+        width: 725px;
+        margin-left: 25px;
+    }
+
+    .slds-modal {
+        position: absolute !important;
+    }
+
+    .slds-backdrop {
+        border-radius: 25px;
+        position: absolute !important;
+    }
+
+    .icon-back {
+        width: 30px; 
+        position: absolute; 
+        top: 3%; 
+        right: 5%;
+        cursor: pointer;
+    }    
+}
+
+@media (min-width: 1366px) {
+    .div-form-perfil-aviso-cobertura {
+        width: 972px;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .div-form-perfil-aviso-cobertura {
+        width: 1211px;
+    }
+}

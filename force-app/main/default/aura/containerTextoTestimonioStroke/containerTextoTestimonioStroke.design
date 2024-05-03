@@ -1,0 +1,9 @@
+<design:component >
+
+    <design:attribute name="izquierda" label="Ubicación de componente a la izquierda"/>
+    <design:attribute name="derecha" label="Ubicación de componente a la derecha"/>
+    <design:attribute name="recursoEstatico" label="URL de la imagen de componente"/>
+    <design:attribute name="primerTexto" label="Texto (Primnera parte) de componente"/>
+    <design:attribute name="segundoTexto" label="Texto (Segunda parte) de componente"/>
+
+</design:component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-WaveHome</defaultLandingTab>
+    <description>Aplicación de solo lectura para analytics</description>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Analytics</label>
+    <logo>SharedDocuments/Logo_Nutricia_1.png</logo>
+    <tabs>standard-WaveHome</tabs>
+    <tabs>Envio_sin_Cargo__c</tabs>
+    <tabs>Historia_Cl_nica_Especializada__c</tabs>
+    <tabs>Profesional_por_Institucion__c</tabs>
+</CustomApplication>

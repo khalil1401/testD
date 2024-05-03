@@ -1,0 +1,147 @@
+<template>
+    <div>
+        <p class="titulosRosado containerDescripcionReceta">
+            {tipoDeReceta}
+        </p>
+        <div class="containerDescripcionRecetaDesktop">
+            <div class="slds-grid slds-grid_vertical-align-center">
+                <div class="slds-col slds-large-size_4-of-12">
+                    <div class="containerImgReceta">
+                        <img src={recetaImg} class="imgReceta">
+                    </div>
+                </div>
+                <div class="slds-col slds-large-size_7-of-12" style="padding-left: 2%;">
+                    <p class="tituloReceta">
+                        {titulo}
+                    </p>
+                    <div class="slds-m-top_large">
+                        <div class="slds-grid slds-grid_vertical-align-center">
+                            <div class="slds-col slds-large-size_2-of-12 slds-align_absolute-center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-RECETAS/PP-recetaPreparacion%282022-05-24%29.png">
+                            </div>
+                            <div class="slds-col slds-large-size_10-of-12">
+                                <p class="titulosGris">
+                                    Preparación
+                                </p>
+                                <p class="textosGris">
+                                    <lightning-formatted-rich-text value={tiempoPreparacion}></lightning-formatted-rich-text>
+                                </p>        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-m-top_medium">
+                        <div class="slds-grid slds-grid_vertical-align-center">
+                            <div class="slds-col slds-large-size_2-of-12 slds-align_absolute-center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-RECETAS/PP-recetaPorciones%282022-05-24%29.png">
+                            </div>
+                            <div class="slds-col slds-large-size_10-of-12">
+                                <p class="titulosGris">
+                                    Cantidad
+                                </p>
+                                <p class="textosGris">
+                                    <lightning-formatted-rich-text value={cantidad}></lightning-formatted-rich-text>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerDescripcionRecetaMobile">
+            <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                <div class="slds-col slds-size_1-of-1 containerDescripcionReceta">
+                    <p class="tituloReceta">
+                        {titulo}
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 containerDescripcionReceta">
+                    <div class="containerImgReceta">
+                        <img src={recetaImg} class="imgReceta">
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                    <div class="containerDescripcionReceta" style="background-color: #ebebeb;">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="padding-top: 5%;">
+                            <div class="slds-col slds-size_2-of-12">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-RECETAS/PP-recetaPreparacion%282022-05-24%29.png" style="width: 75%;">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12">
+                                <p class="titulosGris preparacionYCantidad">
+                                    Preparación
+                                </p>
+                                <p class="textosGris preparacionYCantidad">
+                                    <lightning-formatted-rich-text value={tiempoPreparacion}></lightning-formatted-rich-text>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-top_small"
+                            style="padding-bottom: 5%;">
+                            <div class="slds-col slds-size_2-of-12">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-RECETAS/PP-recetaPorciones%282022-05-24%29.png" style="width: 75%;">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12">
+                                <p class="titulosGris preparacionYCantidad">
+                                    Cantidad
+                                </p>
+                                <p class="textosGris preparacionYCantidad">
+                                    <lightning-formatted-rich-text value={cantidad}></lightning-formatted-rich-text>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerIngredentiesPreparacionReceta containerDescripcionReceta">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+                    <p class="titulosGris">
+                        Ingredientes
+                    </p>
+                    <hr class="lineaReceta"/>
+                    <p class="textosGris">
+                        <lightning-formatted-rich-text value={ingredientes}></lightning-formatted-rich-text>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_7-of-12">
+                    <p class="titulosGris">
+                        Preparación
+                    </p>
+                    <hr class="lineaReceta"/>
+                    <p class="textosGris">
+                        <lightning-formatted-rich-text value={preparacion}></lightning-formatted-rich-text>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerConsejosRecetas">
+        <div class="slds-grid slds-wrap" style="padding-top: 4%;padding-bottom: 4%;">
+            <div class="slds-col slds-large-size_2-of-12">
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12 containerDescripcionReceta">
+                <button class="slds-button slds-button_brand">
+                    Consejos
+                </button>
+                <p class="textosGris slds-m-top_medium">
+                    <lightning-formatted-rich-text value={consejos}></lightning-formatted-rich-text>
+                </p>
+            </div>
+            <div class="slds-col slds-large-size_2-of-12">
+            </div>
+        </div>
+    </div>
+
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-1 slds-align_absolute-center">
+            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-m-left_xx-large slds-m-right_xx-large slds-m-top_xx-large slds-text-align_center">
+                <span class="botonVerTodasLasRecetas"
+                    onclick={redireccionarRecetas}>
+                    VER TODAS LAS RECETAS
+                </span>
+            </div>
+        </div>        
+    </div>
+
+</template>

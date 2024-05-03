@@ -1,0 +1,68 @@
+.cardConsejoFortisipOncologia{
+    border-radius: 10px 10px 10px 10px;
+    background-color: #ebebeb;
+    margin: 10%;
+    height: 350px;
+}
+
+.containerImgCardFortisipOncologia{
+    height: 175px;
+}
+
+.containerTextoCardFortisipOncologia{
+    height: 125px;
+}
+
+.textoCardFortisipOncologia{
+    font-family: MontserratRegular;
+    color: #606060;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.verMasCardFortisipOncologia{
+    font-family: MontserratSemiBold;
+    color: #293896;
+    font-size: 12px;
+    float: right;
+    padding: 5%;
+    cursor: pointer;
+}
+
+.flip-card {
+    border-radius: 10px 10px 10px 10px;
+    background-color: transparent;
+    margin: 10%;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    border-radius: 10px 10px 10px 10px;
+    background-color: #ebebeb;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    border-radius: 10px 10px 10px 10px;
+    background-color: #ebebeb;
+    transform: rotateY(180deg);
+}

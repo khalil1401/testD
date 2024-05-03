@@ -1,0 +1,52 @@
+.div-container-tips-cocina-metabolicos{
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.div-description-tip-cocina-meta{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #EBEBEB;
+}
+
+.title-description-text-cocina-meta{
+    font-family: MontserratSemiBold;
+    color: #907DD6;
+    font-size: 2rem;
+    line-height: 1.875rem;
+}
+
+.subtitle-description-text-cocina-meta{
+    font-family: MontserratSemiBold;
+    color: #606060;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+}
+
+.description-text-tip-cocina-meta{
+    font-family: MontserratRegular;
+    color: #606060;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+}
+
+.description-text-fuentes-tip-cocina-meta{
+    font-family: MontserratRegular;
+    font-style: italic;
+    color: #606060;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+}
+
+@media (max-width: 1600px) {
+    .div-container-tips-cocina-metabolicos{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .div-description-tip-cocina-meta{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

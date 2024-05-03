@@ -1,0 +1,36 @@
+.THIS {
+}
+
+.THIS .divCenterVertically {
+    margin: auto;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.THIS .icnAdelantar svg:hover{
+    cursor: pointer;
+}
+
+.THIS .icnReversa svg:hover{
+    cursor: pointer;
+}
+
+.THIS .titulosOncologia{
+    font-family:MontserratSemiBold;
+    font-size: 22px;
+    color:#606060;
+    line-height: 30px;
+}
+
+.THIS .textosOncologia{
+    font-family:MontserratRegular;
+    font-size: 16px;
+    color:#606060;
+    line-height: 24px;
+}
+
+.THIS .linea{
+    border-top: 1px solid #606060;
+    width:100px;
+    margin-top:1.2%;
+}

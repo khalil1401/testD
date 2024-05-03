@@ -1,0 +1,55 @@
+.container-detalles-pasos{
+    background-color: #EFECF1;
+}
+
+.imagen-paso{
+    cursor: pointer;
+    padding: 5%;
+}
+
+.hidden-container{
+    display: none;
+}
+
+.show-container{
+    display: initial;
+}
+
+.titulo-paso{
+    font-family: MontserratSemiBold;
+    font-size: 37px;
+    line-height: 45px;
+}
+
+.texto-paso{
+    font-family: MontserratRegular;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.imagen-detalle-paso{
+    width: 80%;
+}
+
+a{
+    color: #73C9C7;
+}
+
+@media (max-width: 600px) {
+    .imagen-paso{
+        padding: 0%;
+        width: 65%;
+    }    
+    .imagen-detalle-paso{
+        display: none;
+    }
+    .titulo-paso{
+        font-size: 22pt;
+        line-height: 26pt;
+        padding-left: 5%;
+    }
+    .texto-paso{
+        font-size: 15pt;
+        line-height: 18pt;
+    }    
+}

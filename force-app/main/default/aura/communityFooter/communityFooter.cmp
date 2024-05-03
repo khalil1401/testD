@@ -1,0 +1,86 @@
+<aura:component implements="force:appHostable,forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+    
+    <aura:attribute name="footerBackgroundColor" type="String"/>
+    <aura:attribute name="footerLine1" type="String" default=""/>
+    <aura:attribute name="terminos" type="String"/>
+    <aura:attribute name="politicas" type="String"/>
+	<aura:attribute name="apiNamePageTerminos" type="String" default="custom_terminos_de_uso__c"/>
+	<aura:attribute name="apiNamePagePoliticas" type="String" default="custom_politicas_de_privacidad__c"/>
+
+    <aura:attribute name="footerLine2" type="String" default=""/>
+    <aura:attribute name="footerLine3" type="String" default=""/>
+    <aura:attribute name="footerLine4" type="String" default=""/>
+    
+    <aura:attribute name="siteName1" type="String"/>
+	<aura:attribute name="siteImageIconName1" type="String" access="global"/>
+	<aura:attribute name="siteImageIconPath1" type="String" default=""/>
+	<aura:attribute name="siteImageIcon1Width" type="String"/>
+    <aura:attribute name="linkToSite1" type="String"/>
+	<aura:attribute name="siteImage1HaveIcon" type="Boolean" default="false" access="global"/>
+	<aura:attribute name="siteImageIconSrc1" type="String"/>
+
+    <aura:attribute name="siteName2" type="String"/>
+	<aura:attribute name="siteImageIconName2" type="String" access="global"/>
+	<aura:attribute name="siteImageIconPath2" type="String" default=""/>
+	<aura:attribute name="siteImageIcon2Width" type="String"/>
+    <aura:attribute name="linkToSite2" type="String"/>
+	<aura:attribute name="siteImage2HaveIcon" type="Boolean" default="false"/>
+	<aura:attribute name="siteImageIconSrc2" type="String"/>
+
+    <aura:attribute name="siteName3" type="String"/>
+	<aura:attribute name="siteImageIconName3" type="String"/>
+	<aura:attribute name="siteImageIconPath3" type="String" default=""/>
+	<aura:attribute name="siteImageIcon3Width" type="String"/>
+    <aura:attribute name="linkToSite3" type="String"/>
+	<aura:attribute name="siteImage3HaveIcon" type="Boolean" default="false"/>
+	<aura:attribute name="siteImageIconSrc3" type="String"/>
+
+    <aura:attribute name="linkPoliticas" type="String"/>o
+    <aura:attribute name="linkTerminos" type="String"/>
+    
+    <aura:attribute name="isFacebook" type="Boolean"/>
+    <aura:attribute name="linkToFacebook" type="String"/>
+    <aura:attribute name="isTwitter" type="Boolean"/>
+    <aura:attribute name="linkToTwitter" type="String"/>
+    <aura:attribute name="isInstagram" type="Boolean"/>
+    <aura:attribute name="linkToInstagram" type="String"/>
+    <aura:attribute name="isYoutube" type="Boolean"/>
+    <aura:attribute name="linkToYoutube" type="String"/>
+
+	<lightning:navigation aura:id="navService"/>
+
+	<aura:html tag="style">
+        .container {
+			background-color: {!v.footerBackgroundColor} !important;
+        }
+    </aura:html>
+
+	<div class="slds-grid slds-wrap container slds-p-top_xx-large slds-p-bottom_xx-large slds-text-align_center"
+		style="position:relative; margin-top:-20px !important;">
+		<div class="slds-col slds-medium-size_4-of-12">
+		</div>
+		<div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1 slds-p-left_small slds-p-right_small">
+			<div>
+				<p class="text-footer-nsj">{!v.footerLine1}</p>
+			</div>
+			<div class="slds-p-top_medium">
+				<div class="desktop">
+					<span class="text-link-footer-nsj" onclick="{!c.redirectToTerminos}">{!v.terminos}</span>
+					<span class="text-link-footer-nsj">•</span>
+					<span class="text-link-footer-nsj" onclick="{!c.redirectToPoliticas}">{!v.politicas}</span>
+					<span class="text-link-footer-nsj">•</span>
+					<span class="text-link-footer-nsj" onclick="{!c.redirectToPoliticas}">Preguntas Frecuentes</span>
+				</div>
+				<div class="mobile">
+					<span class="text-link-footer-nsj" onclick="{!c.redirectToTerminos}">{!v.terminos}</span>
+					<span class="text-link-footer-nsj">•</span>
+					<span class="text-link-footer-nsj" onclick="{!c.redirectToPoliticas}">{!v.politicas}</span>
+					<p class="text-link-footer-nsj" onclick="{!c.redirectToPoliticas}">Preguntas Frecuentes</p>
+				</div>
+			</div>
+		</div>
+		<div class="slds-col slds-medium-size_4-of-12">
+		</div>
+	</div>
+
+</aura:component>

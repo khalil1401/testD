@@ -1,0 +1,76 @@
+.THIS {
+}
+
+.THIS .withOpacity {
+    background: linear-gradient(90deg, rgba(152, 123, 217, 0.6) 0%,  rgba(110,131,229,0.6) 100%) !important;
+}
+
+.THIS .withoutOpacity {
+    opacity: 1 !important;
+}
+
+.THIS .botonKitDeInicio {
+    background: linear-gradient(90deg, rgba(152, 123, 217, 1) 0%,  rgba(110,131,229,1) 100%);
+    border-color: #EBEBEB;
+    border-radius: 10px 10px 10px 10px;
+    font-family:MontserratSemiBold;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.THIS .tituloCardTecnicasBelleza{
+    font-size: 24px;
+    font-family: MontserratSemiBold;
+    color:white;
+}
+
+.THIS .textoCardTecnicasBelleza{
+    font-size: 16px;
+    font-family: MontserratRegular;
+    color:white;
+}
+
+.THIS .textoDetalleTecnicasBelleza{
+    font-family:MontserratRegular;
+    font-size: 16px;
+    color:#606060;
+    line-height: 24px;
+}
+
+.THIS .imagenDetalleTecnicaBelleza{
+    height: 450px;
+}
+
+@media (max-width: 600px) {
+    .THIS .botonKitDeInicio {
+        font-size: 18px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .THIS .tituloCardTecnicasBelleza{
+        font-size: 18px;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    .THIS .textoCardTecnicasBelleza{
+        font-size: 14px;
+        font-family: MontserratRegular;
+        color:white;
+    }
+    .THIS .textoDetalleTecnicasBelleza{
+        font-family:MontserratRegular;
+        font-size: 15px;
+        color:#606060;
+        line-height: 23px;
+        padding-left: 5%;
+        padding-right: 5%;    
+    }
+    .THIS .imagenDetalleTecnicaBelleza{
+        height: 200px;
+    }
+    .THIS .padding{
+        padding-left: 5%;
+        padding-right: 5%;
+    }    
+}

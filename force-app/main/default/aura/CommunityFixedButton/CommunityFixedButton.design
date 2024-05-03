@@ -1,0 +1,20 @@
+<design:component>
+    <!-- Button -->
+    <design:attribute name="height" label="Alto de la imagen en PX"/>
+    <design:attribute name="width" label="Ancho de la imagen en PX"/>
+    <design:attribute name="mobileHeight" label="Alto de la imagen en PX para telefonos"/>
+    <design:attribute name="mobileWidth" label="Ancho de la imagen en PX para telefonos"/>
+    <design:attribute name="borderRadius" label="Curvatura de esquinas"/> 
+    <design:attribute name="verticalAlign" label="Ubicacion vertical del boton" 
+                      datasource="top, bottom"/> 
+    <design:attribute name="align" label="Ubicacion horizontal del boton" 
+                      datasource="left, right"/> 
+    <design:attribute name="verticalPX" label="Separacion desde el borde vertical en PX"/>
+    <design:attribute name="horizontalPX" label="Separacion desde el borde horizontal en PX"/>   
+    <design:attribute name="backgroundSize" label="Tamaño de la imagen en %"/>
+    <design:attribute name="URL" label="link"/> 
+	<!-- Button background image -->
+    <design:attribute name="backgroundColor" label="Color de fondo en hexadecimal"/> 
+    <design:attribute name="staticResourceName" label="Nombre del recurso estatico"/>
+	<design:attribute name="imageName" label="Ruta completa a la imagen en el recurso estatico"/>
+</design:component>

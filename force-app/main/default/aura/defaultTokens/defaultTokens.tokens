@@ -1,0 +1,3 @@
+<aura:tokens extends="forceCommunity:base">
+    <aura:token name="myMargin" value="0px"/>
+</aura:tokens>

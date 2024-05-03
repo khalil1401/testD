@@ -1,0 +1,12 @@
+<design:component >
+
+    <design:attribute name="rutaDePagina" label="Ruta de Página"/>
+
+    <design:attribute name="isFacebook" label="Tiene Facebook"/>
+    <design:attribute name="rutaFacebook" label="Link de Facebook"/>
+    <design:attribute name="isInstagram" label="Tiene Instagram"/>
+    <design:attribute name="rutaInstagram" label="Link de Instagram"/>
+    <design:attribute name="isYoutube" label="Tiene Youtube"/>
+    <design:attribute name="rutaYoutube" label="Link de Youtube"/>
+
+</design:component>

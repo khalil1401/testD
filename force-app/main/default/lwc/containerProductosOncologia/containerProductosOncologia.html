@@ -1,0 +1,113 @@
+<template>
+    <template if:true={necesidadesNutricionales}>
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-top_x-large slds-m-bottom_x-large">
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-top_large slds-m-bottom_large">
+                    <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Icono-Musculo.png"
+                            class="icon-img">
+                    </div>
+                    <div class="slds-col slds-medium-size_8-of-12 slds-size_1-of-1">
+                        <p class="text-cpo-blue">
+                            <span style="font-family: MontserratSemiBold;">Ayuda a prevenir</span> y mantener <span style="font-family: MontserratSemiBold;">la pérdida de peso</span> y a la recuperación de la <span style="font-family: MontserratSemiBold;">masa muscular.</span><sup>2</sup>
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-top_large slds-m-bottom_large">
+                    <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Icono-Estado.png"
+                        class="icon-img">
+                    </div>
+                    <div class="slds-col slds-medium-size_8-of-12 slds-size_1-of-1">
+                        <p class="text-cpo-blue">
+                            <span style="font-family: MontserratSemiBold;">Mejora tu estado general</span> ayudando a disminuir el cansancio (astenia).<sup>3</sup>
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-top_large slds-m-bottom_large">
+                    <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Icono-Volumen.png"
+                        class="icon-img">
+                    </div>
+                    <div class="slds-col slds-medium-size_8-of-12 slds-size_1-of-1">
+                        <p class="text-cpo-blue">
+                            Facilita la ingesta total y el cumplimiento de la indicación médica <span style="font-family: MontserratSemiBold;">al presentarse en volumen reducido (125ml).</span><sup>4</sup>
+                        </p>
+                    </div>                    
+                </div>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Imagen-NecNutricionales.png"
+                    class="nt-img">
+            </div>
+        </div>
+    </template>
+    <template if:false={necesidadesNutricionales}>
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+            <div class="slds-col slds-medium-size_10-of-12 slds-size_1-of-1">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-medium-size_8-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Pack-FrutosRojos.png"
+                            class="product-img">
+                    </div>
+                    <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1">
+                        <div class="texts-cpo">
+                            <p class="title-cpo-red">
+                                SABOR FRESCO A FRUTOS ROJOS
+                            </p>
+                            <p class="text-cpo-red slds-m-top_medium">
+                                Contiene derivados del <span style="font-family: MontserratSemiBold;">mentol</span> que envían señales al cerebro y provocan una <span style="font-family: MontserratSemiBold;">sensación de frescura.</span>
+                            </p>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-medium-size_8-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Pack-Neutro.png"
+                            class="product-img">
+                    </div>
+                    <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1">
+                        <div class="texts-cpo">
+                            <p class="title-cpo-green">
+                                SABOR NEUTRO
+                            </p>
+                            <p class="text-cpo-green slds-m-top_medium">
+                                Diseñado para <span style="font-family: MontserratSemiBold;"> pacientes con hipersensibilidad a los sabores y olores.</span>
+                            </p>
+                        </div>
+                    </div>        
+                </div>
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-medium-size_8-of-12 slds-size_1-of-1 slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Pack-Tropical.png"
+                            class="product-img">
+                    </div>
+                    <div class="slds-col slds-medium-size_4-of-12 slds-size_1-of-1">
+                        <div class="texts-cpo">
+                            <p class="title-cpo-orange">
+                                SABOR PICANTE A JENGIBRE TROPICAL
+                            </p>
+                            <p class="text-cpo-orange slds-m-top_medium">
+                                Contiene derivados del <span style="font-family: MontserratSemiBold;">pimiento picante</span> que envían señales al cerebro y <span style="font-family: MontserratSemiBold;">provocan una sensación de picor.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-medium-size_2-of-12">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Imagen-Frutilla.png"
+                    class="frutas-l-img">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Berry.png"
+                    class="frutas-r-img">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Boysandberries.png"
+                    class="frutas-l-img">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Frambuesa.png"
+                    class="frutas-r-img">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Jengibre-2.png"
+                    class="frutas-l-img">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-PRODUCTO_ONCOLOGIA/ONCO-LANDING/PP-Jengibre-1.png"
+                    class="frutas-r-img">
+            </div>
+        </div>
+    </template>
+</template>

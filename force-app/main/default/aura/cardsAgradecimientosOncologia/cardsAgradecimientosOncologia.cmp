@@ -1,0 +1,52 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="isDisgeusia" type="Boolean" default="false"/>
+    <aura:attribute name="isRecetas" type="Boolean" default="false"/>
+
+    <div class="slds-grid slds-wrap slds-align_absolute-center">
+        <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+            <div class="cardAgradecimientoOncologia slds-p-around_x-large slds-m-around_x-large">
+                <div class="slds-align_absolute-center imgCardAgradecimientoOncologia">
+                    <img src="{!$Resource.fotoAgradecimientoSenese}" alt="flecha"
+                        class="imgAgradecimientoOncologia slds-align_absolute-center"/>
+                </div>
+                <div class="slds-text-align_center">
+                    <p class="slds-m-top_small nombreAgradecimientoOncologia">
+                        Lic Agustina Senese
+                    </p>
+                    <p class="slds-m-top_small especialidaAgradecimientoOncologia">
+                        Experta en Nutrición Oncológica
+                    </p>
+                    <p class="slds-m-top_small lugarAgradecimientoOncologia">
+                        Hospital Argerich
+                    </p>
+                    <p class="lugarAgradecimientoOncologia">
+                        MN 6634
+                    </p>
+                </div>
+            </div>
+        </div>
+        <aura:if isTrue="{!!v.isDisgeusia}">
+            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+                <div class="cardAgradecimientoOncologia slds-p-around_x-large slds-m-around_x-large">
+                    <div class="slds-align_absolute-center imgCardAgradecimientoOncologia">
+                        <img src="{!$Resource.fotoAgradecimientoNino}" alt="flecha"
+                            class="imgAgradecimientoOncologia slds-align_absolute-center"/>
+                    </div>
+                    <div class="slds-text-align_center">
+                        <p class="slds-m-top_small nombreAgradecimientoOncologia">
+                            Lic Carolina Niño
+                        </p>
+                        <p class="slds-m-top_small especialidaAgradecimientoOncologia">
+                            Especialista en Nutrición Oncológica
+                        </p>
+                        <p class="slds-m-top_small lugarAgradecimientoOncologia">
+                            Favaloro MN 5312
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+    </div>
+
+</aura:component>

@@ -1,0 +1,8 @@
+<design:component >
+
+    <design:attribute name="recursoEstatico" label="URL de la imagen de fondo"/>
+    <design:attribute name="altoDesktop" label="Alto de componente en px"/>
+    <design:attribute name="titulo" label="Titulo de componente"/>
+    <design:attribute name="sinFlechasMobile" label="Sin flechas en Mobile"/>
+
+</design:component>

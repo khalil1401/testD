@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ManagedTopics xmlns="http://soap.sforce.com/2006/04/metadata">
+    <managedTopic>
+        <fullName>testPSP.Featured:ayuda</fullName>
+        <managedTopicType>Featured</managedTopicType>
+        <name>ayuda</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+    <managedTopic>
+        <fullName>testPSP.Navigational:ayuda</fullName>
+        <managedTopicType>Navigational</managedTopicType>
+        <name>ayuda</name>
+        <parentName></parentName>
+        <position>0</position>
+        <topicDescription> </topicDescription>
+    </managedTopic>
+</ManagedTopics>

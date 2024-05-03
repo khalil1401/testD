@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Utilizacion_de__c</name>
+    <picklistValues>
+        <masterLabel>Le fueron útiles y los utiliza</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Le sirven pero utiliza otros que ya tiene</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No le sirvieron</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quiere usarlos y no sabe cómo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

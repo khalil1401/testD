@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Formulario</label>
+    <protected>false</protected>
+    <values>
+        <field>Caso__c</field>
+        <value xsi:type="xsd:string">CF00N1I00000MeAkI</value>
+    </values>
+    <values>
+        <field>Cuenta__c</field>
+        <value xsi:type="xsd:string">CF00N1I00000MeAle</value>
+    </values>
+    <values>
+        <field>ObjectId__c</field>
+        <value xsi:type="xsd:string">01I1I0000029YqD</value>
+    </values>
+</CustomMetadata>

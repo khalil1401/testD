@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help></help>
+    <label></label>
+    <name>Opinion_Capacitacion_Uso_Bomba_Enteral__c</name>
+    <picklistValues>
+        <masterLabel>Considero necesario una nueva capacitación para afianzar conocimientos.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Considero que NO logró transmitir los conceptos mínimos como para poder usarla.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>La capacitación fue suficiente para comprender su uso.</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

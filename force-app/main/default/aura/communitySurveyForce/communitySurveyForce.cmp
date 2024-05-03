@@ -1,0 +1,37 @@
+<aura:component >    
+    <aura:registerEvent name="surveyClose" type="c:communityCloseChildComponentModalEvent"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>  
+    <aura:attribute name="surveyUrl" type="String"/>
+    <aura:attribute name="heightHack" type="String"/>
+    
+    <section style="height:600px !important; margin-top:35px !important;" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <header class="slds-modal__header" style="height:fit-contain !important; border-bottom-width: 1px !important;">
+            <div class="slds-grid slds-wrap slds-align_absolute-center">
+                <div class="slds-col slds-show_medium slds-size_1-of-3">
+                </div>
+                <div class="slds-col slds-size_2-of-3 slds-medium-size_1-of-3">
+                    <h2 id="modal-heading-01" class="slds-text-heading_large slds-hyphenate">Encuesta</h2>
+                </div>
+                <div class="slds-col buttonClose slds-size_1-of-3">
+                    <lightning:buttonIcon aura:id="close"
+                                          iconName="utility:close"
+                                          size="large"
+                                          variant="bare-inverse"
+                                          value="0"
+
+                                          alternativeText="close"
+                                          onclick="{! c.close }">
+                        <span class="slds-assistive-text">Close</span>
+                    </lightning:buttonIcon>
+                </div>
+            </div>
+        </header>
+        <div style="height:68%;" class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <div class="slds-grid slds-wrap">
+                <iframe id="test" src="{! v.surveyUrl }" style="border-width:0 !important; font-family: arial !important; font-size: 48px !important;"
+                        width="100% !important" height="640px">
+                </iframe>
+            </div>
+        </div>  
+    </section>
+</aura:component>

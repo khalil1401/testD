@@ -1,0 +1,30 @@
+<template>
+    <template if:true={textoImagen}>
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center container-texto-imagen-alergia">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                <p class="tituloPacifico">
+                    ¿Qué es la
+                    <span class="tituloMontserratBlack" style="padding-left: 2%;">
+                        APLV?
+                    </span>
+                </p>
+                <p class="textoAlergia slds-m-top_x-large">
+                    Es una reacción inmunológica desmedida frente a las proteínas presentes en la leche de vaca, que puede manifestarse en lactantes que se alimentan con leche materna exclusivamente o fórmulas infantiles.
+                </p>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/HOME/PP-AlergiaAplv%282022-05-27%29.png" class="slds-align_absolute-center slds-p-around_small imagen-aplv">
+            </div>
+        </div>
+    </template>
+    <template if:true={soloImagen}>
+        <div class="slds-grid">
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/CUIDADOS_Y_RECOMENDACIONES/PP-alergiaCuidadosYRecomendaciones%282022-05-27%29.png" class="slds-align_absolute-center slds-p-around_small">
+            </div>
+            <div class="slds-col slds-large-size_3-of-12"></div>
+        </div>
+    </template>
+
+</template>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Podr_a_indicar_porque_no_va_a_continuar__c</name>
+    <picklistValues>
+        <masterLabel>Cambios de Indicación médica</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Problemas asociados al gusto</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Problemas de acceso</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Problemas de tolerancia</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Se rehúsa</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,56 @@
+<aura:component controller="CommunitySurveyController" implements="forceCommunity:availableForAllPageTypes">
+    
+    <!-- This should be part of all the forms -->.
+    <aura:registerEvent name="initialValidationEvent" type="c:CommunityFormInitialValidationsEvent"/> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="communitySource" type="String" default=""/> 
+    <aura:attribute name="registerEvent" type="Boolean" default="false"/>
+	<aura:attribute name="isLoading" type="Boolean" default="true"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <!-- to inform the parent buttons if the form is available for that user --> 
+    
+	<aura:html tag="style">
+		.modal-container{
+			top: 20% !important;
+		}
+		.modal-body{
+			height: fit-content !important;
+		}
+	</aura:html>
+
+    <aura:handler name="answerTermCond" event="c:communityCloseChildComponentModalEvent"
+                  action="{!c.handleAnswerTermCond}"/>
+    <aura:handler name="surveyClose" event="c:communityCloseChildComponentModalEvent"
+                  action="{!c.handleSurveyClose}"/>
+    
+    <aura:attribute name="surveyUrl" type="String"/>
+    <aura:attribute name="templateDeveloperName" type="String"/>
+    <aura:attribute name="termsAndCondsBody" type="String"/>
+    <aura:attribute name="termCond" type="Boolean" default="false"/>
+    <aura:attribute name="openSurvey" type="Boolean" default="false"/>
+    
+    <aura:attribute name="isAnswered" type="Boolean"/> <!-- Used when the component is launched c.doInit -->
+    <aura:attribute name="answered" type="Boolean"/> <!-- Used when Comenzar button is clicked c.start -->
+    
+    <aura:if isTrue="{! v.answered }">
+        <div aura:id="scrollTopId">
+            <div style="width:contains; text-align: center;">
+                <p>Encuesta contestada</p>
+            </div>
+        </div>
+    </aura:if>   
+
+	<aura:if isTrue="{! v.isLoading }">
+		<lightning:spinner alternativeText="Loading" size="small"/>
+		<aura:set attribute="else">
+			<aura:if isTrue="{! v.termCond }">
+				<c:communityTermsAndConds termsAndCondsBody="{! v.termsAndCondsBody }"/>  
+			</aura:if>
+		</aura:set>
+	</aura:if>
+    
+    <aura:if isTrue="{! v.openSurvey }">
+        <c:communitySurveyForce surveyUrl="{! v.surveyUrl }"/>
+    </aura:if>
+    
+</aura:component>

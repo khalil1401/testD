@@ -1,0 +1,65 @@
+.slds-card{
+    border: none;
+}
+
+.backgroundGray{
+    background-color: #ebebeb;
+}
+
+.containerCardReceta{
+    border-radius: 10px 10px 10px 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+}
+
+.textoTipoReceta{
+    font-family: MontserratSemiBold;
+    color: #AC98C4;
+    font-size: 12px;
+}
+
+.slds-card__body{
+    height: 60px;
+    cursor: pointer;
+}
+
+.textoTituloReceta{
+    font-family: MontserratSemiBold;
+    color: #606060;
+    font-size: 24px;
+}
+
+.containerImgReceta{
+    border-radius: 10px 10px 10px 10px;
+    padding-top: 5%;
+}
+
+.imgReceta{
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+}
+
+.slds-card__header{
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .textoTituloReceta{
+        font-size: 15px;
+    }
+    .containerCardReceta{
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 5%;
+    }
+    .slds-card__header{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+    }
+    .slds-card__body{
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+        margin-bottom: 0px !important;
+    }
+}

@@ -1,0 +1,118 @@
+<template>
+    <div class="container-items-patologias-nsj" data-id="items-patologias-mobile">
+        <section role="dialog" class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="modal-items">
+                <template for:each={items} for:item="item">
+                    <a  
+                        key={item.dataId} 
+                        class="item-botonera-mobile-nsj slds-align_absolute-center" 
+                        data-id={item.dataId} 
+                        onclick={redirecTo}>
+                        {item.label}
+                    </a>
+                </template>
+            </div>
+            <!--Se duplica botonera, esto se debe optimizar-->
+            <div class="container-botonera-mobile-nsj">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center botonera-mobile-nsj">
+                    <div class="slds-col slds-size_4-of-12">
+                        <div class="icon-botonera-nsj slds-text-align_center">
+                            <img
+                                src={iconosotros}
+                                alt="Nosotros"
+                                data-id="Home"
+                                onclick={redirecTo}>
+                            <br>
+                            <span
+                                class="text-icon-botonera-nsj"
+                                data-id="Home"
+                                onclick={redirecTo}>
+                                Nosotros
+                            </span>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_4-of-12">
+                        <div class="icon-botonera-nsj slds-text-align_center" onclick={selectItem}>
+                            <img 
+                                src={iconPatologiasSelected} 
+                                alt="Patologías">
+                            <br>
+                            <span
+                                data-id="at-boton-nsj-id"
+                                class="text-icon-botonera-nsj"
+                                style="color: #9D67A8;">
+                                Áreas Terapéuticas
+                            </span>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_4-of-12">
+                        <div class="icon-botonera-nsj slds-text-align_center">
+                            <img 
+                                src={iconproductos}
+                                alt="Productos"
+                                data-id="productos__c"
+                                onclick={redirecTo}>
+                            <br>
+                            <span 
+                                class="text-icon-botonera-nsj"
+                                data-id="productos__c"
+                                onclick={redirecTo}>
+                                Productos
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </div>
+    <div class="container-botonera-mobile-nsj">
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center botonera-mobile-nsj">
+            <div class="slds-col slds-size_4-of-12">
+                <div class="icon-botonera-nsj slds-text-align_center">
+                    <img
+                        src={iconosotros}
+                        alt="Nosotros"
+                        data-id="Home"
+                        onclick={redirecTo}>
+                    <br>
+                    <span
+                        class="text-icon-botonera-nsj"
+                        data-id="Home"
+                        onclick={redirecTo}>
+                        Nosotros
+                    </span>
+                </div>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+                <div class="icon-botonera-nsj slds-text-align_center" onclick={selectItem}>
+                    <img 
+                        src={iconpatologias} 
+                        alt="Patologías">
+                    <br>
+                    <span
+                        data-id="at-boton-nsj-id"
+                        class="text-icon-botonera-nsj">
+                        Áreas Terapéuticas
+                    </span>
+                </div>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+                <div class="icon-botonera-nsj slds-text-align_center">
+                    <img 
+                        src={iconproductos}
+                        alt="Productos"
+                        data-id="productos__c"
+                        onclick={redirecTo}>
+                    <br>
+                    <span 
+                        class="text-icon-botonera-nsj"
+                        data-id="productos__c"
+                        onclick={redirecTo}>
+                        Productos
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

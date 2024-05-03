@@ -1,0 +1,115 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="derecha" type="Boolean" default="false"/>
+	<aura:attribute name="izquierda" type="Boolean" default="false"/>
+	<aura:attribute name="debajoDeTitulo" type="Boolean" default="false"/>
+	<aura:attribute name="sinImagen" type="Boolean" default="false"/>
+	<aura:attribute name="height" type="String" default="300px"/>
+	<aura:attribute name="heightMobile" type="String" default="300px"/>
+	<aura:attribute name="recursoEstaticoBackground" type="String"/>
+	<aura:attribute name="rutaImagenBackground" type="String"/>
+	<aura:attribute name="recursoEstaticoImagen" type="String"/>
+	<aura:attribute name="recursoEstaticoImagenMobile" type="String"/>
+	<aura:attribute name="rutaImagen" type="String"/>
+	<aura:attribute name="titulo" type="String"/>
+	<aura:attribute name="textoPrimeraBajada" type="String"/>
+	<aura:attribute name="textoSegundaBajada" type="String"/>
+
+    <aura:attribute name="isDesktop" type="Boolean"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <div class="slds-grid slds-wrap slds-grid_vertical-align-center"
+        style="{!'background-image: url('+ v.rutaImagenBackground +');
+                background-position: top;
+                background-repeat: repeat-y;'}">
+
+        <!--Imagen a la izquierda-->
+        <aura:if isTrue="{!v.izquierda}">
+            <!--Desktop-->
+            <aura:if isTrue="{!v.isDesktop}">
+                <div class="slds-col slds-large-size_2-of-12"></div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12 slds-m-top_x-large slds-m-bottom_x-large">
+                    <div class="containerImgIzq">
+                        <img src="{!v.rutaImagen}" alt="img" class="imgContainer"/>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-m-top_x-large slds-m-bottom_x-large">
+                    <div class="containerIzquierda">
+                        <aura:unescapedHtml value="{!v.titulo}"/>
+                        <aura:unescapedHtml value="{!v.textoPrimeraBajada}"/>    
+                    </div>
+                </div>
+                <div class="slds-col slds-large-size_3-of-12"></div>
+                <!--Mobile-->
+                <aura:set attribute="else">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-m-top_x-large">
+                        <div class="containerIzquierda">
+                            <aura:unescapedHtml value="{!v.titulo}"/>
+                            <aura:unescapedHtml value="{!v.textoPrimeraBajada}"/>    
+                        </div>
+                    </div>    
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium slds-m-bottom_x-large">
+                        <div class="containerImgIzq">
+                            <img src="{!v.rutaImagen}" alt="img" class="imgContainer"/>
+                        </div>
+                    </div>    
+                </aura:set>                  
+            </aura:if>
+        </aura:if>
+
+        <!--Imagen a la derecha-->
+        <aura:if isTrue="{!v.derecha}">
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <div class="slds-col slds-large-size_4-of-12 slds-m-top_x-large">
+                <div class="containerDerecho">
+                    <aura:unescapedHtml value="{!v.titulo}"/>
+                    <aura:unescapedHtml value="{!v.textoPrimeraBajada}"/>    
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12 slds-m-top_x-large">
+                <div class="containerImgDer">
+                    <img src="{!v.rutaImagen}" alt="img" class="imgContainer"/>
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_2-of-12"></div>
+            <!--Segunda linea-->
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <div class="slds-col slds-large-size_6-of-12 slds-m-bottom_x-large">
+                <div style="padding-left: 7%;padding-right: 7%;">
+                    <aura:unescapedHtml value="{!v.textoSegundaBajada}"/>
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12"></div>
+        </aura:if>
+
+        <!--Imagen por debajo de título-->
+        <aura:if isTrue="{!v.debajoDeTitulo}">
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <div class="slds-col slds-large-size_6-of-12 slds-m-top_x-large slds-m-bottom_x-large">
+                <div class="containerDebajoDeTitulo">
+                    <aura:unescapedHtml value="{!v.titulo}"/>
+                    <div class="containerImgCenter">
+                        <img src="{!v.rutaImagen}" alt="img"
+                            class="slds-align_absolute-center slds-m-top_x-large"/>
+                    </div>
+                    <aura:unescapedHtml value="{!v.textoPrimeraBajada}"/>    
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12"></div>
+        </aura:if>
+
+        <!--Sólo texto-->
+        <aura:if isTrue="{!v.sinImagen}">
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <div class="slds-col slds-large-size_6-of-12 slds-m-top_x-large slds-m-bottom_x-large">
+                <div class="containerSinImagen">
+                    <aura:unescapedHtml value="{!v.titulo}"/>
+                    <aura:unescapedHtml value="{!v.textoPrimeraBajada}"/>        
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12"></div>            
+        </aura:if>
+
+    </div>
+
+</aura:component>

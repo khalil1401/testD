@@ -1,0 +1,84 @@
+<template>
+    <template if:true={cardDesafiosCrecimiento}>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-m-top_medium">
+                <div class="card-left-ddc" onclick={openDetailsLeft}>
+                    <div class="div-title-card-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                            <div class="slds-col slds-size_2-of-12 slds-align_absolute-center slds-p-around_small">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/1_HOME/PP-DesafiosDelCrecimiento-Icono-Flecha.png">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12 slds-p-around_small">
+                                <p class="title-card-left-ddc">
+                                    Desnutrición no relacionada con enfermedades
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <template if:true={showDetailsCardLeft}>                    
+                        <div class="box">
+                            <p class="text-card-left-ddc">
+                                Es aquella causada por factores ambientales o socioeconómicos que dificultan el acceso a los alimentos, o por los hábitos dietéticos. Se debe principalmente a una ingesta reducida de alimentos, que hace que el cuerpo no obtenga los nutrientes que necesita. Los niños con este tipo de desnutrición son extremadamente delgados.
+                            </p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-m-top_medium">
+                <div class="card-right-ddc" onclick={openDetailsRight}>
+                    <div class="div-title-card-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                            <div class="slds-col slds-size_2-of-12 slds-align_absolute-center slds-p-around_small">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/1_HOME/PP-DesafiosDelCrecimiento-Icono-Flecha.png">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12 slds-p-around_small">
+                                <p class="title-card-left-ddc">
+                                    Desnutrición relacionada a una enfermedad (DRE)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <template if:true={showDetailsCardRight}>                    
+                        <div class="box">
+                            <p class="text-card-left-ddc">
+                                Hay ciertas patologías que dificultan que el cuerpo obtenga los nutrientes que requiere. Pueden ser enfermedades crónicas o agudas. Ambas situaciones pueden producir disminución del apetito, gasto calórico mayor que el normal, alteración en el modo en que el organismo aprovecha los nutrientes o aumento de las necesidades de estos. Los niños con este tipo de desnutrición pueden mostrar signos de pérdida de grasa y de músculo.
+                            </p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template if:true={cardBombaEnteral}>
+        <div class="card-bdne">
+            <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-align_absolute-center slds-p-around_medium">
+                    <span>
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/1_HOME/PP-DesafiosDelCrecimiento-Icono-Medica.png">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/1_HOME/PP-DesafiosDelCrecimiento-Icono-Medico.png">
+                    </span>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-p-around_large">
+                    <p class="text-card-bdne">
+                        <span style="font-family: MontserratSemiBold;">Nunca dudes en consultar o pedir ayuda al equipo de profesionales</span> cuando tengas preguntas o temores sobre cualquier aspecto de la nutrición de tu hijo o hija. Informarte, conversar y manifestar tus inquietudes es un paso fundamental para promover el mejor bienestar del niño o la niña y el de tu familia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template if:true={cardPatologiasCronicas}>
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center card-patologia-cronica">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-p-around_medium slds-align_absolute-center">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/PP-DesafiosDelCrecimiento-Grafico-Claves.png">
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-p-around_medium">
+                <p class="text-card-left-ddc">
+                    <span style="font-family: MontserratSemiBold;">· Evita la falta de nutrientes necesarios</span> para el rápido crecimiento y el desarrollo en la infancia.
+                </p>
+                <p class="text-card-left-ddc slds-m-top_medium">
+                    <span style="font-family: MontserratSemiBold;">· Favorece mejores resultados</span> en el tratamiento de la enfermedad crónica.
+                </p>
+            </div>
+        </div>
+    </template>
+</template>

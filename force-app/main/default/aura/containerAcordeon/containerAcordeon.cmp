@@ -1,0 +1,74 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="activeSections" type="List" default="['A']" />
+    <aura:attribute name="backgroundColor" type="String"/>
+    <aura:attribute name="backgroundColorHeader" type="String"/>
+    <aura:attribute name="backgroundColorText" type="String"/>
+    <aura:attribute name="backgroundColorHeaderActive" type="String"/>
+    <aura:attribute name="backgroundColorHeaderActiveGradiente1" type="String"/>
+    <aura:attribute name="backgroundColorHeaderActiveGradiente2" type="String"/>
+    <aura:attribute name="textHeaderColor" type="String"/>
+    <aura:attribute name="textHeaderActiveColor" type="String"/>
+    <aura:attribute name="textBodyColor" type="String"/>
+	<aura:attribute name="radioEsquinas" type="Integer" default="0"/>
+    <aura:attribute name="isSeccion1" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion1" type="String"/>
+    <aura:attribute name="textBodySeccion1" type="String"/>
+    <aura:attribute name="isSeccion2" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion2" type="String"/>
+    <aura:attribute name="textBodySeccion2" type="String"/>
+    <aura:attribute name="isSeccion3" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion3" type="String"/>
+    <aura:attribute name="textBodySeccion3" type="String"/>
+
+    <aura:html tag="style">
+        .containerAcordeon{
+            background-color: {!v.backgroundColor};
+        }
+        .slds-truncate{
+        }
+        .slds-accordion__content{
+            color: {!v.textBodyColor};
+        }
+        .slds-accordion__summary-action{
+            background-color: {!v.backgroundColorHeader};
+            border-radius: {!v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px'};
+            color: {!v.textHeaderColor} !important;
+            font-weight: 900;
+            font-size: 1.1em;
+        }
+        .slds-accordion__summary button[aria-expanded="true"]{
+            background-color: {!v.backgroundColorHeaderActive};
+            background: {!'linear-gradient(90deg, ' + v.backgroundColorHeaderActiveGradiente1 +' 0%,  ' + v.backgroundColorHeaderActiveGradiente2 +' 100%)'};
+            color: {!v.textHeaderActiveColor} !important;
+        }
+        .slds-accordion__list-item{
+            background-color: {!v.backgroundColorText} !important;
+            border-radius: {!v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px'};
+        }
+    </aura:html>
+
+    <div class="containerAcordeon slds-m-bottom_large">
+        <lightning:accordion
+            allowMultipleSectionsOpen="true"
+            onsectiontoggle="{! c.handleSectionToggle }"
+            activeSectionName="{! v.activeSections }">
+            <aura:if isTrue="{!v.isSeccion1}">
+                <lightning:accordionSection name="A" label="{!v.textTitleSeccion1}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion1}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion2}">
+                <lightning:accordionSection name="B" label="{!v.textTitleSeccion2}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion2}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion3}">
+                <lightning:accordionSection name="C" label="{!v.textTitleSeccion3}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion3}" />
+                </lightning:accordionSection>
+            </aura:if>
+        </lightning:accordion>
+    </div>
+    
+</aura:component>

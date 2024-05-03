@@ -1,0 +1,126 @@
+.THIS {
+}
+
+.THIS .modal-dni{
+    width: 25%;
+}
+
+.THIS .modal-condiciones{
+    width: 60%;
+}
+
+.THIS .slds-modal__content{
+    border-radius: 20px !important;
+}
+
+.THIS .text-fvr{
+    font-family: MontserratSemiBold !important;
+    font-size: 0.9rem !important;
+    color: #313183 !important;
+}
+
+.THIS .text-fvrv{
+    font-family: MontserratRegular !important;
+    font-size: 0.9rem !important;
+    color: #6E6E6E !important;
+    cursor: default;
+}
+
+.THIS .text-link{
+    font-family: MontserratSemiBold !important;
+    font-size: 0.9rem !important;
+    color: #313183 !important;
+    cursor: pointer;
+}
+
+.THIS label{
+    font-family: MontserratSemiBold;
+}
+
+.THIS input{
+    font-family: MontserratSemiBold;
+}
+
+.THIS .slds-scrollable_y{
+    background-color: #ebebeb;
+    padding: 2.5%;
+    height: 350px;
+}
+
+.THIS .text-alert{
+    font-family: MontserratSemiBold;
+    font-size: 0.75rem;
+    color: rgb(234, 0, 30);
+}
+
+.THIS .spinner{
+    background-color: none; 
+    background: none;
+}
+
+.THIS a {
+    color: #313183 !important;
+    text-decoration: none !important;
+}
+
+.THIS .container-contacto-fvr{
+    margin-left: 25%;
+}
+
+.THIS .icn-modal svg{
+    fill: #C09AC2;
+}
+
+.THIS .check-box {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+    accent-color: #313183;
+}
+
+@media (max-width: 1366px) {
+    .THIS .slds-scrollable_y{
+        height: 300px;
+    }
+    
+    .THIS .modal-condiciones{
+        margin-top: 5%;
+    }
+    
+    .THIS .modal-dni{
+        width: 40%;
+        margin-top: 7%;
+    }
+
+    .THIS .container-contacto-fvr{
+        margin-left: 15%;
+    }    
+}
+
+@media (max-width: 768px) {
+    .THIS .modal-dni{
+        width: 60%;
+    }
+
+    .THIS .modal-condiciones{
+        width: 80%;
+    }
+}
+
+@media (max-width: 412px) {
+    .THIS .modal-dni{
+        width: 100%;
+    }
+
+    .THIS .modal-condiciones{
+        width: 100%;
+    }
+
+    .THIS .slds-scrollable_y{
+        padding: 2%;
+        height: 350px;
+    }
+}

@@ -1,0 +1,63 @@
+.THIS {
+    border-radius: 10px 10px 10px 10px;
+    background-color: #ebebeb;
+}
+
+.THIS .tituloAzulContainerBienvenidaOnco{
+    font-family:MontserratBlack;
+    font-size: 35px;
+    color: #293896;
+}
+
+.THIS .tituloRosaContainerBienvenidaOnco{
+    color:#C09AC2;
+    font-family:PacificoRegular;
+    font-size:60px;
+}
+
+.THIS .textoContainerBienvenidaOnco{
+    font-family:MontserratRegular;
+    color: #606060;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.THIS .footerAzulContainerBienvenidaOnco{
+    font-family:MontserratBlack;
+    font-size: 20px;
+    color: #293896;
+}
+
+.THIS .footerRosaContainerBienvenidaOnco{
+    color:#C09AC2;
+    font-family:PacificoRegular;
+    font-size:30px;
+}
+
+@media (max-width: 600px) {
+    .THIS{
+        border-radius: 0px 0px 0px 0px;
+        padding-top: 5%;
+    }
+    .THIS .tituloAzulContainerBienvenidaOnco{
+        font-size: 8vw;
+        line-height: 4.5vh;
+    }
+    .THIS .tituloRosaContainerBienvenidaOnco{
+        font-size: 12vw;
+        line-height: 4vh;
+    }
+    .THIS .textoContainerBienvenidaOnco{
+        margin-top: 5%;
+        font-size: 15px;
+        line-height: 23px;
+    }
+    .THIS .footerAzulContainerBienvenidaOnco{
+        font-size: 6vw;
+        line-height: 3.5vh;
+    }
+    .THIS .footerRosaContainerBienvenidaOnco{
+        font-size: 8vw;
+        line-height: 3.5vh;
+    }    
+}

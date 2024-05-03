@@ -1,0 +1,88 @@
+.THIS {
+}
+
+.THIS .containerAcordeon{
+    background-color: white;
+}
+
+.THIS .slds-accordion__content{
+    color: #58368C;
+}
+
+.THIS .slds-accordion__list-item{
+    border: none;
+}
+
+.THIS .slds-accordion__summary-action{
+    border-radius: 10px 10px 10px 10px;
+    color: #58368C !important;
+}
+
+.THIS .slds-accordion__summary button[aria-expanded="true"]{
+    color: #58368C;
+}
+
+.THIS .slds-accordion__list-item{
+    border-radius: 10px 10px 10px 10px;
+}
+
+.THIS .slds-accordion__summary-content{
+    font-family: MontserratSemiBold;
+    font-size: 1.313rem;
+    line-height: 1.875rem;
+    white-space: normal;
+}
+
+.THIS .parrafoBodyAcordeon{
+    font-family: MontserratRegular;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #777777;
+}
+
+.THIS .texto-celeste{
+    font-family: MontserratSemiBold;
+    font-size: 2.5rem;
+    color: #3DC3D6;
+}
+
+.THIS .texto-titulo-blanco{
+    font-family: MontserratSemiBold;
+    font-size: 2.5rem;
+    color: white;
+    background-color: #3DC3D6;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.THIS .linea{
+    width:95%;
+    border-bottom:1px solid #58368C;
+    position:relative;
+}
+
+.THIS .regular-text-tc{
+    font-family: MontserratRegular;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    color: #777777;
+}
+
+@media (max-width: 600px) {
+    .THIS{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .THIS .texto-celeste{
+        font-size: 1.5rem;
+    }
+
+    .THIS .texto-titulo-blanco{
+        font-size: 1.5rem;
+    }
+}

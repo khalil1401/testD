@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Qui_n_es_el_Profesional_que_te_deriv__c</name>
+    <picklistValues>
+        <masterLabel>Alergista</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gastroenterólogo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pediatra</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,200 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes"
+                controller="ArticulosPortalPacientesController">
+
+    <aura:attribute name="tiposEjercicios" type="Object"/>
+    <aura:attribute name="tipoEjercicio" type="String" default="Precalentamiento"/>
+    <aura:attribute name="articulos" type="Knowledge__kav[]" default="[]"/>
+    <aura:attribute name="articuloSeleccionado" type="Knowledge__kav"/>
+    <aura:attribute name="indiceActual" type="Integer" default="0"/>
+    <aura:attribute name="cantidadArticulos" type="Integer" default="0"/>
+
+    <aura:attribute name="rutaRecursoEstatico" type="String"/>
+    <aura:attribute name="isLoading" type="Boolean" default="true"/>
+    <aura:attribute name="isDesktop" type="Boolean"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:if isTrue="{!v.isLoading}">
+        <div>
+            <lightning:spinner  alternativeText="Cargando"
+                                variant="brand"/>
+        </div>
+    </aura:if>
+
+    <div class="slds-grid">
+        <div class="slds-col slds-large-size_3-of-12">
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-large-size_6-of-12">
+            <div class="slds-grid slds-wrap">
+                <aura:iteration items="{!v.tiposEjercicios}" var="articulo">
+                    <div    class="slds-col slds-size_6-of-12 slds-large-size_5-of-12 slds-align_absolute-center">
+                        <div    style=" background-color: #EBEBEB;
+                                        width: 90%;
+                                        border-radius: 10px 10px 10px 10px;
+                                        margin-top: 5%;
+                                        margin-bottom: 5%;">
+                            <div    class="slds-align_absolute-center"
+                                    onclick="{!c.showInformacionArticulo}"
+                                    onmouseover="{!c.onMouseOver}"
+                                    onmouseout="{!c.onMouseOut}"
+                                    data-id="{!articulo.Ejercicio__c}"
+                                    style="{!'  background:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                                                    url('+ articulo.Imagen__c +');
+                                                border-radius: 10px 10px 10px 10px;
+                                                height: 150px;
+                                                background-position: center;
+                                                background-repeat: no-repeat;
+                                                background-size: auto 150px;
+                                                overflow: hidden;
+                                                position: relative;
+                                                cursor: pointer;'}">
+                                <div    class="slds-text-align_center"
+                                        style="pointer-events: none;">
+                                    <p  class="tituloCardEjercicioAFOncologia">
+                                        {!articulo.Ejercicio__c}
+                                    </p>
+                                    <p class="textoCardEjercicioAFOncologia">
+                                        + Ver más
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aura:iteration>
+            </div>
+        </div>
+        <div class="slds-col slds-large-size_3-of-12">
+        </div>
+    </div>
+    
+    <div id="descripcion"></div>
+    
+    <aura:if isTrue="{!v.isDesktop}">
+        <div class="slds-grid slds-grid_vertical-align-center slds-m-top_xx-large" style="background-color: #ebebeb;">
+            <div class="slds-col slds-size_2-of-12 slds-large-size_3-of-12">
+                <div class="slds-align_absolute-center">
+                    <lightning:buttonIcon   iconName="utility:chevronleft" 
+                                            onclick="{!c.mostrarUnoMenos}" 
+                                            size="large"
+                                            alternativeText="Anterior"
+                                            title="Anterior"
+                                            variant="bare"
+                                            disabled="{!v.indiceActual == 0}"/>
+                </div>
+            </div>
+            <div class="slds-col slds-size_8-of-12 slds-large-size_6-of-12">
+                <div class="slds-m-bottom_large slds-m-top_large">
+                    <lightning:button   variant="brand" 
+                                        label="{!v.articuloSeleccionado.Ejercicio__c}"
+                                        class="botonKitDeInicio"/>
+                </div>
+                <div class="containerTituloEjercicioAFOncologia">
+                    <p  class="tituloEjercicioAFOncologia">
+                        <aura:unescapedHtml value="{!v.articuloSeleccionado.Title}" />
+                    </p>
+                </div>
+                <div class="slds-grid slds-wrap slds-m-top_large slds-m-bottom_xx-large containerInformacionEjercicioAFOncologia">
+                    <div    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-align_absolute-center containerImgInfoEjercicioAFOncologia"
+                            style=" background-color: white;">
+                        <img    src="{!v.rutaRecursoEstatico}" alt="imga"
+                                class="imagenEjercicioDescripcionOncologia"
+                                style="width: 75%;"/>
+                    </div>
+                    <div    class="slds-col slds-size_1-of-1 slds-large-size_8-of-12 slds-m-top_small containerDescInfoEjercicioAFOncologia">
+                        <p  class="textoDescripcionEjercicioAFOncologia">
+                            <aura:unescapedHtml value="{!v.articuloSeleccionado.Descripcion__c}" />
+                        </p>
+                        <br></br>
+                        <aura:if isTrue="{!v.articuloSeleccionado.Consejos__c.length > 0}">
+                            <p  class="tituloConsejoEjercicioAFOncologia">
+                                Consejos
+                            </p>
+                            <p  class="textoConsejoEjercicioAFOncologia">
+                                <aura:unescapedHtml value="{!v.articuloSeleccionado.Consejos__c}" />
+                            </p>
+                        </aura:if>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_2-of-12 slds-large-size_3-of-12">
+                <div class="slds-align_absolute-center">
+                    <lightning:buttonIcon   iconName="utility:chevronright" 
+                                            onclick="{!c.mostrarUnoMas}" 
+                                            size="large"
+                                            alternativeText="Siguiente"
+                                            title="Siguiente"
+                                            variant="bare"
+                                            disabled="{!v.indiceActual >= v.cantidadArticulos}"/>
+                </div>
+            </div>
+        </div>
+        <aura:set attribute="else">
+            <div    class="slds-m-top_x-large"
+                    style="background-color: #ebebeb; padding-left: 6%; padding-top: 2%;">
+                <div class="slds-m-bottom_large slds-m-top_large">
+                    <lightning:button   variant="brand" 
+                                        label="{!v.articuloSeleccionado.Ejercicio__c}"
+                                        class="botonKitDeInicio"/>
+                </div>
+                <div style="height: 40px;">
+                    <p  class="tituloEjercicioAFOncologia">
+                        <aura:unescapedHtml value="{!v.articuloSeleccionado.Title}" />
+                    </p>
+                </div>
+            </div>
+            <div    class="slds-grid slds-grid_vertical-align-center"
+                    style="background-color: #ebebeb;">
+                <div class="slds-col slds-size_2-of-12">
+                    <div class="slds-align_absolute-center">
+                        <lightning:buttonIcon   iconName="utility:chevronleft" 
+                                                onclick="{!c.mostrarUnoMenos}" 
+                                                size="large"
+                                                alternativeText="Anterior"
+                                                title="Anterior"
+                                                variant="bare"
+                                                disabled="{!v.indiceActual == 0}"/>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_8-of-12 slds-large-size_6-of-12">
+                    <div class="slds-grid slds-wrap slds-m-top_large containerInformacionEjercicioAFOncologia">
+                        <div    class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-align_absolute-center containerImgInfoEjercicioAFOncologia"
+                                style=" background-color: white;">
+                            <img    src="{!v.rutaRecursoEstatico}" alt="imga"
+                                    class="imagenEjercicioDescripcionOncologia"
+                                    style="width: 75%;"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_2-of-12 slds-large-size_3-of-12">
+                    <div class="slds-align_absolute-center">
+                        <lightning:buttonIcon   iconName="utility:chevronright" 
+                                                onclick="{!c.mostrarUnoMas}" 
+                                                size="large"
+                                                alternativeText="Siguiente"
+                                                title="Siguiente"
+                                                variant="bare"
+                                                disabled="{!v.indiceActual >= v.cantidadArticulos}"/>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: #ebebeb;">
+                <div    class="slds-col slds-size_1-of-1 containerDescInfoEjercicioAFOncologia">
+                    <p  class="textoDescripcionEjercicioAFOncologia">
+                        <aura:unescapedHtml value="{!v.articuloSeleccionado.Descripcion__c}" />
+                    </p>
+                    <br></br>
+                    <aura:if isTrue="{!v.articuloSeleccionado.Consejos__c.length > 0}">
+                        <p  class="tituloConsejoEjercicioAFOncologia">
+                            Consejos
+                        </p>
+                        <p  class="textoConsejoEjercicioAFOncologia">
+                            <aura:unescapedHtml value="{!v.articuloSeleccionado.Consejos__c}" />
+                        </p>
+                    </aura:if>
+                </div>
+            </div>
+        </aura:set>
+    </aura:if>
+
+
+</aura:component>

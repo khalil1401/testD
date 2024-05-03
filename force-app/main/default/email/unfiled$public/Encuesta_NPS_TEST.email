@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Hola!<div><br></div><div>Hemos cerrado su caso y nos gustaría que respondiera algunas preguntas ingresando <a href="https://danoneencuestas.secure.force.com/takesurvey?id=a051I00000UF7w1QAD&amp;cId={!Account.Contact_Id__c}&amp;caId= {!Case.Id}">aqui</a><a>.</a><br><br><span id="j_id0:shareComp"><span id="j_id0:shareComp:j_id47:theForm:j_id58"><span id="j_id0:shareComp:j_id47:theForm:emailLinkText">Muchas gracias!&nbsp;&nbsp;</span></span></span></div>]]></td>
+</tr>
+</table>

@@ -1,0 +1,276 @@
+<template>
+    <div style="width: 100%;" class="slds-align_absolute-center fade-in-right-left">
+        <div class="form-datos">
+            <!--Info paciente-->
+            <div class="show-mobile">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_1-of-12">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                            style="width: 22px; position: absolute; top: 100px; left: 10px;" onclick={goToPerfilManager}>
+                    </div>
+                    <div class="slds-col slds-size_4-of-12 slds-text-align_right">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/User_Perfil.png"
+                            style="width: 100px;">
+                    </div>
+                    <div class="slds-col slds-size_7-of-12">
+                        <template if:true={paciente}>
+                            <div>
+                                <p class="name-text slds-m-bottom_xxx-small">{paciente.FirstName} {paciente.LastName}</p>
+                                <p class="card-item-text"><span class="card-item-title">DNI: </span>
+                                    <lightning-formatted-number 
+                                        value={paciente.DNI__c}>
+                                    </lightning-formatted-number>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Fecha Nacimiento: </span>
+                                    <lightning-formatted-date-time
+                                        value={paciente.PersonBirthdate}
+                                        year="numeric"
+                                        month="numeric"
+                                        day="numeric">
+                                    </lightning-formatted-date-time>
+                                </p>
+                                <template if:true={cuenta}>
+                                    <p class="card-item-text"><span class="card-item-title">Telefono: </span>
+                                        {cuenta.Phone}
+                                    </p>
+                                </template>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <div class="show-tablet">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                    style="width: 22px; position: relative; top: 25px; left: -50px; cursor: pointer;" onclick={goToPerfilManager}>
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_2-of-12">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/User_Perfil.png"
+                            style="width: 100px;">
+                    </div>
+                    <div class="slds-col slds-size_10-of-12">
+                        <template if:true={paciente}>
+                            <div>
+                                <p class="name-text slds-m-bottom_xx-small">{paciente.FirstName} {paciente.LastName}</p>
+                                <p class="card-item-text"><span class="card-item-title">DNI: </span>
+                                    <lightning-formatted-number 
+                                        value={paciente.DNI__c}>
+                                    </lightning-formatted-number>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Fecha Nacimiento: </span>
+                                    <lightning-formatted-date-time
+                                        value={paciente.PersonBirthdate}
+                                        year="numeric"
+                                        month="numeric"
+                                        day="numeric">
+                                    </lightning-formatted-date-time>
+                                </p>
+                                <template if:true={cuenta}>
+                                    <p class="card-item-text"><span class="card-item-title">Telefono: </span>
+                                        {cuenta.Phone}
+                                    </p>
+                                </template>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <!--Form-->
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_5-of-12">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Datos_Personales.png" 
+                                class="icon-title-form">
+                        </div>
+                        <div class="slds-col slds-size_7-of-12">
+                            <span class="text-title-form">Datos personales</span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-m-top_small slds-align_absolute-center">
+                            <div class="hr-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <template if:true={paciente}>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">Nombres y Apellidos</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                <input 
+                                    type="text"
+                                    class="slds-input"
+                                    value={nombrePaciente}
+                                    disabled/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-m-top_medium slds-p-right_x-small">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">DNI</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                <input 
+                                    type="number"
+                                    class="slds-input"
+                                    value={paciente.DNI__c}
+                                    disabled/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-m-top_medium slds-p-left_x-small">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">Fecha de Nacimiento</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                <input 
+                                    type="date"
+                                    class="slds-input"
+                                    value={paciente.PersonBirthdate}
+                                    disabled/>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                <template if:true={cuenta}>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">Sexo</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                <!--
+                                <span 
+                                    class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" 
+                                    data-record={cuenta.Id}
+                                    data-object="Account"
+                                    data-id="Sexo__c"
+                                    data-fieldtype="select"
+                                    onclick={setEditableField}>
+                                    editar
+                                </span>
+                                -->
+                                <lightning-icon
+                                    class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" 
+                                    data-record={cuenta.Id}
+                                    data-object="Account"
+                                    data-id="Sexo__c"
+                                    data-fieldtype="select"
+                                    onclick={setEditableField}
+                                    icon-name="utility:edit" 
+                                    alternative-text="Edit" 
+                                    size="x-small"
+                                    title="Edit">
+                                </lightning-icon>
+                                <input 
+                                    type="text"
+                                    class="slds-input"
+                                    data-id="input-Sexo__c"
+                                    value={cuenta.Sexo__c}
+                                    disabled/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">Tipo de Teléfono</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                <lightning-icon 
+                                    class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+                                    data-record={cuenta.Id}
+                                    data-object="Account"
+                                    data-id="Tipo_de_telefono__c"
+                                    data-fieldtype="select"
+                                    onclick={openModalTelefono}
+                                    icon-name="utility:edit" 
+                                    alternative-text="Edit" 
+                                    size="x-small"
+                                    title="Edit">
+                                </lightning-icon>
+                                <input 
+                                    type="text"
+                                    class="slds-input"
+                                    data-id="input-Tipo_de_telefono__c"
+                                    value={cuenta.Tipo_de_telefono__c}
+                                    disabled/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">Número de Teléfono</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                <lightning-icon 
+                                    class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+                                    data-record={cuenta.Id}
+                                    data-object="Account"
+                                    data-id="Phone"
+                                    data-fieldtype="normal"
+                                    onclick={openModalTelefono}
+                                    icon-name="utility:edit" 
+                                    alternative-text="Edit" 
+                                    size="x-small"
+                                    title="Edit">
+                                </lightning-icon>
+                                <input 
+                                    type="text"
+                                    class="slds-input"
+                                    data-id="input-Phone"
+                                    value={cuenta.Phone}
+                                    disabled/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">Correo Electrónico</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                <lightning-icon 
+                                    class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+                                    data-record={cuenta.Id}
+                                    data-object="Account"
+                                    data-id="PersonEmail"
+                                    data-fieldtype="normal"
+                                    onclick={setEditableField}
+                                    icon-name="utility:edit" 
+                                    alternative-text="Edit" 
+                                    size="x-small"
+                                    title="Edit">
+                                </lightning-icon>
+                                <input 
+                                    type="text"
+                                    class="slds-input"
+                                    data-id="input-PersonEmail"
+                                    value={cuenta.PersonEmail}
+                                    disabled/>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <!--Modal de edición de campo-->
+        <template if:true={showModal}>
+            <c-modal-update-data-profile-n-s-j
+                record-id={recordId}
+                old-value={oldValue}
+                object={object}
+                field-api-name={fieldApiName}
+                field-type={fieldType}
+                onclosemodal={closeModal}
+                onconfirmarcorreo={openModalConfirmarCorreo}>
+            </c-modal-update-data-profile-n-s-j>
+        </template>
+        <!--Modal de teléfono-->
+        <template if:true={showModalTelefono}>
+            <c-modal-perfil-telefono
+                paciente={paciente}
+                onclosemodal={closeModal}>
+            </c-modal-perfil-telefono>
+        </template>
+        <!--Modal de correo-->
+        <template if:true={showModalConfirmarCorreo}>
+            <c-modal-confirmar-correo
+                record-id={recordId}
+                field-api-name={fieldApiName}
+                new-value={newValue}
+                onclosemodalconfirmarcorreo={closeModalConfirmarCorreo}
+                onclosemodals={closeModal}>
+            </c-modal-confirmar-correo>
+        </template>
+    </div>
+</template>

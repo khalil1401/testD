@@ -1,0 +1,7 @@
+<design:component >
+
+    <design:attribute name="tituloTextoHTML" label="Texto de título de Componente en HTML"/>
+    <design:attribute name="cuerpoTextoHTML" label="Texto de cuerpo de Componente en HTML"/>
+    <design:attribute name="isRecursoEstatico" label="Contiene imagen?"/>
+
+</design:component>

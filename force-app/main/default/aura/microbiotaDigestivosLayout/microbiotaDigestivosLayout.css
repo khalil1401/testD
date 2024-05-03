@@ -1,0 +1,61 @@
+.THIS {
+}
+
+.THIS .div-microbiota-layout-dig {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.THIS .back-button-kdi-dig {
+    background: white;
+    border: 2px solid #3DC6F0;
+    border-radius: 10px 10px 10px 10px;
+    font-family: MontserratSemiBold;
+    font-size: 22px;
+    color: #3DC6F0;
+    line-height: 30px;
+    width: 277px;
+    height: 58px;
+}
+
+.THIS .title-dig{
+    font-family: MontserratBlack;
+    font-size: 20pt;
+    line-height: 23pt;
+    color: #3DC6F0;
+    margin-top: 15px;
+}
+
+.THIS .text-dig{
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: #606060;
+}
+
+.THIS .icon-up svg{
+    fill: #3DC6F0;
+}
+
+@media (min-width: 768px) {
+    .THIS .div-microbiota-layout-dig {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .THIS .back-button-kdi-dig {
+        width: 422px;
+        height: 77px;
+    }
+
+    .THIS .title-dig{
+        font-size: 50px;
+        line-height: 70.28px;
+        margin-top: 75px;
+    }
+    
+    .THIS .text-dig{
+        font-size: 22px;
+        line-height: 30px;
+    }
+}

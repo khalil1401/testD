@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+    <language>es</language>
+    <masterLabel>WhatsApp_Image_20210504_at_150428</masterLabel>
+    <relationships>
+        <network>
+            <access>VIEWER</access>
+            <name>test</name>
+        </network>
+        <workspace>
+            <access>INFERRED</access>
+            <isManagingWorkspace>true</isManagingWorkspace>
+            <name>sfdc_asset_company_assets</name>
+        </workspace>
+    </relationships>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>WhatsApp Image 2021-05-04 at 15.04.28.jpeg</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

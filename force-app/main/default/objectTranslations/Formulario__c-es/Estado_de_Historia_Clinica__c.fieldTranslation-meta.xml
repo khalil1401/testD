@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Estado_de_Historia_Clinica__c</name>
+    <picklistValues>
+        <masterLabel>Definitivo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Edición</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

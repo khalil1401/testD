@@ -1,0 +1,23 @@
+<template>
+    <article class="slds-card" data-id="cardReceta">
+        <div class="containerCardReceta">
+            <div class="slds-card__header slds-grid" onclick={navigateToDescripcionReceta}>
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h1 class="slds-card__header-title textoTipoReceta">
+                            {tipoReceta}
+                        </h1>
+                        <div class="containerImgReceta" data-id="idContainerImgReceta">
+                            <img src={imagenReceta} class="imgReceta">
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner" onclick={navigateToDescripcionReceta}>
+                <p class="textoTituloReceta" style="padding-left: 2%;padding-right: 2%;">
+                    {tituloReceta}
+                </p>
+            </div>
+        </div>
+    </article>
+</template>

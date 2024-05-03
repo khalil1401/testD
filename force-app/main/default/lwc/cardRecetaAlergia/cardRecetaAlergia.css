@@ -1,0 +1,42 @@
+.slds-card{
+    border: none;
+}
+
+.containerCardReceta{
+    border-radius: 10px 10px 10px 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+}
+
+.slds-card__body{
+    cursor: pointer;
+}
+
+.textoTituloReceta{
+    font-family: MontserratSemiBold;
+    color: #606060;
+    font-size: 30px;
+}
+
+.containerImgReceta{
+    border-radius: 10px 10px 10px 10px;
+    padding-top: 5%;
+    cursor: pointer;
+}
+
+.imgReceta{
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .textoTituloReceta{
+        color: #606060;
+        font-size: 22pt;
+        line-height: 30pt;
+    }
+    .containerCardReceta{
+        padding-top: 0%;
+    }    
+}

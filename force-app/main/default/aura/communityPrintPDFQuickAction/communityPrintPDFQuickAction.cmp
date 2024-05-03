@@ -1,0 +1,7 @@
+<aura:component controller="CommunityPrintPDFController" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId"  access="global">
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/> 
+    
+    <h1 style="font-size:32px;">Descargando...</h1>
+    
+</aura:component>

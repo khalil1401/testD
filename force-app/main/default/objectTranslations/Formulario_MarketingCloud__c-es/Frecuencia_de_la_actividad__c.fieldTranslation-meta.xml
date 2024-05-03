@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Frecuencia_de_la_actividad__c</name>
+    <picklistValues>
+        <masterLabel>1 vez por semana</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 veces por semana</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 veces por semana</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Más de 3 veces por semana</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

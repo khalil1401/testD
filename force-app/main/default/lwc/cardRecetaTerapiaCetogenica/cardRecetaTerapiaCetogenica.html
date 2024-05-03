@@ -1,0 +1,22 @@
+<template>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <div data-id="imagen-receta" class="imagen-receta"></div>
+            </div>
+            <div class="flip-card-back slds-grid slds-wrap slds-grid_vertical-align-center">
+                <div class="slds-col slds-size_1-of-1 slds-text-align_center">
+                    <p class="textoTituloReceta">
+                        {tituloReceta}
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                    <button class="slds-button slds-button_brand slds-m-top_small botonVerReceta"
+                            onclick={selectReceta}>
+                        Ver receta
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

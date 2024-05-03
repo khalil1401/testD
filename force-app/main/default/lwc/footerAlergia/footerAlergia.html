@@ -1,0 +1,185 @@
+<template>
+    <div class="slds-grid slds-wrap" style="background-color: #EFECF1;">
+        <template if:true={isDesktop}>
+            <div class="slds-col slds-medium-size_1-of-12">
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_10-of-12">
+                <div class="slds-grid slds-wrap" style="padding-top: 4%;padding-bottom: 1%;">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                        <span class="titulosFooterAlergia">
+                            Secciones
+                        </span>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                        <span class="titulosFooterAlergia">
+                            Contacto para profesionales y pacientes
+                        </span>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                        <span class="titulosFooterAlergia">
+                            Seguinos en nuestras redes
+                        </span>
+                    </div>
+                    <div class="slds-col slds-medium-size_3-of-12">
+                    </div>
+                </div>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                        <span
+                            class="textoFooterAlergia"
+                            style="cursor: pointer;"
+                            data-id="Alergia__c"
+                            onclick={navigateToDescripcionReceta}>
+                            ¿Qué es la APLV?
+                        </span>
+                        <br>
+                        <span
+                            class="textoFooterAlergia"
+                            style="cursor: pointer;"
+                            data-id="cuidados_y_recomendaciones_alergia__c"
+                            onclick={navigateToDescripcionReceta}>
+                            Cuidados y recomendaciones
+                        </span>
+                        <template if:true={contenidoPrivado}>
+                            <br>
+                            <span
+                                class="textoFooterAlergia"
+                                style="cursor: pointer;"
+                                data-id="Recetario_Alergia__c"
+                                onclick={navigateToDescripcionReceta}>
+                                Recetario
+                            </span>
+                        </template>
+                        <br>
+                        <span
+                            class="textoFooterAlergia"
+                            style="cursor: pointer;"
+                            data-id="camino_aplv_alergia__c"
+                            onclick={navigateToDescripcionReceta}>
+                            El camino de la APLV
+                        </span>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                        <p class="textoFooterAlergia">
+                            Lunes a viernes de 9 a 18 hs.
+                        </p>
+                        <p class="textoFooterAlergia">
+                            Whatsapp: 
+                            <span>
+                                <a href="https://api.whatsapp.com/send?phone=5491159706647">
+                                    <img src={wsp} style="width: 30px; margin-left: 5px;">
+                                </a>
+                            </span>
+                        </p>
+                        <p class="textoFooterAlergia">
+                            Tel: 
+                            <span>
+                                <a href="tel:0800-122-5544">
+                                    <span
+                                        class="textoFooterAlergia"
+                                        style="color: #653895; font-family: MontserratSemiBold; margin-left: 5px;">
+                                        0800-122-5544
+                                    </span>
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                        <img    
+                            src={iconoIg}
+                            class="iconosRSFooter"
+                            onclick={navigateToRedSocial}
+                            data-id={rutaInstagram}/>
+                    </div>
+                </div>
+                <div class="slds-grid slds-wrap" style="padding-bottom: 3%;">
+                    <div class="slds-col slds-size_3-of-12">
+                    </div>
+                    <div class="slds-col slds-size_3-of-12">
+                    </div>
+                    <div class="slds-col slds-size_3-of-12">
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12">
+                        <img src={logonb}/>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-medium-size_1-of-12">
+            </div>
+        </template>
+        <template if:true={isMobile}>
+            <div class="slds-col slds-size_1-of-1 slds-m-top_x-large container-footer">
+                <p class="titulosFooterAlergia">
+                    Secciones
+                </p>
+                <p
+                    class="textoFooterAlergia"
+                    style="cursor: pointer;"
+                    data-id="Alergia__c"
+                    onclick={navigateToDescripcionReceta}>
+                    ¿Qué es la APLV?
+                </p>
+                <p
+                    class="textoFooterAlergia"
+                    style="cursor: pointer;"
+                    data-id="cuidados_y_recomendaciones_alergia__c"
+                    onclick={navigateToDescripcionReceta}>
+                    Cuidados y recomendaciones
+                </p>
+                <template if:true={contenidoPrivado}>
+                    <p  class="textoFooterAlergia"
+                        style="cursor: pointer;"
+                        data-id="Recetario_Alergia__c"
+                        onclick={navigateToDescripcionReceta}>
+                        Recetario
+                    </p>
+                </template>
+                <p  class="textoFooterAlergia"
+                    style="cursor: pointer;"
+                    data-id="camino_aplv_alergia__c"
+                    onclick={navigateToDescripcionReceta}>
+                    El camino de la APLV
+                </p>
+                <p class="titulosFooterAlergia slds-m-top_large">
+                    Contacto para profesionales y pacientes
+                </p>
+                <p class="textoFooterAlergia">
+                    Lunes a viernes de 9 a 18 hs.
+                </p>
+                <p class="textoFooterAlergia">
+                    Whatsapp: 
+                    <span>
+                        <a href="https://api.whatsapp.com/send?phone=5491159706647">
+                            <img src={wsp} style="width: 30px; margin-left: 5px;">
+                        </a>
+                    </span>
+                </p>
+                <p class="textoFooterAlergia">
+                    Tel: 
+                    <span>
+                        <a href="tel:0800-122-5544">
+                            <span
+                                class="textoFooterAlergia"
+                                style="color: #653895; font-family: MontserratSemiBold; margin-left: 5px;">
+                                0800-122-5544
+                            </span>
+                        </a>                                
+                    </span>
+                </p>
+                <p class="titulosFooterAlergia slds-m-top_large">
+                    Seguinos en nuestras redes
+                </p>
+                <img
+                    src={iconoIg}
+                    class="iconosRSFooter slds-m-top_large slds-m-bottom_large"
+                    onclick={navigateToRedSocial}
+                    data-id={rutaInstagram}/>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-m-bottom_large">
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-m-bottom_large">
+                <img src={logonb}/ style="padding-right: 5%;">
+            </div>
+        </template>
+    </div>
+</template>

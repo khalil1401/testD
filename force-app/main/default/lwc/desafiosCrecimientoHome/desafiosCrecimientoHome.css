@@ -1,0 +1,77 @@
+.container-home-ddc {
+    width: 100%;
+    background: transparent linear-gradient(360deg, #522582 0%, #62398DCC 73%, #FFFFFF 100%);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 74px;
+    padding-bottom: 74px;
+}
+
+.title-container-home-ddc {
+    font-family: MontserratBlack;
+    font-size: 18pt;
+    line-height: 22pt;
+    color: #4A2D80;
+}
+
+.text-container-home-ddc {
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: white;
+}
+
+.card-container-home-ddc {
+    background-color: #B32F88;
+    border-radius: 75px 25px 75px 25px;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.img-cubiertos {
+    position: absolute; 
+    width: 60px; 
+    left: 1%; 
+    top: 5%;
+}    
+
+@media (min-width: 768px) {
+    .container-home-ddc {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .title-container-home-ddc {
+        font-size: 55px;
+        line-height: 60px;
+    }
+    
+    .text-container-home-ddc {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .card-container-home-ddc {
+        padding-left: 0px;
+        padding-right: 90px;
+    }
+
+    .img-cubiertos {
+        position: absolute; 
+        width: 75px; 
+        left: 2%; 
+        top: 7.5%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .img-cubiertos {
+        position: absolute; 
+        width: 100px; 
+        left: 5%; 
+        top: 7.5%;
+    }
+}

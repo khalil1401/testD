@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>En_que_momento_del_dia_lo_toma__c</name>
+    <picklistValues>
+        <masterLabel>Como postre</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Como reemplazo de comidas principales</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>De a sorbos durante todo el día</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entre comidas principales</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vehiculizado en las comidas</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

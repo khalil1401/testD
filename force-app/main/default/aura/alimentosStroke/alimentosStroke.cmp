@@ -1,0 +1,170 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="iddsi" type="Boolean" default="false"/>
+    <aura:attribute name="comoMeAlimento" type="Boolean" default="false"/>
+    <aura:attribute name="diagnosticarlaYTratarla" type="Boolean" default="false"/>
+    <aura:attribute name="recursoEstaticoImagenPrincipal" type="String"/>
+    <aura:attribute name="recursoEstaticoImagenPrincipalMobile" type="String"/>
+	<aura:attribute name="rutaImagenPrincipal" type="String"/>
+	<aura:attribute name="titulo" type="String"/>
+    <aura:attribute name="textoPrimeraBajada" type="String"/>
+    <aura:attribute name="apiNameReceta" type="String" default="Recetas_Disfagia__c"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<lightning:navigation aura:id="navService"/>
+
+    <aura:if isTrue="{!v.iddsi}">
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center"
+           style="background: linear-gradient(90deg, #B5B5B5 0%, #ffffff 100%);">
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <div class="slds-col slds-large-size_6-of-12 slds-text-align_center containerGeneralAlimentosDisfagia">
+                <div class="slds-grid slds-wrap slds-m-top_x-large">
+                    <div class="slds-col slds-large-size_1-of-1">
+                        <aura:unescapedHtml value="{!v.titulo}"/>
+                    </div>
+                    <div class="slds-col slds-large-size_1-of-1 slds-m-top_x-large">
+                        <aura:unescapedHtml value="{!v.textoPrimeraBajada}"/>
+                    </div>
+                    <div class="slds-col slds-large-size_1-of-1 slds-m-top_x-large slds-m-bottom_x-large"
+                        style="position: relative;">
+                        <img src="{!v.rutaImagenPrincipal}" alt="img-principal"/>
+                        <img src="{!$Resource.imagenVerRecetasStroke}" alt="img-recetas" class="botonVerRecetas"
+                            onclick="{!c.redireccionar}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12"></div>
+        </div>    
+    </aura:if>
+    <aura:if isTrue="{!v.comoMeAlimento}">
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+            <div class="slds-col slds-large-size_3-of-12"></div>
+            <div class="slds-col slds-large-size_6-of-12 slds-text-align_center containerGeneralAlimentosDisfagia">
+                <div class="slds-grid slds-wrap slds-m-top_x-large">
+                    <div class="slds-col slds-large-size_1-of-1">
+                        <aura:unescapedHtml value="{!v.titulo}"/>
+                    </div>
+                    <div class="slds-col slds-large-size_1-of-1 slds-m-top_large">
+                        <aura:unescapedHtml value="{!v.textoPrimeraBajada}"/>
+                    </div>
+                    <div class="slds-col slds-large-size_1-of-1 slds-m-top_x-large slds-m-bottom_x-large">
+                        <img src="{!v.rutaImagenPrincipal}" alt="img-principal"/>
+                    </div>
+                    <div class="slds-col slds-large-size_1-of-1">
+                        <p class="textoRegularAlimentosStroke">
+                            El tipo de dieta que cada uno necesita es variable y depende de la capacidad deglutoria
+                            Generalmente las personas con disfagia encuentran más seguro y fácil de tragar 
+                            alimentos y bebidas con consistencia semisólida, homogénea, sin dobles texturas, blanda, 
+                            suave, húmeda y que no sea pegajosa. Este tipo de preparaciones no requieren 
+                            masticación. Estas características responden a un nivel IDDSI* 4, PURÉ.
+                        </p>
+                    </div>    
+                    <div class="slds-col slds-large-size_6-of-12 slds-m-top_x-large">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-TRATAMIENTO/PP-imagenCucharaTenedorStroke%282022-05-26%29.png" alt="img-cuchara-tenedor"/>
+                    </div>
+                    <div class="slds-col slds-large-size_6-of-12 slds-m-top_x-large">
+                        <p class="textoRegularAlimentosStroke" style="color: #5d6bac;">
+                            Pueden consumirse con una cuchara o tenedor 
+                            sin que se extienda entre sus dientes. Al caer de 
+                            la cuchara mantiene su forma y no queda 
+                            adherido a la cuchara.
+                        </p>
+                    </div>
+                    <div class="slds-col slds-large-size_1-of-1 slds-m-top_x-large slds-m-bottom_x-large">
+                        <p class="subtituloAlimentosStroke">
+                            ¡El momento de la comida no es solo para nutrirse!
+                            <br/><br/>
+                            También es un momento de encuentro que debe ser 
+                            relajado, agradable y que debés poder disfrutar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_3-of-12"></div>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!v.diagnosticarlaYTratarla}">
+        <div class="slds-grid slds-wrap">
+            <div class="div-col-izq"></div>
+            <div class="div-col-medio">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-large-size_1-of-1">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-bottom_x-large containerGeneralAlimentosDisfagia">
+                            <div class="slds-col slds-large-size_1-of-1 slds-m-top_x-large slds-text-align_center">
+                                <aura:unescapedHtml value="{!v.titulo}"/>
+                            </div>
+                            <div class="slds-col slds-large-size_1-of-1 slds-m-top_x-large slds-text-align_center">
+                                <aura:unescapedHtml value="{!v.textoPrimeraBajada}"/>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-m-top_x-large containerCard">
+                                <div style="background-color: #3FA8C1;border-radius: 0px 100px 0px 100px;height: 475px;width: 100%; box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.15)">
+                                    <div class="slds-align_absolute-center" style="height: 100px;">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-TRATAMIENTO/PP-imagenFlechaTestimoniosStroke%282022-05-26%29.png" alt="imgFlecha" style="transform: rotate(-270deg);"/>
+                                    </div>
+                                    <div style="height: 375px;">
+                                        <p class="textoCardsAlimentosStroke slds-text-align_center">
+                                            <span class="tituloCardsAlimentosStroke">Malnutrición:</span>
+                                            <br/><br/>
+                                            1 de cada 2 pacientes con disfagia están malnutridos<sup>1</sup>
+                                            <br/><br/>
+                                            En pacientes con ACV: hasta el 62%<sup>2</sup>
+                                            <br/><br/>
+                                            En pacientes con ELA: 20-30%<sup>3</sup>
+                                            <br/><br/>
+                                            En adultos mayores: 54%<sup>4</sup>
+                                            <br/><br/>
+                                            En cabeza y cuello: 20-80%<sup>5</sup>
+                                            <br/><br/>
+                                            La disfagia aumenta el riesgo de malnutrición en más de 3 veces<sup>6</sup>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-m-top_x-large containerCard">
+                                <div style="background-color: #33708b;border-radius: 100px 0px 100px 0px;height: 475px;width: 100%; box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.15)">
+                                    <div class="slds-align_absolute-center" style="height: 175px;">
+                                        <p class="slds-text-align_center textoCardsAlimentosStroke">
+                                            <span class="tituloCardsAlimentosStroke">Deshidratación:</span>
+                                            <br/><br/>
+                                            ocurre entre el 44% y el 75% de los 
+                                            pacientes con disfagia<sup>7</sup>
+                                        </p>
+                                    </div>
+                                    <div class="slds-align_absolute-center" style="height: 200px;">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-TRATAMIENTO/PP-imagenAguaStroke%282022-05-26%29.png" alt="img-agua"/>
+                                    </div>
+                                    <div class="slds-align_absolute-center" style="height: 100px;">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-TRATAMIENTO/PP-imagenFlechaTestimoniosStroke%282022-05-26%29.png" alt="imgFlecha" style="transform: rotate(-90deg);"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-m-top_x-large containerCard">
+                                <div style="background-color: #5d6bac;border-radius: 0px 100px 0px 100px;height: 475px;width: 100%;box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.15)">
+                                    <div class="slds-align_absolute-center" style="height: 100px;">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-TRATAMIENTO/PP-imagenFlechaTestimoniosStroke%282022-05-26%29.png" alt="imgFlecha" style="transform: rotate(-270deg);"/>
+                                    </div>
+                                    <div style="height: 375px;">
+                                        <p class="slds-text-align_center textoCardsAlimentosStroke">
+                                            <span class="tituloCardsAlimentosStroke">Neumonía Aspirativa (NA):</span>
+                                            <br/><br/>
+                                            hasta un 50% de los pacientes con 
+                                            disfagia que se aspiran 
+                                            desarrollarán una NA, con una 
+                                            mortalidad asociada de hasta el 
+                                            50%<sup>8</sup>
+                                        </p>
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-TRATAMIENTO/PP-imagenPulmonStroke%282022-05-26%29.png" alt="img-pulmon"
+                                            class="slds-align_absolute-center"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-large-size_3-of-12"></div>        
+                </div>
+            </div>
+            <div class="div-col-der"></div>
+        </div>
+    </aura:if>
+
+</aura:component>

@@ -1,0 +1,55 @@
+.THIS {
+}
+
+.THIS .container-faq-small-device{
+    display: none;
+}
+
+.THIS .container-faq-large-device{
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.THIS .container-faq-nsj-layout{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.THIS .container-faq-nsj{
+    margin-right: 5%;
+}
+
+
+@media (max-width: 1024px){
+    .THIS .container-faq-large-device{
+        display: none;
+    }
+
+    .THIS .container-faq-small-device{
+        display: initial;
+    }
+
+    .THIS .container-faq-nsj{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 768px){
+    .THIS .container-faq-nsj-layout{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 412px){
+    .THIS .container-faq-nsj{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .THIS .container-faq-nsj-layout{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}

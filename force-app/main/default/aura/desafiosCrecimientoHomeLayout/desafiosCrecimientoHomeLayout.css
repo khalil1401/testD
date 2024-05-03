@@ -1,0 +1,84 @@
+.THIS {
+}
+
+.THIS .div-texts-home-layout-ddc {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.THIS .title-home-layout-ddc {
+    font-family:MontserratSemiBold;
+    color:#606060;
+    font-size: 26px;
+    line-height: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 50px;
+}
+
+.THIS .linea-home-layout-ddc{
+    border-top: 1px solid #606060;
+    width:100px;
+    margin-top:3.5%;
+}
+
+.THIS .div-cards-home-layout-ddc {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.THIS .back-button-kdi-desafios {
+    background: transparent linear-gradient(90deg, #522582 0%, #62398D 52%) 0% 0% no-repeat padding-box;
+    border-color: #EBEBEB;
+    border-radius: 10px 10px 10px 10px;
+    font-family: MontserratSemiBold;
+    font-size: 22px;
+    border: transparent;
+    color: white;
+    line-height: 30px;
+    width: 277px;
+    height: 58px;
+}
+
+@media (min-width: 768px) {
+    .THIS .div-texts-home-layout-ddc {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .THIS .title-home-layout-ddc {
+        font-size: 22px;
+        line-height: 30px;
+        margin-top: 75px;
+    }
+
+    .THIS .linea-home-layout-ddc{
+        border-top: 1px solid #606060;
+        width:100px;
+        margin-top:1.2%;
+    }
+
+    .THIS .div-cards-home-layout-ddc {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .THIS .back-button-kdi-desafios {
+        width: 422px;
+        height: 77px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .THIS .div-cards-home-layout-ddc {
+        margin-left: 15%;
+        margin-right: 15%;
+    }    
+}
+
+@media (min-width: 1366px) {
+    .THIS .div-cards-home-layout-ddc {
+        margin-left: 20%;
+        margin-right: 20%;
+    }    
+}

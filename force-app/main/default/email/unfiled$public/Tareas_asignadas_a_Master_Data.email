@@ -1,0 +1,9 @@
+Estimado,
+
+Le informamos que le ha asignado una nueva tarea con los siguientes datos:
+
+- Nombre y apellido del paciente al cual se le creó la actividad: {!Task.Nombre_y_Apellido_del_Paciente__c}.
+
+- Obra Social:  {!Task.Nombre_de_la_obra_social__c}.
+
+- Area terapéutica: {!Task.Area_terap_utica__c}.

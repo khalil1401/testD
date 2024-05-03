@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommunityThemeDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customThemeLayoutType>
+        <label>GrHkXTA8qfxJqD7YqDdTZDjHcqEYOK</label>
+    </customThemeLayoutType>
+    <defaultBrandingSet>Pacientes_Landing</defaultBrandingSet>
+    <enableExtendedCleanUpOnDelete>true</enableExtendedCleanUpOnDelete>
+    <masterLabel>Pacientes_Landing</masterLabel>
+    <publisher>Alfonso Cano</publisher>
+    <themeSetting>
+        <themeLayout>Pacientes_Landing_themeLayout_Login</themeLayout>
+        <themeLayoutType>Login</themeLayoutType>
+    </themeSetting>
+    <themeSetting>
+        <themeLayout>Pacientes_Landing_themeLayout_Default</themeLayout>
+        <themeLayoutType>Inner</themeLayoutType>
+    </themeSetting>
+    <themeSetting>
+        <customThemeLayoutType>GrHkXTA8qfxJqD7YqDdTZDjHcqEYOK</customThemeLayoutType>
+        <themeLayout>Pacientes_Landing_themeLayout_Landing</themeLayout>
+    </themeSetting>
+</CommunityThemeDefinition>

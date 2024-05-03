@@ -1,0 +1,101 @@
+.container-span-icon-faq{
+	position:fixed;
+	z-index: 1;
+	height: 80px;
+	right: 7.1%;
+	bottom: 8%;
+	animation: fadeIn 0.5s;
+}
+
+.span-icon-faq{
+    font-family: BariolRegular;
+    font-weight: 700;
+	letter-spacing: 0.32px;
+	background-color: #B59AC8;
+	text-align: right;
+	color: white;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.span-icon-faq:after {
+	content: "";
+	position: absolute;
+	right: 7.1%;
+	bottom: 40px;
+	border-top: 20px solid #B59AC8;
+	color: #B59AC8;
+	border-top-color: inherit;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+}
+
+.float-icon-faq{
+	position: fixed;
+	width: 36px;
+	right: 7.81%;
+	bottom: 7.41%;
+    z-index: 1;
+}
+
+.float-bottom{
+	position:fixed;
+    z-index: 1;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	text-align:center;
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 1;
+        transform: translateX(50px);
+    }
+
+    100% { 
+        opacity: 1; 
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1366px) {	
+	.container-span-icon-faq{
+		right: 2.25%;
+		bottom: 6%;
+	}
+	
+	.span-icon-faq:after {
+		right: 2.25%;
+		height: 6%;
+	}
+	
+	.float-icon-faq{
+		right: 2.71%;
+		bottom: 5.86%;
+	}
+}
+
+@media (max-width: 768px) {
+	.float-icon-faq{
+		bottom: 13.5%;
+		right: 3%;
+	}
+}
+
+@media (max-width: 412px) {
+	.float-icon-faq{
+		right: 8.74%;
+		bottom: 8.63%;
+	}
+}
+
+@media (max-width: 360px) {
+	.float-icon-faq{
+		right: 5%;
+		bottom: 11.25%;
+	}
+}

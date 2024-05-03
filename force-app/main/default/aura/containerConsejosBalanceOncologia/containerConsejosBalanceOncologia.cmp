@@ -1,0 +1,97 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="backgroundPrimerColorGradiente" type="String"/>
+    <aura:attribute name="backgroundSegundoColorGradiente" type="String"/>
+
+    <div style="{!'background: linear-gradient(90deg, ' + v.backgroundPrimerColorGradiente +' 0%,  ' + v.backgroundSegundoColorGradiente +' 100%);'}">
+        <div class="slds-grid">
+            <div class="slds-col slds-large-size_2-of-12">
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                        <div class="containerCardConsejosBalanceOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardConsejosBalanceOncologia">
+                                <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-iconoRelojBalanceOncologia%282022-05-20%29.png" alt="flecha"
+                                        class="imgCardConsejosBalanceOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardConsejosBalanceOncologia">
+                                <p  class="textoCardConsejosBalanceOncologia">
+                                    Realiza 6 comidas chicas durante el día. Como es probable que tengas menos apetito, el fraccionamiento te ayudará a ingerir la comida.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                        <div class="containerCardConsejosBalanceOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardConsejosBalanceOncologia">
+                                <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-iconoEnergiaBalanceOncologia%282022-05-20%29.png" alt="flecha"
+                                        class="imgCardConsejosBalanceOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardConsejosBalanceOncologia">
+                                <p  class="textoCardConsejosBalanceOncologia">
+                                    Es preferible que las comidas sean de volumen reducido pero muy nutritivas, concentradas en calorías y proteínas.
+                                </p>
+                            </div>                                
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                        <div class="containerCardConsejosBalanceOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardConsejosBalanceOncologia">
+                                <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-iconoLecheBalanceOncologia%282022-05-20%29.png" alt="flecha"
+                                        class="imgCardConsejosBalanceOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardConsejosBalanceOncologia">
+                                <p  class="textoCardConsejosBalanceOncologia">
+                                    Incorpora suficiente proteína de calidad como leche, yogurt, quesos, huevo, carnes en todas las comidas.
+                                </p>
+                            </div>                                
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                        <div class="containerCardConsejosBalanceOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardConsejosBalanceOncologia">
+                                <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-iconoPoteBalanceOncologia%282022-05-20%29.png" alt="flecha"
+                                        class="imgCardConsejosBalanceOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardConsejosBalanceOncologia">
+                                <p  class="textoCardConsejosBalanceOncologia">
+                                    Incorpora alimentos que aporten energía como: pasta, arroz, avena, polenta, papa, batata, legumbres, granos, cereales, etc.
+                                </p>
+                            </div>                                
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                        <div class="containerCardConsejosBalanceOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardConsejosBalanceOncologia">
+                                <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-iconoGrasasBalanceOncologia%282022-05-20%29.png" alt="flecha"
+                                        class="imgCardConsejosBalanceOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardConsejosBalanceOncologia">
+                                <p  class="textoCardConsejosBalanceOncologia">
+                                    Agrega fuentes de grasas saludables para enriquecer tus comidas como frutos secos, palta y aceites.
+                                </p>
+                            </div>                                
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-3">
+                        <div class="containerCardConsejosBalanceOncologia">
+                            <div    class="slds-align_absolute-center containerImgCardConsejosBalanceOncologia">
+                                <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-iconoVerdurasCrudasBalanceOncologia%282022-05-20%29.png" alt="flecha"
+                                        class="imgCardConsejosBalanceOncologia"/>
+                            </div>
+                            <div    class="containerTextoCardConsejosBalanceOncologia">
+                                <p  class="textoCardConsejosBalanceOncologia">
+                                    Es preferible evitar verduras crudas, mate y sopas de caldo y verduras, ya que por su volumen generan más saciedad y no suman calorías significativas.
+                                </p>
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_2-of-12">
+            </div>
+        </div>        
+    </div>
+
+</aura:component>

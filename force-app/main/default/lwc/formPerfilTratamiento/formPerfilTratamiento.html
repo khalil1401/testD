@@ -1,0 +1,280 @@
+<template>
+    <div style="width: 100%;" class="slds-align_absolute-center fade-in-right-left">
+        <div class="form-datos">
+            <!--Info paciente-->
+            <div class="show-mobile">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_1-of-12">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                            style="width: 22px; position: absolute; top: 100px; left: 10px;" onclick={goToPerfilManager}>
+                    </div>
+                    <div class="slds-col slds-size_4-of-12 slds-text-align_right">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/User_Perfil.png"
+                            style="width: 100px;">
+                    </div>
+                    <div class="slds-col slds-size_7-of-12">
+                        <template if:true={paciente}>
+                            <div>
+                                <p class="name-text slds-m-bottom_xxx-small">{paciente.FirstName} {paciente.LastName}</p>
+                                <p class="card-item-text"><span class="card-item-title">DNI: </span>
+                                    <lightning-formatted-number 
+                                        value={paciente.DNI__c}>
+                                    </lightning-formatted-number>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Fecha Nacimiento: </span>
+                                    <lightning-formatted-date-time
+                                        value={paciente.PersonBirthdate}
+                                        year="numeric"
+                                        month="numeric"
+                                        day="numeric">
+                                    </lightning-formatted-date-time>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Telefono: </span>
+                                    {paciente.Phone}
+                                </p>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <div class="show-tablet">
+                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/Flecha.png"
+                    style="width: 22px; position: relative; top: 25px; left: -50px; cursor: pointer;" onclick={goToPerfilManager}>
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_2-of-12">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/User_Perfil.png"
+                            style="width: 100px;">
+                    </div>
+                    <div class="slds-col slds-size_10-of-12">
+                        <template if:true={paciente}>
+                            <div>
+                                <p class="name-text slds-m-bottom_xx-small">{paciente.FirstName} {paciente.LastName}</p>
+                                <p class="card-item-text"><span class="card-item-title">DNI: </span>
+                                    <lightning-formatted-number 
+                                        value={paciente.DNI__c}>
+                                    </lightning-formatted-number>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Fecha Nacimiento: </span>
+                                    <lightning-formatted-date-time
+                                        value={paciente.PersonBirthdate}
+                                        year="numeric"
+                                        month="numeric"
+                                        day="numeric">
+                                    </lightning-formatted-date-time>
+                                </p>
+                                <p class="card-item-text"><span class="card-item-title">Telefono: </span>
+                                    {paciente.Phone}
+                                </p>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+            <!--Form-->            
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_5-of-12">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_CUENTA_PACIENTE/folder_shared.png"
+                                class="icon-title-form">
+                        </div>
+                        <div class="slds-col slds-size_7-of-12">
+                            <span class="text-title-form">Tu tratamiento</span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-m-top_small slds-align_absolute-center">
+                            <div class="hr-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <template if:true={tratamiento}>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">Cobertura Médica</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                <lightning-icon 
+                                    class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" 
+                                    data-record={tratamiento.Id}
+                                    data-object="Tratamiento__c"
+                                    data-id="Obra_social__c"
+                                    data-fieldtype="lookup"
+                                    onclick={setEditableField}
+                                    icon-name="utility:edit" 
+                                    alternative-text="Edit" 
+                                    size="x-small"
+                                    title="Edit">
+                                </lightning-icon>
+                                <input 
+                                    type="text"
+                                    class="slds-input"
+                                    value={tratamiento.Obra_social__r.Name}
+                                    data-id="input-Obra_social__c"
+                                    disabled/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">Patología del Tratamiento</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                <lightning-icon 
+                                    class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" 
+                                    data-record={tratamiento.Id}
+                                    data-object="Tratamiento__c"
+                                    data-id="Patologia__c"
+                                    data-fieldtype="select"
+                                    onclick={setEditableField}
+                                    icon-name="utility:edit" 
+                                    alternative-text="Edit" 
+                                    size="x-small"
+                                    title="Edit">
+                                </lightning-icon>
+                                <input 
+                                    type="text"
+                                    class="slds-input"
+                                    value={tratamiento.Patologia__c}
+                                    data-id="input-Patologia__c"
+                                    disabled/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="text-input-id-1">Centro de Tratamiento</label>
+                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                <lightning-icon 
+                                    class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" 
+                                    data-record={tratamiento.Id}
+                                    data-object="Tratamiento__c"
+                                    data-id="Centro_de_tratamiento__c"
+                                    data-fieldtype="lookup"
+                                    onclick={setEditableField}
+                                    icon-name="utility:edit" 
+                                    alternative-text="Edit" 
+                                    size="x-small"
+                                    title="Edit">
+                                </lightning-icon>
+                                <input 
+                                    type="text"
+                                    class="slds-input"
+                                    value={tratamiento.Centro_de_tratamiento__r.Name}
+                                    data-id="input-Centro_de_tratamiento__c"
+                                    disabled/>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                <template if:true={tratamientoProf}>
+                    <template if:false={existeProfesionalSecundario}>
+                        <template for:each={tratamientoProf} for:item="profesional">
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_medium" key={profesional.id}>
+                                <div class="slds-grid slds-wrap" style="position: relative;">
+                                    <div class="slds-col slds-size_10-of-12">
+                                        <div class="slds-form-element">
+                                            <template if:true={profesional.profesionalPrincipal}>
+                                                <label class="slds-form-element__label" for="text-input-id-1">Profesional</label>
+                                            </template>
+                                            <template if:false={profesional.profesionalPrincipal}>
+                                                <label class="slds-form-element__label" for="text-input-id-1">Profesional Secundario</label>
+                                            </template>
+                                            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                                <lightning-icon 
+                                                    class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" 
+                                                    data-id={profesional.id}
+                                                    onclick={openModalProfesional}
+                                                    icon-name="utility:edit"
+                                                    alternative-text="Edit" 
+                                                    size="x-small"
+                                                    title="Edit">
+                                                </lightning-icon>
+                                                <input 
+                                                    type="text"
+                                                    class="slds-input"
+                                                    value={profesional.nombreProfesional}
+                                                    data-id="input-Profesional__c"
+                                                    disabled/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-size_2-of-12">
+                                        <lightning-icon
+                                            class="icon-new"
+                                            style="position: absolute; right: 5%; bottom: 12.5%; cursor: pointer;"
+                                            icon-name="utility:new" 
+                                            alternative-text="new" 
+                                            title="new"
+                                            size="small"
+                                            onclick={addProfesional}>
+                                        </lightning-icon>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>                        
+                    </template>
+                    <template if:true={existeProfesionalSecundario}>
+                        <template for:each={tratamientoProf} for:item="profesional">
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_medium" key={profesional.id}>
+                                <div class="slds-form-element">
+                                    <template if:true={profesional.profesionalPrincipal}>
+                                        <label class="slds-form-element__label" for="text-input-id-1">Profesional</label>
+                                    </template>
+                                    <template if:false={profesional.profesionalPrincipal}>
+                                        <label class="slds-form-element__label" for="text-input-id-1">Profesional Secundario</label>
+                                    </template>
+                                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                                        <lightning-icon 
+                                            class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" 
+                                            data-id={profesional.id}
+                                            onclick={openModalProfesional}
+                                            icon-name="utility:edit"
+                                            alternative-text="Edit" 
+                                            size="x-small"
+                                            title="Edit">
+                                        </lightning-icon>
+                                        <template if:false={profesional.profesionalPrincipal}>
+                                            <lightning-icon 
+                                                class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default icn-delete"
+                                                data-id={profesional.id}
+                                                onclick={deleteProfesional}
+                                                icon-name="utility:delete"
+                                                alternative-text="Delete" 
+                                                size="x-small"
+                                                title="Delete">
+                                            </lightning-icon>
+                                        </template>
+                                        <input 
+                                            type="text"
+                                            class="slds-input"
+                                            value={profesional.nombreProfesional}
+                                            data-id="input-Profesional__c"
+                                            disabled/>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </div>
+    <!--Modal de edición de campo-->
+    <template if:true={showModal}>
+        <c-modal-update-data-profile-n-s-j
+            record-id={recordId}
+            onclosemodal={closeModal}
+            old-value={oldValue}
+            object={object}
+            field-api-name={fieldApiName}
+            field-type={fieldType}
+            parameter={areaTerapeutica}>
+        </c-modal-update-data-profile-n-s-j>
+    </template>
+    <template if:true={showModalProfesional}>
+        <c-modal-perfil-profesional
+            label={labelModal}
+            profesional={selectedProfesional}
+            eliminacion={eliminarProfesional}
+            onclosemodal={closeModal}
+            onclosemodaldelete={closeModalDelete}>
+        </c-modal-perfil-profesional>
+    </template>
+</template>

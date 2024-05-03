@@ -1,0 +1,10 @@
+<design:component >
+
+    <design:attribute name="titulo" label="Título de componente"/>
+    <design:attribute name="texto" label="Texto de componente"/>
+    <design:attribute name="botonClass" label="Clase de css para el botón"/>
+    <design:attribute name="colorBackground" label="Color de fondo de background"/>
+    <design:attribute name="area" label="Área terapéutica (API Name en conjunto de valores de lista de selección)"/>
+    <design:attribute name="idButtonGTM" label="Id del botón para GTM"/>
+
+</design:component>

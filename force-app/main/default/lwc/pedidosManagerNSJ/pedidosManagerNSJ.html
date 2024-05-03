@@ -1,0 +1,106 @@
+<template>
+    <div class="slds-text-align_center slds-m-top_x-large">
+        <p class="title-montserrat-pedidos-manager">
+            <span class="title-pacifico-pedidos-manager">Mis</span> pedidos
+        </p>
+    </div>
+    <div class="slds-m-top_x-large">
+        <template if:true={envios}>
+            <template for:each={envios} for:item="envio">
+                <div class="div-card-kit" key={envio.Id}>
+                    <div class="card-header-kit">
+                        <div class="slds-clearfix">
+                            <div class="slds-float_left">
+                                <span class="card-header-title-kit">
+                                    Detalles del Pedido
+                                </span>
+                                <div class="mobile">
+                                    <br/>
+                                    <span class="card-header-title-kit" style="font-family: MontserratRegular; font-size: 1rem; line-height: 1.2rem;">
+                                        {envio.date}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="slds-float_right desktop">
+                                <span class="card-header-title-kit" style="font-family: MontserratRegular; font-size: 1rem;">
+                                    {envio.date}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center card-body-kit">
+                        <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+                            <lightning-icon
+                                icon-name="utility:user"
+                                alternative-text="Destinatario"
+                                title="Destinatario">
+                            </lightning-icon>
+                        </div>
+                        <div class="slds-col slds-size_11-of-12">
+                            <p class="card-body-text-kit">
+                                {envio.Cuenta__r.Name}
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-m-top_medium slds-align_absolute-center">
+                            <lightning-icon
+                                icon-name="utility:home"
+                                alternative-text="Dirección"
+                                title="Dirección">
+                            </lightning-icon>
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-m-top_medium">
+                            <p class="card-body-text-kit">
+                                {envio.calle},
+                                <br>
+                                {envio.localidad}
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-m-top_medium slds-align_absolute-center">
+                            <lightning-icon
+                                icon-name="utility:case"
+                                alternative-text="NIC"
+                                title="NIC">
+                            </lightning-icon>
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-m-top_medium">
+                            <p class="card-body-text-kit" style="text-transform: none;">
+                                Kit de Inicio N° {envio.NIC__c}
+                            </p>
+                        </div>
+                        <div class="desktop">
+                            <div class="slds-m-top_medium slds-m-bottom_small">
+                                <div class="container-rastreo-btn">
+                                    <a
+                                        target="_blank" 
+                                        href={envio.Link_Seguimiento_completo__c}
+                                        class="rastreo-pedido-btn-nsj">
+                                        Rastrear Envío
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile">
+                            <div class="slds-m-top_large">
+                                <a
+                                    target="_blank" 
+                                    href={envio.Link_Seguimiento_completo__c}
+                                    class="rastreo-pedido-btn-nsj">
+                                    Rastrear Envío
+                                </a>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </template>
+        <template if:false={envios}>
+            <div class="container-sin-pedidos">
+                <p class="text-sin-pedidoss slds-text-align_center">
+                    Tu pedido aún se está procesando...
+                    <br>
+                    Podrás encontrarlo a la brevedad.
+                </p>
+            </div>
+        </template>
+    </div>
+</template>

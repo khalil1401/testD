@@ -1,0 +1,46 @@
+.div-center-sq-tc{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.tituloContainerSabiasQue{
+    font-family: MontserratSemiBold;
+    color: white;
+    font-size: 3rem;
+}
+
+.textoContainerSabiasQue{
+    font-family: MontserratRegular;
+    color: white;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+}
+
+@media (max-width: 1600px) {
+    .div-center-sq-tc{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .div-center-sq-tc{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 600px) {
+    .div-center-sq-tc{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .tituloContainerSabiasQue{
+        font-size: 2rem;
+    }
+    
+    .textoContainerSabiasQue{
+        padding-left: 5%;
+    }
+}

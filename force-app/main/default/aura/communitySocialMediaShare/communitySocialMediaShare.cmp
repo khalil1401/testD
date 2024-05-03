@@ -1,0 +1,60 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global"> 
+    <aura:attribute name="twitter" type="boolean" default="true"/>
+    <aura:attribute name="twitterColor" type="String" default="#00C3F3"/>
+	<aura:attribute name="twitterText" type="String" default="Danone - Nutricia "/>	
+
+    <aura:attribute name="facebook" type="boolean"  default="true"/>
+    <aura:attribute name="facebookColor" type="String" default="#35998"/>
+	<aura:attribute name="facebookText" type="String" default="Danone - Nutricia "/>	
+
+    <aura:attribute name="linkedin" type="boolean" default="true"/>
+    <aura:attribute name="linkedinColor" type="String" default="#2BA3E1"/>
+
+    <aura:attribute name="gmail" type="boolean" default="true"/>
+    <aura:attribute name="gmailColor" type="String" default="#D73D32"/>	
+
+    <aura:attribute name="whatsapp" type="boolean" default="true"/>
+    <aura:attribute name="whatsappColor" type="String" default="#25D366"/>
+    <aura:attribute name="whatsappText" type="String" default="Danone - Nutricia "/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="slds-grid slds-grid_align-center" style="color:#FFFFFF; text-align:center">
+        <!-- Hidden when mobile -->
+        <div class="slds-show_medium slds-col slds-size_2-of-12"/> 
+        <!-- -->
+        <aura:if isTrue="{!v.twitter}">
+            <c:communitySocialMediaShareIcon url="{!'https://twitter.com/intent/tweet?text=' + v.twitterText + '&amp;url='}"
+                                             staticResourceName="{!$Resource.SocialMediaIcons}"
+                                             staticResourcePath="/twitter.svg"
+                                             backgroundColor="{!v.twitterColor}"/> 
+        </aura:if>
+        <aura:if isTrue="{!v.facebook}">
+            <c:communitySocialMediaShareIcon url="{!'https://www.facebook.com/sharer.php?quote=' + v.facebookText + '&amp;u='}"
+                                             staticResourceName="{!$Resource.SocialMediaIcons}"
+                                             staticResourcePath="/facebook.svg"
+                                             backgroundColor="{!v.facebookColor}"/> 
+        </aura:if>
+        <aura:if isTrue="{!v.linkedin}">
+            <c:communitySocialMediaShareIcon url="https://www.linkedin.com/shareArticle?mini=true&amp;url="
+                                             staticResourceName="{!$Resource.SocialMediaIcons}"
+                                             staticResourcePath="/linkedin.svg"
+                                             backgroundColor="{!v.linkedinColor}"/> 
+        </aura:if>
+        <aura:if isTrue="{!v.gmail}">
+            <c:communitySocialMediaShareIcon url="https://www.addtoany.com/add_to/google_gmail?linkurl="
+                                             staticResourceName="{!$Resource.SocialMediaIcons}"
+                                             staticResourcePath="/gmail.svg"
+                                             backgroundColor="{!v.gmailColor}"/> 
+        </aura:if>
+		<aura:if isTrue="{!v.whatsapp}">
+            <c:communitySocialMediaShareIcon url="{!'https://api.whatsapp.com/send?text=' + v.whatsappText}" 
+                                             staticResourceName="{!$Resource.SocialMediaIcons}"
+                                             staticResourcePath="/whatsapp.svg"
+                                             backgroundColor="{!v.whatsappColor}"/> 
+        </aura:if>
+        <!-- Hidden when mobile -->
+        <div class="slds-show_medium slds-col slds-size_2-of-12"/> 
+        <!-- -->
+    </div>
+</aura:component>

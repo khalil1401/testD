@@ -1,0 +1,19 @@
+<design:component>
+    <design:attribute name="twitter" label="Twitter"/>
+    <design:attribute name="twitterColor" label="Color de fondo Twitter" default="#00C3F3"/>
+    <design:attribute name="twitterText" label="Texto para agregar al link al compartirlo en Twitter"/>
+
+    <design:attribute name="facebook" label="Facebook"/>
+    <design:attribute name="facebookColor" label="Color de fondo Facebook" default="#3b5998"/>
+    <design:attribute name="facebookText" label="Texto para agregar al link al compartirlo en Facebook"/>
+
+    <design:attribute name="linkedin" label="Linkedin"/>
+    <design:attribute name="linkedinColor" label="Color de fondo Linkedin" default="#2BA3E1"/>
+
+    <design:attribute name="gmail" label="Gmail"/>
+    <design:attribute name="gmailColor" label="Color de fondo Gmail" default="#D73D32"/>
+
+    <design:attribute name="whatsapp" label="Whatsapp"/>
+    <design:attribute name="whatsappColor" label="Color de fondo Whatsapp" default="#25D366"/>
+    <design:attribute name="whatsappText" label="Texto para agregar al link al compartirlo en Whatsapp"/>
+</design:component>

@@ -1,0 +1,75 @@
+.div-glosario-meta{
+    width: 100%;
+    background: linear-gradient(180deg, rgba(147,126,213,0.73) 0%, rgba(114,132,222,0.73) 100%);
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.title-pacifico-glosario-meta{
+    font-family: PacificoRegular;
+    font-size: 4.25rem;
+    line-height: 4rem;
+    color: #4C2F92;
+}
+
+.title-montserrat-glosario-meta{
+    font-family: MontserratBlack;
+    font-size: 3.438rem;
+    color: #4C2F92;
+    margin-left: 20%;
+}
+
+.subtitle-montserrat-glosario-meta{
+    font-family: MontserratSemiBold;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    color: #4C2F92;
+}
+
+.text-montserrat-glosario-meta{
+    font-family: MontserratRegular;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    color: white;
+}
+
+.text-fuente-montserrat-glosario-meta{
+    font-family: MontserratRegular;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: white;
+    line-break: anywhere;
+}
+
+.text-p-montserrat-glosario-meta{
+    font-family: MontserratRegular;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+    color: #4C2F92;
+}
+
+@media (max-width: 1600px) {
+    .div-glosario-meta{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .div-glosario-meta{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .title-pacifico-glosario-meta{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    .title-montserrat-glosario-meta{
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-left: 0%;
+    } 
+}

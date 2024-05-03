@@ -1,0 +1,11 @@
+<design:component >
+
+    <design:attribute name="altoMaximo" label="Alto maximo de la imagen en PX Desktop"/>
+    <design:attribute name="altoMinimo" label="Alto minimo de la imagen en PX Desktop"/>
+
+    <design:attribute name="image1StaticResourceName" label="Nombre de la primer imagen en el recurso estático"/>
+
+    <design:attribute name="duracion" label="Duración del scroll de las imagenes"/>
+    <design:attribute name="backgroundColor" label="Color de fondo de carrusel"/>
+
+</design:component>

@@ -1,0 +1,31 @@
+.THIS {
+}
+
+.THIS .slds-carousel__image {
+    width : 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: initial;
+	border-top-right-radius: initial;
+}
+
+.THIS .slds-carousel__content {
+	display: none;
+}
+
+.THIS .slds-carousel__content-title {
+	display: none;
+}
+
+.THIS .slds-carousel__indicators {
+	display: none;
+}
+
+.THIS .slds-carousel__autoplay {
+	display: none;
+}
+
+.THIS .slds-carousel__panel-action {
+	border: none;
+}

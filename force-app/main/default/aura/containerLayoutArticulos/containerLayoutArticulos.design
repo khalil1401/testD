@@ -1,0 +1,14 @@
+<design:component >
+
+    <design:attribute name="titulo" label="Titulo de artículos"/>
+    <design:attribute name="textTituloColor" label="Color de titulo de artículos"/>
+    <design:attribute name="fontFamilyTitulo" label="Fuente de texto de título de componente"/>
+    <design:attribute name="numberShowCards" label="Número de cards a mostrar"/>
+    <design:attribute name="dataCards" label="Data de contenido de cartas en Json"/>
+    <design:attribute name="backgroundColor" label="Color de fondo liso de container de artículos"/>
+    <design:attribute name="backgroundColorHeaderActiveGradiente1" label="Primer color de fondo para gradiente"/>
+    <design:attribute name="backgroundColorHeaderActiveGradiente2" label="Segundo color de fondo para gradiente"/>
+    <design:attribute name="marginTop" label="Altura en pixeles de margen superior"/>
+    <design:attribute name="marginBottom" label="Altura en pixeles de margen inferior"/>
+
+</design:component>

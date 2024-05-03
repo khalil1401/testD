@@ -1,0 +1,30 @@
+.THIS {
+}
+
+.THIS .div-ai-meta-layout{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media (max-width: 1600px){
+    .THIS .div-ai-meta-layout{
+    }
+}
+
+@media (max-width: 1300px){
+    .THIS .div-ai-meta-layout{
+    }
+}
+
+@media (max-width: 1024px){
+    .THIS .div-ai-meta-layout{
+    }
+}
+
+@media (max-width: 600px) {
+    .THIS .div-ai-meta-layout{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}

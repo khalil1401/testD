@@ -1,0 +1,41 @@
+<design:component> 
+    <design:attribute name="footerBackgroundColor" label="Color de fondo"/>
+    <design:attribute name="footerLine1" label="Texto primera linea"/>
+    <design:attribute name="terminos" label="Texto de Terminos de uso"/>
+    <design:attribute name="politicas" label="Texto Politicas de privacidad"/>
+    <design:attribute name="apiNamePageTerminos" label="API name de página de Terminos y condiciones"/>
+    <design:attribute name="apiNamePagePoliticas" label="API name de página de Politicas de seguridad"/>
+
+    <design:attribute name="siteName1" label="Nombre de sitio"/>
+    <design:attribute name="siteImageIconName1" label="Icono 1 - Nombre del recurso estatico"/>
+    <design:attribute name="siteImageIconPath1" label="Icono 1 - Path al recurso estatico" description="Utilizar en caso de que el recuso estatico sea un archivo comprimido"/>
+    <design:attribute name="siteImageIcon1Width" label="Tamaño del icono en PX"/>
+    <design:attribute name="linkToSite1" label="Link del sitio"/>
+
+    <design:attribute name="siteName2" label="Nombre de sitio"/>
+    <design:attribute name="siteImageIconName2" label="Icono 2 - Nombre del recurso estatico"/>
+    <design:attribute name="siteImageIconPath2" label="Icono 2 - Path al recurso estatico" description="Utilizar en caso de que el recuso estatico sea un archivo comprimido"/>
+    <design:attribute name="siteImageIcon2Width" label="Tamaño del icono en PX"/>    
+    <design:attribute name="linkToSite2" label="Link del sitio"/>
+
+    <design:attribute name="siteName3" label="Nombre de sitio"/>
+    <design:attribute name="siteImageIconName3" label="Icono 3 - Nombre del recurso estatico"/>
+    <design:attribute name="siteImageIconPath3" label="Icono 3 - Path al recurso estatico" description="Utilizar en caso de que el recuso estatico sea un archivo comprimido"/>
+    <design:attribute name="siteImageIcon3Width" label="Tamaño del icono en PX"/>  
+    <design:attribute name="linkToSite3" label="Link del sitio"/>
+    
+    <design:attribute name="footerLine2" label="Texto segunda linea"/>
+    <design:attribute name="linkTerminos" label="Link de Terminos y condiciones"/>
+    <design:attribute name="linkPoliticas" label="Link Politicas de seguridad"/>
+    <design:attribute name="footerLine3" label="Texto tercera linea"/>
+    <design:attribute name="footerLine4" label="Texto cuarta linea"/>
+    
+    <design:attribute name="isInstagram" label="Activar Instagram"/>
+    <design:attribute name="linkToInstagram" label="Link a Instagram"/>
+    <design:attribute name="isYoutube" label="Activar Youtube"/>
+    <design:attribute name="linkToYoutube" label="Link a Youtube"/>
+    <design:attribute name="isFacebook" label="Activar Facebook"/>
+    <design:attribute name="linkToFacebook" label="Link a Facebook"/>
+    <design:attribute name="isTwitter" label="Activar Twitter"/>
+    <design:attribute name="linkToTwitter" label="Link a Twitter"/>
+</design:component>

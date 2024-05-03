@@ -1,0 +1,14 @@
+.THIS .socialButtons {
+  background-color: #9C87C0; 
+  border-radius: 50px; 
+  border: none; 
+  color: white; 
+  border-radius: 50px;
+  width:100%;
+  height:100%;
+}
+
+@font-face {
+    font-family: 'opensans';
+    src: url('/landingcommunity/s/sfsites/c/resource/fonts/OpenSans-Bold.ttf') format('truetype');
+}

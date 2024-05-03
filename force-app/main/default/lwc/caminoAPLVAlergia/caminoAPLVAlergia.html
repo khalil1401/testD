@@ -1,0 +1,325 @@
+<template>
+    
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-large-size_1-of-12 slds-align_absolute-center">
+        </div>
+        <div class="slds-col slds-large-size_10-of-12 slds-align_absolute-center">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-large-size_1-of-4 slds-align_absolute-center">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaPaso1%282022-05-27%29.png" class="imagen-paso" onclick={seleccionarPaso} data-id="primerPaso">
+                </div>
+                <div class="slds-col slds-large-size_1-of-4 slds-align_absolute-center">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaPaso2%282022-05-27%29.png" class="imagen-paso" onclick={seleccionarPaso} data-id="segundoPaso">
+                </div>
+                <div class="slds-col slds-large-size_1-of-4 slds-align_absolute-center">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaPaso3%282022-05-27%29.png" class="imagen-paso" onclick={seleccionarPaso} data-id="tercerPaso">
+                </div>
+                <div class="slds-col slds-large-size_1-of-4 slds-align_absolute-center">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaPaso4%282022-05-27%29.png" class="imagen-paso" onclick={seleccionarPaso} data-id="cuartoPaso">
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-large-size_1-of-12 slds-align_absolute-center">
+        </div>
+    </div>
+
+    <div class="slds-grid slds-wrap slds-m-top_x-large container-detalles-pasos" data-id="descripcion">
+        <div class="slds-col slds-size_1-of-12 slds-large-size_2-of-12 slds-align_absolute-center">
+            <template if:true={isDesktop}>
+                <lightning-button-icon 
+                        icon-name="utility:chevronleft"
+                        alternative-text="Back"
+                        title="Back"
+                        icon-class="dark"
+                        size="large"
+                        variant="bare"
+                        onclick={pasoAnterior}
+                        disabled={iconoAnterior}>
+                </lightning-button-icon>
+            </template>
+        </div>
+        <div class="slds-col slds-size_10-of-12 slds-large-size_8-of-12">
+            <!--Primer Paso-->
+            <div data-id="primerPasoContainer" class="show-container">
+                <div class="slds-grid slds-wrap slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_7-of-12">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_4-of-12 slds-large-size_3-of-12">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaPaso1Numeral%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_8-of-12 slds-large-size_9-of-12">
+                                <p class="titulo-paso">
+                                    Diagnóstico con <span style="font-family: MontserratBlack;">APLV</span>
+                                </p>
+                            </div>
+                            <div class="slds-col slds-large-size_1-of-1">
+                                <p class="texto-paso">
+                                    Somos un equipo multidisciplinario que esta disponible para ayudarte en cada etapa del tratamiento. Si tenés alguna consulta o inquietud referente a la patología, inicio del tratamiento o con los trámites ante tu obra social podés ponerte en contacto con nosotros vía WhatsApp <span style="font-family: MontserratSemiBold;">+54 9 11 5970-6647</span>.
+                                </p>
+                            </div>
+                            <div class="slds-col slds-large-size_1-of-1 slds-m-top_large">
+                                <p class="texto-paso" style="font-family: MontserratSemibold; color: #73C9C7;">
+                                    ¿Cómo simplificar el trámite con tu Obra Social / Prepaga?
+                                </p>
+                                <p class="texto-paso slds-m-top_large">
+                                    Para facilitar la solicitud del trámite de cobertura en tu Obra Social/Prepaga, te sugerimos tener a mano los siguientes documentos provistos por tu médico:
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12 slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_large">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaTildeVerde%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12 slds-large-size_10-of-12 slds-m-top_large">
+                                <p class="texto-paso">
+                                    Orden médica 
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12 slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_large">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaTildeVerde%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12 slds-large-size_10-of-12 slds-m-top_large">
+                                <p class="texto-paso">
+                                    Consumo diario y Proyección del tratamiento 
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12 slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_large">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaTildeVerde%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12 slds-large-size_10-of-12 slds-m-top_large">
+                                <p class="texto-paso">
+                                    Historia Clínica detallando los estudios realizados (en el caso que no haya indicación de estudio clínico, el profesional debe justificar el motivo) 
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12 slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_large">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaTildeVerde%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12 slds-large-size_10-of-12 slds-m-top_large">
+                                <p class="texto-paso">
+                                    Estudios complementarios (en caso de que los tengas)
+                                </p>
+                            </div>
+                            <div class="slds-col slds-large-size_1-of-1 slds-m-top_large">
+                                <p class="texto-paso" style="font-family: MontserratSemibold; color: #73C9C7;">
+                                    Te compartimos más información útil en estos links:
+                                </p>
+                            </div>
+                            <div class="slds-col slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_large">
+                            </div>
+                            <div class="slds-col slds-large-size_10-of-12 slds-m-top_large">
+                                <a onclick={redireccionarLey}>
+                                    <p class="texto-paso">
+                                        • Ley Leches Medicamentosas
+                                    </p>    
+                                </a>
+                            </div>
+                            <div class="slds-col slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_large">
+                            </div>
+                            <div class="slds-col slds-large-size_10-of-12 slds-m-top_large">
+                                <a onclick={redireccionar}>
+                                    <p class="texto-paso">
+                                        • Cuidados y recomendaciones
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-large-size_5-of-12">
+                        <div class="slds-align_absolute-center slds-m-top_x-large">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaPaso1Descripcion%282022-05-27%29.png" class="imagen-detalle-paso">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Segundo Paso-->
+            <div data-id="segundoPasoContainer" class="hidden-container">
+                <div class="slds-grid slds-wrap slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_7-of-12">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_4-of-12 slds-large-size_3-of-12">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaPaso2Numeral%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_8-of-12 slds-large-size_9-of-12">
+                                <p class="titulo-paso">
+                                    Primer contacto con la Obra Social/Prepaga
+                                </p>
+                            </div>
+                            <div class="slds-col slds-large-size_1-of-1">
+                                <p class="texto-paso">
+                                    Posterior al diagnóstico, llega el momento del primer contacto con tu Obra Social o Prepaga, es muy importante consultar directamente con el prestador cómo es el trámite que debés iniciar para la cobertura de tu tratamiento, porque la documentación puede diferir dependiendo de cada prestador.
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-1 slds-m-top_large">
+                                <p class="texto-paso" style="font-family: MontserratSemibold; color: #B193BD;">
+                                    Consejos útiles
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12 slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_large">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaTildeVioleta%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12 slds-large-size_10-of-12 slds-m-top_large">
+                                <p class="texto-paso">
+                                    Consultá el tiempo de revisión del trámite para la aprobación de la cobertura
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12 slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_large">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaTildeVioleta%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12 slds-large-size_10-of-12 slds-m-top_large">
+                                <p class="texto-paso">
+                                    Validá el método de presentación, dependiendo del prestador puede ser online o presencial 
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12 slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_large">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaTildeVioleta%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12 slds-large-size_10-of-12 slds-m-top_large">
+                                <p class="texto-paso">
+                                    Asegurate de tener toda la documentación que el prestador requiera (algunos requieren completar su propio formulario)
+                                </p>
+                            </div>
+                            <div class="slds-col slds-large-size_1-of-1 slds-m-top_large">
+                                <p class="texto-paso" style="font-family: MontserratSemibold; color: #B193BD;">
+                                    ¡Recordá!
+                                </p>
+                                <p class="texto-paso slds-m-top_large">
+                                    Una vez presentado el trámite, asegurate de contar con una copia o foto de toda la documentación presentada y del número de trámite.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-large-size_5-of-12">
+                        <div class="slds-align_absolute-center slds-m-top_x-large">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaDetallesPaso2%282022-05-27%29.png" class="imagen-detalle-paso">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Tercer Paso-->
+            <div data-id="tercerPasoContainer" class="hidden-container">
+                <div class="slds-grid slds-wrap slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_7-of-12">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_4-of-12 slds-large-size_3-of-12">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaPaso3Numeral%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_8-of-12 slds-large-size_9-of-12">
+                                <p class="titulo-paso">
+                                    Ya contás con la aprobación de la OS, ¿y ahora qué?
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12 slds-large-size_2-of-12 slds-align_absolute-center">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaTildeAmarillo%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12 slds-large-size_10-of-12">
+                                <p class="texto-paso">
+                                    Una vez aprobada la cobertura, tu obra social o prepaga te informará de qué manera podés acceder a la provisión de alimento.
+                                </p>
+                            </div>
+                            <div class="slds-col slds-large-size_1-of-1 slds-m-top_large">
+                                <p class="texto-paso" style="font-family: MontserratSemibold; color: #DCD863;">
+                                    ¡Importante!
+                                </p>
+                                <p class="texto-paso slds-m-top_large">
+                                    Tené presente consultar con tu obra social o prepaga cuál es procedimiento para pedir la renovación de la provisión de alimento y la fecha de presentación. En base a esa información, asegurate de contar con la correspondiente orden médica para la solicitud de la renovación.
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12 slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_large">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaTildeAmarillo%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12 slds-large-size_10-of-12 slds-m-top_large">
+                                <p class="texto-paso">
+                                    Si no tuviste respuesta de parte de tu obra social o no obtuviste la aprobación de la cobertura, ponete en contacto con <span style="font-family: MontserratSemiBold;"> nuestro WhatsApp +54 9 11 5970-6647.</span>
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_2-of-12 slds-large-size_2-of-12 slds-align_absolute-center slds-m-top_large">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaTildeAmarillo%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_10-of-12 slds-large-size_10-of-12 slds-m-top_large">
+                                <p class="texto-paso">
+                                    Te invitamos a recorrer nuestro <span style="font-family: MontserratSemiBold;">Portal de Pacientes</span> para obtener:
+                                    <br></br>
+                                    - Información útil
+                                    <br></br>
+                                    - Recetas para tu bebé en la etapa de alimentación complementaria.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-large-size_5-of-12">
+                        <div class="slds-align_absolute-center slds-m-top_x-large">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaDetallePaso3%282022-05-27%29.png" class="imagen-detalle-paso">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Cuarto Paso-->
+            <div data-id="cuartoPasoContainer" class="hidden-container">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_7-of-12">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_4-of-12 slds-large-size_3-of-12">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaPaso4Numeral%282022-05-27%29.png">
+                            </div>
+                            <div class="slds-col slds-size_8-of-12 slds-large-size_9-of-12">
+                                <p class="titulo-paso">
+                                    Desafío y fin del tratamiento
+                                </p>
+                            </div>
+                            <div class="slds-col slds-large-size_1-of-1">
+                                <p class="texto-paso">
+                                    Esta prueba se debe realizar en un hospital con un médico capacitado. El mismo será recomendado por el médico a cargo del tratamiento.
+                                    <br></br>
+                                    El desafío o la prueba de provocación oral se realiza para saber si el niño ya adquirió la tolerancia a la proteína de leche de vaca. Consiste en darle una dosis mínima del alérgeno, en este caso en forma de leche, y se va aumentando paulatinamente la dosis hasta llegar a la cantidad que el niño tomaría habitualmente.
+                                    <br></br>
+                                    Una vez superado el desafío se da el alta del tratamiento de APLV siguiendo las recomendaciones de tu médico
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-large-size_5-of-12">
+                        <div class="slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ALERGIA/ALERGIA-CAMINO_APLV/PP-alergiaDetallePaso4%282022-05-27%29.png" class="imagen-detalle-paso">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-size_1-of-12 slds-large-size_2-of-12 slds-align_absolute-center">
+            <template if:true={isDesktop}>
+                <lightning-button-icon
+                    icon-name="utility:chevronright"
+                    alternative-text="Next"
+                    title="Next"
+                    size="large"
+                    variant="bare"
+                    onclick={pasoSiguiente}
+                    disabled={iconoPosterior}>
+                </lightning-button-icon>
+            </template>
+        </div>
+        <template if:false={isDesktop}>
+            <div class="slds-col slds-size_1-of-1 slds-m-bottom_large slds-align_absolute-center">
+                <lightning-button-icon 
+                        icon-name="utility:chevronleft"
+                        alternative-text="Back"
+                        title="Back"
+                        icon-class="dark"
+                        size="large"
+                        variant="bare"
+                        onclick={pasoAnterior}
+                        disabled={iconoAnterior}>
+                </lightning-button-icon>
+                <div style="width: 20%;"></div>
+                <lightning-button-icon
+                    icon-name="utility:chevronright"
+                    alternative-text="Next"
+                    title="Next"
+                    size="large"
+                    variant="bare"
+                    onclick={pasoSiguiente}
+                    disabled={iconoPosterior}>
+                </lightning-button-icon>
+            </div>
+        </template>
+    </div>
+
+</template>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Best_Care</letterhead>
+    <name>Caso de envio de producto kit de alimento</name>
+    <style>freeForm</style>
+    <subject>Nuevo envío de kit de aliemento</subject>
+    <textOnly>Estimado,
+
+Le informamos que se ha enviado un kit de inicio con los siguientes datos:
+
+Paciente: {!Account.ID_de_paciente__c} {!Account.Nombre_oculto__c} {!Account.Apellido_oculto__c}
+Nro de cupón: {!Case.Numero_de_cupon__c}
+Obra social: {!Account.Obra_social__c}
+Profesional que lo indica: {!Case.Profesional__c}
+Fórmula de consumo: {!Case.Producto__c}
+Dirección de envío: {!Account.Calle__c}, {!Account.Localidad__c}, {!Account.Provincia__c}
+
+Para ver más detalles ingrese a: {!Case.Link}
+Saludos.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

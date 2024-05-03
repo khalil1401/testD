@@ -1,0 +1,4 @@
+({
+    setDevice : function(component, event){
+    }
+})

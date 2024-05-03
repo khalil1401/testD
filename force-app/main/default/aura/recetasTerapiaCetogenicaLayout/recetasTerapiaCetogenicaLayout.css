@@ -1,0 +1,36 @@
+.THIS {
+}
+
+.THIS .div-center-tc{
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+@media (max-width: 1600px) {
+    .THIS .div-center-tc{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .THIS .div-center-tc{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .THIS .div-center-tc{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .THIS .div-center-tc{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}

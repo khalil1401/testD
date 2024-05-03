@@ -1,0 +1,42 @@
+.THIS {
+}
+
+.THIS .div-texts-pc-layout-ddc {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.THIS .div-cards-pc-layout-ddc {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.THIS .back-button-kdi-desafios {
+    background: transparent linear-gradient(90deg, #522582 0%, #62398D 52%) 0% 0% no-repeat padding-box;
+    border-color: #EBEBEB;
+    border-radius: 10px 10px 10px 10px;
+    font-family: MontserratSemiBold;
+    font-size: 22px;
+    border: transparent;
+    color: white;
+    line-height: 30px;
+    width: 277px;
+    height: 58px;
+}
+
+@media (min-width: 768px) {
+    .THIS .div-texts-pc-layout-ddc {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .THIS .div-cards-pc-layout-ddc {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .THIS .back-button-kdi-desafios {
+        width: 422px;
+        height: 77px;
+    }
+}

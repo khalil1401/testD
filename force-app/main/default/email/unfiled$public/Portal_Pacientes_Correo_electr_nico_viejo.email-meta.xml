@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Correo de confirmación de cambio de correo electrónico viejo</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Portal Pacientes: Correo electrónico viejo</name>
+    <style>none</style>
+    <subject>Solicitud de Cambio de Dirección de Correo Electrónico</subject>
+    <textOnly>Hi {!User.FirstName},
+
+We received a request to change the email address for the username {!User.Username}. Please make sure the following changes are correct:
+
+Previous email address: {!ChgEmailVer.OldEmail}
+New email address: {!ChgEmailVer.NewEmail}
+
+If you didn&apos;t request this change, contact your {!Community_Name} administrator or reply to this email.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

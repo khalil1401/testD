@@ -1,0 +1,41 @@
+lightning-map{
+    height: 75vh;
+}
+
+.slds-text-link{
+    color: white;
+}
+
+.marker-list{
+    background-color: #4A2A80;
+    height: 75vh;
+}
+
+.title-map-marker{
+    font-family: MontserratSemiBold;
+    font-size: 1.125rem;
+    color: white;
+}
+
+.text-map-marker{
+    font-family: MontserratRegular;
+    font-size: 1rem;
+    color: white;
+}
+
+.slds-form-element__help{
+    color: #ea001e;
+}
+
+a{
+    color: white !important;
+}
+
+@media (max-width: 600px){
+    lightning-map{
+        height: 50vh;
+    }
+    .marker-list{
+        height: 50vh;
+    }    
+}

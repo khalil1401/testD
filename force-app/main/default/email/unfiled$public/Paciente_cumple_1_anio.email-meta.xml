@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Best_Care</letterhead>
+    <name>Paciente cumple 1 año</name>
+    <style>freeForm</style>
+    <subject>El paciente {!Account.ID_de_paciente__c} cumple 1 año el mes que viene</subject>
+    <textOnly>Estimado,
+
+Le escribimos para informarle que el paciente {!Account.ID_de_paciente__c} {!Account.Nombre_oculto__c} {!Account.Apellido_oculto__c} cumplirá 1 año el mes que viene.
+
+Sexo: {!Account.Sexo__c}
+Dirección: {!Account.Calle__c}, {!Account.Localidad__c}, {!Account.Provincia__c}
+CP: {!Account.Codigo_postal_service__c}
+
+Para ver más detalles ingrese a: {!Case.Link}
+
+Saludos.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,5 @@
+<design:component label="Search community"> 
+
+    <design:attribute name="searchText" label="Placeholder" description="Palabra en buscador"/>
+
+</design:component>

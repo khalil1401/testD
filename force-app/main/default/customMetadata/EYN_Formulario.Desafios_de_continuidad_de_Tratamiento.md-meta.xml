@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Desafíos de continuidad de Tratamiento</label>
+    <protected>false</protected>
+    <values>
+        <field>Api_name_del_campo__c</field>
+        <value xsi:type="xsd:string">Desafios_de_continuidad_Tratamiento_vs__c</value>
+    </values>
+    <values>
+        <field>Cantidad_de_unidades__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Es_pregunta__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Es_razon_de_no_consumo__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Es_restriccion__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Es_unidades__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Pregunta_para_VF__c</field>
+        <value xsi:type="xsd:string">¿Qué desafíos enfrentas en la continuidad del tratamiento?</value>
+    </values>
+    <values>
+        <field>Valor__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

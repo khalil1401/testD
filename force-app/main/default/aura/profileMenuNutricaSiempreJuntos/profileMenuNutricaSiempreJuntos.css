@@ -1,0 +1,217 @@
+.THIS .header-nsj-small-desktop{
+    display: none;
+}
+
+.THIS .register-btn-profile-nsj{
+    height: 36px;
+    width: 158px;
+    font-family: BariolRegular;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.32px;
+    border-radius: 8px;
+    background-color: #9D67A8;
+    color: white;
+    padding: 10px 41.5px;
+    position: absolute;
+    right: 150px;
+    top: 10px;
+    bottom: 10px
+}
+
+.THIS .register-btn-profile-nsj:hover{
+    background-color: #B59AC8;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.THIS .login-btn-profile-nsj{
+    height: 36px;
+    width: 188px;
+    font-family: BariolRegular;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.32px;
+    color: #522583;
+    padding: 10px 49px;
+    margin-right: 8px;
+    border-radius: 8px;
+    position: absolute;
+    right: 316px;
+    top: 10px;
+    bottom: 10px
+}
+
+.THIS .login-btn-profile-nsj:hover{
+    background-color: #B59AC8;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.THIS .icon-menu-profile-nsj{
+    width: 30.83px;
+    position: relative;
+    right: 153px;
+}
+
+.THIS .icon-menu-profile-nsj:hover{
+    cursor: pointer;
+}
+
+.THIS .dropdown-profile-menu-user{
+    width: 344px;
+    height: 175px;
+    border-radius: 16px;
+    background-color: white;
+    z-index: 2;
+    position: absolute;
+    top: 60px;
+    right: 153px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.THIS .container-username-pm{
+    height: 53px;
+}
+
+.THIS .container-items-pm{
+    height: 112px;
+    padding-top: 6px;
+}
+
+.THIS .pacifico-username-nsj{
+    font-family: PacificoRegular;
+    color: #9D67A8;
+    font-size: 24px;
+    line-height: 24px;
+    width: 100%;
+    text-align: center;
+    margin-top: 19px;
+    margin-bottom: 10px;
+}
+
+.THIS .text-profilemenu-nsj{
+    border-radius: 20px;
+    padding: 5px;
+    font-family: BariolRegular;
+    font-weight: 700;
+    color: #606060;
+    background-color: #ECF1F4;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.32px;
+    width: 328px;
+    height: 38px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.THIS .text-profilemenu-nsj:hover{
+    color: white;
+    background-color: #B59AC8;
+}
+
+.THIS .hr-menu-user-nsj{
+    width: 318px;
+    border-top: 2px solid #EFEFFD;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+.THIS .text-profilemenu-nsj:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 1366px) {
+    .THIS .register-btn-profile-nsj{
+        position: absolute;
+        right: 32px;
+        top: 10px;
+        bottom: 10px
+    }
+    
+    .THIS .login-btn-profile-nsj{
+        position: absolute;
+        right: 198px;
+        top: 10px;
+        bottom: 10px
+    }
+    
+    .THIS .icon-menu-profile-nsj{
+        position: relative;
+        right: 35px;
+    }
+
+    .THIS .dropdown-profile-menu-user{
+        right: 35px;
+    }
+
+    .THIS .hr-menu-user-nsj{
+        width: 222px;
+    }    
+}
+
+@media (max-width: 1024px) {
+    .THIS .header-nsj-large-desktop{
+        display: none;
+    }    
+    
+    .THIS .header-nsj-small-desktop{
+        display: initial;
+    }
+
+    .THIS .dropdown-logout-profile-menu-user{
+        width: 248px;
+        height: 115px;
+        border-radius: 16px;
+        background-color: white;
+        z-index: 2;
+        position: absolute;
+        top: 60px;
+        right: 26px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    
+    .THIS .dropdown-profile-menu-user{
+        width: 248px;
+    }
+    
+    .THIS .text-profilemenu-nsj{
+        width: 228px;
+    }
+    
+    .THIS .icon-menu-profile-nsj{
+        right: 32px;
+    }
+}
+
+@media (max-width: 412px) {
+    .THIS .slds-dropdown{
+        margin-right: 0px;
+    }
+
+    .THIS .logout-dropdown{
+        margin-right: 32px;
+    }
+
+    .THIS .icon-menu-profile-nsj{
+        margin-right: 0px;
+        position: relative;
+    }
+}
+
+@media (max-width: 360px) {
+    .THIS .logout-dropdown{
+        margin-right: 16px;
+    }
+
+    .THIS .icon-menu-profile-nsj{
+        position: relative;
+        right: 19.08px;
+    }
+}

@@ -1,0 +1,77 @@
+<aura:component>
+
+    <aura:attribute name="currentUser" type="User"/>
+
+    <lightning:navigation aura:id="navService"/>
+
+    <div>
+        <div class="slds-grid slds-wrap slds-grid_vertical-align-center component-header-nsj">
+            <div class="slds-col slds-size_1-of-1">
+                <div class="slds-clearfix">
+                    <div class="slds-float_left icon-nav-header-nsj">
+                        <div class="desktop">
+                            <table>
+                                <tr>
+                                    <td class="row-icon-header-nsj">
+                                        <img 
+                                            class="icon-header-nsj"
+                                            data-id="Home"
+                                            src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_HOME/PP-HOME-Logo-NSJ.png"
+                                            onclick="{!c.goTo}"/>
+                                    </td>
+                                    <td>
+                                        <table class="table-header-nsj">
+                                            <tr>
+                                                <td class="td-header-nsj">
+                                                    <span 
+                                                        class="text-td-header-nsj" 
+                                                        data-id="Home"
+                                                        onclick="{!c.goTo}">
+                                                        Nosotros
+                                                    </span>
+                                                </td>
+                                                <td class="td-header-nsj">
+                                                    <div class="header-nsj-large-desktop">
+                                                        <span 
+                                                            class="text-td-header-nsj"
+                                                            onmouseover="{!c.dropdownAreas}">Áreas Terapéuticas</span>
+                                                    </div>
+                                                    <div class="header-nsj-small-desktop">
+                                                        <span 
+                                                            class="text-td-header-nsj" 
+                                                            onclick="{!c.dropdownAreas}">Áreas Terapéuticas</span>
+                                                    </div>
+                                                </td>
+                                                <td class="td-header-nsj" style="border-right:0px;">
+                                                    <span 
+                                                        class="text-td-header-nsj" 
+                                                        data-id="productos__c"
+                                                        onclick="{!c.goTo}">
+                                                        Productos
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="mobile">
+                            <img 
+                                class="icon-header-nsj"
+                                data-id="Home"
+                                src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_HOME/PP-HOME-Logo-NSJ.png"
+                                onclick="{!c.goTo}"/>
+                        </div>
+                    </div>
+                    <div class="slds-float_right">
+                        <c:profileMenuNutricaSiempreJuntos
+                            currentUser="{!v.currentUser}">
+                        </c:profileMenuNutricaSiempreJuntos>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

@@ -1,0 +1,93 @@
+.volver{
+    font-family: MontserratSemiBold;
+    font-size: 13pt;
+    color: #B394BE;
+    cursor: pointer;
+}
+
+.tituloRecetaAlergia{
+    font-family: MontserratSemiBold;
+    font-size: 40px;
+}
+
+.texto-gris{
+    font-family: MontserratRegular;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.titulo-gris{
+    font-family: MontserratRegular;
+    font-size: 22px;
+}
+
+.imgReceta{
+    width: 100%;
+}
+
+.lineaAlergia{
+    width:100px;
+    border-bottom:1px solid #606060;
+    position:relative;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.lineaCompletaAlergia{
+    width:100%;
+    border-bottom:1px solid #606060;
+    position:relative;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.container-ingredientes{
+    padding-left: 5%;
+}
+
+.texto-aviso-legal{
+    font-family: MontserratRegular;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.imagen-producto-alergeno{
+    width: 75%;
+}
+
+@media (max-width: 600px) {
+    .container-descripcion-receta{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .container-ingredientes{
+        padding-left: 0%;
+    }    
+    .texto-aviso-legal{
+        font-size: 12pt;
+        line-height: 13pt;
+        text-align: center;
+    }
+    .lineaCompletaAlergia{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .tituloRecetaAlergia{
+        font-size: 22pt;
+        line-height: 30pt;
+        margin-top: 5%;
+    }
+    .titulo-gris{
+        font-size: 18pt;
+        line-height: 30pt;
+    }
+    .texto-gris{
+        font-size: 14pt;
+        line-height: 16pt;
+    }
+    .imagen-producto-alergeno{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}

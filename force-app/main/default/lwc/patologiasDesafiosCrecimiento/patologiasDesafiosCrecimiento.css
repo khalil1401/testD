@@ -1,0 +1,214 @@
+.container-patologias-ddc {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.title-patologias-ddc {
+    font-family: MontserratSemiBold;
+    font-size: 26px;
+    line-height: 30px;
+    color: #606060;
+}
+
+.linea-patologias-ddc{
+    border-top: 1px solid #606060;
+    width:100px;
+    margin-top: 26px;
+}
+
+.button-patologias-ddc {
+    width: 95%;
+    height: 81px;
+    border-radius: 10px;
+    background-color: #EBEBEB;
+    color: #606060;
+    font-family: MontserratSemiBold;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.button-patologias-ddc:hover {
+    background-color: #F6A608;
+    color: white;
+    cursor: pointer;
+}
+
+.container-details-patologias-ddc {
+    background-color: #EBEBEB;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.title-orange-patologias-ddc {
+    font-family: MontserratBlack;
+    font-size: 20pt;
+    line-height: 30pt;
+    color: #F6A608;
+}
+
+.title-violet-patologias-ddc {
+    font-family: MontserratSemiBold;
+    font-size: 18pt;
+    line-height: 22pt;
+    color: #502777;
+}
+
+.text-patologias-ddc {
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: #606060;
+}
+
+.container-fibrosis-ddc {
+    background-color: #DBDBDB;
+    border-radius: 18px;
+}
+
+.card-fq-ddc {
+    background-color: #F6A608;
+    border-radius: 75px 25px 75px 25px;
+    height: auto;
+}
+
+.text-card-fq-ddc {
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: white;
+}
+
+.text-fuente-patologias-ddc {
+    font-family: MontserratRegular;
+    font-size: 18px;
+    line-height: 30px;
+    color: #606060;
+}
+
+.div-container-footer-patologias-ddc {
+    background-color: #EBEBEB;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 50px;
+}
+
+.container-footer-patologias-ddc {
+    width: 100%;
+    background: transparent linear-gradient(360deg, #522582 0%, #62398DCC 73%, #EBEBEB 100%);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 25px;
+}
+
+.text-footer-patologias-ddc {
+    font-family: MontserratRegular;
+    font-size: 15pt;
+    line-height: 18pt;
+    color: white;
+}
+
+.text-fuente-footer-patologias-ddc {
+    font-family: MontserratRegular;
+    font-size: 18px;
+    line-height: 30px;
+    color: white;
+    font-style: italic;
+}
+
+.img-fibrosis-quistica {
+    width: 90%;
+    border-radius: 18px;
+}
+
+.left-arrow {
+    display: none;
+}
+
+.right-arrow {
+    display: none;
+}
+
+@media (min-width: 768px) {    
+    .container-patologias-ddc {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .container-details-patologias-ddc {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .div-container-footer-patologias-ddc {
+        padding-top: 100px;
+    }
+    
+    .container-footer-patologias-ddc {
+        border-radius: 18px;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .title-orange-patologias-ddc {
+        font-size: 50px;
+        line-height: 70.28px;
+    }
+
+    .title-violet-patologias-ddc {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .text-patologias-ddc {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .text-card-fq-ddc {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .items-footer-patologias-ddc {
+        padding-left: 25px;
+    }
+    
+    .text-footer-patologias-ddc {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .left-arrow {
+        display: initial;
+        position: absolute;
+        left: 5%;
+        top: 500px; 
+        cursor: pointer;
+    }
+    
+    .right-arrow {
+        display: initial;
+        position: absolute;
+        right: 5%; 
+        top: 500px; 
+        cursor: pointer;
+    }
+
+    .container-fibrosis-ddc {
+        margin-top: 50px;
+    }
+
+    .img-titulo-acordeon {
+        position: relative;
+        top: -100px;
+        right: -50px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .img-titulo-acordeon {
+        position: relative;
+        top: -50px;
+    }
+}

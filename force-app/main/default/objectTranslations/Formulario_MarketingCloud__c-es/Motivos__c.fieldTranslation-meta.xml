@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Motivos__c</name>
+    <picklistValues>
+        <masterLabel>Espera consulta con HCP</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Motivos Personales</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No cuenta con documentación</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

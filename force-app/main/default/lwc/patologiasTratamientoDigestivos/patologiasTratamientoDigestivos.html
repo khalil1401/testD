@@ -1,0 +1,422 @@
+<template>
+    <div class="slds-grid slds-wrap container-patologias-dig">
+        <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-m-bottom_x-large">
+            <p class="title-patologias-dig" data-id="main-menu">
+                Elegí cuál explorar:
+            </p>
+            <hr class="linea-patologias-dig slds-align_absolute-center"/>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-dig slds-align_absolute-center"
+                data-patologia="colicos"
+                onclick={showDetails}>
+                Cólicos
+            </span>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-dig slds-align_absolute-center"
+                data-patologia="constipacion"
+                onclick={showDetails}>
+                Constipación
+            </span>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-dig slds-align_absolute-center"
+                data-patologia="regurgitacion"
+                onclick={showDetails}>
+                Regurgitación
+            </span>
+        </div>
+    </div>
+    <div class="slds-grid slds-wrap slds-m-top_x-large container-details-patologias-dig"
+        data-id="container-info" style="position: relative;">
+        <template if:true={showArrows}>
+            <lightning-button-icon
+                icon-name="utility:chevronleft"
+                alternative-text="Back"
+                title="Back"
+                size="large"
+                variant="bare"
+                onclick={back}
+                disabled={disabledBack}
+                class="left-arrow">
+            </lightning-button-icon>
+        </template>
+        <template if:true={showArrows}>
+            <lightning-button-icon
+                icon-name="utility:chevronright"
+                alternative-text="Next"
+                title="Next"
+                size="large"
+                variant="bare"
+                onclick={next}
+                disabled={disabledNext}
+                class="right-arrow">
+            </lightning-button-icon>
+        </template>
+        <div class="slds-col slds-size_1-of-1">
+            <div class="slds-grid slds-wrap slds-p-top_x-large slds-p-bottom_xx-large" data-id="container-colicos" style="display: none;">
+                <p class="title-montbold-patologias-dig">
+                    Cólicos
+                </p>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large top-container-details-patologias-dig desktop"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Familia%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig">
+                        Educación a la familia
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_large">
+                        Al momento de consultar con un especialista, es importante que éste proporcione información precisa a la familia sobre los siguientes aspectos:
+                    </p>
+                    <div class="text-patologias-dig slds-m-left_x-large">
+                        <p class="slds-m-top_large">
+                            ￭ Reconocer los <span style="font-family: MontserratSemiBold;">signos de hambre y sueño</span> del bebé.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Entender que los cólicos son una <span style="font-family: MontserratSemiBold;">condición autolimitante</span> y que <span style="font-family: MontserratSemiBold;">mejorarán con el tiempo.</span>
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ <span style="font-family: MontserratSemiBold;">Aprender estrategias útiles</span> para calmar al bebé durante los episodios de llanto.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Contar con una <span style="font-family: MontserratSemiBold;">red de apoyo</span> familiar para brindar apoyo emocional.
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large center-container-details-patologias-dig desktop"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Nutricional%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig">
+                        Manejo nutricional
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_large">
+                        Además de brindar educación y tranquilidad a los padres, el manejo nutricional de los cólicos debe ser la primera opción de tratamiento. Aquí tienes algunas recomendaciones:
+                    </p>
+                    <div class="text-patologias-dig slds-m-left_x-large">
+                        <p class="slds-m-top_large">
+                            ￭ Mantener la lactancia materna siempre que sea posible.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Considerar el uso de probióticos como parte del tratamiento. 
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Favorecer una alimentación saludable, descanso y buena hidratación de la madre. 
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Cuando se requiere alimentación con formula, considerar aquellas que contienen proteínas parcialmente hidrolizadas, beta-palmitato, prebióticos y reducción de lactosa.
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large bottom-container-details-patologias-dig desktop"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Botella%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig">
+                        Tratamiento farmacológico
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_large">
+                        El uso de medicamentos (como inhibidores de la bomba de protones o simeticona) no demostró ser eficaz en el tratamiento de los cólicos.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large top-container-details-patologias-dig mobile"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Familia%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig slds-align_absolute-center slds-text-align_center">
+                        Educación a la familia
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <p class="text-patologias-dig">
+                        Al momento de consultar con un especialista, es importante que éste proporcione información precisa a la familia sobre los siguientes aspectos:
+                    </p>
+                    <div class="text-patologias-dig slds-m-left_x-large">
+                        <p class="slds-m-top_large">
+                            ￭ Reconocer los <span style="font-family: MontserratSemiBold;">signos de hambre y sueño</span> del bebé.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Entender que los cólicos son una <span style="font-family: MontserratSemiBold;">condición autolimitante</span> y que <span style="font-family: MontserratSemiBold;">mejorarán con el tiempo.</span>
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ <span style="font-family: MontserratSemiBold;">Aprender estrategias útiles</span> para calmar al bebé durante los episodios de llanto.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Contar con una <span style="font-family: MontserratSemiBold;">red de apoyo</span> familiar para brindar apoyo emocional.
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large top-container-details-patologias-dig mobile"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Nutricional%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig slds-text-align_center">
+                        Manejo nutricional
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <p class="text-patologias-dig">
+                        Además de brindar educación y tranquilidad a los padres, el manejo nutricional de los cólicos debe ser la primera opción de tratamiento. Aquí tienes algunas recomendaciones:
+                    </p>
+                    <div class="text-patologias-dig slds-m-left_x-large">
+                        <p class="slds-m-top_large">
+                            ￭ Mantener la lactancia materna siempre que sea posible.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Considerar el uso de probióticos como parte del tratamiento. 
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Favorecer una alimentación saludable, descanso y buena hidratación de la madre. 
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Cuando se requiere alimentación con formula, considerar aquellas que contienen proteínas parcialmente hidrolizadas, beta-palmitato, prebióticos y reducción de lactosa.
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large top-container-details-patologias-dig mobile"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Botella%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig slds-text-align_center">
+                        Tratamiento farmacológico
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <p class="text-patologias-dig">
+                        El uso de medicamentos (como inhibidores de la bomba de protones o simeticona) no demostró ser eficaz en el tratamiento de los cólicos.
+                    </p>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap slds-p-top_x-large slds-p-bottom_xx-large" data-id="container-constipacion" style="display: none;">
+                <p class="title-montbold-patologias-dig">
+                    Constipación
+                </p>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large top-container-details-patologias-dig desktop"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Familia%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig">
+                        Educación a la familia
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_large">
+                        Es importante que el especialista al que acudan proporcione información precisa a la familia sobre los patrones normales de evacuación en los bebés.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large center-container-details-patologias-dig desktop"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Nutricional%402x.png"
+                    class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig">
+                        Manejo nutricional
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_large">
+                        Además de brindar educación y tranquilidad a los padres, el manejo nutricional es fundamental en el tratamiento de la constipación. Te dejamos algunas recomendaciones:
+                    </p>
+                    <div class="text-patologias-dig slds-m-left_x-large">
+                        <p class="slds-m-top_large">
+                            ￭ Fomentar la lactancia materna siempre que sea posible. 
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ En caso de no recibir lactancia materna, verificar la forma de preparación de la fórmula y considerar el uso de fórmulas con prebióticos y/o sinbióticos, y con beta palmitato y/o con magnesio en rangos normales.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Si ya comenzó la alimentación complementaria, verificar la cantidad de fibra en la dieta y aumentar el aporte de líquidos.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Se sugiere, en caso de que exista indicación medica de uso de laxantes, combinar los mismos con intervenciones conductuales y cambios en la dieta.
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large bottom-container-details-patologias-dig desktop"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Botella%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig">
+                        Tratamiento farmacológico
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_large">
+                        Cada caso es único y es importante consultar a un especialista para obtener un diagnóstico preciso y el mejor plan de tratamiento para tu bebé:
+                    </p>
+                    <div class="text-patologias-dig slds-m-left_x-large">
+                        <p class="slds-m-top_large">
+                            ￭ En ciertos casos y sólo con indicación médica, se puede considerar el uso de polietilenglicol en bebés mayores de 6 meses.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ El uso de supositorios de glicerina rectales debe ser limitado y utilizado para proporcionar alivio inmediato. 
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ No se debe suspender el medicamento de forma repentina, sino que se debe reducir gradualmente la dosis durante varios meses en función de la consistencia y frecuencia de las evacuaciones.
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large top-container-details-patologias-dig mobile"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Familia%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig slds-align_absolute-center slds-text-align_center">
+                        Educación a la familia
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <p class="text-patologias-dig">
+                        Es importante que el especialista al que acudan proporcione información precisa a la familia sobre los patrones normales de evacuación en los bebés.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large top-container-details-patologias-dig mobile"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Nutricional%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig slds-align_absolute-center slds-text-align_center">
+                        Manejo nutricional
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <p class="text-patologias-dig">
+                        Además de brindar educación y tranquilidad a los padres, el manejo nutricional es fundamental en el tratamiento de la constipación. Te dejamos algunas recomendaciones:
+                    </p>
+                    <div class="text-patologias-dig slds-m-left_x-large">
+                        <p class="slds-m-top_large">
+                            ￭ Fomentar la lactancia materna siempre que sea posible. 
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ En caso de no recibir lactancia materna, verificar la forma de preparación de la fórmula y considerar el uso de fórmulas con prebióticos y/o sinbióticos, y con beta palmitato y/o con magnesio en rangos normales.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Si ya comenzó la alimentación complementaria, verificar la cantidad de fibra en la dieta y aumentar el aporte de líquidos.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Se sugiere, en caso de que exista indicación medica de uso de laxantes, combinar los mismos con intervenciones conductuales y cambios en la dieta.
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large top-container-details-patologias-dig mobile"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Botella%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig slds-align_absolute-center slds-text-align_center">
+                        Tratamiento farmacológico
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <p class="text-patologias-dig">
+                        Cada caso es único y es importante consultar a un especialista para obtener un diagnóstico preciso y el mejor plan de tratamiento para tu bebé:
+                    </p>
+                    <div class="text-patologias-dig slds-m-left_x-large">
+                        <p class="slds-m-top_large">
+                            ￭ En ciertos casos y sólo con indicación médica, se puede considerar el uso de polietilenglicol en bebés mayores de 6 meses.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ El uso de supositorios de glicerina rectales debe ser limitado y utilizado para proporcionar alivio inmediato. 
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ No se debe suspender el medicamento de forma repentina, sino que se debe reducir gradualmente la dosis durante varios meses en función de la consistencia y frecuencia de las evacuaciones.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap slds-p-top_x-large slds-p-bottom_xx-large" data-id="container-regurgitacion" style="display: none;">
+                <p class="title-montbold-patologias-dig">
+                    Regurgitación
+                </p>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large top-container-details-patologias-dig desktop"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Familia%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig">
+                        Educación a la familia
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_large">
+                        Es importante que el especialista brinde educación y apoyo a los padres, y que identifique posibles factores de estrés emocional y físico.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large center-container-details-patologias-dig desktop"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Nutricional%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig">
+                        Manejo nutricional
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_large">
+                        Además de brindar educación y tranquilidad a los padres, el manejo nutricional de la regurgitación implica:
+                    </p>
+                    <div class="text-patologias-dig slds-m-left_x-large">
+                        <p class="slds-m-top_large">
+                            ￭ Continuar con la lactancia materna siempre que sea posible.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Es importante corregir la frecuencia y el volumen de las tomas, y recomendar una técnica de lactancia adecuada. 
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Para bebés que son alimentados con formula, existen opciones que contienen espesantes en su composición. La goma de semilla de algarroba se considera uno de los espesantes más eficaces para el tratamiento del reflujo gastroesofágico, debido a que no es hidrolizada por las amilasas salivales, manteniendo su efecto espesante hasta el estómago. Además, posee efecto fibra, es decir, ayuda a evitar el estreñimiento.
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large bottom-container-details-patologias-dig desktop"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Botella%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig">
+                        Tratamiento farmacológico
+                    </p>
+                    <p class="text-patologias-dig slds-m-top_large">
+                        Los fármacos como proquinéticos o inhibidores de la bomba de protones, en ausencia de signos de alarma (evaluados por el pediatra) no están recomendados si se trata de reflujo fisiológico funcional.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large top-container-details-patologias-dig mobile"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Familia%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig slds-align_absolute-center slds-text-align_center">
+                        Educación a la familia
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <p class="text-patologias-dig">
+                        Es importante que el especialista brinde educación y apoyo a los padres, y que identifique posibles factores de estrés emocional y físico.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large top-container-details-patologias-dig mobile"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Nutricional%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig slds-align_absolute-center slds-text-align_center">
+                        Manejo nutricional
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <p class="text-patologias-dig">
+                        Además de brindar educación y tranquilidad a los padres, el manejo nutricional de la regurgitación implica:
+                    </p>
+                    <div class="text-patologias-dig slds-m-left_x-large">
+                        <p class="slds-m-top_large">
+                            ￭ Continuar con la lactancia materna siempre que sea posible.
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Es importante corregir la frecuencia y el volumen de las tomas, y recomendar una técnica de lactancia adecuada. 
+                        </p>
+                        <p class="slds-m-top_large">
+                            ￭ Para bebés que son alimentados con formula, existen opciones que contienen espesantes en su composición. La goma de semilla de algarroba se considera uno de los espesantes más eficaces para el tratamiento del reflujo gastroesofágico, debido a que no es hidrolizada por las amilasas salivales, manteniendo su efecto espesante hasta el estómago. Además, posee efecto fibra, es decir, ayuda a evitar el estreñimiento.
+                        </p>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large top-container-details-patologias-dig mobile"
+                    style="position: relative;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/4_TRATAMIENTO/PP-Digestivos-Tratamiento-Icono-Botella%402x.png"
+                        class="img-patologias-tratamiento">
+                    <p class="title-montsemibold-patologias-dig slds-align_absolute-center slds-text-align_center">
+                        Tratamiento farmacológico
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_x-large mobile">
+                    <p class="text-patologias-dig">
+                        Los fármacos como proquinéticos o inhibidores de la bomba de protones, en ausencia de signos de alarma (evaluados por el pediatra) no están recomendados si se trata de reflujo fisiológico funcional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,88 @@
+.THIS {
+}
+
+.THIS .containerAcordeon{
+    background-color: white;
+}
+
+.THIS .slds-accordion__content{
+    color: #606060;
+}
+
+.THIS .slds-accordion__list-item{
+    border: none;
+}
+ 
+.THIS .slds-accordion__summary-action{
+    background-color: #EBEBEB;
+    border-radius: 10px 10px 10px 10px;
+    color: #606060 !important;
+    margin-top: 0.1%;
+}
+
+.THIS .slds-accordion__summary button[aria-expanded="true"]{
+    background: linear-gradient(90deg, rgba(152, 123, 217, 1) 0%, rgba(110,131,229,1) 100%);
+    color: white !important;
+}
+
+.THIS .slds-accordion__list-item{
+    background-color: white !important;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.THIS .slds-accordion__summary-content{
+    font-family: MontserratSemiBold;
+    font-size: 19px;
+    line-height: 30px;
+}
+
+.THIS .parrafoBodyAcordeon{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: MontserratRegular;
+    font-size: 16px;
+    line-height: 24px;
+    color: #606060;
+}
+
+.THIS .parrafoBodyAcordeonNegrita{
+    font-weight: bolder;
+    font-size: 16px !important;
+    line-height: 24px;
+}
+
+.THIS .itemsAcordeonFAQsOncologia{
+    margin-left: 5%;
+    font-family: MontserratRegular;
+    font-size: 16px;
+    line-height: 24px;
+    color: #606060;
+}
+
+@media (max-width: 600px) {
+    .THIS{
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    .THIS .slds-accordion__summary-content{
+        font-family: MontserratSemiBold;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .THIS .parrafoBodyAcordeon{
+        font-family: MontserratRegular;
+        font-size: 15px;
+        line-height: 23px;
+        color: #606060;
+    }
+    .THIS .parrafoBodyAcordeonNegrita{
+        font-size: 15px !important;
+        line-height: 23px;
+    }
+    .THIS .itemsAcordeonFAQsOncologia{
+        font-size: 15px;
+        line-height: 23px;
+    }    
+}

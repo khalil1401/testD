@@ -1,0 +1,22 @@
+<aura:component>
+
+    <aura:attribute name="current" type="String"/>
+
+    <div class="desktop">
+        <lightning:progressIndicator currentStep="{!v.current}" type="path" variant="base">
+            <lightning:progressStep label="Paciente" value="1"/>
+            <lightning:progressStep label="Contactos" value="2"/>
+            <lightning:progressStep label="Dirección" value="3"/>
+            <lightning:progressStep label="Tratamiento" value="4"/>
+        </lightning:progressIndicator>
+    </div>
+    <div class="mobile">
+        <lightning:progressIndicator currentStep="{!v.current}" type="base" variant="base">
+            <lightning:progressStep label="Paciente" value="1"/>
+            <lightning:progressStep label="Contactos" value="2"/>
+            <lightning:progressStep label="Dirección" value="3"/>
+            <lightning:progressStep label="Tratamiento" value="4"/>
+        </lightning:progressIndicator>
+    </div>
+            
+</aura:component>

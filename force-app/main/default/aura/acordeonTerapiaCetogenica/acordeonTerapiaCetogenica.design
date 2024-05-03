@@ -1,0 +1,72 @@
+<design:component >
+
+    <design:attribute name="title" label="Título de componente"/>
+    <design:attribute name="text" label="Texto de bajada"/>
+    <design:attribute name="isSeccion1" label="Existe sección 1"/>
+    <design:attribute name="textTitleSeccion1" label="Texto de título de la sección 1"/>
+    <design:attribute name="textBodySeccion1" label="Texto de body de la sección 1"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion2" label="Existe sección 2"/>
+    <design:attribute name="textTitleSeccion2" label="Texto de título de la sección 2"/>
+    <design:attribute name="textBodySeccion2" label="Texto de body de la sección 2"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion3" label="Existe sección 3"/>
+    <design:attribute name="textTitleSeccion3" label="Texto de título de la sección 3"/>
+    <design:attribute name="textBodySeccion3" label="Texto de body de la sección 3"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion4" label="Existe sección 4"/>
+    <design:attribute name="textTitleSeccion4" label="Texto de título de la sección 4"/>
+    <design:attribute name="textBodySeccion4" label="Texto de body de la sección 4"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion5" label="Existe sección 5"/>
+    <design:attribute name="textTitleSeccion5" label="Texto de título de la sección 5"/>
+    <design:attribute name="textBodySeccion5" label="Texto de body de la sección 5"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion6" label="Existe sección 6"/>
+    <design:attribute name="textTitleSeccion6" label="Texto de título de la sección 6"/>
+    <design:attribute name="textBodySeccion6" label="Texto de body de la sección 6"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion7" label="Existe sección 7"/>
+    <design:attribute name="textTitleSeccion7" label="Texto de título de la sección 7"/>
+    <design:attribute name="textBodySeccion7" label="Texto de body de la sección 7"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion8" label="Existe sección 8"/>
+    <design:attribute name="textTitleSeccion8" label="Texto de título de la sección 8"/>
+    <design:attribute name="textBodySeccion8" label="Texto de body de la sección 8"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion9" label="Existe sección 9"/>
+    <design:attribute name="textTitleSeccion9" label="Texto de título de la sección 9"/>
+    <design:attribute name="textBodySeccion9" label="Texto de body de la sección 9"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion10" label="Existe sección 10"/>
+    <design:attribute name="textTitleSeccion10" label="Texto de título de la sección 10"/>
+    <design:attribute name="textBodySeccion10" label="Texto de body de la sección 10"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion11" label="Existe sección 11"/>
+    <design:attribute name="textTitleSeccion11" label="Texto de título de la sección 11"/>
+    <design:attribute name="textBodySeccion11" label="Texto de body de la sección 11"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion12" label="Existe sección 12"/>
+    <design:attribute name="textTitleSeccion12" label="Texto de título de la sección 12"/>
+    <design:attribute name="textBodySeccion12" label="Texto de body de la sección 12"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion13" label="Existe sección 13"/>
+    <design:attribute name="textTitleSeccion13" label="Texto de título de la sección 13"/>
+    <design:attribute name="textBodySeccion13" label="Texto de body de la sección 13"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion14" label="Existe sección 14"/>
+    <design:attribute name="textTitleSeccion14" label="Texto de título de la sección 14"/>
+    <design:attribute name="textBodySeccion14" label="Texto de body de la sección 14" description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion15" label="Existe sección 15"/>
+    <design:attribute name="textTitleSeccion15" label="Texto de título de la sección 15"/>
+    <design:attribute name="textBodySeccion15" label="Texto de body de la sección 15" description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion16" label="Existe sección 16"/>
+    <design:attribute name="textTitleSeccion16" label="Texto de título de la sección 16"/>
+    <design:attribute name="textBodySeccion16" label="Texto de body de la sección 16" description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion17" label="Existe sección 17"/>
+    <design:attribute name="textTitleSeccion17" label="Texto de título de la sección 17"/>
+    <design:attribute name="textBodySeccion17" label="Texto de body de la sección 17" description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion18" label="Existe sección 18"/>
+    <design:attribute name="textTitleSeccion18" label="Texto de título de la sección 18"/>
+    <design:attribute name="textBodySeccion18" label="Texto de body de la sección 18" description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion19" label="Existe sección 19"/>
+    <design:attribute name="textTitleSeccion19" label="Texto de título de la sección 19"/>
+    <design:attribute name="textBodySeccion19" label="Texto de body de la sección 19" description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion20" label="Existe sección 20"/>
+    <design:attribute name="textTitleSeccion20" label="Texto de título de la sección 20"/>
+    <design:attribute name="textBodySeccion20" label="Texto de body de la sección 20"  description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion21" label="Existe sección 21"/>
+    <design:attribute name="textTitleSeccion21" label="Texto de título de la sección 21"/>
+    <design:attribute name="textBodySeccion21" label="Texto de body de la sección 21" description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+    <design:attribute name="isSeccion22" label="Existe sección 22"/>
+    <design:attribute name="textTitleSeccion22" label="Texto de título de la sección 22"/>
+    <design:attribute name="textBodySeccion22" label="Texto de body de la sección 22" description="Si el texto contiene varios párrafos se tendrá que agregar la etiqueta p con class=parrafoBodyAcordeon para cada párrafo"/>
+
+</design:component>

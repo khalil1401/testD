@@ -1,0 +1,61 @@
+.THIS {
+}
+
+.THIS .parrafoBodyAcordeon{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: MontserratRegular;
+    font-size: 16px;
+    line-height: 24px;
+    color: #606060;
+}
+
+.THIS .parrafoBodyAcordeonAlergia{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: MontserratRegular;
+    font-size: 22px;
+    line-height: 30px;
+    color: #606060;
+}
+
+.THIS .slds-accordion__list-item{
+    border: none;
+}
+
+.THIS .title-purple-ao-meta{
+    font-family: MontserratSemiBold;
+    color: #947DD5;
+    font-size: 1.625rem;
+    line-height: 1.875rem;
+}
+
+.THIS .text-aviso-legal-meta{
+    font-family: MontserratRegular;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+}
+
+@media (max-width: 600px) {
+    .THIS{
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    .THIS .parrafoBodyAcordeon{
+        font-family: MontserratRegular;
+        font-size: 15px;
+        line-height: 23px;
+        color: #606060;
+    }
+    .THIS .parrafoBodyAcordeonAlergia{
+        margin-left: 0%;
+        margin-right: 0%;
+        font-size: 15pt;
+        line-height: 18pt;
+    }    
+}

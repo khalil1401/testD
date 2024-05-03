@@ -1,0 +1,125 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="activeSections" type="List" default="['A']" />
+    <aura:attribute name="isSeccion1" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion1" type="String"/>
+    <aura:attribute name="textBodySeccion1" type="String"/>
+    <aura:attribute name="isSeccion2" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion2" type="String"/>
+    <aura:attribute name="textBodySeccion2" type="String"/>
+    <aura:attribute name="isSeccion3" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion3" type="String"/>
+    <aura:attribute name="textBodySeccion3" type="String"/>
+    <aura:attribute name="isSeccion4" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion4" type="String"/>
+    <aura:attribute name="textBodySeccion4" type="String"/>
+    <aura:attribute name="isSeccion5" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion5" type="String"/>
+    <aura:attribute name="textBodySeccion5" type="String"/>
+    <aura:attribute name="isSeccion6" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion6" type="String"/>
+    <aura:attribute name="textBodySeccion6" type="String"/>
+    <aura:attribute name="isSeccion7" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion7" type="String"/>
+    <aura:attribute name="textBodySeccion7" type="String"/>
+    <aura:attribute name="isSeccion8" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion8" type="String"/>
+    <aura:attribute name="textBodySeccion8" type="String"/>
+    <aura:attribute name="isSeccion9" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion9" type="String"/>
+    <aura:attribute name="textBodySeccion9" type="String"/>
+    <aura:attribute name="isSeccion10" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion10" type="String"/>
+    <aura:attribute name="textBodySeccion10" type="String"/>
+    <aura:attribute name="isSeccion11" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion11" type="String"/>
+    <aura:attribute name="textBodySeccion11" type="String"/>
+    <aura:attribute name="isSeccion12" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion12" type="String"/>
+    <aura:attribute name="textBodySeccion12" type="String"/>
+    <aura:attribute name="isSeccion13" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion13" type="String"/>
+    <aura:attribute name="textBodySeccion13" type="String"/>
+    <aura:attribute name="isSeccion14" type="boolean" default="false"/>
+    <aura:attribute name="textTitleSeccion14" type="String"/>
+    <aura:attribute name="textBodySeccion14" type="String"/>
+
+    <div class="containerAcordeon slds-m-bottom_large">
+        <lightning:accordion
+            allowMultipleSectionsOpen="true"
+            onsectiontoggle="{! c.handleSectionToggle }"
+            activeSectionName="{! v.activeSections }">
+            <aura:if isTrue="{!v.isSeccion1}">
+                <lightning:accordionSection name="A" label="{!v.textTitleSeccion1}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion1}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion2}">
+                <lightning:accordionSection name="B" label="{!v.textTitleSeccion2}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion2}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion3}">
+                <lightning:accordionSection name="C" label="{!v.textTitleSeccion3}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion3}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion4}">
+                <lightning:accordionSection name="D" label="{!v.textTitleSeccion4}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion4}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion5}">
+                <lightning:accordionSection name="E" label="{!v.textTitleSeccion5}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion5}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion6}">
+                <lightning:accordionSection name="F" label="{!v.textTitleSeccion6}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion6}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion7}">
+                <lightning:accordionSection name="G" label="{!v.textTitleSeccion7}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion7}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion8}">
+                <lightning:accordionSection name="H" label="{!v.textTitleSeccion8}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion8}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion9}">
+                <lightning:accordionSection name="I" label="{!v.textTitleSeccion9}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion9}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion10}">
+                <lightning:accordionSection name="J" label="{!v.textTitleSeccion10}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion10}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion11}">
+                <lightning:accordionSection name="K" label="{!v.textTitleSeccion11}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion11}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion12}">
+                <lightning:accordionSection name="L" label="{!v.textTitleSeccion12}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion12}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion13}">
+                <lightning:accordionSection name="M" label="{!v.textTitleSeccion13}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion13}" />
+                </lightning:accordionSection>
+            </aura:if>
+            <aura:if isTrue="{!v.isSeccion14}">
+                <lightning:accordionSection name="N" label="{!v.textTitleSeccion14}">
+                    <aura:unescapedHtml value="{!v.textBodySeccion14}" />
+                </lightning:accordionSection>
+            </aura:if>
+        </lightning:accordion>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,11 @@
+<design:component>
+
+    <design:attribute name="altoMaximo" label="Alto maximo de la imagen en PX Desktop"/>
+    <design:attribute name="altoMinimo" label="Alto minimo de la imagen en PX Desktop"/>
+    <design:attribute name="mensaje" label="Mensaje de aviso"/>
+    <design:attribute name="fontFamily" label="Tipo de fuente de mensaje"/>
+    <design:attribute name="backgroundColor" label="Color de fondo de mensaje de aviso"/>
+    <design:attribute name="textColor" label="Color de letras de mensaje de aviso"/>
+    <design:attribute name="claimExtra" label="Tiene clam legal extra fortisip?"/>
+
+</design:component>

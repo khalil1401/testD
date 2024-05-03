@@ -1,0 +1,108 @@
+<aura:component implements="forceCommunity:layout">
+
+    <aura:attribute name="container1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container2" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container3" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container4" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container5" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container6" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container7" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container8" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container9" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container10" type="Aura.Component[]" required="false"/>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container1}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1" id="top-diagnostico-dgl-page">
+            {!v.container2}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container3}
+        </div>
+        
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            {!v.container4}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1">
+            <div class="div-diagnostico-layout-dig">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_2-of-12 slds-align_absolute-center slds-m-top_x-large slds-p-around_medium desktop">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/1_DIAGNOSTICO/PP-Digestivos-Diagnostico-Icono-Titulo-Mobile%403x.png"
+                            style="margin-top: 75px;"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_x-large desktop">
+                        <p class="title-dig">
+                            Es clave hacer un buen diagnóstico
+                        </p>
+                        <p class="text-dig slds-m-top_medium">
+                            El llanto excesivo causado por los trastornos digestivos funcionales genera estrés en la familia y entre los padres y el niño. Los padres, preocupados por la salud de sus hijos, buscan un diagnóstico y solución definitiva. Primero, los médicos deben descartar una serie de síntomas para determinar si corresponden al desarrollo normal o provienen de un problema médico.
+                        </p>
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-m-top_x-large mobile">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCI%C3%93N_DIGESTIVOS/1_DIAGNOSTICO/PP-Digestivos-Diagnostico-Icono-Titulo-Mobile%403x.png"
+                            style="margin-top: 15px;"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_x-large mobile">
+                        <p class="title-dig slds-m-left_small">
+                            Es clave hacer un buen diagnóstico
+                        </p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_large mobile">
+                        <p class="text-dig slds-m-top_medium">
+                            El llanto excesivo causado por los trastornos digestivos funcionales genera estrés en la familia y entre los padres y el niño. Los padres, preocupados por la salud de sus hijos, buscan un diagnóstico y solución definitiva. Primero, los médicos deben descartar una serie de síntomas para determinar si corresponden al desarrollo normal o provienen de un problema médico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="div-diagnostico-layout-dig">
+                {!v.container5}
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="div-diagnostico-layout-dig">
+                {!v.container6}
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="div-diagnostico-layout-dig">
+                {!v.container7}
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+            {!v.container8}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-m-top_x-large slds-m-bottom_x-large">
+            <button 
+                data-seccion="top-diagnostico-dgl-page"
+                class="back-button-kdi-dig"
+                onclick="{!c.goToDiv}">
+                <lightning:icon 
+                    class="icon-up"
+                    iconName="utility:chevronup"
+                    size="small"
+                    alternativeText="up"/>
+                VOLVER ARRIBA
+            </button>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+            {!v.container9}
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+            {!v.container10}
+        </div>
+    </div>
+</aura:component>

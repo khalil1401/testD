@@ -1,0 +1,123 @@
+.modal-spinner{
+    position: relative;
+}
+
+.slds-modal__container{
+    margin: 0px;
+}
+
+.slds-modal__content{
+    border-radius: 16px !important;
+    width: 328px !important;
+}
+
+.title-modal{
+    margin-top: 16px;
+    font-family: BariolRegular;
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #393939;
+}
+
+.fields-box{
+    width: 244px;
+    margin-top: 12px;
+}
+
+.slds-form-element{
+    width: 244px;
+}
+
+.cancelar-button{
+    width: 146px;
+    height: 40px;
+    background-color: #ECF1F4;
+    color: #522583;
+    border-radius: 8px;
+    font-family: BariolBold;
+    font-size: 16px;
+    line-height: 17.63px;
+    border-color: transparent;
+    position: relative;
+    left: 14px;
+    margin-bottom: 14px;
+}
+
+.confirmar-button{
+    width: 146px;
+    height: 40px;
+    background-color: #9D67A8;
+    color: white;
+    border-radius: 8px;
+    font-family: BariolBold;
+    font-size: 16px;
+    line-height: 17.63px;
+    border-color: transparent;
+    position: relative;
+    right: 14px;
+    margin-bottom: 14px;
+}
+
+@media (min-width: 412px) {
+    .slds-modal__content{
+        width: 380px !important;
+    }
+
+    .fields-box{
+        width: 262.26px;
+    }
+
+    .slds-form-element{
+        width: 262.26px;
+    }
+    
+    .cancelar-button{
+        position: relative;
+        left: 40px;
+    }
+    
+    .confirmar-button{
+        position: relative;
+        right: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .slds-modal__content{
+        width: 478px !important;
+    }
+
+    .fields-box{
+        width: 262.26px;
+    }
+
+    .slds-form-element{
+        width: 262.26px;
+    }
+
+    .cancelar-button{
+        position: relative;
+        left: 89px;
+    }
+    
+    .confirmar-button{
+        position: relative;
+        right: 89px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .slds-modal__content{
+        width: 533px !important;
+    }
+
+    .cancelar-button{
+        position: relative;
+        left: 116.5px;
+    }
+    
+    .confirmar-button{
+        position: relative;
+        right: 116.5px;
+    }
+}

@@ -1,0 +1,54 @@
+<template>
+    <div class="mobile">
+        <div class="slds-grid slds-grid_align-center">
+            <div class="slds-col slds-size_1-of-1" style="background-color: rgba(101,56,149,1);padding-left: 2%;border-style: solid;border-color: rgba(101,56,149,1);">
+                <lightning-icon
+                    class="slds-p-around_small icn"
+                    icon-name="utility:rows"
+                    alternative-text="Menu"
+                    title="Menu"
+                    size="medium"
+                    variant="bare"
+                    onclick={openDropdown}>
+                </lightning-icon>
+                <template if:true={dropdown}>
+                    <div style="background-color: rgba(101,56,149,1); padding-left: 5%; padding-bottom: 3%;
+                                left: 0px;z-index: 3;position: absolute;width: 100%;">
+                        <ul role="menu" aria-label="Ver más">
+                            <li class="item">
+                                <span   class="texto-menu-alergia"
+                                        data-id="Alergia__c"
+                                        onclick={redireccionar}>
+                                    ¿Qué es la APLV?
+                                </span>
+                            </li>
+                            <li class="item">
+                                <span   class="texto-menu-alergia"
+                                        data-id="cuidados_y_recomendaciones_alergia__c"
+                                        onclick={redireccionar}>
+                                    Cuidados y recomendaciones
+                                </span>
+                            </li>
+                            <template if:true={privado}>
+                                <li class="item">
+                                    <span   class="texto-menu-alergia"
+                                            data-id="Recetario_Alergia__c"
+                                            onclick={redireccionar}>
+                                        Recetario
+                                    </span>
+                                </li>
+                            </template>
+                            <li class="item">
+                                <span   class="texto-menu-alergia"                            
+                                        data-id="camino_aplv_alergia__c"
+                                        onclick={redireccionar}>
+                                    El camino de la APLV
+                                </span>
+                            </li>
+                        </ul>    
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

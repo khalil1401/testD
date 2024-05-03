@@ -1,0 +1,49 @@
+.THIS {
+}
+
+.THIS .tituloVivirMejor{
+    color: #293896;
+    font-family: MontserratSemiBold;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.THIS .textoVivirMejor{
+    color: #293896;
+    font-family: MontserratRegular;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.THIS .lineaVivirMejor{
+    border-top: 1px solid #293896;
+    width:100px;
+    margin-top:1.2%;
+}
+
+@media (max-width: 600px) {
+    .THIS {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .THIS .tituloVivirMejor{
+        color: #293896;
+        font-family: MontserratSemiBold;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    
+    .THIS .textoVivirMejor{
+        color: #293896;
+        font-family: MontserratRegular;
+        font-size: 15px;
+        line-height: 23px;
+    }
+    
+    .THIS .lineaVivirMejor{
+        border-top: 1px solid #293896;
+        width:100px;
+        margin-top:3.5%;
+    }    
+}

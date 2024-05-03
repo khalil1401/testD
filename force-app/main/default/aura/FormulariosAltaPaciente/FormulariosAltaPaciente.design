@@ -1,0 +1,5 @@
+<design:component >
+
+    <design:attribute name="isPaciente" label="Es paciente?"/>
+
+</design:component>

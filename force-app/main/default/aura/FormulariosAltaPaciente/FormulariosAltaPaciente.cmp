@@ -1,0 +1,236 @@
+<aura:component implements="force:appHostable,forceCommunity:availableForAllPageTypes"
+                controller="FormularioRegistroController" access="global">
+    
+    <!-- Atributos generales -->
+    <aura:attribute name="paginaActual" type="String" default="0"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />    
+    <aura:handler name="changePageEvent" event="c:ChangePageAltaPaciente" action="{!c.siguientePagina}"/>
+    <aura:attribute name="isFinModalOpen" type="boolean"/>
+    <aura:attribute name="isError" type="boolean"/>
+    <aura:attribute name="showSpinner" type="Boolean"/>
+    <aura:attribute name="tituloError" type="String" default=""/>
+    <aura:attribute name="cuerpoError" type="String" default=""/>
+    <aura:attribute name="isDesktop" type="Boolean" default="true"/>
+    <aura:attribute name="dni" type="String" default=""/>
+    <aura:attribute name="isPaciente" type="Boolean"/>
+    <aura:attribute name="area" type="String"/>
+    <aura:attribute name="pasoContacto" type="Boolean"/>
+    <aura:attribute name="pasoTratamiento" type="Boolean"/>
+    <aura:attribute name="pasoArchivo" type="Boolean"/>
+    <!-- Atributos de cuenta -->
+    <aura:attribute name="account"
+                    type="Account"
+                    default="{  'sobjectType': 'Account',
+                                'FirstName': '',
+                                'LastName': '',
+                                'PersonEmail': '',
+                                'Phone': '',
+                                'Tel_fono_2__c': '',
+                                'DNI__c': '',
+                                'Sexo__c': '',
+                                'PersonBirthdate': '',
+                                'Tipo_de_telefono__c': '',
+                                'Area_terapeutica__c': '',
+                                'Direccion__c': '',
+                                'Referencia__c': '',
+                                'Localidad_look__c': '',
+                                'Codigo_postal__c': '',
+                                'Obra_social__c': ''}"/>
+    <aura:attribute name="idAccount" type="String" default=""/>
+    <aura:attribute name="noTengoDNI" type="Boolean" default="false"/>
+    <aura:attribute name="esMenorA18Anios" type="Boolean"/>
+    <aura:attribute name="esMenorA3Meses" type="Boolean"/>
+    <aura:attribute name="codAreaPaciente" type="String"/>
+    <aura:attribute name="numTelefonoPaciente" type="String"/>
+    <aura:attribute name="edad" type="String"/>
+    <!-- Atributos de contacto -->
+    <aura:attribute name="contacts" type="Contact[]" default="[]"/>
+    <aura:attribute name="contact"
+                    type="Contact"
+                    default="{  'sobjectType': 'Contact',
+                                'FirstName': '',
+                                'LastName': '',
+                                'DNI__c' : '',
+                                'Phone' : '',
+                                'Email' : '',
+                                'Relacion__c' : '',
+                                'Tipo_de_Telefono_de_Contacto__c' : '',
+                                'Principal__c' : true }"/>
+    <aura:attribute name="contact2"
+                    type="Contact"
+                    default="{  'sobjectType': 'Contact',
+                                'FirstName': '',
+                                'LastName': '',
+                                'DNI__c' : '',
+                                'Phone' : '',
+                                'Email' : '',
+                                'Relacion__c' : '',
+                                'Tipo_de_Telefono_de_Contacto__c' : '',
+                                'Principal__c' : false }"/>
+    <aura:attribute name="agregarOtroContacto" type="Boolean" default="false"/>
+    <aura:attribute name="codArea" type="String"/>
+    <aura:attribute name="numTelefono" type="String"/>
+    <aura:attribute name="codAreaContact2" type="String"/>
+    <aura:attribute name="numTelefonoContact2" type="String"/>
+    <!-- Atributos de direccion -->
+    <aura:attribute name="calle" type="String" default=""/>
+    <aura:attribute name="altura" type="String" default=""/>
+    <aura:attribute name="piso" type="String" default=""/>
+    <aura:attribute name="dpto" type="String" default=""/>
+    <aura:attribute name="municipio" type="String" default=""/>
+    <aura:attribute name="provincia" type="String" default=""/>
+    <aura:attribute name="municipioSeleccionado" type="Boolean" default="false"/>
+    <aura:attribute name="valorLocalidad" type="String" default=""/>
+    <aura:attribute name="existeLocalidadSeleccionada" type="Boolean" default="false"/>
+    <!-- Atributos de tratamiento -->
+    <aura:attribute name="tratamiento"
+                    type="Tratamiento__c"
+                    default="{ 'sobjectType':   'Tratamiento__c',
+                                                'Diagnostico__c': '',
+                                                'Alimentacion__c': '',
+                                                'Centro_de_tratamiento__c': '',
+                                                'Area_terapeutica__c': '',
+                                                'Patologia__c': '',
+                                                'Obra_social__c': '',
+                                                'Screening_Nutricional__c' : '',
+                                                'Herramienta_Screening_Nutricional__c': '',
+                                                'Resultado_Screening_Nutricional__c' : '',
+                                                'Consejeria_Nutricional__c' : '' }"/>
+    <aura:attribute name="producto"
+                    type="Producto_de_paciente__c"
+                    default="{ 'sobjectType':   'Producto_de_paciente__c',
+                                                'Formula__c': ''}"/>
+    <aura:attribute name="tratamientoProfesional"
+                    type="Tratamiento_de_profesional__c"
+                    default="{ 'sobjectType':   'Tratamiento_de_profesional__c',
+                                                'Profesional__c': '' }"/>
+    <aura:attribute name="nombreDeArchivo" type="String" default=""/>
+    <aura:attribute name="archivo" type="Object"/>
+    <aura:attribute name="noTengoObraSocial" type="Boolean" default="false"/>
+    <!--Atributos de Track Solicitud Kit de Inicio-->
+    <aura:attribute name="trackForm"
+                    type="Track_Solicitud_Kit_de_Inicio__c"
+                    default="{'sobjectType': 'Track_Solicitud_Kit_de_Inicio__c'}"/>
+    <!--Atributos de Track Error Cupon-->
+    <aura:attribute name="trackErrorCupon"
+                    type="Track_Solicitud_Kit_de_Inicio__c"
+                    default="{'sobjectType': 'Track_Solicitud_Kit_de_Inicio__c'}"/>
+    <!-- Atributos de Phone -->
+    <aura:attribute name="valorObraSocial" type="String" default=""/>
+    <aura:attribute name="existeObraSocialSeleccionada" type="Boolean" default="false"/>
+    <aura:attribute name="valorCentroTratamiento" type="String" default=""/>
+    <aura:attribute name="existeCentroTratamientoSeleccionado" type="Boolean" default="false"/>
+    <aura:attribute name="valorProfesional" type="String" default=""/>
+    <aura:attribute name="existeProfesionalSeleccionado" type="Boolean" default="false"/>
+
+    <aura:if isTrue="{!v.showSpinner}">
+        <div style="height: max-content;">
+            <lightning:spinner
+                class="spins"
+                alternativeText="Cargando"
+                variant="brand"/>
+        </div>
+    </aura:if>
+
+    <div class="slds-grid slds-wrap slds-grid_align-center slds-m-top_x-large slds-m-bottom_xx-large">
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_10-of-12 slds-m-around_x-small">
+            <aura:if isTrue="{!v.paginaActual=='0'}">
+                <c:FormularioValidacionRegistro
+                    account="{!v.account}"
+                    isPaciente="{!v.isPaciente}"
+                    area="{!v.area}"/>
+                <c:FormularioRegistro
+                    paginaActual="{!v.paginaActual}"
+                    account="{!v.account}"
+                    producto="{!v.producto}"
+                    noTengoDNI="{!v.noTengoDNI}"
+                    esMenorA18Anios="{!v.esMenorA18Anios}"
+                    esMenorA3Meses="{!v.esMenorA3Meses}"
+                    codAreaPaciente="{!v.codAreaPaciente}"
+                    numTelefonoPaciente="{!v.numTelefonoPaciente}"
+                    edad="{!v.edad}"
+                    isDesktop="{!v.isDesktop}"/>
+            </aura:if>
+            <aura:if isTrue="{!v.paginaActual=='1'}">
+                <c:FormularioRegistro
+                    paginaActual="{!v.paginaActual}"
+                    account="{!v.account}"
+                    producto="{!v.producto}"
+                    trackForm="{!v.trackForm}"
+                    noTengoDNI="{!v.noTengoDNI}"
+                    esMenorA18Anios="{!v.esMenorA18Anios}"
+                    esMenorA3Meses="{!v.esMenorA3Meses}"
+                    codAreaPaciente="{!v.codAreaPaciente}"
+                    numTelefonoPaciente="{!v.numTelefonoPaciente}"
+                    edad="{!v.edad}"
+                    isDesktop="{!v.isDesktop}"
+                    area="{!v.area}"/>
+            </aura:if>
+            <aura:if isTrue="{!v.paginaActual=='2'}">
+                <c:FormularioRegistroContacto   
+                    paginaActual="{!v.paginaActual}"
+                    account="{!v.account}"
+                    contacts="{!v.contacts}"
+                    contact="{!v.contact}"
+                    contact2="{!v.contact2}"
+                    trackForm="{!v.trackForm}"
+                    agregarOtroContacto="{!v.agregarOtroContacto}"
+                    codArea="{!v.codArea}"
+                    numTelefono="{!v.numTelefono}"
+                    codAreaContact2="{!v.codAreaContact2}"
+                    numTelefonoContact2="{!v.numTelefonoContact2}"
+                    esMenorA18Anios="{!v.esMenorA18Anios}"
+                    isDesktop="{!v.isDesktop}"
+                    area="{!v.area}"/>
+            </aura:if>
+            <aura:if isTrue="{!v.paginaActual=='3'}">
+                <c:FormularioRegistroDomicilio  
+                    paginaActual="{!v.paginaActual}"
+                    account="{!v.account}"
+                    trackForm="{!v.trackForm}"
+                    calle="{!v.calle}"
+                    altura="{!v.altura}"
+                    piso="{!v.piso}"
+                    dpto="{!v.dpto}"
+                    municipio="{!v.municipio}"
+                    provincia="{!v.provincia}"
+                    municipioSeleccionado="{!v.municipioSeleccionado}"
+                    valorLocalidad="{!v.valorLocalidad}"
+                    existeLocalidadSeleccionada="{!v.existeLocalidadSeleccionada}"
+                    isDesktop="{!v.isDesktop}"
+                    area="{!v.area}"/>
+            </aura:if>
+            <aura:if isTrue="{!v.paginaActual=='4'}">
+                <c:FormularioRegistroTratamiento    
+                    paginaActual="{!v.paginaActual}"
+                    account="{!v.account}"
+                    trackForm="{!v.trackForm}"
+                    idAccount="{!v.idAccount}"
+                    tratamiento="{!v.tratamiento}"
+                    producto="{!v.producto}"
+                    tratamientoProfesional="{!v.tratamientoProfesional}"
+                    nombreDeArchivo="{!v.nombreDeArchivo}"
+                    contact="{!v.contact}"
+                    contact2="{!v.contact2}"
+                    isDesktop="{!v.isDesktop}"
+                    valorObraSocial="{!v.valorObraSocial}"
+                    existeObraSocialSeleccionada="{!v.existeObraSocialSeleccionada}"
+                    valorCentroTratamiento="{!v.valorCentroTratamiento}"
+                    existeCentroTratamientoSeleccionado="{!v.existeCentroTratamientoSeleccionado}"
+                    valorProfesional="{!v.valorProfesional}"
+                    existeProfesionalSeleccionado="{!v.existeProfesionalSeleccionado}"
+                    archivo="{!v.archivo}"
+                    noTengoObraSocial="{!v.noTengoObraSocial}"
+                    area="{!v.area}"/>
+            </aura:if>
+            <aura:if isTrue="{!v.paginaActual=='final'}">
+                <c:FinFormularioRegistro 
+                    isFinModalOpen="{!v.isFinModalOpen}"
+                    isError="{!v.isError}"
+                    area="{!v.area}"/>
+            </aura:if>
+        </div>
+    </div>
+    
+    <canvas aura:id="canvas" id="canvas" style="display: none;"></canvas>   
+</aura:component>

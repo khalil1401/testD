@@ -1,0 +1,33 @@
+.footer-meta{
+    background-color: #EBEBEB;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.title-footer-meta{
+    font-family: MontserratSemiBold;
+    font-size: 1rem;
+    color: #8C8C8C;
+}
+
+.text-footer-meta{
+    font-family: MontserratRegular;
+    font-size: 1rem;
+    color: #8C8C8C;
+}
+
+.icon-footer-meta{
+    padding-left: 2%;
+    cursor: pointer;
+}
+
+@media (max-width: 600px){
+    .footer-meta{
+        padding-left: 5%;
+        padding-right: 5%;
+    }   
+
+    .logo-nutricia-footer-meta{
+        width: 40%;
+    }
+}

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Administración</fullName>
+        <default>false</default>
+        <label>Administración</label>
+    </customValue>
+    <customValue>
+        <fullName>Administrativo de Farmacia</fullName>
+        <default>false</default>
+        <label>Administrativo de Farmacia</label>
+    </customValue>
+    <customValue>
+        <fullName>Alergista</fullName>
+        <default>false</default>
+        <label>Alergista</label>
+    </customValue>
+    <customValue>
+        <fullName>Auditor</fullName>
+        <default>false</default>
+        <label>Auditor</label>
+    </customValue>
+    <customValue>
+        <fullName>Bioquímico</fullName>
+        <default>false</default>
+        <label>Bioquímico</label>
+    </customValue>
+    <customValue>
+        <fullName>Cardiólogo</fullName>
+        <default>false</default>
+        <label>Cardiólogo</label>
+    </customValue>
+    <customValue>
+        <fullName>Comprador</fullName>
+        <default>false</default>
+        <label>Comprador</label>
+    </customValue>
+    <customValue>
+        <fullName>Contratador</fullName>
+        <default>false</default>
+        <label>Contratador</label>
+    </customValue>
+    <customValue>
+        <fullName>Contratos y Prestaciones</fullName>
+        <default>false</default>
+        <label>Contratos y Prestaciones</label>
+    </customValue>
+    <customValue>
+        <fullName>Convenios</fullName>
+        <default>false</default>
+        <label>Convenios</label>
+    </customValue>
+    <customValue>
+        <fullName>Coord. Internación Domiciliaria</fullName>
+        <default>false</default>
+        <label>Coord. Internación Domiciliaria</label>
+    </customValue>
+    <customValue>
+        <fullName>Diabetólogo</fullName>
+        <default>false</default>
+        <label>Diabetólogo</label>
+    </customValue>
+    <customValue>
+        <fullName>Director</fullName>
+        <default>false</default>
+        <label>Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Endocrinólogo</fullName>
+        <default>false</default>
+        <label>Endocrinólogo</label>
+    </customValue>
+    <customValue>
+        <fullName>Enfermero</fullName>
+        <default>false</default>
+        <label>Enfermero</label>
+    </customValue>
+    <customValue>
+        <fullName>Farmaceútico</fullName>
+        <default>false</default>
+        <label>Farmaceútico</label>
+    </customValue>
+    <customValue>
+        <fullName>Fisiatra</fullName>
+        <default>false</default>
+        <label>Fisiatra</label>
+    </customValue>
+    <customValue>
+        <fullName>Fonoaudiólogo</fullName>
+        <default>false</default>
+        <label>Fonoaudiólogo</label>
+    </customValue>
+    <customValue>
+        <fullName>Gastroenterólogo</fullName>
+        <default>false</default>
+        <label>Gastroenterólogo</label>
+    </customValue>
+    <customValue>
+        <fullName>Genetista</fullName>
+        <default>false</default>
+        <label>Genetista</label>
+    </customValue>
+    <customValue>
+        <fullName>Gerente Comercial</fullName>
+        <default>false</default>
+        <label>Gerente Comercial</label>
+    </customValue>
+    <customValue>
+        <fullName>Gerontólogo/Geriatra</fullName>
+        <default>false</default>
+        <label>Gerontólogo/Geriatra</label>
+    </customValue>
+    <customValue>
+        <fullName>Inmunología</fullName>
+        <default>false</default>
+        <label>Inmunología</label>
+    </customValue>
+    <customValue>
+        <fullName>Jefe de Compras</fullName>
+        <default>false</default>
+        <label>Jefe de Compras</label>
+    </customValue>
+    <customValue>
+        <fullName>Kinesiologo</fullName>
+        <default>false</default>
+        <label>Kinesiologo</label>
+    </customValue>
+    <customValue>
+        <fullName>Kinesiólogo</fullName>
+        <default>false</default>
+        <label>Kinesiólogo</label>
+    </customValue>
+    <customValue>
+        <fullName>Medico</fullName>
+        <default>false</default>
+        <label>Medico</label>
+    </customValue>
+    <customValue>
+        <fullName>Médico Clínico</fullName>
+        <default>false</default>
+        <label>Médico Clínico</label>
+    </customValue>
+    <customValue>
+        <fullName>Medico familiar</fullName>
+        <default>false</default>
+        <label>Medico familiar</label>
+    </customValue>
+    <customValue>
+        <fullName>Neonatólogo</fullName>
+        <default>false</default>
+        <label>Neonatólogo</label>
+    </customValue>
+    <customValue>
+        <fullName>Neurólogo</fullName>
+        <default>false</default>
+        <label>Neurólogo</label>
+    </customValue>
+    <customValue>
+        <fullName>Nutricionista</fullName>
+        <default>false</default>
+        <label>Nutricionista</label>
+    </customValue>
+    <customValue>
+        <fullName>Nutriólogo</fullName>
+        <default>false</default>
+        <label>Nutriólogo</label>
+    </customValue>
+    <customValue>
+        <fullName>Oncólogo</fullName>
+        <default>false</default>
+        <label>Oncólogo</label>
+    </customValue>
+    <customValue>
+        <fullName>Otro</fullName>
+        <default>false</default>
+        <label>Otro</label>
+    </customValue>
+    <customValue>
+        <fullName>Otros</fullName>
+        <default>false</default>
+        <label>Otros</label>
+    </customValue>
+    <customValue>
+        <fullName>Pagos</fullName>
+        <default>false</default>
+        <label>Pagos</label>
+    </customValue>
+    <customValue>
+        <fullName>Paliativos</fullName>
+        <default>false</default>
+        <label>Paliativos</label>
+    </customValue>
+    <customValue>
+        <fullName>Pediatra</fullName>
+        <default>false</default>
+        <label>Pediatra</label>
+    </customValue>
+    <customValue>
+        <fullName>Responsable Seccional / Sucursal</fullName>
+        <default>false</default>
+        <label>Responsable Seccional / Sucursal</label>
+    </customValue>
+    <customValue>
+        <fullName>Terapista Intensivo</fullName>
+        <default>false</default>
+        <label>Terapista Intensivo</label>
+    </customValue>
+    <customValue>
+        <fullName>Fo0audiólogo</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fo0audiólogo</label>
+    </customValue>
+    <masterLabel>Especialidades</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

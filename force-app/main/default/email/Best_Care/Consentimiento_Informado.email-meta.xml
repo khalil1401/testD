@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Encabezado_Best_Care</letterhead>
+    <name>Consentimiento Informado</name>
+    <style>formalLetter</style>
+    <subject>IMPORTANTE: Consentimiento Informado de Tratamiento Best Care</subject>
+    <textOnly>Estimado {!Account.Name},
+A continuación podrás visualizar el consentimiento informado, documento importante en tu tratamiento nutricional.
+
+El profesional de la salud de Best Care que te acompaña, te guiará y explicará todo el contenido que figura en este documento. También podrá resolver cualquier consulta que tengas al respecto.
+
+De esta manera, te pedimos que por favor:
+Leas detenidamente toda la información proporcionada en el documento
+Visualices los datos personales que contiene el consentimiento informado. En el caso de que exista algún dato erróneo, por favor, indicárselo al profesional de la salud que está acompañándote en el tratamiento.
+
+Para acceder al consentimiento informado, haga clic aquí o en el siguiente boton:
+
+Para acceder al mismo hacé clic aqui o en el siguiente botón:
+
+
+Te recordamos el canal disponible para comunicarse con nosotros:
++54 9 1131673258
+WHATSAPP.HORARIO DE ATENCIÓN: Lunes a viernes de 9 a 18hs.
+Nos encontramos a disposición.
+Saludos,
+
+Equipo de Best Care
+
+0800 122 BEST (2378) - Lunes a viernes de 9:00 a 18:00 hs. www.bestcare.com.ar</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Best_Care</letterhead>
+    <name>Nuevo caso asignado</name>
+    <style>freeForm</style>
+    <subject>Nuevo caso de paciente {!Account.ID_de_paciente__c} - {!Account.FirstName} {!Account.LastName}</subject>
+    <textOnly>Estimado,
+
+Ha ingresado un nuevo caso con los siguientes datos:
+
+Asunto: {!Case.Subject}
+
+Descripción: {!Case.Description}
+
+Tipo: {!Case.Type}
+
+Subtipo: {!Case.Subtipo__c}
+
+Motivo: {!Case.Motivo__c}
+
+Tipo de paciente: {!Account.RecordType}
+
+Paciente: {!Account.ID_de_paciente__c} - {!Account.FirstName} {!Account.LastName}
+
+Obra social: {!Account.Obra_social__c}
+
+Área terapéutica: {!Account.Area_terapeutica__c}
+
+
+Para más información ingrese a {!Case.Link}
+
+Saludos.
+
+{!Case.Email_Thread}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Event custom lookup form communication">
+    <aura:attribute name="message" type="String"/>
+</aura:event>

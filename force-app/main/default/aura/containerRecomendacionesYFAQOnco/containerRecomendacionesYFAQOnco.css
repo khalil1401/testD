@@ -1,0 +1,15 @@
+.THIS {
+}
+
+@media (max-width: 600px) {
+    .THIS .botonRecomendacionesYFAQMobile{
+        color: white;
+        border-radius: 10px 10px 10px 10px;
+        background-color: #293896;
+        width: 90%;
+        font-family: MontserratSemiBold;
+        font-size: 16px;
+        padding: 2%;
+    }
+    
+}

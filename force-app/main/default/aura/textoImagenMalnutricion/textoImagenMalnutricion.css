@@ -1,0 +1,432 @@
+.THIS {
+}
+
+.THIS .imagen-izquierda{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+.THIS .imagen-derecha{
+    width: 100%;
+    padding-left: 7%;
+    padding-right: 8%;
+}
+
+.THIS .imagen-abajo-derecha{
+    width: 40%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.THIS .imagen-abajo{
+    width: 48%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.THIS .imagen-abajo-65{
+    width: 65%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.THIS .imagen-abajo-45{
+    width: 45%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.THIS .imagen-abajo-izquierda{
+    width: 45%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.THIS .div-texto-izquierda{
+    padding-right: 2%;
+}
+
+.THIS .div-texto-derecha{
+    padding-left: 2%;
+}
+
+.THIS .div-texto-fondo{
+    padding-right: 5%;
+    padding-left: 15%;
+}
+
+.THIS .titulo-malnutricion{
+    font-family: NunitoBold;
+    font-size: 1.875rem;
+    line-height: 2.063rem;
+    color: white;
+}
+
+.THIS .titulo-azul-malnutricion{
+    font-family: NunitoBold;
+    font-size: 2rem;
+    line-height: 1.906rem;
+    color: #4B569B;
+}
+
+.THIS .titulo-celeste-malnutricion{
+    font-family: NunitoBold;
+    font-size: 2rem;
+    line-height: 1.906rem;
+    color: #709DD3;
+}
+
+.THIS .titulo-rosa-malnutricion{
+    font-family: NunitoBold;
+    font-size: 2rem;
+    line-height: 1.906rem;
+    color: #9D67A8;
+}
+
+.THIS .titulo-rosa-claro-malnutricion{
+    font-family: NunitoBold;
+    font-size: 2rem;
+    line-height: 1.906rem;
+    color: #B59AC8;
+}
+
+.THIS .titulo-verdeagua-malnutricion{
+    font-family: NunitoBold;
+    font-size: 2rem;
+    line-height: 1.906rem;
+    color: #26B3AD;
+}
+
+.THIS .titulo-verde-malnutricion{
+    font-family: NunitoBold;
+    font-size: 2rem;
+    line-height: 1.906rem;
+    color: #43799B;
+}
+
+.THIS .titulo-negro-malnutricion{
+    font-family: NunitoBold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #333333;
+}
+
+.THIS .texto-malnutricion{
+    font-family: NunitoRegular;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: white;
+}
+
+.THIS .texto-gris-malnutricion{
+    font-family: NunitoRegular;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #333333;
+}
+
+.THIS .texto-azul-malnutricion{
+    font-family: NunitoBold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #4B569B;
+}
+
+.THIS .texto-celeste-malnutricion{
+    font-family: NunitoBold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #709DD3;
+}
+
+.THIS .texto-celeste-semibold-malnutricion{
+    font-family: NunitoBold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #709DD3;
+}
+
+.THIS .texto-verdeagua-malnutricion{
+    font-family: NunitoBold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #26B3AD;
+}
+
+.THIS .texto-rosa-malnutricion{
+    font-family: NunitoBold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #9D67A8;
+}
+
+.THIS .texto-rosa-claro-malnutricion{
+    font-family: NunitoBold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #B59AC8;
+}
+
+.THIS .texto-verde-malnutricion{
+    font-family: NunitoBold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #43799B;
+}
+
+.THIS .slds-list_dotted{
+    padding-right: 10%;
+}
+
+.THIS .container-boton-malnutricion{
+    background-color: white;
+    box-shadow: 0px 4px 33px rgba(0, 134, 124, 0.2);
+    border-radius: 58px;
+}
+
+.THIS .container-boton-fondo-malnutricion{
+    padding-left: 13%;
+}
+
+.THIS .boton-malnutricion{
+    font-family: NunitoBold;
+    color: #008FCF;
+    font-size: 1rem;
+    line-height: 3rem;
+    letter-spacing: 0.2em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.THIS .boton-rosa-malnutricion{
+    font-family: NunitoBold;
+    color: #9D67A8;
+    font-size: 1rem;
+    line-height: 3rem;
+    letter-spacing: 0.2em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.THIS .boton-verde-malnutricion{
+    font-family: NunitoBold;
+    color: #26B3AD;
+    font-size: 1rem;
+    line-height: 3rem;
+    letter-spacing: 0.2em;
+    padding-right: 25px;
+    padding-left: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.THIS .boton-celeste-malnutricion{
+    font-family: NunitoBold;
+    color: #709DD3;
+    font-size: 1rem;
+    line-height: 3rem;
+    letter-spacing: 0.2em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.THIS .div-img-izq{
+    width: 100%;
+    padding-left: 16.66%;
+    padding-right: 25%;
+}
+.THIS .div-img-der{
+    width: 100%;
+    padding-left: 25%;
+    padding-right: 16.66%;
+}
+.THIS .div-center{
+    width: 100%;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+.THIS .div-center-fondo{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.THIS .mobile{
+    display: none;
+}
+.THIS .border-radius{
+    border-radius: 75px 0px 75px 0px;
+}
+
+@media (max-width: 1600px){
+    .THIS .div-img-izq{
+        padding-left: 13.33%;
+        padding-right: 20%;
+    }
+    .THIS .div-img-der{
+        padding-left: 20%;
+        padding-right: 13.33%;
+    }
+    .THIS .div-center{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .THIS .div-center-fondo{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .THIS .div-texto-fondo{
+        padding-right: 4%;
+        padding-left: 12%;
+    }
+    .THIS .container-boton-fondo-malnutricion{
+        padding-left: 8%;
+    }
+}
+
+@media (max-width: 1300px){
+    .THIS .div-img-izq{
+        padding-left: 10%;
+        padding-right: 15%;
+    }
+    .THIS .div-img-der{
+        padding-left: 15%;
+        padding-right: 10%;
+    }
+    .THIS .div-center{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .THIS .div-center-fondo{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .THIS .div-texto-fondo{
+        padding-right: 3%;
+        padding-left: 10%;
+    }
+    .THIS .container-boton-fondo-malnutricion{
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 1024px){
+    .THIS .div-img-izq{
+        padding-left: 8.33%;
+        padding-right: 12.5%;
+    }
+    .THIS .div-img-der{
+        padding-left: 12.5%;
+        padding-right: 8.33%;
+    }
+    .THIS .div-center{
+        padding-left: 12.5%;
+        padding-right: 12.5%;
+    }
+    .THIS .div-center-fondo{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .THIS .div-texto-fondo{
+        padding-right: 2%;
+        padding-left: 8%;
+    }
+    .THIS .container-boton-fondo-malnutricion{
+        padding-left: 0%;
+    }
+}
+
+@media (max-width: 600px){
+    .THIS .div-img-der-sinfondo-desktop{
+        display: none !important;
+    }
+    .THIS .div-img-izq{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    .THIS .div-img-der{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    .THIS .div-center{
+        padding-left: 7%;
+        padding-right: 7%;
+        border-radius: 0px;
+    }
+    .THIS .div-center-fondo{
+        margin-left: 0%;
+        margin-right: 0%;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+    .THIS .desktop{
+        display: none;
+    }
+    .THIS .mobile{
+        display: initial;
+    }
+    .THIS .border-radius{
+        border-radius: 85px 0px 85px 0px;
+    }
+    .THIS .div-texto-derecha{
+        padding-left: 0%;
+        padding-top: 5%;
+    }
+    .THIS .imagen-izquierda{
+        padding-left: 0%;
+        padding-right: 0%;
+    }    
+    .THIS .div-texto-fondo{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .THIS .imagen-derecha{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .THIS .div-texto-izquierda{
+        padding-right: 0%;
+    }
+    .THIS .slds-list_dotted{
+        padding-right: 0%;
+    }
+    .THIS .boton-malnutricion{
+        line-height: 1.5rem;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+    .THIS .boton-rosa-malnutricion{
+        line-height: 1.5rem;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+    .THIS .boton-verde-malnutricion{
+        line-height: 1.5rem;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+    .THIS .boton-celeste-malnutricion{
+        line-height: 1.5rem;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }    
+    .THIS .container-boton-fondo-malnutricion{
+        padding-left: 0%;
+        margin-left: 0%;
+    }
+    .THIS .image-fondo-mobile{
+        width: 75%;
+    }
+}

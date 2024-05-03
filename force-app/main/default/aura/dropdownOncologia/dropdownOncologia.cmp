@@ -1,0 +1,127 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="backgroundPrimerColorGradiente" type="String"/>
+    <aura:attribute name="backgroundSegundoColorGradiente" type="String"/>
+    <aura:attribute name="dropdownIsTrue" type="Boolean" default="false"/>
+
+    <div style="{!'background: linear-gradient(90deg, ' + v.backgroundPrimerColorGradiente +' 0%,  ' + v.backgroundSegundoColorGradiente +' 100%);'}">
+        <div class="slds-m-top_xx-large">
+            <br></br>
+        </div>
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-12 slds-large-size_2-of-12">
+            </div>
+            <div class="slds-col slds-size_10-of-12 slds-large-size_8-of-12">
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_3-of-12 slds-large-size_2-of-12 slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-VIVIR_MEJOR/ONCO-ACTIVIDAD_FISICA/PP-IconoSabiasQueConsultaMedicaOncologia%282022-05-20%29.png" alt="img"/>
+                    </div>
+                    <div class="slds-col slds-size_9-of-12 slds-large-size_10-of-12 slds-align_absolute-center">
+                        <p  class="textoDropdownOncologia">
+                            ... el ejercicio físico puede ayudarte antes y durante el tratamiento
+                        </p>
+                    </div>
+                </div>
+                <aura:if isTrue="{! !v.dropdownIsTrue}">
+                    <p  onclick="{!c.openDropdown}"
+                        class="textoVerMasDropdownOncologia">
+                        + VER MÁS
+                    </p>
+                </aura:if>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-large-size_2-of-12">
+            </div>
+        </div>
+        <aura:if isTrue="{!v.dropdownIsTrue}">
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-12 slds-large-size_2-of-12">
+                </div>
+                <div class="slds-col slds-size_10-of-12 slds-large-size_8-of-12">
+                    <div class="slds-grid slds-grid_vertical-align-center slds-m-top_large">
+                        <div class="slds-col  slds-size_1-of-12 slds-large-size_1-of-12">
+                        </div>
+                        <div class="slds-col  slds-size_2-of-12 slds-large-size_1-of-12">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-VIVIR_MEJOR/ONCO-ACTIVIDAD_FISICA/PP-IconoCerebroConsultaMedicaOncologia%282022-05-20%29.png" alt="imasdg"/>
+                        </div>
+                        <div class="slds-col  slds-size_9-of-12 slds-large-size_10-of-12">
+                            <p  class="slds-m-left_xx-large textoDropdownOncologia"
+                                style=" padding-left: 0% !important;
+                                        padding-right: 0% !important;">
+                                Ayuda a que el cuerpo y cerebro funcionen mejor                            
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-m-top_medium">
+                        <div class="slds-col slds-size_1-of-12 slds-large-size_1-of-12">
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-VIVIR_MEJOR/ONCO-ACTIVIDAD_FISICA/PP-IconoFatigaConsultaMedicaOncologia%282022-05-20%29.png" alt="imasdg"/>
+                        </div>
+                        <div class="slds-col slds-size_9-of-12 slds-large-size_10-of-12">
+                            <p  class="slds-m-left_xx-large textoDropdownOncologia"
+                                style=" padding-left: 0% !important;
+                                        padding-right: 0% !important;">
+                                Colabora en reducir la sensación de cansancio o fatiga
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-m-top_medium">
+                        <div class="slds-col slds-size_1-of-12 slds-large-size_1-of-12">
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-VIVIR_MEJOR/ONCO-ACTIVIDAD_FISICA/PP-IconoDescansoConsultaMedicaOncologia%282022-05-20%29.png" alt="imasdg"/>
+                        </div>
+                        <div class="slds-col slds-size_9-of-12 slds-large-size_10-of-12">
+                            <p  class="slds-m-left_xx-large textoDropdownOncologia"
+                                style=" padding-left: 0% !important;
+                                        padding-right: 0% !important;">
+                                Colabora en mejorar el descanso
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-m-top_medium">
+                        <div class="slds-col slds-size_1-of-12 slds-large-size_1-of-12">
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-VIVIR_MEJOR/ONCO-ACTIVIDAD_FISICA/PP-IconoMovimientoConsultaMedicaOncologia%282022-05-20%29.png" alt="imasdg"/>
+                        </div>
+                        <div class="slds-col slds-size_9-of-12 slds-large-size_10-of-12">
+                            <p  class="slds-m-left_xx-large textoDropdownOncologia"
+                                style=" padding-left: 0% !important;
+                                        padding-right: 0% !important;">
+                                Mejora el movimiento del cuerpo
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_vertical-align-center slds-m-top_medium">
+                        <div class="slds-col slds-size_1-of-12 slds-large-size_1-of-12">
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-large-size_1-of-12">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-VIVIR_MEJOR/ONCO-ACTIVIDAD_FISICA/PP-IconoInmunologicoConsultaMedicaOncologia%282022-05-20%29.png" alt="imasdg"/>
+                        </div>
+                        <div class="slds-col slds-size_9-of-12 slds-large-size_10-of-12">
+                            <p  class="slds-m-left_xx-large textoDropdownOncologia"
+                                style=" padding-left: 0% !important;
+                                        padding-right: 0% !important;">
+                                Fortalece el sistema inmunológico
+                            </p>
+                        </div>
+                    </div>
+                    <aura:if isTrue="{!v.dropdownIsTrue}">
+                        <p  onclick="{!c.closeDropdown}"
+                            class="textoVerMasDropdownOncologia"
+                            style="margin-top: 5%;">
+                            - VER MENOS
+                        </p>
+                    </aura:if>
+                </div>
+                <div class="slds-col slds-size_1-of-12 slds-large-size_2-of-12">
+                </div>
+            </div>
+        </aura:if>
+        <div class="slds-m-bottom_xx-large">
+            <br></br>
+        </div>
+    </div>
+
+</aura:component>

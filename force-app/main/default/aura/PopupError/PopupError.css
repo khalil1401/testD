@@ -1,0 +1,20 @@
+.THIS {
+}
+
+.THIS div.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 7%;
+}
+
+.THIS div.slds-modal__content {
+    border-radius: 25px 25px;
+}
+
+.THIS .icn svg{
+    fill: white;
+}
+
+.THIS .icnModal svg{
+    fill: #58368C;
+}

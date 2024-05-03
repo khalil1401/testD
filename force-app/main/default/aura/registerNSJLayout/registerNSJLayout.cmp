@@ -1,0 +1,19 @@
+<aura:component implements="forceCommunity:layout">
+
+    <aura:attribute name="container1" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="container2" type="Aura.Component[]" required="false"/>
+
+    <div class="slds-grid slds-wrap" style="height: 100%;">
+        <div class="slds-col slds-size_1-of-1">
+            {!v.container1}
+        </div>
+    
+        <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+            <div class="container-register-nsj-layout">
+                {!v.container2}
+            </div>
+        </div>
+    </div>
+
+
+</aura:component>

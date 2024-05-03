@@ -1,0 +1,244 @@
+<aura:component controller="FormularioRegistroController" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="account" type="Account"/>
+    <aura:attribute name="tratamiento" type="Tratamiento__c"/>
+    <aura:attribute name="producto" type="Producto_de_paciente__c"/>
+    <aura:attribute name="tratamientoProfesional" type="Tratamiento_de_profesional__c"/>
+    <aura:attribute name="trackForm" type="Track_Solicitud_Kit_de_Inicio__c"/>
+
+    <aura:attribute name="diagnosticos" type="List"/>
+    <aura:attribute name="optionsDiagnosticos" type="List" default="[]"/>
+    <aura:attribute name="patologias" type="List"/>
+    <aura:attribute name="optionsPatologias" type="List" default="[]"/>
+    <aura:attribute name="screening" type="List"/>
+    <aura:attribute name="optionsScreening" type="List" default="[]"/>
+    <aura:attribute name="herramientasScreening" type="List"/>
+    <aura:attribute name="optionsHerramientasScreening" type="List" default="[]"/>
+    <aura:attribute name="resultadosScreening" type="List"/>
+    <aura:attribute name="optionsResultadosScreening" type="List" default="[]"/>
+    <aura:attribute name="optionsAlimentacion" type="List" default="[]"/>
+
+    <aura:attribute name="filetype" type="List" default="['.png', '.jpg', '.jpeg', '.pdf']"/>
+    <aura:attribute name="nombreDeArchivo" type="String"/>
+    <aura:attribute name="idAccount" type="String"/>
+    <aura:attribute name="contacts" type="Contact[]" default="[]"/>
+    <aura:attribute name="contact" type="Contact"/>
+    <aura:attribute name="contact2" type="Contact"/>
+    <aura:attribute name="faltaImagen" type="Boolean" default="false" />
+    <aura:attribute name="fileLimit" type="Boolean" default="false" />
+    <aura:attribute name="noTengoObraSocial" type="Boolean"/>
+
+    <aura:attribute name="valorObraSocial" type="String"/>
+    <aura:attribute name="existeObraSocialSeleccionada" type="Boolean"/>
+    <aura:attribute name="valorCentroTratamiento" type="String"/>
+    <aura:attribute name="existeCentroTratamientoSeleccionado" type="Boolean"/>
+    <aura:attribute name="valorProfesional" type="String"/>
+    <aura:attribute name="existeProfesionalSeleccionado" type="Boolean"/>
+    <aura:attribute name="archivo" type="Object"/>
+    <aura:attribute name="fileToBeUploaded" type="Object[]"/>
+    <aura:attribute name="requiredTrue" type="Boolean" default="true"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="changePageEvent" type="c:ChangePageAltaPaciente"/>
+    <aura:attribute name="paginaActual" type="string"/>
+    <aura:attribute name="isDesktop" type="Boolean"/>
+
+    <aura:attribute name="spinnerCupon" type="Boolean" default="false" />
+    <aura:attribute name="area" type="String"/>
+    <aura:handler name="lookupFormEvent" event="c:lookupFormularioEvent" action="{!c.hideSpinner}"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="True" />
+
+    <c:ProgressStep current="{!v.paginaActual}"/>
+
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner  
+            alternativeText="Cargando"
+            variant="brand"/>
+    </aura:if>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+            <h2 class="slds-text-align_center slds-m-top_x-large slds-m-bottom_medium">
+                Ingrese los datos del tratamiento indicado
+            </h2>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <c:lookupComponent  
+                itemSelected="{!v.account.Obra_social__c}"
+                objeto="Obra Social"
+                label="Cobertura médica"
+                value="{!v.valorObraSocial}"
+                existeSeleccionado="{!v.existeObraSocialSeleccionada}"
+                spinnerCupon="{!v.spinnerCupon}"
+                required="{! !v.noTengoObraSocial}"
+                disabled="{!v.noTengoObraSocial}"
+                caracteresFiltro="2"/>
+            <lightning:input
+                class="slds-m-top_xx-small"
+                type="checkbox"
+                label="No tengo Obra Social"
+                name="obraSocialCheck"
+                checked="{!v.noTengoObraSocial}"
+                onchange="{!c.changeNoTengoObraSocial}"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:combobox 
+                aura:id="formPaciente" 
+                name="alimentacion"
+                label="Alimentación"
+                value="{!v.tratamiento.Alimentacion__c}"
+                options="{!v.optionsAlimentacion}"
+                dropdownAlignment="top-left"
+                onchange="{!c.handleOptionAlimentacionSelected}"
+                required="true"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:combobox 
+                aura:id="formPaciente" 
+                name="diagnostico"
+                label="Diagnóstico"
+                value="{!v.tratamiento.Diagnostico__c}"
+                options="{!v.optionsDiagnosticos}"
+                dropdownAlignment="top-left"
+                onchange="{!c.handleOptionDiagnosticoSelected}"
+                required="true"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:combobox 
+                aura:id="formPaciente" 
+                class="combobox-patologias"
+                name="patologia"
+                label="Patología"
+                value="{!v.tratamiento.Patologia__c}"
+                options="{!v.optionsPatologias}"
+                dropdownAlignment="top-left"
+                required="{!v.tratamiento.Diagnostico__c == 'Si'}"
+                disabled="{!v.tratamiento.Diagnostico__c != 'Si'}"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <c:lookupComponent  
+                itemSelected="{!v.tratamiento.Centro_de_tratamiento__c}"
+                objeto="Institucion"
+                label="Centro de Tratamiento"
+                value="{!v.valorCentroTratamiento}"
+                existeSeleccionado="{!v.existeCentroTratamientoSeleccionado}"
+                required="{!v.area != 'Alergia'}"
+                caracteresFiltro="2"/>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <c:lookupComponent  
+                itemSelected="{!v.tratamientoProfesional.Profesional__c}"
+                objeto="Profesional"
+                label="Profesional"
+                value="{!v.valorProfesional}"
+                existeSeleccionado="{!v.existeProfesionalSeleccionado}"
+                spinnerCupon="{!v.spinnerCupon}"
+                required="{!v.requiredTrue}"
+                caracteresFiltro="4"/>
+        </div>
+        <aura:if isTrue="{!v.area == 'Oncología'}">
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+                <lightning:combobox 
+                    aura:id="formPaciente" 
+                    class="combobox-patologias"
+                    name="consejerianutricional"
+                    label="¿Su profesional le indicó la consejería nutricional en el cupón?"
+                    value="{!v.tratamiento.Consejeria_Nutricional__c}"
+                    options="{!v.optionsDiagnosticos}"
+                    dropdownAlignment="top-left"
+                    required="true"/>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            </div>
+        </aura:if>
+        <!--Desafios del crecimiento-->
+        <aura:if isTrue="{!v.area == 'Desafíos del crecimiento'}">
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+                <lightning:combobox 
+                    aura:id="formPaciente" 
+                    name="screening"
+                    label="Screening Nutricional"
+                    value="{!v.tratamiento.Screening_Nutricional__c}"
+                    options="{!v.optionsScreening}"
+                    dropdownAlignment="top-left"
+                    required="true"
+                    onchange="{!c.handleOptionScreeningSelected}"/>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+                <lightning:combobox 
+                    aura:id="formPaciente" 
+                    name="herramientasScreening"
+                    label="Herramienta Screening"
+                    value="{!v.tratamiento.Herramienta_Screening_Nutricional__c}"
+                    options="{!v.optionsHerramientasScreening}"
+                    dropdownAlignment="top-left"
+                    required="{!v.tratamiento.Screening_Nutricional__c == 'Si'}"
+                    disabled="{!v.tratamiento.Screening_Nutricional__c != 'Si'}"/>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+                <lightning:combobox 
+                    aura:id="formPaciente" 
+                    name="resultadosScreening"
+                    label="Resultados Screening"
+                    value="{!v.tratamiento.Resultado_Screening_Nutricional__c}"
+                    options="{!v.optionsResultadosScreening}"
+                    dropdownAlignment="top-left"
+                    required="{!v.tratamiento.Screening_Nutricional__c == 'Si'}"
+                    disabled="{!v.tratamiento.Screening_Nutricional__c != 'Si'}"/>
+            </div>
+            <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            </div>
+        </aura:if>
+        <!--Desafios del crecimiento-->
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <lightning:input
+                aura:id="formPaciente"
+                accept="{!v.filetype}"
+                files="{!v.fileToBeUploaded}"
+                onchange="{!c.handleFileChange}"
+                type="file"
+                name="file"
+                label="Cupón o Receta"
+                multiple="false"/>
+            <aura:if isTrue="{!v.faltaImagen}">
+                <p class="labelFaltaImagen">
+                    Cumplimiento de este campo.
+                </p>
+            </aura:if>
+            <aura:if isTrue="{!v.nombreDeArchivo}">
+                <span class="labelEditForm">
+                    {!v.nombreDeArchivo}
+                </span>
+            </aura:if>
+            <aura:if isTrue="{!v.fileLimit}">
+                <span class="labelFaltaImagen">
+                    Los archivos en formato PNG y JPG deben ser menores a 20 MB. 
+                    <br/>
+                    Los archivos en formato PDF deben ser menores a 3 MB.
+                </span>
+            </aura:if>
+        </div>
+        <div class="slds-col slds-medium-size_6-of-12 slds-size_1-of-1 slds-p-top_small slds-p-left_small slds-p-right_small">
+            <div aura:id="container">
+            </div>
+        </div>
+        <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+            <div class="slds-clearfix slds-m-top_xx-large">
+                <div class="slds-float_right slds-p-right_small">
+                    <button
+                        id="id-btn-back-form-tratamiento"
+                        class="back-button"
+                        onclick="{!c.anterior}">
+                        Volver
+                    </button>
+                    <button
+                        id="id-btn-solicitar-kit"
+                        class="button"
+                        onclick="{!c.enviar}">
+                        Guardar datos y solicitar Kit
+                    </button>
+                </div>
+            </div>
+        </div>            
+    </div>
+</aura:component>

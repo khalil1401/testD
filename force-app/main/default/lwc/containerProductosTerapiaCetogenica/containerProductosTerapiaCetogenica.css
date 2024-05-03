@@ -1,0 +1,13 @@
+.div-container-cptc{
+    width: 100%;
+    background-color: rgb(88, 54, 140);
+    padding-left: 17%;
+    padding-right: 17%;
+}
+
+@media (max-width: 1600px){
+    .div-container-cptc{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}

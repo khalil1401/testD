@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Estimado,<div><br></div><div>Le informamos que ha ingresado un nuevo paciente metabólico con lo siguientes datos:</div><div><br></div><div>Nombre:&nbsp;{!Account.ID_de_paciente__c}&nbsp;<span style="font-size: 12pt;">{!Account.Nombre_oculto__c}</span><font face="arial" style="font-size: 12pt;">&nbsp;</font><span style="font-size: 12pt;">{!Account.Apellido_oculto__c}</span></div><div><br></div><div>Obra social:&nbsp;{!Account.Obra_social__c}</div><div><br></div><div>Para más información ingresar a: {!Case.Link}</div><div><br></div><div>Saludos.</div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div>]]></td>
+</tr>
+</table>

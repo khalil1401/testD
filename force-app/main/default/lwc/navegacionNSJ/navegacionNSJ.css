@@ -1,0 +1,95 @@
+.text-nav-nsj{
+    font-size: 1rem;
+    font-family: MontserratSemiBold;
+    color: white;
+    cursor: pointer;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.display-none{
+    display: none;
+}
+
+.display-initial{
+    display: initial;
+}
+
+.container-nav-nsj{
+    background: linear-gradient(90deg, #4A2A80 0%, #313183 100%);
+}
+
+.text-menu-nsj{
+    font-family: MontserratRegular;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.item{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+table{
+    width: auto;
+}
+
+td{
+    border-top: none;
+    border-bottom: none;
+    width: auto;
+    text-align: center;
+}
+
+.vl{
+    border-right:1px solid white;
+}
+
+.mobile{
+    display: none;
+}
+
+.menu-nsj { 
+    padding-left: 25px; 
+    background-color: #4A2A80; 
+    padding-bottom: 3%;
+    left: 0px;
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+        transform: translateY(-20px);
+    }
+
+    100% { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .text-nav-nsj{
+        padding-right: 20px;
+        padding-left: 20px;
+    }    
+}
+
+@media (max-width: 600px) {
+    .text-menu-nsj{
+        font-size: 1.1rem;
+    }    
+    .iconoNutriciaBago{
+        width: 60%;
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: initial;
+    }    
+}

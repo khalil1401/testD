@@ -1,0 +1,1065 @@
+<template>
+    <div class="slds-grid slds-wrap container-patologias-ddc">
+        <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-m-bottom_x-large">
+            <p class="title-patologias-ddc" data-id="main-menu">
+                Elegí cuál explorar:
+            </p>
+            <hr class="linea-patologias-ddc slds-align_absolute-center"/>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-ddc slds-align_absolute-center"
+                data-patologia="cardiopatia-congenita"
+                onclick={showDetails}>
+                Cardiopatía congénita
+            </span>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-ddc slds-align_absolute-center"
+                data-patologia="enfermedad-oncologica"
+                onclick={showDetails}>
+                Enfermedad oncológica
+            </span>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-ddc slds-align_absolute-center"
+                data-patologia="paralisis-cerebral"
+                onclick={showDetails}>
+                Parálisis cerebral
+            </span>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_medium">
+            <span 
+                class="button-patologias-ddc slds-align_absolute-center"
+                data-patologia="fibrosis-quistica"
+                onclick={showDetails}>
+                Fibrosis quística
+            </span>
+        </div>
+    </div>
+    <div class="slds-grid slds-wrap slds-m-top_x-large container-details-patologias-ddc"
+        data-id="container-info" style="position: relative;">
+        <template if:true={showArrows}>
+            <lightning-button-icon
+                icon-name="utility:chevronleft"
+                alternative-text="Back"
+                title="Back"
+                size="large"
+                variant="bare"
+                onclick={back}
+                disabled={disabledBack}
+                class="left-arrow">
+            </lightning-button-icon>
+        </template>
+        <template if:true={showArrows}>
+            <lightning-button-icon
+                icon-name="utility:chevronright"
+                alternative-text="Next"
+                title="Next"
+                size="large"
+                variant="bare"
+                onclick={next}
+                disabled={disabledNext}
+                class="right-arrow">
+            </lightning-button-icon>
+        </template>
+        <div class="slds-col slds-size_1-of-1">
+            <div class="slds-grid slds-wrap" data-id="container-cardiopatia-congenita" style="display: none;">
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large slds-align_absolute-center mobile">
+                    <p class="title-orange-patologias-ddc">
+                        Cardiopatía congénita
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_x-large slds-align_absolute-center mobile">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/CARDIOPATIA_CONGENITA/PP-DesafiosDelCrecimiento-Imagen-Cardiopatia-congenita.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_x-large mobile">
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        El apoyo nutricional como ayuda ante los síntomas frecuentes
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        La evaluación del estado nutricional de los niños con cardiopatías congénitas siempre debe ser incluida como parte de un seguimiento integral, ya que distintos aspectos de estas patologías predisponen a los niños a presentar un cuadro de desnutrición. Por ejemplo, el aumento de las necesidades calóricas o las dificultades para una nutrición adecuada. Además, es común que los niños con cardiopatías congénitas presenten:
+                    </p>
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_2-of-12 slds-p-top_x-large slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/CARDIOPATIA_CONGENITA/PP-DesafiosDelCrecimiento-Icono-Aversion-oral.png">
+                        </div>
+                        <div class="slds-col slds-size_10-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                Vómitos
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-p-top_x-large slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/CARDIOPATIA_CONGENITA/PP-DesafiosDelCrecimiento-Icono-Intolerancia.png">
+                        </div>
+                        <div class="slds-col slds-size_10-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                Intolerancia o rechazo a los alimentos
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-p-top_x-large slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/CARDIOPATIA_CONGENITA/PP-DesafiosDelCrecimiento-Icono-Vomitos.png">
+                        </div>
+                        <div class="slds-col slds-size_10-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                Aversión oral (rechazo persistente a ciertos alimentos)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_7-of-12 slds-p-top_xx-large desktop">
+                    <p class="title-orange-patologias-ddc">
+                        Cardiopatía congénita
+                    </p>
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        El apoyo nutricional como ayuda ante los síntomas frecuentes
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        La evaluación del estado nutricional de los niños con cardiopatías congénitas siempre debe ser incluida como parte de un seguimiento integral, ya que distintos aspectos de estas patologías predisponen a los niños a presentar un cuadro de desnutrición. Por ejemplo, el aumento de las necesidades calóricas o las dificultades para una nutrición adecuada. Además, es común que los niños con cardiopatías congénitas presenten:
+                    </p>
+                    <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_2-of-12 slds-p-top_xx-large slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/CARDIOPATIA_CONGENITA/PP-DesafiosDelCrecimiento-Icono-Aversion-oral.png">
+                        </div>
+                        <div class="slds-col slds-size_10-of-12 slds-p-top_xx-large">
+                            <p class="text-patologias-ddc">
+                                Vómitos
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-p-top_x-large slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/CARDIOPATIA_CONGENITA/PP-DesafiosDelCrecimiento-Icono-Intolerancia.png">
+                        </div>
+                        <div class="slds-col slds-size_10-of-12 slds-p-top_x-large">
+                            <p class="text-patologias-ddc">
+                                Intolerancia o rechazo a los alimentos
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_2-of-12 slds-p-top_x-large slds-align_absolute-center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/CARDIOPATIA_CONGENITA/PP-DesafiosDelCrecimiento-Icono-Vomitos.png">
+                        </div>
+                        <div class="slds-col slds-size_10-of-12 slds-p-top_x-large">
+                            <p class="text-patologias-ddc">
+                                Aversión oral (rechazo persistente a ciertos alimentos)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_5-of-12 slds-p-top_xx-large slds-align_absolute-center desktop">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/CARDIOPATIA_CONGENITA/PP-DesafiosDelCrecimiento-Imagen-Cardiopatia-congenita.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large">
+                    <p class="text-patologias-ddc">
+                        Aunque es frecuente que los niños con cardiopatías congénitas presenten desnutrición, muchos no reciben las cantidades adecuadas de <span style="font-family: MontserratSemibold;">calorías y proteínas</span> como parte del tratamiento. Incluso, solo la mitad de los pacientes que se preparan para una intervención quirúrgica suelen recibir <span style="font-family: MontserratSemibold;">nutrición enteral preoperatoria.</span> Por eso, existe un alto porcentaje de desnutrición en niños con cardiopatía congénita en el momento de la cirugía.
+                    </p>
+                    <p class="title-violet-patologias-ddc slds-m-top_xx-large">
+                        ¿Qué beneficios aporta el apoyo nutricional?
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        El apoyo nutricional oportuno, por parte de un equipo multidisciplinario especializado, es esencial. Un aporte adecuado de nutrientes permite prevenir alteraciones del crecimiento y parámetros de crecimiento más bajos, además de ayudar a obtener mejores resultados en el tratamiento de la enfermedad, en especial, tras la cirugía.
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_xx-large">
+                        Hoy se sabe que la alimentación hiperproteica o hipercalórica es segura en niños después de una operación para corregir una cardiopatía congénita. Estas son algunas de las ventajas de esta intervención:
+                    </p>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-12 slds-p-top_xx-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-p-top_xx-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                Contribuye a mejorar la tolerancia a los líquidos y a la alimentación posoperatoria, debido a que aporta más calorías y proteínas en menor volumen
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                Reduce la duración de la ventilación mecánica
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                Acorta la estancia en la unidad de cuidados intensivos y la internación hospitalaria en general
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large">
+                    <p class="text-patologias-ddc" style="font-family: MontserratSemiBold;">
+                        Los controles nutricionales desde el momento del diagnóstico de la cardiopatía congénita permiten detectar las alteraciones del crecimiento, mejorar el acceso a la intervención nutricional temprana y optimizar los resultados de los pacientes.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                    <div class="card-fq-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-align_absolute-center slds-p-around_medium">
+                                <span>
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/1_HOME/PP-DesafiosDelCrecimiento-Icono-Medica.png">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/1_HOME/PP-DesafiosDelCrecimiento-Icono-Medico.png">
+                                </span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-p-around_large">
+                                <p class="text-card-fq-ddc">
+                                    El adecuado apoyo nutricional por parte de un equipo de especialistas ayuda a que los niños con cardiopatía congénita puedan alcanzar los niveles esperables de crecimiento para su edad después de la operación
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 div-container-footer-patologias-ddc">
+                    <div class="container-footer-patologias-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                                <div class="slds-text-align_right" style="position: relative;">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Cucarda-Acompa%C3%B1amiento%20emocional.png"
+                                        style="position: relative; top: -25px;">
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Imagen-Jugar.jpg"
+                                    style="float: left; width: 600px; margin-right: 50px;; margin-bottom: 25px; border-radius: 18px;"/>
+                                <p class="text-footer-patologias-ddc">
+                                    Recibir un diagnóstico o transitar una enfermedad crónica siempre conlleva la necesidad de enfrentar sentimientos que impactan sobre el bienestar emocional, tanto del niño o la niña con la patología como de sus padres o cuidadores.
+                                </p>
+                                <p class="text-footer-patologias-ddc slds-m-top_medium">
+                                    El apoyo emocional para los niños con problemas de salud y sus familias es fundamental para reconocer esos sentimientos, expresarlos, y aprender cómo encararlos para facilitar un estado de ánimo que no solo promueva el bienestar, sino que además favorezca el tratamiento de la patología.
+                                </p>
+                                <p class="text-footer-patologias-ddc slds-m-top_medium">
+                                    Hay mucho que el equipo de salud puede hacer para acompañar a cada paciente y a su familia en la experiencia de vivir con una condición médica crónica. Entre los recursos que los especialistas sugieren a las familias para fomentar el bienestar emocional, se encuentran:
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 items-footer-patologias-ddc">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            A los más pequeños, leerles historias sobre niños u otros personajes que están pasando por la misma situación.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Practicar situaciones médicas con un muñeco. Este juego puede hacerlos sentir que tienen más control.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Las recompensas, como las calcomanías para pegar en el plan de tratamiento, también pueden ayudar.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Hablar abierta y honestamente con el niño o la niña, a un nivel apropiado a su edad y su desarrollo. Conversar sobre las dudas que se le presenten permitirá evitar algunos miedos y brindar mayor confianza.
+                                        </p>        
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Tanto para los padres que necesitan ayuda para procesar sus propios sentimientos como para los niños que también muestran esa dificultad, acudir a un especialista en salud mental puede ser un primer paso importante para sentirse más seguros.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                                <p class="text-fuente-footer-patologias-ddc" style="font-style: italic;">
+                                    Fuente: 
+                                </p>
+                                <p class="text-fuente-footer-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                                    - Garey J, Howard J, Latella Lauren. Mental Health in Kids With Chronic Illness. Child Mind Institute. Disponible en: https://childmind.org/article/mental-health-in-children-with-chronic-illness/ 
+                                </p>
+                                <p class="text-fuente-footer-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                                    - Rohan JM, Verma T. Psychological Considerations in Pediatric Chronic Illness: Case Examples. Int J Environ Res Public Health. 2020 Mar 3;17(5):1644.                            
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <p class="text-fuente-patologias-ddc" style="font-style: italic;">
+                        Fuente: 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Costello CL, Gellatly M, Daniel J, et al. Growth Restriction in Infants and Young Children with Congenital Heart Disease. Congenit Heart Dis. 2015 Sep-Oct;10(5):447-56. doi: 10.1111/chd.12231. Epub 2014 Nov 11. PMID: 25385245. 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Diao J, Chen L, Wei J, et al. Prevalence of Malnutrition in Children with Congenital Heart Disease: A Systematic Review and Meta-Analysis. J Pediatr. 2022 Mar;242:39-47.e4. doi: 10.1016/j.jpeds.2021.10.065. Epub 2021 Nov 3. PMID: 34742752.
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Ni P, Wang X, Xu Z, et al. Effect of high-energy and/or high-protein feeding in children with congenital heart disease after cardiac surgery: a systematic review and meta-analysis. Eur J Pediatr. 2023 Feb;182(2):513-524. doi: 10.1007/s00431-022-04721-3. Epub 2022 Dec 8. PMID: 36480085.
+                    </p>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap" data-id="container-enfermedad-oncologica" style="display: none;">
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large mobile">
+                    <p class="title-orange-patologias-ddc">
+                        Enfermedad oncológica
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_x-large slds-align_absolute-center mobile">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ENFERMEDAD_ONCOLOGICA/PP-DesafiosDelCrecimiento-Imagen-Enfermedad-oncologica.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_x-large mobile">
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        Estrategias para afrontar los desafíos nutricionales vinculados con el cáncer
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        Gracias a los avances en el diagnóstico precoz, los tratamientos y las mejoras de los cuidados de apoyo, en la actualidad, el cáncer infantil tiene un mejor pronóstico a largo plazo que antes. Hoy se sabe, también, que el estado nutricional de los niños que presentan una enfermedad oncológica es de gran importancia.
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        No obstante, la DRE sigue siendo frecuente en estos niños y adolescentes, y una proporción elevada de ellos llega al momento del diagnóstico con déficits nutricionales. Los signos y síntomas más frecuentes son:
+                    </p>
+                </div>
+                <div class="slds-col slds-size_7-of-12 slds-p-top_xx-large desktop">
+                    <p class="title-orange-patologias-ddc">
+                        Enfermedad oncológica
+                    </p>
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        Estrategias para afrontar los desafíos nutricionales vinculados con el cáncer
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        Gracias a los avances en el diagnóstico precoz, los tratamientos y las mejoras de los cuidados de apoyo, en la actualidad, el cáncer infantil tiene un mejor pronóstico a largo plazo que antes. Hoy se sabe, también, que el estado nutricional de los niños que presentan una enfermedad oncológica es de gran importancia.
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        No obstante, la DRE sigue siendo frecuente en estos niños y adolescentes, y una proporción elevada de ellos llega al momento del diagnóstico con déficits nutricionales. Los signos y síntomas más frecuentes son:
+                    </p>
+                </div>
+                <div class="slds-col slds-size_5-of-12  slds-p-top_xx-large slds-align_absolute-center desktop">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ENFERMEDAD_ONCOLOGICA/PP-DesafiosDelCrecimiento-Imagen-Enfermedad-oncologica.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-12 slds-medium-size_3-of-12 slds-p-top_xx-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-medium-size_9-of-12 slds-p-top_xx-large slds-p-left_small">
+                            <p class="text-patologias-ddc">Anorexia (pérdida del apetito)</p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-medium-size_3-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-medium-size_9-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">Pérdida de peso </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-medium-size_3-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-medium-size_9-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">Fatiga</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-12 slds-medium-size_3-of-12 slds-p-top_xx-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-medium-size_9-of-12 slds-p-top_xx-large slds-p-left_small">
+                            <p class="text-patologias-ddc">Desgaste muscular y pérdida de masa grasa</p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-medium-size_3-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-medium-size_9-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">Deterioro de la función inmunitaria (el sistema de defensa del organismo)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large">
+                    <p class="text-patologias-ddc">
+                        A los desafíos nutricionales iniciales vinculados con el tumor suelen sumarse otros, que son consecuencia del tratamiento oncológico y de algunos de sus efectos secundarios. Entre los más frecuentes se encuentran:
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-12 slds-medium-size_3-of-12 slds-p-top_xx-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-medium-size_9-of-12 slds-p-top_xx-large slds-p-left_small">
+                            <p class="text-patologias-ddc">Anorexia</p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-medium-size_3-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-medium-size_9-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">Mucositis (inflamación y ulceración de la mucosa de la boca y del resto del tracto gastrointestinal)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-12 slds-medium-size_3-of-12 slds-p-top_xx-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-medium-size_9-of-12 slds-p-top_xx-large slds-p-left_small">
+                            <p class="text-patologias-ddc">Vómitos</p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-medium-size_3-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-medium-size_9-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">Diarrea</p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-medium-size_3-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-medium-size_9-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">Alteraciones del gusto</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_7-of-12" style="margin-top: 75px;">
+                    <p class="title-violet-patologias-ddc">
+                        ¿Qué beneficios aporta el apoyo nutricional?
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        Uno de los principales objetivos del <span style="font-family: MontserratSemiBold;">apoyo nutricional</span> en niños con patología oncológica es evitar la <span style="font-family: MontserratSemiBold;">pérdida de peso</span>. Las intervenciones para corregir el desequilibrio de nutrientes aportan los siguientes beneficios:
+                    </p>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-12 slds-medium-size_2-of-12 slds-p-top_xx-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-medium-size_10-of-12 slds-p-top_xx-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                Favorecen una <span style="font-family: MontserratSemiBold;">mejor respuesta al tratamiento</span> del cáncer. 
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-medium-size_2-of-12 slds-p-top_x-large slds-text-align_center">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-medium-size_10-of-12 slds-p-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                Contribuyen a <span style="font-family: MontserratSemiBold;">combatir</span> de forma más eficiente <span style="font-family: MontserratSemiBold;">las posibles infecciones</span>, reduciendo así la necesidad de hospitalizaciones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_5-of-12 slds-align_absolute-center" style="margin-top: 75px;">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ENFERMEDAD_ONCOLOGICA/PP-DesafiosDelCrecimiento-Icono-Objetivo.png">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large">
+                    <p class="text-patologias-ddc" style="font-family: MontserratSemiBold;">
+                        El uso de alimentos enterales de alta densidad calórica es una de las estrategias nutricionales que ayudan a lograr mayor ingesta diaria de calorías y proteínas y aumento de peso.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1" style="margin-top: 75px;">
+                    <div class="card-fq-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-align_absolute-center slds-p-around_medium">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ENFERMEDAD_ONCOLOGICA/PP-DesafiosDelCrecimiento-Icono-Manos-Corazon.png">
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-p-around_large">
+                                <p class="text-card-fq-ddc">
+                                    <span style="font-family: MontserratSemiBold;">El apoyo nutricional seguro, apropiado y eficaz para niños y jóvenes en tratamiento contra el cáncer es reconocido como una parte importante de su atención.</span> Puede ayudar a revertir la desnutrición observada en el momento del diagnóstico, prevenir la desnutrición asociada con el cáncer, evitando el descenso de peso y retraso de crecimiento, mejorando la calidad de vida.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 div-container-footer-patologias-ddc">
+                    <div class="container-footer-patologias-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                                <div class="slds-text-align_right" style="position: relative;">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Cucarda-Acompa%C3%B1amiento%20emocional.png"
+                                        style="position: relative; top: -25px;">
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Imagen-Jugar.jpg"
+                                    style="float: left; width: 600px; margin-right: 50px;; margin-bottom: 25px; border-radius: 18px;"/>
+                                <p class="text-footer-patologias-ddc">
+                                    Recibir un diagnóstico o transitar una enfermedad crónica siempre conlleva la necesidad de enfrentar sentimientos que impactan sobre el bienestar emocional, tanto del niño o la niña con la patología como de sus padres o cuidadores.
+                                </p>
+                                <p class="text-footer-patologias-ddc slds-m-top_medium">
+                                    El apoyo emocional para los niños con problemas de salud y sus familias es fundamental para reconocer esos sentimientos, expresarlos, y aprender cómo encararlos para facilitar un estado de ánimo que no solo promueva el bienestar, sino que además favorezca el tratamiento de la patología.
+                                </p>
+                                <p class="text-footer-patologias-ddc slds-m-top_medium">
+                                    Hay mucho que el equipo de salud puede hacer para acompañar a cada paciente y a su familia en la experiencia de vivir con una condición médica crónica. Entre los recursos que los especialistas sugieren a las familias para fomentar el bienestar emocional, se encuentran:
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 items-footer-patologias-ddc">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            A los más pequeños, leerles historias sobre niños u otros personajes que están pasando por la misma situación.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Practicar situaciones médicas con un muñeco. Este juego puede hacerlos sentir que tienen más control.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Las recompensas, como las calcomanías para pegar en el plan de tratamiento, también pueden ayudar.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Hablar abierta y honestamente con el niño o la niña, a un nivel apropiado a su edad y su desarrollo. Conversar sobre las dudas que se le presenten permitirá evitar algunos miedos y brindar mayor confianza.
+                                        </p>        
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Tanto para los padres que necesitan ayuda para procesar sus propios sentimientos como para los niños que también muestran esa dificultad, acudir a un especialista en salud mental puede ser un primer paso importante para sentirse más seguros.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                                <p class="text-fuente-footer-patologias-ddc" style="font-style: italic;">
+                                    Fuente: 
+                                </p>
+                                <p class="text-fuente-footer-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                                    - Garey J, Howard J, Latella Lauren. Mental Health in Kids With Chronic Illness. Child Mind Institute. Disponible en: https://childmind.org/article/mental-health-in-children-with-chronic-illness/ 
+                                </p>
+                                <p class="text-fuente-footer-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                                    - Rohan JM, Verma T. Psychological Considerations in Pediatric Chronic Illness: Case Examples. Int J Environ Res Public Health. 2020 Mar 3;17(5):1644.                            
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <p class="text-fuente-patologias-ddc" style="font-style: italic;">
+                        Fuente: 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Triarico S, Rinninella E, Cintoni M, et al. Impact of malnutrition on survival and infections among pediatric patients with cancer: a retrospective study. Eur Rev Med Pharmacol Sci. 2019 Jan;23(3):1165-1175. doi: 10.26355/eurrev_201901_17009. PMID: 30779086.
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Ward EJ, Henry LM, Friend AJ, et al. Nutritional support in children and young people with cancer undergoing chemotherapy. Cochrane Database Syst Rev. 2015 Aug 24;2015(8):CD003298. doi: 10.1002/14651858.CD003298.pub3. PMID: 26301790; PMCID: PMC8752126.
+                    </p>
+                </div>          
+            </div>
+            <div class="slds-grid slds-wrap" data-id="container-paralisis-cerebral" style="display: none;">
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large mobile">
+                    <p class="title-orange-patologias-ddc">
+                        Parálisis cerebral
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_x-large mobile">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/PARALISIS_CEREBRAL/PP-DesafiosDelCrecimiento-Imagen-ParalisisCerebral.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_x-large mobile">
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        El seguimiento nutricional personalizado para alcanzar el máximo potencial
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        El adecuado aporte de nutrientes en niños con parálisis cerebral se presenta muchas veces como un desafío, debido a que esta patología suele estar asociada con dificultades en la alimentación, que conducen a la DRE. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        Por este motivo, el seguimiento y el manejo nutricional personalizados, de acuerdo con las características y particularidades de cada niño, son fundamentales para promover que alcance su máximo potencial.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_7-of-12 slds-p-top_xx-large desktop">
+                    <p class="title-orange-patologias-ddc">
+                        Parálisis cerebral
+                    </p>
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        El seguimiento nutricional personalizado para alcanzar el máximo potencial
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        El adecuado aporte de nutrientes en niños con parálisis cerebral se presenta muchas veces como un desafío, debido a que esta patología suele estar asociada con <span style="font-family: MontserratSemiBold;">dificultades en la alimentación</span>, que conducen a la DRE. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        Por este motivo, el seguimiento y el manejo nutricional personalizados, de acuerdo con las características y particularidades de cada niño, son fundamentales para promover <span style="font-family: MontserratSemiBold;">que alcance su máximo potencial.</span>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_5-of-12 slds-p-top_xx-large slds-align_absolute-center desktop">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/PARALISIS_CEREBRAL/PP-DesafiosDelCrecimiento-Imagen-ParalisisCerebral.jpg"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_x-large">
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        ¿Qué beneficios aporta el apoyo nutricional?
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_large">
+                        Satisfacer las necesidades de nutrientes del niño con parálisis cerebral no solo tiene un impacto positivo sobre su crecimiento y composición corporal, sino, además, sobre el estado neurológico. <span style="font-family: MontserratSemiBold;">Calcio, zinc, cobre y vitamina D son nutrientes clave, que deben ser adecuadamente provistos por la nutrición en niños con esta patología.</span>
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        El apoyo nutricional debe comenzar con asesoramiento dietético y cambios de la alimentación oral, si es segura y aceptable. Sin embargo, para la alimentación prolongada, cuando el niño presenta problemas para tragar o no ingiere la cantidad suficiente de alimentos, debe iniciarse rápidamente la <span style="font-family: MontserratSemiBold;">nutrición enteral</span> y evaluarse en conjunto con los profesionales tratantes el uso de otros métodos que permitan un aporte más eficiente de los nutrientes (como la gastrostomía o la sonda nasogástrica, que facilitan la administración de alimentos de manera directa al estómago).
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        La <span style="font-family: MontserratSemiBold;">introducción de nutrición enteral</span> debe considerarse cuando:
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-12 slds-p-top_xx-large slds-text-align_center">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                </div>
+                <div class="slds-col slds-size_11-of-12 slds-p-top_xx-large slds-p-left_small">
+                    <p class="text-patologias-ddc">
+                        La <span style="font-family: MontserratSemiBold;">ingesta oral es insuficiente</span> para satisfacer más del 60-80% de las necesidades individuales. 
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-12 slds-p-top_x-large slds-text-align_center">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                </div>
+                <div class="slds-col slds-size_11-of-12 slds-p-top_x-large slds-p-left_small">
+                    <p class="text-patologias-ddc">
+                        El tiempo total de alimentación tiene lugar <span style="font-family: MontserratSemiBold;">más de 4 a 6 h/día.</span>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-12 slds-p-top_x-large slds-text-align_center">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                </div>
+                <div class="slds-col slds-size_11-of-12 slds-p-top_x-large slds-p-left_small">
+                    <p class="text-patologias-ddc">
+                        Hay evidencia de crecimiento o <span style="font-family: MontserratSemiBold;">ganancia de peso inadecuados. </span>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-12 slds-p-top_x-large slds-text-align_center">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                </div>
+                <div class="slds-col slds-size_11-of-12 slds-p-top_x-large slds-p-left_small">
+                    <p class="text-patologias-ddc">
+                        Hay una caída o <span style="font-family: MontserratSemiBold;">disminución de la velocidad del crecimiento.</span>
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large">
+                    <p class="text-patologias-ddc" style="font-family: MontserratSemiBold;">
+                        Además, debe considerarse la nutrición enteral en caso de disfunción grave de la masticación y la deglución, o en caso de aspiración durante la alimentación.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1" style="margin-top: 75px;">
+                    <div class="card-fq-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-align_absolute-center slds-p-around_medium">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/PARALISIS_CEREBRAL/PP-DesafiosDelCrecimiento-Icono-Manos-Corazon.png">
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-p-around_large">
+                                <p class="text-card-fq-ddc">
+                                    <span style="font-family: MontserratSemiBold;">El apoyo nutricional personalizado</span> constituye uno de los ejes del tratamiento integral de los niños con parálisis cerebral, debido a los frecuentes desafíos en la alimentación
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 div-container-footer-patologias-ddc">
+                    <div class="container-footer-patologias-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                                <div class="slds-text-align_right" style="position: relative;">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Cucarda-Acompa%C3%B1amiento%20emocional.png"
+                                        style="position: relative; top: -25px;">
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Imagen-Jugar.jpg"
+                                    style="float: left; width: 600px; margin-right: 50px;; margin-bottom: 25px; border-radius: 18px;"/>
+                                <p class="text-footer-patologias-ddc">
+                                    Recibir un diagnóstico o transitar una enfermedad crónica siempre conlleva la necesidad de enfrentar sentimientos que impactan sobre el bienestar emocional, tanto del niño o la niña con la patología como de sus padres o cuidadores.
+                                </p>
+                                <p class="text-footer-patologias-ddc slds-m-top_medium">
+                                    El apoyo emocional para los niños con problemas de salud y sus familias es fundamental para reconocer esos sentimientos, expresarlos, y aprender cómo encararlos para facilitar un estado de ánimo que no solo promueva el bienestar, sino que además favorezca el tratamiento de la patología.
+                                </p>
+                                <p class="text-footer-patologias-ddc slds-m-top_medium">
+                                    Hay mucho que el equipo de salud puede hacer para acompañar a cada paciente y a su familia en la experiencia de vivir con una condición médica crónica. Entre los recursos que los especialistas sugieren a las familias para fomentar el bienestar emocional, se encuentran:
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 items-footer-patologias-ddc">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            A los más pequeños, leerles historias sobre niños u otros personajes que están pasando por la misma situación.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Practicar situaciones médicas con un muñeco. Este juego puede hacerlos sentir que tienen más control.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Las recompensas, como las calcomanías para pegar en el plan de tratamiento, también pueden ayudar.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Hablar abierta y honestamente con el niño o la niña, a un nivel apropiado a su edad y su desarrollo. Conversar sobre las dudas que se le presenten permitirá evitar algunos miedos y brindar mayor confianza.
+                                        </p>        
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Tanto para los padres que necesitan ayuda para procesar sus propios sentimientos como para los niños que también muestran esa dificultad, acudir a un especialista en salud mental puede ser un primer paso importante para sentirse más seguros.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                                <p class="text-fuente-footer-patologias-ddc" style="font-style: italic;">
+                                    Fuente: 
+                                </p>
+                                <p class="text-fuente-footer-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                                    - Garey J, Howard J, Latella Lauren. Mental Health in Kids With Chronic Illness. Child Mind Institute. Disponible en: https://childmind.org/article/mental-health-in-children-with-chronic-illness/ 
+                                </p>
+                                <p class="text-fuente-footer-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                                    - Rohan JM, Verma T. Psychological Considerations in Pediatric Chronic Illness: Case Examples. Int J Environ Res Public Health. 2020 Mar 3;17(5):1644.                            
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <p class="text-fuente-patologias-ddc" style="font-style: italic;">
+                        Fuente: 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - da Silva DCG, de Sá Barreto da Cunha M, de Oliveira Santana A, et al. Malnutrition and nutritional deficiencies in children with cerebral palsy: a systematic review and meta-analysis. Public Health. 2022 Apr;205:192-201. doi: 10.1016/j.puhe.2022.01.024. Epub 2022 Mar 24. PMID: 35339939.
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Scarpato E, Staiano A, Molteni M, et al. Nutritional assessment and intervention in children with cerebral palsy: a practical approach. Int J Food Sci Nutr. 2017 Sep;68(6):763-770. doi: 10.1080/09637486.2017.1289502. Epub 2017 Feb 16. PMID: 28276905.
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Trivić I, Hojsak I. Evaluation and Treatment of Malnutrition and Associated Gastrointestinal Complications in Children with Cerebral Palsy. Pediatr Gastroenterol Hepatol Nutr. 2019 Mar;22(2):122-131. doi: 10.5223/pghn.2019.22.2.122. Epub 2019 Mar 6. PMID: 30899688; PMCID: PMC6416384.
+                    </p>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap" data-id="container-fibrosis-quistica" style="display: none;">
+                <div class="slds-col slds-size_1-of-1 slds-p-top_xx-large top_xx mobile">
+                    <p class="title-orange-patologias-ddc">
+                        Fibrosis quística
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-p-top_x-large slds-align_absolute-center mobile">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/FIBROSIS_QUISTICA/PP-DesafiosDelCrecimiento-Info-50porciento.png"
+                        style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1 mobile">
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        El impacto positivo de las intervenciones nutricionales sobre la calidad de vida
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        La evaluación nutricional periódica por parte de un equipo de atención multidisciplinario es de suma importancia en los niños con fibrosis quística, ya que esta patología está asociada con mayor riesgo de desnutrición. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        La incapacidad del páncreas de funcionar adecuadamente para aprovechar los nutrientes de los alimentos (insuficiencia pancreática) suele estar presente en la mayoría de los niños con fibrosis quística, y es la principal responsable del desequilibrio nutricional.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_7-of-12 slds-p-top_xx-large desktop">
+                    <p class="title-orange-patologias-ddc">
+                        Fibrosis quística
+                    </p>
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        El impacto positivo de las intervenciones nutricionales sobre la calidad de vida
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        <span style="font-family: MontserratSemiBold;">La evaluación nutricional periódica por parte de un equipo de atención multidisciplinario es de suma importancia</span> en los niños con fibrosis quística, ya que esta patología está asociada con mayor riesgo de desnutrición. 
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_x-large">
+                        La incapacidad del páncreas de funcionar adecuadamente para aprovechar los nutrientes de los alimentos (insuficiencia pancreática) suele estar presente en la mayoría de los niños con fibrosis quística, y es la principal responsable del desequilibrio nutricional.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_5-of-12 slds-p-top_xx-large slds-align_absolute-center desktop">
+                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/FIBROSIS_QUISTICA/PP-DesafiosDelCrecimiento-Info-50porciento.png"
+                        class="slds-m-top_x-large" style="border-radius: 18px;">
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <p class="title-violet-patologias-ddc slds-m-top_x-large">
+                        ¿Qué beneficios aporta el apoyo nutricional?
+                    </p>
+                    <p class="text-patologias-ddc slds-m-top_medium">
+                        En la actualidad, los <span style="font-family: MontserratSemiBold;">programas de diagnóstico temprano de desnutrición</span> desde el nacimiento facilitan la intervención nutricional desde el inicio.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                    <div class="container-fibrosis-ddc">
+                        <div class="slds-grid slds-wrap slds-p-top_large slds-p-bottom_large slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_1-of-1 mobile">
+                                <div class="slds-text-align_right" style="position: relative; height: 0px;">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/FIBROSIS_QUISTICA/PP-DesafiosDelCrecimiento-Cucarda.png"
+                                        style="position: relative; top: -50px; right: -50px;">
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 mobile">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/FIBROSIS_QUISTICA/PP-DesafiosDelCrecimiento-Imagen-Fibrosis-quistica.jpg"
+                                    class="slds-align_absolute-center" style="width: 90%; border-radius: 18px;">
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 mobile">
+                                <div class="slds-grid slds-wrap slds-p-left_medium">
+                                    <div class="slds-col slds-size_1-of-12 slds-text-align_center slds-m-top_x-large">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-patologias-ddc">
+                                            Mejor crecimiento a largo plazo. 
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-text-align_center slds-m-top_x-large">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-patologias-ddc">
+                                            Menos exacerbaciones pulmonares. 
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-patologias-ddc">
+                                            Mejor pronóstico de la enfermedad.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 desktop">
+                                <div class="slds-text-align_right" style="position: relative; height: 0px;">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/FIBROSIS_QUISTICA/PP-DesafiosDelCrecimiento-Cucarda.png"
+                                        class="img-titulo-acordeon">
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12 slds-align_absolute-center desktop">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/FIBROSIS_QUISTICA/PP-DesafiosDelCrecimiento-Imagen-Fibrosis-quistica.jpg"
+                                    class="img-fibrosis-quistica">
+                            </div>
+                            <div class="slds-col slds-size_6-of-12 desktop">
+                                <div class="slds-grid slds-wrap slds-m-top_xx-large slds-m-bottom_xx-large">
+                                    <div class="slds-col slds-size_1-of-12">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12">
+                                        <p class="text-patologias-ddc">
+                                            Mejor crecimiento a largo plazo. 
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large">
+                                        <p class="text-patologias-ddc">
+                                            Menos exacerbaciones pulmonares. 
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large">
+                                        <p class="text-patologias-ddc">
+                                            Mejor pronóstico de la enfermedad.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                    <p class="text-patologias-ddc">
+                        Entre los objetivos que los profesionales de la salud buscan alcanzar mediante el apoyo nutricional, se destacan los siguientes:
+                    </p>
+                    <div class="slds-grid slds-wrap items-footer-patologias-ddc">
+                        <div class="slds-col slds-size_1-of-12 slds-text-align_center slds-m-top_x-large">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                <span style="font-family: MontserratSemiBold;">La ingesta calórica</span> en niños con fibrosis quística <span style="font-family: MontserratSemiBold;">debe ser mayor</span> que la recomendada para la edad, con un porcentaje importante de estas <span style="font-family: MontserratSemiBold;">calorías procedente de grasas.</span>
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-text-align_center slds-m-top_x-large">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                Se estima que la relación entre el peso (en kilogramos) y la estatura (en metros), o <span style="font-family: MontserratSemiBold;">índice de masa corporal</span>, de los niños con fibrosis quística debe ser <span style="font-family: MontserratSemiBold;">superior al percentil 50</span>; en los lactantes, el peso debe alcanzar el percentil 50 a los 2 años de edad.
+                            </p>
+                        </div>
+                        <div class="slds-col slds-size_1-of-12 slds-text-align_center slds-m-top_x-large">
+                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                        </div>
+                        <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                            <p class="text-patologias-ddc">
+                                En <span style="font-family: MontserratSemiBold;">niños con insuficiencia pancreática</span> es necesario administrar suplementos de <span style="font-family: MontserratSemiBold;">vitaminas liposolubles.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                    <p class="text-patologias-ddc" style="font-family: MontserratSemiBold;">
+                        Aunque todos los macronutrientes son importantes en la fibrosis quística, la ingesta de grasas y de proteínas sigue siendo el punto central de la nutrición.
+                    </p>
+                </div>
+                <div class="slds-col slds-size_1-of-1" style="margin-top: 75px;">
+                    <div class="card-fq-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-align_absolute-center slds-p-around_medium">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/FIBROSIS_QUISTICA/PP-DesafiosDelCrecimiento-Icono-Pulmones.png">
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-p-around_large">
+                                <p class="text-card-fq-ddc">
+                                    Las intervenciones para mejorar el estado nutricional en niños con fibrosis quística <span style="font-family: MontserratSemiBold;">tienen un impacto positivo en el peso y el estado respiratorio,</span> incluida la alimentación suplementaria (enteral y parenteral).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 div-container-footer-patologias-ddc">
+                    <div class="container-footer-patologias-ddc">
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                                <div class="slds-text-align_right" style="position: relative;">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Cucarda-Acompa%C3%B1amiento%20emocional.png"
+                                        style="position: relative; top: -25px;">
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                                <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Imagen-Jugar.jpg"
+                                    style="float: left; width: 600px; margin-right: 50px;; margin-bottom: 25px; border-radius: 18px;"/>
+                                <p class="text-footer-patologias-ddc">
+                                    Recibir un diagnóstico o transitar una enfermedad crónica siempre conlleva la necesidad de enfrentar sentimientos que impactan sobre el bienestar emocional, tanto del niño o la niña con la patología como de sus padres o cuidadores.
+                                </p>
+                                <p class="text-footer-patologias-ddc slds-m-top_medium">
+                                    El apoyo emocional para los niños con problemas de salud y sus familias es fundamental para reconocer esos sentimientos, expresarlos, y aprender cómo encararlos para facilitar un estado de ánimo que no solo promueva el bienestar, sino que además favorezca el tratamiento de la patología.
+                                </p>
+                                <p class="text-footer-patologias-ddc slds-m-top_medium">
+                                    Hay mucho que el equipo de salud puede hacer para acompañar a cada paciente y a su familia en la experiencia de vivir con una condición médica crónica. Entre los recursos que los especialistas sugieren a las familias para fomentar el bienestar emocional, se encuentran:
+                                </p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 items-footer-patologias-ddc">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            A los más pequeños, leerles historias sobre niños u otros personajes que están pasando por la misma situación.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Practicar situaciones médicas con un muñeco. Este juego puede hacerlos sentir que tienen más control.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Las recompensas, como las calcomanías para pegar en el plan de tratamiento, también pueden ayudar.
+                                        </p>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Hablar abierta y honestamente con el niño o la niña, a un nivel apropiado a su edad y su desarrollo. Conversar sobre las dudas que se le presenten permitirá evitar algunos miedos y brindar mayor confianza.
+                                        </p>        
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-12 slds-m-top_x-large slds-text-align_center">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/2_PATOLOGIAS_CRONICAS/ACOMPA%C3%91AMIENTO_EMOCIONAL/PP-DesafiosDelCrecimiento-Tilde.png">
+                                    </div>
+                                    <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                        <p class="text-footer-patologias-ddc">
+                                            Tanto para los padres que necesitan ayuda para procesar sus propios sentimientos como para los niños que también muestran esa dificultad, acudir a un especialista en salud mental puede ser un primer paso importante para sentirse más seguros.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                                <p class="text-fuente-footer-patologias-ddc" style="font-style: italic;">
+                                    Fuente: 
+                                </p>
+                                <p class="text-fuente-footer-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                                    - Garey J, Howard J, Latella Lauren. Mental Health in Kids With Chronic Illness. Child Mind Institute. Disponible en: https://childmind.org/article/mental-health-in-children-with-chronic-illness/ 
+                                </p>
+                                <p class="text-fuente-footer-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                                    - Rohan JM, Verma T. Psychological Considerations in Pediatric Chronic Illness: Case Examples. Int J Environ Res Public Health. 2020 Mar 3;17(5):1644.                            
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-m-bottom_xx-large">
+                    <p class="text-fuente-patologias-ddc" style="font-style: italic;">
+                        Fuente: 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Brownell JN, Bashaw H, Stallings VA. Growth and Nutrition in Cystic Fibrosis. Semin Respir Crit Care Med. 2019 Dec;40(6):775-791. doi: 10.1055/s-0039-1696726. Epub 2019 Oct 28. PMID: 31659726. 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Larson-Nath C, Goday P. Malnutrition in Children With Chronic Disease. Nutr Clin Pract. 2019 Jun;34(3):349-358. doi: 10.1002/ncp.10274. Epub 2019 Apr 8. PMID: 30963628. 
+                    </p>
+                    <p class="text-fuente-patologias-ddc slds-m-top_medium" style="font-style: italic;">
+                        - Zolin A, McKone EF, van Rens J, et al. ECFSPR annual report 2010. Denmark: European Cystic Fibrosis Society; 2014.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <template if:true={footer}>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center slds-m-top_xx-large">
+                <button
+                    class="back-button-kdi-desafios"
+                    onclick={scrollTo}>
+                    <lightning-icon 
+                        icon-name="utility:chevronup"
+                        alternative-text="up"
+                        size="small"
+                        title="Up"
+                        variant="inverse"
+                        style="margin-right: 5px;">
+                    </lightning-icon>
+                    VOLVER AL MENÚ
+                </button>
+            </div>
+        </div>
+    </template>
+</template>

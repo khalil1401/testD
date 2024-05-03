@@ -1,0 +1,118 @@
+.form-datos{
+    width: 328px;
+}
+
+.card-envio{
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 22px;
+    border-radius: 8px;
+    width: 328px;
+    height: 100px;
+    background-color: #FAFBFB;
+}
+
+.icon-title-form{
+    width: 22px; 
+    position: relative; 
+    left: 85px;
+}
+
+.text-title-form {
+    font-family: BariolBold;    
+    font-size: 16px;
+    line-height: 17.63px;
+    color: #1C1B1F;
+}
+
+.hr-line::before {
+    content: '';
+    display: block;
+    width: 282px;
+    border-top: 1px solid #1C1B1F;
+    transform: scaleY(0.5);
+}
+
+.pedido-title{
+    font-family: BariolBold;
+    font-size: 16px;
+    line-height: 17.63px;
+    color: #313183;
+}
+
+.pedido-text{
+    font-family: BariolBold;
+    font-size: 14px;
+    line-height: 15.43px;
+}
+
+.pedido-link{
+    font-family: BariolBold;
+    font-size: 14px;
+    line-height: 15.43px;
+    color: #313183;
+    text-decoration: underline;
+}
+
+.fade-in-right-left{
+    animation: fadeInRightLeft 0.25s;
+}
+
+@keyframes fadeInRightLeft {
+    0% { 
+        opacity: 1;
+        transform: translateX(412px);
+    }
+
+    100% { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 412px) {
+    .form-datos{
+        width: 380px;
+    }
+
+    .card-envio{
+        width: 380px;
+        height: 115px;
+    }
+
+    .text-title-form{
+        font-size: 20px;
+        line-height: 22.04px;
+    }
+
+    .pedido-title{
+        font-size: 20px;
+        line-height: 22.04px;
+    }
+
+    .pedido-text{
+        font-size: 16px;
+        line-height: 17.63px;
+    }
+
+    .pedido-link{
+        font-size: 16px;
+        line-height: 17.63px;
+    }
+}
+
+@media (min-width: 768px) {
+    .form-datos{
+        width: 596px;
+    }
+    
+    .card-envio{
+        width: 478px;
+        height: 134px;
+    }
+
+    .icon-title-form{
+        left: auto;
+        right: -185px;
+    }
+}

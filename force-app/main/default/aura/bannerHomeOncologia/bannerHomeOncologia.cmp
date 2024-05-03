@@ -1,0 +1,17 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="altoMaximo" type="String" default="100"/>
+	<aura:attribute name="altoMinimo" type="String" default="100"/>
+	<aura:attribute name="textoBannerEnHTML" type="String"/>
+
+    <div>
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-1 slds-large-size_10-of-12">
+                <aura:unescapedHtml value="{!v.textoBannerEnHTML}" />
+            </div>
+            <div class="slds-col slds-large-size_2-of-12">
+            </div>
+        </div>
+    </div>
+
+</aura:component>

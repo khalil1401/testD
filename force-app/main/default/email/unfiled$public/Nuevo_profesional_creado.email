@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<span style="background-color: rgb(255, 255, 255);">Hola,</span><div><br></div><div>El APM&nbsp;{!Account.CreatedBy} ha creado un nuevo Profesional desde la aplicación móvil. Para revisarlo, debe entrar en la plataforma y revisar el registro del mismo.</div><div><br></div><div>El link del Profesional es la siguiente es el siguiente:&nbsp;{!Account.Link}</div><div><br></div><div>Gracias.</div>]]></td>
+</tr>
+</table>

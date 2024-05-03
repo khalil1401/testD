@@ -1,0 +1,34 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_6-of-12 slds-large-size_3-of-12 slds-text-align_center">
+            <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-IconoPescadoOncologia%282022-05-20%29.png" alt="img"
+                    class="imagenImagenesBalanceOncologia"/>
+            <p  class="slds-m-top_small textoImagenesBalanceOncologia">
+                Carnes y pescado.
+            </p>
+        </div>
+        <div class="slds-col slds-size_6-of-12 slds-large-size_3-of-12 slds-text-align_center">
+            <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-IconoAceiteOncologia%282022-05-20%29.png" alt="img"
+                    class="imagenImagenesBalanceOncologia"/>
+            <p  class="slds-m-top_small textoImagenesBalanceOncologia">
+                Aceite, manteca, margarina, crema, frutos secos.
+            </p>
+        </div>
+        <div class="slds-col slds-size_6-of-12 slds-large-size_3-of-12 slds-text-align_center">
+            <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-IconoPastaOncologia%282022-05-20%29.png" alt="img"
+                    class="imagenImagenesBalanceOncologia"/>
+            <p  class="slds-m-top_small textoImagenesBalanceOncologia">
+                Arroz, pasta, sémola, pan, legumbres, cerales.
+            </p>
+        </div>
+        <div class="slds-col slds-size_6-of-12 slds-large-size_3-of-12 slds-text-align_center">
+            <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-BALANCE/PP-IconoVegetalOncologia%282022-05-20%29.png" alt="img"
+                    class="imagenImagenesBalanceOncologia"/>
+            <p  class="slds-m-top_small textoImagenesBalanceOncologia">
+                Frutas y hortalizas.
+            </p>
+        </div>
+    </div>
+
+</aura:component>

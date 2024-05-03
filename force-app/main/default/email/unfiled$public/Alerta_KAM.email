@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div style=""><div style=""><font face="arial">Hola, se ha procesado un nuevo Kit de Inicio con la siguiente información:</font></div><div style=""><font face="arial"><br></font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">{!Envio_sin_Cargo__c.Datos_de_cuenta_para_KAM__c}</div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div></div><div style=""><font color="#222222" face="Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif">Para mas detalle, ingresar a este</font><span style="color: rgb(34, 34, 34); font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 12pt; background-color: rgb(255, 255, 255);">&nbsp;<a href="{!Envio_sin_Cargo__c.Link}" style="">link</a>.</span></div>]]></td>
+</tr>
+</table>

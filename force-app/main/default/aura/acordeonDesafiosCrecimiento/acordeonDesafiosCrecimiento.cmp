@@ -1,0 +1,66 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="activeSections" type="List" default="" />
+
+    <div class="container-accordion-ddc">
+        <lightning:accordion
+            allowMultipleSectionsOpen="true"
+            onsectiontoggle="{!c.handleSectionToggle}"
+            activeSectionName="{! v.activeSections}">
+            <lightning:accordionSection name="A" label="¿Qué cuidados son necesarios para incorporar la bomba de nutrición enteral en el día a día?">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_2-of-12 slds-m-top_medium slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/5_BOMBA_ENTERAL/CUIDADOS_NECESARIOS/PP_DesafiosDelCrecimiento_Icono_Reloj.png"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_medium slds-p-left_medium">
+                        Siempre es conveniente establecer un <span style="font-family: MontserratSemiBold;">horario de alimentación enteral</span> que no se superponga con otras actividades del niño o la niña (como el baño, los traslados o las sesiones de kinesiología, entre otras). Así, se evita el posible reflujo del alimento enteral.
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-m-top_medium slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/5_BOMBA_ENTERAL/CUIDADOS_NECESARIOS/PP_DesafiosDelCrecimiento_Icono_Bebe.png"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_medium slds-p-left_medium">
+                        La <span style="font-family: MontserratSemiBold;">mejor posición</span> del niño o la niña durante la alimentación con bomba de nutrición enteral es <span style="font-family: MontserratSemiBold;">semisentada o sentada</span>. Es conveniente que no estén acostados para evitar el reflujo.
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-m-top_medium slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/5_BOMBA_ENTERAL/CUIDADOS_NECESARIOS/PP_DesafiosDelCrecimiento_Icono_Canilla.png"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_medium slds-p-left_medium">
+                        Cada vez que tengas que desconectar el tubo de administración y la sonda del equipo, <span style="font-family: MontserratSemiBold;">enjuagalos bien con agua segura</span> en ese mismo momento para que no queden restos del alimento enteral que puedan obstruir luego su correcto flujo. 
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-m-top_medium slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/5_BOMBA_ENTERAL/CUIDADOS_NECESARIOS/PP_DesafiosDelCrecimiento_Icono_Loop.png"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_medium slds-p-left_medium">
+                        Para evitar lesiones en la piel en el lugar donde se apoya la sonda nasal, es aconsejable rotarla cada vez. En el caso de las gastrostomías, es importante higienizar la zona de acuerdo con las explicaciones que te darán los profesionales para prevenir las dermatitis.
+                    </div>
+                </div>
+            </lightning:accordionSection>
+            <lightning:accordionSection name="B" label="¿Qué debo tener en cuenta respecto de las fórmulas enterales?">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_2-of-12 slds-m-top_medium slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/5_BOMBA_ENTERAL/FORMULAS_ENTERALES/PP_DesafiosDelCrecimiento_Icono_Lata.png"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_medium slds-p-left_medium">
+                        Recordá que las fórmulas enterales en <span style="font-family: MontserratSemiBold;">polvo deben ser utilizadas dentro de un lapso de 4 horas</span>, por lo que siempre es conveniente preparar la cantidad que vas a usar, siguiendo las instrucciones que se detallan en el envase. Las fórmulas enterales líquidas listas para usar ya vienen en un pack o botella herméticamente cerrado y esterilizado, con un pico adaptador que permite su correcta conexión a la guía de la bomba de nutrición enteral y posibilita su utilización en forma segura por 24 hs.
+                    </div>
+                    <div class="slds-col slds-size_2-of-12 slds-m-top_medium slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/5_BOMBA_ENTERAL/FORMULAS_ENTERALES/PP_DesafiosDelCrecimiento_Icono_Fuego.png"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_medium slds-p-left_medium">
+                        <span style="font-family: MontserratSemiBold;">Nunca deben calentarse</span>, sino que se administran a temperatura ambiente.
+                    </div>
+                </div>
+            </lightning:accordionSection>
+            <lightning:accordionSection name="C" label="¿Qué pasa si se corta la luz?">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_2-of-12 slds-m-top_medium slds-align_absolute-center">
+                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/5_BOMBA_ENTERAL/LUZ/PP_DesafiosDelCrecimiento_Icono_Cable.png"/>
+                    </div>
+                    <div class="slds-col slds-size_10-of-12 slds-m-top_medium slds-p-left_medium">
+                        <span style="font-family: MontserratSemiBold;">La solución es estar preparados</span>. La autonomía de la bomba de nutrición enteral es de aproximadamente 8 a 9 horas. Por eso, es importante mantener el equipo conectado a la corriente eléctrica, siempre que se pueda, para <span style="font-family: MontserratSemiBold;">asegurar una adecuada carga de la batería</span>. Así, se evitarán imprevistos ante un corte de luz.
+                    </div>
+                </div>
+            </lightning:accordionSection>
+        </lightning:accordion>
+    </div>
+</aura:component>

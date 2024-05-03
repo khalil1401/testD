@@ -1,0 +1,12 @@
+<design:component >
+
+    <design:attribute name="recursoEstatico" label="URL de la imagen de fondo"/>
+    <design:attribute name="recursoEstaticoMobile" label="URL de la imagen de fondo Mobile"/>
+    <design:attribute name="titulo" label="Titulo de header"/>
+    <design:attribute name="linea" label="Linea de header"/>
+    <design:attribute name="primeraBajada" label="Primer subtitulo de header"/>
+    <design:attribute name="segundaBajada" label="Segundo subtitulo de header"/>
+    <design:attribute name="recursoEstaticoBoton" label="Nombre de recurso estático para el boton"/>
+    <design:attribute name="backgroundPosition" label="Posición de la imagen de background"/>
+
+</design:component>

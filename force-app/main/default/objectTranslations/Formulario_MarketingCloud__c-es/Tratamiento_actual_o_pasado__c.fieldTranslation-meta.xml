@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Tratamiento_actual_o_pasado__c</name>
+    <picklistValues>
+        <masterLabel>Cirugia</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Combinado(quimio-radioterapia)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quimioterapia</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Radioterapia</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

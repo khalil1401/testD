@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Tiempo_desde_el_dx__c</name>
+    <picklistValues>
+        <masterLabel>Entre 6 meses y un año de diagnóstico</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Menos de 6 meses de diagnóstico</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Más de 1 año de diagnóstico</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

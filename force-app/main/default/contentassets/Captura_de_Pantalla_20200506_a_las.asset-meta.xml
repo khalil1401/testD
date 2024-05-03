@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+    <language>es</language>
+    <masterLabel>Captura_de_Pantalla_20200506_a_las</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>Captura de Pantalla 2020-05-06 a la(s) 11.36.54.png</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

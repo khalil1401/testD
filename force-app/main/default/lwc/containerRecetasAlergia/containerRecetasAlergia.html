@@ -1,0 +1,67 @@
+<template>
+    <div class="slds-m-around_medium">
+        <div class="slds-grid slds-wrap slds-align_absolute-center">
+            <template if:true={tiposDeRecetas}>
+                <div class="slds-col slds-size_1-of-1 slds-large-size_3-of-12">
+                    <div
+                        class="buttonTipoReceta slds-text-align_center"
+                        data-id=""
+                        onclick={seleccionarTipo}>
+                        TODAS
+                    </div>
+                </div>
+                <template for:each={tiposDeRecetas} for:item="tipo">
+                    <div key={tipo} class="slds-col slds-size_1-of-1 slds-large-size_3-of-12">
+                        <div
+                            class="buttonTipoReceta slds-text-align_center"
+                            data-id={tipo}
+                            onclick={seleccionarTipo}>
+                            {tipo}
+                        </div>
+                    </div>
+                </template>
+            </template>
+        </div>
+        <div class="slds-grid slds-wrap slds-m-top_medium slds-m-bottom_medium">
+            <template if:true={recetas}>
+                <template if:true={verMas}>
+                    <template for:each={recetas} for:item="receta">
+                        <div key={receta.Title} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                            <c-card-receta-alergia
+                                id-receta={receta.Id}
+                                titulo-receta={receta.Title}
+                                imagen-receta={receta.Imagen__c}
+                                onselected={verDetalles}>
+                            </c-card-receta-alergia>
+                        </div>
+                    </template>
+                </template>
+                <template if:false={verMas}>
+                    <template for:each={recetasComprimidas} for:item="receta">
+                        <div key={receta.Title} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                            <c-card-receta-alergia
+                                id-receta={receta.Id}
+                                titulo-receta={receta.Title}
+                                imagen-receta={receta.Imagen__c}>
+                            </c-card-receta-alergia>
+                        </div>
+                    </template>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-1 slds-m-bottom_xx-large slds-m-top_x-large slds-text-align_center">
+                        <span 
+                            class="botonVerTodasLasRecetas"
+                            onclick={handleclick}>
+                            VER MÁS RECETAS
+                        </span>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </div>
+    <div class="container-aviso-legal">
+        <div class="lineaCompletaAlergia"></div>
+        <p class="texto-aviso-legal">
+            Material exclusivo para profesionales de la salud. Prohibida su difusión al público en general. Cada profesional de la salud puede entregar este material a sus pacientes en tratamiento con Alergia a la Proteína de Leche de Vaca (APLV). Esta información no sustituye la recomendación de un médico. Consultar siempre al médico o nutricionista.
+        </p>
+        <div class="lineaCompletaAlergia"></div>
+    </div>
+</template>

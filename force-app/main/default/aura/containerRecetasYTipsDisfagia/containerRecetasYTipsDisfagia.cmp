@@ -1,0 +1,46 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+
+    <!--Header-->
+    <aura:attribute name="tituloHeader" type="String"/>
+	<aura:attribute name="lineaHeader" type="String"/>
+	<aura:attribute name="primeraBajadaHeader" type="String"/>
+	<aura:attribute name="segundaBajadaHeader" type="String"/>
+    <!--Banner-->
+	<aura:attribute name="tituloImagenTexto" type="String"/>
+	<aura:attribute name="textoPrimeraBajadaImagenTexto" type="String"/>
+	<aura:attribute name="tipoDeReceta" type="String" default=""/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <c:headerStroke
+        recursoEstatico="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/OPTIMIZACION/DISFAGIA-RECETAS_OPTIMIZADA/PP-imagenRecetasHeaderStroke%282022-05-24%29_2_11zon.jpeg"
+        recursoEstaticoMobile="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-RECETAS/PP-imagenRecetasHeaderMobileStroke%282022-05-24%29.png"
+        titulo="{!v.tituloHeader}"
+        linea="{!v.lineaHeader}"
+        primeraBajada="{!v.primeraBajadaHeader}"
+        segundaBajada="{!v.segundaBajadaHeader}"
+        recursoEstaticoBoton="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/DISFAGIA-RECETAS/PP-imagenBotonHeaderBienvenidaStroke%282022-05-24%29%20%282%29.png"
+        backgroundPosition="top"/>
+    <c:navegacionStroke
+    ></c:navegacionStroke>
+    <aura:if isTrue="{!v.tipoDeReceta == ''}">
+        <c:containerImagenTextoStroke
+            sinImagen="true"
+            height="300px"
+            heightMobile="550px"
+            recursoEstaticoBackground="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DISFAGIA/OPTIMIZACION/DISFAGIA-RECETAS_OPTIMIZADA/PP-imagenBackgroundRecetasStroke%282022-05-24%29_1_11zon.jpeg"
+            titulo="{!v.tituloImagenTexto}"
+            textoPrimeraBajada="{!v.textoPrimeraBajadaImagenTexto}"/>
+    </aura:if>
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-large-size_3-of-12 slds-medium-size_1-of-12">
+        </div>
+        <div class="slds-col slds-large-size_6-of-12 slds-medium-size_10-of-12 slds-size_1-of-1">
+            <c:containerRecetasStroke onvaluechange="{!c.getValueFromLwc}"/>
+        </div>
+        <div class="slds-col slds-large-size_3-of-12 slds-medium-size_1-of-12">
+        </div>
+    </div>
+
+</aura:component>

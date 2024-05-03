@@ -1,0 +1,6 @@
+<design:component >
+
+    <design:attribute name="backgroundPrimerColorGradiente" label="Primer color de fondo para gradiente"/>
+    <design:attribute name="backgroundSegundoColorGradiente" label="Segundo color de fondo para gradiente"/>
+
+</design:component>

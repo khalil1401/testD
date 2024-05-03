@@ -1,0 +1,311 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+    
+    <aura:attribute name="activeSections" type="List" default="" />
+
+    <lightning:navigation aura:id="navService"/>
+
+    <div class="container-accordion-ddc">
+        <lightning:accordion
+            allowMultipleSectionsOpen="true"
+            onsectiontoggle="{!c.handleSectionToggle}"
+            activeSectionName="{! v.activeSections}">
+            <lightning:accordionSection name="A" label="Tratamiento nutricional ORAL">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                        <p class="title-acordeon-tratamiento-ddc slds-m-top_x-large">
+                            Acompañando el crecimiento de niños que viven con una patología crónica o aguda
+                        </p>
+                        <p class="text-acordeon-tratamiento-ddc slds-m-top_medium">
+                            Como padres somos testigos permanentes del rápido crecimiento y desarrollo de los niños durante la infancia. Por eso es tan importante <span style="font-family: MontserratSemiBold;">asegurarnos que reciban un adecuado aporte de nutrientes</span>, en especial si el niño o la niña presentan alguna patología crónica o aguda que puede alterar su alimentación. 
+                        </p>
+                        <p class="text-acordeon-tratamiento-ddc slds-m-top_medium">
+                            Afortunadamente, en la actualidad los profesionales de la salud cuentan con diversas opciones a la hora de pensar cuál será el mejor tratamiento nutricional para cada paciente.
+                        </p>
+                        <p class="title-acordeon-tratamiento-ddc slds-m-top_xx-large">
+                            ¿En qué consiste el tratamiento nutricional oral?
+                        </p>
+                        <p class="text-acordeon-tratamiento-ddc slds-m-top_medium">
+                            Además de un <span style="font-family: MontserratSemiBold;">plan de alimentación personalizado</span>, el tratamiento nutricional suele incluir <span style="font-family: MontserratSemiBold;">suplementos nutricionales orales</span>, que son fórmulas con una composición específica de nutrientes, especialmente diseñada <span style="font-family: MontserratSemiBold;">para completar las necesidades</span> que no se pueden cubrir con la dieta.
+                        </p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                        <div class="container-suplementos-orales-ddc">
+                            <div class="slds-grid slds-wrap slds-p-top_large slds-p-bottom_large slds-grid_vertical-align-center">
+                                <div class="slds-col slds-size_1-of-1 mobile">
+                                    <div class="slds-text-align_right" style="position: relative; height: 0px;">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ORAL/PP-DesafiosDelCrecimiento-Cucarda.png"
+                                            style="position: relative; top: -50px;"/>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 mobile">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ORAL/PP-DesafiosDelCrecimiento-Suplemento-oral.jpg"
+                                        style="width: 90%;" class="slds-align_absolute-center"/>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 mobile">
+                                    <div class="slds-grid slds-wrap slds-m-top_medium slds-p-left_medium">
+                                        <div class="slds-col slds-size_1-of-12 slds-m-top_x-large">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Tilde.png"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small slds-p-right_small">
+                                            <p class="text-acordeon-tratamiento-ddc">
+                                                Mejoran de la ingesta de nutrientes, el peso y la calidad de vida.
+                                            </p>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-12 slds-m-top_x-large">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Tilde.png"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small slds-p-right_small">
+                                            <p class="text-acordeon-tratamiento-ddc">
+                                                Reducción tanto de los ingresos y las readmisiones hospitalarios como de las complicaciones.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 desktop">
+                                    <div class="slds-text-align_right" style="position: relative; height: 0px;">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ORAL/PP-DesafiosDelCrecimiento-Cucarda.png"
+                                            class="img-titulo-acordeon"/>
+                                    </div>        
+                                </div>
+                                <div class="slds-col slds-size_6-of-12 slds-align_absolute-center desktop">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ORAL/PP-DesafiosDelCrecimiento-Suplemento-oral.jpg"
+                                        style="width: 90%; border-radius: 18px;"/>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12 slds-p-left_large desktop">
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-12">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Tilde.png"
+                                                style="width: 90%;"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12">
+                                            <p class="text-acordeon-tratamiento-ddc">
+                                                Mejoran de la ingesta de nutrientes, el peso y la calidad de vida.
+                                            </p>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-12 slds-m-top_x-large">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Tilde.png"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12 slds-m-top_x-large">
+                                            <p class="text-acordeon-tratamiento-ddc">
+                                                Reducción tanto de los ingresos y las readmisiones hospitalarios como de las complicaciones.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                        <p class="title-acordeon-tratamiento-ddc slds-m-top_x-large">
+                            El equipo de salud indicó un suplemento de alta densidad energética, ¿qué significa eso?
+                        </p>
+                        <p class="text-acordeon-tratamiento-ddc slds-m-top_medium">
+                            El uso de suplementos nutricionales de alta densidad energética promueve una mayor ingesta de calorías totales diarias, proteínas y otros micronutrientes clave, en comparación con los suplementos de densidad energética estándar. Esta alternativa favorece el mantenimiento de la ingesta nutricional a través de la alimentación.
+                        </p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1" style="margin-top: 75px;">
+                        <div class="card-tratamientos-ddc">
+                            <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_3-of-12 slds-align_absolute-center slds-p-around_medium">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ORAL/PP-DesafiosDelCrecimiento-Icono-Cohete.png"/>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_9-of-12 slds-p-around_large">
+                                    <p class="text-card-tratamientos-ddc">
+                                        El uso de suplementos orales de bajo volumen y alta densidad energética, específicos para pediatría, mejora la ingesta de nutrientes y el crecimiento de los niños que requieren apoyo nutricional.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                        <p class="text-fuente-tratamientos-ddc" style="font-style: italic;">
+                            Fuente: 
+                        </p>
+                        <p class="text-fuente-tratamientos-ddc slds-m-top_medium" style="font-style: italic;">
+                            - Hubbard GP, Fry C, Sorensen K, Casewell C, et al. Energy-dense, low-volume paediatric oral nutritional supplements improve total nutrient intake and increase growth in paediatric patients requiring nutritional support: results of a randomised controlled pilot trial. Eur J Pediatr. 2020 Sep;179(9):1421-30.
+                        </p>
+                    </div>
+                </div>
+            </lightning:accordionSection>
+            <lightning:accordionSection name="B" label="Tratamiento nutricional ENTERAL">
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                        <p class="title-acordeon-tratamiento-ddc slds-m-top_x-large">
+                            Una solución cuando la alimentación oral no cubre las necesidades de nutrientes
+                        </p>
+                        <p class="text-acordeon-tratamiento-ddc slds-m-top_large">
+                            Cuando la alimentación oral de los niños no es posible o no es suficiente, el uso de una <span style="font-family: MontserratSemiBold;">sonda enteral</span> puede ser una alternativa viable, porque permite el aporte de nutrientes directamente al estómago o a una porción del intestino delgado llamada yeyuno, mediante fórmulas específicas.
+                        </p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                        <div class="container-suplementos-orales-ddc">
+                            <div class="slds-grid slds-wrap slds-p-top_large slds-p-bottom_large slds-grid_vertical-align-center">
+                                <div class="slds-col slds-size_1-of-1 mobile">
+                                    <div class="slds-text-align_right" style="position: relative; height: 0px;">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Cucarda-Acompa%C3%B1amiento-emocional.png"
+                                            style="position: relative; top: -50px;"/>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-align_absolute-center mobile">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Nutricion-Enteral.jpg"
+                                        style="width: 90%; border-radius: 18px;" class="slds-align_absolute-center"/>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 mobile">
+                                    <div class="slds-grid slds-wrap slds-p-left_small">
+                                        <div class="slds-col slds-size_1-of-12 slds-m-top_x-large">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Tilde.png"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                            <p class="text-acordeon-tratamiento-ddc">
+                                                Permite restablecer tempranamente el funcionamiento intestinal cuando éste se ve alterado por patologías crónicas o agudas.
+                                            </p>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-12 slds-m-top_x-large">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Tilde.png"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                            <p class="text-acordeon-tratamiento-ddc">
+                                                Disminuye el riesgo de infecciones. 
+                                            </p>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-12 slds-m-top_x-large">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Tilde.png"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                            <p class="text-acordeon-tratamiento-ddc">
+                                                Contribuye a acortar el tiempo de internación. 
+                                            </p>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-12 slds-m-top_x-large">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Tilde.png"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12 slds-m-top_x-large slds-p-left_small">
+                                            <p class="text-acordeon-tratamiento-ddc">
+                                                Evita cambios en el funcionamiento normal del intestino, al aportar nutrientes directamente al tracto gastrointestinal.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 desktop">
+                                    <div class="slds-text-align_right" style="position: relative; height: 0px;">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Cucarda-Acompa%C3%B1amiento-emocional.png"
+                                            class="img-titulo-acordeon"/>
+                                    </div>        
+                                </div>
+                                <div class="slds-col slds-size_6-of-12 slds-align_absolute-center desktop">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Nutricion-Enteral.jpg"
+                                        style="width: 90%; border-radius: 18px;"/>
+                                </div>
+                                <div class="slds-col slds-size_6-of-12 desktop">
+                                    <div class="slds-grid slds-wrap slds-p-left_medium slds-m-top_xx-large slds-m-bottom_xx-large">
+                                        <div class="slds-col slds-size_1-of-12">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Tilde.png"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12">
+                                            <p class="text-acordeon-tratamiento-ddc">
+                                                Permite restablecer tempranamente el funcionamiento intestinal cuando éste se ve alterado por patologías crónicas o agudas.
+                                            </p>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-12 slds-m-top_large">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Tilde.png"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12 slds-m-top_large">
+                                            <p class="text-acordeon-tratamiento-ddc">
+                                                Disminuye el riesgo de infecciones. 
+                                            </p>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-12 slds-m-top_large">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Tilde.png"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12 slds-m-top_large">
+                                            <p class="text-acordeon-tratamiento-ddc">
+                                                Contribuye a acortar el tiempo de internación. 
+                                            </p>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-12 slds-m-top_large">
+                                            <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Tilde.png"/>
+                                        </div>
+                                        <div class="slds-col slds-size_11-of-12 slds-m-top_large">
+                                            <p class="text-acordeon-tratamiento-ddc">
+                                                Evita cambios en el funcionamiento normal del intestino, al aportar nutrientes directamente al tracto gastrointestinal.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_x-large">
+                        <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                            <p class="title-acordeon-tratamiento-ddc">
+                                ¿En qué consiste la nutrición enteral por sonda?
+                            </p>
+                            <p class="text-acordeon-tratamiento-ddc slds-m-top_medium">
+                                La sonda es un tubo fino, largo y flexible, que se introduce por la nariz o la boca hasta el estómago o el intestino para hacer llegar a través de él los suplementos nutricionales enterales. Es importante que sepas que la colocación de la sonda puede generar alguna molestia inicial durante unos segundos, pero después tu hijo o hija <span style="font-family: MontserratSemiBold;">no sentirá ni incomodidad ni dolor.</span>
+                            </p>
+                            <p class="text-acordeon-tratamiento-ddc slds-m-top_x-large" style="font-family: MontserratSemiBold;">
+                                Una vez que los niños reciben el alta hospitalaria, la nutrición enteral por sonda puede continuar en casa. En esos casos, el equipo de profesionales entrenará a los padres o cuidadores sobre su uso adecuado y los recaudos a tener en cuenta. 
+                            </p>
+                            <p class="text-acordeon-tratamiento-ddc slds-m-top_x-large">
+                                En ocasiones, cuando es necesario mantener la alimentación por sonda durante varios meses, se realiza una <span style="font-family: MontserratSemiBold;">gastrostomía.</span>
+                            </p>
+                        </div>    
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                        <div class="box-grastrotomia">
+                            <p class="title-acordeon-tratamiento-ddc">
+                                ¿Qué es la gastrostomía?
+                            </p>
+                            <p class="text-acordeon-tratamiento-ddc slds-m-top_medium">
+                                Se trata de un procedimiento que permite introducir <span style="font-family: MontserratSemiBold;">la sonda directamente en el estómago o el intestino</span> mediante una pequeña incisión que se realiza en el quirófano, bajo anestesia. Cuando la gastrostomía deja de ser necesaria, se retira la sonda y la incisión cicatriza en poco tiempo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large">
+                        <p class="title-acordeon-tratamiento-ddc">
+                            ¿Puede mi hijo o hija con sonda alimentarse por boca?
+                        </p>
+                        <p class="text-acordeon-tratamiento-ddc slds-m-top_medium">
+                            Es importante consultar este punto con el equipo tratante, ya que no debe existir contraindicación médica ni trastornos en la deglución. 
+                        </p>
+                        <p class="text-acordeon-tratamiento-ddc slds-m-top_x-large">
+                            En algunos casos, es necesario regular de forma exacta y automática la velocidad de administración del suplemento nutricional enteral por sonda. Para eso, se utiliza una bomba de nutrición enteral.
+                        </p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1" style="margin-top: 75px;">
+                        <div class="card-tratamientos-ddc">
+                            <div class="slds-grid slds-wrap slds-grid_vertical-align-center" style="height: 100%;">
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-12 slds-align_absolute-center slds-p-around_large">
+                                    <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Icono-Enteral-2x.png"
+                                        style="width: 85px;"/>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_10-of-12 slds-text-align_center slds-p-around_large">
+                                    <p class="text-saber-card-tratamientos-ddc slds-m-bottom_medium" style="font-family: MontserratSemiBold;">
+                                        ¿Querés saber más sobre la bomba de nutrición enteral?
+                                    </p>
+                                    <span 
+                                        class="text-card-tratamientos-ddc slds-text-align_center"
+                                        style="cursor: pointer;"
+                                        data-apiname="bomba_nutricion_enteral__c"
+                                        onclick="{!c.redirect}">
+                                        <img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_DESAFIOS_CRECIMIENTO/4_TRATAMIENTO_NUTRICIONAL/ENTERAL/PP-DesafiosDelCrecimiento-Icono-Flechita.png"
+                                            class="img-contamos-mas"/>
+                                        Te contamos acá
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-m-top_xx-large slds-m-bottom_xx-large">
+                        <p class="text-fuente-tratamientos-ddc" style="font-style: italic;">
+                            Fuente: 
+                        </p>
+                        <p class="text-fuente-tratamientos-ddc slds-m-top_medium" style="font-style: italic;">
+                            - Singhal S, Baker SS, Bojczuk GA, Baker RD. Tube feeding in children. Pediatr Rev. 2017 Jan;38(1):23-34.
+                        </p>
+                    </div>
+                </div>
+            </lightning:accordionSection>
+        </lightning:accordion>
+    </div>
+</aura:component>

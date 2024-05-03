@@ -1,0 +1,49 @@
+.card-tip-cocina-meta{
+    background-color: #EBEBEB;
+    height: 400px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.div-img-tip-cocina-meta{
+    height: 200px;
+}
+
+.div-text-tip-cocina-meta{
+    height: 125px;
+}
+
+.div-ver-mas-tip-cocina-meta{
+    height: 75px;
+}
+
+.title-card-tip-cocina-meta{
+    font-family: MontserratSemiBold;
+    font-size: 1.625rem;
+    line-height: 1.875rem;
+    color: #606060;
+    text-align: center;
+}
+
+.ver-mas-tip-cocina-meta{
+    font-family: MontserratSemiBold;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    color: #4C2F92;
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .card-tip-cocina-meta{
+        height: auto;
+    }    
+    .div-img-tip-cocina-meta{
+        height: auto;
+    }    
+    .div-text-tip-cocina-meta{
+        height: auto;
+    }
+    .div-ver-mas-tip-cocina-meta{
+        height: auto;
+    }    
+}

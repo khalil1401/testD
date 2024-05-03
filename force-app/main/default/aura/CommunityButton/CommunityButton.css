@@ -1,0 +1,25 @@
+/*@font-face {
+    font-family: 'Amatic';
+    src: url('/sfsites/c/resource/fonts/Amatic-Bold.ttf') format('truetype');
+}
+
+.THIS .label {
+    font-family: Amatic !important;
+}
+*/
+
+.THIS div{
+    font-family: MontserratSemiBold !important;
+}
+
+.THIS .slds-text-heading_large{
+    font-size: 1rem !important;
+}
+
+.THIS .slds-text-heading_small{
+    font-size: 1rem !important;
+}
+
+.THIS .cardDisabled{
+    pointer-events: none !important;
+}

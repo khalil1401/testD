@@ -1,0 +1,10 @@
+<design:component >
+
+    <design:attribute name="isDisabled" label="Deshabilitar botón"/> 
+    <design:attribute name="altoMaximo" label="Alto máximo de botón en px"/>
+    <design:attribute name="altoMinimo" label="Alto mínimo de botón en px"/>
+    <design:attribute name="radioEsquinas" label="Curvatura de esquinas"/> 
+    <design:attribute name="isIcon" label="Tiene icono"/> 
+    <design:attribute name="backgroundColor" label="Color de background de botón"/> 
+
+</design:component>

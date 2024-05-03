@@ -1,0 +1,54 @@
+<template>
+    <div class="desktop">
+        <div data-id="containerNav" class="slds-grid slds-wrap container-nav-nsj">
+            <div class="slds-col slds-medium-size_1-of-1 slds-size_1-of-1">
+                <div style="padding-top: 0.75%; padding-bottom: 0.75%;">
+                    <table class="slds-align_absolute-center">
+                        <tr>
+                            <template for:each={items} for:item="item">
+                                <td key={item.label} class={item.class}>
+                                    <p  data-id={item.dataId}
+                                        class="text-nav-nsj"
+                                        onclick={redireccionar}>
+                                        {item.label}
+                                    </p>
+                                </td>
+                            </template>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="slds-grid slds-grid_align-center">
+            <div class="slds-col slds-size_1-of-1" style="background-color:#4A2A80;padding-left: 2%;border-style: solid;border-color: #4A2A80;">
+                <lightning-icon
+                    class="slds-p-around_small icn"
+                    icon-name="utility:rows"
+                    alternative-text="Menu"
+                    title="Menu"
+                    size="medium"
+                    variant="bare"
+                    onclick={openDropdown}>
+                </lightning-icon>
+                <template if:true={dropdown}>
+                    <div class="menu-nsj">
+                        <ul role="menu" aria-label="Ver más">
+                            <template for:each={itemsMobile} for:item="item">
+                                <li class="item" key={item.dataId}>
+                                    <span   
+                                        class="text-menu-nsj"
+                                        data-id={item.dataId}
+                                        onclick={redireccionar}>
+                                        {item.label}
+                                    </span>
+                                </li>
+                            </template>
+                        </ul>    
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

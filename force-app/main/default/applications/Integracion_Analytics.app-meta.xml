@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <description>Aplicación específica para el entorno de integraciones con Analytics</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Integración Analytics</label>
+    <tabs>Clientes__c</tabs>
+    <tabs>Facturacion__c</tabs>
+    <tabs>Producto__c</tabs>
+    <tabs>Stock__c</tabs>
+    <tabs>Stock_de_Producto__c</tabs>
+    <tabs>Producto_de_Facturacion__c</tabs>
+    <tabs>Trazabilidad_de_Pedido__c</tabs>
+    <tabs>Referencia_Cruzada__c</tabs>
+    <tabs>Transaccion_de_Inventario__c</tabs>
+    <tabs>Envio_sin_Cargo__c</tabs>
+    <tabs>Historia_Cl_nica_Especializada__c</tabs>
+    <tabs>Profesional_por_Institucion__c</tabs>
+</CustomApplication>

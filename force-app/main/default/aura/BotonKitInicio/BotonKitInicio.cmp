@@ -1,0 +1,54 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="altoMaximo" type="String" default="175"/>
+    <aura:attribute name="altoMinimo" type="String" default="175"/>
+    <aura:attribute name="radioEsquinas" type="String"/>
+    <aura:attribute name="isIcon" type="boolean" default="true"/>
+    <aura:attribute name="isDisabled" type="boolean" default="false"/>
+    <aura:attribute name="backgroundColor" type="String"/>
+
+    <aura:if isTrue="{! !v.isDisabled}">
+        <aura:html tag="style">
+            .botonKitInicio {
+                border-radius: {!v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px'};
+                background-color: {!v.backgroundColor};
+                border-color: {!v.backgroundColor};
+                color: white;
+            }
+        </aura:html>
+        <aura:set attribute="else">
+            <aura:html tag="style">
+                .botonKitInicio {
+                    border-radius: {!v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px ' + v.radioEsquinas + 'px'};
+                    background-color: #bababa !important;
+                    border-color: #bababa !important;
+                    color: white !important;
+                }
+            </aura:html>    
+        </aura:set>
+    </aura:if>
+
+    <div class="slds-align_absolute-center">
+        <button class="slds-button slds-button_neutral button botonKitInicio"
+                disabled = "{!v.isDisabled}"
+                onclick="{!c.solicitarKit}">
+            <aura:if isTrue="{!v.isIcon}">
+                <div>
+                    <lightning:icon class="icon"
+                                    iconName="utility:reassign"
+                                    size="medium"
+                                    alternativeText="reassign"/>
+                </div>
+            </aura:if>
+            <p class="slds-text-align_center" style="font-size: large;">SOLICITÁ TU KIT DE INICIO<strong style="font-size: x-large;"> AQUÍ</strong></p>
+            <aura:if isTrue="{!v.isIcon}">
+                <div>
+                    <lightning:icon	iconName="utility:chevronright"
+                                    size="x-small"
+                                    class="icon"/>
+                </div>
+            </aura:if>
+        </button>
+    </div>
+
+</aura:component>

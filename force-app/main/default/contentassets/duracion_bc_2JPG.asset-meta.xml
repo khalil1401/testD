@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+    <language>es</language>
+    <masterLabel>duracion_bc_2JPG</masterLabel>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>duracion bc 2.JPG</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

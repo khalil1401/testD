@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>V_a_de_Alimentaci_n__c</name>
+    <picklistValues>
+        <masterLabel>GASTRONOMÍA/YEYUNOSTOMÍA</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MIXTO</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SNE</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SON</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

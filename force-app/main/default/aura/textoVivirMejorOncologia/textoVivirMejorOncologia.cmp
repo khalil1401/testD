@@ -1,0 +1,36 @@
+<aura:component implements="forceCommunity:layout,forceCommunity:availableForAllPageTypes" access="global">
+
+    <aura:attribute name="tituloTextoHTML" type="String"/>
+    <aura:attribute name="cuerpoTextoHTML" type="String"/>
+    <aura:attribute name="isRecursoEstatico" type="Boolean" default="false"/>
+
+    <div style="background: linear-gradient(90deg, rgba(152, 123, 217, 0.6) 0%,  rgba(110,131,229,0.6) 100%);">
+        <br></br>
+        <br></br>
+        <div class="slds-grid">
+            <div class="slds-col slds-large-size_2-of-12">
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12">
+                <div>
+                    <p  class="slds-m-bottom_small tituloVivirMejor">
+                        <aura:unescapedHtml value="{!v.tituloTextoHTML}"/>
+                        <hr class="lineaVivirMejor"/>
+                    </p>
+                    <p  class="slds-m-top_small textoVivirMejor">
+                        <aura:if isTrue="{!v.isRecursoEstatico}">
+                            <img    src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/PORTAL-PACIENTES/SECCION_ONCOLOGIA/ONCOLOGIA-NUTRICION_ONCOLOGIA/ONCO-MALNUTRICION/PP-evaluacionNutricionalOncologia%282022-05-20%29.png"
+                                    alt="img"
+                                    style="float: right;width: 40%;"/>
+                        </aura:if>
+                        <aura:unescapedHtml value="{!v.cuerpoTextoHTML}"/>
+                    </p>
+                </div>
+            </div>
+            <div class="slds-col slds-large-size_2-of-12">
+            </div>
+        </div>
+        <br></br>
+        <br></br>
+    </div>
+
+</aura:component>

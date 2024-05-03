@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Best_Care</letterhead>
+    <name>Recordatorio de visita/capacitación</name>
+    <style>freeForm</style>
+    <subject>Recordatorio de {!Case.Reason}</subject>
+    <textOnly>Hola {!Case.Profesional__c}!
+
+Le recordamos que tiene una {!Case.Reason} para el paciente {!Case.Account} el día de mañana en {!Case.Direccion_del_paciente__c}.
+
+Favor ingresar al siguiente enlace para ver más detalles: https://dev-danonedev.cs13.force.com/{!Case.Id}
+
+Saludos!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

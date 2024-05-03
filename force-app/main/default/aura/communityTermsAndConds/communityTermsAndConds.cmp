@@ -1,0 +1,58 @@
+<aura:component >
+    <aura:registerEvent name="answerTermCond" type="c:communityCloseChildComponentModalEvent"/>
+    <aura:attribute name="termsAndCondsBody" type="String"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>  
+
+    <section style="height:600px !important; margin-top:62px !important;" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <header class="slds-modal__header" style="height:fit-contain; border-bottom-width: 1px !important;">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-show_medium slds-size_1-of-3">
+                </div>
+                <div class="slds-col slds-size_2-of-3 slds-medium-size_1-of-3" >
+                    <h2 id="modal-heading-01" class="slds-text-heading_large slds-hyphenate">Terminos y Condiciones</h2>   
+                </div>
+                <div class="buttonClose slds-size_1-of-3" >
+                    <lightning:buttonIcon aura:id="close"
+                                          iconName="utility:close"
+                                          size="large"
+                                          variant="bare-inverse"
+                                          value="0"
+                                          alternativeText="close"
+                                          onclick="{! c.answer }">
+                        <span class="slds-assistive-text">Cerrar</span>
+                    </lightning:buttonIcon>
+                </div>
+            </div>                
+        </header>
+        <div style="height:50%;" class="slds-modal__content slds-p-around_medium slds-scrollable_y" id="modal-content-id-1">
+            <!-- Muestra la informacion del body del Email Template utilizando correctamente los tags HTML -->
+            <aura:unescapedHtml value="{! v.termsAndCondsBody }" />
+        </div>
+        <footer class="slds-modal__footer slds-modal__footer_directional" style="height:fit-contain; border-top-width: 1px !important; box-shadow: none !important">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-show_medium slds-size_2-of-12">
+                </div>
+                <div class="slds-size_1-of-1 slds-medium-size_3-of-12 slds-m-top_x-small slds-align_absolute-center">	
+                    <lightning:button aura:id="yes"
+                                      class="slds-button slds-button_neutral"
+                                      value="1"
+                                      onclick="{! c.answer }">
+                        Acepto
+                    </lightning:button>
+                </div>
+                <div class="slds-show_medium slds-size_2-of-12">
+                </div>
+                <div class="slds-size_1-of-1 slds-medium-size_5-of-12 slds-m-top_x-small slds-align_absolute-center">
+                    <lightning:button aura:id="no"
+                                      class="slds-button slds-button_neutral"
+                                      value="0"
+                                      onclick="{! c.answer }">
+                        No Acepto
+                    </lightning:button>
+                    <div class=" slds-show_medium slds-size_2-of-12">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+</aura:component>

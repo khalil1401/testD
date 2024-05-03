@@ -1,0 +1,92 @@
+.container-items-patologias-nsj{
+    display: none;
+}
+
+.container-botonera-mobile-nsj{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .slds-backdrop_open, .slds-backdrop--open{
+        background-color: #000000;
+        opacity: 0.6;
+    }
+
+    .container-botonera-mobile-nsj{
+        display: initial;
+        border-radius: 42px 42px 0px 0px;
+        background-color: #ECF1F4;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        bottom: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .botonera-mobile-nsj{
+        height: 64px;
+    }
+
+    .modal-items{
+        position: fixed;
+        width: 100%;
+        bottom: 64px;
+    }
+
+    .item-botonera-mobile-nsj{
+        height: 42px;
+        background-color: #ECF1F4;
+        border-radius: 20px;
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 18px;
+        font-family: BariolRegular;
+        font-weight: 700;
+        letter-spacing: 0.32px;
+    }
+
+    .item-botonera-selected-mobile-nsj{
+        height: 42px;
+        background-color: #9D67A8;
+        color: white;
+        border-radius: 20px;
+        margin-left: 35px;
+        margin-right: 35px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 18px;
+        font-family: BariolRegular;
+        font-weight: 700;
+        letter-spacing: 0.32px;
+    }
+
+    .text-icon-botonera-nsj{
+        font-family: BariolRegular;
+        font-weight: 700;    
+        font-size: 14px; 
+        line-height: 15px;
+        letter-spacing: 0.28px;
+    }
+}
+
+@media (max-width: 412px) {
+    .container-botonera-mobile-nsj{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .item-botonera-mobile-nsj{
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 6px;
+    }
+
+    .item-botonera-selected-mobile-nsj{
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 6px;
+    }
+}

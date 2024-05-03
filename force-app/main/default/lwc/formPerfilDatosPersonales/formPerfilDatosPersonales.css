@@ -1,0 +1,166 @@
+.show-tablet{
+    display: none;
+}
+
+.icon-title-form{
+    width: 16px; 
+    position: relative; 
+    left: 80px;
+    padding-bottom: 5px;
+}
+
+.text-title-form {
+    font-family: BariolBold;
+    color: #1C1B1F;
+    font-size: 18px;
+    line-height: 17.63px;
+}
+
+.hr-line::before {
+    content: '';
+    display: block;
+    width: 282px;
+    border-top: 1px solid #1C1B1F;
+    transform: scaleY(0.5);
+}
+
+.form-datos{
+    width: 328px;
+}
+
+.slds-form-element__label{
+    font-family: BariolBold !important;
+    color: #393939 !important;
+    font-size: 16px !important;
+}
+
+.slds-input-has-icon .slds-input__icon:not(button){
+    pointer-events: all;
+    right: 25px;
+}
+
+.slds-input-has-icon .slds-input__icon:not(button):hover{
+    cursor: pointer !important;
+}
+
+.slds-input{
+    background-color: white !important;
+    border-radius: 8px !important;
+    border-color: transparent;
+    text-overflow: ellipsis;
+    padding-right: 15%;
+}
+
+.slds-input:hover{
+    cursor: default !important;
+}
+
+.name-text{
+    font-family: BariolBold;
+    color: #313183;
+    font-size: 24px;
+    line-height: 26.45px;
+}
+
+.card-item-title{
+    font-family: BariolBold;
+    color: #1C1B1F;
+    font-size: 16px;
+    line-height: 17.63px;
+}
+
+.card-item-text{
+    font-family: BariolRegular;
+    color: #1C1B1F;
+    font-size: 16px;
+    line-height: 17.63px;
+}
+
+.fade-in-right-left{
+    animation: fadeInRightLeft 0.25s;
+}
+
+@keyframes fadeInRightLeft {
+    0% { 
+        opacity: 1;
+        transform: translateX(412px);
+    }
+
+    100% { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 412px) {
+    .form-datos{
+        width: 380px;
+    }
+    
+    .text-title-form {
+        font-size: 20px;
+        line-height: 22.04px;
+    }
+
+    .slds-input {
+        padding-right: 75px;
+    }
+
+    .slds-input-has-icon .slds-input__icon:not(button) {
+        right: 60px;
+    }
+}
+
+@media (min-width: 768px) {
+    .form-datos {
+        width: 596px;
+    }
+
+    .show-mobile {
+        display: none;
+    }
+
+    .show-tablet {
+        display: initial;
+    }
+
+    .icon-title-form {
+        left: auto;
+        right: -185px;
+        padding-bottom: 2px;
+    }
+
+    .slds-input-has-icon .slds-input__icon:not(button) {
+        right: 60px;
+    }
+
+    .slds-input {
+        padding-right: 90px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .show-mobile{
+        display: none;
+    }
+
+    .show-tablet{
+        display: none;
+    }
+
+    .form-datos{
+        width: 535px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .form-datos{
+        width: 535px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .form-datos{
+        width: 533px;
+    }
+}

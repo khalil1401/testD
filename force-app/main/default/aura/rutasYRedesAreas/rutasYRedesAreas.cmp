@@ -1,0 +1,46 @@
+<aura:component implements="forceCommunity:layout,forceCommunity:availableForAllPageTypes">
+
+    <aura:attribute name="rutaDePagina" type="String"/>
+    <aura:attribute name="fontFamilyRutas" type="String"/>
+    <aura:attribute name="fontSizeRutas" type="String"/>
+
+    <aura:attribute name="isFacebook" type="Boolean" default="false"/>
+    <aura:attribute name="rutaFacebook" type="String" default="https://www.facebook.com/"/>
+    <aura:attribute name="isInstagram" type="Boolean" default="false"/>
+    <aura:attribute name="rutaInstagram" type="String" default="https://www.instagram.com/"/>
+    <aura:attribute name="isYoutube" type="Boolean" default="false"/>
+    <aura:attribute name="rutaYoutube" type="String" default="https://www.youtube.com/"/>
+    <aura:attribute name="link" type="String"/>
+
+    <div class="slds-grid slds-grid_vertical-align-center">
+        <div class="slds-col slds-size_7-of-12">
+            <p class="rutas">
+                {!v.rutaDePagina}
+            </p>
+        </div>
+        <div class="slds-col slds-size_5-of-12">
+            <p class="redes">
+                Seguinos en
+                <aura:if isTrue="{!v.isFacebook}">
+                    <img    src="{!$Resource.SocialMediaIcons + '/Facebook.svg'}" alt="img"
+                            class="iconos"
+                            onclick="{!c.redirectTo}"
+                            data-id="fb"/>
+                </aura:if>
+                <aura:if isTrue="{!v.isInstagram}">
+                    <img    src="{!$Resource.SocialMediaIcons + '/Instagram.svg'}" alt="img"
+                            class="iconos"
+                            onclick="{!c.redirectTo}"
+                            data-id="ig"/>
+                </aura:if>
+                <aura:if isTrue="{!v.isYoutube}">
+                    <img    src="{!$Resource.SocialMediaIcons + '/Icono-YT.png'}" alt="img"
+                            class="iconos"
+                            onclick="{!c.redirectTo}"
+                            data-id="yt"/>
+                </aura:if>
+            </p>
+        </div>
+    </div>
+
+</aura:component>

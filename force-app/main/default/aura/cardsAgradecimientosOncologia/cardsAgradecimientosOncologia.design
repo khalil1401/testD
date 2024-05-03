@@ -1,0 +1,6 @@
+<design:component >
+
+    <design:attribute name="isDisgeusia" label="Componente para página de disgeusia"/>
+    <design:attribute name="isRecetas" label="No utilizar"/>
+
+</design:component>

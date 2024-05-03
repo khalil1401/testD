@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>De_que_manera_te_dio_mayor_saciedad__c</name>
+    <picklistValues>
+        <masterLabel>Cercano a otra fórmula</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cercano a otro medicamento</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cercano al consumo de otros alimentos</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Combinado en preparaciones</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

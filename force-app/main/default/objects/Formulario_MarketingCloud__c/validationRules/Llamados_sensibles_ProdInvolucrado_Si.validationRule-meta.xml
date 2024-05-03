@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Llamados_sensibles_ProdInvolucrado_Si</fullName>
+    <active>false</active>
+    <description>Si en el ítem &quot;¿Hay producto involucrado?&quot; haya seleccionado &quot;Si&quot; debe especificar el producto.</description>
+    <errorConditionFormula>AND( ISPICKVAL( Hay_un_producto_involucrado__c , &quot;Si&quot;), ISBLANK( Producto__c ) )</errorConditionFormula>
+    <errorDisplayField>Producto__c</errorDisplayField>
+    <errorMessage>Especifique el producto involucrado</errorMessage>
+</ValidationRule>

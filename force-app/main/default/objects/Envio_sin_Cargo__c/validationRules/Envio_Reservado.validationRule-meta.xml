@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Envio_Reservado</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( $Profile.Name &lt;&gt; &apos;Administrador del sistema&apos;, $Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+
+IF(OR( ISPICKVAL(Estado_del_envio__c, &apos;Reservado&apos;),
+
+ISPICKVAL(Estado_del_envio__c, &apos;Procesado&apos;)) ,
+AND (NOT (LastModifiedDate &lt;&gt; LastModifiedDate),
+OR (
+NOT (ISCHANGED (Estado_del_envio__c)))),
+null)
+)</errorConditionFormula>
+    <errorMessage>No se puede modificar un Envió  sin cargo Reservado o ya Procesado.</errorMessage>
+</ValidationRule>

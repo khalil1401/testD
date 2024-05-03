@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Efecto_secundario_del_tratamiento__c</fullName>
+    <externalId>false</externalId>
+    <label>Efecto secundario del tratamiento</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pérdida de peso</fullName>
+                <default>false</default>
+                <label>Pérdida de peso</label>
+            </value>
+            <value>
+                <fullName>Disfagia</fullName>
+                <default>false</default>
+                <label>Disfagia</label>
+            </value>
+            <value>
+                <fullName>Disgeusia</fullName>
+                <default>false</default>
+                <label>Disgeusia</label>
+            </value>
+            <value>
+                <fullName>Diarrea</fullName>
+                <default>false</default>
+                <label>Diarrea</label>
+            </value>
+            <value>
+                <fullName>Constipación</fullName>
+                <default>false</default>
+                <label>Constipación</label>
+            </value>
+            <value>
+                <fullName>Mucositis</fullName>
+                <default>false</default>
+                <label>Mucositis</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

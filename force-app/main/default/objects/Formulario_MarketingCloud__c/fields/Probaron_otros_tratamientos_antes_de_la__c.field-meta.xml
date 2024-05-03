@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Probaron_otros_tratamientos_antes_de_la__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>¿Probaron otros tratamientos antes de la DC?</inlineHelpText>
+    <label>¿Probaron otros tratamientos antes?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NO</fullName>
+                <default>false</default>
+                <label>NO</label>
+            </value>
+            <value>
+                <fullName>Estimulador vagal</fullName>
+                <default>false</default>
+                <label>Estimulador vagal</label>
+            </value>
+            <value>
+                <fullName>canabis</fullName>
+                <default>false</default>
+                <label>canabis</label>
+            </value>
+            <value>
+                <fullName>cirugía</fullName>
+                <default>false</default>
+                <label>cirugía</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

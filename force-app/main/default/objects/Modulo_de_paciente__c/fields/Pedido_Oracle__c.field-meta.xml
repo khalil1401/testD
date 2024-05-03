@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pedido_Oracle__c</fullName>
+    <description>Nro de pedido en Oracle cuando se carga el módulo</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Nro de pedido en Oracle cuando se carga el módulo</inlineHelpText>
+    <label>Pedido Oracle</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

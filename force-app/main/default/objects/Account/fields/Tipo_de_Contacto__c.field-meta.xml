@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Contacto__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de Contacto</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sin definir</fullName>
+                <default>false</default>
+                <label>Sin definir</label>
+            </value>
+            <value>
+                <fullName>Demanda interna</fullName>
+                <default>false</default>
+                <label>Demanda interna</label>
+            </value>
+            <value>
+                <fullName>Generador de discharge</fullName>
+                <default>false</default>
+                <label>Generador de discharge</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

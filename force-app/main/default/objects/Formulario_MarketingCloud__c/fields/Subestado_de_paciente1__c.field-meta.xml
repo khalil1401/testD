@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subestado_de_paciente1__c</fullName>
+    <externalId>false</externalId>
+    <label>Subestado de paciente</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Estado_del_paciente1__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tratamiento Efectivo</fullName>
+                <default>false</default>
+                <label>Tratamiento Efectivo</label>
+            </value>
+            <value>
+                <fullName>Cobertura parcial con Consumo</fullName>
+                <default>false</default>
+                <label>Cobertura parcial con Consumo</label>
+            </value>
+            <value>
+                <fullName>Negativa de la OS con Consumo</fullName>
+                <default>false</default>
+                <label>Negativa de la OS con Consumo</label>
+            </value>
+            <value>
+                <fullName>Próximo a desafío</fullName>
+                <default>false</default>
+                <label>Próximo a desafío</label>
+            </value>
+            <value>
+                <fullName>Con otro laboratorio</fullName>
+                <default>false</default>
+                <label>Con otro laboratorio</label>
+            </value>
+            <value>
+                <fullName>No tolera</fullName>
+                <default>false</default>
+                <label>No tolera</label>
+            </value>
+            <value>
+                <fullName>Se Rehúsa</fullName>
+                <default>false</default>
+                <label>Se Rehúsa</label>
+            </value>
+            <value>
+                <fullName>Sin Cobertura de la OS</fullName>
+                <default>false</default>
+                <label>Sin Cobertura de la OS</label>
+            </value>
+            <value>
+                <fullName>Negativa de la OS Sin consumo</fullName>
+                <default>false</default>
+                <label>Negativa de la OS Sin consumo</label>
+            </value>
+            <value>
+                <fullName>Alta de tratamiento</fullName>
+                <default>false</default>
+                <label>Alta de tratamiento</label>
+            </value>
+            <value>
+                <fullName>Fallecido</fullName>
+                <default>false</default>
+                <label>Fallecido</label>
+            </value>
+            <value>
+                <fullName>Con otro laboratorio x OOSS</fullName>
+                <default>false</default>
+                <label>Con otro laboratorio x OOSS</label>
+            </value>
+            <value>
+                <fullName>Con otro laboratorio x Profesional</fullName>
+                <default>false</default>
+                <label>Con otro laboratorio x Profesional</label>
+            </value>
+            <value>
+                <fullName>Excluido</fullName>
+                <default>false</default>
+                <label>Excluido</label>
+            </value>
+            <value>
+                <fullName>En Seguimiento de ONG</fullName>
+                <default>false</default>
+                <label>En Seguimiento de ONG</label>
+            </value>
+            <value>
+                <fullName>Imposible de contactar</fullName>
+                <default>false</default>
+                <label>Imposible de contactar</label>
+            </value>
+            <value>
+                <fullName>Cambio de indicación</fullName>
+                <default>false</default>
+                <label>Cambio de indicación</label>
+            </value>
+            <value>
+                <fullName>Migrado erroneamente</fullName>
+                <default>false</default>
+                <label>Migrado erroneamente</label>
+            </value>
+            <value>
+                <fullName>No contactar Solicitud del paciente</fullName>
+                <default>false</default>
+                <label>No contactar Solicitud del paciente</label>
+            </value>
+            <value>
+                <fullName>No contactar Solicitud del profesional</fullName>
+                <default>false</default>
+                <label>No contactar Solicitud del profesional</label>
+            </value>
+            <value>
+                <fullName>Cambio de fórmula</fullName>
+                <default>false</default>
+                <label>Cambio de fórmula</label>
+            </value>
+            <value>
+                <fullName>No renovó por negativa negociación OOSS</fullName>
+                <default>false</default>
+                <label>No renovó por negativa negociación OOSS</label>
+            </value>
+            <value>
+                <fullName>No renovó cambio de indicación</fullName>
+                <default>false</default>
+                <label>No renovó cambio de indicación</label>
+            </value>
+            <value>
+                <fullName>No renovó por cambio de empresa de internación domiciliaria</fullName>
+                <default>false</default>
+                <label>No renovó por cambio de empresa de internación domiciliaria</label>
+            </value>
+            <value>
+                <fullName>No renovó por stock adicional</fullName>
+                <default>false</default>
+                <label>No renovó por stock adicional</label>
+            </value>
+            <value>
+                <fullName>Stock remanente</fullName>
+                <default>false</default>
+                <label>Stock remanente</label>
+            </value>
+            <value>
+                <fullName>Tramite iniciado</fullName>
+                <default>false</default>
+                <label>Tramite iniciado</label>
+            </value>
+            <value>
+                <fullName>Internado</fullName>
+                <default>false</default>
+                <label>Internado</label>
+            </value>
+            <value>
+                <fullName>Modulo Inactivo</fullName>
+                <default>false</default>
+                <label>Modulo Inactivo</label>
+            </value>
+            <value>
+                <fullName>Sin documentación</fullName>
+                <default>false</default>
+                <label>Sin documentación</label>
+            </value>
+            <value>
+                <fullName>Tramite no iniciado</fullName>
+                <default>false</default>
+                <label>Tramite no iniciado</label>
+            </value>
+            <value>
+                <fullName>No renovó</fullName>
+                <default>false</default>
+                <label>No renovó</label>
+            </value>
+            <value>
+                <fullName>Falso Positivo</fullName>
+                <default>false</default>
+                <label>Falso Positivo</label>
+            </value>
+            <value>
+                <fullName>En evaluación médica</fullName>
+                <default>false</default>
+                <label>En evaluación médica</label>
+            </value>
+            <value>
+                <fullName>No renovó fin de cobertura PMI</fullName>
+                <default>false</default>
+                <label>No renovó fin de cobertura PMI</label>
+            </value>
+            <value>
+                <fullName>Suspensión permanente por indicación médica</fullName>
+                <default>false</default>
+                <label>Suspensión permanente por indicación médica</label>
+            </value>
+            <value>
+                <fullName>OOSS no autoriza indicación médica</fullName>
+                <default>false</default>
+                <label>OOSS no autoriza indicación médica</label>
+            </value>
+            <value>
+                <fullName>OOSS cambia laboratorio</fullName>
+                <default>false</default>
+                <label>OOSS cambia laboratorio</label>
+            </value>
+            <value>
+                <fullName>OOSS cambió de canal</fullName>
+                <default>false</default>
+                <label>OOSS cambió de canal</label>
+            </value>
+            <value>
+                <fullName>OOSS inactiva</fullName>
+                <default>false</default>
+                <label>OOSS inactiva</label>
+            </value>
+            <value>
+                <fullName>Negativa del afiliado</fullName>
+                <default>false</default>
+                <label>Negativa del afiliado</label>
+            </value>
+            <value>
+                <fullName>Cambio de laboratorio por profesional</fullName>
+                <default>false</default>
+                <label>Cambio de laboratorio por profesional</label>
+            </value>
+            <value>
+                <fullName>Sin acceso a BC</fullName>
+                <default>false</default>
+                <label>Sin acceso a BC</label>
+            </value>
+            <value>
+                <fullName>En desafio</fullName>
+                <default>false</default>
+                <label>En desafio</label>
+            </value>
+            <value>
+                <fullName>Próximo desafio</fullName>
+                <default>false</default>
+                <label>Próximo desafio</label>
+            </value>
+            <value>
+                <fullName>Internado BEC</fullName>
+                <default>false</default>
+                <label>Internado BEC</label>
+            </value>
+            <value>
+                <fullName>Internado REG</fullName>
+                <default>false</default>
+                <label>Internado REG</label>
+            </value>
+            <value>
+                <fullName>En desafío REG</fullName>
+                <default>false</default>
+                <label>En desafío REG</label>
+            </value>
+            <value>
+                <fullName>No iniciará tratamiento</fullName>
+                <default>false</default>
+                <label>No iniciará tratamiento</label>
+            </value>
+            <value>
+                <fullName>Sin información de la OOSS</fullName>
+                <default>false</default>
+                <label>Sin información de la OOSS</label>
+            </value>
+            <value>
+                <fullName>No contactar solicitud de OOSS</fullName>
+                <default>false</default>
+                <label>No contactar solicitud de OOSS</label>
+            </value>
+            <value>
+                <fullName>En tratamiento</fullName>
+                <default>false</default>
+                <label>En tratamiento</label>
+            </value>
+            <value>
+                <fullName>Aguarda Internación domiciliaria</fullName>
+                <default>false</default>
+                <label>Aguarda Internación domiciliaria</label>
+            </value>
+            <value>
+                <fullName>Fallecimiento</fullName>
+                <default>false</default>
+                <label>Fallecimiento</label>
+            </value>
+            <value>
+                <fullName>Alta</fullName>
+                <default>false</default>
+                <label>Alta</label>
+            </value>
+            <value>
+                <fullName>Internación  Domiciliaria</fullName>
+                <default>false</default>
+                <label>Internación  Domiciliaria</label>
+            </value>
+            <value>
+                <fullName>Internación Domiciliaria/3er nivel</fullName>
+                <default>false</default>
+                <label>Internación Domiciliaria/3er nivel</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>En Seguimiento de ONG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>Tramite iniciado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Internado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>Modulo Inactivo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>Sin documentación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>Tramite no iniciado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>En evaluación médica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>En desafío REG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Tratamiento Efectivo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Cobertura parcial con Consumo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Negativa de la OS con Consumo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Próximo a desafío</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Con otro laboratorio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Stock remanente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Próximo desafio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Internado REG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>En tratamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Aguarda Internación domiciliaria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Internación Domiciliaria/3er nivel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>No tolera</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Se Rehúsa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Sin Cobertura de la OS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Negativa de la OS Sin consumo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Con otro laboratorio x OOSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Con otro laboratorio x Profesional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Excluido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Cambio de indicación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Cambio de fórmula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>No renovó por negativa negociación OOSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>No renovó cambio de indicación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>No renovó por cambio de empresa de internación domiciliaria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>No renovó por stock adicional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>No renovó fin de cobertura PMI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Suspensión permanente por indicación médica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>OOSS no autoriza indicación médica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>OOSS cambia laboratorio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>OOSS cambió de canal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>OOSS inactiva</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Negativa del afiliado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Cambio de laboratorio por profesional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Sin acceso a BC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>En desafio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Internado BEC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Fallecimiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Alta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Internación  Domiciliaria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fin de tratamiento</controllingFieldValue>
+            <valueName>Alta de tratamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fin de tratamiento</controllingFieldValue>
+            <valueName>Fallecido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fin de tratamiento</controllingFieldValue>
+            <valueName>Sin información de la OOSS</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

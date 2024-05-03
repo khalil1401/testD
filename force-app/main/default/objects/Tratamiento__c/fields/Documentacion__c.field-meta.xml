@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Documentacion__c</fullName>
+    <externalId>false</externalId>
+    <label>Documentación</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Receta</fullName>
+                <default>false</default>
+                <label>Receta</label>
+            </value>
+            <value>
+                <fullName>Historia clínica</fullName>
+                <default>false</default>
+                <label>Historia clínica</label>
+            </value>
+            <value>
+                <fullName>Cupón kit de inicio</fullName>
+                <default>false</default>
+                <label>Cupón kit de inicio</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

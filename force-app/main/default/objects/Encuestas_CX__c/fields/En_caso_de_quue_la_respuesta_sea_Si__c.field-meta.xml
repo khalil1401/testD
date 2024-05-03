@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>En_caso_de_quue_la_respuesta_sea_Si__c</fullName>
+    <externalId>false</externalId>
+    <label>En caso de que la respuesta sea Sí¿Cúal?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

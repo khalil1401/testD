@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nuevo_Tratamiento_RG</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Nuevo Tratamiento</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/42.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/42.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&quot;/support/console/42.0/integration.js&quot;)}
+
+var retStr = sforce.apex.execute(
+    &quot;XappiaHelper&quot;, 
+    &quot;getRecordTypeToTratamiento&quot;,
+    {SobjectType: &apos;Tratamiento__c&apos;, recordTypeName: &apos;Tratamiento Regular&apos;}
+);
+
+var url = &apos;/a07/e?&apos; + &apos;CF00N1I00000MeAVl={!Account.Name}&amp;CF00N1I00000MeAVl_lkid={!Account.Id}&amp;RecordType=&apos; + retStr; 
+
+if (sforce.console.isInConsole()) {
+    var openSubtab = function(result){ 
+        sforce.console.openSubtab(
+            result.id,
+            url + &apos;&amp;inConsole=true&apos;,
+            true, 
+            &apos;Nuevo Tratamiento&apos;,
+            null
+);}; 
+    sforce.console.getEnclosingPrimaryTabId(openSubtab);
+} else {
+    window.parent.location.href = url;
+}</url>
+</WebLink>

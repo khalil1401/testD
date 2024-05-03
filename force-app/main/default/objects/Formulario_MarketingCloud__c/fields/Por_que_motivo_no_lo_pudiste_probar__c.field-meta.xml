@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Por_que_motivo_no_lo_pudiste_probar__c</fullName>
+    <externalId>false</externalId>
+    <label>Por que motivo no lo pudiste probar?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Pudiste_probar_el_Kit__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No lo recibí aún</fullName>
+                <default>false</default>
+                <label>No lo recibí aún</label>
+            </value>
+            <value>
+                <fullName>Aún cuento con otro producto</fullName>
+                <default>false</default>
+                <label>Aún cuento con otro producto</label>
+            </value>
+            <value>
+                <fullName>No tengo indicación médica como usarlo</fullName>
+                <default>false</default>
+                <label>No tengo indicación médica como usarlo</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>No lo recibí aún</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Aún cuento con otro producto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>No tengo indicación médica como usarlo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NO</controllingFieldValue>
+            <valueName>Otros</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

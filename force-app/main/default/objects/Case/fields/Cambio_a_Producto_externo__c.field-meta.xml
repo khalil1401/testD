@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cambio_a_Producto_externo__c</fullName>
+    <externalId>false</externalId>
+    <label>Cambio a Producto externo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Area_Terapeutica__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Avant Purisima</fullName>
+                <default>false</default>
+                <label>Avant Purisima</label>
+            </value>
+            <value>
+                <fullName>Boost 1.5</fullName>
+                <default>false</default>
+                <label>Boost 1.5</label>
+            </value>
+            <value>
+                <fullName>Boost Senior Drink</fullName>
+                <default>false</default>
+                <label>Boost Senior Drink</label>
+            </value>
+            <value>
+                <fullName>Boost Senior Polvo</fullName>
+                <default>false</default>
+                <label>Boost Senior Polvo</label>
+            </value>
+            <value>
+                <fullName>Cetogenik 4:1</fullName>
+                <default>false</default>
+                <label>Cetogenik 4:1</label>
+            </value>
+            <value>
+                <fullName>Cetomix 4:1</fullName>
+                <default>false</default>
+                <label>Cetomix 4:1</label>
+            </value>
+            <value>
+                <fullName>Diben</fullName>
+                <default>false</default>
+                <label>Diben</label>
+            </value>
+            <value>
+                <fullName>Ensure</fullName>
+                <default>false</default>
+                <label>Ensure</label>
+            </value>
+            <value>
+                <fullName>Ensure Advance</fullName>
+                <default>false</default>
+                <label>Ensure Advance</label>
+            </value>
+            <value>
+                <fullName>Ensure Clinicial</fullName>
+                <default>false</default>
+                <label>Ensure Clinicial</label>
+            </value>
+            <value>
+                <fullName>Ensure Plus</fullName>
+                <default>false</default>
+                <label>Ensure Plus</label>
+            </value>
+            <value>
+                <fullName>Fresubin 3.2Kcal</fullName>
+                <default>false</default>
+                <label>Fresubin 3.2Kcal</label>
+            </value>
+            <value>
+                <fullName>Fresubin Creme</fullName>
+                <default>false</default>
+                <label>Fresubin Creme</label>
+            </value>
+            <value>
+                <fullName>Glucerna</fullName>
+                <default>false</default>
+                <label>Glucerna</label>
+            </value>
+            <value>
+                <fullName>K.Flo</fullName>
+                <default>false</default>
+                <label>K.Flo</label>
+            </value>
+            <value>
+                <fullName>K.Quik</fullName>
+                <default>false</default>
+                <label>K.Quik</label>
+            </value>
+            <value>
+                <fullName>Kanso 2,5:1</fullName>
+                <default>false</default>
+                <label>Kanso 2,5:1</label>
+            </value>
+            <value>
+                <fullName>Ketocuisine 5:1</fullName>
+                <default>false</default>
+                <label>Ketocuisine 5:1</label>
+            </value>
+            <value>
+                <fullName>Ketovie 3:1</fullName>
+                <default>false</default>
+                <label>Ketovie 3:1</label>
+            </value>
+            <value>
+                <fullName>MCT Nutenta</fullName>
+                <default>false</default>
+                <label>MCT Nutenta</label>
+            </value>
+            <value>
+                <fullName>MCT Procal</fullName>
+                <default>false</default>
+                <label>MCT Procal</label>
+            </value>
+            <value>
+                <fullName>No consume fórmula</fullName>
+                <default>false</default>
+                <label>No consume fórmula</label>
+            </value>
+            <value>
+                <fullName>No informa</fullName>
+                <default>false</default>
+                <label>No informa</label>
+            </value>
+            <value>
+                <fullName>Supportan Drink</fullName>
+                <default>false</default>
+                <label>Supportan Drink</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <valueName>No consume fórmula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <valueName>No informa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Avant Purisima</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Boost 1.5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Boost Senior Drink</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Boost Senior Polvo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Diben</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Ensure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Ensure Advance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Ensure Clinicial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Ensure Plus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Fresubin 3.2Kcal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Fresubin Creme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Glucerna</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <valueName>Supportan Drink</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <valueName>Cetogenik 4:1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <valueName>Cetomix 4:1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <valueName>K.Flo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <valueName>K.Quik</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <valueName>Kanso 2,5:1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <valueName>Ketocuisine 5:1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <valueName>Ketovie 3:1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <valueName>MCT Nutenta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <valueName>MCT Procal</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

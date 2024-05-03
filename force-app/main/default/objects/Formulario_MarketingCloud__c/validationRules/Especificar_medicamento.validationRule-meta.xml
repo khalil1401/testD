@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Especificar_medicamento</fullName>
+    <active>true</active>
+    <description>En caso de consumir el producto cercano a otro medicamento, debe especificar cual.</description>
+    <errorConditionFormula>AND( ISPICKVAL( Lo_ingienere_cercano_a_otro_medicamento__c , &quot;Si&quot;)
+,ISBLANK( Si_ingiere_junto_a_un_medicamento__c))</errorConditionFormula>
+    <errorDisplayField>Si_ingiere_junto_a_un_medicamento__c</errorDisplayField>
+    <errorMessage>Debe especificar el medicamento</errorMessage>
+</ValidationRule>

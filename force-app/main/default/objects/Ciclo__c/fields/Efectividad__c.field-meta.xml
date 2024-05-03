@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Efectividad__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Dias_de_campo_efectivo__c = 0,1,IF(OR(Visitas_totales_realizadas__c &lt;&gt; 0, Visitas_totales_realizadas_APM_adulto__c &lt;&gt; 0),
+			
+			(Visitas_totales_realizadas__c + IF(Visitas_APM_y_especialista__c &gt; 0 , Visitas_APM_y_especialista__c, 0))
+  
+			  / 
+			
+			(Dias_de_campo_efectivo__c * Target_Diario_editable__c), 0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Efectividad</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

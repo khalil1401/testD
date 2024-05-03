@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo__c</fullName>
+    <externalId>false</externalId>
+    <label>Motivo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Tipo__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Enfermedad</fullName>
+                <default>false</default>
+                <label>Enfermedad</label>
+            </value>
+            <value>
+                <fullName>Participación en congresos</fullName>
+                <default>false</default>
+                <label>Participación en congresos</label>
+            </value>
+            <value>
+                <fullName>Giras</fullName>
+                <default>false</default>
+                <label>Tiempo de traslado por gira</label>
+            </value>
+            <value>
+                <fullName>Convención de ventas</fullName>
+                <default>false</default>
+                <label>Convención de ventas</label>
+            </value>
+            <value>
+                <fullName>Reuniones en compañia</fullName>
+                <default>false</default>
+                <label>Reuniones en compañia</label>
+            </value>
+            <value>
+                <fullName>Licencias varias</fullName>
+                <default>false</default>
+                <label>Licencias varias</label>
+            </value>
+            <value>
+                <fullName>Capacitaciones</fullName>
+                <default>false</default>
+                <label>Capacitaciones</label>
+            </value>
+            <value>
+                <fullName>Vacaciones</fullName>
+                <default>false</default>
+                <label>Vacaciones</label>
+            </value>
+            <value>
+                <fullName>Reunión con Jefe</fullName>
+                <default>false</default>
+                <label>Reunión con Jefe</label>
+            </value>
+            <value>
+                <fullName>Reunión SN</fullName>
+                <default>false</default>
+                <label>Reunión SN</label>
+            </value>
+            <value>
+                <fullName>Reuniones externas</fullName>
+                <default>false</default>
+                <label>Reuniones externas</label>
+            </value>
+            <value>
+                <fullName>Compensatorios</fullName>
+                <default>false</default>
+                <label>Compensatorios</label>
+            </value>
+            <value>
+                <fullName>Materiales Workshop</fullName>
+                <default>false</default>
+                <label>Materiales Workshop</label>
+            </value>
+            <value>
+                <fullName>Workshops para TA&apos;s</fullName>
+                <default>false</default>
+                <label>Workshops para TA&apos;s</label>
+            </value>
+            <value>
+                <fullName>Tareas Administrativas</fullName>
+                <default>false</default>
+                <label>Tareas administrativas</label>
+            </value>
+            <value>
+                <fullName>Semana adicional de vacaciones</fullName>
+                <default>false</default>
+                <label>Vacaciones</label>
+            </value>
+            <value>
+                <fullName>Reunion De Equipo</fullName>
+                <default>false</default>
+                <label>Reunion De Equipo</label>
+            </value>
+            <value>
+                <fullName>Capacitaciones Equipo Promocional (Ta/Externo)</fullName>
+                <default>false</default>
+                <label>Capacitaciones Equipo Promocional (Ta/Externo)</label>
+            </value>
+            <value>
+                <fullName>Participacion De Workshop Para La Ta De Stroke</fullName>
+                <default>false</default>
+                <label>Participacion De Workshop Para La Ta De Stroke</label>
+            </value>
+            <value>
+                <fullName>Participacion De Workshop Para La Ta De Uti</fullName>
+                <default>false</default>
+                <label>Participacion De Workshop Para La Ta De Uti</label>
+            </value>
+            <value>
+                <fullName>Participacion De Workshop Para La Ta De Metabolicos</fullName>
+                <default>false</default>
+                <label>Participacion De Workshop Para La Ta De Metabolicos</label>
+            </value>
+            <value>
+                <fullName>Participacion De Workshop Para Dieta Cetogenica</fullName>
+                <default>false</default>
+                <label>Participacion De Workshop Para Dieta Cetogenica</label>
+            </value>
+            <value>
+                <fullName>Eventos</fullName>
+                <default>false</default>
+                <label>Eventos</label>
+            </value>
+            <value>
+                <fullName>Congresos</fullName>
+                <default>false</default>
+                <label>Congresos</label>
+            </value>
+            <value>
+                <fullName>Lanzamientos</fullName>
+                <default>false</default>
+                <label>Lanzamientos</label>
+            </value>
+            <value>
+                <fullName>Reunion Con Hcp´S</fullName>
+                <default>false</default>
+                <label>Reunion Con Hcp´S</label>
+            </value>
+            <value>
+                <fullName>Reunion Con Auditores</fullName>
+                <default>false</default>
+                <label>Reunion Con Auditores</label>
+            </value>
+            <value>
+                <fullName>Averiguacion Licitaciones</fullName>
+                <default>false</default>
+                <label>Averiguacion Licitaciones</label>
+            </value>
+            <value>
+                <fullName>Reunion De Ciclo</fullName>
+                <default>false</default>
+                <label>Reunion De Ciclo</label>
+            </value>
+            <value>
+                <fullName>Towhall</fullName>
+                <default>false</default>
+                <label>Towhall</label>
+            </value>
+            <value>
+                <fullName>Convencion</fullName>
+                <default>false</default>
+                <label>Convencion</label>
+            </value>
+            <value>
+                <fullName>Capacitaciones Hr</fullName>
+                <default>false</default>
+                <label>Capacitaciones Hr</label>
+            </value>
+            <value>
+                <fullName>Dias de estudio</fullName>
+                <default>false</default>
+                <label>Dias de estudio</label>
+            </value>
+            <value>
+                <fullName>Relev de datos / Activ de fichero</fullName>
+                <default>false</default>
+                <label>Relev de datos / Activ de fichero</label>
+            </value>
+            <value>
+                <fullName>Participación de workshop de TA ADULTOS</fullName>
+                <default>false</default>
+                <label>Participación de workshop de TA ADULTOS</label>
+            </value>
+            <value>
+                <fullName>Realización de Cafés Virtuales</fullName>
+                <default>false</default>
+                <label>Realización de Cafés Virtuales</label>
+            </value>
+            <value>
+                <fullName>Capacitaciones Equipo Promocional (TA)</fullName>
+                <default>false</default>
+                <label>Capacitaciones Equipo Promocional (TA)</label>
+            </value>
+            <value>
+                <fullName>Capacitaciones Equipo Promocional ( Externo)</fullName>
+                <default>false</default>
+                <label>Capacitaciones Equipo Promocional ( Externo)</label>
+            </value>
+            <value>
+                <fullName>Tareas Comerciales</fullName>
+                <default>false</default>
+                <label>Tareas Comerciales</label>
+            </value>
+            <value>
+                <fullName>Participación de Workshop´s de las diferentes TA´s (Webinar, ateneos)</fullName>
+                <default>false</default>
+                <label>Participación de Workshop´s de las diferentes TA´s (Webinar, ateneos)</label>
+            </value>
+            <value>
+                <fullName>Reunión por tema accesos/BC</fullName>
+                <default>false</default>
+                <label>Reunión por tema accesos/BC</label>
+            </value>
+            <value>
+                <fullName>Reuniones de seguimiento con la TA</fullName>
+                <default>false</default>
+                <label>Reuniones de seguimiento con la TA</label>
+            </value>
+            <value>
+                <fullName>Reunión con Auditores</fullName>
+                <default>false</default>
+                <label>Reunión con Auditores</label>
+            </value>
+            <value>
+                <fullName>Averiguación de Licitaciones</fullName>
+                <default>false</default>
+                <label>Averiguación de Licitaciones</label>
+            </value>
+            <value>
+                <fullName>Reunion con KAE/KAM</fullName>
+                <default>false</default>
+                <label>Reunion con KAE/KAM</label>
+            </value>
+            <value>
+                <fullName>Tareas de Relevamiento de nuevos HCP´s o ISS</fullName>
+                <default>false</default>
+                <label>Tareas de Relevamiento de nuevos HCP´s o ISS</label>
+            </value>
+            <value>
+                <fullName>Feriado Provincial</fullName>
+                <default>false</default>
+                <label>Feriado Provincial</label>
+            </value>
+            <value>
+                <fullName>Licitación</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Licitación</label>
+            </value>
+            <value>
+                <fullName>Reunión con otras Áreas</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reuniones en compañia</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Licencias</controllingFieldValue>
+            <valueName>Enfermedad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Licencias</controllingFieldValue>
+            <valueName>Vacaciones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Licencias</controllingFieldValue>
+            <valueName>Compensatorios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Licencias</controllingFieldValue>
+            <valueName>Dias de estudio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Licencias</controllingFieldValue>
+            <valueName>Feriado Provincial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tareas no promocionales</controllingFieldValue>
+            <valueName>Giras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tareas no promocionales</controllingFieldValue>
+            <valueName>Reunión con Jefe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tareas no promocionales</controllingFieldValue>
+            <valueName>Reunion De Equipo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tareas no promocionales</controllingFieldValue>
+            <valueName>Capacitaciones Equipo Promocional (Ta/Externo)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tareas no promocionales</controllingFieldValue>
+            <valueName>Relev de datos / Activ de fichero</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tareas no promocionales</controllingFieldValue>
+            <valueName>Tareas Comerciales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tareas no promocionales</controllingFieldValue>
+            <valueName>Reunión por tema accesos/BC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tareas no promocionales</controllingFieldValue>
+            <valueName>Reuniones de seguimiento con la TA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tareas no promocionales</controllingFieldValue>
+            <valueName>Reunion con KAE/KAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiempo Promocionales</controllingFieldValue>
+            <valueName>Eventos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiempo Promocionales</controllingFieldValue>
+            <valueName>Congresos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiempo Promocionales</controllingFieldValue>
+            <valueName>Lanzamientos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiempo Promocionales</controllingFieldValue>
+            <valueName>Reunion Con Auditores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiempo Promocionales</controllingFieldValue>
+            <valueName>Averiguacion Licitaciones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiempo Promocionales</controllingFieldValue>
+            <valueName>Reunion De Ciclo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiempo Promocionales</controllingFieldValue>
+            <valueName>Participación de Workshop´s de las diferentes TA´s (Webinar, ateneos)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiempo Promocionales</controllingFieldValue>
+            <valueName>Reunión con Auditores</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiempo Promocionales</controllingFieldValue>
+            <valueName>Averiguación de Licitaciones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tiempo Promocionales</controllingFieldValue>
+            <valueName>Tareas de Relevamiento de nuevos HCP´s o ISS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reuniones corporativas</controllingFieldValue>
+            <valueName>Towhall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reuniones corporativas</controllingFieldValue>
+            <valueName>Convencion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reuniones corporativas</controllingFieldValue>
+            <valueName>Capacitaciones Hr</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

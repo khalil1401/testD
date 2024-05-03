@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Especificar_DAM__c</fullName>
+    <description>Espacio para que complete el kinesiólogo sobre el DAM (Dispositivo de Ayuda para la Marcha)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Espacio para que complete el kinesiólogo sobre el DAM (Dispositivo de Ayuda para la Marcha)</inlineHelpText>
+    <label>Especificar</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

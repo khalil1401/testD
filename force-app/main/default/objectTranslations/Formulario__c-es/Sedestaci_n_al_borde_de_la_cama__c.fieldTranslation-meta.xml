@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Sedestaci_n_al_borde_de_la_cama__c</name>
+    <picklistValues>
+        <masterLabel>Asistencia máxima</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asistencia mínima</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sin asistencia</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

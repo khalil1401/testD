@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Por_cu_nto_tiempo_te_aprobaron__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>¿Por cuánto tiempo te aprobaron el tratamiento?</inlineHelpText>
+    <label>¿Por cuánto tiempo te aprobaron?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Continua_con_el_tratamiento__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 mes</fullName>
+                <default>false</default>
+                <label>1 mes</label>
+            </value>
+            <value>
+                <fullName>2 meses</fullName>
+                <default>false</default>
+                <label>2 meses</label>
+            </value>
+            <value>
+                <fullName>3 meses</fullName>
+                <default>false</default>
+                <label>3 meses</label>
+            </value>
+            <value>
+                <fullName>4 o más meses</fullName>
+                <default>false</default>
+                <label>4 o más meses</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Si</controllingFieldValue>
+            <valueName>1 mes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Si</controllingFieldValue>
+            <valueName>2 meses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Si</controllingFieldValue>
+            <valueName>3 meses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Si</controllingFieldValue>
+            <valueName>4 o más meses</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

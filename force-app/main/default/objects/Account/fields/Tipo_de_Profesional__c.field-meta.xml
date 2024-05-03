@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Profesional__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de Profesional</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Auditor</fullName>
+                <default>false</default>
+                <label>Auditor</label>
+            </value>
+            <value>
+                <fullName>Comprador de Droguería</fullName>
+                <default>false</default>
+                <label>Comprador de Droguería</label>
+            </value>
+            <value>
+                <fullName>Contratador</fullName>
+                <default>false</default>
+                <label>Contratador</label>
+            </value>
+            <value>
+                <fullName>Nutricionista</fullName>
+                <default>false</default>
+                <label>Nutricionista</label>
+            </value>
+            <value>
+                <fullName>Miembro de Entidad Pública</fullName>
+                <default>false</default>
+                <label>Miembro de Entidad Pública</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
+            </value>
+            <value>
+                <fullName>Farmaceútico</fullName>
+                <default>false</default>
+                <label>Farmaceútico</label>
+            </value>
+            <value>
+                <fullName>Enfermera</fullName>
+                <default>false</default>
+                <label>Enfermera</label>
+            </value>
+            <value>
+                <fullName>Fonoaudiólogo</fullName>
+                <default>false</default>
+                <label>Fonoaudiólogo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

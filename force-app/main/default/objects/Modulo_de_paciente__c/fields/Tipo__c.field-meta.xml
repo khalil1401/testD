@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de servicio</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CUIDADO PERSONALIZADO</fullName>
+                <default>false</default>
+                <label>CUIDADO PERSONALIZADO</label>
+            </value>
+            <value>
+                <fullName>REHABILITACIÓN DEGLUTORIA</fullName>
+                <default>false</default>
+                <label>REHABILITACIÓN DEGLUTORIA</label>
+            </value>
+            <value>
+                <fullName>REHABILITACIÓN MOTORA PLUS</fullName>
+                <default>false</default>
+                <label>REHABILITACIÓN MOTORA PLUS</label>
+            </value>
+            <value>
+                <fullName>REHABILITACION MOTORA BASICO ENTERAL</fullName>
+                <default>false</default>
+                <label>REHABILITACION MOTORA BASICO ENTERAL</label>
+            </value>
+            <value>
+                <fullName>REHABILITACION MOTORA - INTERMEDIO</fullName>
+                <default>false</default>
+                <label>REHABILITACION MOTORA - INTERMEDIO</label>
+            </value>
+            <value>
+                <fullName>REHABILITACION MOTORA BASICO ORAL</fullName>
+                <default>false</default>
+                <label>REHABILITACION MOTORA BASICO ORAL</label>
+            </value>
+            <value>
+                <fullName>CUIDADO COMPLETO</fullName>
+                <default>false</default>
+                <label>CUIDADO COMPLETO</label>
+            </value>
+            <value>
+                <fullName>AUTOCUIDADO</fullName>
+                <default>true</default>
+                <label>AUTOCUIDADO</label>
+            </value>
+            <value>
+                <fullName>CUIDADO BASICO</fullName>
+                <default>false</default>
+                <label>CUIDADO BASICO</label>
+            </value>
+            <value>
+                <fullName>AUTOCUIDADO.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>AUTOCUIDADO.</label>
+            </value>
+            <value>
+                <fullName>Complejidad media</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Complejidad media</label>
+            </value>
+            <value>
+                <fullName>Con rehabilitacion deglutoria</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Con rehabilitacion deglutoria</label>
+            </value>
+            <value>
+                <fullName>Full</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Full</label>
+            </value>
+            <value>
+                <fullName>Logístico</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Logístico</label>
+            </value>
+            <value>
+                <fullName>REHABILITACIÓN MOTORA CUIDADO COMPLETO</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>REHABILITACIÓN MOTORA CUIDADO COMPLETO</label>
+            </value>
+            <value>
+                <fullName>REHABILITACIÓN MOTORA CUIDADO PERSONALIZADA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>REHABILITACIÓN MOTORA CUIDADO PERSONALIZADA</label>
+            </value>
+            <value>
+                <fullName>Recuperacion nutricional (oral)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Recuperacion nutricional (oral)</label>
+            </value>
+            <value>
+                <fullName>Rehabiltiación Deglutoria</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rehabiltiación Deglutoria</label>
+            </value>
+            <value>
+                <fullName>SARCOPENIA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SARCOPENIA</label>
+            </value>
+            <value>
+                <fullName>Sin rehabilitacion deglutoria</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sin rehabilitacion deglutoria</label>
+            </value>
+            <value>
+                <fullName>Solo profesionales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Solo profesionales</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

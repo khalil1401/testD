@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Autoriza_Envio__c</fullName>
+    <externalId>false</externalId>
+    <label>Autoriza Envio</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Razon_de_envio__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PAEDs</fullName>
+                <default>false</default>
+                <label>PAEDs</label>
+            </value>
+            <value>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+                <label>Consumer</label>
+            </value>
+            <value>
+                <fullName>Adultos &amp; Nicho</fullName>
+                <default>false</default>
+                <label>Adultos &amp; Nicho</label>
+            </value>
+            <value>
+                <fullName>Best Care</fullName>
+                <default>false</default>
+                <label>Best Care</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Kit de Inicio</controllingFieldValue>
+            <controllingFieldValue>MM Excepcion</controllingFieldValue>
+            <valueName>PAEDs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kit de Inicio</controllingFieldValue>
+            <controllingFieldValue>MM Excepcion</controllingFieldValue>
+            <valueName>Consumer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kit de Inicio</controllingFieldValue>
+            <controllingFieldValue>MM Excepcion</controllingFieldValue>
+            <valueName>Adultos &amp; Nicho</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEC-EnvÍos</controllingFieldValue>
+            <valueName>Best Care</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pacientes_BC_CON_SERVICIO_Todos</fullName>
+    <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Servicio_Activo__c</columns>
+    <columns>Nutricionista_Asignado__c</columns>
+    <columns>Medico_Asignado__c</columns>
+    <columns>Enfermero_Asignado__c</columns>
+    <columns>Kinesiologo_asignado__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Subestado_del_paciente__c</field>
+        <operation>notEqual</operation>
+        <value>Fallecido</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>notContain</operation>
+        <value>xappia</value>
+    </filters>
+    <filters>
+        <field>Medico_Asignado__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Nutricionista_Asignado__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Pax BC CON SERVICIO (Todos)</label>
+</ListView>

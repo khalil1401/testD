@@ -1,0 +1,1718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Patologia__c</fullName>
+    <externalId>false</externalId>
+    <label>Patología</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Area_terapeutica__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abetalipoproteinemia</fullName>
+                <default>false</default>
+                <label>Abetalipoproteinemia</label>
+            </value>
+            <value>
+                <fullName>Acidemia metilmalonica/propionica</fullName>
+                <default>false</default>
+                <label>Acidemia metilmalonica/propionica</label>
+            </value>
+            <value>
+                <fullName>Aciduria Arginosucinica</fullName>
+                <default>false</default>
+                <label>Aciduria Arginosucinica</label>
+            </value>
+            <value>
+                <fullName>Aciduria Glutarica</fullName>
+                <default>false</default>
+                <label>Aciduria Glutarica</label>
+            </value>
+            <value>
+                <fullName>ACV Hemorragíco (Accidente cerebrovascular)</fullName>
+                <default>false</default>
+                <label>ACV Hemorragíco (Accidente cerebrovascular)</label>
+            </value>
+            <value>
+                <fullName>ACV Isquemico (Accidente cerebrovascular)</fullName>
+                <default>false</default>
+                <label>ACV Isquemico (Accidente cerebrovascular)</label>
+            </value>
+            <value>
+                <fullName>Adrenoleucodistrofia</fullName>
+                <default>false</default>
+                <label>Adrenoleucodistrofia</label>
+            </value>
+            <value>
+                <fullName>Alergia a la Proteina de leche de vaca (APLV)</fullName>
+                <default>false</default>
+                <label>Alergia a la Proteina de leche de vaca (APLV)</label>
+            </value>
+            <value>
+                <fullName>Alzheimer</fullName>
+                <default>false</default>
+                <label>Alzheimer</label>
+            </value>
+            <value>
+                <fullName>Anorexia</fullName>
+                <default>false</default>
+                <label>Anorexia</label>
+            </value>
+            <value>
+                <fullName>Asma</fullName>
+                <default>false</default>
+                <label>Asma</label>
+            </value>
+            <value>
+                <fullName>Bajo peso</fullName>
+                <default>false</default>
+                <label>Bajo peso</label>
+            </value>
+            <value>
+                <fullName>Bulimia</fullName>
+                <default>false</default>
+                <label>Bulimia</label>
+            </value>
+            <value>
+                <fullName>Cáncer de origen primario desconocido</fullName>
+                <default>false</default>
+                <label>Cáncer de origen primario desconocido</label>
+            </value>
+            <value>
+                <fullName>Cardiopatía congénita</fullName>
+                <default>false</default>
+                <label>Cardiopatía congénita</label>
+            </value>
+            <value>
+                <fullName>Cirrosis Hepatica</fullName>
+                <default>false</default>
+                <label>Cirrosis Hepatica</label>
+            </value>
+            <value>
+                <fullName>Cirugía Aparato genitourinario</fullName>
+                <default>false</default>
+                <label>Cirugía Aparato genitourinario</label>
+            </value>
+            <value>
+                <fullName>Cirugía de cabeza y cuello</fullName>
+                <default>false</default>
+                <label>Cirugía de cabeza y cuello</label>
+            </value>
+            <value>
+                <fullName>Cirugía Gastrointestinal</fullName>
+                <default>false</default>
+                <label>Cirugía Gastrointestinal</label>
+            </value>
+            <value>
+                <fullName>Cólicos/Constipación</fullName>
+                <default>false</default>
+                <label>Cólicos/Constipación</label>
+            </value>
+            <value>
+                <fullName>Complejos Mitocondriales tipo 1</fullName>
+                <default>false</default>
+                <label>Complejos Mitocondriales tipo 1</label>
+            </value>
+            <value>
+                <fullName>Deficiencia del transportador de Glucosa (GLUT 1)</fullName>
+                <default>false</default>
+                <label>Deficiencia del transportador de Glucosa (GLUT 1)</label>
+            </value>
+            <value>
+                <fullName>Deficiencia de piruvato deshidrogenasa (PDH)</fullName>
+                <default>false</default>
+                <label>Deficiencia de piruvato deshidrogenasa (PDH)</label>
+            </value>
+            <value>
+                <fullName>Demencia otros tipos</fullName>
+                <default>false</default>
+                <label>Demencia otros tipos</label>
+            </value>
+            <value>
+                <fullName>Demencia senil</fullName>
+                <default>false</default>
+                <label>Demencia senil</label>
+            </value>
+            <value>
+                <fullName>Desnutrición</fullName>
+                <default>false</default>
+                <label>Desnutrición</label>
+            </value>
+            <value>
+                <fullName>Desnutrición Asociada a enfermedad</fullName>
+                <default>false</default>
+                <label>Desnutrición Asociada a enfermedad</label>
+            </value>
+            <value>
+                <fullName>Deterioro cognitivo crónico</fullName>
+                <default>false</default>
+                <label>Deterioro cognitivo crónico</label>
+            </value>
+            <value>
+                <fullName>DGG (Deficiencia de Glucosa/Galactosa)</fullName>
+                <default>false</default>
+                <label>DGG (Deficiencia de Glucosa/Galactosa)</label>
+            </value>
+            <value>
+                <fullName>Diabetes (DBT)</fullName>
+                <default>false</default>
+                <label>Diabetes (DBT)</label>
+            </value>
+            <value>
+                <fullName>Diagnostico no confirmado</fullName>
+                <default>false</default>
+                <label>Diagnostico no confirmado</label>
+            </value>
+            <value>
+                <fullName>Encefalitis</fullName>
+                <default>false</default>
+                <label>Encefalitis</label>
+            </value>
+            <value>
+                <fullName>Encefalopatía crónica no evolutiva (ECNE)</fullName>
+                <default>false</default>
+                <label>Encefalopatía crónica no evolutiva (ECNE)</label>
+            </value>
+            <value>
+                <fullName>Enfermedad Neurológica</fullName>
+                <default>false</default>
+                <label>Enfermedad Neurológica</label>
+            </value>
+            <value>
+                <fullName>Enfermedad obstructiva Crónica (EPOC)</fullName>
+                <default>false</default>
+                <label>Enfermedad obstructiva Crónica (EPOC)</label>
+            </value>
+            <value>
+                <fullName>Enfermedad oncológica</fullName>
+                <default>false</default>
+                <label>Enfermedad oncológica</label>
+            </value>
+            <value>
+                <fullName>Epilepsia Refractaria</fullName>
+                <default>false</default>
+                <label>Epilepsia Refractaria</label>
+            </value>
+            <value>
+                <fullName>Esclerosis lateral amiotrófica (ELA)</fullName>
+                <default>false</default>
+                <label>Esclerosis lateral amiotrófica (ELA)</label>
+            </value>
+            <value>
+                <fullName>Esclerosis Tuberosa</fullName>
+                <default>false</default>
+                <label>Esclerosis Tuberosa</label>
+            </value>
+            <value>
+                <fullName>Esofagitis Eosinofílica</fullName>
+                <default>false</default>
+                <label>Esofagitis Eosinofílica</label>
+            </value>
+            <value>
+                <fullName>Espasmos Infantiles</fullName>
+                <default>false</default>
+                <label>Espasmos Infantiles</label>
+            </value>
+            <value>
+                <fullName>Fenilcetonuria</fullName>
+                <default>false</default>
+                <label>Fenilcetonuria</label>
+            </value>
+            <value>
+                <fullName>Fibrosis Quística del Páncreas</fullName>
+                <default>false</default>
+                <label>Fibrosis Quística del Páncreas</label>
+            </value>
+            <value>
+                <fullName>Fiebre Mediterránea Familiar</fullName>
+                <default>false</default>
+                <label>Fiebre Mediterránea Familiar</label>
+            </value>
+            <value>
+                <fullName>Glut 1</fullName>
+                <default>false</default>
+                <label>Glut 1</label>
+            </value>
+            <value>
+                <fullName>HCU (Homocistinuria)</fullName>
+                <default>false</default>
+                <label>HCU (Homocistinuria)</label>
+            </value>
+            <value>
+                <fullName>Hiperamonemia</fullName>
+                <default>false</default>
+                <label>Hiperamonemia</label>
+            </value>
+            <value>
+                <fullName>HiperFeninananemia</fullName>
+                <default>false</default>
+                <label>HiperFeninananemia</label>
+            </value>
+            <value>
+                <fullName>Hiporexia</fullName>
+                <default>false</default>
+                <label>Hiporexia</label>
+            </value>
+            <value>
+                <fullName>Infección febril relacionada con la epilepsia (FIRES)</fullName>
+                <default>false</default>
+                <label>Infección febril relacionada con la epilepsia (FIRES)</label>
+            </value>
+            <value>
+                <fullName>Insuficiencia cardiaca</fullName>
+                <default>false</default>
+                <label>Insuficiencia cardiaca</label>
+            </value>
+            <value>
+                <fullName>Insuficiencia renal Aguda</fullName>
+                <default>false</default>
+                <label>Insuficiencia renal Aguda</label>
+            </value>
+            <value>
+                <fullName>Insuficiencia renal Crónica</fullName>
+                <default>false</default>
+                <label>Insuficiencia renal Crónica</label>
+            </value>
+            <value>
+                <fullName>IVA (Acidemia Isovalérica)</fullName>
+                <default>false</default>
+                <label>IVA (Acidemia Isovalérica)</label>
+            </value>
+            <value>
+                <fullName>Jarabe de Arce</fullName>
+                <default>false</default>
+                <label>Jarabe de Arce</label>
+            </value>
+            <value>
+                <fullName>Linfagiectasia intestinal</fullName>
+                <default>false</default>
+                <label>Linfagiectasia intestinal</label>
+            </value>
+            <value>
+                <fullName>Meninguitis</fullName>
+                <default>false</default>
+                <label>Meninguitis</label>
+            </value>
+            <value>
+                <fullName>Neumonia Adquirida de la comunidad</fullName>
+                <default>false</default>
+                <label>Neumonia Adquirida de la comunidad</label>
+            </value>
+            <value>
+                <fullName>Neumonia Aspirativa</fullName>
+                <default>false</default>
+                <label>Neumonia Aspirativa</label>
+            </value>
+            <value>
+                <fullName>Neumonia Intrahospitalaria</fullName>
+                <default>false</default>
+                <label>Neumonia Intrahospitalaria</label>
+            </value>
+            <value>
+                <fullName>No puede amamantar</fullName>
+                <default>false</default>
+                <label>No puede amamantar</label>
+            </value>
+            <value>
+                <fullName>Oncohematologicos</fullName>
+                <default>false</default>
+                <label>Oncohematologicos</label>
+            </value>
+            <value>
+                <fullName>Otras</fullName>
+                <default>false</default>
+                <label>Otras</label>
+            </value>
+            <value>
+                <fullName>Otras enfermedades</fullName>
+                <default>false</default>
+                <label>Otras enfermedades</label>
+            </value>
+            <value>
+                <fullName>Paralisis Cerebral (PC)</fullName>
+                <default>false</default>
+                <label>Paralisis Cerebral (PC)</label>
+            </value>
+            <value>
+                <fullName>Parkinson</fullName>
+                <default>false</default>
+                <label>Parkinson</label>
+            </value>
+            <value>
+                <fullName>Patología Respiratoria</fullName>
+                <default>false</default>
+                <label>Patología Respiratoria</label>
+            </value>
+            <value>
+                <fullName>Prematurez</fullName>
+                <default>false</default>
+                <label>Prematurez</label>
+            </value>
+            <value>
+                <fullName>Quilotórax</fullName>
+                <default>false</default>
+                <label>Quilotórax</label>
+            </value>
+            <value>
+                <fullName>Reflujo gastroesofágico (ERGE)</fullName>
+                <default>false</default>
+                <label>Reflujo gastroesofágico (ERGE)</label>
+            </value>
+            <value>
+                <fullName>Regurgitación (RGE)</fullName>
+                <default>false</default>
+                <label>Regurgitación (RGE)</label>
+            </value>
+            <value>
+                <fullName>Retraso madurativo</fullName>
+                <default>false</default>
+                <label>Retraso madurativo</label>
+            </value>
+            <value>
+                <fullName>Secuela neurológica quirúrgica.</fullName>
+                <default>false</default>
+                <label>Secuela neurológica quirúrgica.</label>
+            </value>
+            <value>
+                <fullName>SEIPA (Síndrome de enterocolítis inducida por proteinas alimentarias)</fullName>
+                <default>false</default>
+                <label>SEIPA (Síndrome de enterocolítis inducida por proteinas alimentarias)</label>
+            </value>
+            <value>
+                <fullName>Síndrome de Angelman</fullName>
+                <default>false</default>
+                <label>Síndrome de Angelman</label>
+            </value>
+            <value>
+                <fullName>Síndrome de Doose</fullName>
+                <default>false</default>
+                <label>Síndrome de Doose</label>
+            </value>
+            <value>
+                <fullName>Sindrome de Down</fullName>
+                <default>false</default>
+                <label>Sindrome de Down</label>
+            </value>
+            <value>
+                <fullName>Síndrome de Dravet</fullName>
+                <default>false</default>
+                <label>Síndrome de Dravet</label>
+            </value>
+            <value>
+                <fullName>Sindrome de intestino corto (SIC)</fullName>
+                <default>false</default>
+                <label>Síndrome de intestino corto (SIC)</label>
+            </value>
+            <value>
+                <fullName>Síndrome de Lennox-Gastaut</fullName>
+                <default>false</default>
+                <label>Síndrome de Lennox-Gastaut</label>
+            </value>
+            <value>
+                <fullName>Sindrome de mala absorción</fullName>
+                <default>false</default>
+                <label>Sindrome de mala absorción</label>
+            </value>
+            <value>
+                <fullName>Síndrome de Ohtahara</fullName>
+                <default>false</default>
+                <label>Síndrome de Ohtahara</label>
+            </value>
+            <value>
+                <fullName>Síndrome de Smith</fullName>
+                <default>false</default>
+                <label>Síndrome de Smith</label>
+            </value>
+            <value>
+                <fullName>Síndrome de West</fullName>
+                <default>false</default>
+                <label>Síndrome de West</label>
+            </value>
+            <value>
+                <fullName>Síndrome mal absortivo</fullName>
+                <default>false</default>
+                <label>Síndrome mal absortivo</label>
+            </value>
+            <value>
+                <fullName>Status epiléptico super-refractario</fullName>
+                <default>false</default>
+                <label>Status epiléptico super-refractario</label>
+            </value>
+            <value>
+                <fullName>Tirosinemia</fullName>
+                <default>false</default>
+                <label>Tirosinemia</label>
+            </value>
+            <value>
+                <fullName>Transplante hepático</fullName>
+                <default>false</default>
+                <label>Transplante hepático</label>
+            </value>
+            <value>
+                <fullName>Trastornos deglutorios</fullName>
+                <default>false</default>
+                <label>Trastornos deglutorios</label>
+            </value>
+            <value>
+                <fullName>Traumatismo de craneo secuelar  (TEC)</fullName>
+                <default>false</default>
+                <label>Traumatismo de craneo secuelar  (TEC)</label>
+            </value>
+            <value>
+                <fullName>Tumor cerebral</fullName>
+                <default>false</default>
+                <label>Tumor cerebral</label>
+            </value>
+            <value>
+                <fullName>Tumor de cabeza y cuello</fullName>
+                <default>false</default>
+                <label>Tumor de cabeza y cuello</label>
+            </value>
+            <value>
+                <fullName>Tumor del Aparato digestivo</fullName>
+                <default>false</default>
+                <label>Tumor del Aparato digestivo</label>
+            </value>
+            <value>
+                <fullName>Tumor del Aparato Respiratorio</fullName>
+                <default>false</default>
+                <label>Tumor del Aparato Respiratorio</label>
+            </value>
+            <value>
+                <fullName>Tumor de Piel</fullName>
+                <default>false</default>
+                <label>Tumor de Piel</label>
+            </value>
+            <value>
+                <fullName>Tumor Ginecológico</fullName>
+                <default>false</default>
+                <label>Tumor Ginecológico</label>
+            </value>
+            <value>
+                <fullName>Tumor Osteomuscular</fullName>
+                <default>false</default>
+                <label>Tumor Osteomuscular</label>
+            </value>
+            <value>
+                <fullName>Tumor urológico</fullName>
+                <default>false</default>
+                <label>Tumor urológico</label>
+            </value>
+            <value>
+                <fullName>Tumor vías urinarias</fullName>
+                <default>false</default>
+                <label>Tumor vías urinarias</label>
+            </value>
+            <value>
+                <fullName>UCD (Trastorno Ciclo de la Urea)</fullName>
+                <default>false</default>
+                <label>UCD (Trastorno Ciclo de la Urea)</label>
+            </value>
+            <value>
+                <fullName>ACV</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ACV</label>
+            </value>
+            <value>
+                <fullName>APLV</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>APLV</label>
+            </value>
+            <value>
+                <fullName>Adulto mayor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Adulto mayor</label>
+            </value>
+            <value>
+                <fullName>DNT</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>DNT</label>
+            </value>
+            <value>
+                <fullName>Demencia</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demencia</label>
+            </value>
+            <value>
+                <fullName>Déficit de piruvato deshidrogenasa</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Déficit de piruvato deshidrogenasa</label>
+            </value>
+            <value>
+                <fullName>Esofagitis Eosinofilica</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Esofagitis Eosinofilica</label>
+            </value>
+            <value>
+                <fullName>Estado Vegetativo permanente</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Estado Vegetativo permanente</label>
+            </value>
+            <value>
+                <fullName>Falla de Crecimiento</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Falla de Crecimiento</label>
+            </value>
+            <value>
+                <fullName>Hiperanomemia</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hiperanomemia</label>
+            </value>
+            <value>
+                <fullName>Oncología</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Oncología</label>
+            </value>
+            <value>
+                <fullName>Post Quirúrgico</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Post Quirúrgico</label>
+            </value>
+            <value>
+                <fullName>Síndrome de intestino corto</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Síndrome de intestino corto</label>
+            </value>
+            <value>
+                <fullName>TEA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TEA</label>
+            </value>
+            <value>
+                <fullName>TMPA (Trastorno del metabolismo de Proteínas y Aminoácidos)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TMPA (Trastorno del metabolismo de Proteínas y Aminoácidos)</label>
+            </value>
+            <value>
+                <fullName>UPP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>UPP</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Abetalipoproteinemia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Acidemia metilmalonica/propionica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Aciduria Arginosucinica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Aciduria Glutarica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>ACV Hemorragíco (Accidente cerebrovascular)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>ACV Isquemico (Accidente cerebrovascular)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Adrenoleucodistrofia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Alergia a la Proteina de leche de vaca (APLV)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Alzheimer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Anorexia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Asma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Bajo peso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Bulimia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Cáncer de origen primario desconocido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Cardiopatía congénita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Cirrosis Hepatica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Cirugía Aparato genitourinario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Cirugía de cabeza y cuello</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Cirugía Gastrointestinal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Cólicos/Constipación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Complejos Mitocondriales tipo 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Deficiencia del transportador de Glucosa (GLUT 1)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Deficiencia de piruvato deshidrogenasa (PDH)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Demencia otros tipos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Demencia senil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Desnutrición</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Desnutrición Asociada a enfermedad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Deterioro cognitivo crónico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>DGG (Deficiencia de Glucosa/Galactosa)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Diabetes (DBT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Diagnostico no confirmado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Encefalitis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Encefalopatía crónica no evolutiva (ECNE)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Enfermedad Neurológica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Enfermedad obstructiva Crónica (EPOC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Enfermedad oncológica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Epilepsia Refractaria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Esclerosis lateral amiotrófica (ELA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Esclerosis Tuberosa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Esofagitis Eosinofílica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Espasmos Infantiles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Fenilcetonuria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Fibrosis Quística del Páncreas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Glut 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>HCU (Homocistinuria)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Hiperamonemia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>HiperFeninananemia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Hiporexia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Infección febril relacionada con la epilepsia (FIRES)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Insuficiencia cardiaca</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Insuficiencia renal Aguda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Insuficiencia renal Crónica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>IVA (Acidemia Isovalérica)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Jarabe de Arce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Linfagiectasia intestinal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Meninguitis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Neumonia Adquirida de la comunidad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Neumonia Aspirativa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Neumonia Intrahospitalaria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>No puede amamantar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Oncohematologicos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Otras</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Otras enfermedades</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Paralisis Cerebral (PC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Parkinson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Patología Respiratoria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Prematurez</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Quilotórax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Reflujo gastroesofágico (ERGE)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Regurgitación (RGE)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Retraso madurativo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Secuela neurológica quirúrgica.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>SEIPA (Síndrome de enterocolítis inducida por proteinas alimentarias)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Síndrome de Angelman</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Síndrome de Doose</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Sindrome de Down</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Síndrome de Dravet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Sindrome de intestino corto (SIC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Síndrome de Lennox-Gastaut</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Sindrome de mala absorción</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Síndrome de Ohtahara</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Síndrome de Smith</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Síndrome de West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Síndrome mal absortivo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Status epiléptico super-refractario</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Tirosinemia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Transplante hepático</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Trastornos deglutorios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Traumatismo de craneo secuelar  (TEC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Tumor cerebral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Tumor de cabeza y cuello</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Tumor del Aparato digestivo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Tumor del Aparato Respiratorio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Tumor de Piel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Tumor Ginecológico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Tumor Osteomuscular</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Tumor urológico</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Oncología</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>Tumor vías urinarias</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NEG</controllingFieldValue>
+            <controllingFieldValue>Alergia</controllingFieldValue>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <controllingFieldValue>Metabólicos</controllingFieldValue>
+            <controllingFieldValue>Desafíos del crecimiento</controllingFieldValue>
+            <controllingFieldValue>Malnutrición</controllingFieldValue>
+            <controllingFieldValue>Digestivos</controllingFieldValue>
+            <controllingFieldValue>Disfagia</controllingFieldValue>
+            <valueName>UCD (Trastorno Ciclo de la Urea)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dieta Cetogénica</controllingFieldValue>
+            <valueName>Fiebre Mediterránea Familiar</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

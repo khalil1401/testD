@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subtipo__c</fullName>
+    <externalId>false</externalId>
+    <label>Subtipo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Activos</fullName>
+                <default>false</default>
+                <label>Activos</label>
+            </value>
+            <value>
+                <fullName>Actualización de datos</fullName>
+                <default>false</default>
+                <label>Actualización de datos</label>
+            </value>
+            <value>
+                <fullName>Actualización de Módulo</fullName>
+                <default>false</default>
+                <label>Actualización de Módulo</label>
+            </value>
+            <value>
+                <fullName>Calidad</fullName>
+                <default>false</default>
+                <label>Calidad</label>
+            </value>
+            <value>
+                <fullName>Cancelacion de Envio</fullName>
+                <default>false</default>
+                <label>Cancelacion de Envio</label>
+            </value>
+            <value>
+                <fullName>Comerciales</fullName>
+                <default>false</default>
+                <label>Comerciales</label>
+            </value>
+            <value>
+                <fullName>Documentacion</fullName>
+                <default>false</default>
+                <label>Documentacion</label>
+            </value>
+            <value>
+                <fullName>eCommerce</fullName>
+                <default>false</default>
+                <label>eCommerce</label>
+            </value>
+            <value>
+                <fullName>Envio de Activos</fullName>
+                <default>false</default>
+                <label>Envio de Activos</label>
+            </value>
+            <value>
+                <fullName>Envio de Insumos</fullName>
+                <default>false</default>
+                <label>Envio de Insumos</label>
+            </value>
+            <value>
+                <fullName>Envio de Productos</fullName>
+                <default>false</default>
+                <label>Envio de Productos</label>
+            </value>
+            <value>
+                <fullName>Estado de Envíos</fullName>
+                <default>false</default>
+                <label>Estado de Envíos</label>
+            </value>
+            <value>
+                <fullName>Logistica</fullName>
+                <default>false</default>
+                <label>Logistica</label>
+            </value>
+            <value>
+                <fullName>Modulo BC</fullName>
+                <default>false</default>
+                <label>Modulo BC</label>
+            </value>
+            <value>
+                <fullName>Nuevo Paciente</fullName>
+                <default>false</default>
+                <label>Nuevo Paciente</label>
+            </value>
+            <value>
+                <fullName>ONG Acceso</fullName>
+                <default>false</default>
+                <label>ONG Acceso</label>
+            </value>
+            <value>
+                <fullName>Productos</fullName>
+                <default>false</default>
+                <label>Productos</label>
+            </value>
+            <value>
+                <fullName>Profesionales BC</fullName>
+                <default>false</default>
+                <label>Profesionales BC</label>
+            </value>
+            <value>
+                <fullName>Profesionales de la salud</fullName>
+                <default>false</default>
+                <label>Profesionales de la salud</label>
+            </value>
+            <value>
+                <fullName>Proveedores</fullName>
+                <default>false</default>
+                <label>Proveedores</label>
+            </value>
+            <value>
+                <fullName>Reporte de Crisis</fullName>
+                <default>false</default>
+                <label>Reporte de Crisis</label>
+            </value>
+            <value>
+                <fullName>Reporte de Incidencia</fullName>
+                <default>false</default>
+                <label>Reporte de Incidencia</label>
+            </value>
+            <value>
+                <fullName>Respuestas WhatsApp</fullName>
+                <default>false</default>
+                <label>Respuestas WhatsApp</label>
+            </value>
+            <value>
+                <fullName>Retiro de Activos</fullName>
+                <default>false</default>
+                <label>Retiro de Activos</label>
+            </value>
+            <value>
+                <fullName>Seguimiento</fullName>
+                <default>false</default>
+                <label>Seguimiento</label>
+            </value>
+            <value>
+                <fullName>Seguimiento no renovación</fullName>
+                <default>false</default>
+                <label>Seguimiento no renovación</label>
+            </value>
+            <value>
+                <fullName>Servicios Profesionales</fullName>
+                <default>false</default>
+                <label>Servicios Profesionales</label>
+            </value>
+            <value>
+                <fullName>Solicitud de Nota de Crédito</fullName>
+                <default>false</default>
+                <label>Solicitud de Nota de Crédito</label>
+            </value>
+            <value>
+                <fullName>Solicitud de Nota de Débito</fullName>
+                <default>false</default>
+                <label>Solicitud de Nota de Débito</label>
+            </value>
+            <value>
+                <fullName>Urgencia</fullName>
+                <default>false</default>
+                <label>Urgencia</label>
+            </value>
+            <value>
+                <fullName>Alta</fullName>
+                <default>false</default>
+                <label>Alta</label>
+            </value>
+            <value>
+                <fullName>Alta con evaluación Medica</fullName>
+                <default>false</default>
+                <label>Alta con evaluación Medica</label>
+            </value>
+            <value>
+                <fullName>Alta en bloque</fullName>
+                <default>false</default>
+                <label>Alta en bloque</label>
+            </value>
+            <value>
+                <fullName>Renovación</fullName>
+                <default>false</default>
+                <label>Renovación</label>
+            </value>
+            <value>
+                <fullName>Renovación en bloque</fullName>
+                <default>false</default>
+                <label>Renovación en bloque</label>
+            </value>
+            <value>
+                <fullName>Comercial</fullName>
+                <default>false</default>
+                <label>Comercial</label>
+            </value>
+            <value>
+                <fullName>Producto con vencimiento corto</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Producto con vencimiento corto</label>
+            </value>
+            <value>
+                <fullName>Seguimiento ONG</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Seguimiento ONG</label>
+            </value>
+            <value>
+                <fullName>Soporte OOSS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Soporte OOSS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

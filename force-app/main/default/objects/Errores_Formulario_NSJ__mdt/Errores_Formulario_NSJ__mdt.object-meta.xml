@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Relaciona errores técnicos con mensajes para el usuario</description>
+    <label>Error Formulario NSJ</label>
+    <pluralLabel>Errores Formulario NSJ</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

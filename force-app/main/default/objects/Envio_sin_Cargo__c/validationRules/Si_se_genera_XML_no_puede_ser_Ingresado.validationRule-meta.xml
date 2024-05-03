@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_se_genera_XML_no_puede_ser_Ingresado</fullName>
+    <active>true</active>
+    <description>Si se genera XML no puede pasarse a Ingresado</description>
+    <errorConditionFormula>AND(Xml_ya_generado__c, 
+				
+        NOT(ISCHANGED(Xml_ya_generado__c)), 
+				OR(
+         ISPICKVAL(Estado_del_envio__c, &apos;Ingresado&apos;),
+								ISPICKVAL(Estado_del_envio__c, &apos;Reservado&apos;)
+				    ))</errorConditionFormula>
+    <errorMessage>No se puede modificar un Envió  sin cargo Reservado o ya Procesado.</errorMessage>
+</ValidationRule>

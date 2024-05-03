@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Herramienta_Screening_Nutricional__c</fullName>
+    <description>Herramienta utilizada para screening nutricional</description>
+    <externalId>false</externalId>
+    <label>Herramienta Screening Nutricional</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PNRS</fullName>
+                <default>false</default>
+                <label>PNRS</label>
+            </value>
+            <value>
+                <fullName>PYMS</fullName>
+                <default>false</default>
+                <label>PYMS</label>
+            </value>
+            <value>
+                <fullName>SGNA</fullName>
+                <default>false</default>
+                <label>SGNA</label>
+            </value>
+            <value>
+                <fullName>STAMP</fullName>
+                <default>false</default>
+                <label>STAMP</label>
+            </value>
+            <value>
+                <fullName>STRONG</fullName>
+                <default>false</default>
+                <label>STRONG</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

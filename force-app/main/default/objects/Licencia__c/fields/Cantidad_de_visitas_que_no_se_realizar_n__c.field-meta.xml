@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cantidad_de_visitas_que_no_se_realizar_n__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Fecha_de_inicio__c  =  Fecha_de_fin__c ,   Dia_decimal__c   *  Ciclo__r.Target_diario__c , (  Fecha_de_fin__c  -  Fecha_de_inicio__c + 1 )* Ciclo__r.Target_diario__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Cantidad de visitas que no se realizarán</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

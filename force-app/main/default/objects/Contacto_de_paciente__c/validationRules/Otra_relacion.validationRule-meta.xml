@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Otra_relacion</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISPICKVAL( Relacion__c, &apos;Otro&apos;)) &amp;&amp; NOT(ISBLANK(Otro__c))</errorConditionFormula>
+    <errorDisplayField>Otro__c</errorDisplayField>
+    <errorMessage>No puede llenar este campo si la relación no es &apos;Otro&apos;</errorMessage>
+</ValidationRule>

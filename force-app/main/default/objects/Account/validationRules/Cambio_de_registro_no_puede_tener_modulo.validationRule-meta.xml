@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cambio_de_registro_no_puede_tener_modulo</fullName>
+    <active>true</active>
+    <description>Una cuenta no puede cambiar de registro si tiene un modulo activo</description>
+    <errorConditionFormula>IF(AND(ultimo_modulo_hasta__c &gt;= TODAY(), ISCHANGED(RecordTypeId))  ,TRUE,FALSE)</errorConditionFormula>
+    <errorMessage>Tiene un modulo activo no se puede cambiar de tipo de registro la cuenta</errorMessage>
+</ValidationRule>

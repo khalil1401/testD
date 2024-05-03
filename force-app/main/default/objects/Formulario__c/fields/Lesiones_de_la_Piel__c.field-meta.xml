@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lesiones_de_la_Piel__c</fullName>
+    <externalId>false</externalId>
+    <label>Lesiones de la Piel</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Deshidratación</fullName>
+                <default>false</default>
+                <label>Deshidratación</label>
+            </value>
+            <value>
+                <fullName>UPP</fullName>
+                <default>false</default>
+                <label>UPP</label>
+            </value>
+            <value>
+                <fullName>Fistula Enterocutanea</fullName>
+                <default>false</default>
+                <label>Fístula Enterocutánea</label>
+            </value>
+            <value>
+                <fullName>Infeccion local</fullName>
+                <default>false</default>
+                <label>Infección local</label>
+            </value>
+            <value>
+                <fullName>Irritacion de la piel</fullName>
+                <default>false</default>
+                <label>Irritación de la piel</label>
+            </value>
+            <value>
+                <fullName>Ninguna</fullName>
+                <default>false</default>
+                <label>Ninguna</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solo_Numeros_DNI</fullName>
+    <active>true</active>
+    <description>Permite solo ingresar numeros en el campo DNI</description>
+    <errorConditionFormula>AND( DNI__c &lt;&gt;null, 
+				NOT(ISNUMBER( DNI__c ))
+				)</errorConditionFormula>
+    <errorDisplayField>DNI__c</errorDisplayField>
+    <errorMessage>Solo se deben ingresar numeros</errorMessage>
+</ValidationRule>

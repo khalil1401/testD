@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pudiste_tolerarlo_bien__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>¿Pudiste tolerarlo bien?</inlineHelpText>
+    <label>¿Pudiste tolerarlo bien?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lo toleré bien</fullName>
+                <default>false</default>
+                <label>Lo toleré bien</label>
+            </value>
+            <value>
+                <fullName>Presentó dificultades</fullName>
+                <default>false</default>
+                <label>Presentó dificultades</label>
+            </value>
+            <value>
+                <fullName>No lo toleró</fullName>
+                <default>false</default>
+                <label>No lo toleró</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+            <value>
+                <fullName>No lo toleró bien</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No lo toleró bien</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

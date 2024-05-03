@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cierre_de_caso_perfil_Planta_Elaboradora</fullName>
+    <active>true</active>
+    <description>No permitir que el perfil Planta Elaboradora cierre casos de Reclamo</description>
+    <errorConditionFormula>AND($Profile.Name = &apos;Planta Elaboradora&apos;, ISCHANGED( Status ))</errorConditionFormula>
+    <errorMessage>No tiene permiso para modificar el estado del caso con el perfil asignado</errorMessage>
+</ValidationRule>

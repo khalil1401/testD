@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>M_x_a_pagar_por_producto_cetogenico__c</fullName>
+    <description>¿Cuánto seria lo máximo que pagarías por un producto contribuya a tu tratamiento cetogénico?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>¿Cuánto seria lo máximo que pagarías por un producto contribuya a tu tratamiento cetogénico?</inlineHelpText>
+    <label>¿Máx. a pagar por producto cetogénico?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lo mismo que ahora</fullName>
+                <default>false</default>
+                <label>Lo mismo que ahora</label>
+            </value>
+            <value>
+                <fullName>Un 25% más</fullName>
+                <default>false</default>
+                <label>Un 25% más</label>
+            </value>
+            <value>
+                <fullName>Un 50% más</fullName>
+                <default>false</default>
+                <label>Un 50% más</label>
+            </value>
+            <value>
+                <fullName>El doble</fullName>
+                <default>false</default>
+                <label>El doble</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

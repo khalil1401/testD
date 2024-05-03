@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contactos_principales__c</fullName>
+    <externalId>false</externalId>
+    <label>Contactos principales</label>
+    <summaryFilterItems>
+        <field>Contacto_de_paciente__c.Principal__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Contacto_de_paciente__c.Paciente__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

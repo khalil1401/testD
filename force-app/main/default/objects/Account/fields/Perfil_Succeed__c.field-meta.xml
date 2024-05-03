@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perfil_Succeed__c</fullName>
+    <externalId>false</externalId>
+    <label>Perfil Succeed</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Analítico</fullName>
+                <default>false</default>
+                <label>Analítico</label>
+            </value>
+            <value>
+                <fullName>Promotor</fullName>
+                <default>false</default>
+                <label>Promotor</label>
+            </value>
+            <value>
+                <fullName>Controlador</fullName>
+                <default>false</default>
+                <label>Controlador</label>
+            </value>
+            <value>
+                <fullName>Facilitador</fullName>
+                <default>false</default>
+                <label>Facilitador</label>
+            </value>
+            <value>
+                <fullName>Sin definir</fullName>
+                <default>false</default>
+                <label>Sin definir</label>
+            </value>
+            <value>
+                <fullName>Comercial</fullName>
+                <default>false</default>
+                <label>Comercial</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

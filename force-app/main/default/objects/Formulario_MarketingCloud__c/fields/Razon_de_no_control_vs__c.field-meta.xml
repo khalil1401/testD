@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Razon_de_no_control_vs__c</fullName>
+    <externalId>false</externalId>
+    <label>Razón de no control</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No consigo turno médico</fullName>
+                <default>false</default>
+                <label>No consigo turno médico</label>
+            </value>
+            <value>
+                <fullName>No estoy saliendo debido al COVID-19</fullName>
+                <default>false</default>
+                <label>No estoy saliendo debido al COVID-19</label>
+            </value>
+            <value>
+                <fullName>No cuento con los medios económicos para trasladarme hasta el consultorio</fullName>
+                <default>false</default>
+                <label>No cuento con los medios económicos para trasladarme hasta el consultorio</label>
+            </value>
+            <value>
+                <fullName>No estoy haciendo el tratamiento</fullName>
+                <default>false</default>
+                <label>No estoy haciendo el tratamiento</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

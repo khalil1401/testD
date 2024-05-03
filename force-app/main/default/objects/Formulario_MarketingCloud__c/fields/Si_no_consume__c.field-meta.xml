@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_no_consume__c</fullName>
+    <externalId>false</externalId>
+    <label>Si no consume, ¿cuál es el motivo?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consume productos de otro laboratorio</fullName>
+                <default>false</default>
+                <label>Consume productos de otro laboratorio</label>
+            </value>
+            <value>
+                <fullName>Sin cobertura de OS</fullName>
+                <default>false</default>
+                <label>Sin cobertura de OS</label>
+            </value>
+            <value>
+                <fullName>Desconoce cómo adquirirlos</fullName>
+                <default>false</default>
+                <label>Desconoce cómo adquirirlos</label>
+            </value>
+            <value>
+                <fullName>Imposibilidad de compra particular</fullName>
+                <default>false</default>
+                <label>Imposibilidad de compra particular</label>
+            </value>
+            <value>
+                <fullName>Problemas con el gusto</fullName>
+                <default>false</default>
+                <label>Problemas con el gusto</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

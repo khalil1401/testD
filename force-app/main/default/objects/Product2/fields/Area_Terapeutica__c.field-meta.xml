@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Area_Terapeutica__c</fullName>
+    <description>Área Terapéutica a la cual pertenece el producto</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Área Terapéutica a la cual pertenece el producto</inlineHelpText>
+    <label>Área Terapéutica</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Area_Terapeutica</valueSetName>
+    </valueSet>
+</CustomField>

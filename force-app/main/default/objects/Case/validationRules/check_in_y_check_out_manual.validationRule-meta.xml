@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>check_in_y_check_out_manual</fullName>
+    <active>true</active>
+    <description>No puede agregar el check in y check out manual si ya hizo check in y check out automático</description>
+    <errorConditionFormula>AND(
+OR(Check_in__c = true,
+   Check_out__c = true),
+OR(NOT(ISBLANK( Check_in_manual__c )),
+   NOT(ISBLANK( Check_in_manual__c )))
+)</errorConditionFormula>
+    <errorMessage>No puede hacer check in y check out automático y manual, elija uno de los dos métodos</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validacion_Cambio_a_Producto_externo</fullName>
+    <active>false</active>
+    <description>Regla que habilita el campo cambio a producto externo solo cuando se seleciconan los motivos correcpondientes</description>
+    <errorConditionFormula>OR(RecordType.DeveloperName = &quot;Retencion&quot;,ISPICKVAL(Subtipo__c , &quot;Seguimiento no renovacion&quot;),OR(ISPICKVAL(Motivo__c,&quot;Cambio de indicación&quot;),ISPICKVAL(Motivo__c,&quot;En evaluación médica&quot;),ISPICKVAL(Motivo__c,&quot;Fin cobertura Plan Materno Infantil&quot;)))</errorConditionFormula>
+    <errorDisplayField>Cambio_a_Producto_externo__c</errorDisplayField>
+    <errorMessage>Por favor seleccionar la opción correcta</errorMessage>
+</ValidationRule>

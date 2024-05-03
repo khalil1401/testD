@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opciones_Entrega__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>¿Cuál de estas opciones valora más?</inlineHelpText>
+    <label>Opciones Entrega</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ninguno</fullName>
+                <default>false</default>
+                <label>Ninguno</label>
+            </value>
+            <value>
+                <fullName>Entrega en domicilio</fullName>
+                <default>false</default>
+                <label>Entrega en domicilio</label>
+            </value>
+            <value>
+                <fullName>Entrega por pick up</fullName>
+                <default>false</default>
+                <label>Entrega por pick up</label>
+            </value>
+            <value>
+                <fullName>Elegir el día y franja horaria dentro de las opciones disponibles</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Elegir el día y franja horaria dentro de las opciones disponibles</label>
+            </value>
+            <value>
+                <fullName>Es indistinto</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Es indistinto</label>
+            </value>
+            <value>
+                <fullName>Que el envío llegue dentro de los plazos estimados de entrega</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Que el envío llegue dentro de los plazos estimados de entrega</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

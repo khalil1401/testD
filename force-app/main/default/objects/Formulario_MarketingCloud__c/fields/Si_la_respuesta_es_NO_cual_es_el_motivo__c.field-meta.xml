@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_la_respuesta_es_NO_cual_es_el_motivo__c</fullName>
+    <externalId>false</externalId>
+    <label>Si la respuesta es NO,cual es el motivo?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tolerancia</fullName>
+                <default>false</default>
+                <label>Tolerancia</label>
+            </value>
+            <value>
+                <fullName>Se rehusa</fullName>
+                <default>false</default>
+                <label>Se rehusa</label>
+            </value>
+            <value>
+                <fullName>Acceso no lo cubre la OS</fullName>
+                <default>false</default>
+                <label>Acceso no lo cubre la OS</label>
+            </value>
+            <value>
+                <fullName>Acceso por precio</fullName>
+                <default>false</default>
+                <label>Acceso por precio</label>
+            </value>
+            <value>
+                <fullName>Cambio de producto</fullName>
+                <default>false</default>
+                <label>Cambio de producto</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

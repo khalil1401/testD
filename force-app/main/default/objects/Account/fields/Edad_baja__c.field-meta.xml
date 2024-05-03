@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Edad_baja__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( and(NOT( ISBLANK( PersonBirthdate ) ), DATE( YEAR( PersonBirthdate ), MONTH( PersonBirthdate ) , DAY( PersonBirthdate ) ) &lt;= DATE( YEAR(Fecha_de_cambio_de_estado__c), MONTH(Fecha_de_cambio_de_estado__c) , DAY(Fecha_de_cambio_de_estado__c) )), YEAR (Fecha_de_cambio_de_estado__c) - YEAR ( PersonBirthdate ),
+null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Edad baja</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

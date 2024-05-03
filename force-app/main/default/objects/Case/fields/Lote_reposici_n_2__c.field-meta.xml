@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lote_reposici_n_2__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Completar únicamente si la reposición fue realizada</inlineHelpText>
+    <label>Lote reposición 2°</label>
+    <length>260</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

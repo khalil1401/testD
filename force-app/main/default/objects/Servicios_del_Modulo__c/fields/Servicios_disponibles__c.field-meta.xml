@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Servicios_disponibles__c</fullName>
+    <externalId>false</externalId>
+    <label>Servicios</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Servicio visita enfermería</fullName>
+                <default>false</default>
+                <label>Servicio visita enfermería</label>
+            </value>
+            <value>
+                <fullName>Servicio visita nutricional</fullName>
+                <default>false</default>
+                <label>Servicio visita nutricional</label>
+            </value>
+            <value>
+                <fullName>Servicio visita medica</fullName>
+                <default>false</default>
+                <label>Servicio visita medica</label>
+            </value>
+            <value>
+                <fullName>Servicio visita especialista en deglución</fullName>
+                <default>false</default>
+                <label>Servicio visita especialista en deglución</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación_Motora_Plus</fullName>
+                <default>false</default>
+                <label>Rehabilitación Motora Plus</label>
+            </value>
+            <value>
+                <fullName>Servicio de visita cuidado nutricional completo</fullName>
+                <default>false</default>
+                <label>Servicio de visita cuidado nutricional completo</label>
+            </value>
+            <value>
+                <fullName>Rehabilitacion_Motora_Intermedio</fullName>
+                <default>false</default>
+                <label>Rehabilitacion Motora - Intermedio</label>
+            </value>
+            <value>
+                <fullName>Rehabilitacion_Motora_basico_Oral</fullName>
+                <default>false</default>
+                <label>Rehabilitación Motora básico Oral</label>
+            </value>
+            <value>
+                <fullName>Rehabilitacion_Motora_Basico_Enteral</fullName>
+                <default>false</default>
+                <label>Rehabilitación Motora Básico Enteral</label>
+            </value>
+            <value>
+                <fullName>Cuidado_Basico</fullName>
+                <default>false</default>
+                <label>Cuidado Básico</label>
+            </value>
+            <value>
+                <fullName>Autocuidado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Autocuidado</label>
+            </value>
+            <value>
+                <fullName>Cuidado_completo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cuidado completo</label>
+            </value>
+            <value>
+                <fullName>Ninguno</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ninguno</label>
+            </value>
+            <value>
+                <fullName>Rehabilitacion_Motora_Basico</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rehabilitacion_Motora_Basico</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación Motora Cuidado Completo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rehabilitación Motora Cuidado Completo</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación Motora Cuidado Personalizada</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rehabilitación Motora Cuidado Personalizada</label>
+            </value>
+            <value>
+                <fullName>Servicio de visita profesionales cuidado nutricional completo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Servicio de visita profesionales cuidado nutricional completo</label>
+            </value>
+            <value>
+                <fullName>Servicio visita de kinesiología</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Servicio visita de kinesiología</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

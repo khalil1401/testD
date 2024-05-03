@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Empresa_de_internacion_domiciliaria__c</fullName>
+    <externalId>false</externalId>
+    <label>Empresa de internación domiciliaria</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Best care</fullName>
+                <default>false</default>
+                <label>Best care</label>
+            </value>
+            <value>
+                <fullName>Priority home care S.R.L.</fullName>
+                <default>false</default>
+                <label>Priority home care S.R.L.</label>
+            </value>
+            <value>
+                <fullName>Proyecto salud S.R.L.</fullName>
+                <default>false</default>
+                <label>Proyecto salud S.R.L.</label>
+            </value>
+            <value>
+                <fullName>En casa - servicios de atencion domiciliaria S.A.</fullName>
+                <default>false</default>
+                <label>En casa - servicios de atencion domiciliaria S.A.</label>
+            </value>
+            <value>
+                <fullName>Salud activa S.A.</fullName>
+                <default>false</default>
+                <label>Salud activa S.A.</label>
+            </value>
+            <value>
+                <fullName>Salud en el hogar S.R.L.</fullName>
+                <default>false</default>
+                <label>Salud en el hogar S.R.L.</label>
+            </value>
+            <value>
+                <fullName>Salud integral S.R.L.</fullName>
+                <default>false</default>
+                <label>Salud integral S.R.L.</label>
+            </value>
+            <value>
+                <fullName>Sanity care internacion domiciliaria S.R.L.</fullName>
+                <default>false</default>
+                <label>Sanity care internacion domiciliaria S.R.L.</label>
+            </value>
+            <value>
+                <fullName>Sidom S.A.</fullName>
+                <default>false</default>
+                <label>Sidom S.A.</label>
+            </value>
+            <value>
+                <fullName>Valuar salud S.A</fullName>
+                <default>false</default>
+                <label>Valuar salud S.A</label>
+            </value>
+            <value>
+                <fullName>Erfolg salud S.R.L</fullName>
+                <default>false</default>
+                <label>Erfolg salud S.R.L</label>
+            </value>
+            <value>
+                <fullName>Cimac S.A.</fullName>
+                <default>false</default>
+                <label>Cimac S.A.</label>
+            </value>
+            <value>
+                <fullName>Bienestar en casa S.A.</fullName>
+                <default>false</default>
+                <label>Bienestar en casa S.A.</label>
+            </value>
+            <value>
+                <fullName>Equisalud S.R.L.</fullName>
+                <default>false</default>
+                <label>Equisalud S.R.L.</label>
+            </value>
+            <value>
+                <fullName>Red gama S.R.L.</fullName>
+                <default>false</default>
+                <label>Red gama S.R.L.</label>
+            </value>
+            <value>
+                <fullName>Centrum salud S.A.</fullName>
+                <default>false</default>
+                <label>Centrum salud S.A.</label>
+            </value>
+            <value>
+                <fullName>Cuidar salud S.R.L.</fullName>
+                <default>false</default>
+                <label>Cuidar salud S.R.L.</label>
+            </value>
+            <value>
+                <fullName>San francisco S.R.L.</fullName>
+                <default>false</default>
+                <label>San francisco S.R.L.</label>
+            </value>
+            <value>
+                <fullName>Clinica punta indio S.R.L.</fullName>
+                <default>false</default>
+                <label>Clinica punta indio S.R.L.</label>
+            </value>
+            <value>
+                <fullName>Saluritas</fullName>
+                <default>false</default>
+                <label>Saluritas</label>
+            </value>
+            <value>
+                <fullName>Cuidarte argentina S.A.</fullName>
+                <default>false</default>
+                <label>Cuidarte argentina S.A.</label>
+            </value>
+            <value>
+                <fullName>Idom S.A.</fullName>
+                <default>false</default>
+                <label>Idom S.A.</label>
+            </value>
+            <value>
+                <fullName>Palcare</fullName>
+                <default>false</default>
+                <label>Palcare</label>
+            </value>
+            <value>
+                <fullName>Recuperarse en familia</fullName>
+                <default>false</default>
+                <label>Recuperarse en familia</label>
+            </value>
+            <value>
+                <fullName>Otra</fullName>
+                <default>false</default>
+                <label>Otra</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

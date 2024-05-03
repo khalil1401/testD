@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pacientes_Best_Care</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ID_de_paciente__c</columns>
+    <columns>Area_terapeutica__c</columns>
+    <columns>Estado_de_paciente__c</columns>
+    <columns>Obra_social__c</columns>
+    <columns>Fecha_de_creaci_n__c</columns>
+    <columns>Fecha_de_cambio_de_estado__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PersonAccount.Paciente_Best_Care</value>
+    </filters>
+    <filters>
+        <field>IS_PERSON_ACCOUNT</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Servicio_Activo__c</field>
+        <operation>notEqual</operation>
+        <value>AUTOCUIDADO</value>
+    </filters>
+    <label>Pacientes Best Care</label>
+    <sharedTo>
+        <allPartnerUsers></allPartnerUsers>
+        <group>Service</group>
+    </sharedTo>
+</ListView>

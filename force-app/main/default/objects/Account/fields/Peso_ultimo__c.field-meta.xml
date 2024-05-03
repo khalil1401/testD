@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Peso_ultimo__c</fullName>
+    <externalId>false</externalId>
+    <label>Peso ultimo</label>
+    <summarizedField>Formulario_MarketingCloud__c.Peso_Actual_kg__c</summarizedField>
+    <summaryForeignKey>Formulario_MarketingCloud__c.Cuenta__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

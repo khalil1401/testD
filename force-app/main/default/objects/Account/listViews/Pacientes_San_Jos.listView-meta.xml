@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pacientes_San_Jos</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Estado_de_paciente__c</columns>
+    <columns>Subestado_del_paciente__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PersonAccount.Paciente_Sanatorio</value>
+    </filters>
+    <filters>
+        <field>Sanatorio__c</field>
+        <operation>equals</operation>
+        <value>San Jose</value>
+    </filters>
+    <filters>
+        <field>Estado_de_paciente__c</field>
+        <operation>equals</operation>
+        <value>Inicio,En tratamiento</value>
+    </filters>
+    <label>Pacientes San José</label>
+</ListView>

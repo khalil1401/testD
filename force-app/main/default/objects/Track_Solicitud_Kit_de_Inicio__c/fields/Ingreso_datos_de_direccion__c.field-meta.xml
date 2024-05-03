@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ingreso_datos_de_direccion__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>El usuario completó el formulario de Datos de Dirección</description>
+    <externalId>false</externalId>
+    <label>3 - Ingresó datos de dirección</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

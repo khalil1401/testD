@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qui_n_es_el_Profesional_que_te_deriv__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Quién es el Profesional que te derivó?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Gastroenterólogo</fullName>
+                <default>false</default>
+                <label>Gastroenterólogo</label>
+            </value>
+            <value>
+                <fullName>Alergista</fullName>
+                <default>false</default>
+                <label>Alergista</label>
+            </value>
+            <value>
+                <fullName>Pediatra</fullName>
+                <default>false</default>
+                <label>Pediatra</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

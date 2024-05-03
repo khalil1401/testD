@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mapa__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( AND( NOT(ISBLANK( Account.Calle__c )), NOT(ISBLANK( Account.Localidad__c )), NOT(ISBLANK( Account.Provincia__c ))),
+ HYPERLINK(&apos;https://maps.google.com/maps/place/&apos; + Account.Calle__c + &apos;+&apos; + Account.Provincia__c, IMAGE(&apos;http://maps.google.com/maps/api/staticmap?center=&apos; + Account.Calle__c + &apos;, &apos; + Account.Provincia__c +&apos;&amp;zoom=13&amp;size=2000x200&amp;markers=color:red|&apos; + Account.Calle__c + &apos;, &apos; + Account.Provincia__c + &apos;&amp;key=AIzaSyDME8WnL7m3m5XdszA2ECzcxZcElktL7yM&apos;,&apos;Mapa no disponible&apos;)), &quot;Mapa no disponible&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Mapa</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

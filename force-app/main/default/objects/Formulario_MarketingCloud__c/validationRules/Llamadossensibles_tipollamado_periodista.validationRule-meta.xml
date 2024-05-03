@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Llamadossensibles_tipollamado_periodista</fullName>
+    <active>false</active>
+    <description>En caso de haber seleccionado en &quot;Tipo de llamado&quot; la opción &quot;Periodista&quot; se debe especificar el medio</description>
+    <errorConditionFormula>AND( ISPICKVAL(  Tip_de_llamado__c , &quot;Periodista&quot;), ISBLANK( Medio_de_comunicaci_n_al_que_pertenece__c ) )</errorConditionFormula>
+    <errorDisplayField>Medio_de_comunicaci_n_al_que_pertenece__c</errorDisplayField>
+    <errorMessage>Completar</errorMessage>
+</ValidationRule>

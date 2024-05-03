@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Su_OOSS_le_ofrece_reintegro_o_lo_aprueba__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Su OOSS le ofrece reintegro por los alimentos o los aprueba directamente?</inlineHelpText>
+    <label>Su OOSS le ofrece reintegro o lo aprueba</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Reintegro</fullName>
+                <default>false</default>
+                <label>Reintegro</label>
+            </value>
+            <value>
+                <fullName>Aprobación directa</fullName>
+                <default>false</default>
+                <label>Aprobación directa</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

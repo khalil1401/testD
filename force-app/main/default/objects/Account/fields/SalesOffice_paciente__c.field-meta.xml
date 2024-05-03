@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SalesOffice_paciente__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(RecordType.Name = &apos;Paciente Regular&apos; || RecordType.Name = &apos;Paciente Best Care&apos; || RecordType.Name = &apos;Paciente Partner&apos;,
+IF(RecordType.Name = &apos;Paciente Regular&apos; ,UPPER(Localidad_look__r.SalesOffice__c),
+UPPER(Obra_social__pr.SalesOffice_ObraSocial__c)) ,
+&apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SalesOffice</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

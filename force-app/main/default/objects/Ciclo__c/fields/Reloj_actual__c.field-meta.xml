@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reloj_actual__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Visitas_totales_realizadas__c  &lt;&gt; 0, ( Visitas_totales_realizadas__c) / ( Target_Diario_editable__c * Cantidad_de_dias_habiles__c), 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Reloj Teórico</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>1</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

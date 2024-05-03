@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Llamada__c</fullName>
+    <externalId>false</externalId>
+    <label>Llamada</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Exitosa</fullName>
+                <default>false</default>
+                <label>Exitosa</label>
+            </value>
+            <value>
+                <fullName>No exitosa</fullName>
+                <default>false</default>
+                <label>No exitosa</label>
+            </value>
+            <value>
+                <fullName>No realizada</fullName>
+                <default>false</default>
+                <label>No realizada</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

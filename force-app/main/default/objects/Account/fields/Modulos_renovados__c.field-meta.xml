@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modulos_renovados__c</fullName>
+    <externalId>false</externalId>
+    <label>Módulos renovados</label>
+    <summaryFilterItems>
+        <field>Modulo_de_paciente__c.Renovacion__c</field>
+        <operation>equals</operation>
+        <value>Sí</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Modulo_de_paciente__c.Cuenta__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

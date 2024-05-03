@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Area_de_Servicio__c</fullName>
+    <externalId>false</externalId>
+    <label>Área de Servicio</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>HOME CARE</fullName>
+                <default>false</default>
+                <label>HOME CARE</label>
+            </value>
+            <value>
+                <fullName>UTI</fullName>
+                <default>false</default>
+                <label>UTI</label>
+            </value>
+            <value>
+                <fullName>Servicio de nutrición</fullName>
+                <default>false</default>
+                <label>Servicio de nutrición</label>
+            </value>
+            <value>
+                <fullName>Internación</fullName>
+                <default>false</default>
+                <label>Internación</label>
+            </value>
+            <value>
+                <fullName>Compras</fullName>
+                <default>false</default>
+                <label>COMPRAS</label>
+            </value>
+            <value>
+                <fullName>Farmacia</fullName>
+                <default>false</default>
+                <label>FARMACIA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

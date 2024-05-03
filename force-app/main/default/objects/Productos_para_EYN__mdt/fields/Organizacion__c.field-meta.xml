@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organizacion__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Organización</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AMN</fullName>
+                <default>true</default>
+                <label>AMN</label>
+            </value>
+            <value>
+                <fullName>NUBA</fullName>
+                <default>false</default>
+                <label>NUBA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

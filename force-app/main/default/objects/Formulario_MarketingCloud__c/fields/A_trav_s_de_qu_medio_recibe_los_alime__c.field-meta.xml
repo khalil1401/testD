@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A_trav_s_de_qu_medio_recibe_los_alime__c</fullName>
+    <externalId>false</externalId>
+    <label>A través de qué medio recibe los alime</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Farmacia</fullName>
+                <default>false</default>
+                <label>Farmacia</label>
+            </value>
+            <value>
+                <fullName>Hospital</fullName>
+                <default>false</default>
+                <label>Hospital</label>
+            </value>
+            <value>
+                <fullName>Recibe en la casa</fullName>
+                <default>false</default>
+                <label>Recibe en la casa</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

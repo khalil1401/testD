@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Especialidades__c</name>
+    <picklistValues>
+        <masterLabel>Servicio de visita profesionales cuidado nutricional completo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Servicio visita de kinesiología</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Servicio visita especialista en deglución</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

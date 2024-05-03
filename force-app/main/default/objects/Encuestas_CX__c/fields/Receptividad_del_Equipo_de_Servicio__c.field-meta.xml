@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Receptividad_del_Equipo_de_Servicio__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>¿Qué tan receptivo ha sido nuestro equipo de servicio a tus preguntas y preocupaciones?</inlineHelpText>
+    <label>Receptividad del Equipo de Servicio</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nada receptivos</fullName>
+                <default>false</default>
+                <label>Nada receptivos</label>
+            </value>
+            <value>
+                <fullName>Poco receptivos</fullName>
+                <default>false</default>
+                <label>Poco receptivos</label>
+            </value>
+            <value>
+                <fullName>Moderadamente receptivos</fullName>
+                <default>false</default>
+                <label>Moderadamente receptivos</label>
+            </value>
+            <value>
+                <fullName>Muy receptivos</fullName>
+                <default>false</default>
+                <label>Muy receptivos</label>
+            </value>
+            <value>
+                <fullName>Extremadamente receptivos</fullName>
+                <default>false</default>
+                <label>Extremadamente receptivos</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X1_Qui_n_responde_la_encuesta__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Quién responde la encuesta?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Paciente</fullName>
+                <default>false</default>
+                <label>Paciente</label>
+            </value>
+            <value>
+                <fullName>Cónyuge</fullName>
+                <default>false</default>
+                <label>Cónyuge</label>
+            </value>
+            <value>
+                <fullName>Hijo/a</fullName>
+                <default>false</default>
+                <label>Hijo/a</label>
+            </value>
+            <value>
+                <fullName>Cuidador</fullName>
+                <default>false</default>
+                <label>Cuidador</label>
+            </value>
+            <value>
+                <fullName>Personal de la Institución</fullName>
+                <default>false</default>
+                <label>Personal de la Institución</label>
+            </value>
+            <value>
+                <fullName>Otro Familiar</fullName>
+                <default>false</default>
+                <label>Otro Familiar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

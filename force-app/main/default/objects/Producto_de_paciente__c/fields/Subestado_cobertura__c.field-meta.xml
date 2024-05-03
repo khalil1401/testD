@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subestado_cobertura__c</fullName>
+    <externalId>false</externalId>
+    <label>Subestado cobertura</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Estado_cobertura__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tratamiento efectivo</fullName>
+                <default>false</default>
+                <label>Tratamiento efectivo</label>
+            </value>
+            <value>
+                <fullName>Cobertura Parcial con Consumo REG</fullName>
+                <default>false</default>
+                <label>Cobertura Parcial con Consumo REG</label>
+            </value>
+            <value>
+                <fullName>Negativa de la obra social con consumo</fullName>
+                <default>false</default>
+                <label>Negativa de la obra social con consumo</label>
+            </value>
+            <value>
+                <fullName>Internado REG</fullName>
+                <default>false</default>
+                <label>Internado REG</label>
+            </value>
+            <value>
+                <fullName>En desafío REG</fullName>
+                <default>false</default>
+                <label>En desafío REG</label>
+            </value>
+            <value>
+                <fullName>En seguimiento de ONG</fullName>
+                <default>false</default>
+                <label>En seguimiento de ONG</label>
+            </value>
+            <value>
+                <fullName>Tramite iniciado</fullName>
+                <default>false</default>
+                <label>Tramite iniciado</label>
+            </value>
+            <value>
+                <fullName>Sin documentación</fullName>
+                <default>false</default>
+                <label>Sin documentación</label>
+            </value>
+            <value>
+                <fullName>Tramite no iniciado</fullName>
+                <default>false</default>
+                <label>Tramite no iniciado</label>
+            </value>
+            <value>
+                <fullName>En evaluación médica</fullName>
+                <default>false</default>
+                <label>En evaluación médica</label>
+            </value>
+            <value>
+                <fullName>No tolera</fullName>
+                <default>false</default>
+                <label>No tolera</label>
+            </value>
+            <value>
+                <fullName>Se rehúsa</fullName>
+                <default>false</default>
+                <label>Se rehúsa</label>
+            </value>
+            <value>
+                <fullName>Negativa de la obra social sin consumo</fullName>
+                <default>false</default>
+                <label>Negativa de la obra social sin consumo</label>
+            </value>
+            <value>
+                <fullName>Con otro laboratorio por obra social</fullName>
+                <default>false</default>
+                <label>Con otro laboratorio por obra social</label>
+            </value>
+            <value>
+                <fullName>Con otro laboratorio por profesional</fullName>
+                <default>false</default>
+                <label>Con otro laboratorio por profesional</label>
+            </value>
+            <value>
+                <fullName>Suspensión permanente por indicación médica</fullName>
+                <default>false</default>
+                <label>Suspensión permanente por indicación médica</label>
+            </value>
+            <value>
+                <fullName>Alta de tratamiento</fullName>
+                <default>false</default>
+                <label>Alta de tratamiento</label>
+            </value>
+            <value>
+                <fullName>Fallecido</fullName>
+                <default>false</default>
+                <label>Fallecido</label>
+            </value>
+            <value>
+                <fullName>Imposible de contactar</fullName>
+                <default>false</default>
+                <label>Imposible de contactar</label>
+            </value>
+            <value>
+                <fullName>Migrado erróneamente</fullName>
+                <default>false</default>
+                <label>Migrado erróneamente</label>
+            </value>
+            <value>
+                <fullName>No contactar Solicitud del paciente</fullName>
+                <default>false</default>
+                <label>No contactar Solicitud del paciente</label>
+            </value>
+            <value>
+                <fullName>No contactar Solicitud del profesional</fullName>
+                <default>false</default>
+                <label>No contactar Solicitud del profesional</label>
+            </value>
+            <value>
+                <fullName>Falso positivo</fullName>
+                <default>false</default>
+                <label>Falso positivo</label>
+            </value>
+            <value>
+                <fullName>No iniciará tratamiento</fullName>
+                <default>false</default>
+                <label>No iniciará tratamiento</label>
+            </value>
+            <value>
+                <fullName>Fin de Journey</fullName>
+                <default>false</default>
+                <label>Fin de Journey</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Tratamiento efectivo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Cobertura Parcial con Consumo REG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Negativa de la obra social con consumo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En tratamiento</controllingFieldValue>
+            <valueName>Internado REG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>En desafío REG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>En seguimiento de ONG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>Tramite iniciado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>Sin documentación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>Tramite no iniciado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>En seguimiento</controllingFieldValue>
+            <valueName>En evaluación médica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>No tolera</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Se rehúsa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Negativa de la obra social sin consumo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Con otro laboratorio por obra social</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Con otro laboratorio por profesional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No tratamiento</controllingFieldValue>
+            <valueName>Suspensión permanente por indicación médica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fin de tratamiento</controllingFieldValue>
+            <valueName>Alta de tratamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fin de tratamiento</controllingFieldValue>
+            <valueName>Fallecido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fin de tratamiento</controllingFieldValue>
+            <valueName>Fin de Journey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluido</controllingFieldValue>
+            <valueName>Imposible de contactar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluido</controllingFieldValue>
+            <valueName>Migrado erróneamente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluido</controllingFieldValue>
+            <valueName>No contactar Solicitud del paciente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluido</controllingFieldValue>
+            <valueName>No contactar Solicitud del profesional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluido</controllingFieldValue>
+            <valueName>Falso positivo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluido</controllingFieldValue>
+            <valueName>No iniciará tratamiento</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

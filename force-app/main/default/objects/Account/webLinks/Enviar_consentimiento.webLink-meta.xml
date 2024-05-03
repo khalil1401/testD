@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enviar_consentimiento</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Enviar consentimiento</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/51.0/connection.js&quot;)}
+    var account = new sforce.SObject(&quot;Account&quot;);
+    account.Id = &quot;{!Account.Id}&quot;;
+    account.Estado_del_consentimiento__c = &quot;{!Account.Estado_del_consentimiento__c}&quot;;
+    account.Activar_flow_para_email__c = &quot;{!Account.Activar_flow_para_email__c}&quot;;
+    account.Email_para_consentimiento__c = &quot;{!Account.Email_para_consentimiento__c}&quot;;
+    account.Email_para_consentimiento__c = &quot;{!Account.PersonEmail}&quot;;
+    account.Id_de_historia_clinica_Nutricion__c = &quot;{!Account.Id_de_historia_clinica_Nutricion__c}&quot;;
+    account.Consentimientos_enviados__c=&quot;{!Account.Consentimientos_enviados__c}&quot;;
+				
+    var historiasClinicas = sforce.connection.query(
+        &quot;SELECT id from Formulario__c WHERE Nombre_y_Apellido_del_Paciente__c =&apos;{!Account.Id}&apos; and (recordType.developername= &apos;Historia_Clinica_de_Nutricion&apos; OR recordType.developername= &apos;Historia_Cl_nica_Pedi_trica_de_Nutrici_n&apos;) order by CreatedDate desc limit 1&quot;);
+    
+    var records = historiasClinicas.getArray(&quot;records&quot;);
+    
+    if (records[0] != undefined) {
+        var hcId = records[0].Id;
+        
+            if (&quot;{!Account.PersonEmail}&quot; != null &amp;&amp;
+                &quot;{!Account.PersonEmail}&quot; != &apos;&apos;) {
+                /*Actualizo cuenta*/
+                account.Estado_del_consentimiento__c = &quot;En curso&quot;;
+                account.Activar_flow_para_email__c = true;
+                account.Email_para_consentimiento__c = &quot;{!Account.PersonEmail}&quot;;
+                account.Id_de_historia_clinica_Nutricion__c = hcId;
+																
+																if(account.Consentimientos_enviados__c== null || account.Consentimientos_enviados__c==0){
+                account.Consentimientos_enviados__c=1;
+                }
+																else{
+																 account.Consentimientos_enviados__c++;
+																}
+                result = sforce.connection.update([account]);
+                if (result[0].getBoolean(&quot;success&quot;)) {
+                    alert(&quot;Consentimiento enviado&quot;);
+                } else {
+                    console.log(&quot;failed to update acc.&quot; + result[0]);
+                }
+            } else {
+                alert(&quot;El Paciente no tiene email&quot;);
+            }
+        }        
+     else {
+        alert(&quot;El paciente no posee un historia clínica de nutrición o no es el propietario de la misma&quot;);
+    }
+				
+				location.reload();</url>
+</WebLink>

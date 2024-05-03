@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferencia_con_el_cuidado_de_intimidad__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Preferencia con el cuidado de intimidad del paciente.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Preferencia con el cuidado de intimidad del paciente.</inlineHelpText>
+    <label>Preferencia con el cuidado de intimidad</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

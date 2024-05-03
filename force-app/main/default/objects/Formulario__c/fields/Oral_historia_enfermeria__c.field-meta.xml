@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oral_historia_enfermeria__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox para el formulario &quot;historia clínica de enfermería&quot;.</description>
+    <externalId>false</externalId>
+    <label>Oral</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

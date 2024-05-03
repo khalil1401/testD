@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_de_visita_debe_ser_en_el_futuro</fullName>
+    <active>true</active>
+    <errorConditionFormula>Pr_xima_visita_al_profesional__c &lt; TODAY()</errorConditionFormula>
+    <errorDisplayField>Pr_xima_visita_al_profesional__c</errorDisplayField>
+    <errorMessage>La fecha de la proxima visita no puede ser una visita del pasado</errorMessage>
+</ValidationRule>

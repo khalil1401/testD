@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>En_caso_de_no_querer_seguir_con_el_trat</fullName>
+    <active>true</active>
+    <description>En caso de no querer seguir con el tratamiento debe responder las preguntas de la seccion:
+&quot;En caso de no querer seguir con el tratamiento¨&quot;</description>
+    <errorConditionFormula>AND(ISPICKVAL( Adherencia_esta_relacionado_con__c , &quot;No quiere seguir con el tratamiento (Se rehusa)&quot;),OR(ISBLANK( Barreras_para_la_continuidad_del_trat__c ),ISBLANK(TEXT( Servicio_que_ayudaria_a_continuar__c ))))</errorConditionFormula>
+    <errorDisplayField>Adherencia_esta_relacionado_con__c</errorDisplayField>
+    <errorMessage>Si usted ingreso que el paciente &quot;No quiere seguir con el tratamiento (Se rehúsa)&quot; debe completar las preguntas correspondientes en la seccion:
+-&quot;En caso de no querer seguir con el tratamiento&quot;</errorMessage>
+</ValidationRule>

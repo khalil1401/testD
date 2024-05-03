@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>encuesta_enriquece_nutricion__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK( &apos;http://danoneencuestas.force.com/TakeSurvey?id=a051I00000ArGjFQAV&amp;cId=&apos;+ Contact_Id__c +&apos;&amp;caId=none&apos;,&apos;Encuesta&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>encuesta enriquece nutricion</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

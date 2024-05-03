@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comprador__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Compradores de tienda mercado shops, se utilizo para campaña de hotsale</description>
+    <externalId>false</externalId>
+    <label>Comprador</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

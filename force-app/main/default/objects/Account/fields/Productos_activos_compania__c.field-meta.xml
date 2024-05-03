@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Productos_activos_compania__c</fullName>
+    <externalId>false</externalId>
+    <label>Productos activos compañía</label>
+    <summarizedField>Modulo_de_paciente__c.Cont_Productos_Activos_Compania__c</summarizedField>
+    <summaryFilterItems>
+        <field>Modulo_de_paciente__c.Estado__c</field>
+        <operation>equals</operation>
+        <value>Activo</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Modulo_de_paciente__c.Cuenta__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

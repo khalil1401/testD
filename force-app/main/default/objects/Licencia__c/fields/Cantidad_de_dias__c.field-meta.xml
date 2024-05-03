@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cantidad_de_dias__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Fecha_de_inicio__c &lt;&gt; Fecha_de_fin__c , (Fecha_de_fin__c -  Fecha_de_inicio__c) + 1, 
+IF( ISPICKVAL( Duracion_de_licencia__c , &quot;1 día&quot;) , 1, 
+IF( ISPICKVAL( Duracion_de_licencia__c , &quot;1/2 día&quot;) , 0.5,
+IF( ISPICKVAL( Duracion_de_licencia__c , &quot;1/4 día&quot;) , 0.25,
+IF( ISPICKVAL( Duracion_de_licencia__c , &quot;3/4 día&quot;) , 0.75,
+IF( ISPICKVAL( Duracion_de_licencia__c , &quot;1/10 día&quot;) , 0.1, 1))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Cantidad de días</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

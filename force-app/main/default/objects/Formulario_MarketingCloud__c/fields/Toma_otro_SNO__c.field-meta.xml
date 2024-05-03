@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Toma_otro_SNO__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Toma otro SNO?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fortisip Compact</fullName>
+                <default>false</default>
+                <label>Fortisip Compact</label>
+            </value>
+            <value>
+                <fullName>Fortisip Compact Protein</fullName>
+                <default>false</default>
+                <label>Fortisip Compact Protein</label>
+            </value>
+            <value>
+                <fullName>Fortisip Max</fullName>
+                <default>false</default>
+                <label>Fortisip Max</label>
+            </value>
+            <value>
+                <fullName>Fortisip Advanced</fullName>
+                <default>false</default>
+                <label>Fortisip Advanced</label>
+            </value>
+            <value>
+                <fullName>Diasip</fullName>
+                <default>false</default>
+                <label>Diasip</label>
+            </value>
+            <value>
+                <fullName>Fortisip Standard</fullName>
+                <default>false</default>
+                <label>Fortisip Standard</label>
+            </value>
+            <value>
+                <fullName>Ensure</fullName>
+                <default>false</default>
+                <label>Ensure</label>
+            </value>
+            <value>
+                <fullName>Ensure clinical</fullName>
+                <default>false</default>
+                <label>Ensure clinical</label>
+            </value>
+            <value>
+                <fullName>Ensure plus</fullName>
+                <default>false</default>
+                <label>Ensure plus</label>
+            </value>
+            <value>
+                <fullName>Ensure advance</fullName>
+                <default>false</default>
+                <label>Ensure advance</label>
+            </value>
+            <value>
+                <fullName>Boost senior</fullName>
+                <default>false</default>
+                <label>Boost senior</label>
+            </value>
+            <value>
+                <fullName>Boost 1.5</fullName>
+                <default>false</default>
+                <label>Boost 1.5</label>
+            </value>
+            <value>
+                <fullName>Impact</fullName>
+                <default>false</default>
+                <label>Impact</label>
+            </value>
+            <value>
+                <fullName>Fresubin 3.2Kcal</fullName>
+                <default>false</default>
+                <label>Fresubin 3.2Kcal</label>
+            </value>
+            <value>
+                <fullName>Fresubin 2Kcal</fullName>
+                <default>false</default>
+                <label>Fresubin 2Kcal</label>
+            </value>
+            <value>
+                <fullName>Fresubin plus</fullName>
+                <default>false</default>
+                <label>Fresubin plus</label>
+            </value>
+            <value>
+                <fullName>Fresubin plus fibra</fullName>
+                <default>false</default>
+                <label>Fresubin plus fibra</label>
+            </value>
+            <value>
+                <fullName>Supportan</fullName>
+                <default>false</default>
+                <label>Supportan</label>
+            </value>
+            <value>
+                <fullName>Remune</fullName>
+                <default>false</default>
+                <label>Remune</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Numero_de_Orden_SAP</fullName>
+    <active>true</active>
+    <description>Regla que permite solo ingresar numeros.</description>
+    <errorConditionFormula>AND(Numero_de_orden_SAP__c&lt;&gt;null,
+				NOT(ISNUMBER(Numero_de_orden_SAP__c))
+			)</errorConditionFormula>
+    <errorMessage>En el campo Numero de Orden SAP. Solo debe ingresar numeros.</errorMessage>
+</ValidationRule>

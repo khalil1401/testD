@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duracion_de_licencia__c</fullName>
+    <externalId>false</externalId>
+    <label>Duración de licencia</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 día</fullName>
+                <default>false</default>
+                <label>1 día</label>
+            </value>
+            <value>
+                <fullName>3/4 día</fullName>
+                <default>false</default>
+                <label>3/4 día</label>
+            </value>
+            <value>
+                <fullName>1/2 día</fullName>
+                <default>false</default>
+                <label>1/2 día</label>
+            </value>
+            <value>
+                <fullName>1/4 día</fullName>
+                <default>false</default>
+                <label>1/4 día</label>
+            </value>
+            <value>
+                <fullName>1/5 día</fullName>
+                <default>false</default>
+                <label>1/5 día</label>
+            </value>
+            <value>
+                <fullName>1/10 día</fullName>
+                <default>false</default>
+                <label>1/10 día</label>
+            </value>
+            <value>
+                <fullName>1/20 día</fullName>
+                <default>false</default>
+                <label>1/20 día</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

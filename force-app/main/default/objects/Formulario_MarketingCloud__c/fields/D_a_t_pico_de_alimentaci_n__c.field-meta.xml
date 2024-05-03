@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>D_a_t_pico_de_alimentaci_n__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>¿Cómo es un día típico de alimentación tuya? Indicando que fórmulas, alimentos y suplementos dietéticos consumís y sus cantidades.</inlineHelpText>
+    <label>¿Día típico de alimentación?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

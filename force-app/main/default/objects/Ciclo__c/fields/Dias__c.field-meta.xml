@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dias__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( MOD(TODAY()  - DATE(1900, 1, 7), 7), 0, &quot;Domingo&quot;, 1, &quot;Lunes&quot;, 2, &quot;Martes&quot;, 3,
+&quot;Miercoles&quot;, 4, &quot;Jueves&quot;, 5, &quot;Viernes&quot;, 6, &quot;Sabado&quot;,&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Dia actual</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

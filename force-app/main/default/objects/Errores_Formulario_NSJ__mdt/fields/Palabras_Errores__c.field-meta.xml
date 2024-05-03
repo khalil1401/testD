@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Palabras_Errores__c</fullName>
+    <description>Palabras del error técnico. Las palabras deben estar separadas por comas y cumplir el siguiente formato: palabra1,palabra2,palabra3</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <inlineHelpText>Ejemplo: palabra1,palabra2,palabra3</inlineHelpText>
+    <label>Palabras Errores</label>
+    <required>true</required>
+    <type>TextArea</type>
+</CustomField>

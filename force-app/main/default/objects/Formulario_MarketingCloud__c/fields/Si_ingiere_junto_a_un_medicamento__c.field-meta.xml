@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_ingiere_junto_a_un_medicamento__c</fullName>
+    <description>En caso de que la respuesta acerca de si lo consume cercano a medicamentos sea Sí, indicar cuál/ cuales medicamentos.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>En caso de que la respuesta acerca de si lo consume cercano a medicamentos sea Sí, indicar cuál/ cuales medicamentos.</inlineHelpText>
+    <label>Cercano a cual medicamento lo consume</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

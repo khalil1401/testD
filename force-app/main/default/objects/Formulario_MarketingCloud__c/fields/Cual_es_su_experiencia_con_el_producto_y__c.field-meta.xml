@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cual_es_su_experiencia_con_el_producto_y__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Hablar no solo del producto sino tambien del sabor del mismo.</inlineHelpText>
+    <label>Cual es su experiencia con el producto?</label>
+    <length>250</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

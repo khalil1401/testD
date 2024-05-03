@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_articulo__c</fullName>
+    <description>Tipos de artículos para el Portal de Pacientes</description>
+    <externalId>false</externalId>
+    <label>Tipo de Artículo</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Técnicas de belleza (Oncología)</fullName>
+                <default>false</default>
+                <label>Técnicas de belleza (Oncología)</label>
+            </value>
+            <value>
+                <fullName>Recetas (Oncología)</fullName>
+                <default>false</default>
+                <label>Recetas (Oncología)</label>
+            </value>
+            <value>
+                <fullName>Ejercicios (Oncología)</fullName>
+                <default>false</default>
+                <label>Ejercicios (Oncología)</label>
+            </value>
+            <value>
+                <fullName>Recetas (Terapia Cetogénica)</fullName>
+                <default>false</default>
+                <label>Recetas (Terapia Cetogénica)</label>
+            </value>
+            <value>
+                <fullName>Recetas (Disfagia)</fullName>
+                <default>false</default>
+                <label>Recetas (Disfagia)</label>
+            </value>
+            <value>
+                <fullName>Recetas (Alergia)</fullName>
+                <default>false</default>
+                <label>Recetas (Alergia)</label>
+            </value>
+            <value>
+                <fullName>Videos (Terapia Cetogénca)</fullName>
+                <default>false</default>
+                <label>Videos (Terapia Cetogénca)</label>
+            </value>
+            <value>
+                <fullName>Recetas</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Recetas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

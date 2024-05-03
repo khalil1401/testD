@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caso_solo_se_crea_en_estado_En_carga</fullName>
+    <active>true</active>
+    <description>Para los tipos de registro Devolución y Diferencia (Danone Sales)</description>
+    <errorConditionFormula>AND(
+ NOT(ISPICKVAL( Status ,&apos;En carga&apos;)),
+ OR(
+     RecordType.Name = &apos;Devolución&apos;,
+     RecordType.Name = &apos;Diferencia&apos;
+ )
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>No puede crear un caso en estado distinto a En carga</errorMessage>
+</ValidationRule>

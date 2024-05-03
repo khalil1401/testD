@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Equipo__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Owner:User.Contact.Account.Name = &quot;APM Adultos&quot;, &quot;Adultos&quot;,  IF(Owner:User.Contact.Account.Name = &quot;APM Pediatrico&quot;, &quot;Pediátrico&quot;,  IF(Owner:User.Contact.Account.Name = &quot;APM Obras Sociales&quot;, &quot;Obras Sociales&quot;,  IF(Owner:User.Contact.Account.Name = &quot;Negocio Total&quot;, &quot;Negocio Total&quot;, &quot;&quot;) ) )  )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Equipo</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

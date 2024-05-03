@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Desafio_solo_para_alergia</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL( Desafio__c, &apos;Sí&apos;),
+NOT(ISPICKVAL(Cuenta__r.Area_terapeutica__c , &apos;Alergia&apos;))
+)</errorConditionFormula>
+    <errorDisplayField>Desafio__c</errorDisplayField>
+    <errorMessage>No puede seleccionar Desafío si el paciente no es de Alergia</errorMessage>
+</ValidationRule>

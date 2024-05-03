@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cambio_en_las_ultimas_dos_semanas__c</fullName>
+    <externalId>false</externalId>
+    <label>Cambio en las últimas 2 semanas</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>aumento</fullName>
+                <default>false</default>
+                <label>aumento</label>
+            </value>
+            <value>
+                <fullName>sin cambios</fullName>
+                <default>false</default>
+                <label>sin cambios</label>
+            </value>
+            <value>
+                <fullName>descenso</fullName>
+                <default>false</default>
+                <label>descenso</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

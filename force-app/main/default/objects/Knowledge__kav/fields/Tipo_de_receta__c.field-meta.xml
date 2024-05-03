@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_receta__c</fullName>
+    <description>Tipos de recetas</description>
+    <externalId>false</externalId>
+    <label>Tipo de receta</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sopas</fullName>
+                <default>false</default>
+                <label>Sopas</label>
+            </value>
+            <value>
+                <fullName>Principales</fullName>
+                <default>false</default>
+                <label>Principales</label>
+            </value>
+            <value>
+                <fullName>Bebidas</fullName>
+                <default>false</default>
+                <label>Bebidas</label>
+            </value>
+            <value>
+                <fullName>Postres</fullName>
+                <default>false</default>
+                <label>Postres</label>
+            </value>
+            <value>
+                <fullName>Desayuno</fullName>
+                <default>false</default>
+                <label>Desayuno</label>
+            </value>
+            <value>
+                <fullName>Merienda</fullName>
+                <default>false</default>
+                <label>Merienda</label>
+            </value>
+            <value>
+                <fullName>Almuerzo</fullName>
+                <default>false</default>
+                <label>Almuerzo</label>
+            </value>
+            <value>
+                <fullName>Cena</fullName>
+                <default>false</default>
+                <label>Cena</label>
+            </value>
+            <value>
+                <fullName>Salado</fullName>
+                <default>false</default>
+                <label>Salado</label>
+            </value>
+            <value>
+                <fullName>Mayores a 6 meses</fullName>
+                <default>false</default>
+                <label>Mayores a 6 meses</label>
+            </value>
+            <value>
+                <fullName>Mayores a 12 meses</fullName>
+                <default>false</default>
+                <label>Mayores a 12 meses</label>
+            </value>
+            <value>
+                <fullName>4:1</fullName>
+                <default>false</default>
+                <label>4:1</label>
+            </value>
+            <value>
+                <fullName>2.5:1</fullName>
+                <default>false</default>
+                <label>2.5:1</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

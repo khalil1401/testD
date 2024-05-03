@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_modificar_pedido_cuando_esta_listo</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+ Pedido_listo__c,
+OR(
+ ischanged(  AccountId  ),
+ ISCHANGED( EffectiveDate ),
+ ISCHANGED( Type ),
+ /*ISCHANGED( Status ),*/
+ ISCHANGED( BillingStreet  ),
+ ISCHANGED( BillingCountry  ),
+ ISCHANGED( BillingCity  ),
+ ISCHANGED( BillingPostalCode  )
+ ) 
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>No puede modificar un pedido ya confirmado.</errorMessage>
+</ValidationRule>

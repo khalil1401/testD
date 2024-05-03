@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prox_visita_prof_solo_alergia_y_no_diag</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+OR( 
+NOT(ISPICKVAL(Area_terapeutica__c , &apos;Alergia&apos;)), 
+NOT(ISPICKVAL(Diagnostico__c , &apos;No&apos;)) 
+), 
+NOT(ISBLANK( Proxima_visita_profesional__c )) 
+)</errorConditionFormula>
+    <errorMessage>Solo puede seleccionar fecha de próxima visita de profesional si el área terapéutica es Alergia y no tiene diagnóstico</errorMessage>
+</ValidationRule>

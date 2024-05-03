@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visitas_a_drogueria_presenciales__c</fullName>
+    <externalId>false</externalId>
+    <label>Visitas a droguería presenciales</label>
+    <summaryFilterItems>
+        <field>Interaccion__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>Visita médica</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Interaccion__c.Es_visita_a_drogueria__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Interaccion__c.Tipo_de_visita__c</field>
+        <operation>equals</operation>
+        <value>Presencial</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Interaccion__c.Ciclo__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

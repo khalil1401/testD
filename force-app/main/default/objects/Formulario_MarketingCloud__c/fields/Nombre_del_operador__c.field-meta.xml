@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nombre_del_operador__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Seleccione el operador</inlineHelpText>
+    <label>Nombre del operador</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Paula Angeloff</fullName>
+                <default>false</default>
+                <label>Paula Angeloff</label>
+            </value>
+            <value>
+                <fullName>Julieta Cremona</fullName>
+                <default>false</default>
+                <label>Julieta Cremona</label>
+            </value>
+            <value>
+                <fullName>Tomas Galbucci</fullName>
+                <default>false</default>
+                <label>Tomas Galbucci</label>
+            </value>
+            <value>
+                <fullName>Antonella Laino</fullName>
+                <default>false</default>
+                <label>Antonella Laino</label>
+            </value>
+            <value>
+                <fullName>Andrea Ortega</fullName>
+                <default>false</default>
+                <label>Andrea Ortega</label>
+            </value>
+            <value>
+                <fullName>Rocio Morales</fullName>
+                <default>false</default>
+                <label>Rocio Morales</label>
+            </value>
+            <value>
+                <fullName>Soledad Castro</fullName>
+                <default>false</default>
+                <label>Soledad Castro</label>
+            </value>
+            <value>
+                <fullName>Sabrina Chiaradia</fullName>
+                <default>false</default>
+                <label>Sabrina Chiaradia</label>
+            </value>
+            <value>
+                <fullName>Carolina Beltran</fullName>
+                <default>false</default>
+                <label>Carolina Beltran</label>
+            </value>
+            <value>
+                <fullName>Edglibeth Morales</fullName>
+                <default>false</default>
+                <label>Edglibeth Morales</label>
+            </value>
+            <value>
+                <fullName>Aracelli Orellana</fullName>
+                <default>false</default>
+                <label>Aracelli Orellana</label>
+            </value>
+            <value>
+                <fullName>Veronica Ponce</fullName>
+                <default>false</default>
+                <label>Veronica Ponce</label>
+            </value>
+            <value>
+                <fullName>Felipe Prato</fullName>
+                <default>false</default>
+                <label>Felipe Prato</label>
+            </value>
+            <value>
+                <fullName>Clarita Spinelli</fullName>
+                <default>false</default>
+                <label>Clarita Spinelli</label>
+            </value>
+            <value>
+                <fullName>Melina Vivas</fullName>
+                <default>false</default>
+                <label>Melina Vivas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

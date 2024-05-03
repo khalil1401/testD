@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incapacidad_de_ingesta__c</fullName>
+    <externalId>false</externalId>
+    <label>Incapacidad de ingesta</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Trastorno deglutorio</fullName>
+                <default>false</default>
+                <label>Trastorno deglutorio</label>
+            </value>
+            <value>
+                <fullName>Traqueostomía /ARM</fullName>
+                <default>false</default>
+                <label>Traqueostomía /ARM</label>
+            </value>
+            <value>
+                <fullName>Gastroparesia</fullName>
+                <default>false</default>
+                <label>Gastroparesia</label>
+            </value>
+            <value>
+                <fullName>Gastroparecia</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gastroparecia</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

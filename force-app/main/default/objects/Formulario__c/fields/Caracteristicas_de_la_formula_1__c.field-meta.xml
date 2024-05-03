@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caracteristicas_de_la_formula_1__c</fullName>
+    <externalId>false</externalId>
+    <label>Caracteristicas producto n°1</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Polimérica estándar</fullName>
+                <default>false</default>
+                <label>Polimérica estándar</label>
+            </value>
+            <value>
+                <fullName>Polimérica con fibra</fullName>
+                <default>false</default>
+                <label>Polimérica con fibra</label>
+            </value>
+            <value>
+                <fullName>Semielemental</fullName>
+                <default>false</default>
+                <label>Semielemental</label>
+            </value>
+            <value>
+                <fullName>Para diabetes</fullName>
+                <default>false</default>
+                <label>Para diabetes</label>
+            </value>
+            <value>
+                <fullName>De alta densidad calórica</fullName>
+                <default>false</default>
+                <label>De alta densidad calórica</label>
+            </value>
+            <value>
+                <fullName>Hiperproteica</fullName>
+                <default>false</default>
+                <label>Hiperproteica</label>
+            </value>
+            <value>
+                <fullName>Otras</fullName>
+                <default>false</default>
+                <label>Otras</label>
+            </value>
+            <value>
+                <fullName>Alergias</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Alergias</label>
+            </value>
+            <value>
+                <fullName>Antirreflujo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Antirreflujo</label>
+            </value>
+            <value>
+                <fullName>Dieta Cetogénica</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dieta Cetogénica</label>
+            </value>
+            <value>
+                <fullName>Elemental</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Elemental</label>
+            </value>
+            <value>
+                <fullName>Enf. Metabólicas</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Enf. Metabólicas</label>
+            </value>
+            <value>
+                <fullName>Hidrolizados parciales extensos</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hidrolizados parciales extensos</label>
+            </value>
+            <value>
+                <fullName>Módulo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Módulo</label>
+            </value>
+            <value>
+                <fullName>Para UPP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Para UPP</label>
+            </value>
+            <value>
+                <fullName>Prematuro</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prematuro</label>
+            </value>
+            <value>
+                <fullName>Sin lactosa</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sin lactosa</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

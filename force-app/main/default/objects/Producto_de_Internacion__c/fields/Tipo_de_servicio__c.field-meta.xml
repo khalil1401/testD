@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_servicio__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de servicio</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cuidado completo</fullName>
+                <default>true</default>
+                <label>Cuidado completo</label>
+            </value>
+            <value>
+                <fullName>Cuidado personalizado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cuidado personalizado</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación deglutoria</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rehabilitación deglutoria</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación motora - intermedio</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rehabilitación motora - intermedio</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación motora básico enteral</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rehabilitación motora básico enteral</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación motora básico oral</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rehabilitación motora básico oral</label>
+            </value>
+            <value>
+                <fullName>Rehabilitación motora plus</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rehabilitación motora plus</label>
+            </value>
+            <value>
+                <fullName>autocuidado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>autocuidado</label>
+            </value>
+            <value>
+                <fullName>cuidado básico</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>cuidado básico</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

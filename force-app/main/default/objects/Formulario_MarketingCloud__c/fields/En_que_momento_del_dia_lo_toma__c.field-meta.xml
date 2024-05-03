@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>En_que_momento_del_dia_lo_toma__c</fullName>
+    <externalId>false</externalId>
+    <label>¿En que momento del dia lo toma?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Entre comidas principales</fullName>
+                <default>false</default>
+                <label>Entre comidas principales</label>
+            </value>
+            <value>
+                <fullName>Como reemplazo de comidas principales</fullName>
+                <default>false</default>
+                <label>Como reemplazo de comidas principales</label>
+            </value>
+            <value>
+                <fullName>Como postre</fullName>
+                <default>false</default>
+                <label>Como postre</label>
+            </value>
+            <value>
+                <fullName>De a sorbos durante todo el día</fullName>
+                <default>false</default>
+                <label>De a sorbos durante todo el día</label>
+            </value>
+            <value>
+                <fullName>Vehiculizado en las comidas</fullName>
+                <default>false</default>
+                <label>Vehiculizado en las comidas</label>
+            </value>
+            <value>
+                <fullName>Otra manera</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Otra manera</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

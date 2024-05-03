@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fecha_de_baja_no_requerida</fullName>
+    <active>true</active>
+    <description>Si un paciente se encuentra en estado Inicio/En tratamiento/En Seguimiento</description>
+    <errorConditionFormula>AND ( $Profile.Name &lt;&gt;  &apos;Administrador del sistema&apos;,
+					 $Profile.Name &lt;&gt;  &apos;System Administrator&apos;,
+					
+Not(IsNull(Fecha_de_obito__c)), 
+				ISCHANGED(Estado_de_paciente__c), 
+OR(
+ISPICKVAL(Estado_de_paciente__c, &quot;Inicio&quot;),
+ISPICKVAL(Estado_de_paciente__c, &quot;En tratamiento&quot;),
+ISPICKVAL(Estado_de_paciente__c, &quot;En Seguimiento&quot;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Fecha_de_obito__c</errorDisplayField>
+    <errorMessage>Un paciente no puede tener fecha de baja con el &quot;Estado de paciente&quot; seleccionado.</errorMessage>
+</ValidationRule>

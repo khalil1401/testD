@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estado_En_Definitivo_No_Se_Puede_Modific</fullName>
+    <active>false</active>
+    <description>Cuando ya esta en definitivo no se puede modificar nada de la historia clinica</description>
+    <errorConditionFormula>AND(
+    OR(
+        AND(
+            ISPICKVAL(Estado_de_Historia_Clinica__c , &apos;Definitivo&apos;),
+            NOT(ISCHANGED(Estado_de_Historia_Clinica__c ))
+        ),
+        TEXT(PRIORVALUE(Estado_de_Historia_Clinica__c )) = &apos;Definitivo&apos;
+    ),
+    NOT($Permission.Editar_historias_Clinica)
+)</errorConditionFormula>
+    <errorMessage>No se puede modificar una historia clínica con estado de edición definitivo</errorMessage>
+</ValidationRule>

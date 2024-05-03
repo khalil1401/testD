@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyTeamsActivities</fullName>
+    <columns>Area_Terapeutica__c</columns>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>TASK.DUE_DATE</columns>
+    <columns>TASK.STATUS</columns>
+    <columns>TASK.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>TASK.LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>TASK.RECORDTYPE</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TASK.STATUS</field>
+        <operation>equals</operation>
+        <value>Abierta,Trabajando</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>contains</operation>
+        <value>psp,Chiaradia,Angeloff,Laino,Galbucci,Ortega,Martinez,Xappia,Jose</value>
+    </filters>
+    <filters>
+        <field>TASK.SUBJECT</field>
+        <operation>contains</operation>
+        <value>Seguimiento,Paciente no recibió el Kit de Inicio</value>
+    </filters>
+    <filters>
+        <field>TASK.DUE_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>My Team&apos;s Activities</label>
+</ListView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cuanto_demor_el_tratamiento__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Si la respuesta a &quot;La OS le cubre la formula?&quot; fue &quot;SI&quot;, contestar esta pregunta</inlineHelpText>
+    <label>Cuanto demoro la aprobacion?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Menos de 1 semana</fullName>
+                <default>false</default>
+                <label>Menos de 1 semana</label>
+            </value>
+            <value>
+                <fullName>1 semana</fullName>
+                <default>false</default>
+                <label>1 semana</label>
+            </value>
+            <value>
+                <fullName>2 semanas</fullName>
+                <default>false</default>
+                <label>2 semanas</label>
+            </value>
+            <value>
+                <fullName>de 3 a 4 semanas</fullName>
+                <default>false</default>
+                <label>de 3 a 4 semanas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duracion_obligatoria_cuando_es_un_dia</fullName>
+    <active>true</active>
+    <description>Se debe seleccionar algún valor en el campo &quot;Duración de la licencia&quot; si se ha seleccionado fecha de inicio y fecha de fin el mismo día.</description>
+    <errorConditionFormula>AND(ISBLANK(TEXT(Duracion_de_licencia__c)), Fecha_de_inicio__c = Fecha_de_fin__c )</errorConditionFormula>
+    <errorDisplayField>Duracion_de_licencia__c</errorDisplayField>
+    <errorMessage>Si la licencia es durante un día (fecha de inicio y fecha de fin el mismo día) debe seleccionar la duración específica en este campo.</errorMessage>
+</ValidationRule>

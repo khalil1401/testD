@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Llamados_sensibles_tipodellamado_Otro</fullName>
+    <active>false</active>
+    <description>En caso de seleccionar otro en el tipo de llamado debe especificar.</description>
+    <errorConditionFormula>AND( ISPICKVAL(  Tip_de_llamado__c  , &quot;Otro&quot;), ISBLANK( Porque_selecciono_otros__c ) )</errorConditionFormula>
+    <errorDisplayField>Porque_selecciono_otros__c</errorDisplayField>
+    <errorMessage>Completar</errorMessage>
+</ValidationRule>

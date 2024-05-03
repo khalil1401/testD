@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Reunión con Marketing</fullName>
+                <default>false</default>
+                <label>Reunión con Marketing</label>
+            </value>
+            <value>
+                <fullName>Reunión con Medical</fullName>
+                <default>false</default>
+                <label>Reunión con Medical</label>
+            </value>
+            <value>
+                <fullName>Reunión con Ventas</fullName>
+                <default>false</default>
+                <label>Reunión con Ventas</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

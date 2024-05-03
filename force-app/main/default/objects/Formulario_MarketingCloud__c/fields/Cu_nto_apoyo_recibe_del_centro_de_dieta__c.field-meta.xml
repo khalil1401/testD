@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cu_nto_apoyo_recibe_del_centro_de_dieta__c</fullName>
+    <externalId>false</externalId>
+    <label>¿Cuánto apoyo recibe del centro dieta?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Recibe mucho apoyo</fullName>
+                <default>false</default>
+                <label>Recibe mucho apoyo</label>
+            </value>
+            <value>
+                <fullName>Recibe apoyo pero no le sirve</fullName>
+                <default>false</default>
+                <label>Recibe apoyo pero no le sirve</label>
+            </value>
+            <value>
+                <fullName>No recibe apoyo y lo necesita</fullName>
+                <default>false</default>
+                <label>No recibe apoyo y lo necesita</label>
+            </value>
+            <value>
+                <fullName>No recibe apoyo y no le interesa</fullName>
+                <default>false</default>
+                <label>No recibe apoyo y no le interesa</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

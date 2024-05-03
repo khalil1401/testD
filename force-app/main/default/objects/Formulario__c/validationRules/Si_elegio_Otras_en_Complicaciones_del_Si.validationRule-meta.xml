@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_elegio_Otras_en_Complicaciones_del_Si</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+INCLUDES( Sistema_digestivo__c, &quot;Otras&quot;), 
+ISBLANK( Otras_Sistema_Digestivo__c )
+)</errorConditionFormula>
+    <errorDisplayField>Otras_Sistema_Digestivo__c</errorDisplayField>
+    <errorMessage>Si elegio Otras en Complicaciones del Sistema Digestivo ¿Cuales otras?</errorMessage>
+</ValidationRule>

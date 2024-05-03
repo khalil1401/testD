@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>El_tono_de_la_llamada_es__c</fullName>
+    <externalId>false</externalId>
+    <label>El tono de la llamada es</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agresivo</fullName>
+                <default>false</default>
+                <label>Agresivo</label>
+            </value>
+            <value>
+                <fullName>Amenazante</fullName>
+                <default>false</default>
+                <label>Amenazante</label>
+            </value>
+            <value>
+                <fullName>Amistoso</fullName>
+                <default>false</default>
+                <label>Amistoso</label>
+            </value>
+            <value>
+                <fullName>Dubitativo</fullName>
+                <default>false</default>
+                <label>Dubitativo</label>
+            </value>
+            <value>
+                <fullName>Firme</fullName>
+                <default>false</default>
+                <label>Firme</label>
+            </value>
+            <value>
+                <fullName>Sarcástico</fullName>
+                <default>false</default>
+                <label>Sarcástico</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

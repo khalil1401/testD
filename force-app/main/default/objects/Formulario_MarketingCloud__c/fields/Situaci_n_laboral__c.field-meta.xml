@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Situaci_n_laboral__c</fullName>
+    <externalId>false</externalId>
+    <label>Situación laboral</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Trabajo en relación de dependencia</fullName>
+                <default>false</default>
+                <label>Trabajo en relación de dependencia</label>
+            </value>
+            <value>
+                <fullName>Trabajo independiente</fullName>
+                <default>false</default>
+                <label>Trabajo independiente</label>
+            </value>
+            <value>
+                <fullName>Desempleado, Estudiante</fullName>
+                <default>false</default>
+                <label>Desempleado, Estudiante</label>
+            </value>
+            <value>
+                <fullName>Ama de casa</fullName>
+                <default>false</default>
+                <label>Ama de casa</label>
+            </value>
+            <value>
+                <fullName>Jubilado</fullName>
+                <default>false</default>
+                <label>Jubilado</label>
+            </value>
+            <value>
+                <fullName>Licencia por enfermedad prolongada</fullName>
+                <default>false</default>
+                <label>Licencia por enfermedad prolongada</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

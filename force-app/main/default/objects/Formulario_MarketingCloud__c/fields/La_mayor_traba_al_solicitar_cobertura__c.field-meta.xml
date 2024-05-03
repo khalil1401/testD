@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>La_mayor_traba_al_solicitar_cobertura__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Cuál es la mayor traba/ dificultad a la hora de solicitar la cobertura?</inlineHelpText>
+    <label>La mayor traba al solicitar cobertura?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

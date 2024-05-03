@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Area_terapeutica__c</fullName>
+    <externalId>false</externalId>
+    <label>Área terapéutica</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alergia</fullName>
+                <default>false</default>
+                <label>Alergia</label>
+            </value>
+            <value>
+                <fullName>Desafíos del crecimiento</fullName>
+                <default>false</default>
+                <label>Desafíos del crecimiento</label>
+            </value>
+            <value>
+                <fullName>Dieta Cetogénica</fullName>
+                <default>false</default>
+                <label>Dieta Cetogénica</label>
+            </value>
+            <value>
+                <fullName>Digestivos</fullName>
+                <default>false</default>
+                <label>Digestivos</label>
+            </value>
+            <value>
+                <fullName>Disfagia</fullName>
+                <default>false</default>
+                <label>Disfagia</label>
+            </value>
+            <value>
+                <fullName>Malnutrición</fullName>
+                <default>false</default>
+                <label>Malnutrición</label>
+            </value>
+            <value>
+                <fullName>Metabólicos</fullName>
+                <default>false</default>
+                <label>Metabólicos</label>
+            </value>
+            <value>
+                <fullName>NEG</fullName>
+                <default>false</default>
+                <label>NEG</label>
+            </value>
+            <value>
+                <fullName>Oncología</fullName>
+                <default>false</default>
+                <label>Oncología</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

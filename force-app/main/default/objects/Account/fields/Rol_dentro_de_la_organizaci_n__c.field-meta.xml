@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rol_dentro_de_la_organizaci_n__c</fullName>
+    <externalId>false</externalId>
+    <label>Rol dentro de la organización</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Administrativo</fullName>
+                <default>false</default>
+                <label>Administrativo</label>
+            </value>
+            <value>
+                <fullName>Auditor</fullName>
+                <default>false</default>
+                <label>Auditor</label>
+            </value>
+            <value>
+                <fullName>Compras</fullName>
+                <default>false</default>
+                <label>Compras</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

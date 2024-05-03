@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sedestaci_n_al_borde_de_la_cama__c</fullName>
+    <externalId>false</externalId>
+    <label>Sedestación al borde de la cama</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asistencia máxima</fullName>
+                <default>false</default>
+                <label>Asistencia máxima</label>
+            </value>
+            <value>
+                <fullName>Asistencia mínima</fullName>
+                <default>false</default>
+                <label>Asistencia mínima</label>
+            </value>
+            <value>
+                <fullName>Sin asistencia</fullName>
+                <default>false</default>
+                <label>Sin asistencia</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

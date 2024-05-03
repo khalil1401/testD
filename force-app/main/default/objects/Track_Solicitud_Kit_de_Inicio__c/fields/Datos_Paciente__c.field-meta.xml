@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Datos_Paciente__c</fullName>
+    <description>Datos del paciente que está completando los formularios de solicitud de kit de inicio</description>
+    <externalId>false</externalId>
+    <label>Datos Paciente</label>
+    <length>255</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

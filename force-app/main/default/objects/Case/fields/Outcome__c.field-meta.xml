@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outcome__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Describir cuál fue la resolución del caso luego de cerrarlo</inlineHelpText>
+    <label>Outcome</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Resoluci_n__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Renovó módulo</fullName>
+                <default>false</default>
+                <label>Renovó módulo</label>
+            </value>
+            <value>
+                <fullName>Extensión de módulo</fullName>
+                <default>false</default>
+                <label>Extensión de módulo</label>
+            </value>
+            <value>
+                <fullName>Cliente recuperado (OOSS)</fullName>
+                <default>false</default>
+                <label>Cliente recuperado (OOSS)</label>
+            </value>
+            <value>
+                <fullName>Retoma tratamiento por orden médica</fullName>
+                <default>false</default>
+                <label>Retoma tratamiento por orden médica</label>
+            </value>
+            <value>
+                <fullName>OOSS autoriza por gestión comercial</fullName>
+                <default>false</default>
+                <label>OOSS autoriza por gestión comercial</label>
+            </value>
+            <value>
+                <fullName>Asesoramiento nutricional BC autorizado</fullName>
+                <default>false</default>
+                <label>Asesoramiento nutricional BC autorizado</label>
+            </value>
+            <value>
+                <fullName>OOSS no autoriza canal Best Care</fullName>
+                <default>false</default>
+                <label>OOSS no autoriza canal Best Care</label>
+            </value>
+            <value>
+                <fullName>Cliente inactivo (OOSS)</fullName>
+                <default>false</default>
+                <label>Cliente inactivo (OOSS)</label>
+            </value>
+            <value>
+                <fullName>OOSS no autoriza cobertura tratamiento</fullName>
+                <default>false</default>
+                <label>OOSS no autoriza cobertura tratamiento</label>
+            </value>
+            <value>
+                <fullName>Paciente cambia OOSS</fullName>
+                <default>false</default>
+                <label>Paciente cambia OOSS</label>
+            </value>
+            <value>
+                <fullName>Paciente no posee OOSS</fullName>
+                <default>false</default>
+                <label>Paciente no posee OOSS</label>
+            </value>
+            <value>
+                <fullName>Asesoramiento nutricional BC no autorizado</fullName>
+                <default>false</default>
+                <label>Asesoramiento nutricional BC no autorizado</label>
+            </value>
+            <value>
+                <fullName>No tolera</fullName>
+                <default>false</default>
+                <label>No tolera</label>
+            </value>
+            <value>
+                <fullName>No contactable</fullName>
+                <default>false</default>
+                <label>No contactable</label>
+            </value>
+            <value>
+                <fullName>Paciente compra particular</fullName>
+                <default>false</default>
+                <label>Paciente compra particular</label>
+            </value>
+            <value>
+                <fullName>Fallecido</fullName>
+                <default>false</default>
+                <label>Fallecido</label>
+            </value>
+            <value>
+                <fullName>Rehabilitó/Alta de tratamiento</fullName>
+                <default>false</default>
+                <label>Rehabilitó/Alta de tratamiento</label>
+            </value>
+            <value>
+                <fullName>Sin información de la OOSS</fullName>
+                <default>false</default>
+                <label>Sin información de la OOSS</label>
+            </value>
+            <value>
+                <fullName>Instituciones - Sin licitacion</fullName>
+                <default>false</default>
+                <label>Instituciones - Sin licitacion</label>
+            </value>
+            <value>
+                <fullName>Paciente se niega a dar información</fullName>
+                <default>false</default>
+                <label>Paciente se niega a dar información</label>
+            </value>
+            <value>
+                <fullName>Cobertura Total</fullName>
+                <default>false</default>
+                <label>Cobertura Total</label>
+            </value>
+            <value>
+                <fullName>Cobertura Parcial de productos</fullName>
+                <default>false</default>
+                <label>Cobertura Parcial de productos</label>
+            </value>
+            <value>
+                <fullName>Cobertura Parcial Cantidad</fullName>
+                <default>false</default>
+                <label>Cobertura Parcial Cantidad</label>
+            </value>
+            <value>
+                <fullName>Cobertura por recurso de amparo</fullName>
+                <default>false</default>
+                <label>Cobertura por recurso de amparo</label>
+            </value>
+            <value>
+                <fullName>Cobertura rechazada</fullName>
+                <default>false</default>
+                <label>Cobertura rechazada</label>
+            </value>
+            <value>
+                <fullName>Sin respuesta de la OS</fullName>
+                <default>false</default>
+                <label>Sin respuesta de la OS</label>
+            </value>
+            <value>
+                <fullName>Recurso de amparo</fullName>
+                <default>false</default>
+                <label>Recurso de amparo</label>
+            </value>
+            <value>
+                <fullName>Gestión independiente</fullName>
+                <default>false</default>
+                <label>Gestión independiente</label>
+            </value>
+            <value>
+                <fullName>Sin respuesta de la familia</fullName>
+                <default>false</default>
+                <label>Sin respuesta de la familia</label>
+            </value>
+            <value>
+                <fullName>Familia solicita no contacto</fullName>
+                <default>false</default>
+                <label>Familia solicita no contacto</label>
+            </value>
+            <value>
+                <fullName>Despacho normal</fullName>
+                <default>false</default>
+                <label>Despacho normal</label>
+            </value>
+            <value>
+                <fullName>Remis</fullName>
+                <default>false</default>
+                <label>Remis</label>
+            </value>
+            <value>
+                <fullName>Retiro por deposito</fullName>
+                <default>false</default>
+                <label>Retiro por deposito</label>
+            </value>
+            <value>
+                <fullName>Unidad especial</fullName>
+                <default>false</default>
+                <label>Unidad especial</label>
+            </value>
+            <value>
+                <fullName>Rechazado por paciente</fullName>
+                <default>false</default>
+                <label>Rechazado por paciente</label>
+            </value>
+            <value>
+                <fullName>Paciente rehabilitó</fullName>
+                <default>false</default>
+                <label>Paciente rehabilitó</label>
+            </value>
+            <value>
+                <fullName>Paciente suspendió tratamiento</fullName>
+                <default>false</default>
+                <label>Paciente suspendió tratamiento</label>
+            </value>
+            <value>
+                <fullName>Paciente desistió de continuar con reclamo</fullName>
+                <default>false</default>
+                <label>Paciente desistió de continuar con reclamo</label>
+            </value>
+            <value>
+                <fullName>Falso positivo</fullName>
+                <default>false</default>
+                <label>Falso positivo</label>
+            </value>
+            <value>
+                <fullName>Paciente aceptó cambio de formula x OS</fullName>
+                <default>false</default>
+                <label>Paciente aceptó cambio de formula x OS</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Retenido</controllingFieldValue>
+            <valueName>Renovó módulo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retenido</controllingFieldValue>
+            <valueName>Extensión de módulo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retenido</controllingFieldValue>
+            <valueName>Cliente recuperado (OOSS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retenido</controllingFieldValue>
+            <valueName>Retoma tratamiento por orden médica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retenido</controllingFieldValue>
+            <valueName>OOSS autoriza por gestión comercial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Retenido</controllingFieldValue>
+            <valueName>Asesoramiento nutricional BC autorizado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No retenido</controllingFieldValue>
+            <valueName>OOSS no autoriza canal Best Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No retenido</controllingFieldValue>
+            <valueName>Cliente inactivo (OOSS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No retenido</controllingFieldValue>
+            <valueName>OOSS no autoriza cobertura tratamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No retenido</controllingFieldValue>
+            <valueName>Paciente cambia OOSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No retenido</controllingFieldValue>
+            <valueName>Paciente no posee OOSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No retenido</controllingFieldValue>
+            <valueName>Asesoramiento nutricional BC no autorizado</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No retenido</controllingFieldValue>
+            <valueName>No tolera</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No retenido</controllingFieldValue>
+            <valueName>No contactable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No retenido</controllingFieldValue>
+            <valueName>Paciente compra particular</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No retenido</controllingFieldValue>
+            <valueName>Paciente se niega a dar información</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluidos</controllingFieldValue>
+            <controllingFieldValue>No entregado</controllingFieldValue>
+            <valueName>Fallecido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluidos</controllingFieldValue>
+            <valueName>Rehabilitó/Alta de tratamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluidos</controllingFieldValue>
+            <valueName>Sin información de la OOSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluidos</controllingFieldValue>
+            <valueName>Instituciones - Sin licitacion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluidos</controllingFieldValue>
+            <valueName>Recurso de amparo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluidos</controllingFieldValue>
+            <valueName>Gestión independiente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluidos</controllingFieldValue>
+            <valueName>Sin respuesta de la familia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluidos</controllingFieldValue>
+            <valueName>Familia solicita no contacto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluidos</controllingFieldValue>
+            <valueName>Paciente rehabilitó</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluidos</controllingFieldValue>
+            <valueName>Paciente suspendió tratamiento</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluidos</controllingFieldValue>
+            <valueName>Paciente desistió de continuar con reclamo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Excluidos</controllingFieldValue>
+            <valueName>Falso positivo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobertura lograda</controllingFieldValue>
+            <valueName>Cobertura Total</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobertura lograda</controllingFieldValue>
+            <valueName>Cobertura Parcial de productos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobertura lograda</controllingFieldValue>
+            <valueName>Cobertura Parcial Cantidad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobertura lograda</controllingFieldValue>
+            <valueName>Cobertura por recurso de amparo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobertura no lograda</controllingFieldValue>
+            <valueName>Cobertura rechazada</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobertura no lograda</controllingFieldValue>
+            <valueName>Sin respuesta de la OS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cobertura no lograda</controllingFieldValue>
+            <valueName>Paciente aceptó cambio de formula x OS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entregado</controllingFieldValue>
+            <valueName>Despacho normal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entregado</controllingFieldValue>
+            <valueName>Remis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entregado</controllingFieldValue>
+            <valueName>Retiro por deposito</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entregado</controllingFieldValue>
+            <valueName>Unidad especial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>No entregado</controllingFieldValue>
+            <valueName>Rechazado por paciente</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

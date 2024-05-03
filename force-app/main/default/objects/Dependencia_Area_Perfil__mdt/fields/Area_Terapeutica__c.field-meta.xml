@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Area_Terapeutica__c</fullName>
+    <description>Área terapéutica que se relacionará con el perfil correspondiente para el usuario de portal pacientes</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Área Terapeutica</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dieta Cetogénica</fullName>
+                <default>true</default>
+                <label>Dieta Cetogénica</label>
+            </value>
+            <value>
+                <fullName>Metabólicos</fullName>
+                <default>false</default>
+                <label>Metabólicos</label>
+            </value>
+            <value>
+                <fullName>Malnutrición</fullName>
+                <default>false</default>
+                <label>Malnutrición</label>
+            </value>
+            <value>
+                <fullName>Disfagia</fullName>
+                <default>false</default>
+                <label>Disfagia</label>
+            </value>
+            <value>
+                <fullName>Oncología</fullName>
+                <default>false</default>
+                <label>Oncología</label>
+            </value>
+            <value>
+                <fullName>Alergia</fullName>
+                <default>false</default>
+                <label>Alergia</label>
+            </value>
+            <value>
+                <fullName>Digestivos</fullName>
+                <default>false</default>
+                <label>Digestivos</label>
+            </value>
+            <value>
+                <fullName>Desafíos del crecimiento</fullName>
+                <default>false</default>
+                <label>Desafíos del crecimiento</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

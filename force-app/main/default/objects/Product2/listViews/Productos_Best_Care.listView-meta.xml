@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Productos_Best_Care</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+    <columns>PRODUCT2.DESCRIPTION</columns>
+    <columns>Id_Salesforce__c</columns>
+    <columns>PRODUCT2.ACTIVE</columns>
+    <columns>Codigo_producto_Id_externo__c</columns>
+    <columns>Area_Terapeutica__c</columns>
+    <columns>Producto_SAP__c</columns>
+    <columns>Es_de_Kit_de_Inicio__c</columns>
+    <columns>Organizacion__c</columns>
+    <columns>Unidades_de_Kit__c</columns>
+    <columns>PRODUCT2.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>Todos los productos</label>
+</ListView>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caso__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Caso</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) AND (3 OR 4 OR 5 OR 6)</booleanFilter>
+        <errorMessage>Los formularios de calidad solo están disponibles para casos de tipo &quot;Reclamo&quot; y Subtipo &quot;Calidad&quot;, y de tipo de registro Paciente Best care, Regular o Consumidor Baby.</errorMessage>
+        <filterItems>
+            <field>Case.RecordType.Name</field>
+            <operation>equals</operation>
+            <value>Reclamo</value>
+        </filterItems>
+        <filterItems>
+            <field>Case.Subtipo__c</field>
+            <operation>equals</operation>
+            <value>Calidad</value>
+        </filterItems>
+        <filterItems>
+            <field>Case.Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Best Care</value>
+        </filterItems>
+        <filterItems>
+            <field>Case.Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Regular</value>
+        </filterItems>
+        <filterItems>
+            <field>Case.Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Consumidor</value>
+        </filterItems>
+        <filterItems>
+            <field>Case.Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Paciente Partner</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Case</referenceTo>
+    <relationshipLabel>Formulario de calidad</relationshipLabel>
+    <relationshipName>Formulario_de_calidad</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

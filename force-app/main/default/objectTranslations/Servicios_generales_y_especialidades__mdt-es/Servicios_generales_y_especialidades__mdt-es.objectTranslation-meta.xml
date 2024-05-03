@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Servicios de modulo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Servicios generales y especialidades</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Formato Servicio general y especialidad</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

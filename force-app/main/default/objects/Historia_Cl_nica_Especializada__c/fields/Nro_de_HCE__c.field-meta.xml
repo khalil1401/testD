@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nro_de_HCE__c</fullName>
+    <displayFormat>HCE-{000000000}</displayFormat>
+    <externalId>true</externalId>
+    <label>Nro. de HCE</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

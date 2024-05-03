@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Realiz_alg_n_cambio_en_su_alimentaci_n__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>¿Realizó algún cambio en su alimentación en los últimos días?</inlineHelpText>
+    <label>Realizó algún cambio en su alimentación?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

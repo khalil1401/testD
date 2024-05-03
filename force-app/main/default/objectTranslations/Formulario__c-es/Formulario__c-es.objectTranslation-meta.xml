@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Historia Clínica</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Historias Clínicas</value>
+    </caseValues>
+    <fieldSets>
+        <label></label>
+        <name>HCMI_Datos_Paciente</name>
+    </fieldSets>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Checklist Ambiental</layout>
+        <sections>
+            <label></label>
+            <section>Condición Ambiental</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Datos administrativos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Epicrisis</layout>
+        <sections>
+            <label></label>
+            <section>EPICRISIS</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Motivo del fin de Seguimiento de Best Care</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Profesional</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Resumen de Historia Clinica</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Patient Journey Terapia Cetogenica</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Registro de entrenamiento paciente - cuidador</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información del Cuidador</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Profesional</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Práctica Segura</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Registro de Entrenamiento Paciente-Cuidador</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Temas Entrenados</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label></label>
+        <name>Checklist_Ambiental</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Epicrisis</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Evaluaci_n_Screening_BC</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Evaluaci_n_de_inicio</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Ex_men_f_sico_virtual_del_paciente</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_Cl_nica_Pedi_trica_de_Enfermer_a</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_Cl_nica_Pedi_trica_de_Nutrici_n</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_Cl_nica_de_Rehabilitaci_n_Motora_de_Ingreso</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_Cl_nica_de_Rehabilitaci_n_Motora_de_Seguimiento</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_Clinica_Medica_de_Inicio</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_Clinica_Medica_de_Seguimiento</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_Clinica_Pediatrica_de_Inicio</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_Clinica_de_Enfermeria</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_Clinica_de_Nutricion</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_cl_nica_pedi_trica_de_seguimiento</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_clinica_de_enfermeria_de_seguimiento</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_clinica_de_seguimiento</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Historia_clinica_medica</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Indice_de_Katz</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Registro_de_entrenamiento_paciente_cuidador</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Valoracion_global_subjetiva</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Cambio_de_indicacion_anterior</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Completar_el_laboratorio</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Estado_En_Definitivo_No_Se_Puede_Modific</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Si_elegio_Otras_en_Complicaciones_del_Si</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Si_selecciona_un_tipo_de_lesion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Si_tiene_lesion_debe_seleccionar_el_tipo</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>Generar_PDF</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Generar_informe</name>
+    </webLinks>
+</CustomObjectTranslation>

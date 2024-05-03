@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aprobadas</fullName>
+    <columns>NAME</columns>
+    <columns>Ciclo__c</columns>
+    <columns>Fecha_de_inicio__c</columns>
+    <columns>Fecha_de_fin__c</columns>
+    <columns>Duracion_de_licencia__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Aprobado__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Aprobadas</label>
+    <sharedTo>
+        <group>KAE_Adultos</group>
+        <group>KAE_Pediatrico</group>
+        <group>Stakeholders</group>
+    </sharedTo>
+</ListView>

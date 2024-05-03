@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Para_cerrar_caso_de_retencion_campos_ob</fullName>
+    <active>true</active>
+    <description>Para poder cerrar un caso de retención deben estar completos los campos &quot;Resolucion&quot; y &quot;Outcome&quot;</description>
+    <errorConditionFormula>RecordType.Name = &quot;Retencion&quot; &amp;&amp; ( ISBLANK( TEXT(Resoluci_n__c )) || ISBLANK( TEXT(Outcome__c ))) &amp;&amp; ISPICKVAL( Status , &quot;Cerrado&quot;)</errorConditionFormula>
+    <errorMessage>Se debe completar el campo &quot;Resolución&quot; y/o &quot;Outcome&quot; para cerrar el caso</errorMessage>
+</ValidationRule>

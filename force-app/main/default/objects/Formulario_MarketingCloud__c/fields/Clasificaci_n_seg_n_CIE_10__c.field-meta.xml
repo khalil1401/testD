@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clasificaci_n_seg_n_CIE_10__c</fullName>
+    <externalId>false</externalId>
+    <label>Clasificación según CIE-10</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tumores del gastrointestinal superior y glándulas anexas</fullName>
+                <default>false</default>
+                <label>Tumores del gastrointestinal superior y glándulas anexas</label>
+            </value>
+            <value>
+                <fullName>Tumor de mama</fullName>
+                <default>false</default>
+                <label>Tumor de mama</label>
+            </value>
+            <value>
+                <fullName>Tumor cabeza y cuello</fullName>
+                <default>false</default>
+                <label>Tumor cabeza y cuello</label>
+            </value>
+            <value>
+                <fullName>Tumor de  órganos genitales femeninos (útero, ovario, vagina)</fullName>
+                <default>false</default>
+                <label>Tumor de  órganos genitales femeninos (útero, ovario, vagina)</label>
+            </value>
+            <value>
+                <fullName>Tumor de pulmón</fullName>
+                <default>false</default>
+                <label>Tumor de pulmón</label>
+            </value>
+            <value>
+                <fullName>Tumor colon-recto</fullName>
+                <default>false</default>
+                <label>Tumor colon-recto</label>
+            </value>
+            <value>
+                <fullName>Tumor de vías urinarias (riñón, vejiga)</fullName>
+                <default>false</default>
+                <label>Tumor de vías urinarias (riñón, vejiga)</label>
+            </value>
+            <value>
+                <fullName>Tumor de órganos genitales masculinos (testículo, próstata, pene)</fullName>
+                <default>false</default>
+                <label>Tumor de órganos genitales masculinos (testículo, próstata, pene)</label>
+            </value>
+            <value>
+                <fullName>Tumor del tejido linfático y órganos hematopoyéticos (leucemias, linfomas, mieloma múltiple)</fullName>
+                <default>false</default>
+                <label>Tumor del tejido linfático y órganos hematopoyéticos (leucemias, linfomas, mieloma múltiple)</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modalidad_Administraci_n__c</fullName>
+    <externalId>false</externalId>
+    <label>Modalidad</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Continua</fullName>
+                <default>false</default>
+                <label>Continua</label>
+            </value>
+            <value>
+                <fullName>Ciclica diurna</fullName>
+                <default>false</default>
+                <label>Ciclica diurna</label>
+            </value>
+            <value>
+                <fullName>Ciclica nocturna</fullName>
+                <default>false</default>
+                <label>Ciclica nocturna</label>
+            </value>
+            <value>
+                <fullName>Bolos</fullName>
+                <default>false</default>
+                <label>Bolos</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

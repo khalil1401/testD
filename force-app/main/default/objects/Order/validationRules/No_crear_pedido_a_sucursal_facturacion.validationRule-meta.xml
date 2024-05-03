@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_crear_pedido_a_sucursal_facturacion</fullName>
+    <active>false</active>
+    <errorConditionFormula>NOT(ISPICKVAL( Account.Tipo_sucursal__c, &apos;SHIP_TO&apos;))</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>Usted no puede crear un pedido a una sucursal de facturación. Por favor, ingrese una sucursal de envío.</errorMessage>
+</ValidationRule>

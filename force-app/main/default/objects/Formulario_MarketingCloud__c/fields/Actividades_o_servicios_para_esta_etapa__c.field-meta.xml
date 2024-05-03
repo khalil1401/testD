@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actividades_o_servicios_para_esta_etapa__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>¿Qué actividades o servicios podríamos ofrecerte para esta etapa del tratamiento?</inlineHelpText>
+    <label>Actividades o servicios para esta etapa</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Talleres de cocina</fullName>
+                <default>false</default>
+                <label>Talleres de cocina</label>
+            </value>
+            <value>
+                <fullName>Materiales</fullName>
+                <default>false</default>
+                <label>Materiales</label>
+            </value>
+            <value>
+                <fullName>Talleres interactivos</fullName>
+                <default>false</default>
+                <label>Talleres interactivos</label>
+            </value>
+            <value>
+                <fullName>Otros</fullName>
+                <default>false</default>
+                <label>Otros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

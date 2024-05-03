@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Casos_Service</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Casos Service</label>
+        <sharedTo>
+            <group>Service</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Caso_de_best_care__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>General,Nuevo paciente,Reclamo,Gestión,Consulta</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Casos_para_Profesionales_Best_Care</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Casos para Profesionales Best Care</label>
+        <sharedTo>
+            <group>Usuarios_partner</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Caso_de_best_care__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>General,Nuevo paciente,Reclamo,Gestión,Consulta</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Casos_para_visitadores_medicos</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Casos para visitadores medicos</label>
+        <sharedTo>
+            <group>Visitador_medico</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Caso_de_best_care__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>General,Nuevo paciente,Reclamo,Gestión,Consulta</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Encuestas</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Encuestas</label>
+        <sharedTo>
+            <group>Survey</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>DNI__c</field>
+            <operation>notEqual</operation>
+            <value>abc123</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Modificar_casos_de_Reclamo_Gestion_y_Consulta</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Modificar casos de Reclamo, Gestion y Consulta</label>
+        <sharedTo>
+            <portalRole>APMAdultosSocioUsuario</portalRole>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Reclamo,Consulta,Gestión</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

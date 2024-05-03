@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Ver_HC_Community</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Ver HC - Community</label>
+        <sharedTo>
+            <group>HC_Nutricion_Partner</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Historia Clínica de Nutrición</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Ver_HC_Partner_Profesionales_BC</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Permiso de visualización de Historias Clínicas para usuarios partner (Profesionales Best Care)</description>
+        <label>Ver HC- Partner Profesionales BC</label>
+        <sharedTo>
+            <group>Usuarios_partner</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Evaluación de inicio</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

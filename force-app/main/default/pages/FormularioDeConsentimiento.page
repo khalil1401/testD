@@ -1,0 +1,329 @@
+<apex:page showHeader="false" controller="ConfirmacionDeConsentimientoController">
+    
+    <body onLoad="noBack()">
+        <style>
+            .par2 {
+            width: 60%;
+            padding: 10px;
+            }
+            
+            .parRev {
+            margin: auto;
+            width: 60%;
+            padding: 10px;
+            text-align: center;
+            text-justify: inter-word;
+            border: 3px solid;
+            line-height: 1.6;
+            }
+            
+            .parRevCheck {
+            padding: 5px;
+            border: 1px solid;
+            border-color: #9D89C0;
+            line-height: 1.2;
+            }
+            
+            .par {
+            margin: auto;
+            width: 60%;
+            padding: 10px;
+            text-align: justify;
+            text-justify: inter-word;
+            line-height: 1.6;
+            }
+            
+            .parImg {
+            margin: auto;
+            width: 60%;
+            padding: 10px;
+            text-align: center;
+            text-justify: inter-word;
+            line-height: 1.6;
+            }
+        </style>
+        <apex:pageBlock rendered="{!NOT(yaSeleccionado)}">
+            <div class="parImg">
+
+                <apex:form rendered="{!agradecimiento}">
+                    <apex:image style="zoom: 160%" url="{!$Resource.HeaderBestCare2}" height="50px" />
+                    <br/>
+                    <p style="font-size:18px">
+                        Gracias por dar consentimiento.
+                        <br/>
+                        <apex:commandButton action="{!descargarFormulario}" value="Descargar formulario" style="zoom: 120%" />
+                    </p>
+                </apex:form>
+                <apex:form rendered="{!agradecimientoSinLink}">
+                    <apex:image style="zoom: 160%" url="{!$Resource.HeaderBestCare2}" height="50px" />
+                    <p style="font-size:18px">
+                        Gracias por registrar su respuesta.
+                        <br/>
+                        <apex:commandButton action="{!descargarFormulario}" value="Descargar formulario" style="zoom: 120%" />
+                    </p>
+                </apex:form>
+            </div>
+        </apex:pageBlock>
+        <apex:pageBlock rendered="{!respuestaYaRegistrada}">
+            <div class="par2">
+                <apex:image style="zoom: 130%" url="{!$Resource.HeaderBestCare2}" height="50px" />
+                
+            </div>
+            <br/>
+            <p>Ya registramos su respuesta, gracias.</p>
+        </apex:pageBlock>
+        
+        <apex:pageBlock id="pageBlockId" rendered="{!NOT(respuestaYaRegistrada)}">
+            
+            <br/>           
+            <apex:pageblock id="pageBlockId2" rendered="{!yaSeleccionado}">
+                <div class="parImg">
+                    <apex:image style="zoom: 130%" url="{!$Resource.HeaderBestCare2}" height="50px" />
+                    
+                </div>
+                <div>
+                    <p class="parRev" style="font-weight: bold;">
+                        CONSENTIMIENTO INFORMADO
+                    </p>
+                </div>
+                <div class="par">
+                    <h2>1.- Datos del Paciente</h2>
+                    <p>
+                        Fecha:
+                        <strong>{!fecha}</strong>
+                    </p>
+                    <p>
+                        Profesional Interviniente:
+                        <strong>{!medico}</strong>
+                    </p>
+                    <p>
+                        Nombre y apellido del paciente:
+                        <strong>{!nombreCompleto}</strong>
+                    </p>
+                    <p>
+                        DNI del paciente:
+                        <strong>{!dni}</strong>
+                    </p>
+                    <p>
+                        Domicilio:
+                        <strong>{!direccion}</strong>
+                        <strong>{!provincia}</strong>
+                    </p>
+                    <p>
+                        Domicilio de correo electrónico:
+                        <strong>{!emailPaciente}</strong>
+                    </p>
+                    <p>
+                        Celular de contacto:
+                        <strong>{!celularPaciente}</strong>
+                    </p>
+                    
+                </div>
+                <apex:form id="formId">
+                    
+                    <div class="par">
+                        <hr/>
+                        <h2>2.- Datos firmante (por favor, completar solo si son distintos del paciente): </h2>
+                        <br/>
+                        <br/> Nombre y apellido:
+                        <apex:inputText id="nombreFirmante" value="{!nombreFirmante}" />
+                        <br/>
+                        <br/> DNI:
+                        <apex:inputText id="dniFirmante" value="{!dniFirmante}" />
+                        <br/>
+                        <br/> Domicilio:
+                        <apex:inputText id="domicilioFirmante" value="{!domicilioFirmante}" />
+                        <br/>
+                        <br/> Domicilio de correo electrónico:
+                        <apex:inputText id="emailFirmante" value="{!emailFirmante}" />
+                        <br/>
+                        <br/> Celular de contacto:
+                        <apex:inputText id="celularFirmante" value="{!celularFirmante}" />
+                        <br/>
+                        <br/> Relacion con el paciente:
+                        <apex:inputText id="relacion" value="{!relacion}" />
+                        <br/>
+                        <apex:inputCheckbox id="firmante" value="{!esFirmante}" onchange="esFirmante(this)" style="zoom: 150%" />Con carácter de declaración jurada manifiesto que suscribo el presente en representación del Paciente
+                    </div>
+                    
+                    <div class="par">
+                        <hr/>
+                        <h2>3.- Información recibida sobre el tratamiento a recibir por el Paciente:</h2>
+                        <p> He sido informado detalladamente acerca del estado clínico actual del Paciente: {!patologia} También
+                            se me ha informado del tratamiento instaurado por los médicos de la internación, para ser llevado
+                            a cabo en domicilio del Paciente:
+                            <strong>{!tipodeAcceso}</strong> con el fin de aportar los nutrientes necesarios que no se cubren con
+                            la via oral. Se explicó al Paciente, su familiar y/o Tutor y/o cuidador que este es el único
+                            tratamiento de nutrición disponible (no existen otras alternativas viables) considerando que
+                            el mismo no puede ser alimentado en forma adecuada por vía oral. Los beneficios razonables del
+                            tratamiento nutricional propuesto son: alcanzar a cubrir los requerimientos calóricos y proteicos
+                            necesarios para el paciente. El Paciente y su familiar y/o Tutor y/o cuidador – acompañante,
+                            manifiestan que han sido informado: • sobre los riesgos y efectos secundarios inherentes al soporte
+                            nutricional instaurado, que son los siguientes: vómitos, náuseas, reflujo del alimento, distensión
+                            abdominal, dolor abdominal, constipación o diarrea. • de los riesgos probables que son: obstrucción
+                            de la sonda de alimentación (en especial si no se cumple con las medidas adecuadas para su cuidado
+                            luego de la infusión del alimento o medicación), lesión de la piel por pérdidas periostoma y/o
+                            desplazamiento del acceso. • Que el procedimiento elegido, aquí explicado y que el Paciente y/o
+                            su representante consiente, es, de acuerdo al criterio del profesional firmante, el más beneficioso
+                            para el Paciente de acuerdo a los estándares internacionales. Todo ello como lo indica la Ley
+                            N° 26.529 y la Ley N° 26.742 de Derechos y Autonomía del Paciente, la Ley N° 26.657 de Salud
+                            Mental y el Código Civil y Comercial de la Nación. • en forma clara sobre los riesgos inherentes
+                            al tratamiento propuesto y acerca de las posibilidades de éxito y se ha dado al Paciente, su
+                            familiar y/o Tutor y/o cuidador la oportunidad de hacer preguntas y solicitar las aclaraciones
+                            que consideraron necesarias y todas fueron contestadas de modo completo y satisfactorio.
+                        </p>
+                    </div>
+                    <div class="par">
+                        <hr/>
+                        <h2>4.- Datos Personales del Paciente: </h2>
+                        <p>
+                            Mediante el CLICK de aceptación debajo el Paciente, su familiar y/o tutor y/o cuidador toma conocimiento y presta conformidad
+                            para que su historia clínica sea consultada no solo por los profesionales de la salud asignados
+                            a su tratamiento por BEST CARE, sino también por la entidad que brinda cobertura al Paciente
+                            por el tratamiento médico a recibir con motivo de su internación domiciliaria y además acepta
+                            y consiente con que se utilice su información sanitaria para cuestiones relacionadas en el ámbito
+                            de la salud y la nutrición, garantizando BEST CARE Nutrición Domiciliaria S.A. (“BEST CARE”)
+                            que tomará los recaudos tendientes a mantener la confidencialidad de dicha información. Asimismo,
+                            se deja constancia que es probable y el Paciente acepta que otros profesionales asignados a su
+                            tratamiento durante su internación domiciliaria y que participen en el proceso de atención, accedan
+                            a su historia clínica depositada en BEST CARE. Se deja constancia que todos los datos personales
+                            que brinde a BEST CARE serán destinados a brindar una correcta prestación de los servicios contratados
+                            por la entidad que le brinda cobertura médica al Paciente. También se autoriza a BEST CARE a
+                            que se utilice información clínica y nutricional del Paciente con fines académicos-científicos
+                            en forma anónima y confidencial sin revelar mis datos personales, los que están resguardados
+                            bajo la Ley N° 25.326. El Paciente, su familiar y/o Tutor y/o cuidador manifiesta que entiende
+                            que en caso de no proporcionar los datos del Paciente requeridos por BEST CARE, ésta se verá
+                            imposibilitada de poder dar cumplimiento con las obligaciones contractuales pertinentes. Dicha
+                            información será ingresada en la base de datos de BEST CARE y/o de un tercero que esta designe
+                            cómo procesador de datos personales, la cual será utilizada únicamente a los fines de registrar
+                            en la misma al titular como Paciente y de brindar la correcta prestación de los servicios y finalidades
+                            aquí detallados. En tal caso, los procesadores de datos actuarán bajo las instrucciones de BEST
+                            CARE, incluyendo la orden de implementar y proveer las medidas de seguridad y privacidad necesarias
+                            y adecuadas conforme las regulaciones vigentes sobre la materia en la República Argentina. El
+                            titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos
+                            en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo
+                            al efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley Nº 25.326. El titular
+                            podrá ejercer el derecho de acceso, rectificación, actualización y supresión en forma gratuita
+                            por teléfono llamando al 4341-4140, solicitando comunicarse con el área de Legales, escribiendo
+                            al correo compliance.conosur@danone.com o remitiendo una carta al domicilio de Best Care, dirigida
+                            al departamento de legales. La AGENCIA DE ACCESO A LA INFORMACIÓN PUBLICA, autoridad de aplicación
+                            de la Ley Nº 25.326, tiene la atribución de atender las denuncias y reclamos que se interpongan
+                            con relación al incumplimiento de las normas sobre protección de datos personales.
+                            
+                        </p>
+                    </div>
+                    <div class="par">
+                        <hr/>
+                        <h2>5.- Depositaria del consentimiento: </h2>
+                        
+                        <p>
+                            BEST CARE se constituye en depositaria del presente consentimiento que se incorpora a la historia clínica del Paciente, dejándose
+                            constancia que todos los claros han sido completados antes de mi firma. Por favor completar lo
+                            que corresponda haciendo CLICK (al hacer CLICK está dando su consentimiento.
+                            <br/>
+                            <strong>Por favor lea el documento completo ANTES de realizar CLICK en algunas de las opciones</strong>
+                        </p>
+                        <br/>
+                        
+                        <div class="parRevCheck">
+                            
+                            <apex:actionFunction name="rechazoF" action="{!rechazoDeConsentimiento}" />
+                            <apex:actionFunction name="confirmacionF" action="{!confirmacionDeFirma}" />
+                            <apex:inputCheckbox style="zoom: 150%" id="primerFirma" />Se deja constancia que el presente formulario es completado de manera voluntaria por el Paciente
+                            (en adelante, el titular de los datos personales) y/o su representante, prestando conformidad
+                            a estas pautas y su consentimiento para que los datos del Paciente sean utilizados por BEST CARE
+                            con las finalidades descriptas arriba.
+                            <br/>
+                            <br/>
+                            <apex:inputCheckbox id="confirma" rendered="{!yaSeleccionado}" onchange="confirmacion(this)" style="zoom: 150%" />
+                            <strong> Otorgo mi CONSENTIMIENTO LIBRE E INFORMADO</strong> sobre el tratamiento a recibir por el Paciente
+                            y demás cuestiones descriptas arriba. Se deja constancia que el presente formulario es completado
+                            de manera voluntaria por el Paciente (en adelante, el titular de los datos personales) y/o su
+                            representante, prestando conformidad a estas pautas y su consentimiento para que los datos del
+                            Paciente sean utilizados por BEST CARE con las finalidades descriptas arriba
+                            <br/>
+                            <br/>
+                            <apex:inputCheckbox id="rechazo" value="{!checkRechazo}" onchange="rechazo(this)" style="zoom: 150%" />
+                            <strong>RECHAZO</strong> el tratamiento nutricional enteral propuesto, habiendo sido informado debidamente
+                            por el médico tratante de las consecuencias médicas de la no realización del tratamiento nutricional
+                            enteral descripto más arriba. Asumo expresamente la responsabilidad y las consecuencias de la
+                            decisión que he tomado.
+                            
+                        </div>
+                    </div>
+                </apex:form>
+            </apex:pageblock>
+        </apex:pageBlock>
+        <script>
+        function confirmacion(element) {
+            var primerCheck = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.primerFirma}');
+            if (primerCheck.checked) {
+                var nombre = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.nombreFirmante}').value;
+                var dni = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.dniFirmante}').value;
+                var domicilio = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.domicilioFirmante}').value;
+                var email = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.emailFirmante}').value;
+                var celular = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.celularFirmante}').value;
+                var relacion = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.relacion}').value;
+                var esFirmante = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.firmante}');
+                var completeAllFields = nombre != '' || dni != '' || domicilio != '' || email != '' || celular != '' || relacion != '';
+                
+                if (!esFirmante.checked && completeAllFields) {
+                    alert("Por favor si es firmante complete todos los campos y presione el check correspondiente");
+                    element.checked = false;
+                }
+                else {
+                    if (confirm('Esta seguro que desea confirmar?')) {
+                        confirmacionF();
+                    } else {
+                        element.checked = false;
+                    }
+                    
+                }
+            } else {
+                alert("Por favor para confirmar, complete la primer casilla dejando constancia de la conformidad");
+                element.checked = false;
+            }
+        }
+        function rechazo(element) {
+            var primerCheck = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.primerFirma}');
+            if (primerCheck.checked) {
+                var nombre = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.nombreFirmante}').value;
+                var dni = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.dniFirmante}').value;
+                var domicilio = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.domicilioFirmante}').value;
+                var email = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.emailFirmante}').value;
+                var celular = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.celularFirmante}').value;
+                var relacion = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.relacion}').value;
+                var esFirmante = document.getElementById('{!$Component.pageBlockId.pageblockId2.formId.firmante}');
+                var completeAllFields = nombre != '' || dni != '' || domicilio != '' || email != '' || celular != '' || relacion != '';
+                
+                if (!esFirmante.checked && completeAllFields) {
+                    alert("Por favor si es firmante complete todos los campos y presione el check correspondiente");
+                    element.checked = false;
+                }
+                else {
+                    if (confirm('Esta seguro que desea rechazarlo?')) {
+                        rechazoF();
+                    } else {
+                        element.checked = false;
+                    }
+                }
+            } else {
+                alert("Por favor para rechazar, complete la primer casilla dejando constancia de la conformidad");
+                element.checked = false;
+            }
+        }
+        function esFirmante(element) {
+            if (confirm('Estos campos deben ser completados solo si el firmante no es el paciente.\nPara contituar presione ACEPTAR o CANCELAR para anular opcion')) {
+                console.log('es firmante');
+            } else {
+                element.checked = false;
+            }
+        }
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+        
+        </script>
+    </body>
+</apex:page>

@@ -1,0 +1,25 @@
+<apex:page standardController="Account" extensions="GenerateCsvForPacienteController" action="{!generateCsv}" showHeader="true" sidebar="true" cache="false">
+    <apex:pageBlock >
+    <apex:form rendered="{!NOT(flagCSV)}">
+        <apex:pagemessages />
+        <apex:commandButton action="{!back}" value="Volver"/>
+    </apex:form>
+    
+    <apex:form rendered="{!flagCSV}"> 
+        <apex:pagemessages />
+         <apex:commandButton action="{!back}" value="Volver"/>
+        <apex:inputHidden value="{!Account.Listo_para_Jitterbit__c}"/>
+        <apex:inputHidden value="{!Account.NombreSAP__c}"/>
+        <apex:inputHidden value="{!Account.N_SHIP_TO__c}"/>
+        <apex:inputHidden value="{!Account.Ciudad__c}"/>
+        <apex:inputHidden value="{!Account.Localidad_look__r.Codigo_Postal__c}"/>
+        <apex:inputHidden value="{!Account.Localidad_look__r.municipio__r.C_digo_de_provincia__c}"/>
+        <apex:inputHidden value="{!Account.Phone}"/>
+        <apex:inputHidden value="{!Account.Direccion__c}"/>
+        <apex:inputHidden value="{!Account.Referencia__c}"/>
+        <apex:inputHidden value="{!Account.SalesGroup_paciente__c}"/>
+        <apex:inputHidden value="{!Account.Obra_social__pc}"/>
+        <apex:inputHidden value="{!Account.Horario_de_ultimo_CSV__c}"/>
+    </apex:form>
+        </apex:pageBlock>
+</apex:page>

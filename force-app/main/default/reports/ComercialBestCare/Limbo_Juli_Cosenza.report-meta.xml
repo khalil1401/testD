@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>RECORDTYPE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Contact.Obra_social__c</field>
+    </columns>
+    <columns>
+        <field>Account.Dias_en_este_estado__c</field>
+    </columns>
+    <columns>
+        <field>Account.Subestado_del_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account.Relacionamiento__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>PersonAccount.Paciente_Best_Care</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Subestado_del_paciente__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Modulo Inactivo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.KAM_Paciente__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>JULIANA COSENZA</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Limbo Juli Cosenza</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Dias_en_este_estado__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

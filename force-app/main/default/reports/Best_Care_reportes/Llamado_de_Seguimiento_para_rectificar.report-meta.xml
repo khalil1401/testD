@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$ID_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Account.Actividades__r$Id</field>
+    </columns>
+    <columns>
+        <field>Account.Actividades__r$Subject</field>
+    </columns>
+    <columns>
+        <field>Account.Actividades__r$CreatedDate</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Actividades__r$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Task.Llamado_de_seguimiento</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Tipo_de_paciente__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Paciente Best Care,Paciente Regular</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Llamado de Seguimiento para rectificar</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cuentas_con_Actividades__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

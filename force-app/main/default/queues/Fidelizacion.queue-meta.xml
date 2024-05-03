@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Fidelizacion</name>
+    <queueMembers>
+        <users>
+            <user>aracelli.orellana@danone.com</user>
+            <user>carolina.beltran@danone.com</user>
+            <user>emiliano.lopez-irazabal@danone.com</user>
+            <user>felipe.prato@danone.com</user>
+            <user>micaela.sosa@danone.com</user>
+            <user>natalia.garcia1@danone.com</user>
+            <user>nicolas.zubiri3@danone.com</user>
+            <user>romina.capizzano@danone.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

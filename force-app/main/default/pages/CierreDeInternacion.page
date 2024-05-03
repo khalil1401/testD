@@ -1,0 +1,32 @@
+<apex:page standardController="Internacion__c" tabStyle="Internacion__c" extensions="CierreDeInternacionController" showHeader="true">
+    <apex:includeLightning />
+
+    <div id="InternacionLWC" />
+
+    <script>
+        $Lightning.use("c:InternacionApp", function () {
+            $Lightning.createComponent("c:CierreDeInternacion",
+                {
+                    internacion: "{!internacion}"
+                },
+                "InternacionLWC",
+                function (cmp) {
+                    console.log('InternacionLWC Componenet added in VF page');
+                });
+        });
+    </script>
+
+    <apex:includeScript value="/support/console/20.0/integration.js" />
+    <script type="text/javascript">
+        function testSetTabTitle() {
+            sforce.console.setTabTitle('Cierre internación');
+        }
+        var pageLoad = window.onload;
+        window.onload = function () {
+            if (pageLoad) {
+                pageLoad();
+            }
+            testSetTabTitle();
+        }
+    </script>
+</apex:page>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.SurveyTakers1__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.SurveyTakers1__r.Survey_Question_Answers__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact.SurveyTakers1__r.Survey_Question_Answers__r$Survey_Question__c</field>
+    </columns>
+    <columns>
+        <field>Contact.SurveyTakers1__r$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Contact.SurveyTakers1__r.Survey_Question_Answers__r$Response__c</field>
+    </columns>
+    <columns>
+        <field>Contact.SurveyTakers1__r$CreatedDate</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Encuesta NPS Baby 2021</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cuenta_personal_con_encuesta__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact.SurveyTakers1__r$CreatedDate</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact.SurveyTakers1__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_LAST30</interval>
+    </timeFrameFilter>
+</Report>

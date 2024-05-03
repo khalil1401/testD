@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Tipo_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account.ID_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Area_terapeutica__c</field>
+    </columns>
+    <columns>
+        <field>Account.Estado_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account.Subestado_del_paciente__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Modulo_de_paciente__c.Tipo__c</field>
+    </columns>
+    <columns>
+        <field>Account.Obra_social__c</field>
+    </columns>
+    <columns>
+        <field>Modulo_de_paciente__c.Modulo_hasta__c</field>
+    </columns>
+    <columns>
+        <field>Modulo_de_paciente__c.Modulo_desde__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CDF1</field>
+    </columns>
+    <customDetailFormulas>
+        <calculatedFormula>IF(Account.ultimo_modulo_hasta__c=Modulo_de_paciente__c.Modulo_hasta__c, 1, 0)</calculatedFormula>
+        <dataType>Double</dataType>
+        <developerName>CDF1</developerName>
+        <label>Ultimo modulo</label>
+        <scale>0</scale>
+    </customDetailFormulas>
+    <description>Pacientes Best Care total</description>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <column>Account.Tipo_de_paciente__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Paciente Best Care</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Modulo_de_paciente__c.Modulo_hasta__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2021</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CDF1</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Estado_de_paciente__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>No tratamiento,Fin de tratamiento,Excluido</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Pacientes con ultimo modulo 2021</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Modulo_de_paciente__c@Modulo_de_paciente__c.Modulo__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Tipo_de_paciente__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

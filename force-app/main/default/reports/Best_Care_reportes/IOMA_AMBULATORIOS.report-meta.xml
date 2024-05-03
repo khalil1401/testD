@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.ID_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Modulo_de_paciente__c.Tipo__c</field>
+    </columns>
+    <columns>
+        <field>Account.Obra_social__c</field>
+    </columns>
+    <columns>
+        <field>Modulo_de_paciente__c.Nro_de_pedido_de_Oracle__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Modulo_de_paciente__c.Modulo_desde__c</field>
+    </columns>
+    <columns>
+        <field>Modulo_de_paciente__c.Duracion_modulo__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <description>Control de Renovaciones</description>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>PersonAccount.Paciente_Best_Care</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Obra_social__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>IOMA - Incluir Salud (Ambulatorios)</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>IOMA - AMBULATORIOS</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Modulo_de_paciente__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Modulo_de_paciente__c.Nro_de_pedido_de_Oracle__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

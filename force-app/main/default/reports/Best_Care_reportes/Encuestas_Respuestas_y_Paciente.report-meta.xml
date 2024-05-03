@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Survey__c$Name</field>
+    </columns>
+    <columns>
+        <field>Survey__c.SurveyTakers1__r$Contact__c</field>
+    </columns>
+    <columns>
+        <field>Survey__c.SurveyTakers1__r.Survey_Question_Answers__r$Name</field>
+    </columns>
+    <columns>
+        <field>Survey__c.SurveyTakers1__r.Survey_Question_Answers__r$Survey_Question__c</field>
+    </columns>
+    <columns>
+        <field>Survey__c.SurveyTakers1__r.Survey_Question_Answers__r$Response__c</field>
+    </columns>
+    <columns>
+        <field>Survey__c.SurveyTakers1__r.Survey_Question_Answers__r$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Survey__c.SurveyTakers1__r$CreatedDate</field>
+    </columns>
+    <description>encuestas con toda la info</description>
+    <filter>
+        <criteriaItems>
+            <column>Survey__c$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>NPS</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Encuestas Respuestas y Paciente</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Prueba_encuestas__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Survey__c.SurveyTakers1__r$Contact__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Survey__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

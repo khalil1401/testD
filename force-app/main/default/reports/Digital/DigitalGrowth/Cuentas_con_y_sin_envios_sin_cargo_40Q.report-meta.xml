@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Envios_sin_Cargo__r$Estado_del_envio__c</field>
+    </columns>
+    <columns>
+        <field>Account$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Account.Envios_sin_Cargo__r$CreatedDate</field>
+    </columns>
+    <description>Reporte de Cuentas con y sin envios sin cargo.</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>PersonAccount.Paciente_Best_Care,PersonAccount.Paciente_Mendoza,PersonAccount.Paciente_Prospect,PersonAccount.Paciente_Regular</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Envios_sin_Cargo__r$Razon_de_envio__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Kit de Inicio</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Area_terapeutica__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Cuentas con y sin envios sin cargo</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cuentas_con_y_sin_envios_sin_cargo__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$Alta_M_dulo__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

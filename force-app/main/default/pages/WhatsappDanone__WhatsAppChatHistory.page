@@ -1,0 +1,289 @@
+<apex:page standardController="Case" extensions="WhatsappDanone.WhatsAppChatHistoryController"
+           standardStylesheets="true"
+           applyBodyTag="false"
+           applyHtmlTag="false"
+           showChat="false"
+           showHeader="false">
+    <head>
+		<apex:includeScript value="/support/console/45.0/integration.js"/>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="{!URLFOR($Resource.cometd_zip, 'dojo/dojo.js')}" data-dojo-config="async: 1"></script>
+		<apex:includeScript value="{!$Resource.WhatsappDanone__json2_js}"/>
+        <script>
+            function clearValue(){
+            	document.getElementById('{!$Component.chats:newMessage}').value = '';
+            }
+        </script>
+        <style>
+            body {
+            	margin: 0 auto;
+            }
+            
+            h1, h2, h3, h4, h5, h6 {
+                font-weight: bold;
+                font-size: 1.3em;
+            }
+            
+            .widget-header {
+                width: 100%;
+                height: 12%;
+                background: #f2fafc;
+                opacity: .91;
+            }
+            
+            form {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100vh;
+            	background-color: #ECE5DD;
+            	/*overflow: auto;*/
+            }
+            
+            .container {
+                border: 2px solid #dedede;
+                background-color: #DCF8C6;
+                border-radius: 5px;
+                padding: 0.2% 1%;
+                margin: 0.5% 0 auto;
+                width: auto;
+                min-width:15%;
+                max-width: 80%;
+                display: flow-root;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                float: right;       
+            }
+            
+            .container p {
+            	margin: 1% auto;
+            }
+            
+            .darker {
+                border-color: #ccc;
+                background-color: #fff;
+            	float: left;
+            }
+            
+            /*            
+            .container::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            */
+            
+            .Message {
+                background-color: #ECE5DD;
+                padding: 3% 2% 1% 2%;
+                margin: 0;
+            }
+            
+            .Message h2 {
+            	color:#CCC;
+            }
+            
+            .Send {
+                width: 100%;
+                float: right;
+                background: #f7f7f7;
+                margin-top: 1%;
+            }
+            
+            .BlockChat {
+                /*overflow: auto;*/
+                margin-top: 3%;
+                margin-right: 2%;
+                min-height: 380px;
+                max-height: 800px;
+                height: 90%;
+            }
+            
+            .MyChats {
+                border-bottom: 1px solid #e0e0e0;
+                margin-top: 3%;
+                padding: 3%;
+                overflow: auto;
+                height: 40%;
+                margin-left: 1%;
+            }
+            
+            .OtherChats {
+                margin-top: 5%;
+                padding: 3%;
+                overflow: auto;
+                height: 40%;
+                margin-left: 1%;
+            }
+            
+            .time-right {
+                float: right;
+                color: #aaa;
+            }
+            
+            .time-left {
+                float: left;
+                color: #999;
+            }
+            
+            .Mychats::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                background-color: #F5F5F5;
+            }
+            
+            .Mychats::-webkit-scrollbar {
+                width: 6px;
+                background-color: #F5F5F5;
+            }
+            
+            .Mychats::-webkit-scrollbar-thumb {
+            	background-color: #000000;
+            }
+            
+            
+            .Mychats::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                background-color: #F5F5F5;
+            }
+            
+            .Mychats::-webkit-scrollbar {
+                width: 6px;
+                background-color: #F5F5F5;
+            }
+            
+            .Mychats::-webkit-scrollbar-thumb {
+            	background-color: #000000;
+            }
+            
+            
+            .BlockChat::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            	background-color: #F5F5F5;
+            }
+            
+            .BlockChat::-webkit-scrollbar {
+                width: 6px;
+                background-color: #F5F5F5;
+            }
+            
+            .BlockChat::-webkit-scrollbar-thumb {
+            	background-color: #000000;
+            }
+            
+            .BlockChat::-webkit-scrollbar-track {
+            	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            	background-color: #F5F5F5;
+            }
+            
+            .BlockChat::-webkit-scrollbar {
+            	width: 6px;
+            	background-color: #F5F5F5;
+            }
+            
+            .BlockChat::-webkit-scrollbar-thumb {
+                background-color: #000000;
+            }
+            
+            .BlockMessage {
+                overflow: auto;
+            }
+            
+            input {
+                padding-top: 0;
+                width: 99.5%;
+                height: 3em;
+                margin-bottom: 1px;
+                margin-right: 1%;
+                margin-left: 1px;
+                margin-top: 3px;
+            }
+            
+            body input.btn, body input.btnDisabled, body input.btnCancel {
+                padding: 4px 3px;
+                margin-top: 2%;
+                width: 100%;
+                margin: auto;
+            }
+            
+            .btn, .button, .formulaButton, .btnWhatsNew {
+                font-family: 'Verdana','Geneva',sans-serif;
+                background-repeat: repeat-x;
+                background-position: left top;
+                border-top: none;
+                border-left: none;
+                font-size: 80%;
+                padding: 1px 3px;
+                cursor: pointer;
+                font-weight: bold;
+                display: inline;
+            }
+            
+            body button, body .x-btn, body .btn, body .btnDisabled, body .btnCancel, body .menuButton .menuButtonButton {
+                color: #333;
+                margin: 1px;
+                padding: 2px 3px;
+                border: 1px solid #b5b5b5;
+                border-bottom-color: #7f7f7f;
+                background: #e8e8e9 url(/img/alohaSkin/btn_sprite.png) repeat-x right top;
+                font-weight: bold;
+                font-size: 1em;
+            }
+            
+            .titleChats {
+            	color:#34B7F1;
+            }
+            
+            .MsgText {
+                background-color: #f5f5f5;
+                padding: 3% 2% 1% 2%;
+                overflow: auto;
+                color: #b1b1b1;
+            }  
+            
+            #urlMessage a:hover{
+               font-weight: bold;
+            }
+            
+            .containerdivNewLine {
+               clear: both; 
+               display: block;
+            }
+    	</style>
+    </head>
+    <body>
+        <apex:form id="chats">
+        <div style="width: 100%; overflow: hidden;">
+            <apex:outputPanel id="chatPanel">
+                <div class="BlockRigth">
+                    <div class="MsgText">
+                        <h2>Mensajes del caso</h2>
+                    </div>
+                    <div class="Message">    
+                        <apex:outputPanel id="theChat">
+                            <div id="caseElem" style="display: none;">{!selectedCaseId}</div>
+                            <div class="BlockMessage">   
+                                <apex:outputText value="{!selectedCaseId}" id="selectedCaseId" style="display: none;" />                
+                                <apex:repeat value="{!chatMessages}" var="m">
+                                    <div class="{! If(m.Type__c =='Enviado por el cliente' ,'container darker','container') }">
+                                        <p align="{! If(m.Type__c =='Enviado por el cliente' ,'left','right') }">
+                                            <apex:outputText value="{!m.WhatsappDanone__Message__c}" escape="false"/>
+                                        </p>
+                                        <span class="{! If(m.Type__c =='Enviado por el cliente' ,'time-left','time-right') }">
+                                            <apex:outputText value="{0,date,dd/MM/yy HH:mm:ss}">
+                                                <apex:param value="{!m.CreatedDate}" />
+                                            </apex:outputText>
+                                        </span>
+                                    </div>
+                                    <div class="containerdivNewLine"></div>
+                                </apex:repeat>
+                            </div>
+                        </apex:outputPanel>
+                    </div> 
+                </div>
+            </apex:outputPanel>
+        </div>
+        <!------------------------------------------------->
+        </apex:form>    
+    </body>
+</apex:page>

@@ -1,0 +1,295 @@
+<apex:page docType="html-5.0" standardController="Modulo_de_paciente__c" extensions="RenovarModuloDePacienteCtrl">
+	<apex:includeScript value="{!$Resource.jQuery1123}"/>
+    <apex:includeScript value="/support/console/46.0/integration.js"/>
+    <script type="text/javascript">
+        //-------------------------------------------------------------------------------------------
+        //Salesforce Console Integration Toolkit - Navigation Tabs
+        window.onload = function setTitleConsole(){
+            if(sforce.console.isInConsole()){
+                sforce.console.setTabTitle('Renovar Modulo de paciente');
+            }
+        }
+
+        function previousTabTitle(moduloName){
+            if(sforce.console.isInConsole()){
+                sforce.console.setTabTitle(moduloName);
+            }
+        }
+
+        function openNewModuloInNewTab(url){
+            if(sforce.console.isInConsole()){
+                closeTab();
+                //open the renew Modulo de Paciente in a new tab
+                sforce.console.openPrimaryTab(null, url, true);
+            }else{
+                window.location.href = url;
+            }
+        }
+
+        function closeTab(){
+            //First find the ID of the current tab to close it, (parameter callback)
+            sforce.console.getEnclosingTabId(function(result){
+                var tabId = result.id;
+                sforce.console.closeTab(tabId);
+            });
+        }
+        //-----------------------------------------------------------------------------------------
+        $j = jQuery.noConflict();
+		$j(document).ready(function() {
+			$j("[id$='inputCriteria']").on("keydown", noenter);
+		});
+		function noenter(e) {
+			if(window.event) {
+				key = window.event.keyCode;
+			} else{
+				key = e.which;
+			}
+			if(key == 13) {
+				$j("[id$='searchbtn']").click();
+				return false;
+			} else{
+				return true;
+			}
+		}
+        //-----------------------------------------------------------------------------------------
+        function goToAddNewProducts(){
+            var modifyExistingProducts = $j("[id$=modifyExistingProducts]").hide();
+            var addNewProducts = $j("[id$=addNewProducts]").show();
+
+            var btnContinuarToAddNewProducts = $j("[id$=btnContinuarToAddNewProducts]").hide();
+            var btnContinuarToConfirmProducts = $j("[id$=btnContinuarToConfirmProducts]").show();
+            var btnAtrasToModifyExistingProducts = $j("[id$=btnAtrasToModifyExistingProducts]").show();
+        }
+        function backToModifyExistingProducts(){
+            var addNewProducts = $j("[id$=addNewProducts]").hide();
+            var modifyExistingProducts = $j("[id$=modifyExistingProducts]").show();
+
+            var btnAtrasToModifyExistingProducts = $j("[id$=btnAtrasToModifyExistingProducts]").hide();
+            var btnContinuarToConfirmProducts = $j("[id$=btnContinuarToConfirmProducts]").hide();
+            var btnContinuarToAddNewProducts = $j("[id$=btnContinuarToAddNewProducts]").show();
+        }
+        //-----------------------------------------------------------------------------------------
+        function goToConfirmProducts(){
+            var addNewProducts = $j("[id$=addNewProducts]").hide();
+            var confirmProducts = $j("[id$=confirmProducts]").show();
+
+            var btnContinuarToConfirmProducts = $j("[id$=btnContinuarToConfirmProducts]").hide();
+            var btnAtrasToAddNewProducts = $j("[id$=btnAtrasToAddNewProducts]").show();
+
+            var btnAtrasToModifyExistingProducts = $j("[id$=btnAtrasToModifyExistingProducts]").hide();
+            var btnRenovar = $j("[id$=btnRenovar]").show();
+        }
+        function backToAddNewProducts(){
+            var confirmProducts = $j("[id$=confirmProducts]").hide();
+            var addNewProducts = $j("[id$=addNewProducts]").show();
+
+            var btnAtrasToAddNewProducts = $j("[id$=btnAtrasToAddNewProducts]").hide();
+            var btnContinuarToConfirmProducts = $j("[id$=btnContinuarToConfirmProducts]").show();
+
+            var btnRenovar = $j("[id$=btnRenovar]").hide();
+            var btnAtrasToModifyExistingProducts = $j("[id$=btnAtrasToModifyExistingProducts]").show();
+        }
+        //-------------------------------------------------------------------------------------------.
+		function getExistChangedValues(id, quantity){
+            setConfirmProductsThruExistProducts(id, quantity);
+        }
+
+        function getSearchedChangedValues(id, quantity){
+            setConfirmProductsThruSearchedProducts(id, quantity);
+        }
+
+    	function setUncheckedSearchSelectAll(){
+        	let searchSelectAll = $j("[id$=searchAllCheck]").prop('checked');
+            if(searchSelectAll){
+            	$j("[id$=searchAllCheck]").prop('checked', false)
+            }
+        }
+	</script>
+
+	<apex:form id="searchForm">
+        <!--SPINNER-------------------------------------------------------------------------------------------------------->
+        <apex:actionstatus id="loading">
+            <apex:facet name="start">
+                <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.50; z-index: 1000; background-color: white;">
+                    &nbsp;
+                </div>
+                <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 15% 50%">
+                    <div style="display: inline-block; padding: 2px; background-color: #fff; width: 125px;">
+                        <img src="/img/loading.gif" style="float: left; margin: 8px;" />
+                        <span style="display: inline-block; padding: 10px 0px;">Cargando...</span>
+                    </div>
+                </div>
+            </apex:facet>
+        </apex:actionstatus>
+        <!----------------------------------------------------------------------------------------------------------------->
+		<apex:pageBlock id="block" title="Renovar modulo de paciente">
+            <apex:pageMessages id="error"></apex:pageMessages>
+			
+            <apex:pageBlockButtons id="buttons">
+                <apex:commandbutton action="{!nexPage}" onclick="previousTabTitle('{!previousTabTitle}')" value="Salir" />
+                <apex:commandbutton onclick="goToAddNewProducts()" id="btnContinuarToAddNewProducts" 
+                                    value="Continuar" rerender="error" />
+                <apex:commandbutton onclick="backToModifyExistingProducts()" id="btnAtrasToModifyExistingProducts" 
+                                    value="Atras" rerender="error" style="display:none;" />
+                <apex:commandbutton onclick="goToConfirmProducts()" id="btnContinuarToConfirmProducts" 
+                                    value="Continuar" rerender="error" style="display:none;"/>
+                <apex:commandbutton onclick="backToAddNewProducts()" id="btnAtrasToAddNewProducts" 
+                                    value="Atras" rerender="error" style="display:none;" />
+                <apex:commandbutton id="btnRenovar"
+                                    value="Renovar"
+                                    action="{!renewModuloDePaciente}"
+                                    status="loading"
+                                    oncomplete="openNewModuloInNewTab('{!renewModuloUrl}');"
+                                    rerender="error"
+                                    style="display:none;" />
+			</apex:pageBlockButtons>
+
+            <!--RENOVAR PRODUCTOS-------------------------------------------------------------------------------------------->
+            <apex:pageBlockSection columns="1" id="modifyExistingProducts" title="Renovar productos">
+                <apex:outputText value="{!existProductsTotal} registros encontrados. {!existProductSelected} registros seleccionados." 
+                                 id="existSelectedCounter" 
+                                 style="font-weight: bold; align-content: center; margin-top: 10px; margin-left: 10px;"/>
+                <apex:pageBlockTable rendered="{!thereAreExistRecords}" value="{!existProductsById}" 
+                                     var="product" id="existProductTable">
+					<apex:column >
+						<apex:facet name="header">
+							<apex:inputcheckbox value="{!existProductSelectAll}" id="existSelectAll">
+							    <apex:actionsupport event="onchange"
+                                                    status="loading"
+                                                    action="{!doExistProductSelectAll}" 
+                                                    rerender="existSelectedCounter, existCheckbox, 
+                                                              confirmProducts, confirmProductsTable, 
+                                                              totalSelectedCounter, existProductTable" />
+							</apex:inputcheckbox>
+						</apex:facet>
+                        <apex:inputCheckbox value="{!existProductsById[product].isSelected}" id="existCheckbox"
+                                            onchange="getExistChangedValues('{!existProductsById[product].product.Id}', null)"/>
+					</apex:column>
+					<apex:column value="{!existProductsById[product].product.Name}"/>
+					<apex:column value="{!existProductsById[product].product.Description}"/>
+					<apex:column width="10px" headerValue="Cantidad">
+                        <apex:input type="auto" value="{!existProductsById[product].quantity}" html-min="0" html-max="9000"
+                                    id="existedInput"
+                                    disabled="{!existProductsById[product].isDisabled}"
+                                    onchange="getExistChangedValues('{!existProductsById[product].product.Id}', this.value)"/>
+					</apex:column>
+				</apex:pageBlockTable>
+                
+                <apex:actionFunction name="setConfirmProductsThruExistProducts" status="loading" 
+                                         action="{!setProductsToConfirmThruExistSelected}"
+                                         rerender="existSelectedCounter, existCheckbox, 
+                                                   existSelectAll, confirmProducts, 
+                                                   confirmProductsTable, totalSelectedCounter, 
+                                                   existProductTable">
+                        <apex:param name="existProductIdSelect" id="existProductIdSelect" value=""/>
+                        <apex:param name="existProductQuantity" id="existProductQuantity" value=""/>
+                    </apex:actionFunction>
+                
+			</apex:pageBlockSection>
+            <!---------------------------------------------------------------------------------------------------------------------------->
+            <!--AGREGAR PRODUCTOS -------------------------------------------------------------------------------------------------------->
+            <div id="addNewProducts" style="display:none;">
+			    <apex:pageBlockSection columns="1" title="Agregar productos">
+                    <apex:pageBlockSectionItem >
+                        <apex:inputText value="{!criteria}" id="inputCriteria"/>
+			            <apex:commandButton action="{!findProducts}" value="Buscar" id="searchbtn" 
+                                            oncomplete="setUncheckedSearchSelectAll()" status="loading"
+                                            reRender="tableProducts, buttons, error, searchSelectedCounter"/>
+			        </apex:pageBlockSectionItem>
+                    <apex:outputText value="{!total} registros encontrados. {!searchProductSelected} registros seleccionados." 
+                                 id="searchSelectedCounter" 
+                                 style="font-weight: bold; align-content: center; margin-top: 10px; margin-left: 10px;"/>
+				    <apex:pageBlockTable rendered="{!thereAreRecords}" value="{!actualSearchProductsPage}" var="wrapper" id="tableProducts">
+					    <apex:column >
+						    <apex:facet name="header">
+                                <apex:inputcheckbox value="{!searchSelectAll}" id="searchAllCheck">
+                                    <apex:actionsupport event="onchange"
+                                                        status="loading"
+                                                        action="{!doSearchProductsSelectAll}"
+                                                        rerender="searchSelectedCounter, searchedCheckbox,
+                                                                  confirmProducts, confirmProductsTable, 
+                                                                  totalSelectedCounter, searchAllCheck, tableProducts" />
+                                </apex:inputcheckbox>
+						    </apex:facet>
+                            <apex:inputcheckbox value="{!actualSearchProductsPage[wrapper].isSelected}" id="searchedCheckbox"
+                                                onchange="getSearchedChangedValues('{!actualSearchProductsPage[wrapper].product.Id}', null)"/>
+					    </apex:column>
+					    <apex:column value="{!actualSearchProductsPage[wrapper].product.Name}"/>
+					    <apex:column value="{!actualSearchProductsPage[wrapper].product.Description}"/>
+                        <apex:column width="10px" headerValue="Cantidad">
+                            <apex:input type="auto" value="{!actualSearchProductsPage[wrapper].quantity}" html-min="1" html-max="9000"
+                                        id="searchedInput"
+                                        disabled="{!actualSearchProductsPage[wrapper].isDisabled}"
+                                        onchange="getSearchedChangedValues('{!actualSearchProductsPage[wrapper].product.Id}', this.value)"/>
+					    </apex:column>
+				    </apex:pageBlockTable>
+
+                    <apex:actionFunction name="setConfirmProductsThruSearchedProducts" status="loading" 
+                                         action="{!setProductsToConfirmThruSelectedSearchedProducts}"
+                                         rerender="searchAllCheck, searchSelectedCounter, 
+                                                   confirmProducts, confirmProductsTable, 
+                                                   totalSelectedCounter, tableProducts">
+                        <apex:param name="searchProductIdSelect" id="searchProductIdSelect" value=""/>
+                        <apex:param name="searchProductQuantity" id="searchProductQuantity" value=""/>
+                    </apex:actionFunction> 
+
+				    <br/>
+
+				    <apex:panelGrid rendered="{!thereAreRecords}" columns="8" id="buttons">
+					    <apex:commandButton reRender="tableProducts, error, buttons" disabled="{!!hasPrevious}" 
+                                            oncomplete="setUncheckedSearchSelectAll()"
+                                            action="{!firstPage}" value="<<"/>
+					    <apex:commandButton reRender="tableProducts, error, buttons" disabled="{!!hasPrevious}"
+                                            oncomplete="setUncheckedSearchSelectAll()"
+                                            action="{!previous}" value="<"/>
+					    <apex:commandButton reRender="tableProducts, error, buttons" disabled="{!!hasNext}"
+                                            oncomplete="setUncheckedSearchSelectAll()"
+                                            action="{!next}" value=">"/>
+					    <apex:commandButton reRender="tableProducts, error, buttons" disabled="{!!hasNext}"
+                                            oncomplete="setUncheckedSearchSelectAll()"
+                                            action="{!lastPage}" value=">>"/>
+
+					    <span style="font-weight: bold; align-content: center; margin-top: 10px; margin-left: 10px; margin-right: 150px;">
+						    Página {!actualPageNumber} de {!numPages}
+					    </span>
+
+					    <span style="font-weight: bold; align-content: center; margin-top: 10px; margin-left: 50px;">
+						    Cantidad de registros mostrados
+						    <apex:selectList value="{!pageSizeStr}" size="1">
+							    <apex:actionSupport event="onchange" action="{!changePageSize}" 
+                                                    status="loading"
+                                                    oncomplete="setUncheckedSearchSelectAll()"
+                                                    reRender="tableProducts, buttons, error"/>
+							    <apex:selectOptions value="{!items}"/>
+						    </apex:selectList>
+					    </span>
+				    </apex:panelGrid>
+			    </apex:pageBlockSection>
+            </div>
+            <!---------------------------------------------------------------------------------------------------------------------------->
+            <!--CONFIRMAR PRODUCTOS------------------------------------------------------------------------------------------------------->
+			<div id="confirmProducts" style="display:none;">
+                <apex:pageBlockSection columns="1" title="Confirmar productos">
+                    <apex:outputText value="Total de registros {!totalProductSelected} seleccionados." 
+                                 id="totalSelectedCounter" 
+                                 style="font-weight: bold; align-content: center; margin-top: 10px; margin-left: 10px;"/>
+				    <apex:pageBlockTable value="{!productsToConfirm}" var="product" id="confirmProductsTable">
+					    <apex:column >
+						    <apex:facet name="header">Nombre</apex:facet>
+						    <apex:outputText value="{!productsToConfirm[product].product.Name}"/>
+					    </apex:column>
+					    <apex:column >
+						    <apex:facet name="header">Descripcion</apex:facet>
+						    <apex:outputText value="{!productsToConfirm[product].product.Description}"/>
+					    </apex:column>
+					    <apex:column >
+						    <apex:facet name="header">Cantidad</apex:facet>
+						    <apex:outputText value="{!productsToConfirm[product].quantity}"/>
+					    </apex:column>
+				    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </div>  
+            <!---------------------------------------------------------------------------------------------------------------------------->
+		</apex:pageBlock>
+   </apex:form>
+</apex:page>

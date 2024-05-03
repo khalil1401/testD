@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Account$RecordType</field>
+    </columns>
+    <columns>
+        <field>Account$ID_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$Estado_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$Subestado_del_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$Area_terapeutica__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Subject</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Type</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Subtipo__c</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$Motivo__c</field>
+    </columns>
+    <columns>
+        <field>Account$CreatedDate</field>
+    </columns>
+    <description>Casos de Paciente Dieta con Alimentación oral vía BC que no recibieron balanza</description>
+    <format>Tabular</format>
+    <name>Casos Dieta BC sin balanza</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cuentas_con_casos__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Cases$Subject</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,96 @@
+<apex:page showHeader="false" applyHtmlTag="false" standardController="Ciclo__c" extensions="AprovacionLicencias_Controller">
+    <apex:form >
+    	<br/>
+        <div align="center" style="font-size:160%;">
+            Aprobación de Licencias
+        </div>
+        <div style="overflow:auto"> 
+        	<apex:pageBlock rendered="{!haveRecords}">
+                <div style="overflow:auto; line-height: 10px; height:70vh; width:100%;">
+                	<apex:pageBlockTable align="center" value="{!licencias}" var="lic" >
+                       <iframe scrolling="yes"> 
+        
+                        <apex:column headerValue="Nombre de Licencia" >
+                            <apex:outputLink value="#" onclick="PrimaryTab('{!lic.Id}')">{!lic.Name}</apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!lic.Motivo__c}"/>
+                        <apex:column value="{!lic.Fecha_de_inicio__c}"/>
+                        <apex:column value="{!lic.Fecha_de_fin__c}"/>
+                        <apex:column value="{!lic.Duracion_de_licencia__c}"/>
+                        <apex:column title="Seleccionar">
+                            <apex:facet name="header">
+                            	<apex:inputCheckbox title="Seleccionar todos" rendered="{!todosAprobados == false}" onchange="checkAll(this)"/>
+                                <apex:outputText value="Aprobados" rendered="{!todosAprobados}"></apex:outputText>
+                            </apex:facet>
+                            <apex:inputCheckbox value="{!lic.Aprobado__c}" id="checkedone" disabled="{!lic.Aprobado__c}"/>
+                        </apex:column>
+                        </iframe>
+                	</apex:pageBlockTable>
+            	</div>
+            	<div align="center">
+                    <apex:commandButton action="{!approveAll}"
+                                        value="Aprobar todos"
+                                        oncomplete="refreshPrimaryTab()"
+                                        disabled="{!todosAprobados}"/>
+                	<apex:commandButton action="{!sendApproves}" 
+                                        value="Aprobar Seleccionados"
+                                        oncomplete="refreshPrimaryTab()"/>
+                    <apex:commandButton onclick="createLicence_OnPrimaryTab()"
+                                        value="Nueva Licencia"/>
+            	</div> 
+        	</apex:pageBlock>
+            <apex:pageBlock rendered="{!haveRecords == false}">
+                <div align="center" style="font-size:130%;">
+                    No tienes licencias anexadas al ciclo "{!Ciclo__c.Name}"
+                </div>
+                <div align="center">
+                	<apex:commandButton onclick="createLicence_OnPrimaryTab()"
+                                        value="Nueva Licencia"/>
+            	</div>
+        	</apex:pageBlock>
+        </div>
+    </apex:form>
+    
+    <apex:includeScript value="/support/console/44.0/integration.js"/>
+    <script type="text/javascript">
+    	function checkAll(grandCheckbox)
+    	{
+            var inputElem = document.getElementsByTagName("input");
+            for(var i=0; i<inputElem.length; i++)
+            {
+                if(inputElem[i].id.indexOf("checkedone")!=-1)
+                	inputElem[i].checked = grandCheckbox.checked;
+            }
+        }
+
+        var create = function CreateNewLicence(result)
+    	{
+            sforce.console.openSubtab(result.id, "/a0H/e?CF00N1I00000MeAfY={!Ciclo__c.Name}", true);
+        }
+    	function createLicence_OnPrimaryTab()
+    	{
+            sforce.console.getFocusedPrimaryTabId(create);
+        }
+    
+    	var currentLicenceId = '';
+        function PrimaryTab(licenceId) {
+            if(licenceId){
+                currentLicenceId = licenceId;
+                sforce.console.getFocusedPrimaryTabId(showTabId);
+            }
+        }
+        var showTabId = function showTabId(result) {
+            sforce.console.openSubtab(result.id, '/' + currentLicenceId, true); 
+        }
+		
+        function refreshPrimaryTab() 
+        {
+            sforce.console.getFocusedPrimaryTabId(refreshAll);
+        }
+        var refreshAll = function refreshTab(result) 
+        {
+            var tabId = result.id;
+            sforce.console.refreshPrimaryTabById(tabId , true);
+        };
+    </script>
+</apex:page>

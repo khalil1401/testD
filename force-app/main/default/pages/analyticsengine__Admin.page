@@ -1,0 +1,18 @@
+<apex:page sidebar="false">
+    <apex:includeLightning />
+    <apex:slds />
+    <div class="slds-scope">
+        <div id="lightning" />
+    </div>
+    <script>
+        var theme = '{!$User.UIThemeDisplayed}';
+        if(theme == 'Theme4d'){
+            window.location.href = '/lightning/n/analyticsengine__Analytics_Delivery_Engine';
+        } else {
+            $Lightning.use("analyticsengine:AdminApp", function() {
+                $Lightning.createComponent("analyticsengine:Admin", {uiThemeFromVF: theme}, "lightning", function(){});
+            });
+        }
+    </script>
+    <c:Intercom />
+</apex:page>

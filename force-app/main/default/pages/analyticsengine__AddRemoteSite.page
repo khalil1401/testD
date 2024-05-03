@@ -1,0 +1,53 @@
+<apex:page showHeader="false" controller="analyticsengine.AdminCtrl">
+    <html>
+        <head>
+            <script src="{!URLFOR($Resource.webapp, '/ltng.helper.js')}"></script>
+            <script src="{!URLFOR($Resource.webapp, '/jsforce.helper.js')}"></script>
+        </head>
+        <body>
+            <div>
+                <b>Adding Remote Site Setting...</b>
+            </div>
+            <script type="text/javascript">
+                var retUrl = '{!URLENCODE($CurrentPage.parameters.retUrl)}';
+                var conn = new jsforce.Connection({accessToken: '{!$API.Session_Id}', version: '43.0'});
+                var apexHost = '{!JSENCODE(host)}'.toLowerCase();
+            
+                function enableCallouts(name, url, description){
+                    var metadata = {
+                        disableProtocolSecurity : false,
+                        isActive : true,
+                        fullName : name,
+                        url : url,
+                        description : description
+                    };
+                    return new Promise(function(resolve, reject){
+                        conn.metadata.upsert('RemoteSiteSetting', metadata, function(err, results){
+                            if(err){
+                                reject(err);
+                            } else {
+                                resolve(results);
+                            }
+                        });
+                    });
+                }
+            
+                enableCallouts('AnalyticsEngine', apexHost, 'Salesforce api endpoint')
+                    .then(function(result){
+                        if(result.success == true){
+                            var uiTheme = '{!$User.UIThemeDisplayed}';
+                            if(retUrl){
+                                window.location.href = retUrl;
+                            } else if(uiTheme == 'Theme4d'){
+                                window.location.href = '/lightning/n/analyticsengine__Analytics_Delivery_Engine';
+                            } else {
+                                window.location.href = '/apex/analyticsengine__Admin';
+                            }
+                        }
+                    }, function(err){
+                        alert('Error: ' + err.message);
+                    });
+            </script>
+        </body>
+    </html>
+</apex:page>

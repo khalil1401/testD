@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Tipo_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Tratamientos__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Tratamientos__r.Productos_de_paciente__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Area_terapeutica__c</field>
+    </columns>
+    <columns>
+        <field>Account$Estado_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$Subestado_del_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$CreatedDate</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account$Tipo_de_paciente__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Paciente Regular</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Area_terapeutica__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Dieta Cetogénica</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Pacientes regulares s/ producto o trat.</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cuenta_con_tratamientos_con_productos_de_paciente__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Tratamientos__r.Productos_de_paciente__r$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

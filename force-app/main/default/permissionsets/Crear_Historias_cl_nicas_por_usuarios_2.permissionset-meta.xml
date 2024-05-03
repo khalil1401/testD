@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Historia Clínica Pediatría de Inicio
+Historia Clínica Pediátrica de Seguimiento
+Examen Físico Virtual del Paciente</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Crear Historias clínicas por usuarios 2</label>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Formulario__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <recordTypeVisibilities>
+        <recordType>Formulario__c.Epicrisis</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Formulario__c.Ex_men_f_sico_virtual_del_paciente</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Formulario__c.Historia_Clinica_Pediatrica_de_Inicio</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Formulario__c.Historia_cl_nica_pedi_trica_de_seguimiento</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

@@ -1,0 +1,5 @@
+<apex:page standardController="Case"  extensions="CreateFormFromCaseController" 
+     action="{!redirectToCreateForm}"  showHeader="false"
+>
+     
+</apex:page>

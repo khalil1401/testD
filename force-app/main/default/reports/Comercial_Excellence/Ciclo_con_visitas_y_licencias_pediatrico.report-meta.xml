@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Ciclo__c$Name</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c.Licencias__r$Name</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c$Total_de_visitas_realizadas__c</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c.Licencias__r$Cantidad_de_visitas_que_no_se_realizar_n__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Ciclo con visitas y licencias pediatrico</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Ciclos__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Ciclo__c$Name</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Ciclo__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

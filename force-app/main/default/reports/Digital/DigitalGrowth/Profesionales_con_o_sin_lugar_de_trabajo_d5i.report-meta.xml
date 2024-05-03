@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$PersonContact</field>
+    </columns>
+    <columns>
+        <field>Account.Profesionales_por_Instituciones1__r$Institucion__c</field>
+    </columns>
+    <columns>
+        <field>Account$Matricula__c</field>
+    </columns>
+    <columns>
+        <field>Account$Matricula2__c</field>
+    </columns>
+    <description>Profesionales con o sin lugar de trabajo</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.Institucion,PersonAccount.Profesional_de_la_salud</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Profesionales con o sin lugar de trabajo</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Profesionales_con_y_sin_lugar_de_trabajo__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>Account.Profesionales_por_Instituciones1__r$Institucion__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$Alta_M_dulo__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

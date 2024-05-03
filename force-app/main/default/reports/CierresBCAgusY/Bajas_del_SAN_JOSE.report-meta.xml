@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.ID_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account.Obra_social__c</field>
+    </columns>
+    <columns>
+        <field>Account.Estado_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account.Subestado_del_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account.Fecha_de_obito__c</field>
+    </columns>
+    <columns>
+        <field>Account.Fecha_de_cambio_de_estado__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Obra_social__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>FEDERACIÓN DE CIRCULOS CATÓLICOS DE OBREROS S.A</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Bajas del SAN JOSE</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

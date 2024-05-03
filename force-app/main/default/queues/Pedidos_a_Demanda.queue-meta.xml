@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>pedidosademanda@bestcare.com.ar</email>
+    <name>Pedidos a Demanda</name>
+    <queueMembers>
+        <users>
+            <user>jessica.funes@danone.com</user>
+            <user>laura.cataldi@danone.com</user>
+            <user>luciana.palanco@danone.com</user>
+            <user>maria.fernandez1@danone.com</user>
+            <user>maria-carla.mercuri@danone.com</user>
+            <user>natalia.magnaterra@danone.com</user>
+            <user>oriana.mamone@danone.com</user>
+            <user>paula.angeloff@danone.com</user>
+            <user>romina.capizzano@danone.com</user>
+            <user>sabrina.chiaradia@external.danone.com</user>
+            <user>veronica.ponce@danone.com</user>
+            <user>virginia.barrosela@danone.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

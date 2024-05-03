@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>- Historia Clínica de Enfermeria
+- Historia Clínica Pediátrica de Enfermería
+- Registro de Entrenamiento Paciente – Cuidador
+- Examen Físico Virtual del Paciente</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Crear Historias clínicas por usuarios 4</label>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Formulario__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <recordTypeVisibilities>
+        <recordType>Formulario__c.Ex_men_f_sico_virtual_del_paciente</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Formulario__c.Historia_Cl_nica_Pedi_trica_de_Enfermer_a</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Formulario__c.Historia_Clinica_de_Enfermeria</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Formulario__c.Registro_de_entrenamiento_paciente_cuidador</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

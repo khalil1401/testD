@@ -1,0 +1,103 @@
+<apex:page id="thepage" standardController="Formulario_MarketingCloud__c" docType="html-5.0" showHeader="false" extensions="MkCloudNutritionFormController">
+    <apex:slds />
+    <style>
+        .borders {
+            border-radius: 5px;
+            border: 1.5px solid #8b6899;
+            padding: 10px;
+            width: 80%;
+            text-align: center;
+            display: block !important;
+        }
+
+        .bordersLeft {
+            text-align: left;
+            display: block !important;
+        }
+
+        .h1a {
+            display: block !important;
+            font-size: 14px !important;
+            margin-top: 2.33em !important;
+            margin-bottom: 2.33em !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            font-weight: bold !important;
+            text-align: center;
+        }
+    </style>
+
+    <body onLoad="noBack()">
+
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-align_absolute-center">
+                <apex:image url="{!$Resource.PSP}" style="height:150px !important" />
+            </div>
+            <div class="slds-col slds-align_absolute-center">
+                <apex:image url="{!$Resource.Comunidad}" style="height:200px !important" />
+            </div>
+            <div class="slds-col slds-align_absolute-center">
+                <apex:image url="{!$Resource.Nutricia}" style="height:150px !important" />
+            </div>
+        </div>
+        <apex:pageMessage severity="Success" rendered="{!yaRegistrado}" summary="{!$Label.Respuesta_EYN	}" strength="1" />
+        <apex:pageblock rendered="{!NOT(yaRegistrado)}">
+
+            <h1 class="h1a">Programa Enrich Your Nutrition</h1>
+            <div class="slds-align_absolute-center">
+                <apex:form html-data-id="myForm" styleClass="borders">
+                    <span>
+                        <p style="text-align: left">{!$Label.Descripcion_EYN}</p>
+                    </span>
+                    <br/>
+                    <apex:pageBlockSection columns="2" collapsible="false">
+                        <apex:repeat value="{!fields}" var="f">
+                            <apex:pageBlockSectionItem >
+                                <apex:outputLabel styleClass="bordersLeft" value="{!nameAndLabels[f.fieldPath]}"></apex:outputLabel>
+                                <apex:inputField html-data-id="{!f.fieldPath}" required="{!OR(f.required, f.dbrequired)}" styleClass="borders" type="text"
+                                    value="{!formMk[f.fieldPath]}" />
+                            </apex:pageBlockSectionItem>
+                        </apex:repeat>
+
+                    </apex:pageBlockSection>
+
+                    <div style="display:none" id="spinner" class="slds-spinner_container slds-is-relative">
+                        <div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand">
+                            <div class="slds-spinner__dot-a"></div>
+                            <div class="slds-spinner__dot-b"></div>
+                        </div>
+                    </div>
+
+                    <button class="slds-button slds-button_brand" style="display:inline" id="enviarButton" onclick="validateData(this)">Enviar</button>
+                    <apex:actionFunction name="insertRec" action="{!insertRecords}" />
+                </apex:form>
+            </div>
+        </apex:pageBlock>
+
+    </body>
+    <script>
+        function noBack() {
+            window.history.forward();
+        }
+        function validateData(event) {
+            var myForm = document.querySelector('[data-id="myForm"]');
+
+            let isRequired = false;
+
+            for (var i = 0; i < myForm.elements.length; i++) {
+                let value = myForm.elements[i].value;
+                let requiredValue = myForm.elements[i].required;
+                if (value == '' && requiredValue) {
+                    isRequired = true;
+                }
+            }
+            if (!isRequired) {
+                event.style = 'display:none';
+                document.querySelector('[id="spinner"]').style.display = 'inline'
+                event.disabled = true;
+                insertRec();
+            }
+        }
+
+    </script>
+</apex:page>

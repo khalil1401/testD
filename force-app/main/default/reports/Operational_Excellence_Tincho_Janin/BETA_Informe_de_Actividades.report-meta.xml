@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Actividades__r$Id_de_Paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Area_terapeutica__c</field>
+    </columns>
+    <columns>
+        <field>Account.Actividades__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Account.Actividades__r$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Account.Actividades__r$Subject</field>
+    </columns>
+    <columns>
+        <field>Account.Actividades__r$Owner</field>
+    </columns>
+    <columns>
+        <field>Account.Actividades__r$Status</field>
+    </columns>
+    <columns>
+        <field>Account.Actividades__r$LastModifiedDate</field>
+    </columns>
+    <description>Capacity PSP</description>
+    <format>Tabular</format>
+    <name>BETA - Informe de Actividades</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cuentas_con_Actividades__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.Actividades__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

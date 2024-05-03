@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>PSP</name>
+    <queueMembers>
+        <users>
+            <user>andrea.ortega@danone.com</user>
+            <user>antonella.laino@danone.com</user>
+            <user>carolina.beltran@danone.com</user>
+            <user>clarita.spinelli@danone.com</user>
+            <user>julieta.cremona@danone.com</user>
+            <user>luciana.palanco@danone.com</user>
+            <user>mariana.higa-kambara@danone.com</user>
+            <user>natalia.magnaterra@danone.com</user>
+            <user>paula.angeloff@danone.com</user>
+            <user>sabrina.chiaradia@external.danone.com</user>
+            <user>sasha.szatma-szotan@danone.com</user>
+            <user>vanina.liendro@danone.com</user>
+            <user>veronica.ponce@danone.com</user>
+            <user>danone@xappia.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

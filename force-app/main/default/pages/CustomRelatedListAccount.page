@@ -1,0 +1,90 @@
+<apex:page standardController="Account" extensions="CustomRelatedListAccountController">
+    <apex:includeScript value="{!$Resource.jQuery1123}"/>
+    <apex:includescript value="//code.jquery.com/jquery-1.11.1.min.js"/>
+    <apex:includescript value="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"/>
+    <apex:stylesheet value="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css"/>
+    <apex:includeScript value="/support/console/46.0/integration.js"/>
+        
+    <style>
+        #outputAlign{
+        text-align:center;
+        }
+        .headerRow{
+        text-align:center;
+        }
+    </style>
+    
+    <script>
+    var globalTaskId = '';
+    function testOpenSubtab(taskId) {
+        globalTaskId = taskId;
+        sforce.console.getEnclosingPrimaryTabId(openSubtab);
+    }
+    var openSubtab = function openSubtab(result) {
+        sforce.console.openSubtab(result.id, '/' + globalTaskId, true); 
+    };
+    </script> 
+    
+    <apex:form >
+       	<apex:pageBlock id="message" rendered="{!IF(tskListToDisplay.size == 0, true, false)}">
+            Sin registros para mostrar
+        </apex:pageBlock>
+        <apex:pageBlock id="block" title="Tareas" rendered="{!IF(tskListToDisplay.size > 0, true, false)}">
+            <apex:pageMessages id="error"></apex:pageMessages>
+            <apex:pageBlockTable value="{!tskListToDisplay}" var="task" id="taskTable">
+                <apex:column >
+                    <apex:facet name="header">Tarea</apex:facet>
+                    <div id="outputAlign">
+                    <apex:outputLink value="#" onClick="testOpenSubtab('{!task.id}')" style="align:center">Ver</apex:outputLink>                            
+                    </div>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Asunto</apex:facet>
+                    <apex:outputText value="{!task.Subject}"/>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Asignado a</apex:facet>
+                    <apex:outputText value="{!task.Owner.Name}"/>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Modulo de paciente</apex:facet>
+                    <div id="outputAlign">
+                    <apex:outputLink value="#" onClick="testOpenSubtab('{!task.WhatId}')" style="align:center">{!task.What.Name}</apex:outputLink>                            
+                    </div>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Estado</apex:facet>
+                    <div id="outputAlign">
+                    <apex:outputText value="{!task.Status}"/>
+                    </div>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">Fecha de vencimiento</apex:facet>
+                    <div id="outputAlign">
+                        <apex:outputText value="{0,date,dd/MM/yyyy}" > 
+                            <apex:param value="{!task.ActivityDate}"/>
+                        </apex:outputText>
+                    </div>
+                </apex:column>     
+            </apex:pageBlockTable>
+            <apex:pageBlockSection columns="1" id="blockSection">
+                <apex:panelGrid columns="8" id="buttons">
+                    <apex:commandButton reRender="taskTable,buttons" disabled="{!!navigation.hasPrevious}" action="{!previous}" value="<"/>
+                    <apex:commandButton reRender="taskTable,buttons" disabled="{!!navigation.hasNext}" action="{!next}" value=">"/>
+                    
+                    <span style="font-weight: bold; align-content: center; margin-top: 10px; margin-left: 10px; margin-right: 150px; ">
+                        Página {!navigation.pageNumber} de {!navigation.totalPages}
+                    </span>
+                    
+                    <span style="font-weight: bold; align-content: center; margin-top: 10px; margin-left: 50px;">
+                        Cantidad de registros mostrados
+                        <apex:selectList value="{!recordsPerPage}" size="1">
+                            <apex:actionSupport event="onchange" action="{!updatePageSize}" reRender="taskTable, buttons"/>
+                            <apex:selectOptions value="{!items}"/>
+                        </apex:selectList>
+                    </span>
+                </apex:panelGrid>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>   
+</apex:page>

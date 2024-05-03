@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>Logística</name>
+    <queueMembers>
+        <users>
+            <user>agustina.butti-etchanchu@danone.com</user>
+            <user>diego-gabriel.garcia@danone.com</user>
+            <user>emanuel.zerillo@danone.com</user>
+            <user>julian.ansede@danone.com</user>
+            <user>pablo.balsamo@danone.com</user>
+            <user>sofia.barone@danone.com</user>
+            <user>thiago.cellucci@danone.com</user>
+            <user>veronica.veralli@danone.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

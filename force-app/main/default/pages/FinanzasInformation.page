@@ -1,0 +1,26 @@
+<apex:page standardController="account" id="thePage" rendered="{!$Permission.Ver_numeros_de_cuenta_de_finanzas}" readOnly="true" extensions="FinanzasInformation" >
+
+        <apex:pageBlock id="theBlock"  >
+            <apex:repeat value="{!financesInfo}" var="info" id="theRepeat">
+                    <apex:pageBlockSection id="theSec" columns="1" title="{!info.titulo__c}">
+                        <apex:outputText value="{!info.Condicion_de_pago__c}" label="Condición de Pago"  rendered="{!info.Condicion_de_pago__c != null}"   />
+                        <apex:outputText value="{!info.Cta_Que_Cobrar__c}" label="Cta. Que Cobrar"  rendered="{!info.Cta_Que_Cobrar__c != null}" />
+                        <apex:outputText value="{!info.Ingreso__c}" label="Ingreso" rendered="{!info.Ingreso__c != null}" />
+                        <apex:outputText value="{!info.Tipo_de_Pedido__c}" label="Tipo de Pedido"   rendered="{!info.Tipo_de_Pedido__c != null}"  />  
+                        <apex:outputText value="{!info.Lista_de_Precios__c}" label="Lista de Precios"  rendered="{!info.Lista_de_Precios__c != null}"  />
+                        <apex:outputText value="{!info.Deposito__c}" label="Deposito"   rendered="{!info.Deposito__c != null}" />
+                        <apex:outputText value="{!info.M_todo_de_env_o__c}" label="Método de envío"  rendered="{!info.M_todo_de_env_o__c != null}" />   
+                    </apex:pageBlockSection>
+                
+            </apex:repeat>
+
+            <script>
+                const block = document.getElementById("thePage:theBlock");
+                const children = block.getElementsByClassName("pbBody")[0].children;
+                
+                for (let child of children) {
+                    twistSection(child.getElementsByTagName("img")[0]);
+                }
+           </script>
+        </apex:pageBlock>
+</apex:page>

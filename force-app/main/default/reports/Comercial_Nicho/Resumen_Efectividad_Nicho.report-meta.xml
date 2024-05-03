@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Ciclo__c$Name</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c$Efectividad__c</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c$Promedio__c</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c$Total_dias_de_licencia__c</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c$Dias_de_campo_efectivo__c</field>
+    </columns>
+    <columns>
+        <field>Ciclo__c$Visitas_totales_realizadas__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Resumen Efectividad Nicho</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Ciclos__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Ciclo__c$Efectividad__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Ciclo__c$Fecha_de_inicio__c</dateColumn>
+        <interval>INTERVAL_LASTTHISMONTH</interval>
+    </timeFrameFilter>
+</Report>

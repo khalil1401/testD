@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case$RecordType</field>
+    </columns>
+    <columns>
+        <field>Case$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Case$Status</field>
+    </columns>
+    <columns>
+        <field>Case$ClosedDate</field>
+    </columns>
+    <columns>
+        <field>Case$CreatedBy</field>
+    </columns>
+    <description>Muestra los casos por tipo estado, apertura y cierre.</description>
+    <filter>
+        <criteriaItems>
+            <column>Case$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.Devolucion,Case.Diferencia,Case.Otros,Case.Varios,Case.Acceso,Case.Calidad,Case.Comerciales,Case.Envio_de_producto_s_c,Case.Insumos,Case.Llamado_de_seguimiento,Case.Nuevo_paciente,Case.Nutricionales,Case.Profesionales_de_la_salud,Case.Psicologico,Case.Redes_sociales,Case.Servicio,Case.Ventas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Status</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Cerrado</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Estado Casos</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Casos_Nico__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Case$Status</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Case$Check_de_entregas__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

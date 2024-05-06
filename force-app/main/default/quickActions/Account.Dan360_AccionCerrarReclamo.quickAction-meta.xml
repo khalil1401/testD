@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Acción que llama a un flujo para realizar el cierre de un reclamo</description>
+    <flowDefinition>Dan360_CerrarReclamo</flowDefinition>
+    <label>Cerrar Reclamo</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

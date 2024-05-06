@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VisMed_Motivo__c</fullName>
+    <description>Motivo por el cual no se visito al profesional.</description>
+    <externalId>false</externalId>
+    <label>Motivo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Profesional ausente</fullName>
+                <default>false</default>
+                <label>Profesional ausente</label>
+            </value>
+            <value>
+                <fullName>Profesional sin tiempo</fullName>
+                <default>false</default>
+                <label>Profesional sin tiempo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

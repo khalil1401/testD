@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>AccountAccessLevel__c</field>
+        <field>User__c</field>
+        <field>CaseAccessLevel__c</field>
+        <field>ContactAccessLevel__c</field>
+        <field>CreatedBy</field>
+        <field>LastModifiedBy</field>
+        <field>OpportunityAccessLevel__c</field>
+        <field>Account__c</field>
+        <field>TeamMemberRole__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <label>Alerta</label>
+        <name>Alerta</name>
+    </approvalStep>
+    <description>Proceso de aprobacion para la alta de un Profesional por parte del APM para poder visitarlo. Este proceso se hace sobre un objeto custom el cual al finalzar inserta al APM como parte del AccountTeam del Profesional</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <finalApprovalActions>
+        <action>
+            <name>Estado_Aprobado</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Estado_Rechazado</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>APM alta a Profesional</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

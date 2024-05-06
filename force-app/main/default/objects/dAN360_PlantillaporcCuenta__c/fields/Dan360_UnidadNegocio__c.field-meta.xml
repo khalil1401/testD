@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_UnidadNegocio__c</fullName>
+    <description>Se refiere al negocio donde se generará una transacción, en donde impactará la venta de un producto.</description>
+    <externalId>false</externalId>
+    <label>Unidad de negocio</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Dan360_UnidadDeNegocio</valueSetName>
+    </valueSet>
+</CustomField>

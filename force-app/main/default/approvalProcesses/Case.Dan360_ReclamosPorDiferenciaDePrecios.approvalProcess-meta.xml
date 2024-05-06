@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Dan360_AsignarRolFinanzas</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Dan360_GerenteVentas</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Gerente de Ventas aprueba cuando son reclamos por diferencia de precios.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.RecordType</field>
+                <operation>equals</operation>
+                <value>Diferencia de precios y descuentos</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Aprobación Gerente de Ventas</label>
+        <name>Dan360_ApruebaGerenteDeVentas</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Dan360_Finanzas</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Finanzas aprueba cuando son reclamos por diferencia de precios.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.RecordType</field>
+                <operation>equals</operation>
+                <value>Diferencia de precios y descuentos</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Aprobación Finanzas</label>
+        <name>Dan360_AprobacionFinanzas</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Proceso de aprobación para los reclamos generados por diferencia de precios</description>
+    <emailTemplate>Dan360_OMS/Dan360_SolicitudAprobacionReclamos</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <finalApprovalActions>
+        <action>
+            <name>Dan360_OrderedDate</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Dan360_OrderGetEnd</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Dan360_OrderGetStart</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Dan360_ReclamoAprobado</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Dan360_Rechazado</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Dan360_EstadoControlado</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Dan360_Subject</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Reclamos Por Diferencia De Precios</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

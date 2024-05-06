@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segmenta_Por__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Segmenta Por</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adultos General Institucion</fullName>
+                <default>true</default>
+                <label>Adultos General Institucion</label>
+            </value>
+            <value>
+                <fullName>Adultos General Comunidad</fullName>
+                <default>false</default>
+                <label>Adultos General Comunidad</label>
+            </value>
+            <value>
+                <fullName>Adultos Oncologia</fullName>
+                <default>false</default>
+                <label>Adultos Oncologia</label>
+            </value>
+            <value>
+                <fullName>Metabolicos</fullName>
+                <default>false</default>
+                <label>Metabolicos</label>
+            </value>
+            <value>
+                <fullName>Epilepsia</fullName>
+                <default>false</default>
+                <label>Epilepsia</label>
+            </value>
+            <value>
+                <fullName>Metabolicos y Epilepsia</fullName>
+                <default>false</default>
+                <label>Metabolicos y Epilepsia</label>
+            </value>
+            <value>
+                <fullName>Pediatricos General</fullName>
+                <default>false</default>
+                <label>Pediatricos General</label>
+            </value>
+            <value>
+                <fullName>Alergia</fullName>
+                <default>false</default>
+                <label>Alergia</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

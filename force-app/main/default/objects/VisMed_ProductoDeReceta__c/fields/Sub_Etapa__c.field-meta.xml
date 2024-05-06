@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Etapa__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Etapa</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AR</fullName>
+                <default>false</default>
+                <label>AR</label>
+            </value>
+            <value>
+                <fullName>COMFORT</fullName>
+                <default>false</default>
+                <label>COMFORT</label>
+            </value>
+            <value>
+                <fullName>FO</fullName>
+                <default>false</default>
+                <label>FO</label>
+            </value>
+            <value>
+                <fullName>GUM 3</fullName>
+                <default>false</default>
+                <label>GUM 3</label>
+            </value>
+            <value>
+                <fullName>GUM 4</fullName>
+                <default>false</default>
+                <label>GUM 4</label>
+            </value>
+            <value>
+                <fullName>HA</fullName>
+                <default>false</default>
+                <label>HA</label>
+            </value>
+            <value>
+                <fullName>IF</fullName>
+                <default>false</default>
+                <label>IF</label>
+            </value>
+            <value>
+                <fullName>PREMATURO</fullName>
+                <default>false</default>
+                <label>PREMATURO</label>
+            </value>
+            <value>
+                <fullName>SIN LACTOSA</fullName>
+                <default>false</default>
+                <label>SIN LACTOSA</label>
+            </value>
+            <value>
+                <fullName>SOYA</fullName>
+                <default>false</default>
+                <label>SOYA</label>
+            </value>
+            <value>
+                <fullName>EHF</fullName>
+                <default>false</default>
+                <label>EHF</label>
+            </value>
+            <value>
+                <fullName>AAF</fullName>
+                <default>false</default>
+                <label>AAF</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

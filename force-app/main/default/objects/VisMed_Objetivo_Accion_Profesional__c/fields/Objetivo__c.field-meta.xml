@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Objetivo__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Objetivo</label>
+    <referenceTo>VisMed_Objetivo__c</referenceTo>
+    <relationshipLabel>Objetivos y Acciones del Profesional</relationshipLabel>
+    <relationshipName>Objetivos_del_Profesional</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

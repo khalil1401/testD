@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_FechaReactivacionCuota</fullName>
+    <active>true</active>
+    <description>Validación que no permite reactivar una cuota si la fecha es en pasado</description>
+    <errorConditionFormula>AND(
+ISCHANGED( Dan360_EstadoCuota__c ),
+ISPICKVAL(Dan360_EstadoCuota__c,&quot;Activa&quot;),
+Dan360_VigenciaHasta__c &lt;  TODAY() 
+)</errorConditionFormula>
+    <errorDisplayField>Dan360_VigenciaHasta__c</errorDisplayField>
+    <errorMessage>Debe diligenciar una fecha válida.</errorMessage>
+</ValidationRule>

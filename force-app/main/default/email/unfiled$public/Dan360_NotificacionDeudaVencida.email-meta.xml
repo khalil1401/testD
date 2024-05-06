@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Notificación de correo electrónico cuando un deuda vence.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Notificación de deuda vencida</name>
+    <style>none</style>
+    <subject>Documento {!Dan360_DocumentosCuentaCorriente__c.Dan360_NroComprobante__c} con saldo vencido.</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

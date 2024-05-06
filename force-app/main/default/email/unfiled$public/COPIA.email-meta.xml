@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>COPIA</name>
+    <style>none</style>
+    <subject>Plataforma de Gestión de pedidos</subject>
+    <textOnly>Alta nuevo usuario
+
+Hola, estas recibiendo este correo ya que fue dado de alta el Usuario {!Receiving_User.Username},
+Bienvenido a {!Community_Name}.
+Para comenzar vaya a: {!Community_Url}
+Muchas gracias.
+clientes.nutricia.com.ar
+
+GENERAR CONTRASEÑA</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

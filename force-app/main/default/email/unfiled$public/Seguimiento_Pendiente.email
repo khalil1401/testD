@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="arial"><span style="font-size: 12pt;">Tiene un nuevo Seguimiento para aprobar solicitada por el APM&nbsp;{!VisMed_Contacto_Cuenta_Usuario__c.VisMed_APM__c}.</span></font><br><br><font face="arial">Ingrese <a href="https://dsnutritionsf2--dev.lightning.force.com/lightning/n/Aprobaciones">acá</a> para ver las aprobaciones pendientes y realizar la gestión correspondiente.</font>]]></td>
+</tr>
+</table>

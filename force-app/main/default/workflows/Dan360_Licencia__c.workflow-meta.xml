@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Alert_Licencia_Aceptada</fullName>
+        <description>Email Alert Licencia Aceptada</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>hcps@nutricia.com.ar</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>VisMed_TemplatesVisitaMedica/VisMed_LicenciaAprobada</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_Licencia_Rechazada</fullName>
+        <description>Email Alert Licencia Rechazada</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>hcps@nutricia.com.ar</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>VisMed_TemplatesVisitaMedica/VisMed_LicenciaRechazada</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Aprobar_Licencia</fullName>
+        <field>Estado__c</field>
+        <literalValue>Aprobada</literalValue>
+        <name>Aprobar Licencia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Blanquear_Codigo_Duplicidad</fullName>
+        <description>Blanquea el codigo de duplicidad si se rechaza una licencia.</description>
+        <field>VisMed_Codigo_de_duplicidad__c</field>
+        <name>Blanquear Codigo Duplicidad</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rechazar_Licencia</fullName>
+        <field>Estado__c</field>
+        <literalValue>Rechazada</literalValue>
+        <name>Rechazar Licencia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

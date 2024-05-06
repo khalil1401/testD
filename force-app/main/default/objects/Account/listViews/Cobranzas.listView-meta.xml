@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cobranzas</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>Name2__c</columns>
+    <columns>Cuit__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.ADDRESS1_STREET</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_ZIP</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Cuit__c</field>
+        <operation>notEqual</operation>
+        <value>#</value>
+    </filters>
+    <filters>
+        <field>Cuit__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Dan360_ECommerce,Account.Dan360_Farmacia,Account.Dan360_HomeCare,Account.Dan360_Institucion,Account.Dan360_Retail</value>
+    </filters>
+    <label>Cobranzas</label>
+    <sharedTo>
+        <group>Vista_De_Lista_Cobranza</group>
+    </sharedTo>
+</ListView>

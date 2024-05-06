@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>APROSS</fullName>
+        <default>false</default>
+        <label>Apross</label>
+    </customValue>
+    <customValue>
+        <fullName>GALENO</fullName>
+        <default>false</default>
+        <label>Galeno</label>
+    </customValue>
+    <customValue>
+        <fullName>IAPOS</fullName>
+        <default>false</default>
+        <label>IAPOS</label>
+    </customValue>
+    <customValue>
+        <fullName>IOMA</fullName>
+        <default>false</default>
+        <label>IOMA</label>
+    </customValue>
+    <customValue>
+        <fullName>JERSALUD JERARQUICOS SALUD</fullName>
+        <default>false</default>
+        <label>Jersalud Jerarquicos Salud</label>
+    </customValue>
+    <customValue>
+        <fullName>MEDIFE ASOCIACION CIVIL</fullName>
+        <default>false</default>
+        <label>Medife Asociación Civil</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUAL FEDERADA</fullName>
+        <default>false</default>
+        <label>Mutual Federada</label>
+    </customValue>
+    <customValue>
+        <fullName>OBSBA</fullName>
+        <default>false</default>
+        <label>OBSBA</label>
+    </customValue>
+    <customValue>
+        <fullName>OMINT</fullName>
+        <default>false</default>
+        <label>OMINT</label>
+    </customValue>
+    <customValue>
+        <fullName>OSDE</fullName>
+        <default>false</default>
+        <label>OSDE</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPE OBSOC DE PETROLEROS</fullName>
+        <default>false</default>
+        <label>OSPE OBSOC De Petroleros</label>
+    </customValue>
+    <customValue>
+        <fullName>SANCOR MEDICINA PRIVADA LACTEOS</fullName>
+        <default>false</default>
+        <label>Sancor Medicina Privada Lacteos</label>
+    </customValue>
+    <customValue>
+        <fullName>SWISS MEDICAL</fullName>
+        <default>false</default>
+        <label>Swiss Medical</label>
+    </customValue>
+    <customValue>
+        <fullName>OTRA</fullName>
+        <default>false</default>
+        <label>Otra</label>
+    </customValue>
+    <masterLabel>Obras Sociales</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

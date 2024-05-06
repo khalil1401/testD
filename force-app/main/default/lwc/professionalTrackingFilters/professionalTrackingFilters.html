@@ -1,0 +1,103 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 10-02-2022
+  @description       : 
+-->
+<template>
+	<lightning-card title="Transferencia de profesionales">
+		<div
+			class="slds-grid slds-gutters slds-wrap slds-align_absolute-center"
+			style="position: sticky; z-index: 10"
+		>
+			<lightning-card class="slds-col slds-size_2-of-12">
+				<lightning-combobox
+					class="slds-form-element__control"
+					name="supervisor"
+					label="Supervisor"
+					value={supervisorSelected}
+					placeholder="Selecciona el Supervisor"
+					options={optionsSupervisores}
+					onchange={handleFilterSupervisorChange}
+				>
+				</lightning-combobox>
+			</lightning-card>
+			<lightning-card class="slds-col slds-size_2-of-12">
+				<lightning-combobox
+					class="slds-form-element__control"
+					name="usuario"
+					label="APM"
+					value={usuarioSelected}
+					placeholder="Selecciona el APM"
+					options={optionsUsuarios}
+					onchange={handleFilterUserChange}
+				>
+				</lightning-combobox>
+			</lightning-card>
+
+			<lightning-card class="slds-col slds-size_2-of-12">
+				<c-lightning-reference-input
+					id="Profesional__c"
+					class="slds-form-element__control"
+					field-name="Profesional__c"
+					fieldname="Profesional__c"
+					label="Profesional"
+					name="Profesional__c"
+					referenceapiname="Profesional__c"
+					sobjectname="Account"
+					recordtypeid={professionalRecordTypeIds}
+					onreferenceremoved={handleReferenceValueRemoved}
+					onreferenceselected={handleReferenceValueSelected}
+				>
+				</c-lightning-reference-input>
+			</lightning-card>
+
+			<lightning-card class="slds-col slds-size_2-of-12">
+				<c-lightning-reference-input
+					id="Institucion__c"
+					class="slds-form-element__control"
+					field-name="Institucion__c"
+					fieldname="Institucion__c"
+					label="Institución"
+					name="Institucion__c"
+					referenceapiname="Institucion__c"
+					sobjectname="Account"
+					recordtypeid={institutionRecordTypeIds}
+					onreferenceremoved={handleReferenceValueRemoved}
+					onreferenceselected={handleReferenceValueSelected}
+				>
+				</c-lightning-reference-input>
+			</lightning-card>
+			<lightning-card class="slds-col slds-size_4-of-12 slds-m-top_large">
+				<lightning-button
+					disabled={disabledActions}
+					label="Transferir"
+					name="transfer"
+					onclick={handleTransferOrShare}
+					variant="brand"
+				></lightning-button>
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				<lightning-button
+					disabled={disabledActions}
+					label="Compartir"
+					name="share"
+					onclick={handleTransferOrShare}
+					variant="brand-outline"
+				></lightning-button>
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				<lightning-button
+					disabled={disabledActions}
+					label="Baja de Profesional"
+					name="unsubscribe"
+					onclick={handleTransferOrShare}
+					variant="destructive-text"
+				></lightning-button>
+			</lightning-card>
+		</div>
+	</lightning-card>
+</template>

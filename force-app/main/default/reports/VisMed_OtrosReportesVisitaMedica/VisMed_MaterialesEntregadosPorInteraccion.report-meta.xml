@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Muestras_Entregadas__c.Muestra_Medica__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Muestras_Entregadas__c.Cantidad__c</field>
+    </columns>
+    <columns>
+        <field>Dan360_Interacciones__c.VisMed_Fecha__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$Stock_x_MM__c.Ciclo__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Dan360_Interacciones__c.VisMed_APM__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Dan360_Interacciones__c.Profesional__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Materiales entregados por Interacción</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$Dan360_Interacciones__c$Muestras_Entregadas__c@Muestras_Entregadas__c.Stock_x_MM__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Dan360_Interacciones__c.VisMed_Fecha__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

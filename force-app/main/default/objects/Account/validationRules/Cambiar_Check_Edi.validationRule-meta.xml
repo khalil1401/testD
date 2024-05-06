@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cambiar_Check_Edi</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+				AND(
+        ISCHANGED(Cliente_EDI__c),
+				    NOT(OR($Profile.Name = &apos;Administración de venta&apos;,
+						     $Profile.Name = &apos;System Administrator&apos;,
+						     $Profile.Name = &apos;Administrador del sistema&apos;))
+    ),
+				AND(
+        NOT(ISCHANGED(Cliente_EDI__c)),
+				    $Profile.Name = &apos;Administración de venta&apos;
+    )
+)</errorConditionFormula>
+    <errorMessage>no posee permiso para realizar este cambio</errorMessage>
+</ValidationRule>

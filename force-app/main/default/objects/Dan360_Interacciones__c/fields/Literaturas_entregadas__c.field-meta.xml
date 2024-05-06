@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Literaturas_entregadas__c</fullName>
+    <externalId>false</externalId>
+    <label>Literaturas entregadas</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Talonario NRS 2002</fullName>
+                <default>false</default>
+                <label>Talonario NRS 2002</label>
+            </value>
+            <value>
+                <fullName>Tarjetón importancia del soporte enteral en piso</fullName>
+                <default>false</default>
+                <label>Tarjetón importancia del soporte enteral en piso</label>
+            </value>
+            <value>
+                <fullName>Tarjetón Rendimiento</fullName>
+                <default>false</default>
+                <label>Tarjetón Rendimiento</label>
+            </value>
+            <value>
+                <fullName>Ayuda ventas</fullName>
+                <default>false</default>
+                <label>Ayuda ventas</label>
+            </value>
+            <value>
+                <fullName>Díptico IDDSI</fullName>
+                <default>false</default>
+                <label>Díptico IDDSI</label>
+            </value>
+            <value>
+                <fullName>Packs vs Polvos</fullName>
+                <default>false</default>
+                <label>Packs vs Polvos</label>
+            </value>
+            <value>
+                <fullName>Recetas espesan clear</fullName>
+                <default>false</default>
+                <label>Recetas espesan clear</label>
+            </value>
+            <value>
+                <fullName>Análisis costo efectividad</fullName>
+                <default>false</default>
+                <label>Análisis costo efectividad</label>
+            </value>
+            <value>
+                <fullName>Vademécum</fullName>
+                <default>false</default>
+                <label>Vademécum</label>
+            </value>
+            <value>
+                <fullName>Cubison</fullName>
+                <default>false</default>
+                <label>Cubison</label>
+            </value>
+            <value>
+                <fullName>Energy</fullName>
+                <default>false</default>
+                <label>Energy</label>
+            </value>
+            <value>
+                <fullName>MF6</fullName>
+                <default>false</default>
+                <label>MF6</label>
+            </value>
+            <value>
+                <fullName>NPI y Protison</fullName>
+                <default>false</default>
+                <label>NPI y Protison</label>
+            </value>
+            <value>
+                <fullName>Proteínas</fullName>
+                <default>false</default>
+                <label>Proteínas</label>
+            </value>
+            <value>
+                <fullName>Tarjetón importancia del soporte enteral en el paciente internado en la terapia</fullName>
+                <default>false</default>
+                <label>Tarjetón importancia del soporte enteral en el paciente internado en la terapia</label>
+            </value>
+            <value>
+                <fullName>Árbol de decisión</fullName>
+                <default>false</default>
+                <label>Árbol de decisión</label>
+            </value>
+            <value>
+                <fullName>Video P4</fullName>
+                <default>false</default>
+                <label>Video P4</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

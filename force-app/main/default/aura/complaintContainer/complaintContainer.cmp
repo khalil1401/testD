@@ -1,0 +1,51 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 17-11-2021
+  @description       : 
+-->
+<aura:component
+  implements="force:appHostable,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:hasRecordId"
+  controller="CaseController"
+>
+  <aura:handler
+    name="init"
+    value="{!this}"
+    action="{!c.doInit}"
+  />
+  <aura:attribute
+    name="objApiName"
+    type="String"
+  />
+
+  <aura:html tag="style">
+    .slds-modal__container {
+    width: 80vw !important;
+    max-width: 80vw !important;
+    }
+
+    .slds-table{
+    border: none;
+    }
+    .slds-table>thead>tr{
+    border: none;
+    }
+
+    .slds-modal__content {
+    height: auto !important;
+    max-height: 60vh !important;
+    }
+
+    <!-- .slds-modal__footer{
+  display: none;
+  } -->
+  </aura:html>
+  <div class="c-container">
+    <c:complaints
+      recordId="{!v.recordId}"
+      onclose="{!c.closeQA}"
+      objApiName="{!v.objApiName}"
+    ></c:complaints>
+  </div>
+</aura:component>

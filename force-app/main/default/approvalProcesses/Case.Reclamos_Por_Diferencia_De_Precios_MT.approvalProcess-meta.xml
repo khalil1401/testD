@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Account</field>
+        <field>RecordType</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Dan360_ActualizarRolJefeVentas</name>
+                <type>FieldUpdate</type>
+            </action>
+            <action>
+                <name>Dan360_EstadoControlado</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>Dan360_Vendedor</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>El Vendedor aprueba cuando el reclamo es generado por el cliente.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.Dan360_SolicitudExterna__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Aprobación Vendedor</label>
+        <name>Dan360_AprobacionVendedor</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <approvalActions>
+            <action>
+                <name>Dan360_AsignarRolFinanzas</name>
+                <type>FieldUpdate</type>
+            </action>
+        </approvalActions>
+        <assignedApprover>
+            <approver>
+                <name>gina.vilchez-diaz@danone.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>El reclamo debe estar en estado &quot;Pendiente&quot;.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.RecordType</field>
+                <operation>equals</operation>
+                <value>Diferencia de precios y descuentos</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Controlado</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Account.Dan360_SalesDistric1__c</field>
+                <operation>includes</operation>
+                <value>Modern Trade</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Aprobacion Gina V.</label>
+        <name>Dan360_AprobacionJefeDeVentas</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Dan360_Finanzas</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>Finanzas aprueba cuando son reclamos por diferencia de precios.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.RecordType</field>
+                <operation>equals</operation>
+                <value>Diferencia de precios y descuentos</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Controlado</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Aprobación Finanzas</label>
+        <name>Dan360_AprobacionFinanzas</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Proceso de aprobación para los reclamos relacionados a diferencia de precios de los pedidos procesados - Cuenta Con Sales District Modern Trade</description>
+    <emailTemplate>Dan360_OMS/Dan360_SolicitudAprobacionReclamos</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Case.RecordType</field>
+            <operation>equals</operation>
+            <value>Diferencia de precios y descuentos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.Dan360_SalesDistric1__c</field>
+            <operation>includes</operation>
+            <value>Modern Trade</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Dan360_CheckAprobado</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Dan360_Rechazado</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Dan360_ActualizarRolJefeVentas</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Dan360_EstadoControlado</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Dan360_Subject</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Reclamos Por Diferencia De Precios MT</label>
+    <processOrder>5</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

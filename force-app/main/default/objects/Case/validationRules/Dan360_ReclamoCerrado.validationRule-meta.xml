@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_ReclamoCerrado</fullName>
+    <active>true</active>
+    <description>Cuando el reclamo esta Autorizado o Cerrado no puede modificar su estado</description>
+    <errorConditionFormula>AND(
+				OR(
+				   ISPICKVAL(Status,&apos;Controlado&apos;),
+							ISPICKVAL(Status, &apos;Rechazado&apos;),
+							ISPICKVAL(Status, &apos;Pendiente&apos;)
+								),
+				OR(
+				ISPICKVAL(PRIORVALUE(Status), &apos;Cerrado&apos;),
+				ISPICKVAL(PRIORVALUE(Status), &apos;Autorizado&apos;)
+								) 
+				 )</errorConditionFormula>
+    <errorMessage>El estado actual del reclamo no puede ser modificado.</errorMessage>
+</ValidationRule>

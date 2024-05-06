@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="arial">{!Cambio_de_Contrasena_App_User__c.OwnerFullName} se ha iniciado un proceso de cambio de contraseña para su usuario de la aplicación movil. Si fue usted el que inicio el proceso y decide aceptarlo por favor responda este mensaje solo con la palabra&nbsp;<b>APPROVE </b>, en caso que quiera rechazarlo responda con el mensaje&nbsp;<b>REJECT </b>.</font>]]></td>
+</tr>
+</table>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_UnidadDeNegocio__c</fullName>
+    <description>Unidad de negocio para la cual los usuarios podrán cargar pedidos.</description>
+    <externalId>false</externalId>
+    <label>Unidad de negocio</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Dan360_UnidadDeNegocio</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

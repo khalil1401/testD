@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <auraComponent>MassApproving</auraComponent>
+    <description>Proceso que confirma los pedidos retenidos por cuota con semáforo verde o amarillo</description>
+    <label>Confirmación Masiva Pedidos Cuotificados</label>
+    <motif>Custom13: Box</motif>
+</CustomTab>

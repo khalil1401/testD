@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cantidad_de_Dias__c</fullName>
+    <description>Devuelve la cantidad de dias HABILES que ocupara la Licencia restando la fecha de fin con la fecha de inicio</description>
+    <externalId>false</externalId>
+    <formula>IF( Tipo_de_Registro__c = &apos;Tiempo_no_Promocional&apos;,  Cantidad_de_Horas_Valor__c,
+			IF(
+				Fecha_de_inicio__c == Fecha_de_Fin__c,	1,
+				/*Si las Fecha_de_fin__c es sabado o domingo NO se le suma 1 a la cuenta */
+				IF(OR(MOD( Fecha_de_Fin__c - DATE( 1900, 1, 1), 7) = 6, MOD( Fecha_de_Fin__c - DATE( 1900, 1, 1), 7) = 5),
+							(5 * ( FLOOR( ( Fecha_de_Fin__c - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( Fecha_de_Fin__c - DATE( 1900, 1, 8), 7 ) ) )
+							-
+							(5 * ( FLOOR( ( Fecha_de_inicio__c - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( Fecha_de_inicio__c - DATE( 1900, 1, 8), 7 ) ) ),
+							/*Si Fecha_de_fin__c es dia de semana  SI se le suma 1 a la cuenta*/
+							(5 * ( FLOOR( ( Fecha_de_Fin__c - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( Fecha_de_Fin__c - DATE( 1900, 1, 8), 7 ) ) )
+							-
+							(5 * ( FLOOR( ( Fecha_de_inicio__c - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( Fecha_de_inicio__c - DATE( 1900, 1, 8), 7 ) ) )
+							+ 1
+						)
+
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Cantidad de Días</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

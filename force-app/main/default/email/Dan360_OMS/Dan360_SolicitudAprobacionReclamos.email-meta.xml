@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla que se enviara cuando se cree un caso</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Dan360_NutriciaPlantilla</letterhead>
+    <name>Solicitud de Aprobación Reclamos</name>
+    <style>freeForm</style>
+    <subject>Solicitud de Reclamo {!Case.RecordType}</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

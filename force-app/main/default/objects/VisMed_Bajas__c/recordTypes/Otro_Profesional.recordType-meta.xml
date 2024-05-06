@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Otro_Profesional</fullName>
+    <active>true</active>
+    <label>Otro Profesional</label>
+    <picklistValues>
+        <picklist>Estado__c</picklist>
+        <values>
+            <fullName>Aprobada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendiente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rechazada</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Motivo_de_la_Baja__c</picklist>
+        <values>
+            <fullName>Bajo Potencial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enfermedad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fallecimiento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternidad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No ejerce más la profesión</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No recibe APM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transferido a otro Visitador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Viaje</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

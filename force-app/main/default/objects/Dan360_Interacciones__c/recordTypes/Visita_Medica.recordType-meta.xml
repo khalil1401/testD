@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visita_Medica</fullName>
+    <active>true</active>
+    <label>Visita Médica</label>
+    <picklistValues>
+        <picklist>Estado__c</picklist>
+        <values>
+            <fullName>Aprobada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendiente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rechazada</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Literaturas_entregadas__c</picklist>
+        <values>
+            <fullName>Análisis costo efectividad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ayuda ventas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cubison</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Díptico IDDSI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MF6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NPI y Protison</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packs vs Polvos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proteínas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recetas espesan clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Talonario NRS 2002</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tarjetón Rendimiento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tarjetón importancia del soporte enteral en el paciente internado en la terapia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tarjetón importancia del soporte enteral en piso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vademécum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Video P4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Árbol de decisión</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VisMed_Canal__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telefónica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Videollamada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whatsapp</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VisMed_Motivo__c</picklist>
+        <values>
+            <fullName>Profesional ausente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Profesional sin tiempo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VisMed_Tipo_de_Visita__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presencial</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Telefónica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Videollamada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whatsapp</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

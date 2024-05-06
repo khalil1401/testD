@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_MotivoDeReclamo__c</fullName>
+    <description>Especifica el porqué se está realizando la devolución del producto.</description>
+    <externalId>false</externalId>
+    <label>Motivo de reclamo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DEVCVEN</fullName>
+                <default>false</default>
+                <label>Corto vencimiento</label>
+            </value>
+            <value>
+                <fullName>Error facturación impuesto a las ventas</fullName>
+                <default>false</default>
+                <label>Error facturación impuesto a las ventas</label>
+            </value>
+            <value>
+                <fullName>Error ingreso admin pedido</fullName>
+                <default>false</default>
+                <label>Error ingreso admin pedido</label>
+            </value>
+            <value>
+                <fullName>Exento de Impuestos</fullName>
+                <default>false</default>
+                <label>Exento de Impuestos</label>
+            </value>
+            <value>
+                <fullName>Faltante producto por abasto</fullName>
+                <default>false</default>
+                <label>Faltante de producto</label>
+            </value>
+            <value>
+                <fullName>No Entregado</fullName>
+                <default>false</default>
+                <label>No Entregado</label>
+            </value>
+            <value>
+                <fullName>NOSOLIC</fullName>
+                <default>false</default>
+                <label>No pedido</label>
+            </value>
+            <value>
+                <fullName>No se ingresó motivo para Nota de Crédito</fullName>
+                <default>false</default>
+                <label>No se ingresó motivo para Nota de Crédito</label>
+            </value>
+            <value>
+                <fullName>PRODA</fullName>
+                <default>false</default>
+                <label>Producto Dañado</label>
+            </value>
+            <value>
+                <fullName>Producto Incorrecto</fullName>
+                <default>false</default>
+                <label>Producto Incorrecto</label>
+            </value>
+            <value>
+                <fullName>PROVEN</fullName>
+                <default>false</default>
+                <label>Producto vencido</label>
+            </value>
+            <value>
+                <fullName>Se usó tasa impositiva incorrecta en la factura original</fullName>
+                <default>false</default>
+                <label>Se usó tasa impositiva incorrecta en la factura original</label>
+            </value>
+            <value>
+                <fullName>Demora en la entrega</fullName>
+                <default>false</default>
+                <label>Demora en la entrega</label>
+            </value>
+            <value>
+                <fullName>Entrega fuera del horario/día acordado</fullName>
+                <default>false</default>
+                <label>Entrega fuera del horario/día acordado</label>
+            </value>
+            <value>
+                <fullName>Malos tratos del chofer</fullName>
+                <default>false</default>
+                <label>Malos tratos del chofer</label>
+            </value>
+            <value>
+                <fullName>Dan360_PorNoPedido</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dan360_PorNoPedido</label>
+            </value>
+            <value>
+                <fullName>Dan360_PorProductoDañado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dan360_PorProductoDañado</label>
+            </value>
+            <value>
+                <fullName>Dan360_PorProductoVencido</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dan360_PorProductoVencido</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

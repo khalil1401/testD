@@ -1,0 +1,6 @@
+<aura:component Controller="Order" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global">
+<lightning:overlayLibrary aura:id="overlayLibModal"/>
+<aura:attribute name="isSelected" type="Boolean" default="false"/>
+<aura:attribute name="recordId" type="String" />
+    <lightning:button variant="brand" class="cb-section_column slds-size_12-of-12 slds-max-medium-size_12-of-12 slds-large-size_12-of-12" label="Crear Pedido" onclick="{!c.createOrder}"/>
+</aura:component>

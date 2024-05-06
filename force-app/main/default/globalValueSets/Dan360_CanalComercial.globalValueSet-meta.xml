@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Acceso</fullName>
+        <default>false</default>
+        <label>Acceso</label>
+    </customValue>
+    <customValue>
+        <fullName>Disprofarma</fullName>
+        <default>false</default>
+        <label>Disprofarma</label>
+    </customValue>
+    <customValue>
+        <fullName>Distribuidores</fullName>
+        <default>false</default>
+        <label>Distribuidores</label>
+    </customValue>
+    <customValue>
+        <fullName>E-Commerce</fullName>
+        <default>false</default>
+        <label>E-Commerce</label>
+    </customValue>
+    <customValue>
+        <fullName>Farmacias</fullName>
+        <default>false</default>
+        <label>Farmacias</label>
+    </customValue>
+    <customValue>
+        <fullName>Farmacity</fullName>
+        <default>false</default>
+        <label>Farmacity</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Care</fullName>
+        <default>false</default>
+        <label>Home Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Instituciones</fullName>
+        <default>false</default>
+        <label>Instituciones</label>
+    </customValue>
+    <customValue>
+        <fullName>INTERCO</fullName>
+        <default>false</default>
+        <label>INTERCO</label>
+    </customValue>
+    <customValue>
+        <fullName>Intercompany</fullName>
+        <default>false</default>
+        <label>Intercompany</label>
+    </customValue>
+    <customValue>
+        <fullName>Licitaciones</fullName>
+        <default>false</default>
+        <label>Licitaciones</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing</fullName>
+        <default>false</default>
+        <label>Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Modern Trade</fullName>
+        <default>false</default>
+        <label>Modern Trade</label>
+    </customValue>
+    <customValue>
+        <fullName>Others</fullName>
+        <default>false</default>
+        <label>Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Proximity</fullName>
+        <default>false</default>
+        <label>Proximity</label>
+    </customValue>
+    <customValue>
+        <fullName>Tender management</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tender management</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmacy</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pharmacy</label>
+    </customValue>
+    <customValue>
+        <fullName>MeLi</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MeLi</label>
+    </customValue>
+    <customValue>
+        <fullName>Health Care</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Health Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Export</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Export</label>
+    </customValue>
+    <customValue>
+        <fullName>Employees</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Employees</label>
+    </customValue>
+    <masterLabel>Canal comercial</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

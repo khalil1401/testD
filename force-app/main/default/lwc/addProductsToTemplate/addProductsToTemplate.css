@@ -1,0 +1,12 @@
+.datatable-full-size {
+    width: 100% !important;
+  }
+
+.slds-border_top, .slds-border--top {
+    padding-top: 10px;
+    text-align: end;
+}
+
+.slds-border_top, .slds-border--top p{
+  font-weight: bold;
+}

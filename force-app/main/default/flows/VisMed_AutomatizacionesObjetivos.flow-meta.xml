@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>VisMed_FechasCompletadas</name>
+        <label>¿Fechas completadas?</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>VisMed_Si</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.VisMed_FechaInicio__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.VisMed_FechaFin__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>VisMed_ActualizarEstadoDeObjetivo</targetReference>
+            </connector>
+            <label>Si</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>AsignarEstadoObjetivo</name>
+        <dataType>String</dataType>
+        <expression>IF(TODAY() &gt; {!$Record.VisMed_FechaFin__c}, &apos;Pendiente&apos;,
+     IF(TODAY() &lt; {!$Record.VisMed_FechaInicio__c}, &apos;Pendiente&apos;, 
+           IF(TODAY() &gt;= {!$Record.VisMed_FechaInicio__c}, &apos;Activo&apos;,Null
+             )
+       )
+ )</expression>
+    </formulas>
+    <interviewLabel>Automatizaciones Objetivos {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Automatizaciones Objetivos</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>VisMed_ActualizarEstadoDeObjetivo</name>
+        <label>Actualizar Estado De Objetivo</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <inputAssignments>
+            <field>Estado__c</field>
+            <value>
+                <elementReference>AsignarEstadoObjetivo</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>VisMed_FechasCompletadas</targetReference>
+        </connector>
+        <object>VisMed_Objetivo__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_CuentaSaldoMayorAProducto</fullName>
+    <active>false</active>
+    <errorConditionFormula>Dan360_CuentaSaldoMayorProducto__c = true</errorConditionFormula>
+    <errorMessage>La cantidad indicada no puede ser mayor al saldo actual de la cuota de producto.</errorMessage>
+</ValidationRule>

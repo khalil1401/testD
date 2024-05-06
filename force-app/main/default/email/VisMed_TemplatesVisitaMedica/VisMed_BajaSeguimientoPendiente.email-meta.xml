@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla de correo para baja de seguimiento pendiente</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Baja Seguimiento Pendiente</name>
+    <style>none</style>
+    <subject>Tiene una nueva Baja de Seguimiento pendiente para aprobar</subject>
+    <textOnly>Baja de Seguimiento
+
+Hola,
+Tiene una nueva Baja de Seguimiento para aprobar solicitada por el APM {!VisMed_Bajas__c.VisMed_APM__c}.
+Haga click aquí para ver las aprobaciones pendientes y realizar la gestión correspondiente.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

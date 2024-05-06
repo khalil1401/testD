@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Plantilla por cuenta</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Plantillas por cuenta</value>
+    </caseValues>
+    <layouts>
+        <layout>Formato Plantilla por cuenta</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Dan360_ModificarUnidadDeNegocio</name>
+    </validationRules>
+</CustomObjectTranslation>

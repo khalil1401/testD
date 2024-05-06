@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_ModificarUnidadDeNegocio</fullName>
+    <active>true</active>
+    <description>Regla de validación que no permite modificar la unidad de negocio de una plantilla por cuenta.</description>
+    <errorConditionFormula>AND(
+NOT(ISNEW()),
+ISCHANGED( Dan360_UnidadNegocio__c )
+)</errorConditionFormula>
+    <errorDisplayField>Dan360_UnidadNegocio__c</errorDisplayField>
+    <errorMessage>No tiene permisos para modificar la unidad de negocio de una plantilla de productos.</errorMessage>
+</ValidationRule>

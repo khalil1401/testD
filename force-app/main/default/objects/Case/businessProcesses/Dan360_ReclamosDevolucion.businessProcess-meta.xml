@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_ReclamosDevolucion</fullName>
+    <description>Se registrarán todos los reclamos relacionados a una devolución de los pedidos procesados.</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Autorizado</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Cerrado</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Controlado</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pendiente</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Rechazado</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

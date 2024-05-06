@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Metadata para almecenar los distribution channel y su tipo de registro de cuenta correspondiente.</description>
+    <label>Distribution Channels</label>
+    <pluralLabel>Distribution Channels</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

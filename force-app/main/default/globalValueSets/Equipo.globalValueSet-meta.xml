@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Adultos</fullName>
+        <default>false</default>
+        <label>Adultos</label>
+    </customValue>
+    <customValue>
+        <fullName>Nicho</fullName>
+        <default>false</default>
+        <label>Nicho</label>
+    </customValue>
+    <customValue>
+        <fullName>Pediátricos</fullName>
+        <default>false</default>
+        <label>Pediátricos</label>
+    </customValue>
+    <customValue>
+        <fullName>Pediatricos_Alergia</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pediatricos Alergia</label>
+    </customValue>
+    <customValue>
+        <fullName>Pediatricos_general</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pediátricos general</label>
+    </customValue>
+    <description>Equipo al que pertenece el APM</description>
+    <masterLabel>Equipo</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_SemaforoPicklist__c</fullName>
+    <description>Señala el color del semáforo (Verde, amarillo o rojo) dependiendo de la cuota disponible para el pedido.</description>
+    <externalId>false</externalId>
+    <label>SemaforoPicklist</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Rojo</fullName>
+                <default>false</default>
+                <label>Rojo</label>
+            </value>
+            <value>
+                <fullName>Amarillo</fullName>
+                <default>false</default>
+                <label>Amarillo</label>
+            </value>
+            <value>
+                <fullName>Verde</fullName>
+                <default>false</default>
+                <label>Verde</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

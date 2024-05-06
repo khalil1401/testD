@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Alergia</fullName>
+        <default>false</default>
+        <label>Alergia</label>
+    </customValue>
+    <customValue>
+        <fullName>Dieta Cetogénica</fullName>
+        <default>false</default>
+        <label>Dieta Cetogénica</label>
+    </customValue>
+    <customValue>
+        <fullName>Metabólicos</fullName>
+        <default>false</default>
+        <label>Metabólicos</label>
+    </customValue>
+    <customValue>
+        <fullName>Pediatricos General</fullName>
+        <default>false</default>
+        <label>Pediatricos General</label>
+    </customValue>
+    <customValue>
+        <fullName>Quilotorax</fullName>
+        <default>false</default>
+        <label>Quilotorax</label>
+    </customValue>
+    <customValue>
+        <fullName>Sin Asignar</fullName>
+        <default>false</default>
+        <label>Sin Asignar</label>
+    </customValue>
+    <customValue>
+        <fullName>Comunidad</fullName>
+        <default>false</default>
+        <label>Comunidad</label>
+    </customValue>
+    <customValue>
+        <fullName>Instituciones</fullName>
+        <default>false</default>
+        <label>Instituciones</label>
+    </customValue>
+    <customValue>
+        <fullName>Oncología</fullName>
+        <default>false</default>
+        <label>Oncología</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos (Instituciones)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adultos (Instituciones)</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos (Oncologia)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adultos (Oncologia)</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos (Comunidad + Onco)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adultos (Comunidad + Onco)</label>
+    </customValue>
+    <customValue>
+        <fullName>Compras</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Compras</label>
+    </customValue>
+    <customValue>
+        <fullName>Farmacia</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Farmacia</label>
+    </customValue>
+    <customValue>
+        <fullName>Fragilidad</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fragilidad</label>
+    </customValue>
+    <customValue>
+        <fullName>Stroke</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Stroke</label>
+    </customValue>
+    <customValue>
+        <fullName>Ministerio</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ministerio</label>
+    </customValue>
+    <customValue>
+        <fullName>Oncologia</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Oncologia</label>
+    </customValue>
+    <customValue>
+        <fullName>prueba AT</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>prueba AT</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos General</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adultos General</label>
+    </customValue>
+    <customValue>
+        <fullName>Epilepsia</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Epilepsia</label>
+    </customValue>
+    <customValue>
+        <fullName>Auditoria</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Auditoria</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adultos</label>
+    </customValue>
+    <customValue>
+        <fullName>UTI</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>UTI</label>
+    </customValue>
+    <customValue>
+        <fullName>Nutrición General</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Nutrición General</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos Comunidad</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adultos Comunidad</label>
+    </customValue>
+    <customValue>
+        <fullName>Administración</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Administración</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos (Comunidad)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adultos (Comunidad)</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos (Iiss + Comunidad)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adultos (Iiss + Comunidad)</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos (Iiss + Onco)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adultos (Iiss + Onco)</label>
+    </customValue>
+    <masterLabel>Areas Terapeuticas</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

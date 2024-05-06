@@ -1,0 +1,116 @@
+<!--
+	@author            : Diego Valle
+	@created date      : 
+	@last modified by  : Diego Valle
+	@last modified on  : 07-12-2021
+	@description       : 
+-->
+<!-- implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,forceCommunity:availableForAllPageTypes" -->
+<aura:component
+	access="global"
+	controller="CheckingAccountController"
+	extends="forceCommunity:navigationMenuBase"
+	implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+>
+	<aura:handler
+		name="init"
+		value="{!this}"
+		action="{!c.doInit}"
+	/>
+
+	<aura:attribute
+		name="accountId"
+		type="String"
+	/>
+	
+	<aura:attribute
+		name="recordId"
+		type="String"
+	/>
+
+	<aura:attribute
+		name="fromDate"
+		type="Date"
+	/>
+
+	<aura:attribute
+		name="toDate"
+		type="Date"
+	/>
+
+	<aura:attribute
+		name="canDownload"
+		type="Boolean"
+	/>
+
+	<aura:attribute
+		name="dateRangeIsValid"
+		type="Boolean"
+	/>
+
+	<aura:attribute
+		name="filters"
+		type="Object"
+	/>
+
+	<aura:attribute 
+		name="accountRecord"
+		type="Account"
+	/>
+
+	<force:recordData aura:id="recordLoader"
+      recordId="{!v.recordId}"
+      fields="Cuit__c"
+      targetFields="{!v.accountRecord}"
+      targetError="{!v.recordLoadError}"
+    />
+
+	<aura:if isTrue="{! v.accountRecord.Cuit__c != '#' }">
+		<lightning:card>
+			<div class="slds-grid slds-gutters slds-wrap slds-m-horizontal_medium">
+				<c:checkingAccountDocumentFilters
+					class="slds-size_1-of-1"
+					aura:id="filters"
+					disabledownload="{!v.canDownload}"
+					onsearchdocuments="{!c.handleSearchDocuments}"
+					ondownloadcsvfile="{!c.handleDownloadCsvFile}"
+					onfiltersfeedback="{!c.handleFiltersFeedback}"
+					recordId="{!v.accountId}"
+				>
+					<!-- onemptyfilters="{!c.handleResetView}" -->
+					<!-- onfilledfilters="{!c.handleSetFilters}" -->
+					<!-- ondaterangevalidate="{!c.handleValidateDateRange}" -->
+					<!-- onemptyvalues="{!c.doInit}" -->
+				</c:checkingAccountDocumentFilters>
+				<c:checkingAccountDocumentList
+					class="slds-size_1-of-1"
+					aura:id="documents"
+					account="{!v.accountId}"
+					startdate="{!v.fromDate}"
+					enddate="{!v.toDate}"
+					ondataloaded="{!c.handleCanDownloadCsvFile}"
+					cansearch="{!v.canSearch}"
+					isinitialload="{!v.isInitial}"
+					filters="{!v.filters}"
+				></c:checkingAccountDocumentList>
+			</div>
+		</lightning:card>
+		<aura:set attribute="else">
+    		<section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open" aura:id="messageModal">
+				<div class="slds-modal__container">
+				<div class="slds-modal__header">
+				<h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Cuenta Corriente</h1>
+				</div>
+				<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+				<h2>Para visualizar la información, por favor ingrese a la cuenta principal.</h2>
+				</div>
+				<div class="slds-modal__footer">
+				<button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick="{!c.handleClose}">Cerrar</button>
+				</div>
+				</div>
+				</section>
+				<div class="slds-backdrop slds-backdrop_open" role="presentation" aura:id="presentationModal"></div>
+  		</aura:set>
+	</aura:if>
+	
+</aura:component>

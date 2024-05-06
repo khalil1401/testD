@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla de correo para solicitudes de bajas de profesionales aceptadas</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Baja del Profesional Aceptada</name>
+    <style>none</style>
+    <subject>Baja del Profesional Aceptada</subject>
+    <textOnly>Solicitud Baja de Profesional Aceptada
+
+Estimado {!VisMed_Bajas__c.VisMed_APM__c},
+La baja solicitada para el profesional {!VisMed_Bajas__c.Profesional__c} fue ACEPTADA.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

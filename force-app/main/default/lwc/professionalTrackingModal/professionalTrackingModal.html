@@ -1,0 +1,160 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 11-02-2022
+  @description       : 
+-->
+<template>
+	<template if:true={openmodal}>
+		<div class="slds-modal slds-fade-in-open slds-backdrop">
+			<div
+				class="slds-modal__container"
+				style="width: 80rem; max-width: 80rem;"
+			>
+				<!------HEADER Section-->
+				<div class="slds-modal__header">
+					<!-- sldsValidatorIgnoreNextLine -->
+					<lightning-button-icon
+						alternative-text="Close this window"
+						class="slds-modal__close"
+						icon-name="utility:close"
+						onclick={closeModal}
+						size="large"
+						variant="bare-inverse"
+					>
+					</lightning-button-icon>
+					<h2>{title}</h2>
+				</div>
+				<!------Body Section-->
+				<div class="slds-modal__content slds-p-around_large">
+					<lightning-card class="slds-grid slds-gutters slds-wrap slds-align_absolute-center">
+						<template if:false={isUnsubscribe}>
+							<!-- sldsValidatorIgnoreNextLine -->
+							<lightning-datatable
+								class="wrapped-header-datatable"
+								columns={columns}
+								data={tracking}
+								hide-checkbox-column="true"
+								key-field="Id"
+								onrowselection={handleSelectedRows}
+							>
+							</lightning-datatable>
+							<br>
+							<br>
+							<span class="slds-grid slds-gutters slds-wrap slds-align_absolute-center">
+								<span class="slds-col slds-size_4-of-12">
+									<lightning-combobox
+										class="slds-form-element__control"
+										label="APM"
+										name="usuario"
+										onchange={handleFilterUserChange}
+										options={optionsUsuarios}
+										placeholder="Selecciona el APM"
+										value={usuarioSelected}
+									>
+									</lightning-combobox>
+								</span>
+								<span class="slds-col slds-size_8-of-12">
+									&nbsp;
+								</span>
+							</span>
+						</template>
+						<template if:true={isUnsubscribe}>
+							<!-- sldsValidatorIgnoreNextLine -->
+							<lightning-datatable
+								class="wrapped-header-datatable"
+								columns={columnsToUnsubscribe}
+								data={tracking}
+								hide-checkbox-column="true"
+								key-field="Id"
+								onrowselection={handleSelectedRows}
+							>
+							</lightning-datatable>
+							<br>
+							<br>
+							<span class="slds-grid slds-gutters slds-wrap slds-align_absolute-center">
+								<span class="slds-col slds-size_4-of-12">
+									<c-lightning-picklist-input
+										class="slds-form-element__control"
+										label="Motivo de baja"
+										name="Motivo_de_la_Baja__c"
+										onpicklistvalueselected={handlePicklistValueSelected}
+										picklistapiname="Motivo_de_la_Baja__c"
+										sobjectname="VisMed_Bajas__c"
+									></c-lightning-picklist-input>
+								</span>
+								<span class="slds-col slds-size_4-of-12">
+									<lightning-input
+										class="slds-form-element__control"
+										if:true={isTemporal}
+										label="Fecha de desactivación"
+										name="fechaDesactivacion"
+										onchange={handleDateChange}
+										placeholder="Fecha de desactivación"
+										type="date"
+										required
+									></lightning-input>
+								</span>
+								<span class="slds-col slds-size_4-of-12">
+									<lightning-input
+										class="slds-form-element__control"
+										if:true={isTemporal}
+										label="Fecha de reactivación"
+										name="fechaReactivacion"
+										onchange={handleDateChange}
+										placeholder="Fecha de reactivación"
+										type="date"
+										required
+									></lightning-input>
+								</span>
+								<br>
+								<br>
+								<span class="slds-col slds-size_12-of-12">
+									<lightning-textarea
+										label="Comentario"
+										name="comment"
+										onchange={handleCommentChange}
+										required
+									> </lightning-textarea>
+								</span>
+							</span>
+						</template>
+					</lightning-card>
+				</div>
+				<!------Footer Section-->
+				<div class="slds-modal__footer">
+					<lightning-button
+						if:true={isTransfer}
+						label="Confirmar"
+						onclick={doTransfer}
+						variant="brand"
+					>
+					</lightning-button>
+					<lightning-button
+						if:true={isShare}
+						label="Confirmar"
+						onclick={doShare}
+						variant="brand"
+					>
+					</lightning-button>
+					<lightning-button
+						if:true={isUnsubscribe}
+						label="Confirmar"
+						onclick={doUnsubscribe}
+						variant="brand"
+					>
+					</lightning-button>
+					&nbsp;
+					&nbsp;
+					<lightning-button
+						label="Cancelar"
+						onclick={closeModal}
+						variant="brand-outline"
+					>
+					</lightning-button>
+				</div>
+			</div>
+		</div>
+	</template>
+</template>

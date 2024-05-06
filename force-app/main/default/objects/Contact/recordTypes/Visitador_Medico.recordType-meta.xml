@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visitador_Medico</fullName>
+    <active>true</active>
+    <label>Visitador Medico</label>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Equipo__c</picklist>
+        <values>
+            <fullName>Adultos AMBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adultos Interior</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adultos Oncologia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alergia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dieta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metabolicos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metabólicos y Dieta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pediatricos General</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VisMed_Areas_Terap_uticas__c</picklist>
+        <values>
+            <fullName>Alergia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comunidad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dieta Cetogénica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instituciones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metabólicos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oncología</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pediatricos General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quilotorax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sin Asignar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VisMed_Equipo__c</picklist>
+        <values>
+            <fullName>Adultos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nicho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pediátricos</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

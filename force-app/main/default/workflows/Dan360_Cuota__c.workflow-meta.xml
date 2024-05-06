@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Dan360_AlertaVencimientoCuota48Horas</fullName>
+        <description>Alerta de vencimiento de cuota 48 horas antes.</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>clientes@nutricia.com.ar</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Dan360_OMS/Dan360_AlertaVencimientoCuotas</template>
+    </alerts>
+    <rules>
+        <fullName>Alerta Vencimiento de cuota</fullName>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.IsActive</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Alerta de correo, que se envía dos días antes de la Vigencia hasta</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Dan360_AlertaVencimientoCuota48Horas</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Dan360_Cuota__c.Dan360_VigenciaHasta__c</offsetFromField>
+            <timeLength>-2</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

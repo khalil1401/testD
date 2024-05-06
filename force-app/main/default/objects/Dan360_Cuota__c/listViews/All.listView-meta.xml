@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Dan360_Producto__c</columns>
+    <columns>Dan360_Cliente__c</columns>
+    <columns>Dan360_CanalComercial__c</columns>
+    <columns>Dan360_CanalDistribucion__c</columns>
+    <columns>Dan360_VigenciaDesde__c</columns>
+    <columns>Dan360_VigenciaHasta__c</columns>
+    <columns>Dan360_Cuota__c</columns>
+    <columns>Dan360_Saldo__c</columns>
+    <columns>Dan360_EstadoCuota__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <label>Todos</label>
+</ListView>

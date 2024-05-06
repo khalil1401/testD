@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_ReclamoDiferenciaPreciosYDesc</fullName>
+    <description>Reclamos por diferencia de precios y/o descuentos.</description>
+    <displayedFields>
+        <field>Dan360_Factura__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Dan360_Sucursal__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Reclamo por diferencia de precios y descuentos</label>
+</FieldSet>

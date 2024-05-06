@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_CanalComercial__c</fullName>
+    <description>Canal comercial de la cuenta</description>
+    <externalId>false</externalId>
+    <label>Canal Comercial</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Dan360_CanalComercial</valueSetName>
+    </valueSet>
+</CustomField>

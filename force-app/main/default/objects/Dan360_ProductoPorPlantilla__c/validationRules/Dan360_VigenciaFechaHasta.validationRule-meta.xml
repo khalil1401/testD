@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_VigenciaFechaHasta</fullName>
+    <active>false</active>
+    <description>Regla de validacion que verifica que la fecha de vigencia hasta sea mayor a vigencia desde</description>
+    <errorConditionFormula>Dan360_Vigencia__c &lt; Dan360_VigenciaDesde__c</errorConditionFormula>
+    <errorDisplayField>Dan360_Vigencia__c</errorDisplayField>
+    <errorMessage>La fecha de vigencia hasta debe ser mayor a la fecha de vigencia desde</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Reclamo__c</fullName>
+    <description>Reclamo al que se asocia el producto.</description>
+    <externalId>false</externalId>
+    <label>Reclamo</label>
+    <referenceTo>Case</referenceTo>
+    <relationshipLabel>Productos de reclamo</relationshipLabel>
+    <relationshipName>Productos_de_reclamo</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

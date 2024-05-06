@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_OCSinCaracteresEspeciales</fullName>
+    <active>false</active>
+    <description>El campo llamado &quot;Orden de Compra&quot; no podrá registrarse en un pedido con caracteres especiales y/o con espacios.</description>
+    <errorConditionFormula>NOT(REGEX( Orden_de_compra__c , &quot;^[a-zA-Z0-9_]*$&quot;))</errorConditionFormula>
+    <errorMessage>La orden de compra no debe contener caracteres especiales ni espacios.</errorMessage>
+</ValidationRule>

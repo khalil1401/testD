@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Restablecer contraseña comunidad</name>
+    <style>none</style>
+    <subject>¿Necesitas cambiar la contraseña?</subject>
+    <textOnly>Hola, estas recibiendo este correo porque solicitaste cambiar tu contraseña del Gestor de pedidos. Para cambiar tu contraseña, haz click en el botón de abajo.
+Muchas gracias.
+
+RESTABLECER CONTRASEÑA
+clientes.nutricia.com.ar</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

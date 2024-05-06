@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VisMed_Es_un_Visitador_Medico__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>field booleano para indicar si el usuario pertenece a la familia de visitadores y saber si debe contar en las querys.</description>
+    <externalId>false</externalId>
+    <label>Es un Visitador Medico</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Factura</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Facturas</value>
+    </caseValues>
+    <layouts>
+        <layout>Formato Factura</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Factura Comunidad</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Dan360_CrearReclamo</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Dan360_Crear_Reclamo</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

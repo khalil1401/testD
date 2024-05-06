@@ -1,0 +1,46 @@
+<!-- sldsValidatorIgnore -->
+<template>
+	<lightning-quick-action-panel header="Lista de Productos">
+    	<template if:true={products}>
+    		<c-search-product-list 
+				products={products}
+				selectedproducts={selectedProducts}
+    			onselect={handleSelectProductSearch}
+    		></c-search-product-list>
+    		<div style="overflow-y: auto; max-height: 40%">
+    			<lightning-datatable 
+				    selected-rows={selection}
+				    onrowselection={getSelected} 
+				    column-widths-mode='auto' 
+				    data={products} 
+				    columns={columns} 
+				    key-field="productoId"
+				    default-sort-direction={defaultSortDirection}
+				    sorted-direction={sortDirection}
+				    sorted-by={sortedBy}
+				    onsort={onHandleSort}
+			    ></lightning-datatable>
+				<div if:true={isLoading} class="slds-spinner_inline">
+					<lightning-spinner variant="brand" 
+									   alternative-text="Loading Cases"     
+									   size="medium">
+					</lightning-spinner>
+				</div>
+			</div>
+			<div>
+				<c-products-selected-list-to-template 
+			    	products={selectedProducts}
+					id={recordId}
+			    	onvalueschange={valuesChange}
+		    		onclose={closeQuickAction}
+		    		onunselect={unSelectProduct}
+		    	></c-products-selected-list-to-template >
+				
+			</div>
+		</template>
+		<!-- <br/>
+        <div class="slds-border_top">
+			<p>TOTAL: $ <lightning-formatted-number value={prectioTotal} format-style="decimal" maximum-fraction-digits="2" currency-code="USD"></lightning-formatted-number></p>
+		</div> -->
+	</lightning-quick-action-panel>
+</template>

@@ -1,0 +1,31 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 08-12-2021
+  @description       : 
+-->
+<template>
+	<label class="slds-form-element__label">
+		{label}
+	</label>
+	<div class="slds-select_container">
+		<select
+			class="slds-select"
+			onchange={handleValueChange}
+		>
+			<option value="">Seleccione</option>
+			<template
+				for:each={picklistEntries}
+				for:item="entry"
+			>
+				<option
+					key={entry.label}
+					value={entry.value}
+				>
+					{entry.label}
+				</option>
+			</template>
+		</select>
+	</div>
+</template>

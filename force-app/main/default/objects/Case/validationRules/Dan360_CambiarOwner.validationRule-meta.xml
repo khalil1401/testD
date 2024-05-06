@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_CambiarOwner</fullName>
+    <active>true</active>
+    <description>No cambiar propietario de un caso siendo perfil de comunidad</description>
+    <errorConditionFormula>AND(
+ISCHANGED(OwnerId),
+OR(
+$Profile.Name =  $CustomMetadata.Perfil__mdt.Clientes_CC.id__c ,
+$Profile.Name =  $CustomMetadata.Perfil__mdt.Gestor_de_pedidos.id__c ,
+$Profile.Name =  $CustomMetadata.Perfil__mdt.Partner_Community_User.id__c ,
+$Profile.Name =   $CustomMetadata.Perfil__mdt.Test_Reclamos.id__c 
+))</errorConditionFormula>
+    <errorMessage>No es posible cambiar el propietario de un Reclamo</errorMessage>
+</ValidationRule>

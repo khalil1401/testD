@@ -1,0 +1,132 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 17-09-2021
+  @last modified by  : Diego Valle
+  @last modified on  : 20-09-2021
+  @description       : 
+-->
+<aura:component
+    access="global"
+    controller="OrderController"
+    implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+>
+    <aura:attribute
+        name="orders"
+        type="List"
+    />
+
+    <aura:attribute
+        name="columns"
+        type="List"
+    />
+
+    <aura:attribute
+        name="canSave"
+        type="boolean"
+        default="true"
+    />
+
+    <aura:handler
+        action="{!c.onInit}"
+        name="init"
+        value="{!this}"
+    />
+
+    <!-- <aura:handler
+        event="aura:waiting"
+        action="{!c.waiting}"
+    />
+
+    <aura:handler
+        event="aura:doneWaiting"
+        action="{!c.doneWaiting}"
+    /> -->
+
+    <aura:attribute
+        name="HideSpinner"
+        type="Boolean"
+        default="false"
+    />
+
+    <aura:attribute
+        name="showModal"
+        type="boolean"
+        default="false"
+    />
+
+
+    <lightning:workspaceAPI aura:id="workspace" />
+
+    <lightning:notificationsLibrary aura:id="notification" />
+
+    <aura:attribute name="recordId" type="String" />
+
+    <lightning:card title="Órdenes retenidas por cuota a confirmar">
+        <aura:if isTrue="{!v.HideSpinner}">
+            <div class="slds-spinner_container">
+                <div
+                    class="slds-spinner--brand slds-spinner slds-spinner--large"
+                    role="alert"
+                >
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </aura:if>
+        <div>
+            <lightning:datatable
+                aura:id="retainedOrders"
+                columns="{! v.columns }"
+                data="{! v.orders }"
+                hideCheckboxColumn="false"
+                keyField="Id"
+                onrowselection="{!c.onSelect}"
+            />
+        </div>
+
+        
+
+        <aura:if isTrue="{!v.showModal}">
+            <section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick="{!c.closeWindow}">
+                        x
+                        <span class="slds-assistive-text">Cancel and close</span>
+                    </button>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <lightning:flow aura:id="flowConfirmarPeidos" onstatuschange="{!c.onEventChange}"/>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+        </aura:if>
+
+        <!-- <lightning:flow aura:id="flowConfirmarPeidos" /> -->
+        <div
+            class="slds-clearfix slds-align_absolute-center"
+            style="height:5rem"
+        >
+            <lightning:buttonGroup>
+                <lightning:button
+                    variant="brand"
+                    onclick="{!c.onRefresh}"
+                    label="Actualizar"
+                />
+                &nbsp;
+                &nbsp;
+                <lightning:button
+                    disabled="{!v.canSave}"
+                    label="Confirmar"
+                    onclick="{!c.onSave}"
+                    variant="brand"
+                />
+                &nbsp;
+                &nbsp;
+                <lightning:button
+                    label="Cancelar"
+                    onclick="{!c.onCancel}"
+                />
+            </lightning:buttonGroup>
+        </div>
+    </lightning:card>
+</aura:component>

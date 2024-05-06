@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_DireccionFacturacin_del__c</fullName>
+    <description>Campo para identificar cuenta en campo Lookup</description>
+    <externalId>false</externalId>
+    <formula>Dan360_Cliente__r.RecordType.Name + &quot;:&quot; + &quot; &quot; +  Dan360_Cliente__r.BillingStreet + &quot; &quot; +  Dan360_Cliente__r.BillingCity + &quot; &quot; +  Dan360_Cliente__r.BillingPostalCode</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Dirección Facturación</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

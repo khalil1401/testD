@@ -1,0 +1,7 @@
+<aura:component implements="forceCommunity:layout,forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="container1" type="Aura.Component[]" required="false"/>
+	<div class="slds-col slds-size_1-of-1">
+        {!v.container1}
+    </div>
+
+</aura:component>

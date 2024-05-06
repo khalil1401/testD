@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Order_Purchase_Order_Validation__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Activa o desactiva el proceso para validación órdenes de compra confirmadas el día actual para el cliente en turno.</description>
+    <externalId>false</externalId>
+    <label>Dan360 Order Purchase Order Validation</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

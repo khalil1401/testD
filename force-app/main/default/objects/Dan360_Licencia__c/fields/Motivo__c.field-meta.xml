@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo__c</fullName>
+    <description>Tipo de licencia/tiempo no promocional por el que se ausento el APM</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Motivo de ausencia</inlineHelpText>
+    <label>Motivo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Vacaciones</fullName>
+                <default>false</default>
+                <label>Vacaciones</label>
+            </value>
+            <value>
+                <fullName>Enfermedad</fullName>
+                <default>false</default>
+                <label>Enfermedad</label>
+            </value>
+            <value>
+                <fullName>Día de estudio</fullName>
+                <default>false</default>
+                <label>Día de estudio</label>
+            </value>
+            <value>
+                <fullName>Festivo</fullName>
+                <default>false</default>
+                <label>Festivo</label>
+            </value>
+            <value>
+                <fullName>Maternidad</fullName>
+                <default>false</default>
+                <label>Maternidad</label>
+            </value>
+            <value>
+                <fullName>Reunión con jefe</fullName>
+                <default>false</default>
+                <label>Reunión con jefe</label>
+            </value>
+            <value>
+                <fullName>Reunión de equipo</fullName>
+                <default>false</default>
+                <label>Reunión de equipo</label>
+            </value>
+            <value>
+                <fullName>Congreso</fullName>
+                <default>false</default>
+                <label>Congreso</label>
+            </value>
+            <value>
+                <fullName>Otro</fullName>
+                <default>false</default>
+                <label>Otro</label>
+            </value>
+            <value>
+                <fullName>Compensatorios</fullName>
+                <default>false</default>
+                <label>Compensatorios</label>
+            </value>
+            <value>
+                <fullName>Feriado provincial</fullName>
+                <default>false</default>
+                <label>Feriado provincial</label>
+            </value>
+            <value>
+                <fullName>Tiempos de traslado por gira</fullName>
+                <default>false</default>
+                <label>Tiempos de traslado por gira</label>
+            </value>
+            <value>
+                <fullName>Capacitacion equipo promocional (TA/EXTERNO)</fullName>
+                <default>false</default>
+                <label>Capacitacion equipo promocional (TA/EXTERNO)</label>
+            </value>
+            <value>
+                <fullName>Relevamiento de datos / Actividad de Fichero</fullName>
+                <default>false</default>
+                <label>Relevamiento de datos / Actividad de Fichero</label>
+            </value>
+            <value>
+                <fullName>Tareas comerciales</fullName>
+                <default>false</default>
+                <label>Tareas comerciales</label>
+            </value>
+            <value>
+                <fullName>Reunion por temas de acceso/BC</fullName>
+                <default>false</default>
+                <label>Reunion por temas de acceso/BC</label>
+            </value>
+            <value>
+                <fullName>Reunion de seguimiento con la TA</fullName>
+                <default>false</default>
+                <label>Reunion de seguimiento con la TA</label>
+            </value>
+            <value>
+                <fullName>Reunion con KAE/KAM</fullName>
+                <default>false</default>
+                <label>Reunion con KAE/KAM</label>
+            </value>
+            <value>
+                <fullName>Convención</fullName>
+                <default>false</default>
+                <label>Convención</label>
+            </value>
+            <value>
+                <fullName>Capacitaciones</fullName>
+                <default>false</default>
+                <label>Capacitaciones</label>
+            </value>
+            <value>
+                <fullName>Congresos</fullName>
+                <default>false</default>
+                <label>Congresos</label>
+            </value>
+            <value>
+                <fullName>Lanzamientos</fullName>
+                <default>false</default>
+                <label>Lanzamientos</label>
+            </value>
+            <value>
+                <fullName>Reunion con Auditores</fullName>
+                <default>false</default>
+                <label>Reunion con Auditores</label>
+            </value>
+            <value>
+                <fullName>Averiguacion licitaciones</fullName>
+                <default>false</default>
+                <label>Averiguacion licitaciones</label>
+            </value>
+            <value>
+                <fullName>Reunion de ciclo</fullName>
+                <default>false</default>
+                <label>Reunion de ciclo</label>
+            </value>
+            <value>
+                <fullName>Workshops de las diferentres TAs (Webinar, ateneos)</fullName>
+                <default>false</default>
+                <label>Workshops de las diferentres TAs (Webinar, ateneos)</label>
+            </value>
+            <value>
+                <fullName>Towhall</fullName>
+                <default>false</default>
+                <label>Towhall</label>
+            </value>
+            <value>
+                <fullName>Cumpleaños</fullName>
+                <default>false</default>
+                <label>Cumpleaños</label>
+            </value>
+            <value>
+                <fullName>Reunión con HCPS</fullName>
+                <default>false</default>
+                <label>Reunión con HCPS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo_de_Errores__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de Errores</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cliente - No es cliente EDI</fullName>
+                <default>false</default>
+                <label>Cliente - No es cliente EDI</label>
+            </value>
+            <value>
+                <fullName>Cliente - Sucursal inexistente</fullName>
+                <default>false</default>
+                <label>Cliente - Sucursal inexistente</label>
+            </value>
+            <value>
+                <fullName>Cliente - Sin marca EDI</fullName>
+                <default>false</default>
+                <label>Cliente - Sin marca EDI</label>
+            </value>
+            <value>
+                <fullName>Cliente - Cliente con Bloqueo</fullName>
+                <default>false</default>
+                <label>Cliente - Cliente con Bloqueo</label>
+            </value>
+            <value>
+                <fullName>Producto - Error en Producto</fullName>
+                <default>false</default>
+                <label>Producto - Error en Producto</label>
+            </value>
+            <value>
+                <fullName>Pedido - Sin orden de compra</fullName>
+                <default>false</default>
+                <label>Pedido - Sin orden de compra</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VisMed_Objetivo__c</fullName>
+    <description>Objetivo al que se relaciona la acción.</description>
+    <externalId>false</externalId>
+    <label>Objetivo</label>
+    <referenceTo>VisMed_Objetivo__c</referenceTo>
+    <relationshipLabel>Acciones</relationshipLabel>
+    <relationshipName>Acciones</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

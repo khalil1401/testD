@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_OrdenDeCompra__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campor que hace referncia a que el ciente requiere OC.</description>
+    <externalId>false</externalId>
+    <label>Orden de Compra</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

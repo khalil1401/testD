@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllOrders</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>Dan360_UnidadNegocio__c</columns>
+    <columns>Dan360_TipoDeCuenta__c</columns>
+    <columns>Dan360_Id_SAP__c</columns>
+    <columns>ORDERS.TOTAL_AMOUNT</columns>
+    <columns>Orden_de_compra__c</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <label>Todos los pedidos</label>
+</ListView>

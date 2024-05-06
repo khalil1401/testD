@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_ORDER_STATUS</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Dan360_Pedidos_por_cuota__c.Dan360_Cantidad__c</field>
+    </columns>
+    <columns>
+        <field>FK_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Dan360_Cuota__c.Dan360_CanalComercial__c</field>
+    </columns>
+    <columns>
+        <field>Dan360_Cuota__c.Dan360_EstadoCuota__c</field>
+    </columns>
+    <description>Reporte que indica lo pedidos que se han asociado a una cuota.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Dan360_Cuota__c.Dan360_Producto__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Dan360_Cuota__c.Dan360_Saldo__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Pedidos por cuota</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$Dan360_Cuota__c$Dan360_Pedidos_por_cuota__c@Dan360_Pedidos_por_cuota__c.Dan360_Pedido__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Dan360_Cuota__c.Dan360_FechaCreacion__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

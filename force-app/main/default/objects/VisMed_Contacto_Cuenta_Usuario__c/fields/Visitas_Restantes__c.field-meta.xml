@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visitas_Restantes__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Frecuencia__c &lt; 1, 
+   IF(Visitas_acumuladas__c &gt; 0 || Visitas_Realizadas__c &gt; 0, 0, Frecuencia__c),
+   IF(Frecuencia__c - Visitas_Realizadas__c &gt; 0, Frecuencia__c - Visitas_Realizadas__c, 0)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Visitas Restantes</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

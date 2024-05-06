@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Dan360_QuotaFileHeaders</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quota File Headers</shortDescription>
+        <value>Producto,Cuota,Cliente,Canal Comercial,Saldo,Vigencia desde,Vigencia hasta,Estado de cuota</value>
+    </labels>
+    <labels>
+        <fullName>Dan360_URLComunidad</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>URLComunidad</shortDescription>
+        <value>https://uatdanone-danone360.cs196.force.com</value>
+    </labels>
+    <labels>
+        <fullName>Errores</fullName>
+        <categories>Errores</categories>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Error Cuota Vigencia</shortDescription>
+        <value>Ya existe una cuota dentro del rango de vigencia para el mismo Producto y mismo Canal</value>
+    </labels>
+    <labels>
+        <fullName>Esquema_de_campos</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Esquema de campos</shortDescription>
+        <value>No se encontró el esquema de campos del objeto</value>
+    </labels>
+    <labels>
+        <fullName>Nombre_de_API</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Nombre de API</shortDescription>
+        <value>Debe ingresar el nombre del objeto</value>
+    </labels>
+    <labels>
+        <fullName>Nombre_de_campos</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Nombre de campos</shortDescription>
+        <value>No fue posible obtener los nombres de campos del objeto</value>
+    </labels>
+    <labels>
+        <fullName>Orden_de_Compra_Duplicada</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>Orden de Compra Duplicada</shortDescription>
+        <value>Ya existe un pedido con esta orden de compra, diligencia otra orden de compra o deje el campo en blanco.</value>
+    </labels>
+    <labels>
+        <fullName>URL</fullName>
+        <language>es</language>
+        <protected>false</protected>
+        <shortDescription>URL</shortDescription>
+        <value>https://dsnutritionsf2--dev.my.salesforce.com</value>
+    </labels>
+</CustomLabels>

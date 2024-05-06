@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>COBERTURA_DE_PACIENTES_PREDOMINANTE__c</fullName>
+    <externalId>false</externalId>
+    <label>Cobertura De Pacientes Predominante</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sin Asignar</fullName>
+                <default>true</default>
+                <label>Sin Asignar</label>
+            </value>
+            <value>
+                <fullName>OOSS Gremiales</fullName>
+                <default>false</default>
+                <label>OOSS Gremiales</label>
+            </value>
+            <value>
+                <fullName>Prepagas</fullName>
+                <default>false</default>
+                <label>Prepagas</label>
+            </value>
+            <value>
+                <fullName>Sin Cobertura</fullName>
+                <default>false</default>
+                <label>Sin Cobertura</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

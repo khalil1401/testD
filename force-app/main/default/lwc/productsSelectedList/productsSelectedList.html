@@ -1,0 +1,46 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-quick-action-panel header="Productos Seleccionados">
+        <template if:true={products}>
+            <div>
+            <lightning-datatable 
+                column-widths-mode='auto' 
+                data={products} 
+                columns={columns} 
+                oncellchange={guardarValores}
+                onrowaction={handleRowAction}
+                key-field="productoId"
+                hide-checkbox-column
+            ></lightning-datatable>
+            </div>
+        </template>
+        <div if:true={isDisabled} class="slds-spinner_inline spinner-padding">
+            <lightning-spinner variant="brand" 
+                               alternative-text="Loading Cases"     
+                               size="medium">
+            </lightning-spinner>
+        </div>
+        <template if:true={showButton}>
+            <div class="actionsContainer button-container-inner slds-float_right">
+               
+                <lightning-button 
+                    label="Cancelar" 
+                    title="Cancelar" 
+                    onclick={handleClose} 
+                    class="slds-m-left_x-small"
+                ></lightning-button>
+
+                <lightning-button 
+                    variant="brand" 
+                    label="Guardar" 
+                    title="Guardar"
+                    disabled={isDisabled} 
+                    onclick={handleSave} 
+                    class="slds-m-left_x-small"
+                ></lightning-button>
+            </div>
+        </template>
+      </lightning-quick-action-panel>
+</template>
+
+<!-- suppress-bottom-bar -->

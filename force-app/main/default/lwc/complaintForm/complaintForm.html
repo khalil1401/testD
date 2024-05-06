@@ -1,0 +1,77 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 17-11-2021
+  @description       : 
+-->
+<template>
+    <!-- <lightning-quick-action-panel header={title}> -->
+    <lightning-record-edit-form
+        object-api-name="Case"
+        record-type-id={recordtypeid}
+    >
+        <!-- onsuccess={handleSuccess} -->
+        <lightning-messages></lightning-messages>
+
+        <div if:true={isDisabled} class="slds-spinner_inline spinner-padding">
+            <lightning-spinner variant="brand" 
+                               alternative-text="Loading Cases"     
+                               size="medium">
+            </lightning-spinner>
+        </div>
+
+        <template
+            for:each={inputFieldAPIs}
+            for:item="item"
+        >
+            <lightning-input-field
+                field-name={item.fieldPath}
+                name={item.fieldPath}
+                key={item.fieldPath}
+                id={item.fieldPath}
+                required={item.required}
+                disabled={item.disabled}
+                value={item.value}
+                if:false={item.hide}
+            >
+            </lightning-input-field>
+        </template>
+    </lightning-record-edit-form>
+    <!--componente de productos-->
+    <c-complaint-product-table
+        if:true={showProductTable}
+        complainttypename={complainttypename}
+        facturaid={invoiceid}
+        objapiname={objapiname}
+        ontotalprice={totalPriceCalc}
+    ></c-complaint-product-table>
+    <template if:true={showTotal}>
+        <div class="slds-border_top">
+            <p>TOTAL: $ <lightning-formatted-number value={prectioTotal} format-style="decimal" maximum-fraction-digits="2" currency-code="USD"></lightning-formatted-number></p>
+        </div>
+    </template>
+    <div slot="footer">
+        <div class="slds-clearfix">
+            <div class="slds-align_absolute-center">
+                <lightning-button
+                    class="slds-m-left_x-small"
+                    label="Cancelar"
+                    onclick={closeAction}
+                    title="Cancelar"
+                    variant="brand-outline"
+                ></lightning-button>
+
+                <lightning-button
+                    class="slds-m-left_x-small"
+                    label="Crear reclamo"
+                    onclick={onSave}
+                    title="Continuar"
+                    disabled={isDisabled} 
+                    variant="brand"
+                ></lightning-button>
+            </div>
+        </div>
+    </div>
+    <!-- </lightning-quick-action-panel> -->
+</template>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>CaseNumber</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Dan360_CustomerService</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>El reclamo debe estar en estado &quot;Pendiente&quot;.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Controlado</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>GotoNextStep</ifCriteriaNotMet>
+        <label>Aprobación Customer Service</label>
+        <name>Dan360_AprobacionCustomerService</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Dan360_GerenteVentas</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <description>El reclamo debe estar en estado &quot;Controlado&quot;.</description>
+        <entryCriteria>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Controlado</value>
+            </criteriaItems>
+        </entryCriteria>
+        <label>Aprobación Gerente de Ventas</label>
+        <name>Dan360_AprobacionGerenteVentas</name>
+        <rejectBehavior>
+            <type>RejectRequest</type>
+        </rejectBehavior>
+    </approvalStep>
+    <description>Proceso de aprobación para los reclamos relacionados a devoluciones de los pedidos procesados.</description>
+    <emailTemplate>Dan360_OMS/Dan360_SolicitudAprobacionReclamos</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Case.RecordType</field>
+            <operation>equals</operation>
+            <value>Devoluciones de pedidos sin cargo,Devoluciones</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>En Carga</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Dan360_OrderedDate</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Dan360_OrderGetEnd</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Dan360_OrderGetStart</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Dan360_ReclamosAutorizado</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Dan360_Rechazado</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Dan360_ActualizarRolCustomer_Service</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Dan360_EstadoControlado</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>Aprobación Reclamos de Devolución</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>false</showApprovalHistory>
+</ApprovalProcess>

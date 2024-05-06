@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lista_GLN</fullName>
+    <columns>MasterLabel</columns>
+    <columns>GLN__c</columns>
+    <columns>Nombre__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Lista GLN</label>
+    <language>es</language>
+</ListView>

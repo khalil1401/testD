@@ -1,0 +1,30 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 16-03-2022
+  @description       : 
+-->
+<aura:component
+	access="global"
+	implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,forceCommunity:availableForAllPageTypes"
+>
+	<aura:html tag="style">
+		.slds-modal__container {
+		width: 30vw !important;
+		min-width: 30vw !important;
+		max-width: 50vw !important;
+		}
+	
+		.slds-modal__content {
+		height: 30vh !important;
+		min-height: 30vh !important;
+		max-height: 50vh !important;
+		}
+	
+		.slds-modal__footer{
+		display: none;
+		}
+	</aura:html>
+	<c:prescriptionDataLoader></c:prescriptionDataLoader>
+</aura:component>

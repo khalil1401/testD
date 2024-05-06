@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <description>Valida si la actualización del saldo de la cuota cubre la totalidad del pedido.</description>
+        <name>Dan360_CubreTotalidadDelPedido</name>
+        <label>Cubre totalidad del pedido?</label>
+        <locationX>1289</locationX>
+        <locationY>208</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Dan360_CubreLaTotalidad</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Dan360_Saldo__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>Dan360_RecorreProductosDePedido.Quantity</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Dan360_ActualizaPedidoVerde</targetReference>
+            </connector>
+            <label>Cubre la totalidad</label>
+        </rules>
+        <rules>
+            <name>Dan360_CubreParcialmente</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Dan360_Saldo__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Dan360_Saldo__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>Dan360_RecorreProductosDePedido.Quantity</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Dan360_ActualizaPedidoAmarillo</targetReference>
+            </connector>
+            <label>Cubre parcialmente</label>
+        </rules>
+        <rules>
+            <name>Dan360_NoCubreNada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Dan360_Saldo__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Dan360_ActualizaPedidoRojo</targetReference>
+            </connector>
+            <label>No cubre nada</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Valida si los pedidos del producto de la cuota están retenidos.</description>
+        <name>Dan360_ElPedidoEstaRetenidoPorCuota</name>
+        <label>El pedido está retenido por cuota?</label>
+        <locationX>986</locationX>
+        <locationY>205</locationY>
+        <defaultConnector>
+            <targetReference>Dan360_RecorreProductosDePedido</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No es retenido por cuota</defaultConnectorLabel>
+        <rules>
+            <name>Dan360_PedidoRetenidoPorCuota</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Dan360_RecorreProductosDePedido.Order.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Retenido por cuota</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Dan360_CubreTotalidadDelPedido</targetReference>
+            </connector>
+            <label>Pedido retenido por cuota</label>
+        </rules>
+    </decisions>
+    <description>Flujo que actualiza el color del semáforo en los pedidos retenidos por cuota, una vez se actualiza el saldo de la cuota correspondiente.</description>
+    <interviewLabel>Actualización Semáforos en Pedidos {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Actualización Semáforos en Pedidos</label>
+    <loops>
+        <name>Dan360_RecorreProductosDePedido</name>
+        <label>Recorre productos de pedido</label>
+        <locationX>694</locationX>
+        <locationY>203</locationY>
+        <collectionReference>Dan360_ObtenerProductosDePedido</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Dan360_ElPedidoEstaRetenidoPorCuota</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Obtener productos de pedido</description>
+        <name>Dan360_ObtenerProductosDePedido</name>
+        <label>Obtener productos de pedido</label>
+        <locationX>563</locationX>
+        <locationY>204</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Dan360_RecorreProductosDePedido</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Product2Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Dan360_Producto__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>OrderItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Actualiza el semáforo del pedido a amarillo</description>
+        <name>Dan360_ActualizaPedidoAmarillo</name>
+        <label>Actualiza pedido a Amarillo</label>
+        <locationX>986</locationX>
+        <locationY>350</locationY>
+        <connector>
+            <targetReference>Dan360_RecorreProductosDePedido</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Dan360_RecorreProductosDePedido.OrderId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Dan360_SemaforoPicklist__c</field>
+            <value>
+                <stringValue>Amarillo</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Order</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Actualiza el semáforo del pedido a rojo</description>
+        <name>Dan360_ActualizaPedidoRojo</name>
+        <label>Actualiza pedido a Rojo</label>
+        <locationX>1103</locationX>
+        <locationY>598</locationY>
+        <connector>
+            <targetReference>Dan360_RecorreProductosDePedido</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Dan360_RecorreProductosDePedido.OrderId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Dan360_SemaforoPicklist__c</field>
+            <value>
+                <stringValue>Rojo</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Order</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Actualiza el semáforo del pedido a verde</description>
+        <name>Dan360_ActualizaPedidoVerde</name>
+        <label>Actualiza pedido a verde</label>
+        <locationX>983</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Dan360_RecorreProductosDePedido</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Dan360_RecorreProductosDePedido.OrderId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Dan360_SemaforoPicklist__c</field>
+            <value>
+                <stringValue>Verde</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Order</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>107</locationY>
+        <connector>
+            <targetReference>Dan360_ObtenerProductosDePedido</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Dan360_Saldo__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Dan360_EstadoCuota__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Activa</stringValue>
+            </value>
+        </filters>
+        <object>Dan360_Cuota__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

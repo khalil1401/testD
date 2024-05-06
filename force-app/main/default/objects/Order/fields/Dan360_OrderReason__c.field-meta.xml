@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_OrderReason__c</fullName>
+    <description>Razón por la cuál se genera un pedido sin cargo.</description>
+    <externalId>false</externalId>
+    <label>Razón del pedido</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AT3</fullName>
+                <default>false</default>
+                <label>Beneficios Empleados</label>
+            </value>
+            <value>
+                <fullName>AF7</fullName>
+                <default>false</default>
+                <label>Donaciones</label>
+            </value>
+            <value>
+                <fullName>SMA</fullName>
+                <default>false</default>
+                <label>Marketing Adultos</label>
+            </value>
+            <value>
+                <fullName>SMC</fullName>
+                <default>false</default>
+                <label>Marketing Consumer</label>
+            </value>
+            <value>
+                <fullName>SMP</fullName>
+                <default>false</default>
+                <label>Marketing Pediátrico</label>
+            </value>
+            <value>
+                <fullName>APP</fullName>
+                <default>false</default>
+                <label>Promoción Farmacias</label>
+            </value>
+            <value>
+                <fullName>APN</fullName>
+                <default>false</default>
+                <label>Reclamo de Calidad-Arg</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

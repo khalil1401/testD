@@ -1,0 +1,54 @@
+<template>
+    <div style="background-color: white !important;border-radius: 5px 5px 5px 5px; padding-bottom: 1%;">
+        <!-- Filtros -->
+        <div class="slds-grid slds-grid_vertical-align-center">
+            <div class="slds-col slds-size_3-of-12 slds-p-around_medium">
+                <lightning-combobox
+                    name="Metadata"
+                    label="Metadata"
+                    value={metadataSelected}
+                    placeholder="Selecciona la Metadata"
+                    options={optionsMetadata}
+                    onchange={handleFilterMetadataChange} >
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_3-of-12 slds-p-around_medium slds-align_absolute-center">
+                 <template if:true={showAddButton}>
+                    <lightning-button label="Agregar Cliente" slot="actions" icon-name="utility:adduser" onclick={addRow}></lightning-button>                     
+                 </template>  
+                <!-- <lightning-button
+                    label="Guardar"
+                    title="Guardar Registros"
+                    onclick={handleSaveClick}
+                    disabled={disableSave}
+                    class="slds-m-left_x-small"
+                    variant="brand">
+                </lightning-button> -->
+            </div>
+        </div>
+        <!-- Tabla -->
+        <div>
+            <lightning-datatable
+                class="wrapped-header-datatable"
+                key-field="id"
+                columns={columns}
+                data={data}
+                hide-checkbox-column=true
+                show-row-number-column="true"
+                default-sort-direction={defaultSortDirection}
+                sorted-direction={sortDirection}
+                sorted-by={sortedBy}
+                onsort={onHandleSort}
+                onsave={handleSave}
+                draft-values={draftValues}>    
+            </lightning-datatable>
+           <!--  <template if:true={showAddButton}>
+                <lightning-button label="Agregar Cliente" slot="actions" icon-name="utility:adduser" onclick={addRow}></lightning-button>                     
+            </template>   --> 
+            <template if:true={showSpinner}>
+                <lightning-spinner alternative-text="Loading" variant="brand" size="medium">
+                </lightning-spinner>                   
+            </template>
+        </div>
+    </div>
+</template>

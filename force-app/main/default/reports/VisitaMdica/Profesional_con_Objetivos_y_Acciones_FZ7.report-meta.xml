@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Dan360_Interacciones__c$Name</field>
+    </columns>
+    <columns>
+        <field>Dan360_Interacciones__c$Profesional__c</field>
+    </columns>
+    <columns>
+        <field>Dan360_Interacciones__c$VisMed_APM__c</field>
+    </columns>
+    <columns>
+        <field>Dan360_Interacciones__c.Objetivos_y_Acciones_del_Profesional__r$Objetivo__c</field>
+    </columns>
+    <columns>
+        <field>Dan360_Interacciones__c.Objetivos_y_Acciones_del_Profesional__r$Accion__c</field>
+    </columns>
+    <columns>
+        <field>Dan360_Interacciones__c$VisMed_Fecha__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Profesional con Objetivos y Acciones</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Objetivos_y_Acciones_por_Profesional__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Dan360_Interacciones__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

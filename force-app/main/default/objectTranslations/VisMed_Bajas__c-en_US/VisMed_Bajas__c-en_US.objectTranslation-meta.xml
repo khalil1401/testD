@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bajas</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bajas</value>
+    </caseValues>
+    <layouts>
+        <layout>Baja Profesional</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Baja Seguimiento</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Bajas Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label></label>
+        <name>Institucion</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Otro_Profesional</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Profesional_de_la_Salud</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Seguimiento</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

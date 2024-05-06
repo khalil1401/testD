@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:appHostable" controller="sendOrderToSapController">
+    <aura:attribute name="recordId" type="String" />
+    <div class="slds-media slds-theme_default">
+        <div class="slds-align_absolute-center">
+            <lightning:button  class="slds-m-around_x-small" variant="brand" label="Enviar Reclamo a SAP" title="Enviar Reclamo a SAP" onclick="{! c.sendCase }" />
+        </div>	
+    </div>
+</aura:component>

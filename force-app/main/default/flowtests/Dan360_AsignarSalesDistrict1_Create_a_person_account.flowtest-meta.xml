@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowApiName>Dan360_AsignarSalesDistrict1</flowApiName>
+    <label>Create a person account</label>
+    <testPoints>
+        <elementApiName>Start</elementApiName>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordInitial</type>
+            <value>
+                <sobjectValue>{&quot;COBERTURA_DE_PACIENTES_PREDOMINANTE__c&quot;:&quot;Sin Asignar&quot;,&quot;COLOR_HCP__c&quot;:&quot;Sin Asignar&quot;,&quot;Como_trabaja__c&quot;:&quot;Sin Asignar&quot;,&quot;Dan360_Habilitado__c&quot;:false,&quot;Dan360_OrdenDeCompra__c&quot;:false,&quot;Editable__c&quot;:false,&quot;FirstName&quot;:&quot;eze&quot;,&quot;INSTITUCION_TOP__c&quot;:false,&quot;LastName&quot;:&quot;test&quot;,&quot;Matricula_Nacional__c&quot;:737372,&quot;Name&quot;:&quot;eze test&quot;,&quot;OwnerId&quot;:&quot;005030000026RGvAAM&quot;,&quot;PAC_0_12_MESES_SEM_C_COB_SOC_C_APLV__c&quot;:&quot;Sin Asignar&quot;,&quot;PAC_0_12_MESES_SEM_C_COB_SOC__c&quot;:&quot;Sin Asignar&quot;,&quot;PAC_0_12_MESES_SEM_SIN_COB_SOC_C_APLV__c&quot;:&quot;Sin Asignar&quot;,&quot;PAC_0_12_MESES_SEM_SIN_COB_SOC__c&quot;:&quot;Sin Asignar&quot;,&quot;PAC_13_24_MESES_SEM_C_COB_SOC_C_APLV__c&quot;:&quot;0&quot;,&quot;PAC_13_24_MESES_SEM_C_COB_SOC__c&quot;:&quot;Sin Asignar&quot;,&quot;PAC_13_24_MESES_SEM_SIN_COB_SOC__c&quot;:&quot;Sin Asignar&quot;,&quot;Primera_especialidad__c&quot;:&quot;Alergista&quot;,&quot;Profesional_Activo__c&quot;:true,&quot;Promedio_de_pacientes_Nicho__c&quot;:&quot;Sin Asignar&quot;,&quot;RecordTypeId&quot;:&quot;0120n0000001ziFAAQ&quot;,&quot;TIPO_HCP__c&quot;:&quot;Sin Asignar&quot;,&quot;Trabaja_en_Institucion_Top__c&quot;:true}</sobjectValue>
+            </value>
+        </parameters>
+    </testPoints>
+    <testPoints>
+        <assertions>
+            <conditions>
+                <leftValueReference>EsPersonAccount</leftValueReference>
+                <operator>WasVisited</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <assertions>
+            <conditions>
+                <leftValueReference>Actualizar_First_and_Last_Name</leftValueReference>
+                <operator>WasVisited</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <elementApiName>Finish</elementApiName>
+    </testPoints>
+</FlowTest>

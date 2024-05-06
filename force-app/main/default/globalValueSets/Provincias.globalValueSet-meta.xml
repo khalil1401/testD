@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Buenos Aires</fullName>
+        <default>false</default>
+        <label>Buenos Aires</label>
+    </customValue>
+    <customValue>
+        <fullName>CABA</fullName>
+        <default>false</default>
+        <label>CABA</label>
+    </customValue>
+    <customValue>
+        <fullName>Catamarca</fullName>
+        <default>false</default>
+        <label>Catamarca</label>
+    </customValue>
+    <customValue>
+        <fullName>Chaco</fullName>
+        <default>false</default>
+        <label>Chaco</label>
+    </customValue>
+    <customValue>
+        <fullName>Chubut</fullName>
+        <default>false</default>
+        <label>Chubut</label>
+    </customValue>
+    <customValue>
+        <fullName>Córdoba</fullName>
+        <default>false</default>
+        <label>Córdoba</label>
+    </customValue>
+    <customValue>
+        <fullName>Corrientes</fullName>
+        <default>false</default>
+        <label>Corrientes</label>
+    </customValue>
+    <customValue>
+        <fullName>Entre Ríos</fullName>
+        <default>false</default>
+        <label>Entre Ríos</label>
+    </customValue>
+    <customValue>
+        <fullName>Formosa</fullName>
+        <default>false</default>
+        <label>Formosa</label>
+    </customValue>
+    <customValue>
+        <fullName>Jujuy</fullName>
+        <default>false</default>
+        <label>Jujuy</label>
+    </customValue>
+    <customValue>
+        <fullName>La Pampa</fullName>
+        <default>false</default>
+        <label>La Pampa</label>
+    </customValue>
+    <customValue>
+        <fullName>La Rioja</fullName>
+        <default>false</default>
+        <label>La Rioja</label>
+    </customValue>
+    <customValue>
+        <fullName>Mendoza</fullName>
+        <default>false</default>
+        <label>Mendoza</label>
+    </customValue>
+    <customValue>
+        <fullName>Misiones</fullName>
+        <default>false</default>
+        <label>Misiones</label>
+    </customValue>
+    <customValue>
+        <fullName>Neuquén</fullName>
+        <default>false</default>
+        <label>Neuquén</label>
+    </customValue>
+    <customValue>
+        <fullName>Río Negro</fullName>
+        <default>false</default>
+        <label>Río Negro</label>
+    </customValue>
+    <customValue>
+        <fullName>Salta</fullName>
+        <default>false</default>
+        <label>Salta</label>
+    </customValue>
+    <customValue>
+        <fullName>San Juan</fullName>
+        <default>false</default>
+        <label>San Juan</label>
+    </customValue>
+    <customValue>
+        <fullName>San Luis</fullName>
+        <default>false</default>
+        <label>San Luis</label>
+    </customValue>
+    <customValue>
+        <fullName>Santa Cruz</fullName>
+        <default>false</default>
+        <label>Santa Cruz</label>
+    </customValue>
+    <customValue>
+        <fullName>Santa Fe</fullName>
+        <default>false</default>
+        <label>Santa Fe</label>
+    </customValue>
+    <customValue>
+        <fullName>Santiago del Estero</fullName>
+        <default>false</default>
+        <label>Santiago del Estero</label>
+    </customValue>
+    <customValue>
+        <fullName>Tierra del Fuego</fullName>
+        <default>false</default>
+        <label>Tierra del Fuego</label>
+    </customValue>
+    <customValue>
+        <fullName>Tucumán</fullName>
+        <default>false</default>
+        <label>Tucumán</label>
+    </customValue>
+    <masterLabel>Provincias</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

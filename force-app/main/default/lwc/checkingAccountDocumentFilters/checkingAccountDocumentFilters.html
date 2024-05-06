@@ -1,0 +1,79 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 28-03-2022
+  @description       : 
+-->
+<template>
+	<lightning-card title="Reporte de cuenta corriente">
+		<div class="slds-grid slds-gutters slds-wrap">
+			<template
+				for:each={inputFields}
+				for:item="item"
+			>
+				<lightning-card
+					class="slds-col slds-size_4-of-12"
+					key={item.fieldPath}
+				>
+					<lightning-input
+						id={item.fieldPath}
+						if:true={item.isTextOrDate}
+						class="slds-form-element__control"
+						field-name={item.fieldPath}
+						key={item.fieldPath}
+						label={item.label}
+						max={item.max}
+						message-when-range-overflow={item.messageWhenRangeOverflow}
+						name={item.fieldPath}
+						onchange={handleChange}
+						type={item.type}
+					>
+					</lightning-input>
+
+					<c-lightning-picklist-input
+						if:true={item.isPicklist}
+						class="slds-form-element__control"
+						label={item.label}
+						name={item.fieldPath}
+						onpicklistvalueselected={handlePicklistValueSelected}
+						picklistapiname={item.picklistApiName}
+						sobjectname={item.sobjectName}
+					></c-lightning-picklist-input>
+
+					<c-lightning-reference-input
+						id={item.fieldPath}
+						if:true={item.isReference}
+						class="slds-form-element__control"
+						field-name={item.fieldPath}
+						label={item.label}
+						name={item.fieldPath}
+						referenceapiname={item.fieldPath}
+						sobjectname={item.sobjectName}
+						onreferenceremoved={handleReferenceValueRemoved}
+						onreferenceselected={handleReferenceValueSelected}
+						cliente={recordId}
+					>
+					</c-lightning-reference-input>
+				</lightning-card>
+			</template>
+		</div>
+	</lightning-card>
+
+	<lightning-card class="slds-clearfix slds-align_absolute-center">
+		<lightning-button
+			disabled={searchdisabled}
+			label="Consultar"
+			variant="brand"
+			onclick={handleSearch}
+		></lightning-button>
+		&nbsp;
+		&nbsp;
+		<lightning-button
+			disabled={disabledownload}
+			label="Exportar CSV"
+			variant="brand-outline"
+			onclick={handleDownloadCsvFile}
+		></lightning-button>
+	</lightning-card>
+</template>

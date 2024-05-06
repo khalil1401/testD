@@ -1,0 +1,92 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId"
+                controller="OrderController">
+    <aura:html tag="style">
+        .slds-modal__container {
+        width: 60vw !important;
+        max-width: 60vw !important;
+        }
+
+        .slds-modal__content {
+        height: 60vh !important;
+        max-height: 60vh !important;
+        }
+
+        .slds-modal__footer{
+        display: none;
+        }
+    </aura:html>
+    <!--aura:handler name="init" value="{!this}" action="{!c.doInit}"/-->
+
+    <aura:attribute name="recordId" type="String" />  
+    <aura:attribute name="fields"  type="List" />
+    <aura:attribute name="accessRecord"  type="Boolean" default="false"/>
+    <aura:attribute name="orderShowData" type="Object"/>
+    <aura:attribute name="orderShowDataError" type="String"/> 
+    <aura:attribute name="isDisabled" type = "boolean" default="false"/>
+	<aura:attribute name="enableSpinner" type = "boolean" default="true"/>
+    
+    <force:recordData aura:id="orderData"
+        recordId="{!v.recordId}"
+        fields="RecordType.DeveloperName"
+        targetFields ="{!v.orderShowData}"
+        targetError="{!v.orderShowDataError}"
+        recordUpdated="{!c.handleUpdate }"
+    />
+
+    <lightning:notificationsLibrary aura:id="notifLib" />
+    
+    <aura:if isTrue="{!v.enableSpinner}">
+        <div class="slds-spinner slds-spinner_inline" style="height:6rem;position:relative">
+                    <lightning:spinner variant="brand" 
+                                        alternative-text="Loading Cases"     
+                                        size="medium" />
+        </div>
+    <aura:set attribute="else">    
+    	<aura:if isTrue="{!v.accessRecord}">    
+    		<lightning:recordEditForm aura:id="duplicateOrderFormEdit"
+                        	recordId="{!v.recordId}"
+                        	objectApiName="Order"
+                        	onsubmit="{!c.duplicateOrder}">
+        		<div class="slds-grid slds-wrap slds-grid_align-space">
+            		<aura:iteration items="{!v.fields}" var="field">
+                		<div class="slds-size_1-of-2">
+                    		<lightning:inputField 
+                        		fieldName="{!field}" 
+                        		disabled="{!field == 'Status' || field == 'Dan360_UnidadNegocio__c' ? true : false}"
+                    		/>
+                		</div>
+            		</aura:iteration>
+        		</div>
+        		<aura:if isTrue="{!v.isDisabled}">
+                		<div class="slds-spinner slds-spinner_inline" style="height:6rem;position:relative">
+                    		<lightning:spinner variant="brand" 
+                                        alternative-text="Loading Cases"     
+                                        size="medium" />
+                		</div>
+            		<aura:set attribute="else">
+                		<div class="slds-align_absolute-center slds-m-vertical_large">
+                    		<lightning:button variant="brand-outline" label="Cancel" onclick="{!c.onCancel}" />
+                    		<lightning:button variant="brand" label="Save" type="submit" disabled="{!v.isDisabled}"/>
+                		</div>
+            		</aura:set>
+        		</aura:if>
+    		</lightning:recordEditForm>
+         <aura:set attribute="else">
+            <h2>No tiene acceso para duplicar este pedido</h2>
+        </aura:set> 
+ 		</aura:if> 
+    </aura:set>
+    </aura:if>
+    <!--<aura:if isTrue="{!!v.accessRecord}">
+        <h2>No tiene acceso para duplicar este pedido</h2>
+    </aura:if>-->
+    <!--lightning:recordForm aura:id="duplicateOrderForm"
+                          recordId="{!v.recordId}"
+                          objectApiName="Order"
+                          layoutType="Full"
+                          mode="edit"
+                          columns="2"
+                          onsubmit="{!c.duplicateOrder}"
+                          oncancel="{!c.onCancel}">
+    </lightning:recordForm-->    
+</aura:component>

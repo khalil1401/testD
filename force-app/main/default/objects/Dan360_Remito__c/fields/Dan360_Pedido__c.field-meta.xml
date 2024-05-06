@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Pedido__c</fullName>
+    <description>Pedido al cual está relacionado el remito.</description>
+    <externalId>false</externalId>
+    <label>Pedido</label>
+    <referenceTo>Order</referenceTo>
+    <relationshipLabel>Remitos</relationshipLabel>
+    <relationshipName>Remitos</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

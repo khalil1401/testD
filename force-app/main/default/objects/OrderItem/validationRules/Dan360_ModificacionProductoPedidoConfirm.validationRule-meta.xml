@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_ModificacionProductoPedidoConfirm</fullName>
+    <active>true</active>
+    <description>regla de validación que no permite modificar productos de un pedido confirmado.</description>
+    <errorConditionFormula>OR(
+AND( 
+ISPICKVAL(Order.Status, &quot;Retenido por cuota&quot;),
+NOT($Permission.Edit_Orders_Retenidas) 
+),
+AND(ISPICKVAL(Order.Status, &quot;Borrador&quot;),
+$Permission.Sin_edicion_de_pedidos_en_borrador 
+) 
+)</errorConditionFormula>
+    <errorMessage>No posee permiso para editar este pedido.</errorMessage>
+</ValidationRule>

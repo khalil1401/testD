@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_CustomerSalesArea__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Customer Sales Area relacionado al pedido</description>
+    <externalId>false</externalId>
+    <label>Customer Sales Area</label>
+    <referenceTo>Dan360_CustomerSalesArea__c</referenceTo>
+    <relationshipLabel>Pedidos</relationshipLabel>
+    <relationshipName>Pedidos</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

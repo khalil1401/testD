@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+</head>  
+<body bgcolor="#f3f2f0" text="#181818" style="-webkit-text-size-adjust:none;background-color : #FFFFFF; font-family: system-ui, sans-serif; line-height : 100%; font-size : 14px; color : #6E6E6E; padding : 0px; ">
+  <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+      <td align="center">
+        <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center">
+          <tr>
+            <td>
+              <table class="tb_properties border_style" style="border : 0px solid transparent;font-size : 14px; font-family: system-ui, sans-serif; line-height : 100%; color : #6E6E6E; "
+                cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                  <td>
+                    <table class="email-logo global-width" width="100%" bgcolor="#FFFFFF" style="text-align: center; min-width: 100%;">
+                        <tr>
+                            <td width="100%" style="width: 100%; padding-top: 8px; padding-bottom: 1px;">
+                              <a target="_blank"><img src="https://sndigitalassets.s3.sa-east-1.amazonaws.com/OMS/LOGOS/OMS-Logo-Nutricia%282022-07-18%29.png" alt="Nutricia"></a>
+                            </td>
+                        </tr>
+                    </table>
+                  </td>
+                </tr>
+                      </table>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td align="center" class="main-content" valign="top">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%" class="container123" style="width:640px" align="center">
+                      <tbody>
+                        <tr>
+                          <td align="left" valign="top">
+                            <table cellspacing="0" cellpadding="0" style="width:100%">
+                              <tbody>
+                                <tr>
+                                  <td class="responsive-td" valign="top" style="width: 100%;">
+                                    <div data-type="slot" data-key="3jse35uqtyp" data-label="Drop blocks or content here">
+                                      <table cellspacing="0" cellpadding="0" border="0" width="100%" class="email-content global-width" align="center" style="text-align: center;width: 100%;">
+                                          <tr>
+                                            <td class="email-content_inner" style="padding-top: 20px;padding-bottom: 20px;">
+                                              <table  cellspacing="0" cellpadding="0" border="0" width="600px" bgcolor="#FFFFFF" align="center" class="container123" style="width: auto; font: 14px/28px; letter-spacing: 0.55px; text-align: center;  margin: 0 auto; border: 30px">
+                                                <tr>
+                                                  <td style="padding: 10px 10% 1px;">
+                                            <h1 class="email-title" style="
+                                              font-size: 2rem;
+                                              line-height: 1.17;
+                                              font-family: system-ui; 
+                                              color: #6E6E6E;
+                                              font-weight: bolder;
+                                              text-align: center;
+                                              text-transform: none;
+                                              position: relative;
+                                              padding-bottom: 5px;
+                                              padding-left: 10px;
+                                              padding-right: 10px;
+                                              margin: 0;
+                                              border-bottom: 2px solid #6E6E6E;
+                                              ">
+                                              Cambio de Contraseña
+                                            </h1>
+                                                    <span style="">&nbsp;</span>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td style="padding: 10 10% 25px;">
+                                                    
+                                                    <table cellspacing="0" cellpadding="0" border="0" align="center" style="font-size: 14px;line-height: 2em;text-align:center; text-transform: none;">
+                                                      <tr>
+                                                        <td style="font-family: system-ui; font-size:1.313rem;;line-height: 2em; border-bottom: 0px solid #6E6E6E">  
+                                                          <p> <b>Hola {!Cambio_de_Contrasena_App_User__c.OwnerFullName}, <br><br> Se ha iniciado un proceso de cambio de contraseña para su usuario de la aplicación movil. Si fue usted el que inicio el proceso y decide aceptarlo por favor responda este mensaje solo con la palabra APPROVE , en caso que quiera rechazarlo responda con el mensaje REJECT</b>.<br>
+                                                            <br>   
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                    </div>
+                              </tbody>
+                                  
+  </body>
+</html>

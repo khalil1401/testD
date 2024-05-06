@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla de correo para cambio de contraseña</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Inicio de Cambio de Contraseña</name>
+    <style>none</style>
+    <subject>Se inicio un cambio de contraseña</subject>
+    <textOnly>Baja de Profesional Pendiente
+
+Hola {!Cambio_de_Contrasena_App_User__c.OwnerFullName},
+
+Se ha iniciado un proceso de cambio de contraseña para su usuario de la aplicación movil. Si fue usted el que inicio el proceso y decide aceptarlo por favor responda este mensaje solo con la palabra APPROVE , en caso que quiera rechazarlo responda con el mensaje REJECT.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_FechaVigenciaDesde</fullName>
+    <active>true</active>
+    <description>Validación que no permite crear una cuota si la fecha de vigencia &quot;Desde&quot; es menor que la fecha de vigencia &quot;Hasta&quot;.</description>
+    <errorConditionFormula>(Dan360_VigenciaDesde__c  &gt;   Dan360_VigenciaHasta__c)</errorConditionFormula>
+    <errorDisplayField>Dan360_VigenciaDesde__c</errorDisplayField>
+    <errorMessage>La fecha de vigencia &quot;Desde&quot; no puede ser menor a la fecha de vigencia &quot;Hasta&quot;.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_AsignarObjetivo__c</fullName>
+    <externalId>false</externalId>
+    <label>Asignar objetivo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adultos</fullName>
+                <default>false</default>
+                <label>Adultos</label>
+            </value>
+            <value>
+                <fullName>Alergia</fullName>
+                <default>false</default>
+                <label>Alergia</label>
+            </value>
+            <value>
+                <fullName>Nicho</fullName>
+                <default>false</default>
+                <label>Nicho</label>
+            </value>
+            <value>
+                <fullName>Paeds</fullName>
+                <default>false</default>
+                <label>Paeds</label>
+            </value>
+            <value>
+                <fullName>Adultos Comunidad</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Adultos Comunidad</label>
+            </value>
+            <value>
+                <fullName>Adultos Comunidad e Instituciones</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Adultos Comunidad e Instituciones</label>
+            </value>
+            <value>
+                <fullName>Adultos Instituciones</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Adultos Instituciones</label>
+            </value>
+            <value>
+                <fullName>Adultos Oncologia Comunidad</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Adultos Oncologia Comunidad</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Visita</fullName>
+    <active>true</active>
+    <label>No Visita</label>
+    <picklistValues>
+        <picklist>Estado__c</picklist>
+        <values>
+            <fullName>Aprobada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pendiente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rechazada</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VisMed_Canal__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telefónica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Videollamada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whatsapp</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VisMed_Motivo__c</picklist>
+        <values>
+            <fullName>Profesional ausente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Profesional sin tiempo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>VisMed_Tipo_de_Visita__c</picklist>
+        <values>
+            <fullName>Presencial</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>52.0</apiVersion>
+    <decisions>
+        <description>Valida que par ala unidad de negocio que se está seleccionando en la plantilla no exista otra plantilla para la misma cuenta</description>
+        <name>Dan360_ValidaUnidadDeNegocio</name>
+        <label>Valida unidad de negocio</label>
+        <locationX>843</locationX>
+        <locationY>233</locationY>
+        <defaultConnector>
+            <targetReference>Dan360_RecorrePlantillasPorCuenta</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No existe plantilla</defaultConnectorLabel>
+        <rules>
+            <name>Dan360_YaExistePlantilla</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Dan360_RecorrePlantillasPorCuenta.Dan360_UnidadNegocio__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Dan360_UnidadDeNegocio</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Dan362_MensajeDeError</targetReference>
+            </connector>
+            <label>Ya existe plantilla</label>
+        </rules>
+    </decisions>
+    <dynamicChoiceSets>
+        <description>Picklist Unidad de negocio</description>
+        <name>Dan360_PicklistUnidadDeNegocio</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Dan360_UnidadNegocio__c</picklistField>
+        <picklistObject>dAN360_PlantillaporcCuenta__ChangeEvent</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <interviewLabel>Plantilla Por cuenta Test {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Plantilla Por cuenta Test</label>
+    <loops>
+        <description>Recorre plantillas por cuenta</description>
+        <name>Dan360_RecorrePlantillasPorCuenta</name>
+        <label>Recorre plantillas por cuenta</label>
+        <locationX>633</locationX>
+        <locationY>228</locationY>
+        <collectionReference>Dan360_ObtenerRegistrosPlantillasPorCuenta</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Dan360_ValidaUnidadDeNegocio</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <description>Crear registro de plantilla por cuenta</description>
+        <name>Dan360_CrearRegistroDePlantillaPorCuenta</name>
+        <label>Crear registro de plantilla por cuenta</label>
+        <locationX>637</locationX>
+        <locationY>432</locationY>
+        <connector>
+            <targetReference>Dan362_MensajeDeExito</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Dan360_Cuenta__c</field>
+            <value>
+                <elementReference>Dan360_ObtenerCuenta.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Dan360_PlantillaDeProductos__c</field>
+            <value>
+                <elementReference>Dan360_Plantilla.recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Dan360_UnidadNegocio__c</field>
+            <value>
+                <elementReference>Dan360_UnidadDeNegocio</elementReference>
+            </value>
+        </inputAssignments>
+        <object>dAN360_PlantillaporcCuenta__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Obtener el registro de cuenta para el cual se van a evaluar las plantillas que se ingresen.</description>
+        <name>Dan360_ObtenerCuenta</name>
+        <label>Obtener cuenta</label>
+        <locationX>176</locationX>
+        <locationY>229</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Dan360_ObtenerRegistrosPlantillasPorCuenta</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Name</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Obtener registros de Plantillas por cuenta</description>
+        <name>Dan360_ObtenerRegistrosPlantillasPorCuenta</name>
+        <label>Obtener registros de Plantillas por cuenta</label>
+        <locationX>324</locationX>
+        <locationY>228</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Dan360_IngresarPlantilla</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Dan360_Cuenta__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Dan360_ObtenerCuenta.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>dAN360_PlantillaporcCuenta__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <screens>
+        <description>Ingresar plantilla</description>
+        <name>Dan360_IngresarPlantilla</name>
+        <label>Ingresar plantilla</label>
+        <locationX>471</locationX>
+        <locationY>229</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Dan360_CrearRegistroDePlantillaPorCuenta</targetReference>
+        </connector>
+        <fields>
+            <name>Dan360_Plantilla</name>
+            <extensionName>flowruntime:lookup</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>label</name>
+                <value>
+                    <stringValue>Plantilla</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>objectApiName</name>
+                <value>
+                    <stringValue>dAN360_PlantillaporcCuenta__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>fieldApiName</name>
+                <value>
+                    <stringValue>Dan360_PlantillaDeProductos__c</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>Dan360_UnidadDeNegocio</name>
+            <choiceReferences>Dan360_PicklistUnidadDeNegocio</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Unidad de negocio</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Mensaje de error al ya existir una plantilla para dicha unidad de negocio.</description>
+        <name>Dan362_MensajeDeError</name>
+        <label>Mensaje de error</label>
+        <locationX>850</locationX>
+        <locationY>451</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Dan360_MensajeYaExistePlantilla</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-family: tahoma; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;ya existe la plantilla para &lt;/b&gt;&lt;b style=&quot;font-family: tahoma; background-color: rgb(255, 255, 255); color: rgb(44, 29, 215);&quot;&gt;{!Dan360_UnidadDeNegocio}&lt;/b&gt;&lt;b style=&quot;font-family: tahoma; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt; para la cuenta &lt;/b&gt;&lt;b style=&quot;font-family: tahoma; background-color: rgb(255, 255, 255); color: rgb(30, 20, 215);&quot;&gt;{!Dan360_ObtenerCuenta.Name}&lt;/b&gt;&lt;b style=&quot;font-family: tahoma; background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;.&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Mensaje que indica que el registro se ha creado de forma exitosa.</description>
+        <name>Dan362_MensajeDeExito</name>
+        <label>Mensaje de éxito</label>
+        <locationX>641</locationX>
+        <locationY>625</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Dan360_MensajeYaExistePlantilla_0</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-family: tahoma;&quot;&gt;se ha asociado la plantilla &lt;/b&gt;&lt;b style=&quot;color: rgb(30, 20, 215); background-color: rgb(255, 255, 255); font-family: tahoma;&quot;&gt;{!Dan360_Plantilla.recordName}&lt;/b&gt;&lt;b style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-family: tahoma;&quot;&gt; a la cuenta &lt;/b&gt;&lt;b style=&quot;color: rgb(30, 20, 215); background-color: rgb(255, 255, 255); font-family: tahoma;&quot;&gt;{!Dan360_ObtenerCuenta.Name} &lt;/b&gt;&lt;b style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255); font-family: tahoma;&quot;&gt;de forma exitosa.&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Dan360_ObtenerCuenta</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Id de Cuenta</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

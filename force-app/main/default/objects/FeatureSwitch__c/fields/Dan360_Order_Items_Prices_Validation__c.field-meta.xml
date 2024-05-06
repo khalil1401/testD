@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Order_Items_Prices_Validation__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Activa o desactiva el proceso para validación de precios y eliminación de productos inactivos en órdenes no confirmadas.</description>
+    <externalId>false</externalId>
+    <label>Dan360 Order Items Prices Validation</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

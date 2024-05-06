@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compania__c</fullName>
+    <externalId>false</externalId>
+    <label>Compañia</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>B-Life</fullName>
+                <default>false</default>
+                <label>B-Life</label>
+            </value>
+            <value>
+                <fullName>Danone</fullName>
+                <default>false</default>
+                <label>Danone</label>
+            </value>
+            <value>
+                <fullName>Nestle</fullName>
+                <default>false</default>
+                <label>Nestle</label>
+            </value>
+            <value>
+                <fullName>Roemmers</fullName>
+                <default>false</default>
+                <label>Roemmers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

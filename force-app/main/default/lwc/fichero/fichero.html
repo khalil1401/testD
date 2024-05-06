@@ -1,0 +1,265 @@
+<!--
+  @description       : 
+  @author            : sebastian.fondovila@globant.com
+  @group             : 
+  @last modified on  : 09-13-2022
+  @last modified by  : sebastian.fondovila@globant.com
+-->
+<template>
+    <div style="background-color: white !important;border-radius: 5px 5px 5px 5px; padding-bottom: 1%;">
+    <!-- FILTROS-->
+        <template if:true={mostrarFiltros}>
+            <div class="slds-grid slds-grid_vertical-align-center slds-gutters slds-p-around_medium">
+                <div style="width: 50%;">
+                    <template if:true={supervisores}>
+                        <div class="slds-p-horizontal_small"> 
+                            <c-multi-select-pick-list multi-select="true" onselectoption={handleChange} options={supervisores} selected-value={selectedSupervisor} label="Supervisores"></c-multi-select-pick-list>
+                        </div>
+                    </template>
+                </div>
+                <div style="width: 50%;">
+                    <template if:true={users}>
+                        <div class="slds-p-horizontal_small"> 
+                            <c-multi-select-pick-list multi-select="true" onselectoption={handleChange2} options={users} selected-value={selectedUser} label="APMs"></c-multi-select-pick-list>
+                        </div>
+                    </template>   
+                </div>
+            </div>
+
+            <div class="slds-grid slds-grid_vertical-align-center slds-gutters slds-p-around_medium">
+                <div class="slds-col slds-size_3-of-12 slds-p-around_medium">
+                        <!-- <lightning-input type="checkbox" label="Profesional ya seleccionado" checked={profesionalWasSelected} disabled="true"></lightning-input> -->
+                        <c-custom-lookup title="Profesional" obj-name="Account" filter="(recordType.DeveloperName = 'Profesional_de_la_Salud' OR recordType.DeveloperName = 'Otro_Profesional')" account-team={acountTeams} search-placeholder="Ingrese Profesional" icon-name="standard:account" onlookupselected={handleProfesionalSelection} onlookupremoved={handleProfesionalSelection}> </c-custom-lookup>          
+                        <c-custom-lookup title="Institucion" obj-name="Account" filter="(recordType.DeveloperName = 'Dan360_Institucion' OR recordType.DeveloperName = 'Dan360_Consultorio' OR recordType.DeveloperName = 'Dan360_Farmacia')" search-placeholder="Ingrese Institucion" icon-name="standard:account" onlookupselected={handleInstitucionSelection} onlookupremoved={handleInstitucionSelection}> </c-custom-lookup>          
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-around_medium">
+                    <lightning-combobox
+                            name="ultimaVisita"
+                            label="Ultima Visita"
+                            value={ultimaVisitaSelected}
+                            placeholder="Selecciona un valor"
+                            options={optionsUltimaVisita}
+                            onchange={handleFilterUltimaVisitaChange} >
+                    </lightning-combobox>
+                    <template if:true={optionsEspecialidad}>
+                        <lightning-combobox
+                                name="especialidad"
+                                label="Especialidad"
+                                value={especialidadSelected}
+                                placeholder="Selecciona un valor"
+                                options={optionsEspecialidad}
+                                onchange={handleFilterEspecialidadChange} >
+                        </lightning-combobox>
+                    </template>
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-around_medium">
+                    <template if:true={optionsProvincia}>
+                        <lightning-combobox
+                                name="provincia"
+                                label="Provincia"
+                                value={provinciaSelected}
+                                placeholder="Selecciona un valor"
+                                options={optionsProvincia}
+                                onchange={handleFilterProvinciaChange} >
+                        </lightning-combobox>
+                    </template>
+                    <lightning-combobox
+                            name="localidad"
+                            label="Localidad"
+                            value={localidadSelected}
+                            placeholder="Selecciona un valor"
+                            options={optionsLocalidad}
+                            onchange={handleFilterLocalidadChange} >
+                    </lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-p-around_medium">
+                    <lightning-combobox
+                            name="codigopostal"
+                            label="Codigo Postal"
+                            value={codigoPostalSelected}
+                            placeholder="Selecciona un valor"
+                            options={optionsCodigoPostal}
+                            onchange={handleFilterCodigoPostalChange} >
+                    </lightning-combobox>
+                </div>
+            </div>
+        </template>
+
+        <tenplate>
+            <div class="slds-align_absolute-center slds-grid slds-grid_vertical">
+                <h1 style=alig>Cantidad de Registros: {cantidadDeRegistros}</h1>
+            </div>
+        </tenplate>
+
+    <!--BOTONES-->
+        <template if:true={mostrarBotones}>
+            <div class="slds-align_absolute-center slds-grid slds-grid_vertical slds-gutters slds-p-around_medium">
+                <div class="slds-col">
+                    <lightning-button
+                        disabled={disabledActions}
+                        label="Transferir"
+                        name="transfer"
+                        onclick={handleTransferOrShare}
+                        variant="brand-outline"
+                    ></lightning-button>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <lightning-button
+                        disabled={disabledActions}
+                        label="Compartir"
+                        name="share"
+                        onclick={handleTransferOrShare}
+                        variant="brand-outline"
+                    ></lightning-button>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <lightning-button
+                        disabled={disabledActions}
+                        label="Baja de Profesional"
+                        name="unsubscribe"
+                        onclick={handleTransferOrShare}
+                        variant="brand-outline"
+                    ></lightning-button>
+                </div>
+            </div>
+        </template>
+
+    <!--TABLA-->
+        <template if:true={showTable}>
+
+            <div class="slds-box">
+                <lightning-input type="checkbox" label="Seleccionar todo" name="input1" value={toggleValue} onchange={onChangeToggle} checked={toggleValue}></lightning-input>
+            </div>
+
+            <table class="slds-table slds-table_header-fixed slds-table_bordered slds-table_edit slds-table_resizable-cols slds-p-around_medium">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="slds-truncate" style="text-align:center;"></th>
+                        <th class="slds-truncate" style="text-align:center;">Profesional</th>
+                        <th class="slds-truncate" style="text-align:center;">Matricula Nacional</th>
+                        <th class="slds-truncate" style="text-align:center;">Especialidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template if:true={listaDeProfesionales}>
+                        <template for:each={listaDeProfesionales} for:item="profesional">
+                            <tr key={profesional.idFichero} class="slds-hint-parent">
+                                <td class="slds-truncate">
+                                    <lightning-button-icon
+                                        icon-name="utility:switch"
+                                        variant="container"
+                                        title={profesional.idFichero}
+                                        onclick={mostrarInstituciones}>
+                                    </lightning-button-icon>
+                                </td>
+                                <th class="slds-truncate" style="text-align:center;"><a href={profesional.profesionalURL} target="_parent">{profesional.profesional}</a></th>
+                                <th class="slds-truncate" style="text-align:center;"><a href={profesional.matriculaURL} target="_parent">{profesional.matricula}</a></th>
+                                <th class="slds-truncate" style="text-align:center;">{profesional.especialidad}</th>
+                            </tr>
+                            <template if:true={profesional.mostrar}>
+                                <tr key={profesional.idFichero}>
+                                    <td colspan="5">
+                                        <lightning-datatable
+                                            class="wrapped-header-datatable"
+                                            key={profesional.idFichero}
+                                            key-field="idInstitucion"
+                                            data={profesional.instituciones}
+                                            data-id={profesional.idFichero}
+                                            columns={columnsInstitucion}
+                                            onrowselection={verDetalleInstitucion}
+                                            selected-rows={selectedrows}>
+                                        </lightning-datatable>
+                                    </td>
+                                </tr>
+                            </template>
+                        </template>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+        <template if:true={showSpinner}>
+            <lightning-spinner alternative-text="Loading" variant="brand" size="medium">
+            </lightning-spinner>                   
+        </template>
+    
+        <!--Test modal-->
+        <template if:true={modal}>
+            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_small">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__header">
+                        <h1 class="slds-modal__title slds-hyphenate">{actionButton}</h1>
+                    </div>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <div class="slds-m-around_medium" style="margin-left: 15%; margin-right: 15%;">
+
+                        <template if:false={isBajaProfesional}>
+                            <div style="margin-bottom: 25%;">
+                                <template if:true={users}>
+                                    <!--<c-multi-select-pick-list multi-select="true" onselectoption={handleSelectedAPMs} options={users} selected-value={selectedAPMs} label="Seleccionar APMs"></c-multi-select-pick-list> -->
+                                    <lightning-combobox
+                                        name="SeleccionarAPMs"
+                                        label="Seleccionar APMs"
+                                        value={selectedAPMs}
+                                        placeholder="Selecciona un valor"
+                                        options={users}
+                                        onchange={handleSelectedAPMs} >
+                                    </lightning-combobox>
+                                </template>
+                                <lightning-textarea
+                                    type="text"
+                                    label="Comentario"
+                                    data-id="comentariomotivo"
+                                    placeholder="Escriba aquí..."
+                                    class="slds-m-top_small"
+                                ></lightning-textarea>
+                            </div>
+                        </template>
+                        <template if:true={isBajaProfesional}>
+                                <lightning-combobox
+                                    name="motivos-de-baja"
+                                    label="Motivos de baja"
+                                    placeholder="Seleccionar"
+                                    value={motivoDeBaja}
+                                    options={optionsMotivosBaja}
+                                    onchange={handleOptionMotivos}>
+                                </lightning-combobox>
+                                <template if:true={fechaDesactRequired}>
+                                    <lightning-input
+                                    type="date"
+                                    label="Fecha Desactivación"
+                                    class="slds-m-top_small"
+                                    data-id="fechadesactivacion"
+                                    required={fechaDesactRequired}
+                                    ></lightning-input>
+                                </template>
+                                <template if:true={fechaDesactRequired}>
+                                <lightning-input
+                                    type="date"
+                                    label="Fecha Reactivación"
+                                    class="slds-m-top_small"
+                                    data-id="fechareactivacion"
+                                    required={fechaDesactRequired}
+                                ></lightning-input>
+                                </template>
+                                <lightning-textarea
+                                    type="text"
+                                    label="Comentario"
+                                    data-id="comentariomotivo"
+                                    placeholder="Escriba aquí..."
+                                    class="slds-m-top_small"
+                                ></lightning-textarea>
+                            </template>
+                        </div>
+                    </div>
+                    <div class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" onclick={closeModal}>Cancel</button>
+                        <button class="slds-button slds-button_brand" onclick={actionModal}>Save</button>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>    
+        </template>
+    </div>
+</template>

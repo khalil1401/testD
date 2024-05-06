@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="recId"/>
+    <design:attribute name="recordId" label="Id del registro"/>
+</design:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Dan360_UnidadNegocio__c</name>
+    <picklistValues>
+        <masterLabel>AMN</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NuBa</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

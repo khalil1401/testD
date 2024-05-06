@@ -1,0 +1,7 @@
+Estimado cliente:
+
+Le informamos que el saldo del documento {!Dan360_DocumentosCuentaCorriente__c.Dan360_NroComprobante__c} venció el día {!Dan360_DocumentosCuentaCorriente__c.Dan360_Vencimiento__c}. 
+
+Favor de realizar el pago.
+
+Gracias.

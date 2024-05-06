@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VisMed_LongitudDNI</fullName>
+    <active>false</active>
+    <description>Regla que valida que el DNI no tenga menos de siete dígitos</description>
+    <errorConditionFormula>AND(
+    LEN(VisMed_DNI__c) &lt; 7,
+    RecordType.DeveloperName &lt;&gt; &apos;Contact&apos;
+				)</errorConditionFormula>
+    <errorMessage>El número DNI no puede tener menos de 7 dígitos</errorMessage>
+</ValidationRule>

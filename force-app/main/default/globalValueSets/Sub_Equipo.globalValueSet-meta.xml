@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Adultos Interior</fullName>
+        <default>false</default>
+        <label>Adultos Interior</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos Oncologia</fullName>
+        <default>false</default>
+        <label>Adultos Oncologia</label>
+    </customValue>
+    <customValue>
+        <fullName>Metabolicos</fullName>
+        <default>false</default>
+        <label>Metabolicos</label>
+    </customValue>
+    <customValue>
+        <fullName>Dieta</fullName>
+        <default>false</default>
+        <label>Dieta</label>
+    </customValue>
+    <customValue>
+        <fullName>Pediatricos General</fullName>
+        <default>false</default>
+        <label>Pediatricos General</label>
+    </customValue>
+    <customValue>
+        <fullName>Alergia</fullName>
+        <default>false</default>
+        <label>Alergia</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos AMBA</fullName>
+        <default>false</default>
+        <label>Adultos AMBA</label>
+    </customValue>
+    <customValue>
+        <fullName>Metabólicos y Dieta</fullName>
+        <default>false</default>
+        <label>Metabólicos y Dieta</label>
+    </customValue>
+    <customValue>
+        <fullName>Nicho MSL</fullName>
+        <default>false</default>
+        <label>Nicho MSL</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos General</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Adultos General</label>
+    </customValue>
+    <masterLabel>Sub Equipo</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

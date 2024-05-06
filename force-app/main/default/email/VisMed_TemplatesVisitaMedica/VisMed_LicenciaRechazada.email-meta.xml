@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla de correo para solicitudes de licencia rechazada</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Licencia Rechazada</name>
+    <style>none</style>
+    <subject>Su licencia fue rechazada</subject>
+    <textOnly>Licencia Rechazada
+
+Estimado {!Dan360_Licencia__c.VisMed_APM__c},
+La licencia con motivo {!Dan360_Licencia__c.Motivo__c} en las fechas entre {!Dan360_Licencia__c.Fecha_de_inicio__c} y {!Dan360_Licencia__c.Fecha_de_Fin__c} fue RECHAZADA.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actualizar_Frecuencia__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo utilizado por el batch : BatchSetFrecuencia. Indica si hay que actualizar la frencuencia el ciclo siguiente.</description>
+    <externalId>false</externalId>
+    <label>Actualizar Frecuencia</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

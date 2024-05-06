@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_AspectosDestacadosPedidoSinCargo</fullName>
+    <fields>OrderNumber</fields>
+    <fields>AccountId</fields>
+    <fields>EffectiveDate</fields>
+    <fields>Status</fields>
+    <fields>TotalAmount</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Dan360_PedidoSinCargoAprobado__c</fields>
+    <label>Aspectos destacados Pedido Sin Cargo</label>
+</CompactLayout>

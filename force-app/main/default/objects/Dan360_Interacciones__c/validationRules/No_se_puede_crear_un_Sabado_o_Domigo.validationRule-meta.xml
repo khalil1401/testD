@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_se_puede_crear_un_Sabado_o_Domigo</fullName>
+    <active>true</active>
+    <description>Impide que se creen registros los dias sabado o domingos.</description>
+    <errorConditionFormula>OR(MOD(VisMed_Fecha__c - DATE( 1900, 1, 7 ), 7 ) == 0, MOD(VisMed_Fecha__c - DATE( 1900, 1, 7 ), 7 ) == 6)</errorConditionFormula>
+    <errorMessage>No se puede crear una interacción los dias Sabados o Domingos.</errorMessage>
+</ValidationRule>

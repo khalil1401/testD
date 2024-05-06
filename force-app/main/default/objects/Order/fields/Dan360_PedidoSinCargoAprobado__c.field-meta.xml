@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_PedidoSinCargoAprobado__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica que el pedido sin cargo ya está aprobado para continuar con el proceso del pedido.</description>
+    <externalId>false</externalId>
+    <label>Pedido sin cargo aprobado</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

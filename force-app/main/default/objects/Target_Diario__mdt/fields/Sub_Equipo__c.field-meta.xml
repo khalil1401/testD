@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Equipo__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Sub Equipo</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adultos Interior</fullName>
+                <default>true</default>
+                <label>Adultos Interior</label>
+            </value>
+            <value>
+                <fullName>Adultos Oncologia</fullName>
+                <default>false</default>
+                <label>Adultos Oncologia</label>
+            </value>
+            <value>
+                <fullName>Metabolicos</fullName>
+                <default>false</default>
+                <label>Metabolicos</label>
+            </value>
+            <value>
+                <fullName>Dieta</fullName>
+                <default>false</default>
+                <label>Dieta</label>
+            </value>
+            <value>
+                <fullName>Pediatricos General</fullName>
+                <default>false</default>
+                <label>Pediatricos General</label>
+            </value>
+            <value>
+                <fullName>Alergia</fullName>
+                <default>false</default>
+                <label>Alergia</label>
+            </value>
+            <value>
+                <fullName>Adultos AMBA</fullName>
+                <default>false</default>
+                <label>Adultos AMBA</label>
+            </value>
+            <value>
+                <fullName>Metabólicos y Dieta</fullName>
+                <default>false</default>
+                <label>Metabólicos y Dieta</label>
+            </value>
+            <value>
+                <fullName>Nicho MSL</fullName>
+                <default>false</default>
+                <label>Nicho MSL</label>
+            </value>
+            <value>
+                <fullName>Adultos General</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Adultos General</label>
+            </value>
+            <value>
+                <fullName>Institución y Comunidad</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Institución y Comunidad</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

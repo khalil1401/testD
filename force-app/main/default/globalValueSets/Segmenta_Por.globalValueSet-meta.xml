@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Adultos General Institucion</fullName>
+        <default>false</default>
+        <label>Adultos General Institucion</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos General Comunidad</fullName>
+        <default>false</default>
+        <label>Adultos General Comunidad</label>
+    </customValue>
+    <customValue>
+        <fullName>Adultos Oncologia</fullName>
+        <default>false</default>
+        <label>Adultos Oncologia</label>
+    </customValue>
+    <customValue>
+        <fullName>Metabolicos</fullName>
+        <default>false</default>
+        <label>Metabolicos</label>
+    </customValue>
+    <customValue>
+        <fullName>Epilepsia</fullName>
+        <default>false</default>
+        <label>Epilepsia</label>
+    </customValue>
+    <customValue>
+        <fullName>Metabolicos y Epilepsia</fullName>
+        <default>false</default>
+        <label>Metabolicos y Epilepsia</label>
+    </customValue>
+    <customValue>
+        <fullName>Pediatricos General</fullName>
+        <default>false</default>
+        <label>Pediatricos General</label>
+    </customValue>
+    <customValue>
+        <fullName>Alergia</fullName>
+        <default>false</default>
+        <label>Alergia</label>
+    </customValue>
+    <masterLabel>Segmenta Por</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

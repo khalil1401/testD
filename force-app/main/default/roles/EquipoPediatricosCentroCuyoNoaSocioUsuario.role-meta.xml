@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>None</contactAccessLevel>
+    <description>Equipo Pediatricos Centro, Cuyo, Noa Socio Usuario</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Equipo Pediatricos Centro, Cuyo, Noa Socio Usuario</name>
+    <opportunityAccessLevel>None</opportunityAccessLevel>
+    <parentRole>Supervisor_Pediatricos_2</parentRole>
+</Role>

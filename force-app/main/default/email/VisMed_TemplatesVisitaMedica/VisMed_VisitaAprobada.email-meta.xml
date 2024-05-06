@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla de correo para solicitudes de visitas aprobadas</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Visita Aprobada</name>
+    <style>none</style>
+    <subject>Su visita fue aprobada</subject>
+    <textOnly>Visita Aprobada
+
+Estimado {!Dan360_Interacciones__c.VisMed_APM__c},
+La visita realizada el {!Dan360_Interacciones__c.VisMed_Fecha__c} al profesional {!Dan360_Interacciones__c.Profesional__c} en el domicilio {!Dan360_Interacciones__c.VisMed_Domicilio_de_la_Visita__c} fue APROBADA.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

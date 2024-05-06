@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_DatosDeCuota</fullName>
+    <active>true</active>
+    <description>Los datos de una cuota no pueden ser modificados una vez esta es creada</description>
+    <errorConditionFormula>AND(  
+				NOT( ISNEW()),
+				OR(
+				 ISCHANGED(Dan360_Cliente__c),
+				 ISCHANGED(Dan360_VigenciaDesde__c),
+				 ISCHANGED(  Dan360_Producto__c), 
+				 ISCHANGED(Dan360_CanalComercial__c),  
+				 ISCHANGED(Dan360_CanalDistribucion__c) 
+								)
+				)</errorConditionFormula>
+    <errorMessage>Solo esta permitido modificar el Saldo o Estado de la Cuota</errorMessage>
+</ValidationRule>

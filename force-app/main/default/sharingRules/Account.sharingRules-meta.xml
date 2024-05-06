@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Cuentas_EDI</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>None</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Cuentas EDI</label>
+        <sharedTo>
+            <group>Registros_EDI</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Sucursal,Retail,Farmacia,Institución</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan30_SalesDistrictProximity</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Proximity.</description>
+        <label>Sales District Proximity</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictProximity</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Proximity</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictAcceso</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Acceso.</description>
+        <label>Sales District Acceso</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictAcceso</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Acceso</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictDisprofarma</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Disprofama.</description>
+        <label>Sales District Disprofarma</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictDisprofarma</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Disprofarma</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictDistribuidores</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Distribuidores.</description>
+        <label>Sales District Distribuidores</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictDistribuidores</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Distribuidores</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictECommerce</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District E-Commerce.</description>
+        <label>Sales District E-Commerce</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictECommerce</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>E-commerce</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictFarmacias</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales Farmacias.</description>
+        <label>Sales District Farmacias</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictFarmacias</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Farmacias</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictFarmacity</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Farmacity.</description>
+        <label>Sales District Farmacity</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictFarmacity</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Farmacity</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictHomeCare</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Home Care.</description>
+        <label>Sales District Home Care</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictHomeCare</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Home Care</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictInstituciones</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Instituciones.</description>
+        <label>Sales District Instituciones</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictInstituciones</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Instituciones</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictInterco</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Interco.</description>
+        <label>Sales District Interco</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictInterco</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>INTERCO</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictIntercompany</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Intercompany.</description>
+        <label>Sales District Intercompany</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictIntercompany</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Intercompany</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictLicitaciones</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Licitaciones.</description>
+        <label>Sales District Licitaciones</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictLicitaciones</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Licitaciones</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictMarketing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Marketing.</description>
+        <label>Sales District Marketing</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictMarketing</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Marketing</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictModernTrade</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Modern Trade.</description>
+        <label>Sales District Modern Trade</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictModernTrade</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Modern Trade</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Dan360_SalesDistrictOthers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>Regla de colaboración par alas cuentas Sales District Others.</description>
+        <label>Sales District Others</label>
+        <sharedTo>
+            <group>Dan360_SalesDistrictOthers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Dan360_SalesDistrictColaborationRule__c</field>
+            <operation>contains</operation>
+            <value>Others</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Jefes_y_Supervisores</fullName>
+        <accessLevel>Read</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>None</caseAccessLevel>
+            <contactAccessLevel>Read</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <label>Jefes y Supervisores</label>
+        <sharedTo>
+            <group>Jefes_y_Supervisores</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Otro Profesional,Consultorio,Profesional de la Salud,Farmacia,Institución</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

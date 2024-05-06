@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accion__c</fullName>
+    <externalId>false</externalId>
+    <label>Acción</label>
+    <referenceTo>VisMed_Accion__c</referenceTo>
+    <relationshipLabel>Objetivos y Acciones del Profesional</relationshipLabel>
+    <relationshipName>Acciones_del_Profesional</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

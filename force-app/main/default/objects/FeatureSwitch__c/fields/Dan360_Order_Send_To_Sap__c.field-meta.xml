@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Order_Send_To_Sap__c</fullName>
+    <defaultValue>true</defaultValue>
+    <externalId>false</externalId>
+    <label>Dan360 Order Send To Sap</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

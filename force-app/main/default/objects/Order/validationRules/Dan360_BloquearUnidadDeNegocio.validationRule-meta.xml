@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_BloquearUnidadDeNegocio</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				NOT(ISNEW()),
+				 ISCHANGED(Dan360_UnidadNegocio__c),
+					$Profile.Name &lt;&gt; &quot;System Administrator&quot; 
+
+				)</errorConditionFormula>
+    <errorMessage>La Unidad de Negocio no puede ser cambiada</errorMessage>
+</ValidationRule>

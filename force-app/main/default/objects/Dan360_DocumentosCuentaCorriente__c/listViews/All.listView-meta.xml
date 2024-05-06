@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Dan360_NroComprobante__c</columns>
+    <columns>Dan360_Cliente__c</columns>
+    <columns>Dan360_Sucursal__c</columns>
+    <columns>Dan360_Pedido__c</columns>
+    <columns>Dan360_Factura__c</columns>
+    <columns>Dan360_Remito__c</columns>
+    <columns>Dan360_TipoDeDocumento__c</columns>
+    <columns>Dan360_ImporteDocumento__c</columns>
+    <columns>Dan360_Saldo__c</columns>
+    <columns>Dan360_Acumulado__c</columns>
+    <columns>Dan360_FechaDocumento__c</columns>
+    <columns>Dan360_Vencimiento__c</columns>
+    <columns>Dan360_DiasDeVencido__c</columns>
+    <columns>Dan360_Semaforo__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Todos</label>
+</ListView>

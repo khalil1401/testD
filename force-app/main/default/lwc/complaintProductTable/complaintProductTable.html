@@ -1,0 +1,24 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 17-11-2021
+  @description       : 
+-->
+<template>
+    <div class="slds-border_top"></div>
+    <p class="slds-text-heading_medium slds-p-top_xx-small">Seleccione los Productos y complete el campo:
+        {fieldToComplete}</p>
+    <br>
+    <lightning-datatable
+        column-widths-mode='auto'
+        onrowselection={calcularValorTotal}
+        data={productList}
+        columns={columns}
+        key-field="productoId"
+        suppress-bottom-bar="true"
+        oncellchange={guardarValores}
+        errors={errors}
+        class="wrapped-header-datatable"
+    ></lightning-datatable>
+</template>

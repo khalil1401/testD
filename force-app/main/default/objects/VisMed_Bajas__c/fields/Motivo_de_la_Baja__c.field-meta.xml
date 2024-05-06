@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivo_de_la_Baja__c</fullName>
+    <externalId>false</externalId>
+    <label>Motivo de la Baja</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No ejerce más la profesión</fullName>
+                <default>false</default>
+                <label>No ejerce más la profesión</label>
+            </value>
+            <value>
+                <fullName>Fallecimiento</fullName>
+                <default>false</default>
+                <label>Fallecimiento</label>
+            </value>
+            <value>
+                <fullName>Bajo Potencial</fullName>
+                <default>false</default>
+                <label>Bajo Potencial</label>
+            </value>
+            <value>
+                <fullName>No recibe APM</fullName>
+                <default>false</default>
+                <label>No recibe APM</label>
+            </value>
+            <value>
+                <fullName>Enfermedad</fullName>
+                <default>false</default>
+                <label>Enfermedad</label>
+            </value>
+            <value>
+                <fullName>Maternidad</fullName>
+                <default>false</default>
+                <label>Maternidad</label>
+            </value>
+            <value>
+                <fullName>Viaje</fullName>
+                <default>false</default>
+                <label>Viaje</label>
+            </value>
+            <value>
+                <fullName>Transferido a otro Visitador</fullName>
+                <default>false</default>
+                <label>Transferido a otro Visitador</label>
+            </value>
+            <value>
+                <fullName>No trabaja más en la institución</fullName>
+                <default>false</default>
+                <label>No trabaja más en la institución</label>
+            </value>
+            <value>
+                <fullName>Baja Temporal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Baja Temporal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

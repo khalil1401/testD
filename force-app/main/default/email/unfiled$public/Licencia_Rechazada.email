@@ -1,0 +1,3 @@
+Estimado {!Dan360_Licencia__c.VisMed_APM__c}, 
+
+La licencia con motivo {!Dan360_Licencia__c.Motivo__c} en las fechas entre {!Dan360_Licencia__c.Fecha_de_inicio__c} y {!Dan360_Licencia__c.Fecha_de_Fin__c} fue RECHAZADA.

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_RemitoObligatorio</fullName>
+    <active>true</active>
+    <description>Para la creación de los reclamos por servicio se debe registrar el remito relacionado.</description>
+    <errorConditionFormula>AND (
+ISNEW(),
+RecordType.DeveloperName = &quot;Dan360_Otros&quot;,
+ISBLANK( Dan360_Remito__c ) 
+)</errorConditionFormula>
+    <errorMessage>Debe ser registrado el remito relacionado al reclamo por servicio.</errorMessage>
+</ValidationRule>

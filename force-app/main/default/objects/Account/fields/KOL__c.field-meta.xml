@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KOL__c</fullName>
+    <externalId>false</externalId>
+    <label>KOL</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sin Asignar</fullName>
+                <default>false</default>
+                <label>Sin Asignar</label>
+            </value>
+            <value>
+                <fullName>KOL Ped</fullName>
+                <default>false</default>
+                <label>KOL Ped</label>
+            </value>
+            <value>
+                <fullName>KOL Nicho</fullName>
+                <default>false</default>
+                <label>KOL Nicho</label>
+            </value>
+            <value>
+                <fullName>Rising Star</fullName>
+                <default>false</default>
+                <label>Rising Star</label>
+            </value>
+            <value>
+                <fullName>Profesional</fullName>
+                <default>false</default>
+                <label>Profesional</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

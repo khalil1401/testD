@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Alert_Interaccion_Aceptada</fullName>
+        <description>Email Alert Interaccion Aceptada</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>hcps@nutricia.com.ar</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>VisMed_TemplatesVisitaMedica/VisMed_VisitaAprobada</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_Interaccion_Rechazada</fullName>
+        <description>Email Alert Interaccion Rechazada</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>hcps@nutricia.com.ar</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>VisMed_TemplatesVisitaMedica/VisMed_VisitaRechazada</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Aprobar_Interaccion</fullName>
+        <field>Estado__c</field>
+        <literalValue>Aprobada</literalValue>
+        <name>Aprobar Interaccion</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rechazar_Interaccion</fullName>
+        <field>Estado__c</field>
+        <literalValue>Rechazada</literalValue>
+        <name>Rechazar Interaccion</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

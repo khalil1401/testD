@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Danone</letterhead>
+    <name>Seguimiento Pendiente</name>
+    <style>freeForm</style>
+    <subject>Tiene un nuevo Seguimiento pendiente de aprobacion</subject>
+    <textOnly>Tiene un nuevo Seguimiento para aprobar solicitada por el APM {!VisMed_Contacto_Cuenta_Usuario__c.VisMed_APM__c}.
+
+Ingrese acá para ver las aprobaciones pendientes y realizar la gestión correspondiente.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

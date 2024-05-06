@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Cuota</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cuotas</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Formato Cuota</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Dan360_Anular_cuota</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Dan360_Reactivar_Cuota</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Dan360_CuentaSaldoMayorAProducto</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Dan360_CuotaSoloNumeros</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Dan360_DatosDeCuota</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Dan360_FechaReactivacionCuota</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Dan360_FechaVigencia</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Dan360_FechaVigenciaDesde</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>Cargar_Cuotas_ListView</name>
+    </webLinks>
+</CustomObjectTranslation>

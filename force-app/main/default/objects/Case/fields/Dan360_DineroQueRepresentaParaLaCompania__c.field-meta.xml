@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_DineroQueRepresentaParaLaCompania__c</fullName>
+    <description>Campo que determina lo que representa para la compañía en dinero el reclamo.</description>
+    <externalId>false</externalId>
+    <label>Dinero que representa para la compañía</label>
+    <summarizedField>Dan360_ProductosDeReclamo__c.Dan360_PrecioTotal__c</summarizedField>
+    <summaryForeignKey>Dan360_ProductosDeReclamo__c.Dan360_Reclamo__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

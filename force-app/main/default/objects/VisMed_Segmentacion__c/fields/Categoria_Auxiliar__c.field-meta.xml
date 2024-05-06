@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categoria_Auxiliar__c</fullName>
+    <description>Campo usado para guardar la categoria de la formula antes del update, ya que al ser un campo formula no se pude comprar el old con le new value ya que siempre son iguales.</description>
+    <externalId>false</externalId>
+    <label>Categoría Auxiliar</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

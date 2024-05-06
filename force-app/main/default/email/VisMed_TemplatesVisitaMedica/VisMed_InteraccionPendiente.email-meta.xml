@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla de correo para solicitudes de interacciones</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Interacción Pendiente</name>
+    <style>none</style>
+    <subject>Tiene una nueva Interacción pendiente para aprobar</subject>
+    <textOnly>Licencia Pendiente
+
+Hola,
+Tiene una nueva Interacción para aprobar solicitada por el APM {!Dan360_Interacciones__c.VisMed_APM__c}.
+Haga click aquí para ver las aprobaciones pendientes y realizar la gestión correspondiente.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

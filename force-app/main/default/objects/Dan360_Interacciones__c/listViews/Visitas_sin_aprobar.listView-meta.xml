@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Visitas_sin_aprobar</fullName>
+    <columns>NAME</columns>
+    <columns>VisMed_APM__c</columns>
+    <columns>VisMed_Tipo_de_Visita__c</columns>
+    <columns>VisMed_Fecha__c</columns>
+    <columns>Estado__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Dan360_Interacciones__c.Visita_Medica</value>
+    </filters>
+    <filters>
+        <field>Estado__c</field>
+        <operation>equals</operation>
+        <value>Pendiente</value>
+    </filters>
+    <label>Visitas sin aprobar</label>
+</ListView>

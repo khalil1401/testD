@@ -1,0 +1,7 @@
+.THIS {
+    
+}
+
+.THIS .slds-grid_align-end, .THIS .slds-grid--align-end {
+    justify-content: flex-start;
+}

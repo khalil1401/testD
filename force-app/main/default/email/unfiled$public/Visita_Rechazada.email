@@ -1,0 +1,3 @@
+Estimado {!Dan360_Interacciones__c.VisMed_APM__c}, 
+
+La visita realizada el {!Dan360_Interacciones__c.VisMed_Fecha__c} al profesional {!Dan360_Interacciones__c.Profesional__c} en el domicilio {!Dan360_Interacciones__c.VisMed_Domicilio_de_la_Visita__c} fue RECHAZADA.

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomNotificationType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customNotifTypeName>Notificación de Pedido Confirmado</customNotifTypeName>
+    <desktop>true</desktop>
+    <masterLabel>Notificación de Pedido Confirmado</masterLabel>
+    <mobile>false</mobile>
+    <slack>false</slack>
+</CustomNotificationType>

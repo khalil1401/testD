@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Product2.Product_Sales_Area__r$Dan360_SalesArea__c.Dan360_SalesOrganization__c</field>
+    </columns>
+    <description>Reporte de productos por sales area,</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Product2$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Productos con Sales Area</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Productos_con_sales_area__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Product2$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

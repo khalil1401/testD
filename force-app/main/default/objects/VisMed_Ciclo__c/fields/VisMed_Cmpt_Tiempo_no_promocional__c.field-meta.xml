@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VisMed_Cmpt_Tiempo_no_promocional__c</fullName>
+    <defaultValue>$CustomMetadata.Compensatorio_Tiempo_no_Promocional__mdt.Compensatorio_General.Compensatorio__c</defaultValue>
+    <externalId>false</externalId>
+    <label>Compensatorio Tiempo no Promocional</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

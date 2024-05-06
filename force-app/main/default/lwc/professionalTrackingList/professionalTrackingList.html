@@ -1,0 +1,47 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 03-02-2022
+  @description       : 
+-->
+<template>
+	<div style="margin: 2em;">
+		<div
+			class="slds-is-relative"
+			if:true={isLoaded}
+		>
+			<div style="height: 5rem; margin: 1rem;">
+				<lightning-spinner
+					alternative-text="Loading"
+					size="medium"
+					variant="brand"
+				></lightning-spinner>
+			</div>
+		</div>
+
+		<template if:true={hasResult}>
+			<!-- sldsValidatorIgnoreNextLine -->
+			<lightning-datatable
+				class="wrapped-header-datatable"
+				columns={columns}
+				data={data}
+				key-field="Id"
+				onrowselection={handleSelectedRows}
+				wrap-text-max-lines="10"
+			>
+			</lightning-datatable>
+		</template>
+	</div>
+	<c-professional-tracking-modal
+		columns={columns}
+		oncanceltransfer={handleCloseTransferModal}
+		openmodal={showmodal}
+		tracking={professionalsSelected}
+		title={modaltitle}
+		actionname={action}
+		onshare={handleShare}
+		ontransfer={handleTransfer}
+		onunsubscribe={handleUnsubscribe}
+	></c-professional-tracking-modal>
+</template>

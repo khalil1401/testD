@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Cuenta__c</fullName>
+    <description>Cliente</description>
+    <externalId>false</externalId>
+    <label>Cuenta</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Plantillas por cuenta</relationshipLabel>
+    <relationshipName>Plantillas_por_cuenta</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

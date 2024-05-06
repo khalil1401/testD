@@ -1,0 +1,42 @@
+<!-- sldsValidatorIgnore -->
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 20-10-2021
+  @description       : 
+-->
+<template>
+    <!-- <lightning-quick-action-panel header={title}> -->
+    <lightning-radio-group
+        label="Elija el tipo de reclamo a crear"
+        name="radioGroup"
+        onchange={onComplaintSelected}
+        options={typeOfComplaint}
+        required
+        type="radio"
+        value={value}
+    ></lightning-radio-group>
+
+    <div slot="footer">
+        <div class="slds-align_absolute-center">
+            <lightning-button
+                class="slds-m-left_x-small"
+                label="Cancelar"
+                onclick={closeAction}
+                title="Cancelar"
+                variant="brand-outline"
+            ></lightning-button>
+
+            <lightning-button
+                class="slds-m-left_x-small"
+                label="Continuar"
+                onclick={onContinue}
+                title="Continuar"
+                variant="brand"
+                disabled={blockContinue}
+            ></lightning-button>
+        </div>
+    </div>
+    <!-- </lightning-quick-action-panel> -->
+</template>

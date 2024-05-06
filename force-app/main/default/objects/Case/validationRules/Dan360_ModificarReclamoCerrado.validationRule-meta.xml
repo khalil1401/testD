@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_ModificarReclamoCerrado</fullName>
+    <active>false</active>
+    <description>No modificar reclamos cerrados</description>
+    <errorConditionFormula>AND(
+ ISPICKVAL(PRIORVALUE(Status) , &quot;Cerrado&quot;),
+  $Profile.Id  &lt;&gt;  $CustomMetadata.Perfil__mdt.Admin.id__c 
+)</errorConditionFormula>
+    <errorMessage>No es posible modificar un caso cerrado</errorMessage>
+</ValidationRule>

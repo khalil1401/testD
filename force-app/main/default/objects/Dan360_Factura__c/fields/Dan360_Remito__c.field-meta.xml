@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Remito__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Remito al cual está relacionada una factura.</description>
+    <externalId>false</externalId>
+    <label>Remito</label>
+    <referenceTo>Dan360_Remito__c</referenceTo>
+    <relationshipName>Facturas</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

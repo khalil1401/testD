@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Semaforo__c</fullName>
+    <description>Campo que indica si ya es posible confirmar un pedido total o parcialmente.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+   ISPICKVAL(Dan360_SemaforoPicklist__c,&quot;Verde&quot;),&quot;🟢&quot;,
+            IF(ISPICKVAL(Dan360_SemaforoPicklist__c,&quot;Amarillo&quot;),&quot;🟡&quot;,
+                IF(ISPICKVAL(Dan360_SemaforoPicklist__c,&quot;Rojo&quot;),&quot;🔴&quot;
+   ,&quot;&quot;
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Semáforo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

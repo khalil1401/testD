@@ -1,0 +1,79 @@
+<!--
+	@author            : Diego Valle
+	@created date      : 
+	@last modified by  : Diego Valle
+	@last modified on  : 08-02-2022
+	@description       : 
+-->
+<aura:component
+	implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+	controller="ProfessionalTrackingController"
+>
+	<aura:handler
+		name="init"
+		value="{!this}"
+		action="{!c.doInit}"
+	/>
+
+	<aura:attribute
+		name="showModal"
+		type="Boolean"
+		default="false"
+	/>
+
+	<aura:attribute
+		name="modalTitle"
+		type="String"
+	/>
+
+	<aura:attribute
+		name="hasSelectedRecords"
+		type="Boolean"
+		default="false"
+	/>
+	
+	<aura:attribute
+		name="numberOfSelectedRecords"
+		type="Integer"
+	/>
+
+	<aura:attribute
+		name="enableSupervisorFilter"
+		type="Boolean"
+		default="false"
+	/>
+
+	<aura:attribute
+		name="action"
+		type="String"
+	/>
+
+	<aura:attribute
+		name="filters"
+		type="Object"
+	/>
+
+	<aura:attribute
+		name="userInfo"
+		type="Object"
+	/>
+
+	<lightning:card>
+		<c:professionalTrackingFilters
+			onfiltersfeedback="{!c.handleFiltersFeedback}"
+			ontransferorshareprofessional="{!c.handleOpenTransferModal}"
+			hasSelectedRecords="{!v.hasSelectedRecords}"
+			numberOfSelectedRecords="{!v.numberOfSelectedRecords}"
+			enableSupervisorFilter="{!v.enableSupervisorFilter}"
+		></c:professionalTrackingFilters>
+		<c:professionalTrackingList
+			aura:id="tracking"
+			showmodal="{!v.showModal}"
+			modaltitle="{!v.modalTitle}"
+			onclosetransfermodal="{!c.handleCloseTransferModal}"
+			onrecordsselected="{!c.handleNotifyRecordsSelection}"
+			filters="{!v.filters}"
+			action="{!v.action}"
+		></c:professionalTrackingList>
+	</lightning:card>
+</aura:component>

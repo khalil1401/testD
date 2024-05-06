@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Matrícula</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Matrículas</value>
+    </caseValues>
+    <layouts>
+        <layout>Matricula Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Matricula Municipal Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Matricula Nacional Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Matricula Provincial Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label></label>
+        <name>Municipal</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Nacional</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Provincial</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDI</fullName>
+    <active>true</active>
+    <description>Errores de ordens EDI</description>
+    <label>EDI</label>
+    <picklistValues>
+        <picklist>Tipo_de_Errores__c</picklist>
+        <values>
+            <fullName>Cliente - Cliente con Bloqueo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cliente - No es cliente EDI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cliente - Sin marca EDI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cliente - Sucursal inexistente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pedido - Sin orden de compra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Producto - Error en Producto</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

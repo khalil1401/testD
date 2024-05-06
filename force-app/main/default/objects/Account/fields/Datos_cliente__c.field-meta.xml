@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Datos_cliente__c</fullName>
+    <description>Campo para utilizar en los lookup de cuenta.</description>
+    <externalId>false</externalId>
+    <formula>Dan360_DireccionFacturacionComunidad__c + &apos; &apos; + &apos;Id SAP: &apos; +  &apos; &apos; + Id_SAP__c + &apos; &apos; + &apos;Cuit: &apos; +  Cuit__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Datos cliente</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

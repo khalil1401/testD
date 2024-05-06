@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Semaforo__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+Dan360_Saldo__c = 0 ,&quot;🟢&quot;,
+IF(
+AND( Dan360_Saldo__c &gt; 0, TODAY() &gt; Dan360_Vencimiento__c ), &quot;🔴&quot;,
+IF(
+AND( Dan360_Saldo__c &gt; 0, TODAY() &lt;= Dan360_Vencimiento__c ), &quot;⚫&quot;
+,&quot;&quot;
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Semáforo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

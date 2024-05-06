@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Cuota__c</fullName>
+    <description>Cuota relacionada al pedido</description>
+    <externalId>false</externalId>
+    <label>Cuota</label>
+    <referenceTo>Dan360_Cuota__c</referenceTo>
+    <relationshipLabel>Pedidos Por Cuota</relationshipLabel>
+    <relationshipName>Dan360_PedidosPorCuota</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

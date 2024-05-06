@@ -1,0 +1,70 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 17-03-2022
+  @description       : 
+-->
+<template>
+	<div class="slds-modal__container">
+		<template if:true={showSpinner}>
+			<div style="z-index: 10000 !important;">
+				<lightning-spinner
+					alternative-text="Uploading..."
+					size="medium"
+					style="z-index: 10000 !important;"
+				></lightning-spinner>
+			</div>
+		</template>
+
+		<lightning-card title="Carga masiva de muestras médicas">
+			<div style="margin-left:4%; margin:0px auto; width: 300px;">
+				<div>
+					<lightning-input
+						accept={acceptedFormats}
+						label="Seleccione archivo"
+						multiple
+						name="file uploader"
+						onchange={handleUpload}
+						type="file"
+					></lightning-input>
+				</div>
+				<template if:true={isSuccess}>
+					<div class="slds-text-body_small slds-text-color_success">
+						{fileName}
+					</div>
+				</template>
+				<template if:false={success}>
+					<div class="slds-text-body_small slds-text-color_error">
+						{errors}
+					</div>
+				</template>
+			</div>
+
+			<template if:true={data}>
+				<lightning-card
+					icon-name="custom:custom13"
+					title="Muestras médicas"
+				>
+					<div style="width: auto;">
+						<lightning-datatable
+							columns={columns}
+							data={data}
+							hide-checkbox-column
+							key-field="id"
+						></lightning-datatable>
+					</div>
+					<div>
+						<lightning-button
+							class="slds-m-top--medium"
+							disabled={isDisabled}
+							label="Guardar"
+							onclick={handleSave}
+							variant="brand"
+						></lightning-button>
+					</div>
+				</lightning-card>
+			</template>
+		</lightning-card>
+	</div>
+</template>

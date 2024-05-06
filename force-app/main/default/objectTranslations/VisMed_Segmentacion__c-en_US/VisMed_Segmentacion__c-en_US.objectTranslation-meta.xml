@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Segmentación</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Segmentaciones</value>
+    </caseValues>
+    <layouts>
+        <layout>Adultos Institucion</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Alergia</layout>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Nicho</layout>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Segmentacion de Profesionales</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label></label>
+        <name>Adultos</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Adultos_General_Comunidad</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Adultos_General_Institucion</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Adultos_Oncologia</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Alergia</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Dieta_Cetogenica</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Epilepsia</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Metabolicos</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Metabolicos_y_Epilepsia</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Pediatricos</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Pediatricos_General</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>VisMed_Nicho</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

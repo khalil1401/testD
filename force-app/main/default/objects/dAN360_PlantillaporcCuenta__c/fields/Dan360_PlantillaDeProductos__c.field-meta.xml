@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_PlantillaDeProductos__c</fullName>
+    <description>Plantilla creada para el cliente, en donde están registrados los productos que puede adquirir.</description>
+    <externalId>false</externalId>
+    <label>Plantilla de Productos</label>
+    <referenceTo>Dan360_PlantillaDeProductos__c</referenceTo>
+    <relationshipLabel>Plantillas por cuenta</relationshipLabel>
+    <relationshipName>Plantillas_por_cuenta</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

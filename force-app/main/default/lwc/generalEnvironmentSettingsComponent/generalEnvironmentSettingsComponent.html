@@ -1,0 +1,21 @@
+<template>
+    <div>
+        <lightning-datatable
+            class="wrapped-header-datatable"
+            key-field="id"
+            columns={columns}
+            data={data}
+            onrowselection={getSelectedById}
+            hide-checkbox-column={hideCheckboxes}
+            show-row-number-column="true"
+            default-sort-direction={defaultSortDirection}
+            sorted-direction={sortDirection}
+            sorted-by={sortedBy}
+            onsort={onHandleSort}>    
+        </lightning-datatable>
+        <template if:true={showSpinner}>
+            <lightning-spinner alternative-text="Loading" variant="brand" size="medium">
+            </lightning-spinner>                   
+        </template>
+    </div>
+</template>

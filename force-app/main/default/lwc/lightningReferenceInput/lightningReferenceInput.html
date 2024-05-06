@@ -1,0 +1,86 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 13-01-2022
+  @description       : 
+-->
+<template>
+	<template if:false={selectedRecord}>
+		<c-lightning-search-input
+			label={label}
+			onchange={handleChange}
+		>
+		</c-lightning-search-input>
+	</template>
+	<div>
+		<template if:true={error}>
+			<template if:true={error.details}>
+				<template if:true={error.details.body}>
+					{error.details.body.message}
+				</template>
+			</template>
+		</template>
+	</div>
+	<div style="position:static; width: 450px; background-color: white;">
+		<template if:false={selectedRecord}>
+			<template if:true={records}>
+				<template
+					for:each={records}
+					for:item="record"
+				>
+					<c-lightning-reference-input-list
+						key={record.Id}
+						record={record}
+						onselect={handleSelect}
+						iconname={iconname}
+						fieldname={searchfield}
+					>
+					</c-lightning-reference-input-list>
+				</template>
+			</template>
+		</template>
+		<template if:false={selectedRecord}>
+		</template>
+	</div>
+	<template if:true={selectedRecord}>
+		<label
+			class="slds-form-element__label"
+			for="unique-id-of-input"
+		>
+			{label}
+		</label>
+		<div
+			class="slds-combobox__form-element slds-input-has-icon 
+						slds-input-has-icon_left-right slds-box slds-box_xx-small"
+			role="none"
+			style="padding-top: 0; padding-bottom: 0;"
+		>
+			<span class="slds-icon_container slds-icon-standard-account slds-combobox__input-entity-icon">
+				<lightning-icon icon-name={iconname}></lightning-icon>
+			</span>
+			<input
+				autocomplete="on"
+				class="slds-input"
+				disabled
+				readonly=""
+				role="textbox"
+				type="text"
+				value={selectedRecord.Name}
+			/>
+			<button
+				class="sicon_container slds-button slds-button_icon 
+							slds-input__icon slds-input__icon_right"
+				title="Remove selected option"
+				onclick={handleRemove}
+			>
+				<lightning-icon
+					icon-name="utility:close"
+					size="small"
+				>
+
+				</lightning-icon>
+			</button>
+		</div>
+	</template>
+</template>

@@ -1,0 +1,24 @@
+<aura:component
+	access="global"
+	controller="sendOrderToSapController"
+	implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+>
+
+<aura:attribute name="recordId" type="String" />
+<aura:attribute name="orderShowData" type="Object"/>
+<aura:attribute name="ShowRecordTypeData" type="Object"/>
+<aura:attribute name="sucess" type="Boolean" default="false" />
+
+<force:recordData aura:id="orderData"
+	recordId="{!v.recordId}"
+    fields="Status, RecordType.Name"
+    targetFields ="{!v.orderShowData}"
+    targetError="{!v.orderShowDataError}"
+	recordUpdated="{! c.handleUpdate }"
+/>
+
+ <aura:renderIf isTrue="{!v.sucess}">
+    El registro se actualizara en 6 segundos...
+</aura:renderIf>
+
+</aura:component>

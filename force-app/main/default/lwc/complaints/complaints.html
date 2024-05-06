@@ -1,0 +1,38 @@
+<!--
+  @author            : Diego Valle
+  @created date      : 
+  @last modified by  : Diego Valle
+  @last modified on  : 22-10-2021
+  @description       : 
+-->
+<template>
+    <lightning-quick-action-panel header={title}>
+        <lightning-spinner
+            variant="brand"
+            alternative-text="Cargando"
+            size="small"
+            if:true={showSpinnner}
+        ></lightning-spinner>
+        <template if:true={renderType}>
+            <c-type-of-complaint
+                oncomplaintselected={switchComplaintTemplate}
+                oncancel={closeAction}
+                title={title}
+                objapiname={objApiName}
+                invoiceid={recordId}
+            ></c-type-of-complaint>
+        </template>
+        <template if:true={complaintSelected}>
+            <c-complaint-form
+                complainttypename={complaintTypeName}
+                recordtypeid={recordTypeId}
+                invoiceid={recordId}
+                onloading={handleShowSpinner}
+                oncancel={closeAction}
+                onsuccess={redirectToComplaint}
+                title={title}
+                objapiname={objApiName}
+            ></c-complaint-form>
+        </template>
+    </lightning-quick-action-panel>
+</template>

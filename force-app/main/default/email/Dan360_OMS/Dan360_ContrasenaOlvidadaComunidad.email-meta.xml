@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Contraseña olvidada comunidad</name>
+    <style>none</style>
+    <subject>Crear contraseña</subject>
+    <textOnly>Hola,
+Te está llegando este correo ya que fuiste dado de alta en la plataforma de Clientes.
+Tu usuario es: {!Receiving_User.Username}, para crear tu contraseña te pedimos hagas click en el botón de abajo.
+Muchas gracias.
+
+CREAR CONTRASEÑA
+clientes.nutricia.com.ar</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

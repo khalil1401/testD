@@ -1,0 +1,12 @@
+.slds-is-resizable {
+    width: 120px !important;
+    min-width: 120 px;
+  }
+
+.slds-cell-fixed{
+    min-width: 120 px;
+}
+
+.data-col-key-value{
+  width: 250px !important;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Configuraciones Generales</label>
+    <protected>false</protected>
+    <values>
+        <field>Dan360_IdComunidadGestoresPedidos__c</field>
+        <value xsi:type="xsd:string">0DB4C0000004CmtWAE</value>
+    </values>
+    <values>
+        <field>Dan360_PerfilesConfirmarPedidosMasivo__c</field>
+        <value xsi:type="xsd:string">Customer Serivce, Administrador del sistema,System Administrator, Comercial</value>
+    </values>
+    <values>
+        <field>Dan360_PerfilesOMSComunidad__c</field>
+        <value xsi:type="xsd:string">Cliente CC, Gestor de pedidos, Payer</value>
+    </values>
+    <values>
+        <field>Dan360_PerfilesParaPedidosSinCargo__c</field>
+        <value xsi:type="xsd:string">System Administrator, Administrador de sistema</value>
+    </values>
+</CustomMetadata>

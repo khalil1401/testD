@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VisMed_FechaInicio</fullName>
+    <active>true</active>
+    <description>Validación que no permite ingresar una fecha de inicio anterior a la fecha de inicio del objetivo.</description>
+    <errorConditionFormula>VisMed_FechaInicio__c &lt;  VisMed_Objetivo__r.VisMed_FechaInicio__c</errorConditionFormula>
+    <errorDisplayField>VisMed_FechaInicio__c</errorDisplayField>
+    <errorMessage>No es posible ingresar una fecha de inicio inferior a la fecha de inicio del objetivo.</errorMessage>
+</ValidationRule>

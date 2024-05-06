@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>APM__c</columns>
+    <columns>Muestra_Medica__c</columns>
+    <columns>Total__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Ciclo__c</columns>
+    <columns>Recibido__c</columns>
+    <columns>Remanente__c</columns>
+    <columns>Entregado__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Muestra_Medica__c</field>
+        <operation>contains</operation>
+    </filters>
+    <filters>
+        <field>APM__c</field>
+        <operation>contains</operation>
+        <value>lucio</value>
+    </filters>
+    <filters>
+        <field>Ciclo__c</field>
+        <operation>contains</operation>
+        <value>ABRIL</value>
+    </filters>
+    <label>All</label>
+</ListView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Activo</fullName>
+    <active>true</active>
+    <description>Regla de validacion que verifica que el check solo se pueda poner en true, si la fecha Hasta es mayor al dia actual</description>
+    <errorConditionFormula>AND (Dan360_Activo__c == TRUE,
+Dan360_Vigencia__c &lt; TODAY()
+)</errorConditionFormula>
+    <errorDisplayField>Dan360_Vigencia__c</errorDisplayField>
+    <errorMessage>SI esta activo, la fecha HASTA tiene que ser mayor o igual a HOY</errorMessage>
+</ValidationRule>

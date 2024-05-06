@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_CustomerSalesAreaSinCargo</fullName>
+    <columns>NAME</columns>
+    <columns>Dan360_Customer__c</columns>
+    <columns>Dan360_Block__c</columns>
+    <columns>Dan360_SalesArea__c</columns>
+    <columns>Dan360_District__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Dan360_Block__c</field>
+        <operation>notEqual</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Dan360_SalesArea__c</field>
+        <operation>contains</operation>
+        <value>-05-00</value>
+    </filters>
+    <label>Customer Sales Area Sin Cargo</label>
+</ListView>

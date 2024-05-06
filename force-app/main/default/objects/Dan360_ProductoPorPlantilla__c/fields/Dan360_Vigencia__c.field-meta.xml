@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Vigencia__c</fullName>
+    <description>Rango de fecha en el que un producto puede ser adquirido.</description>
+    <externalId>false</externalId>
+    <label>Vigencia hasta</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,26 @@
+.wrapped-header-datatable .slds-table .slds-th__action .slds-truncate {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: unset;
+	white-space: pre-line;
+	font-size: 0.75rem;
+	/* word-wrap: break-word; */
+}
+
+.wrapped-header-datatable .slds-table .slds-th__action {
+	border: none;
+	height: 2.5rem;
+}
+
+.wrapped-header-datatable .slds-table .slds-line-height_reset {
+	height: 0.5rem;
+}
+
+.wrapped-header-datatable .slds-table .slds-hint-parent {
+	font-size: 0.8rem;
+}
+
+
+.wrapped-header-datatable .slds-th__action .slds-resizable .slds-resizable__handle .slds-resizable__divider {
+	display: none !important;
+}

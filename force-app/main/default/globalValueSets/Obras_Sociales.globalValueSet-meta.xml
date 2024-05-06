@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>APROSS</fullName>
+        <default>false</default>
+        <label>Apross</label>
+    </customValue>
+    <customValue>
+        <fullName>GALENO</fullName>
+        <default>false</default>
+        <label>Galeno</label>
+    </customValue>
+    <customValue>
+        <fullName>IAPOS</fullName>
+        <default>false</default>
+        <label>IAPOS</label>
+    </customValue>
+    <customValue>
+        <fullName>IOMA</fullName>
+        <default>false</default>
+        <label>IOMA</label>
+    </customValue>
+    <customValue>
+        <fullName>JERSALUD JERARQUICOS SALUD</fullName>
+        <default>false</default>
+        <label>Jersalud Jerarquicos Salud</label>
+    </customValue>
+    <customValue>
+        <fullName>MEDIFE ASOCIACION CIVIL</fullName>
+        <default>false</default>
+        <label>Medife Asociación Civil</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUAL FEDERADA</fullName>
+        <default>false</default>
+        <label>Mutual Federada</label>
+    </customValue>
+    <customValue>
+        <fullName>OBSBA</fullName>
+        <default>false</default>
+        <label>OBSBA</label>
+    </customValue>
+    <customValue>
+        <fullName>OMINT</fullName>
+        <default>false</default>
+        <label>OMINT</label>
+    </customValue>
+    <customValue>
+        <fullName>OSDE</fullName>
+        <default>false</default>
+        <label>OSDE</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPE OBSOC DE PETROLEROS</fullName>
+        <default>false</default>
+        <label>OSPE OBSOC De Petroleros</label>
+    </customValue>
+    <customValue>
+        <fullName>SANCOR MEDICINA PRIVADA LACTEOS</fullName>
+        <default>false</default>
+        <label>Sancor Medicina Privada Lacteos</label>
+    </customValue>
+    <customValue>
+        <fullName>SWISS MEDICAL</fullName>
+        <default>false</default>
+        <label>Swiss Medical</label>
+    </customValue>
+    <customValue>
+        <fullName>OTRA</fullName>
+        <default>false</default>
+        <label>Otra</label>
+    </customValue>
+    <customValue>
+        <fullName>ACA SALUD</fullName>
+        <default>false</default>
+        <label>ACA SALUD</label>
+    </customValue>
+    <customValue>
+        <fullName>ACCORD SALUD</fullName>
+        <default>false</default>
+        <label>ACCORD SALUD</label>
+    </customValue>
+    <customValue>
+        <fullName>ALLENDE</fullName>
+        <default>false</default>
+        <label>ALLENDE</label>
+    </customValue>
+    <customValue>
+        <fullName>AMMA (ASOCIADO MUTUAL MERCANTIL ARGENTINA)</fullName>
+        <default>false</default>
+        <label>AMMA (ASOCIADO MUTUAL MERCANTIL ARGENTINA)</label>
+    </customValue>
+    <customValue>
+        <fullName>APM</fullName>
+        <default>false</default>
+        <label>APM</label>
+    </customValue>
+    <customValue>
+        <fullName>BOREAL</fullName>
+        <default>false</default>
+        <label>BOREAL</label>
+    </customValue>
+    <customValue>
+        <fullName>CAJA DE INGENIEROS</fullName>
+        <default>false</default>
+        <label>CAJA DE INGENIEROS</label>
+    </customValue>
+    <customValue>
+        <fullName>CEMIC</fullName>
+        <default>false</default>
+        <label>CEMIC</label>
+    </customValue>
+    <customValue>
+        <fullName>CIRCULO MEDICO</fullName>
+        <default>false</default>
+        <label>CIRCULO MEDICO</label>
+    </customValue>
+    <customValue>
+        <fullName>CIRCULO MEDICO DE JUJUY</fullName>
+        <default>false</default>
+        <label>CIRCULO MEDICO DE JUJUY</label>
+    </customValue>
+    <customValue>
+        <fullName>CIRCULO MEDICO DE SALTA</fullName>
+        <default>false</default>
+        <label>CIRCULO MEDICO DE SALTA</label>
+    </customValue>
+    <customValue>
+        <fullName>COLEGIO DE ESCRIBANOS</fullName>
+        <default>false</default>
+        <label>COLEGIO DE ESCRIBANOS</label>
+    </customValue>
+    <customValue>
+        <fullName>COLEGIO DE FONODIOLOGOS DE SALTA</fullName>
+        <default>false</default>
+        <label>COLEGIO DE FONODIOLOGOS DE SALTA</label>
+    </customValue>
+    <customValue>
+        <fullName>CONSALUD</fullName>
+        <default>false</default>
+        <label>CONSALUD</label>
+    </customValue>
+    <customValue>
+        <fullName>DIBA (DIRECCION DE ASISTENCIA SOCIAL DEL PERSONAL UNIVERSITARIO)</fullName>
+        <default>false</default>
+        <label>DIBA (DIRECCION DE ASISTENCIA SOCIAL DEL PERSONAL UNIVERSITARIO)</label>
+    </customValue>
+    <customValue>
+        <fullName>DOSEP</fullName>
+        <default>false</default>
+        <label>DOSEP</label>
+    </customValue>
+    <customValue>
+        <fullName>ELEVAR</fullName>
+        <default>false</default>
+        <label>ELEVAR</label>
+    </customValue>
+    <customValue>
+        <fullName>ESENCIAL</fullName>
+        <default>false</default>
+        <label>ESENCIAL</label>
+    </customValue>
+    <customValue>
+        <fullName>FEDERADA SALUD</fullName>
+        <default>false</default>
+        <label>FEDERADA SALUD</label>
+    </customValue>
+    <customValue>
+        <fullName>FEMEBA</fullName>
+        <default>false</default>
+        <label>FEMEBA</label>
+    </customValue>
+    <customValue>
+        <fullName>FEMECHACO</fullName>
+        <default>false</default>
+        <label>FEMECHACO</label>
+    </customValue>
+    <customValue>
+        <fullName>GASTRONOMICOS</fullName>
+        <default>false</default>
+        <label>GASTRONOMICOS</label>
+    </customValue>
+    <customValue>
+        <fullName>HOSPITAL ALEMAN</fullName>
+        <default>false</default>
+        <label>HOSPITAL ALEMAN</label>
+    </customValue>
+    <customValue>
+        <fullName>HOSPITAL PUBLICO</fullName>
+        <default>false</default>
+        <label>HOSPITAL PUBLICO</label>
+    </customValue>
+    <customValue>
+        <fullName>IASEP</fullName>
+        <default>false</default>
+        <label>IASEP</label>
+    </customValue>
+    <customValue>
+        <fullName>INSSEP</fullName>
+        <default>false</default>
+        <label>INSSEP</label>
+    </customValue>
+    <customValue>
+        <fullName>IOSCOR (INSTITUTO DE OBRA SOCIAL DE LA PROVINCIA DE CORRIENTES)</fullName>
+        <default>false</default>
+        <label>IOSCOR (INSTITUTO DE OBRA SOCIAL DE LA PROVINCIA DE CORRIENTES)</label>
+    </customValue>
+    <customValue>
+        <fullName>IOSFA</fullName>
+        <default>false</default>
+        <label>IOSFA</label>
+    </customValue>
+    <customValue>
+        <fullName>IOSPER</fullName>
+        <default>false</default>
+        <label>IOSPER</label>
+    </customValue>
+    <customValue>
+        <fullName>IOSPET</fullName>
+        <default>false</default>
+        <label>IOSPET</label>
+    </customValue>
+    <customValue>
+        <fullName>IPAM</fullName>
+        <default>false</default>
+        <label>IPAM</label>
+    </customValue>
+    <customValue>
+        <fullName>IPROSS</fullName>
+        <default>false</default>
+        <label>IPROSS</label>
+    </customValue>
+    <customValue>
+        <fullName>IPS JUJUY</fullName>
+        <default>false</default>
+        <label>IPS JUJUY</label>
+    </customValue>
+    <customValue>
+        <fullName>IPS SALTA</fullName>
+        <default>false</default>
+        <label>IPS SALTA</label>
+    </customValue>
+    <customValue>
+        <fullName>ISSN</fullName>
+        <default>false</default>
+        <label>ISSN</label>
+    </customValue>
+    <customValue>
+        <fullName>LUIS PASTEUR</fullName>
+        <default>false</default>
+        <label>LUIS PASTEUR</label>
+    </customValue>
+    <customValue>
+        <fullName>MEDICUS</fullName>
+        <default>false</default>
+        <label>MEDICUS</label>
+    </customValue>
+    <customValue>
+        <fullName>MET</fullName>
+        <default>false</default>
+        <label>MET</label>
+    </customValue>
+    <customValue>
+        <fullName>MINISTERIO DE LA SALUD PUBLICA</fullName>
+        <default>false</default>
+        <label>MINISTERIO DE LA SALUD PUBLICA</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUAL POLICIA DE FORMOSA</fullName>
+        <default>false</default>
+        <label>MUTUAL POLICIA DE FORMOSA</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUAL POLICIAL</fullName>
+        <default>false</default>
+        <label>MUTUAL POLICIAL</label>
+    </customValue>
+    <customValue>
+        <fullName>NUTRICIONISTA DE CONIN</fullName>
+        <default>false</default>
+        <label>NUTRICIONISTA DE CONIN</label>
+    </customValue>
+    <customValue>
+        <fullName>OBRA SOCIAL DE CAMIONEROS</fullName>
+        <default>false</default>
+        <label>OBRA SOCIAL DE CAMIONEROS</label>
+    </customValue>
+    <customValue>
+        <fullName>OBRA SOCIAL DE LA POLICIA FEDERAL</fullName>
+        <default>false</default>
+        <label>OBRA SOCIAL DE LA POLICIA FEDERAL</label>
+    </customValue>
+    <customValue>
+        <fullName>OBRA SOCIAL GREMIAL</fullName>
+        <default>false</default>
+        <label>OBRA SOCIAL GREMIAL</label>
+    </customValue>
+    <customValue>
+        <fullName>OBRA SOCIAL MILITAR</fullName>
+        <default>false</default>
+        <label>OBRA SOCIAL MILITAR</label>
+    </customValue>
+    <customValue>
+        <fullName>OBRA SOCIAL PROVINCIAL SAN JUAN</fullName>
+        <default>false</default>
+        <label>OBRA SOCIAL PROVINCIAL SAN JUAN</label>
+    </customValue>
+    <customValue>
+        <fullName>OSBA (OBRA SOCIAL BANCARIA ARGENTINA)</fullName>
+        <default>false</default>
+        <label>OSBA (OBRA SOCIAL BANCARIA ARGENTINA)</label>
+    </customValue>
+    <customValue>
+        <fullName>OSCHOCA (OBRA SOCIAL DE CHOFERES DE CAMIONES)</fullName>
+        <default>false</default>
+        <label>OSCHOCA (OBRA SOCIAL DE CHOFERES DE CAMIONES)</label>
+    </customValue>
+    <customValue>
+        <fullName>OSDEPIN</fullName>
+        <default>false</default>
+        <label>OSDEPIN</label>
+    </customValue>
+    <customValue>
+        <fullName>OSECAC</fullName>
+        <default>false</default>
+        <label>OSECAC</label>
+    </customValue>
+    <customValue>
+        <fullName>OSEP</fullName>
+        <default>false</default>
+        <label>OSEP</label>
+    </customValue>
+    <customValue>
+        <fullName>OSFATUM</fullName>
+        <default>false</default>
+        <label>OSFATUM</label>
+    </customValue>
+    <customValue>
+        <fullName>OSMATA</fullName>
+        <default>false</default>
+        <label>OSMATA</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPATCA</fullName>
+        <default>false</default>
+        <label>OSPATCA</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPECON</fullName>
+        <default>false</default>
+        <label>OSPECON</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPEPRI (OBRA SOCIAL DE PETROLEROS PRIVADOS)</fullName>
+        <default>false</default>
+        <label>OSPEPRI (OBRA SOCIAL DE PETROLEROS PRIVADOS)</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPFA</fullName>
+        <default>false</default>
+        <label>OSPFA</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPIA</fullName>
+        <default>false</default>
+        <label>OSPIA</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPLAD</fullName>
+        <default>false</default>
+        <label>OSPLAD</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPRERA</fullName>
+        <default>false</default>
+        <label>OSPRERA</label>
+    </customValue>
+    <customValue>
+        <fullName>OSSAMMVC</fullName>
+        <default>false</default>
+        <label>OSSAMMVC</label>
+    </customValue>
+    <customValue>
+        <fullName>OSSPF</fullName>
+        <default>false</default>
+        <label>OSSPF</label>
+    </customValue>
+    <customValue>
+        <fullName>PASTELEROS</fullName>
+        <default>false</default>
+        <label>PASTELEROS</label>
+    </customValue>
+    <customValue>
+        <fullName>PAVIOTTI (REGIONAL)</fullName>
+        <default>false</default>
+        <label>PAVIOTTI (REGIONAL)</label>
+    </customValue>
+    <customValue>
+        <fullName>PIEVE SALUD</fullName>
+        <default>false</default>
+        <label>PIEVE SALUD</label>
+    </customValue>
+    <customValue>
+        <fullName>PLAN DE SALUD DEL HOSPITAL ITALIANO</fullName>
+        <default>false</default>
+        <label>PLAN DE SALUD DEL HOSPITAL ITALIANO</label>
+    </customValue>
+    <customValue>
+        <fullName>PLENIT</fullName>
+        <default>false</default>
+        <label>PLENIT</label>
+    </customValue>
+    <customValue>
+        <fullName>PREVENCION SALUD</fullName>
+        <default>false</default>
+        <label>PREVENCION SALUD</label>
+    </customValue>
+    <customValue>
+        <fullName>SEMPRE</fullName>
+        <default>false</default>
+        <label>SEMPRE</label>
+    </customValue>
+    <customValue>
+        <fullName>SIN ASIGNAR</fullName>
+        <default>false</default>
+        <label>SIN ASIGNAR</label>
+    </customValue>
+    <customValue>
+        <fullName>SINDICATO DE TV</fullName>
+        <default>false</default>
+        <label>SINDICATO DE TV</label>
+    </customValue>
+    <customValue>
+        <fullName>STIA (SINDICATO TRABAJADOR DE LA INDUSTRIA ALIMENTICIA)</fullName>
+        <default>false</default>
+        <label>STIA (SINDICATO TRABAJADOR DE LA INDUSTRIA ALIMENTICIA)</label>
+    </customValue>
+    <customValue>
+        <fullName>UNION PERSONAL</fullName>
+        <default>false</default>
+        <label>UNION PERSONAL</label>
+    </customValue>
+    <customValue>
+        <fullName>UOCRA</fullName>
+        <default>false</default>
+        <label>UOCRA</label>
+    </customValue>
+    <customValue>
+        <fullName>UOM</fullName>
+        <default>false</default>
+        <label>UOM</label>
+    </customValue>
+    <customValue>
+        <fullName>UP (UNION PERSONAL)</fullName>
+        <default>false</default>
+        <label>UP (UNION PERSONAL)</label>
+    </customValue>
+    <customValue>
+        <fullName>VARIAS</fullName>
+        <default>false</default>
+        <label>VARIAS</label>
+    </customValue>
+    <customValue>
+        <fullName>ACUDIR</fullName>
+        <default>false</default>
+        <label>ACUDIR</label>
+    </customValue>
+    <customValue>
+        <fullName>AMFFA</fullName>
+        <default>false</default>
+        <label>AMFFA</label>
+    </customValue>
+    <customValue>
+        <fullName>BANCO PROVINCIA</fullName>
+        <default>false</default>
+        <label>BANCO PROVINCIA</label>
+    </customValue>
+    <customValue>
+        <fullName>BASA SALUD</fullName>
+        <default>false</default>
+        <label>BASA SALUD</label>
+    </customValue>
+    <customValue>
+        <fullName>BRITANICA SALUD</fullName>
+        <default>false</default>
+        <label>BRITANICA SALUD</label>
+    </customValue>
+    <customValue>
+        <fullName>CONIN</fullName>
+        <default>false</default>
+        <label>CONIN</label>
+    </customValue>
+    <customValue>
+        <fullName>DAMSU</fullName>
+        <default>false</default>
+        <label>DAMSU</label>
+    </customValue>
+    <customValue>
+        <fullName>DOSUBA (DIRECCION DE OBRA SOCIAL DE LA UNIVERSIDAD DE BUENOS AIRES)</fullName>
+        <default>false</default>
+        <label>DOSUBA (DIRECCION DE OBRA SOCIAL DE LA UNIVERSIDAD DE BUENOS AIRES)</label>
+    </customValue>
+    <customValue>
+        <fullName>FORENSE</fullName>
+        <default>false</default>
+        <label>FORENSE</label>
+    </customValue>
+    <customValue>
+        <fullName>HOMINIS</fullName>
+        <default>false</default>
+        <label>HOMINIS</label>
+    </customValue>
+    <customValue>
+        <fullName>HOSPITAL BRITANICO</fullName>
+        <default>false</default>
+        <label>HOSPITAL BRITANICO</label>
+    </customValue>
+    <customValue>
+        <fullName>HOSPITAL ITALIANO</fullName>
+        <default>false</default>
+        <label>HOSPITAL ITALIANO</label>
+    </customValue>
+    <customValue>
+        <fullName>IPS</fullName>
+        <default>false</default>
+        <label>IPS</label>
+    </customValue>
+    <customValue>
+        <fullName>ITALMEDIC</fullName>
+        <default>false</default>
+        <label>ITALMEDIC</label>
+    </customValue>
+    <customValue>
+        <fullName>MINISTERIO</fullName>
+        <default>false</default>
+        <label>MINISTERIO</label>
+    </customValue>
+    <customValue>
+        <fullName>MINISTERIO DE SALUD PUBLICA</fullName>
+        <default>false</default>
+        <label>MINISTERIO DE SALUD PUBLICA</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUAL ACINDAR</fullName>
+        <default>false</default>
+        <label>MUTUAL ACINDAR</label>
+    </customValue>
+    <customValue>
+        <fullName>ORDEN</fullName>
+        <default>false</default>
+        <label>ORDEN</label>
+    </customValue>
+    <customValue>
+        <fullName>OSAP</fullName>
+        <default>false</default>
+        <label>OSAP</label>
+    </customValue>
+    <customValue>
+        <fullName>OSDEPYM</fullName>
+        <default>false</default>
+        <label>OSDEPYM</label>
+    </customValue>
+    <customValue>
+        <fullName>OSDOP</fullName>
+        <default>false</default>
+        <label>OSDOP</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPEDYN</fullName>
+        <default>false</default>
+        <label>OSPEDYN</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPICHA (OBRA SOCIAL DEL PERSONAL DEL CHACINADO Y AFINES)</fullName>
+        <default>false</default>
+        <label>OSPICHA (OBRA SOCIAL DEL PERSONAL DEL CHACINADO Y AFINES)</label>
+    </customValue>
+    <customValue>
+        <fullName>PAMI</fullName>
+        <default>false</default>
+        <label>PAMI</label>
+    </customValue>
+    <customValue>
+        <fullName>PARTICULAR</fullName>
+        <default>false</default>
+        <label>PARTICULAR</label>
+    </customValue>
+    <customValue>
+        <fullName>PFA</fullName>
+        <default>false</default>
+        <label>PFA</label>
+    </customValue>
+    <customValue>
+        <fullName>PODER JUDICIAL</fullName>
+        <default>false</default>
+        <label>PODER JUDICIAL</label>
+    </customValue>
+    <customValue>
+        <fullName>SAMI (OBRA SOCIAL POLICIA INTELIGENCIA)</fullName>
+        <default>false</default>
+        <label>SAMI (OBRA SOCIAL POLICIA INTELIGENCIA)</label>
+    </customValue>
+    <customValue>
+        <fullName>SINDICATO DE LA FRUTA</fullName>
+        <default>false</default>
+        <label>SINDICATO DE LA FRUTA</label>
+    </customValue>
+    <customValue>
+        <fullName>UNS</fullName>
+        <default>false</default>
+        <label>UNS</label>
+    </customValue>
+    <customValue>
+        <fullName>AUSTRAL SALUD</fullName>
+        <default>false</default>
+        <label>AUSTRAL SALUD</label>
+    </customValue>
+    <customValue>
+        <fullName>BOREL</fullName>
+        <default>false</default>
+        <label>BOREL</label>
+    </customValue>
+    <customValue>
+        <fullName>CIENCIAS ECONOMICAS</fullName>
+        <default>false</default>
+        <label>CIENCIAS ECONOMICAS</label>
+    </customValue>
+    <customValue>
+        <fullName>EME</fullName>
+        <default>false</default>
+        <label>EME</label>
+    </customValue>
+    <customValue>
+        <fullName>HOPE</fullName>
+        <default>false</default>
+        <label>HOPE</label>
+    </customValue>
+    <customValue>
+        <fullName>OBRA SOCIAL PROVINCIA</fullName>
+        <default>false</default>
+        <label>OBRA SOCIAL PROVINCIA</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPAT</fullName>
+        <default>false</default>
+        <label>OSPAT</label>
+    </customValue>
+    <customValue>
+        <fullName>OSPERYH</fullName>
+        <default>false</default>
+        <label>OSPERYH</label>
+    </customValue>
+    <customValue>
+        <fullName>OSSTV</fullName>
+        <default>false</default>
+        <label>OSSTV</label>
+    </customValue>
+    <customValue>
+        <fullName>PORTUARIOS</fullName>
+        <default>false</default>
+        <label>PORTUARIOS</label>
+    </customValue>
+    <masterLabel>Obras Sociales</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

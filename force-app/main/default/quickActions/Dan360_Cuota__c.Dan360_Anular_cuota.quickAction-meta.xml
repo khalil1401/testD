@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Acción para anular manualmente una cuota.</description>
+    <fieldOverrides>
+        <field>Dan360_EstadoCuota__c</field>
+        <literalValue>Anulada</literalValue>
+    </fieldOverrides>
+    <label>Anular cuota</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Dan360_ComentariosAnulacion__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <successMessage>La cuota ha sido anulada exitosamente</successMessage>
+    <type>Update</type>
+</QuickAction>

@@ -1,0 +1,33 @@
+<!--
+	@author            : Diego Valle
+	@created date      : 
+	@last modified by  : Diego Valle
+	@last modified on  : 28-02-2022
+	@description       : 
+-->
+<template>
+	<div
+		if:true={isLoaded}
+		class="slds-is-relative"
+	>
+		<div style="height: 5rem; margin: 1rem;">
+			<lightning-spinner
+				alternative-text="Loading"
+				variant="brand"
+				size="medium"
+			></lightning-spinner>
+		</div>
+	</div>
+
+	<template if:true={hasResult}>
+		<lightning-datatable
+			key-field="Id"
+			columns={columns}
+			data={data}
+			hide-checkbox-column="true"
+			class="wrapped-header-datatable"
+			onrowaction={handleRowAction}
+		>
+		</lightning-datatable>
+	</template>
+</template>

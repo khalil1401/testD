@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Dan360_NutriciaPlantilla</letterhead>
+    <name>Edi Logs</name>
+    <style>formalLetter</style>
+    <subject>Error al procesar orden EDI</subject>
+    <textOnly>Se han generado errores al tratar de procesar una orden EDI.
+Tipo de error: {!AppLog__c.Tipo_de_Errores__c}
+
+Log:
+
+{!AppLog__c.Mensaje__c}
+
+
+Fecha De Creacion: {!AppLog__c.CreatedDate}
+
+
+Puede visualizar el log de error en el siguente link:
+{!AppLog__c.Link}
+
+
+
+*Este mensaje ha sido generado automáticamente y no debe ser respondido.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

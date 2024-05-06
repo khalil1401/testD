@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360ConfirmarPedidosMasivo</fullName>
+    <availability>online</availability>
+    <description>Botón que actualiza los pedidos con semáforo verde a Confirmado</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Confirmar Pedidos Masivo</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/flow/Dan360_ConfirmacionMasivaDePedidos?retURL=https://dsnutritionsf2--uatdanone.lightning.force.com/lightning/o/Order/list?filterName=00B03000001IaQiEAK</url>
+</WebLink>

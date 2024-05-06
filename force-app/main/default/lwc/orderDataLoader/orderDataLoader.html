@@ -1,0 +1,71 @@
+<template>
+    <div class="slds-modal__container">
+    <template if:true={showLoadingSpinner}>
+        <div style="z-index: 10000 !important;">
+            <lightning-spinner alternative-text="Uploading......" size="medium" style="z-index: 10000 !important;"></lightning-spinner>
+        </div>
+    </template>
+
+
+    <lightning-card title="Carga de Pedidos">
+        <lightning-button 
+            label="Descargar referencia"
+            title="Descargar CSV" 
+            onclick={downloadCSVFile} 
+            class="slds-m-left_x-small"
+        ></lightning-button>
+        <div style="margin-left:2%; margin:30px 0px 45px 61px; width: 90%;">
+            <strong style>A tener en cuenta:</strong>
+            <ul class="slds-list_dotted slds-text-color_destructive">
+                <li>Campos obligatorios: Sucursal, Codigo de Producto, Cantidad Solicitada</li>
+                <li>Cada linea del CSV es un producto a agregar en determinada orden</li>
+                <li>No se permite tener dos lineas con el mismo producto para la misma orden y el mismo cliente.</li>
+                <li>El producto tiene que estar habititado para el cliente</li>
+            </ul>
+        </div>
+        
+
+        <div style="margin-left:4%; margin:0px auto; width: 300px;">
+            <div>
+                <lightning-combobox
+                    name="progress2"
+                    label="Tipo de Venta"
+                    value={tipoVenta}
+                    placeholder=""
+                    options={optionsTipoVenta}
+                    onchange={handleChangeTipoVenta} 
+                ></lightning-combobox>
+            </div>
+            <div>
+                <lightning-input label="" name="file uploader" onchange={uploadFileHandler} type="file" multiple></lightning-input>
+            </div><br/>
+            <div class="slds-text-body_small slds-text-color_error">{fileName}
+
+
+            </div><br/>
+            
+        </div><br/><br/>
+
+
+    </lightning-card>
+    
+
+    <template if:true={data}>
+    <lightning-card title="Pedidos" icon-name="standard:order">
+        <div style="width: auto;">
+           
+                    <lightning-datatable
+                            data={data}
+                            columns={columnsOrder}
+                            key-field="id"
+                            hide-checkbox-column
+                    ></lightning-datatable>
+            
+        </div>
+        <div>
+            <lightning-button class="slds-m-top--medium" label="Guardar" onclick={handleSave} variant="brand" disabled={isDisabled}></lightning-button>
+        </div>
+    </lightning-card>
+    </template>
+</div>
+</template>

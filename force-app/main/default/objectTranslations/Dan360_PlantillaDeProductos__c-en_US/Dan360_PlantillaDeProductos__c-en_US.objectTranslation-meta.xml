@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Plantilla de Productos</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Plantillas de Productos</value>
+    </caseValues>
+    <layouts>
+        <layout>Formato Plantilla de Productos</layout>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel></nameFieldLabel>
+    <quickActions>
+        <label></label>
+        <name>Agregar_Productos</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Dan360_AgregarProductosAPlantilla</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Dan360_ModificarUnidadDeNegocio</name>
+    </validationRules>
+</CustomObjectTranslation>

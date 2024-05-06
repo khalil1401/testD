@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categoria__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+  OR(
+    RecordType.Name =&apos;Metabolicos&apos;,
+    RecordType.Name =&apos;Epilepsia&apos;,
+    RecordType.Name =&apos;Metabolicos_y_Epilepsia&apos;
+  ),
+  Categoria_Nicho__c,
+  IF(
+    OR(
+      RecordType.Name =&apos;Alergia&apos;,
+      RecordType.Name =&apos;Pediatricos&apos;,
+      RecordType.Name =&apos;Pediatricos General&apos;
+    ),
+    Categoria_Ped_Aler__c,
+    Categoria_Nicho__c
+  )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Categoria</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

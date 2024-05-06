@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Dan360_NotificacionReclamoRegistrado</fullName>
+        <description>Notificación reclamo registrado</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>clientes@nutricia.com.ar</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Dan360_OMS/Dan360_NotificacionReclamoRegistrado</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ChangePriorityToHigh</fullName>
+        <field>Priority</field>
+        <literalValue>High</literalValue>
+        <name>Changes the case priority to high.</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_ActualizarRolCustomer_Service</fullName>
+        <description>Actualiza el campo &quot;Rol asignado&quot; del caso a Customer Service.</description>
+        <field>Dan360_RolAsignado__c</field>
+        <literalValue>Customer Service</literalValue>
+        <name>Actualizar Rol Customer Service</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_ActualizarRolJefeVentas</fullName>
+        <description>Actualizar el campo llamado Rol asignado a &quot;Jefe de ventas&quot;.</description>
+        <field>Dan360_RolAsignado__c</field>
+        <literalValue>Jefe de Ventas</literalValue>
+        <name>Actualizar Rol Jefe de Ventas</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_ActualizarRolVendedor</fullName>
+        <description>Actualizar campo llamado Rol asignado a &quot;Vendedor&quot;</description>
+        <field>Dan360_RolAsignado__c</field>
+        <literalValue>Vendedor</literalValue>
+        <name>Actualizar Rol Vendedor</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_AsignarRolFinanzas</fullName>
+        <description>Actualizar campo llamado Rol asignado a &quot;Finanzas&quot;</description>
+        <field>Dan360_RolAsignado__c</field>
+        <literalValue>Finanzas</literalValue>
+        <name>Asignar Rol Finanzas</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_CheckAprobado</fullName>
+        <description>Campo que se marcara cuando el reclamo sea aprobado por el o los roles correspondientes</description>
+        <field>Dan360_ReclamoAprobado__c</field>
+        <literalValue>1</literalValue>
+        <name>Check Aprobado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_EstadoControlado</fullName>
+        <description>Actualiza el estado del reclamo a controlado.</description>
+        <field>Status</field>
+        <literalValue>Controlado</literalValue>
+        <name>Estado Controlado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_OrderGetEnd</fullName>
+        <field>Dan360_OrderGetEnd__c</field>
+        <formula>IF(ISCHANGED(Status) &amp;&amp; ISPICKVAL(Status, &apos;Autorizado&apos;) || ISPICKVAL(Status, &apos;Cerrado&apos;), TODAY(), Null)</formula>
+        <name>OrderGetEnd</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_OrderGetStart</fullName>
+        <description>Fecha de aprobación del reclamo</description>
+        <field>Dan360_OrderGetStart__c</field>
+        <formula>IF(ISCHANGED(Status) &amp;&amp; ISPICKVAL(Status, &apos;Autorizado&apos;) || ISPICKVAL(Status, &apos;Cerrado&apos;), TODAY(), Null)</formula>
+        <name>OrderGetStart</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_OrderedDate</fullName>
+        <description>Fecha de creación de reclamo</description>
+        <field>Dan360_OrderedDate__c</field>
+        <formula>CreatedDate</formula>
+        <name>OrderedDate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_Rechazado</fullName>
+        <description>Cuando el reclamo se rechaza, el status del caso relacionado al reclamo cambia a &quot;Rechazado&quot;.</description>
+        <field>Status</field>
+        <literalValue>Rechazado</literalValue>
+        <name>Rechazado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_ReclamoAprobado</fullName>
+        <description>Una vez que los reclamos sean aprobados pasarán a estado &quot;Cerrado&quot;.</description>
+        <field>Status</field>
+        <literalValue>Cerrado</literalValue>
+        <name>Reclamo Aprobado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_ReclamosAutorizado</fullName>
+        <description>Cuando el Gerente de ventas apruebe el reclamo en estado &quot;Contolado&quot;, el estado debe cambiar a &quot;Autorizado&quot;.</description>
+        <field>Status</field>
+        <literalValue>Autorizado</literalValue>
+        <name>Reclamo Autorizado</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Dan360_Subject</fullName>
+        <description>Actualizar subject para reclamos por diferencia de precios y faltantes</description>
+        <field>Subject</field>
+        <formula>RecordType.Name</formula>
+        <name>Subject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

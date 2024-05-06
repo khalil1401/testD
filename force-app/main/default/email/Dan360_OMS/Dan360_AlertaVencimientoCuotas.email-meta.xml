@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Alerta de correo que se manda cuando el saldo de una cuota esta por vencer o ya esta vencido</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Dan360_NutriciaPlantilla</letterhead>
+    <name>Alerta de vencimiento de cuotas</name>
+    <style>formalLetter</style>
+    <subject>En 48 horas la cuota {!Dan360_Cuota__c.Name} vencerá.</subject>
+    <textOnly>Hola {!Receiving_User.FirstName},
+
+La cuota {!Dan360_Cuota__c.Name} vencerá el día {!Dan360_Cuota__c.Dan360_VigenciaHasta__c}.
+
+Si desea mantener vigente la cuota {!Dan360_Cuota__c.Name}, deberá modificar la fecha de vigencia hasta {!Dan360_Cuota__c.Dan360_VigenciaHasta__c}.
+
+Favor de validar.
+
+Gracias,</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

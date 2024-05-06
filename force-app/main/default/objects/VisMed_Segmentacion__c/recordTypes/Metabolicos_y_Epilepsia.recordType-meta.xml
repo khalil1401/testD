@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Metabolicos_y_Epilepsia</fullName>
+    <active>true</active>
+    <label>Metabolicos y Epilepsia</label>
+</RecordType>

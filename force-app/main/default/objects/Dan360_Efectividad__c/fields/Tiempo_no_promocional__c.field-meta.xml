@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tiempo_no_promocional__c</fullName>
+    <externalId>false</externalId>
+    <label>Tiempo no promocional (días)</label>
+    <summarizedField>Dan360_Licencia__c.Cantidad_de_Horas_Valor__c</summarizedField>
+    <summaryFilterItems>
+        <field>Dan360_Licencia__c.Estado__c</field>
+        <operation>equals</operation>
+        <value>Aprobada</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Dan360_Licencia__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>Tiempo no Promocional</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Dan360_Licencia__c.Efectividad__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

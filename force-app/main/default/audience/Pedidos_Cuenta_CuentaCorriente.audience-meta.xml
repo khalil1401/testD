@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audience xmlns="http://soap.sforce.com/2006/04/metadata">
+    <audienceName>Pedidos/Cuenta/CuentaCorriente</audienceName>
+    <container>Gestor de pedidos</container>
+    <criteria>
+        <criterion>
+            <criteriaNumber>1</criteriaNumber>
+            <criterionValue>
+                <profile>payer</profile>
+            </criterionValue>
+            <operator>Equal</operator>
+            <type>Profile</type>
+        </criterion>
+    </criteria>
+    <formulaFilterType>AllCriteriaMatch</formulaFilterType>
+    <isDefaultAudience>false</isDefaultAudience>
+    <targets>
+        <target>
+            <groupName>f422b6bf-2f83-4833-885a-c840a34bb5ce$#$57fff6df-91e6-40dc-b9e5-e2d428f57683</groupName>
+            <priority>2</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Default_Customizable_User_Profile_Menu_1_Component_Properties</targetValue>
+        </target>
+        <target>
+            <groupName>f422b6bf-2f83-4833-885a-c840a34bb5ce$#$34b1007b-5e36-4e58-a130-c53f673c6e65</groupName>
+            <priority>2</priority>
+            <targetType>ExperienceVariation</targetType>
+            <targetValue>Default_Theme_Navigation_Menu_1_Component_Properties</targetValue>
+        </target>
+    </targets>
+</Audience>

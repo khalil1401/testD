@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Habilitado__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Campo que hace referencia a que una cuenta principal pueda directamente generar pedidos.</description>
+    <externalId>false</externalId>
+    <label>Habilitado</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

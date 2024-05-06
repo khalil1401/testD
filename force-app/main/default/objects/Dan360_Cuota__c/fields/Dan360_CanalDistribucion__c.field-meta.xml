@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_CanalDistribucion__c</fullName>
+    <description>Campo que señala el canal de distribución para una cuota.</description>
+    <externalId>false</externalId>
+    <label>Canal de distribución</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Venta Estándar</fullName>
+                <default>false</default>
+                <label>Venta Estándar</label>
+            </value>
+            <value>
+                <fullName>Sin Cargo</fullName>
+                <default>false</default>
+                <label>Sin Cargo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

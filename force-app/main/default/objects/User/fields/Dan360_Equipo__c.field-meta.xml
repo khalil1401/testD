@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_Equipo__c</fullName>
+    <description>Equipo al que pertenece el APM</description>
+    <externalId>false</externalId>
+    <label>Equipo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Equipo</valueSetName>
+    </valueSet>
+</CustomField>

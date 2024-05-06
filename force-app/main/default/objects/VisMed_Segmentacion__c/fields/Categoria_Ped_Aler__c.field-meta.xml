@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categoria_Ped_Aler__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    INCLUDES(Profesional__r.KOL__c , &apos;KOL Ped&apos;), 
+    &apos;A&apos;,
+    CASE(
+		Log_Paed_12_Mes_con_Cob_y_sin_Cob__c,
+		0,&apos;D&apos;,
+		0.5,&apos;D&apos;,
+		1,&apos;D&apos;,
+		1.5,&apos;C&apos;,
+		2,&apos;C&apos;,
+		2.5,&apos;B&apos;,
+		3,&apos;B&apos;,
+		3.5,&apos;B&apos;,
+		4,&apos;A&apos;,
+		4.5,&apos;A&apos;,
+		5,&apos;A&apos;,
+		6,&apos;A&apos;,
+		NULL
+	)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Categoría Ped. Aler.</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

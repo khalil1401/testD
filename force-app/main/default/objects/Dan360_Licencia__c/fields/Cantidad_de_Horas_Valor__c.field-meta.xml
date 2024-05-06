@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cantidad_de_Horas_Valor__c</fullName>
+    <description>Transforma las horas en dias de trabajo (1 dia = 8 horas)</description>
+    <externalId>false</externalId>
+    <formula>CASE(Cantidad_de_Horas__c,
+    &quot;0.5&quot;, 0.0625,
+    &quot;1.0&quot;, 0.125,
+    &quot;1.5&quot;, 0.1875,
+    &quot;2.0&quot;, 0.25,
+    &quot;2.5&quot;, 0.3125,
+    &quot;3.0&quot;, 0.375,
+    &quot;3.5&quot;, 0.4375,
+    &quot;4.0&quot;, 0.5,
+    &quot;4.5&quot;, 0.5625,
+    &quot;5.0&quot;, 0.625,
+    &quot;5.5&quot;, 0.6875,
+    &quot;6.0&quot;, 0.75,
+    &quot;6.5&quot;, 0.8125,
+    &quot;7.0&quot;, 0.875,
+    &quot;7.5&quot;, 0.9375,
+    &quot;8.0&quot;, 1,
+    1)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Cantidad de Horas Valor</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

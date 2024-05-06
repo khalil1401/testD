@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dan360_FechaVigencia</fullName>
+    <active>true</active>
+    <description>Validación que no permite crear una cuota si la fecha de vigencia está en pasado.</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+Dan360_VigenciaHasta__c &lt;  TODAY() 
+)</errorConditionFormula>
+    <errorDisplayField>Dan360_VigenciaHasta__c</errorDisplayField>
+    <errorMessage>No es posible crear una cuota cuya vigencia esté en pasado.</errorMessage>
+</ValidationRule>

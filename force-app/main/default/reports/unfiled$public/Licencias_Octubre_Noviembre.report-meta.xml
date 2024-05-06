@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Licencia__c$Ciclo__c</field>
+    </columns>
+    <columns>
+        <field>Licencia__c$Name</field>
+    </columns>
+    <columns>
+        <field>Licencia__c$Aprobado__c</field>
+    </columns>
+    <columns>
+        <field>Licencia__c$CreatedDate</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <column>Licencia__c$Aprobado__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Licencia__c$Ciclo__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Octubre 2018</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Licencia__c$Ciclo__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Noviembre 2018</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Licencias Octubre - Noviembre</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Licencias__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Licencia__c$CreatedDate</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Licencia__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -76,7 +76,7 @@
     <sortOrder>Desc</sortOrder>
     <timeFrameFilter>
         <dateColumn>Account.Formularios3__r$CreatedDate</dateColumn>
-        <endDate>2024-05-02</endDate>
+        <endDate>2024-05-06</endDate>
         <interval>INTERVAL_CUSTOM</interval>
         <startDate>2024-03-01</startDate>
     </timeFrameFilter>

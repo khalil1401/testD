@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Survey__c.SurveyQuestions__r.Survey_Question_Answers__r$Response__c</field>
+    </columns>
+    <description>Encuesta de bienvenida a Junto a Vos agrupado por Name con Response</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Survey__c.SurveyQuestions__r$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Bienvenida agrupado por name</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Encuestas_con_Survey_Questions_Responses__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Survey__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

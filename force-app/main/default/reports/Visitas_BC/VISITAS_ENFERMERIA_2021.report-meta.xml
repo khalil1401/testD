@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Enfermero_Asignado__c</field>
+    </columns>
+    <columns>
+        <field>Account.Medico_Asignado__c</field>
+    </columns>
+    <columns>
+        <field>Account.Nutricionista_Asignado__c</field>
+    </columns>
+    <columns>
+        <field>PHONE1</field>
+    </columns>
+    <columns>
+        <field>Account.Direccion__c</field>
+    </columns>
+    <columns>
+        <field>Account.Localidad_look__c</field>
+    </columns>
+    <columns>
+        <field>Account.Modulo_activo__c</field>
+    </columns>
+    <columns>
+        <field>Account.Servicio_Activo__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Obra_social__c</field>
+    </columns>
+    <columns>
+        <field>Account.ultimo_modulo_hasta__c</field>
+    </columns>
+    <description>Informe Noe</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Servicio_Activo__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>CUIDADO COMPLETO,CUIDADO PERSONALIZADO</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>VISITAS ENFERMERIA 2021</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

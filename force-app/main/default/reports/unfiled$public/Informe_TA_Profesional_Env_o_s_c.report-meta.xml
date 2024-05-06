@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Envios_sin_Cargo__r$Area_Terapeutica__c</field>
+    </columns>
+    <columns>
+        <field>Account.Envios_sin_Cargo__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Envios_sin_Cargo__r$Razon_de_envio__c</field>
+    </columns>
+    <columns>
+        <field>Account.Envios_sin_Cargo__r$Estado_del_envio__c</field>
+    </columns>
+    <columns>
+        <field>Account.Envios_sin_Cargo__r$Fecha_de_despacho__c</field>
+    </columns>
+    <columns>
+        <field>Account$ID_de_Profesional__c</field>
+    </columns>
+    <columns>
+        <field>Account.Envios_sin_Cargo__r$CreatedDate</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Informe TA + Profesional + Envío s/c</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cuentas_y_envios_sin_cargo__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <endDate>2022-04-12</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2022-01-01</startDate>
+    </timeFrameFilter>
+</Report>

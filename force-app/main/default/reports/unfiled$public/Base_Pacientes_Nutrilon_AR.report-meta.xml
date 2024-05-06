@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$RecordType</field>
+    </columns>
+    <columns>
+        <field>Account$ID_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Area_terapeutica__c</field>
+    </columns>
+    <columns>
+        <field>Account$Estado_de_paciente__c</field>
+    </columns>
+    <columns>
+        <field>Account$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Account.Cases$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Account$CreatedBy</field>
+    </columns>
+    <description>Muestra los pacientes con Nutrilon AR en la TA Tailored Nutrition</description>
+    <filter>
+        <criteriaItems>
+            <column>Account$Area_terapeutica__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Tailored Nutrition</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Base Pacientes Nutrilon AR</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cuentas_con_casos__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2020-03-01</startDate>
+    </timeFrameFilter>
+</Report>

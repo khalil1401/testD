@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>u</joinTable>
+        </blockInfo>
+        <columns>
+            <field>CUST_NAME</field>
+        </columns>
+        <format>Tabular</format>
+        <name>Historias Clínicas bloque 1</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>CustomEntity$Formulario__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>Formulario__c.Fecha__c</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <block>
+        <blockInfo>
+            <blockId>B0</blockId>
+            <joinTable>u</joinTable>
+        </blockInfo>
+        <columns>
+            <field>OWNER</field>
+        </columns>
+        <columns>
+            <field>SUBJECT</field>
+        </columns>
+        <columns>
+            <field>CREATED_DATE</field>
+        </columns>
+        <columns>
+            <field>AGE</field>
+        </columns>
+        <columns>
+            <field>OPEN</field>
+        </columns>
+        <columns>
+            <field>CLOSED</field>
+        </columns>
+        <columns>
+            <field>ACCOUNT.NAME</field>
+        </columns>
+        <columns>
+            <field>FK_NAME</field>
+        </columns>
+        <format>Summary</format>
+        <name>Casos y Modulo de paciente bloque 2</name>
+        <params>
+            <name>units</name>
+            <value>h</value>
+        </params>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>CaseList@Case.Modulo_de_paciente__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>CREATED_DATEONLY</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>u</joinTable>
+    </blockInfo>
+    <format>MultiBlock</format>
+    <name>Prueba HC + Modulos</name>
+    <reportType>CustomEntity$Formulario__c</reportType>
+    <showDetails>true</showDetails>
+</Report>
